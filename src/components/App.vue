@@ -7,7 +7,7 @@
       <div class="octicon octicon-clippy navbar-brand">
         <i class="fa fa-fw fa-github"></i>
         <a href="https://github.com/dschu012">dschu012</a> / <a class="font-weight-bold"
-          href="https://github.com/dschu012/d2s-editor">d2s-editor</a>
+          href="https://github.com/Ricola3D/d2s-editor">d2s-editor</a>
       </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,12 +18,12 @@
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
-          <!-- <li class="nav-item" v-if="theme !== 'd2'">
+          <li class="nav-item" v-if="theme !== 'd2'">
             <a class="nav-link" href="#" @click="setTheme('d2')">Change Theme</a>
           </li>
           <li class="nav-item" v-if="theme === 'd2'">
             <a class="nav-link" href="#" @click="setTheme('dark')">Change Theme</a>
-          </li> -->
+          </li>
         </ul>
       </div>
     </nav>
@@ -46,12 +46,10 @@
               <option v-for="item in itempack" :value="item" :key="item.key">{{item.key}}</option>
             </select>
           </div>
-          <div class="modal-footer">
-            <input style="display:none;" type="file" name="d2iFile" @change="onItemFileChange" id="d2iFile">
-            <label for="d2iFile" class="mb-0 btn btn-primary">Load From File</label>
-            <button type="button" class="btn btn-primary" @click="loadBase64Item" data-dismiss="modal">Load From String</button>
+          <div class="modal-footer d-flex">
+            <button type="button" class="btn btn-secondary" @click="loadFromString" data-dismiss="modal">Import</button>
             <button type="button" class="btn btn-primary" @click="loadItem" data-dismiss="modal">Load</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -65,19 +63,22 @@
             <div class="card-body">
               <div class="alert alert-primary" role="alert">
                 This editor is still a work in progress. Some things may not work. Found a bug? <a
-                  href="https://github.com/dschu012/d2s-editor/issues/new">Report it.</a>
+                  href="https://github.com/Ricola3D/d2s-editor/issues/new">Report it.</a>
               </div>
               <form id="d2sForm">
                 <fieldset>
                   <div class="form-group">
                     <div class="input-group">
+                      <select name="open-mod" id="open-mod">
+                        <option value="vanilla">Vanilla</option>
+                        <option value="remodded" selected="selected">ReMoDDeD</option>
+                      </select>
                       <div class="custom-file">
                         <input type="file" name="d2sFile" @change="onFileChange" id="d2sFile" accept=".d2s">
                         <label class="custom-file-label" for="d2sFile">*.d2s</label>
                       </div>
                       <div>
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">Create
-                          New</button>
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">Create New</button>
                         <div class="dropdown-menu dropdown-menu-right">
                           <button class="dropdown-item" type="button" @click="newChar(0)">Amazon</button>
                           <button class="dropdown-item" type="button" @click="newChar(1)">Sorceress</button>
@@ -117,16 +118,16 @@
                     </ul>
                     <div class="tab-content" id="tabs-content">
                       <div class="tab-pane show active" id="stats-content" role="tabpanel">
-                        <Stats v-bind:save.sync="save" />
+                        <Stats v-model:save="save" />
                       </div>
                       <div class="tab-pane" id="waypoints-content" role="tabpanel">
-                        <Waypoints v-bind:save.sync="save" />
+                        <Waypoints v-model:save="save" />
                       </div>
                       <div class="tab-pane" id="quests-content" role="tabpanel">
-                        <Quests v-bind:save.sync="save" />
+                        <Quests v-model:save="save" />
                       </div>
                       <div class="tab-pane" id="skills-content" role="tabpanel">
-                        <Skills v-bind:save.sync="save" />
+                        <Skills v-model:save="save" />
                       </div>
                       <div class="tab-pane" id="items-content" role="tabpanel">
                         <div v-for="(notification, idx) in notifications" :key="idx" :class="notification.alert" role="alert">
@@ -204,18 +205,18 @@
                             </div>
                           </div>
                         </div>
-                        <Equipped v-if="activeTab == 1 || activeTab == 6" :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent" :id="'Equipped'" :contextMenu="$refs.contextMenu">
+                        <Equipped v-if="activeTab == 1 || activeTab == 6" v-model:items="equipped" @item-selected="onSelect" @item-event="onEvent" :id="'Equipped'" :contextMenu="$refs.contextMenu">
                         </Equipped>
                         <Grid v-if="activeTab == 1 || activeTab == 6" :width="grid.inv.w" :height="grid.inv.h" :page="1"
-                          :items.sync="inventory" @item-selected="onSelect" @item-event="onEvent" :id="'InventoryGrid'" :contextMenu="$refs.contextMenu"></Grid>
+                          v-model:items="inventory" @item-selected="onSelect" @item-event="onEvent" :id="'InventoryGrid'" :contextMenu="$refs.contextMenu"></Grid>
                         <Grid v-if="activeTab == 3 || activeTab == 6" :width="grid.stash.w" :height="grid.stash.h" :page="5"
-                          :items.sync="stash" @item-selected="onSelect" @item-event="onEvent" :id="'StashGrid'" :contextMenu="$refs.contextMenu"></Grid>
+                          v-model:items="stash" @item-selected="onSelect" @item-event="onEvent" :id="'StashGrid'" :contextMenu="$refs.contextMenu"></Grid>
                         <Grid v-if="activeTab == 4 || activeTab == 6" :width="grid.cube.w" :height="grid.cube.h" :page="4"
-                          :items.sync="cube" @item-selected="onSelect" @item-event="onEvent" :id="'CubeGrid'" :contextMenu="$refs.contextMenu">
+                          v-model:items="cube" @item-selected="onSelect" @item-event="onEvent" :id="'CubeGrid'" :contextMenu="$refs.contextMenu">
                         </Grid>
-                        <Mercenary v-if="activeTab == 5 || activeTab == 6" :items.sync="mercenary" @item-selected="onSelect" :contextMenu="$refs.contextMenu">
+                        <Mercenary v-if="activeTab == 5 || activeTab == 6" v-model:items="mercenary" @item-selected="onSelect" :contextMenu="$refs.contextMenu">
                         </Mercenary>
-                        <ItemEditor v-if="selected" :id="'Selected'" :item.sync="selected" :location="location" ref="editor" @item-event="onEvent"></ItemEditor>
+                        <ItemEditor v-if="selected" :id="'Selected'" v-model:item="selected" :location="location" ref="editor" @item-event="onEvent"></ItemEditor>
                       </div>
                     </div>
                   </div>
@@ -231,8 +232,9 @@
                   <button type="button" @click="unlockQs" class="btn btn-primary">Complete Skill/Stat Qs</button>
                   <button type="button" @click="maxGold" class="btn btn-primary">Max Gold</button>
                   <br /><br />
-                  <button type="button" id="d2" class="btn btn-primary" @click="saveFile(0x60)">Save D2</button>
-                  <button type="button" id="d2r" class="btn btn-primary" @click="saveFile(0x63)">Save D2R</button>
+                  <button type="button" id="d2" class="btn btn-primary" @click="saveFile('vanilla', 0x60)">Save D2</button>
+                  <button type="button" id="d2r" class="btn btn-primary" @click="saveFile('vanilla', 0x63)">Save D2R</button>
+                  <button type="button" id="d2r" class="btn btn-primary" @click="saveFile('remodded', 0x63)">Save ReMoDDeD</button>
                 </div>
               </form>
             </div>
@@ -283,7 +285,6 @@
         selected: null,
         itempack: ItemPack,
         previewModel: null,
-        previewModelBase64: null,
         preview: null,
         clipboard: null,
         load: null,
@@ -297,7 +298,7 @@
       if (window.palettes == undefined) {
         window.palettes = {};
         window.palettes["ACT1"] = [];
-        let response = await fetch(`data/global/palette/ACT1/pal.dat`);
+        let response = await fetch(`d2/game_data/remodded/version_99/global/palette/ACT1/pal.dat`);
         let buffer = new Uint8Array(await response.arrayBuffer());
         for (let i = 0; i < 256; i += 1) {
           window.palettes["ACT1"].push([buffer[i * 3 + 2], buffer[i * 3 + 1], buffer[i * 3]]);
@@ -315,15 +316,19 @@
         this.grid = JSON.parse(localStorage.getItem('grid'));
       }
 
+      // Set the const data
+      d2s.setConstantData("vanilla", 96, window.vanilla_constants_96);
+      d2s.setConstantData("vanilla", 97, window.vanilla_constants_96);
+      d2s.setConstantData("vanilla", 98, window.vanilla_constants_96);
+      d2s.setConstantData("vanilla", 99, window.vanilla_constants_99);
+      d2s.setConstantData("remodded", 99, window.remodded_constants_99);
 
-      d2s.setConstantData(96, window.constants_96.constants);
-      d2s.setConstantData(97, window.constants_96.constants);
-      d2s.setConstantData(98, window.constants_96.constants);
-      d2s.setConstantData(99, window.constants_99.constants);
+      window.work_mod = "remodded";
+      window.work_version = 99;
 
-      window.constants = window.constants_99;
-      this.addItemsPackBases(window.constants_99.constants.weapon_items, "Weapons");
-      this.addItemsPackBases(window.constants_99.constants.armor_items, "Armor");
+      // Add all the base weapons & armors to the insertable items list
+      this.addItemsPackBases("weapon_items", "Weapons");
+      this.addItemsPackBases("armor_items", "Armors");
     },
     filters: {
     },
@@ -430,10 +435,18 @@
         this.selected = null;
         this.location = null;
       },
+      // Method to share an item (through clipboard). By default we share as a vanilla 99 item.
       async shareItem(item) {
-        let bytes = await d2s.writeItem(item, 0x63);
-        let base64 = utils.arrayBufferToBase64(bytes);
-        navigator.clipboard.writeText(base64);
+        let bytes = await d2s.writeItem(item, window.work_mod, window.work_version);
+        let base64 = utils.arrayBufferToBase64String(bytes);
+        let hex = utils.arrayBufferToHexString(bytes);
+        let sharedContent = {
+          "mod": window.work_mod,
+          "version": window.work_version,
+          "base64": base64,
+          "hex": hex
+        };
+        navigator.clipboard.writeText(JSON.stringify(sharedContent));
         this.notifications.push({ alert: "alert alert-info", message: `Item data copied to clipboard. Use load from string to share it with someone.` });
       },
       onEvent(e) {
@@ -442,7 +455,7 @@
         } else if(e.type == 'copy') {
           this.clipboard = JSON.parse(JSON.stringify(e.item));
         } else if(e.type == 'update') {
-          d2s.enhanceItems([e.item], window.constants.constants);
+          d2s.enhanceItems([e.item], window.work_mod, window.work_version);
           this.setPropertiesOnItem(e.item);
         } else if(e.type == 'delete') {
           let idx = this.findIndex(this.save.items, e.item);
@@ -515,34 +528,42 @@
         }
         return true;
       },
-      async readItem(bytes, version) {
-        this.preview = await d2s.readItem(bytes, version);
+      // Method to parse an item byte array and preview it
+      async readItem(bytes, mod, version) {
+        this.preview = await d2s.readItem(bytes, mod, version);
         await this.setPropertiesOnItem(this.preview);
         utils.removeMaxDurabilityFromRunwords(this.preview);
       },
+      // Callback to read the input-select value and fill the preview thumbnail
       async previewItem(e) {
-        let bytes = utils.b64ToArrayBuffer(this.previewModel.value);
-        this.readItem(bytes, 0x63);
+        let bytes = utils.b64StringToArrayBuffer(this.previewModel.value.base64);
+        this.readItem(bytes, this.previewModel.value.mod, this.previewModel.value.version);
       },
-      async onItemFileLoad(event) {
-        this.readItem(event.target.result, 0x60);
-      },
-      onItemFileChange(event) {
-        let reader = new FileReader();
-        reader.onload = this.onItemFileLoad;
-        reader.readAsArrayBuffer(event.target.files[0]);
-        event.target.value = null;
-      },
-      async loadBase64Item() {
+      // Method to load an item from its a JSON {mod, version, base64 or hex} or simply a base64 string (mod & version will be set to vanilla 99 by default).
+      async loadFromString() {
+        let input = prompt("Please enter a JSON with mod, version and base64 or hex.");
         try {
-          let b64 = prompt("Please enter your base64 string for item.");
-          let bytes = utils.b64ToArrayBuffer(b64);
-          await this.readItem(bytes, 0x63);
+          let obj = JSON.parse(input);
+          let bytes = null;
+          if (!obj.mod || !obj.version) {
+            throw new Error('No mod and version specified.')
+          }
+          if (obj.b64)
+            bytes = utils.b64StringToArrayBuffer(obj.b64);
+          else if (obj.hex) {
+            bytes = utils.hexStringToArrayBuffer(obj.hex);
+          }
+          else {
+            throw new Error('No item code in the input.')
+          }
+          await this.readItem(bytes, obj.mod, obj.version);
+          console.log(this.preview);
           this.paste(this.preview);
         } catch(e) {
-          alert("Failed to read item.");
+          alert("Failed to load the item.");
         }
       },
+      // Method to load a chosen item
       loadItem() {
         this.paste(this.preview);
       },
@@ -652,17 +673,24 @@
         }
       },
       newChar(index) {
-        let bytes = utils.b64ToArrayBuffer(CharPack[index]);
-        this.readBuffer(bytes);
+        let char = CharPack[index];
+        let bytes = utils.b64StringToArrayBuffer(char.base64);
+        this.readBuffer(bytes, char.mod);
       },
       onFileLoad(event) {
-        this.readBuffer(event.target.result, event.target.filename);
+        let mod = document.getElementById("open-mod").value;
+        try {
+          // If failed, in a 2nd time try parsing it as a remodded 99 file
+          this.readBuffer(event.target.result, mod, event.target.filename);
+        } catch (e) {
+          alert("Failed to parse file.")
+        }
       },
-      readBuffer(bytes, filename) {
+      readBuffer(bytes, mod, filename) {
         let that = this;
         this.save = null;
         this.selected = null;
-        d2s.read(bytes).then(response => {
+        d2s.read(bytes, mod).then(response => {
           that.save = response;
           if(filename) {
             that.save.header.name = filename.split('.')[0];
@@ -749,13 +777,12 @@
           s.points = 20;
         }
       },
-      saveFile(version) {
-        this.save.header.version = version;
+      saveFile(mod, version) {
         let link = document.createElement('a');
         let that = this;
         link.style.display = 'none';
         document.body.appendChild(link);
-        d2s.write(this.save).then(function (response) {
+        d2s.write(this.save, mod, version).then(function (response) {
           let blob = new Blob([response], { type: "octet/stream" });
           link.href = window.URL.createObjectURL(blob);
           link.download = that.save.header.name + '.d2s';
@@ -763,9 +790,10 @@
           link.remove();
         });
       },
-      async addItemsPackBases(constCategory, categoryName) {
+      async addItemsPackBases(categoryKey, categoryDisplayName) {
         let newItems = [];
-        for (const item of Object.entries(constCategory)) {
+        let constants = window[`${window.work_mod}_constants_${window.work_version}`]
+        for (const item of Object.entries(constants[categoryKey])) {
           if (item[1].n) {
             const newItem = Object();
             const value = item[1];
@@ -792,14 +820,20 @@
             newItems.push(newItem);
           }
         }
-        d2s.enhanceItems(newItems, window.constants.constants);
+        d2s.enhanceItems(newItems, window.work_mod, window.work_version);
         for (const item of newItems) {      
-          let bytes = await d2s.writeItem(item, 0x63, window.constants.constants);
-          let base64 = utils.arrayBufferToBase64(bytes);
+          let bytes = await d2s.writeItem(item, window.work_mod, window.work_version);
+          let base64 = utils.arrayBufferToBase64String(bytes);
+          let hex = utils.arrayBufferToHexString(bytes);
           let category = item.categories[0];
           this.itempack.push({
-            key: "./Bases/"+ categoryName +"/" + category + "/" + item.type_name + '.d2i',
-            value: base64
+            key: "./Bases/"+ categoryDisplayName +"/" + category + "/" + item.type_name + '.d2i',
+            value: {
+              mod: window.work_mod,
+              version: window.work_version,
+              base64: base64,
+              hex: hex
+            }
           });
         }
       },

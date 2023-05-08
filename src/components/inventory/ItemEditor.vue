@@ -2,8 +2,8 @@
   <div>
     <div class="form-row">
       <div class="col-md-12">
-        <button type="button" class="btn btn-primary" @click="onEvent('share')">Share</button>
         <button type="button" class="btn btn-primary" @click="onEvent('copy')">Copy</button>
+        <button type="button" class="btn btn-primary" @click="onEvent('share')">Share</button>
         <span v-if="item.location_id != 6">
           <button type="button" class="btn btn-danger" @click="onEvent('delete')">Delete</button>
         </span>
@@ -13,7 +13,7 @@
     <div></div>
     <div class="form-row">
       <div>
-        <Item :item.sync="item" clazz="item-edit"></Item>
+        <Item v-model:item="item" clazz="item-edit"></Item>
       </div>
 
       <ul className="ItemOptions">
@@ -106,25 +106,25 @@
     <span v-if="!item.simple_item">
       <div v-if="item.magic_attributes">
         <div>Item Stats</div>
-        <ItemStatsEditor :item-stats.sync="item.magic_attributes" :id="id + 'Magic'" @stat-change="onEvent('update')"></ItemStatsEditor>
+        <ItemStatsEditor v-model:item-stats="item.magic_attributes" :id="id + 'Magic'" @stat-change="onEvent('update')"></ItemStatsEditor>
       </div>
       <div v-if="item.runeword_attributes">
         <div>Runeword Stats</div>
-        <ItemStatsEditor :item-stats.sync="item.runeword_attributes" :id="id + 'Runeword'" @stat-change="onEvent('update')"></ItemStatsEditor>
+        <ItemStatsEditor v-model:item-stats="item.runeword_attributes" :id="id + 'Runeword'" @stat-change="onEvent('update')"></ItemStatsEditor>
       </div>
       <div v-if="item.set_attributes">
         <div v-for="(set_attribute, index) in item.set_attributes">
           <div>Set Stats {{index}}</div>
-          <ItemStatsEditor :item-stats.sync="set_attribute" :id="id + 'Set' + index" @stat-change="onEvent('update')"></ItemStatsEditor>
+          <ItemStatsEditor v-model:item-stats="set_attribute" :id="id + 'Set' + index" @stat-change="onEvent('update')"></ItemStatsEditor>
         </div>
       </div>
       <div v-if="item.socketed_items">
         <div>Sockets Stats</div>
-        <ItemStatsEditor :item-stats.sync="item.socketed_attributes" :id="id + 'Socketed stats'" @stat-change="onEvent('update')"></ItemStatsEditor>
+        <ItemStatsEditor v-model:item-stats="item.socketed_attributes" :id="id + 'Socketed stats'" @stat-change="onEvent('update')"></ItemStatsEditor>
       </div>
       <div v-if="item.socketed_items">
         <div v-for="(socketed_item, index) in item.socketed_items">
-          <ItemEditor ref="itemEditor" :item.sync="socketed_item" :id="id + 'Socketed' + index" @item-event="onChildEvent"></ItemEditor>
+          <ItemEditor ref="itemEditor" v-model:item="socketed_item" :id="id + 'Socketed' + index" @item-event="onChildEvent"></ItemEditor>
         </div>
       </div>
     </span>
@@ -152,14 +152,14 @@ export default {
       locations: [{ key: 0, value: 'Stored' }, { key: 1, value: 'Equipped' }, { key: 4, value: 'Cursor' }],
       equipped_locations: [{ key: 1, value: 'Head' }, { key: 2, value: 'Neck' }, { key: 3, value: 'Torso' }, { key: 4, value: 'Right Hand' }, { key: 5, value: 'Left Hand' }, { key: 6, value: 'Right Finger' }, { key: 7, value: 'Left Finger' }, { key: 8, value: 'Waist' }, { key: 9, value: 'Boots' }, { key: 10, value: 'Gloves' }, { key: 11, value: 'Alternate Right Hand' }, { key: 12, value: 'Alternate Left Hand' }],
       storage_pages: [{ key: 1, value: 'Inventory' }, { key: 4, value: 'Cube' }, { key: 5, value: 'Stash' }],
-      prefixes: window.constants.constants.magic_prefixes.map((e,i)=> { return { i:i, v:e }}).filter(e => e.v != null && e.v.n != null),
-      suffixes: window.constants.constants.magic_suffixes.map((e,i)=> { return { i:i, v:e }}).filter(e => e.v != null && e.v.n != null),
-      rare_names: window.constants.constants.rare_names.map((e,i)=> { return { i:i, v:e }}).filter(e => e.v != null && e.v.n != null),
-      unq_items: window.constants.constants.unq_items.map((e,i)=> { return { i:i, v:e }}).filter(e => e.v != null && e.v.n != null),
-      set_items: window.constants.constants.set_items.map((e,i)=> { return { i:i, v:e }}).filter(e => e.v != null && e.v.n != null),
-      armor_items: Object.entries(window.constants.constants.armor_items).filter(e => e[1].n != null),
-      weapon_items: Object.entries(window.constants.constants.weapon_items).filter(e => e[1].n != null),
-      other_items: Object.entries(window.constants.constants.other_items).filter(e => e[1].n != null),
+      prefixes: window[`${window.work_mod}_constants_${window.work_version}`].magic_prefixes.map((e,i)=> { return { i:i, v:e }}).filter(e => e.v != null && e.v.n != null),
+      suffixes: window[`${window.work_mod}_constants_${window.work_version}`].magic_suffixes.map((e,i)=> { return { i:i, v:e }}).filter(e => e.v != null && e.v.n != null),
+      rare_names: window[`${window.work_mod}_constants_${window.work_version}`].rare_names.map((e,i)=> { return { i:i, v:e }}).filter(e => e.v != null && e.v.n != null),
+      unq_items: window[`${window.work_mod}_constants_${window.work_version}`].unq_items.map((e,i)=> { return { i:i, v:e }}).filter(e => e.v != null && e.v.n != null),
+      set_items: window[`${window.work_mod}_constants_${window.work_version}`].set_items.map((e,i)=> { return { i:i, v:e }}).filter(e => e.v != null && e.v.n != null),
+      armor_items: Object.entries(window[`${window.work_mod}_constants_${window.work_version}`].armor_items).filter(e => e[1].n != null),
+      weapon_items: Object.entries(window[`${window.work_mod}_constants_${window.work_version}`].weapon_items).filter(e => e[1].n != null),
+      other_items: Object.entries(window[`${window.work_mod}_constants_${window.work_version}`].other_items).filter(e => e[1].n != null),
     };
   },
   methods: {
@@ -194,9 +194,9 @@ export default {
     },
     getBases(code) {
       if (this.item.type_id == 3) {
-        return this.findBasesInConstants(code, window.constants.constants.weapon_items);
+        return this.findBasesInConstants(code, window[`${window.work_mod}_constants_${window.work_version}`].weapon_items);
       } else if (this.item.type_id == 1) {
-        return this.findBasesInConstants(code, window.constants.constants.armor_items);
+        return this.findBasesInConstants(code, window[`${window.work_mod}_constants_${window.work_version}`].armor_items);
       } else if (this.item.type_id == 4) {
         return this.other_items
       } else {

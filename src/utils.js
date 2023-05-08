@@ -23,18 +23,18 @@ const colors = {
 };
 
 const colormaps = {
-  1: 'data/global/items/Palette/grey.dat',
-  2: 'data/global/items/Palette/grey2.dat',
-  5: 'data/global/items/Palette/greybrown.dat',
-  6: 'data/global/items/Palette/invgrey.dat',
-  7: 'data/global/items/Palette/invgrey2.dat',
-  8: 'data/global/items/Palette/invgreybrown.dat',
+  1: 'd2/game_data/remodded/version_99/global/items/Palette/grey.dat',
+  2: 'd2/game_data/remodded/version_99/global/items/Palette/grey2.dat',
+  5: 'd2/game_data/remodded/version_99/global/items/Palette/greybrown.dat',
+  6: 'd2/game_data/remodded/version_99/global/items/Palette/invgrey.dat',
+  7: 'd2/game_data/remodded/version_99/global/items/Palette/invgrey2.dat',
+  8: 'd2/game_data/remodded/version_99/global/items/Palette/invgreybrown.dat',
 };
 
 export default {
   colors: colors,
   colormaps: colormaps,
-  b64ToArrayBuffer(base64) {
+  b64StringToArrayBuffer(base64) {
     var bin = window.atob(base64);
     var len = bin.length;
     var bytes = new Uint8Array(len);
@@ -43,7 +43,7 @@ export default {
     }
     return bytes.buffer;
   },
-  arrayBufferToBase64(buffer) {
+  arrayBufferToBase64String(buffer) {
     var binary = '';
     var bytes = new Uint8Array( buffer );
     var len = bytes.byteLength;
@@ -52,8 +52,24 @@ export default {
     }
     return window.btoa(binary);
   },
+  arrayBufferToHexString(buffer) {
+    return [...new Uint8Array(buffer)]
+        .map(x => x.toString(16).padStart(2, '0'))
+        .join('');
+  },
+  hexStringToArrayBuffer(string) {
+    var typedArray = new Uint8Array(string.match(/[\da-f]{2}/gi).map(function (h) {
+      return parseInt(h, 16)
+    }));
+    return typedArray.buffer;
+  },
   async b64PNGFromDC6(item) {
-    const response = await fetch(`data/global/items/${item.inv_file}.dc6`, { signal: AbortSignal.timeout(1500) });
+    let response;
+    try {
+      response = await fetch(`d2/game_data/${window.work_mod}/version_${window.work_version}/global/items/${item.inv_file}.dc6`, { signal: AbortSignal.timeout(1500) });
+    } catch (e) {
+      return null;
+    }
     if (response.status !== 200) {
       return null;
     }

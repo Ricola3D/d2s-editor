@@ -134,7 +134,7 @@
     },
     data() {
       return {
-        stats: window.constants.constants.magical_properties,
+        stats: window[`${window.work_mod}_constants_${window.work_version}`].magical_properties,
       }
     },
     watch: {
@@ -162,8 +162,8 @@
       },
       "save.attributes.vitality": function(val, old) {
         const change = val-old;
-        for (const cCode in window.constants.constants.classes) {
-          const stat = window.constants.constants.classes[cCode];
+        for (const cCode in window[`${window.work_mod}_constants_${window.work_version}`].classes) {
+          const stat = window[`${window.work_mod}_constants_${window.work_version}`].classes[cCode];
           if (window.stat.n === this.save.header.class) {
             this.save.attributes.max_hp += change * stat.s.lpv / 4;
             this.save.attributes.current_hp += change * stat.s.lpv / 4;
@@ -176,8 +176,8 @@
       },
       "save.attributes.energy": function(val, old) {
         const change = val-old;
-        for (const cCode in window.constants.constants.classes) {
-          const stat = window.constants.constants.classes[cCode];
+        for (const cCode in window[`${window.work_mod}_constants_${window.work_version}`].classes) {
+          const stat = window[`${window.work_mod}_constants_${window.work_version}`].classes[cCode];
           if (window.stat.n === this.save.header.class) {
             this.save.attributes.max_mana += change * stat.s.mpe / 4;
             this.save.attributes.current_mana += change * stat.s.mpe / 4;

@@ -1,5 +1,35 @@
 {
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
-  "files.eol": "\n"
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "package-lock.json": true,
+    "**/*.bundle.min.js": true,
+    "**/*_constants_*.bundle.js": true,
+    "**/*.bundle.js.map": true,
+    "**/d2s.bundle.js": false,
+  },
+  "files.eol": "\n",
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#2f7c47",
+    "activityBar.background": "#2f7c47",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#422c74",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#2f7c47",
+    "statusBar.background": "#215732",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#2f7c47",
+    "statusBarItem.remoteBackground": "#215732",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#215732",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#21573299",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#215732"
 }

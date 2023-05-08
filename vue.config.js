@@ -1,3 +1,10 @@
+const Dotenv = require('dotenv-webpack');
+
 module.exports = {
-  outputDir : './docs'
+  configureWebpack: {
+    devtool: 'source-map',
+    plugins: [
+      new Dotenv()
+    ]
+  }
 }
