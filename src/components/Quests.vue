@@ -1,20 +1,18 @@
 <template>
   <div class="form-row">
-    <div class="col-md-4" v-for="difficulty in difficulties">
+    <div class="col-md-4" v-for="(difficulty, i) in difficulties" :key="i">
       <ul>
         <li>
-          <label><input class="form-check-input" type="checkbox" @input="updateDiff(difficulty)" v-model="difficulty.all"/>{{ difficulty.label }}</label>
-          <button type="button" class="btn btn-link btn-sm" title="Reset Difficulty" @click="resetDifficulty(difficulty)"><i class="fa fa-undo"></i></button>
+          <label><input class="form-check-input" type="checkbox" @input="updateDiff(difficulty, $event.target.checked)" v-model="difficulty.all"/>{{ difficulty.label }}</label>
         </li>
-        <ul v-for="act in difficulty.acts">
+        <ul v-for="(act, j) in difficulty.acts" :key="j">
           <li>
-            <label><input class="form-check-input" type="checkbox" @input="updateAct(difficulty, act)" v-model="act.all" />{{ act.label }}</label>
-            <button type="button" class="btn btn-link btn-sm" title="Reset Act" @click="resetAct(difficulty, act)"><i class="fa fa-undo"></i></button>
+            <label><input class="form-check-input" type="checkbox" @input="updateAct(difficulty, act, $event.target.checked)" v-model="act.all" />{{ act.label }}</label>
           </li>
-          <ul v-for="quest in act.quests">
-            <li><button type="button" class="btn btn-link" title="Reset Quest" @click="reset(difficulty, act, quest)"><i class="fa fa-undo"></i></button><label>{{ quest.label }}</label></li>
+          <ul v-for="(quest, k) in act.quests" :key="k">
+            <li><label>{{ quest.label }}</label></li>
             <ul>
-              <li v-for="state in quest.values"><label><input class="form-check-input" type="checkbox" @click="updateQuest(difficulty, act, quest, state, null)" v-model="save.header[difficulty.key][act.key][quest.key][state.key]">{{ state.label }}</label></li>
+              <li v-for="(state, l) in quest.values" :key="l"><label class="figure-caption"><input class="form-check-input" type="checkbox" @click="updateQuest(difficulty, act, quest, state, $event.target.checked)" v-bind:checked="save.header[difficulty.key][act.key][quest.key][state.key]">{{ state.label }}</label></li>
             </ul>
           </ul>
         </ul>
@@ -97,74 +95,90 @@
       };
     },
     methods: {
-      updateQuest(difficulty, act, quest, state, newState) {
-        const self = this;
-        function questReward(difficulty, act, quest, state, attributes, amount, newState) {
-          if(newState === false){
-            amount *= -1;
+      questReward(save, applyOrReset, attributes, amount) {
+        if(!applyOrReset){
+          amount *= -1;
+        }
+        for(const attribute of attributes) {
+          save.attributes[attribute] = (save.attributes[attribute] == null ? 0 : save.attributes[attribute]) + amount;
+        }
+      },
+      questRewards(save, quest, applyOrReset) {
+        if(["den_of_evil", "radaments_lair"].indexOf(quest.key) > -1) {
+            this.questReward(save, applyOrReset, ["unused_skill_points"], 1);
+          } else if (quest.key === "the_fallen_angel") {
+            this.questReward(save, applyOrReset, ["unused_skill_points"], 2);
+          } else if (quest.key === "lam_esens_tome") {
+            this.questReward(save, applyOrReset, ["unused_stats"], 5);
+          } else if (quest.key === "the_golden_bird") {
+            this.questReward(save, applyOrReset, ["current_hp", "max_hp"], 20);
           }
-          for(const attribute of attributes) {
-            self.save.attributes[attribute] = (self.save.attributes[attribute] == null ? 0 : self.save.attributes[attribute]) + amount;
+      },
+      updateQuest(difficulty, act, quest, state, value) {
+        const newSave = JSON.parse(JSON.stringify(this.save));
+
+        // Uncheck Act checkbox if needed
+        if(act.all !== value && act.all) {
+          act.all = false;
+        }
+        // Uncheck difficulty checkbox if needed
+        if(difficulty.all !== value && difficulty.all) {
+          difficulty.all = false;
+        }
+
+        // If state changes, apply or remove the quest rewards. Works because those quests have a single state.
+        if (value !== newSave.header[difficulty.key][act.key][quest.key][state.key])
+        {
+          this.questRewards(newSave, quest, value);
+        }
+
+        newSave.header[difficulty.key][act.key][quest.key][state.key] = value;
+
+        // Emit the modification
+        this.$emit('update:save', newSave);
+      },
+      updateDiff(difficulty, value) {
+        const newSave = JSON.parse(JSON.stringify(this.save));
+
+        for (const act of difficulty.acts) {
+          // Update act checkbox
+          act.all = value;
+
+          for (const quest of act.quests) {
+            for (const state of quest.values) {
+              // If state changes, apply or remove the quest rewards. Works because those quests have a single state.
+              if (value !== newSave.header[difficulty.key][act.key][quest.key][state.key])
+              {
+                this.questRewards(newSave, quest, value);
+              }
+
+              newSave.header[difficulty.key][act.key][quest.key][state.key] = value;
+              
+            }
           }
         }
 
-        if (newState != null && newState === self.save.header[difficulty.key][act.key][quest.key][state.key])
-          return;
-        if(newState == null)
-          newState = !self.save.header[difficulty.key][act.key][quest.key][state.key];
-        if(["den_of_evil", "radaments_lair"].indexOf(quest.key) > -1) {
-          questReward(difficulty.key, act.key, quest.key, state.key, ["unused_skill_points"], 1, newState);
-        } else if (quest.key === "the_fallen_angel") {
-          questReward(difficulty.key, act.key, quest.key, state.key, ["unused_skill_points"], 2, newState);
-        } else if (quest.key === "lam_esens_tome") {
-          questReward(difficulty.key, act.key, quest.key, state.key, ["unused_stats"], 5, newState);
-        } else if (quest.key === "the_golden_bird") {
-          questReward(difficulty.key, act.key, quest.key, state.key, ["current_hp", "max_hp"], 20, newState);
-        }
-        if(act.all !== newState && act.all) {
-          act.all = false;
-        }
-        if(difficulty.all !== newState && difficulty.all) {
-          difficulty.all = false;
-        }
+        // Emit the modification
+        this.$emit('update:save', newSave);
       },
-      updateDiff(difficulty) {
-        for (const act of difficulty.acts) {
-          if (!act.all && difficulty.all) {
-            act.all = true;
-          } else if (act.all && !difficulty.all) {
-            act.all = false;
-          }
-          this.updateAct(difficulty, act);
-          act.all = !difficulty.all;
-        }
-      },
-      updateAct(difficulty, act) {
-        for (const q of act.quests) {
-          for (const state of q.values) {
-            this.save.header[difficulty.key][act.key][q.key][state.key] = !act.all;
-            this.updateQuest(difficulty, act, q, state, !act.all);
+      updateAct(difficulty, act, value) {
+        const newSave = JSON.parse(JSON.stringify(this.save));
+
+        for (const quest of act.quests) {
+          for (const state of quest.values) {
+            // If state changes, apply or remove the quest rewards. Works because those quests have a single state.
+            if (value !== newSave.header[difficulty.key][act.key][quest.key][state.key])
+            {
+              this.questRewards(newSave, quest, value);
+            }
+
+            newSave.header[difficulty.key][act.key][quest.key][state.key] = value;
+            
           }
         }
-      },
-      resetDifficulty(difficulty) {
-        for(const act of difficulty.acts) {
-          this.resetAct(difficulty, act);
-        }
-        difficulty.all = false;
-      },
-      resetAct(difficulty, act) {
-        for(const q of act.quests) {
-          this.reset(difficulty, act, q);
-        }
-        act.all = false;
-      },
-      reset(difficulty, act, quest) {
-        for(const flag of flags) {
-          if(flag === "is_completed" && this.save.header[difficulty.key][act.key][quest.key][flag] === true)
-            this.updateQuest(difficulty, act, quest, flag, false);
-          this.save.header[difficulty.key][act.key][quest.key][flag] = false;
-        }
+
+        // Emit the modification
+        this.$emit('update:save', newSave);
       }
     } 
   };  

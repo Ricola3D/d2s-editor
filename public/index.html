@@ -28,10 +28,25 @@
       crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     
-    <script src="./d2/vanilla_constants_96.bundle.min.js"></script>
-    <script src="./d2/vanilla_constants_99.bundle.min.js"></script>
-    <script src="./d2/remodded_constants_99.bundle.min.js"></script>
     <script src="<%= process.env.VUE_APP_D2SLIB %>"></script>
+    <script type="module">
+      import { vanilla_constants_96 } from './d2/vanilla_constants_96.bundle.js'
+      import { vanilla_constants_99 } from './d2/vanilla_constants_99.bundle.js'
+      import { remodded_constants_99 } from './d2/remodded_constants_99.bundle.js'
+  
+      window.work_mod = "remodded";
+      window.work_version = 99;
+      window.vanilla_constants_96 = vanilla_constants_96;
+      window.vanilla_constants_99 = vanilla_constants_99;
+      window.remodded_constants_99 = remodded_constants_99;
+
+      // A list of existing versions can be found here: https://github.com/WalterCouto/D2CE/blob/main/d2s_File_Format.md#versions.
+      d2s.setConstantData("vanilla", 0x60, vanilla_constants_96); //1.10-1.14d
+      d2s.setConstantData("vanilla", 0x61, vanilla_constants_96); //alpha? (D2R)
+      d2s.setConstantData("vanilla", 0x62, vanilla_constants_96); //2.4 (D2R)
+      d2s.setConstantData("vanilla", 0x63, vanilla_constants_99); //2.5+ (D2R)
+      d2s.setConstantData("remodded", 0x63, remodded_constants_99); //2.5+ (D2R)
+    </script>
 
     <div id="app"></div>
 </body>

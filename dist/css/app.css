@@ -280,7 +280,7 @@ ul {
   color: white;
   background-color: rgba(37, 37, 37, 0.98);
   border-style: none;
-  width: fit-content;
+  width: 100%; /* fit-content doesn't work well with input numbers */
 }
 .select2 {
   width: 100% !important;

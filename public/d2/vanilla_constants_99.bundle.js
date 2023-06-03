@@ -8039,6 +8039,7 @@ export let vanilla_constants_99 = {
     },
     "magical_properties": [
         {
+            "id": 0,
             "s": "strength",
             "cB": 10,
             "cS": 0,
@@ -8053,6 +8054,7 @@ export let vanilla_constants_99 = {
             "dgP": "%+d to all Attributes"
         },
         {
+            "id": 1,
             "s": "energy",
             "cB": 10,
             "cS": 0,
@@ -8071,6 +8073,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 2,
             "s": "dexterity",
             "cB": 10,
             "cS": 0,
@@ -8085,6 +8088,7 @@ export let vanilla_constants_99 = {
             "dgP": "%+d to all Attributes"
         },
         {
+            "id": 3,
             "s": "vitality",
             "cB": 10,
             "cS": 0,
@@ -8104,22 +8108,26 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 4,
             "s": "statpts",
             "cB": 10,
             "cS": 0
         },
         {
+            "id": 5,
             "s": "newskills",
             "cB": 8,
             "cS": 0
         },
         {
+            "id": 6,
             "s": "hitpoints",
             "cB": 21,
             "cS": 0,
             "vS": 8
         },
         {
+            "id": 7,
             "s": "maxhp",
             "cB": 21,
             "cS": 0,
@@ -8132,12 +8140,14 @@ export let vanilla_constants_99 = {
             "dN": "%+d to Life"
         },
         {
+            "id": 8,
             "s": "mana",
             "cB": 21,
             "cS": 0,
             "vS": 8
         },
         {
+            "id": 9,
             "s": "maxmana",
             "cB": 21,
             "cS": 0,
@@ -8150,12 +8160,14 @@ export let vanilla_constants_99 = {
             "dN": "%+d to Mana"
         },
         {
+            "id": 10,
             "s": "stamina",
             "cB": 21,
             "cS": 0,
             "vS": 8
         },
         {
+            "id": 11,
             "s": "maxstamina",
             "cB": 21,
             "cS": 0,
@@ -8168,26 +8180,31 @@ export let vanilla_constants_99 = {
             "dN": "%+d Maximum Stamina"
         },
         {
+            "id": 12,
             "s": "level",
             "cB": 7,
             "cS": 0
         },
         {
+            "id": 13,
             "s": "experience",
             "cB": 32,
             "cS": 0
         },
         {
+            "id": 14,
             "s": "gold",
             "cB": 25,
             "cS": 0
         },
         {
+            "id": 15,
             "s": "goldbank",
             "cB": 25,
             "cS": 0
         },
         {
+            "id": 16,
             "s": "item_armor_percent",
             "sS": 1,
             "sB": 9,
@@ -8202,6 +8219,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 17,
             "s": "item_maxdamage_percent",
             "sS": 1,
             "sB": 9,
@@ -8221,6 +8239,7 @@ export let vanilla_constants_99 = {
             "dE": "%+d%% Enhanced Damage"
         },
         {
+            "id": 18,
             "s": "item_mindamage_percent",
             "sS": 1,
             "sB": 9,
@@ -8237,6 +8256,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 19,
             "s": "tohit",
             "sS": 1,
             "sB": 10,
@@ -8246,6 +8266,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d to Attack Rating"
         },
         {
+            "id": 20,
             "s": "toblock",
             "sS": 1,
             "sB": 6,
@@ -8256,6 +8277,7 @@ export let vanilla_constants_99 = {
             "dN": "%d%% Increased Chance of Blocking"
         },
         {
+            "id": 21,
             "s": "mindamage",
             "sS": 1,
             "sB": 6,
@@ -8266,6 +8288,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d to Minimum Damage"
         },
         {
+            "id": 22,
             "s": "maxdamage",
             "sS": 1,
             "sB": 7,
@@ -8276,6 +8299,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d to Maximum Damage"
         },
         {
+            "id": 23,
             "s": "secondary_mindamage",
             "sS": 1,
             "sB": 6,
@@ -8286,6 +8310,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d to Minimum Damage"
         },
         {
+            "id": 24,
             "s": "secondary_maxdamage",
             "sS": 1,
             "sB": 7,
@@ -8296,17 +8321,20 @@ export let vanilla_constants_99 = {
             "dN": "%+d to Maximum Damage"
         },
         {
+            "id": 25,
             "s": "damagepercent",
             "sS": 1,
             "sB": 8,
             "sA": 0
         },
         {
+            "id": 26,
             "s": "manarecovery",
             "sB": 8,
             "sA": 0
         },
         {
+            "id": 27,
             "s": "manarecoverybonus",
             "sS": 1,
             "sB": 8,
@@ -8317,6 +8345,7 @@ export let vanilla_constants_99 = {
             "dN": "Regenerate Mana %d%%"
         },
         {
+            "id": 28,
             "s": "staminarecoverybonus",
             "sS": 1,
             "sB": 8,
@@ -8327,12 +8356,15 @@ export let vanilla_constants_99 = {
             "dN": "Heal Stamina Plus %d%%"
         },
         {
+            "id": 29,
             "s": "lastexp"
         },
         {
+            "id": 30,
             "s": "nextexp"
         },
         {
+            "id": 31,
             "s": "armorclass",
             "sS": 1,
             "sB": 11,
@@ -8343,6 +8375,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d Defense"
         },
         {
+            "id": 32,
             "s": "armorclass_vs_missile",
             "sS": 1,
             "sB": 9,
@@ -8353,6 +8386,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d Defense vs. Missile"
         },
         {
+            "id": 33,
             "s": "armorclass_vs_hth",
             "sS": 1,
             "sB": 8,
@@ -8363,6 +8397,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d Defense vs. Melee"
         },
         {
+            "id": 34,
             "s": "normal_damage_reduction",
             "sS": 1,
             "sB": 6,
@@ -8373,6 +8408,7 @@ export let vanilla_constants_99 = {
             "dN": "Damage Reduced by %d"
         },
         {
+            "id": 35,
             "s": "magic_damage_reduction",
             "sS": 1,
             "sB": 6,
@@ -8383,6 +8419,7 @@ export let vanilla_constants_99 = {
             "dN": "Magic Damage Reduced by %d"
         },
         {
+            "id": 36,
             "s": "damageresist",
             "sS": 1,
             "sB": 9,
@@ -8393,6 +8430,7 @@ export let vanilla_constants_99 = {
             "dN": "Physical Damage Received Increased by %d%%"
         },
         {
+            "id": 37,
             "s": "magicresist",
             "sS": 1,
             "sB": 9,
@@ -8403,6 +8441,7 @@ export let vanilla_constants_99 = {
             "dN": "Magic Resist %+d%%"
         },
         {
+            "id": 38,
             "s": "maxmagicresist",
             "sS": 1,
             "sB": 5,
@@ -8413,6 +8452,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% to Maximum Magic Resist"
         },
         {
+            "id": 39,
             "s": "fireresist",
             "sS": 1,
             "sB": 9,
@@ -8426,6 +8466,7 @@ export let vanilla_constants_99 = {
             "dgP": "All Resistances %+d"
         },
         {
+            "id": 40,
             "s": "maxfireresist",
             "sS": 1,
             "sB": 5,
@@ -8436,6 +8477,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% to Maximum Fire Resist"
         },
         {
+            "id": 41,
             "s": "lightresist",
             "sS": 1,
             "sB": 9,
@@ -8449,6 +8491,7 @@ export let vanilla_constants_99 = {
             "dgP": "All Resistances %+d"
         },
         {
+            "id": 42,
             "s": "maxlightresist",
             "sS": 1,
             "sB": 5,
@@ -8459,6 +8502,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% to Maximum Lightning Resist"
         },
         {
+            "id": 43,
             "s": "coldresist",
             "sS": 1,
             "sB": 9,
@@ -8472,6 +8516,7 @@ export let vanilla_constants_99 = {
             "dgP": "All Resistances %+d"
         },
         {
+            "id": 44,
             "s": "maxcoldresist",
             "sS": 1,
             "sB": 5,
@@ -8482,6 +8527,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% to Maximum Cold Resist"
         },
         {
+            "id": 45,
             "s": "poisonresist",
             "sS": 1,
             "sB": 9,
@@ -8495,6 +8541,7 @@ export let vanilla_constants_99 = {
             "dgP": "All Resistances %+d"
         },
         {
+            "id": 46,
             "s": "maxpoisonresist",
             "sS": 1,
             "sB": 5,
@@ -8505,10 +8552,12 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% to Maximum Poison Resist"
         },
         {
+            "id": 47,
             "s": "damageaura",
             "sS": 1
         },
         {
+            "id": 48,
             "s": "firemindam",
             "sS": 1,
             "sB": 8,
@@ -8522,6 +8571,7 @@ export let vanilla_constants_99 = {
             "dE": "%+d fire damage"
         },
         {
+            "id": 49,
             "s": "firemaxdam",
             "sS": 1,
             "sB": 9,
@@ -8532,6 +8582,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d to Maximum Fire Damage"
         },
         {
+            "id": 50,
             "s": "lightmindam",
             "sS": 1,
             "sB": 6,
@@ -8545,6 +8596,7 @@ export let vanilla_constants_99 = {
             "dE": "%+d lightning damage"
         },
         {
+            "id": 51,
             "s": "lightmaxdam",
             "sS": 1,
             "sB": 10,
@@ -8555,6 +8607,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d to Maximum Lightning Damage"
         },
         {
+            "id": 52,
             "s": "magicmindam",
             "sS": 1,
             "sB": 8,
@@ -8568,6 +8621,7 @@ export let vanilla_constants_99 = {
             "dE": "%+d magic damage"
         },
         {
+            "id": 53,
             "s": "magicmaxdam",
             "sS": 1,
             "sB": 9,
@@ -8578,6 +8632,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d magic damage"
         },
         {
+            "id": 54,
             "s": "coldmindam",
             "sS": 1,
             "sB": 8,
@@ -8591,6 +8646,7 @@ export let vanilla_constants_99 = {
             "dE": "%+d cold damage"
         },
         {
+            "id": 55,
             "s": "coldmaxdam",
             "sS": 1,
             "sB": 9,
@@ -8601,12 +8657,14 @@ export let vanilla_constants_99 = {
             "dN": "%+d to Maximum Cold Damage"
         },
         {
+            "id": 56,
             "s": "coldlength",
             "sS": 1,
             "sB": 8,
             "sA": 0
         },
         {
+            "id": 57,
             "s": "poisonmindam",
             "sS": 1,
             "sB": 10,
@@ -8620,6 +8678,7 @@ export let vanilla_constants_99 = {
             "dE": "%+d poison damage over %d seconds"
         },
         {
+            "id": 58,
             "s": "poisonmaxdam",
             "sS": 1,
             "sB": 10,
@@ -8630,12 +8689,14 @@ export let vanilla_constants_99 = {
             "dN": "%+d to Maximum Poison Damage"
         },
         {
+            "id": 59,
             "s": "poisonlength",
             "sS": 1,
             "sB": 9,
             "sA": 0
         },
         {
+            "id": 60,
             "s": "lifedrainmindam",
             "sS": 1,
             "sB": 7,
@@ -8646,10 +8707,12 @@ export let vanilla_constants_99 = {
             "dN": "%d%% Life stolen per hit"
         },
         {
+            "id": 61,
             "s": "lifedrainmaxdam",
             "sS": 1
         },
         {
+            "id": 62,
             "s": "manadrainmindam",
             "sS": 1,
             "sB": 7,
@@ -8660,59 +8723,71 @@ export let vanilla_constants_99 = {
             "dN": "%d%% Mana stolen per hit"
         },
         {
+            "id": 63,
             "s": "manadrainmaxdam",
             "sS": 1
         },
         {
+            "id": 64,
             "s": "stamdrainmindam",
             "sS": 1
         },
         {
+            "id": 65,
             "s": "stamdrainmaxdam",
             "sS": 1
         },
         {
+            "id": 66,
             "s": "stunlength"
         },
         {
+            "id": 67,
             "s": "velocitypercent",
             "sS": 1,
             "sB": 7,
             "sA": 30
         },
         {
+            "id": 68,
             "s": "attackrate",
             "sS": 1,
             "sB": 7,
             "sA": 30
         },
         {
+            "id": 69,
             "s": "other_animrate",
             "sS": 1
         },
         {
+            "id": 70,
             "s": "quantity",
             "sS": 1
         },
         {
+            "id": 71,
             "s": "value",
             "sS": 1,
             "sB": 8,
             "sA": 100
         },
         {
+            "id": 72,
             "s": "durability",
             "sS": 1,
             "sB": 9,
             "sA": 0
         },
         {
+            "id": 73,
             "s": "maxdurability",
             "sS": 1,
             "sB": 8,
             "sA": 0
         },
         {
+            "id": 74,
             "s": "hpregen",
             "sB": 6,
             "sA": 30,
@@ -8722,6 +8797,7 @@ export let vanilla_constants_99 = {
             "dN": "Drain Life %d"
         },
         {
+            "id": 75,
             "s": "item_maxdurability_percent",
             "sS": 1,
             "sB": 7,
@@ -8736,6 +8812,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 76,
             "s": "item_maxhp_percent",
             "sS": 1,
             "sB": 6,
@@ -8750,6 +8827,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 77,
             "s": "item_maxmana_percent",
             "sS": 1,
             "sB": 6,
@@ -8764,6 +8842,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 78,
             "s": "item_attackertakesdamage",
             "sS": 1,
             "sB": 7,
@@ -8774,6 +8853,7 @@ export let vanilla_constants_99 = {
             "dN": "Attacker Takes Damage of %d"
         },
         {
+            "id": 79,
             "s": "item_goldbonus",
             "sS": 1,
             "sB": 9,
@@ -8784,6 +8864,7 @@ export let vanilla_constants_99 = {
             "dN": "%d%% Extra Gold from Monsters"
         },
         {
+            "id": 80,
             "s": "item_magicbonus",
             "sS": 1,
             "sB": 8,
@@ -8794,6 +8875,7 @@ export let vanilla_constants_99 = {
             "dN": "%d%% Better Chance of Getting Magic Items"
         },
         {
+            "id": 81,
             "s": "item_knockback",
             "sS": 1,
             "sB": 7,
@@ -8804,12 +8886,14 @@ export let vanilla_constants_99 = {
             "dN": "Knockback"
         },
         {
+            "id": 82,
             "s": "item_timeduration",
             "sS": 1,
             "sB": 9,
             "sA": 20
         },
         {
+            "id": 83,
             "s": "item_addclassskills",
             "sS": 1,
             "sB": 3,
@@ -8821,9 +8905,11 @@ export let vanilla_constants_99 = {
             "dN": "%+d to Amazon Skill Levels"
         },
         {
+            "id": 84,
             "s": "unsentparam1"
         },
         {
+            "id": 85,
             "s": "item_addexperience",
             "sS": 1,
             "sB": 9,
@@ -8834,6 +8920,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% to Experience Gained"
         },
         {
+            "id": 86,
             "s": "item_healafterkill",
             "sS": 1,
             "sB": 7,
@@ -8844,6 +8931,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d Life after each Kill"
         },
         {
+            "id": 87,
             "s": "item_reducedprices",
             "sB": 7,
             "sA": 0,
@@ -8853,12 +8941,14 @@ export let vanilla_constants_99 = {
             "dN": "Reduces all Vendor Prices %d%%"
         },
         {
+            "id": 88,
             "s": "item_doubleherbduration",
             "sS": 1,
             "sB": 1,
             "sA": 0
         },
         {
+            "id": 89,
             "s": "item_lightradius",
             "sS": 1,
             "sB": 4,
@@ -8869,12 +8959,14 @@ export let vanilla_constants_99 = {
             "dN": "%+d to Light Radius"
         },
         {
+            "id": 90,
             "s": "item_lightcolor",
             "sS": 1,
             "sB": 24,
             "sA": 0
         },
         {
+            "id": 91,
             "s": "item_req_percent",
             "sS": 1,
             "sB": 8,
@@ -8885,10 +8977,12 @@ export let vanilla_constants_99 = {
             "dN": "Requirements %+d%%"
         },
         {
+            "id": 92,
             "s": "item_levelreq",
             "sB": 7
         },
         {
+            "id": 93,
             "s": "item_fasterattackrate",
             "sS": 1,
             "sB": 7,
@@ -8899,6 +8993,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% Increased Attack Speed"
         },
         {
+            "id": 94,
             "s": "item_levelreqpct",
             "sB": 7,
             "sA": 64,
@@ -8908,9 +9003,11 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 95,
             "s": "lastblockframe"
         },
         {
+            "id": 96,
             "s": "item_fastermovevelocity",
             "sS": 1,
             "sB": 7,
@@ -8921,6 +9018,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% Faster Run/Walk"
         },
         {
+            "id": 97,
             "s": "item_nonclassskill",
             "e": 1,
             "sS": 1,
@@ -8933,11 +9031,13 @@ export let vanilla_constants_99 = {
             "dN": "%+d to %s"
         },
         {
+            "id": 98,
             "s": "state",
             "sB": 1,
             "sP": 8
         },
         {
+            "id": 99,
             "s": "item_fastergethitrate",
             "sS": 1,
             "sB": 7,
@@ -8948,12 +9048,15 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% Faster Hit Recovery"
         },
         {
+            "id": 100,
             "s": "monster_playercount"
         },
         {
+            "id": 101,
             "s": "skill_poison_override_length"
         },
         {
+            "id": 102,
             "s": "item_fasterblockrate",
             "sS": 1,
             "sB": 7,
@@ -8964,12 +9067,15 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% Faster Block Rate"
         },
         {
+            "id": 103,
             "s": "skill_bypass_undead"
         },
         {
+            "id": 104,
             "s": "skill_bypass_demons"
         },
         {
+            "id": 105,
             "s": "item_fastercastrate",
             "sS": 1,
             "sB": 7,
@@ -8980,9 +9086,11 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% Faster Cast Rate"
         },
         {
+            "id": 106,
             "s": "skill_bypass_beasts"
         },
         {
+            "id": 107,
             "s": "item_singleskill",
             "e": 1,
             "sS": 1,
@@ -8995,6 +9103,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d to %s %s"
         },
         {
+            "id": 108,
             "s": "item_restinpeace",
             "sB": 1,
             "sA": 0,
@@ -9004,11 +9113,13 @@ export let vanilla_constants_99 = {
             "dN": "Slain Monsters Rest in Peace"
         },
         {
+            "id": 109,
             "s": "curse_resistance",
             "sB": 9,
             "sA": 0
         },
         {
+            "id": 110,
             "s": "item_poisonlengthresist",
             "sS": 1,
             "sB": 8,
@@ -9019,6 +9130,7 @@ export let vanilla_constants_99 = {
             "dN": "Poison Length Reduced by %d%%"
         },
         {
+            "id": 111,
             "s": "item_normaldamage",
             "sS": 1,
             "sB": 9,
@@ -9029,6 +9141,7 @@ export let vanilla_constants_99 = {
             "dN": "Damage %+d"
         },
         {
+            "id": 112,
             "s": "item_howl",
             "sS": 1,
             "sB": 7,
@@ -9039,6 +9152,7 @@ export let vanilla_constants_99 = {
             "dN": "Hit Causes Monster to Flee %+d%%"
         },
         {
+            "id": 113,
             "s": "item_stupidity",
             "sS": 1,
             "sB": 7,
@@ -9050,6 +9164,7 @@ export let vanilla_constants_99 = {
             "dN": "Hit Blinds Target"
         },
         {
+            "id": 114,
             "s": "item_damagetomana",
             "sS": 1,
             "sB": 6,
@@ -9060,6 +9175,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% Damage Taken Goes To Mana"
         },
         {
+            "id": 115,
             "s": "item_ignoretargetac",
             "sS": 1,
             "sB": 1,
@@ -9070,6 +9186,7 @@ export let vanilla_constants_99 = {
             "dN": "Ignore Target's Defense"
         },
         {
+            "id": 116,
             "s": "item_fractionaltargetac",
             "sS": 1,
             "sB": 7,
@@ -9080,6 +9197,7 @@ export let vanilla_constants_99 = {
             "dN": "-%d%% Target Defense"
         },
         {
+            "id": 117,
             "s": "item_preventheal",
             "sS": 1,
             "sB": 7,
@@ -9090,6 +9208,7 @@ export let vanilla_constants_99 = {
             "dN": "Prevent Monster Heal"
         },
         {
+            "id": 118,
             "s": "item_halffreezeduration",
             "sS": 1,
             "sB": 1,
@@ -9100,6 +9219,7 @@ export let vanilla_constants_99 = {
             "dN": "Half Freeze Duration"
         },
         {
+            "id": 119,
             "s": "item_tohit_percent",
             "sS": 1,
             "sB": 9,
@@ -9110,6 +9230,7 @@ export let vanilla_constants_99 = {
             "dN": "%d%% Bonus to Attack Rating"
         },
         {
+            "id": 120,
             "s": "item_damagetargetac",
             "sS": 1,
             "sB": 7,
@@ -9120,6 +9241,7 @@ export let vanilla_constants_99 = {
             "dN": "%d to Monster Defense Per Hit"
         },
         {
+            "id": 121,
             "s": "item_demondamage_percent",
             "sS": 1,
             "sB": 9,
@@ -9130,6 +9252,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% Damage to Demons"
         },
         {
+            "id": 122,
             "s": "item_undeaddamage_percent",
             "sS": 1,
             "sB": 9,
@@ -9140,6 +9263,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% Damage to Undead"
         },
         {
+            "id": 123,
             "s": "item_demon_tohit",
             "sS": 1,
             "sB": 10,
@@ -9150,6 +9274,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d to Attack Rating against Demons"
         },
         {
+            "id": 124,
             "s": "item_undead_tohit",
             "sS": 1,
             "sB": 10,
@@ -9160,6 +9285,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d to Attack Rating against Undead"
         },
         {
+            "id": 125,
             "s": "item_throwable",
             "sS": 1,
             "sB": 1,
@@ -9170,6 +9296,7 @@ export let vanilla_constants_99 = {
             "dN": "Throwable"
         },
         {
+            "id": 126,
             "s": "item_elemskill",
             "sS": 1,
             "sB": 3,
@@ -9181,6 +9308,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d to Fire Skills"
         },
         {
+            "id": 127,
             "s": "item_allskills",
             "sS": 1,
             "sB": 3,
@@ -9191,6 +9319,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d to All Skills"
         },
         {
+            "id": 128,
             "s": "item_attackertakeslightdamage",
             "sS": 1,
             "sB": 5,
@@ -9201,25 +9330,31 @@ export let vanilla_constants_99 = {
             "dN": "Attacker Takes Lightning Damage of %d"
         },
         {
+            "id": 129,
             "s": "ironmaiden_level",
             "sS": 1
         },
         {
+            "id": 130,
             "s": "lifetap_level",
             "sS": 1
         },
         {
+            "id": 131,
             "s": "thorns_percent"
         },
         {
+            "id": 132,
             "s": "bonearmor",
             "sS": 1
         },
         {
+            "id": 133,
             "s": "bonearmormax",
             "sS": 1
         },
         {
+            "id": 134,
             "s": "item_freeze",
             "sS": 1,
             "sB": 5,
@@ -9231,6 +9366,7 @@ export let vanilla_constants_99 = {
             "dN": "Freezes target"
         },
         {
+            "id": 135,
             "s": "item_openwounds",
             "sS": 1,
             "sB": 7,
@@ -9241,6 +9377,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% Chance of Open Wounds"
         },
         {
+            "id": 136,
             "s": "item_crushingblow",
             "sS": 1,
             "sB": 7,
@@ -9251,6 +9388,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% Chance of Crushing Blow"
         },
         {
+            "id": 137,
             "s": "item_kickdamage",
             "sS": 1,
             "sB": 7,
@@ -9261,6 +9399,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d Kick Damage"
         },
         {
+            "id": 138,
             "s": "item_manaafterkill",
             "sS": 1,
             "sB": 7,
@@ -9271,6 +9410,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d to Mana after each Kill"
         },
         {
+            "id": 139,
             "s": "item_healafterdemonkill",
             "sS": 1,
             "sB": 7,
@@ -9281,12 +9421,14 @@ export let vanilla_constants_99 = {
             "dN": "%+d Life after each Demon Kill"
         },
         {
+            "id": 140,
             "s": "item_extrablood",
             "sS": 1,
             "sB": 7,
             "sA": 0
         },
         {
+            "id": 141,
             "s": "item_deadlystrike",
             "sS": 1,
             "sB": 7,
@@ -9297,6 +9439,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% Deadly Strike"
         },
         {
+            "id": 142,
             "s": "item_absorbfire_percent",
             "sS": 1,
             "sB": 7,
@@ -9307,6 +9450,7 @@ export let vanilla_constants_99 = {
             "dN": "Fire Absorb %+d%%"
         },
         {
+            "id": 143,
             "s": "item_absorbfire",
             "sS": 1,
             "sB": 7,
@@ -9317,6 +9461,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d Fire Absorb"
         },
         {
+            "id": 144,
             "s": "item_absorblight_percent",
             "sS": 1,
             "sB": 7,
@@ -9327,6 +9472,7 @@ export let vanilla_constants_99 = {
             "dN": "Lightning Absorb %+d%%"
         },
         {
+            "id": 145,
             "s": "item_absorblight",
             "sS": 1,
             "sB": 7,
@@ -9337,6 +9483,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d Lightning Absorb"
         },
         {
+            "id": 146,
             "s": "item_absorbmagic_percent",
             "sS": 1,
             "sB": 7,
@@ -9347,6 +9494,7 @@ export let vanilla_constants_99 = {
             "dN": "Magic Absorb %+d%%"
         },
         {
+            "id": 147,
             "s": "item_absorbmagic",
             "sS": 1,
             "sB": 7,
@@ -9357,6 +9505,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d Magic Absorb"
         },
         {
+            "id": 148,
             "s": "item_absorbcold_percent",
             "sS": 1,
             "sB": 7,
@@ -9367,6 +9516,7 @@ export let vanilla_constants_99 = {
             "dN": "Cold Absorb %+d%%"
         },
         {
+            "id": 149,
             "s": "item_absorbcold",
             "sS": 1,
             "sB": 7,
@@ -9377,6 +9527,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d Cold Absorb"
         },
         {
+            "id": 150,
             "s": "item_slow",
             "sS": 1,
             "sB": 7,
@@ -9387,6 +9538,7 @@ export let vanilla_constants_99 = {
             "dN": "Slows Target by %d%%"
         },
         {
+            "id": 151,
             "s": "item_aura",
             "sS": 1,
             "sB": 5,
@@ -9399,6 +9551,7 @@ export let vanilla_constants_99 = {
             "dN": "Level %d %s Aura When Equipped"
         },
         {
+            "id": 152,
             "s": "item_indesctructible",
             "sS": 1,
             "sB": 1,
@@ -9408,6 +9561,7 @@ export let vanilla_constants_99 = {
             "dN": "Indestructible"
         },
         {
+            "id": 153,
             "s": "item_cannotbefrozen",
             "sS": 1,
             "sB": 1,
@@ -9417,6 +9571,7 @@ export let vanilla_constants_99 = {
             "dN": "Cannot Be Frozen"
         },
         {
+            "id": 154,
             "s": "item_staminadrainpct",
             "sS": 1,
             "sB": 7,
@@ -9427,6 +9582,7 @@ export let vanilla_constants_99 = {
             "dN": "%d%% Slower Stamina Drain"
         },
         {
+            "id": 155,
             "s": "item_reanimate",
             "sB": 7,
             "sA": 0,
@@ -9437,6 +9593,7 @@ export let vanilla_constants_99 = {
             "dN": "%0%% Reanimate as: %1"
         },
         {
+            "id": 156,
             "s": "item_pierce",
             "sS": 1,
             "sB": 7,
@@ -9447,6 +9604,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% Piercing Attack"
         },
         {
+            "id": 157,
             "s": "item_magicarrow",
             "sS": 1,
             "sB": 7,
@@ -9457,6 +9615,7 @@ export let vanilla_constants_99 = {
             "dN": "Fires Magic Arrows"
         },
         {
+            "id": 158,
             "s": "item_explosivearrow",
             "sS": 1,
             "sB": 7,
@@ -9467,22 +9626,26 @@ export let vanilla_constants_99 = {
             "dN": "Fires Explosive Arrows or Bolts"
         },
         {
+            "id": 159,
             "s": "item_throw_mindamage",
             "sS": 1,
             "sB": 6,
             "sA": 0
         },
         {
+            "id": 160,
             "s": "item_throw_maxdamage",
             "sS": 1,
             "sB": 7,
             "sA": 0
         },
         {
+            "id": 161,
             "s": "skill_handofathena",
             "sS": 1
         },
         {
+            "id": 162,
             "s": "skill_staminapercent",
             "sS": 1,
             "o": 1,
@@ -9491,6 +9654,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 163,
             "s": "skill_passive_staminapercent",
             "sS": 1,
             "o": 1,
@@ -9499,59 +9663,75 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 164,
             "s": "skill_concentration",
             "sS": 1
         },
         {
+            "id": 165,
             "s": "skill_enchant",
             "sS": 1
         },
         {
+            "id": 166,
             "s": "skill_pierce",
             "sS": 1
         },
         {
+            "id": 167,
             "s": "skill_conviction",
             "sS": 1
         },
         {
+            "id": 168,
             "s": "skill_chillingarmor",
             "sS": 1
         },
         {
+            "id": 169,
             "s": "skill_frenzy",
             "sS": 1
         },
         {
+            "id": 170,
             "s": "skill_decrepify",
             "sS": 1
         },
         {
+            "id": 171,
             "s": "skill_armor_percent",
             "sS": 1
         },
         {
+            "id": 172,
             "s": "alignment"
         },
         {
+            "id": 173,
             "s": "target0"
         },
         {
+            "id": 174,
             "s": "target1"
         },
         {
+            "id": 175,
             "s": "goldlost"
         },
         {
+            "id": 176,
             "s": "conversion_level"
         },
         {
+            "id": 177,
             "s": "conversion_maxhp"
         },
         {
+            "id": 178,
             "s": "unit_dooverlay"
         },
         {
+            "id": 179,
             "s": "attack_vs_montype",
             "sB": 9,
             "sP": 10,
@@ -9561,6 +9741,7 @@ export let vanilla_constants_99 = {
             "dN": "%d%% to Attack Rating versus"
         },
         {
+            "id": 180,
             "s": "damage_vs_montype",
             "sB": 9,
             "sP": 10,
@@ -9570,32 +9751,39 @@ export let vanilla_constants_99 = {
             "dN": "%d%% to Damage versus"
         },
         {
+            "id": 181,
             "s": "fade",
             "sB": 3
         },
         {
+            "id": 182,
             "s": "armor_override_percent",
             "sS": 1
         },
         {
+            "id": 183,
             "s": "lasthitreactframe"
         },
         {
+            "id": 184,
             "s": "create_season"
         },
         {
+            "id": 185,
             "s": "bonus_mindamage",
             "sS": 1,
             "sB": 8,
             "sA": 0
         },
         {
+            "id": 186,
             "s": "bonus_maxdamage",
             "sS": 1,
             "sB": 8,
             "sA": 0
         },
         {
+            "id": 187,
             "s": "item_pierce_cold_immunity",
             "sB": 10,
             "so": 100,
@@ -9604,6 +9792,7 @@ export let vanilla_constants_99 = {
             "dN": "Monster Cold Immunity is Sundered"
         },
         {
+            "id": 188,
             "s": "item_addskill_tab",
             "sS": 1,
             "sB": 3,
@@ -9615,6 +9804,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d to Javelin and Spear Skills"
         },
         {
+            "id": 189,
             "s": "item_pierce_fire_immunity",
             "sB": 10,
             "so": 100,
@@ -9623,6 +9813,7 @@ export let vanilla_constants_99 = {
             "dN": "Monster Fire Immunity is Sundered"
         },
         {
+            "id": 190,
             "s": "item_pierce_light_immunity",
             "sB": 10,
             "so": 100,
@@ -9631,6 +9822,7 @@ export let vanilla_constants_99 = {
             "dN": "Monster Lightning Immunity is Sundered"
         },
         {
+            "id": 191,
             "s": "item_pierce_poison_immunity",
             "sB": 10,
             "so": 100,
@@ -9639,6 +9831,7 @@ export let vanilla_constants_99 = {
             "dN": "Monster Poison Immunity is Sundered"
         },
         {
+            "id": 192,
             "s": "item_pierce_damage_immunity",
             "sB": 10,
             "so": 100,
@@ -9647,6 +9840,7 @@ export let vanilla_constants_99 = {
             "dN": "Monster Physical Immunity is Sundered"
         },
         {
+            "id": 193,
             "s": "item_pierce_magic_immunity",
             "sB": 10,
             "so": 100,
@@ -9655,12 +9849,14 @@ export let vanilla_constants_99 = {
             "dN": "Monster Magic Immunity is Sundered"
         },
         {
+            "id": 194,
             "s": "item_numsockets",
             "sS": 1,
             "sB": 4,
             "sA": 0
         },
         {
+            "id": 195,
             "s": "item_skillonattack",
             "e": 2,
             "sS": 1,
@@ -9673,6 +9869,7 @@ export let vanilla_constants_99 = {
             "dN": "%d%% Chance to cast level %d %s on attack"
         },
         {
+            "id": 196,
             "s": "item_skillonkill",
             "e": 2,
             "sS": 1,
@@ -9685,6 +9882,7 @@ export let vanilla_constants_99 = {
             "dN": "%d%% Chance to cast level %d %s when you Kill an Enemy"
         },
         {
+            "id": 197,
             "s": "item_skillondeath",
             "e": 2,
             "sS": 1,
@@ -9697,6 +9895,7 @@ export let vanilla_constants_99 = {
             "dN": "%d%% Chance to cast level %d %s when you Die"
         },
         {
+            "id": 198,
             "s": "item_skillonhit",
             "e": 2,
             "sS": 1,
@@ -9709,6 +9908,7 @@ export let vanilla_constants_99 = {
             "dN": "%d%% Chance to cast level %d %s on striking"
         },
         {
+            "id": 199,
             "s": "item_skillonlevelup",
             "e": 2,
             "sS": 1,
@@ -9721,6 +9921,7 @@ export let vanilla_constants_99 = {
             "dN": "%d%% Chance to cast level %d %s when you Level-Up"
         },
         {
+            "id": 200,
             "s": "item_charge_noconsume",
             "sB": 7,
             "sA": 0,
@@ -9730,6 +9931,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% chance for finishing moves to not consume charges"
         },
         {
+            "id": 201,
             "s": "item_skillongethit",
             "e": 2,
             "sS": 1,
@@ -9742,12 +9944,15 @@ export let vanilla_constants_99 = {
             "dN": "%d%% Chance to cast level %d %s when struck"
         },
         {
+            "id": 202,
             "s": "modifierlist_castid"
         },
         {
+            "id": 203,
             "s": "unused203"
         },
         {
+            "id": 204,
             "s": "item_charged_skill",
             "e": 3,
             "sS": 1,
@@ -9760,6 +9965,7 @@ export let vanilla_constants_99 = {
             "dN": "Level %d %s (%d/%d Charges)"
         },
         {
+            "id": 205,
             "s": "item_noconsume",
             "sS": 1,
             "sB": 7,
@@ -9770,6 +9976,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% Chance to not consume Quantity"
         },
         {
+            "id": 206,
             "s": "passive_mastery_replenish_oncrit",
             "sS": 1,
             "sB": 8,
@@ -9777,33 +9984,39 @@ export let vanilla_constants_99 = {
         },
         null,
         {
+            "id": 208,
             "s": "unused208",
             "e": 3,
             "sS": 1
         },
         {
+            "id": 209,
             "s": "unused209",
             "e": 3,
             "sS": 1
         },
         {
+            "id": 210,
             "s": "unused210",
             "e": 3,
             "sS": 1
         },
         {
+            "id": 211,
             "s": "unused211",
             "e": 3,
             "sS": 1
         },
         null,
         {
+            "id": 213,
             "s": "passive_mastery_attack_speed",
             "sS": 1,
             "sB": 8,
             "sA": 0
         },
         {
+            "id": 214,
             "s": "item_armor_perlevel",
             "sS": 1,
             "sB": 6,
@@ -9821,6 +10034,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 215,
             "s": "item_armorpercent_perlevel",
             "sS": 1,
             "sB": 6,
@@ -9838,6 +10052,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 216,
             "s": "item_hp_perlevel",
             "vS": 8,
             "sS": 1,
@@ -9856,6 +10071,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 217,
             "s": "item_mana_perlevel",
             "vS": 8,
             "sS": 1,
@@ -9874,6 +10090,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 218,
             "s": "item_maxdamage_perlevel",
             "sS": 1,
             "sB": 6,
@@ -9893,6 +10110,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 219,
             "s": "item_maxdamage_percent_perlevel",
             "sS": 1,
             "sB": 6,
@@ -9912,6 +10130,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 220,
             "s": "item_strength_perlevel",
             "sS": 1,
             "sB": 6,
@@ -9929,6 +10148,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 221,
             "s": "item_dexterity_perlevel",
             "sS": 1,
             "sB": 6,
@@ -9946,6 +10166,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 222,
             "s": "item_energy_perlevel",
             "sS": 1,
             "sB": 6,
@@ -9963,6 +10184,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 223,
             "s": "item_vitality_perlevel",
             "sS": 1,
             "sB": 6,
@@ -9980,6 +10202,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 224,
             "s": "item_tohit_perlevel",
             "sS": 1,
             "sB": 6,
@@ -9997,6 +10220,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 225,
             "s": "item_tohitpercent_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10014,6 +10238,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 226,
             "s": "item_cold_damagemax_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10031,6 +10256,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 227,
             "s": "item_fire_damagemax_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10048,6 +10274,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 228,
             "s": "item_ltng_damagemax_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10065,6 +10292,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 229,
             "s": "item_pois_damagemax_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10082,6 +10310,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 230,
             "s": "item_resist_cold_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10099,6 +10328,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 231,
             "s": "item_resist_fire_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10116,6 +10346,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 232,
             "s": "item_resist_ltng_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10133,6 +10364,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 233,
             "s": "item_resist_pois_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10150,6 +10382,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 234,
             "s": "item_absorb_cold_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10167,6 +10400,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 235,
             "s": "item_absorb_fire_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10184,6 +10418,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 236,
             "s": "item_absorb_ltng_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10201,6 +10436,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 237,
             "s": "item_absorb_pois_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10213,6 +10449,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 238,
             "s": "item_thorns_perlevel",
             "sS": 1,
             "sB": 5,
@@ -10230,6 +10467,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 239,
             "s": "item_find_gold_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10247,6 +10485,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 240,
             "s": "item_find_magic_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10264,6 +10503,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 241,
             "s": "item_regenstamina_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10281,6 +10521,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 242,
             "s": "item_stamina_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10298,6 +10539,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 243,
             "s": "item_damage_demon_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10315,6 +10557,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 244,
             "s": "item_damage_undead_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10332,6 +10575,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 245,
             "s": "item_tohit_demon_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10349,6 +10593,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 246,
             "s": "item_tohit_undead_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10366,6 +10611,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 247,
             "s": "item_crushingblow_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10383,6 +10629,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 248,
             "s": "item_openwounds_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10400,6 +10647,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 249,
             "s": "item_kick_damage_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10417,6 +10665,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 250,
             "s": "item_deadlystrike_perlevel",
             "sS": 1,
             "sB": 6,
@@ -10434,10 +10683,12 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 251,
             "s": "item_find_gems_perlevel",
             "sS": 1
         },
         {
+            "id": 252,
             "s": "item_replenish_durability",
             "sS": 1,
             "sB": 6,
@@ -10448,6 +10699,7 @@ export let vanilla_constants_99 = {
             "dN": "Repairs %d durability per second"
         },
         {
+            "id": 253,
             "s": "item_replenish_quantity",
             "sS": 1,
             "sB": 6,
@@ -10458,6 +10710,7 @@ export let vanilla_constants_99 = {
             "dN": "Replenishes quantity"
         },
         {
+            "id": 254,
             "s": "item_extra_stack",
             "sS": 1,
             "sB": 8,
@@ -10468,58 +10721,72 @@ export let vanilla_constants_99 = {
             "dN": "Increased Stack Size"
         },
         {
+            "id": 255,
             "s": "item_find_item",
             "sS": 1
         },
         {
+            "id": 256,
             "s": "item_slash_damage",
             "sS": 1
         },
         {
+            "id": 257,
             "s": "item_slash_damage_percent",
             "sS": 1
         },
         {
+            "id": 258,
             "s": "item_crush_damage",
             "sS": 1
         },
         {
+            "id": 259,
             "s": "item_crush_damage_percent",
             "sS": 1
         },
         {
+            "id": 260,
             "s": "item_thrust_damage",
             "sS": 1
         },
         {
+            "id": 261,
             "s": "item_thrust_damage_percent",
             "sS": 1
         },
         {
+            "id": 262,
             "s": "item_absorb_slash",
             "sS": 1
         },
         {
+            "id": 263,
             "s": "item_absorb_crush",
             "sS": 1
         },
         {
+            "id": 264,
             "s": "item_absorb_thrust",
             "sS": 1
         },
         {
+            "id": 265,
             "s": "item_absorb_slash_percent",
             "sS": 1
         },
         {
+            "id": 266,
             "s": "item_absorb_crush_percent",
             "sS": 1
         },
         {
+            "id": 267,
             "s": "item_absorb_thrust_percent",
             "sS": 1
         },
         {
+            "id": 268,
             "s": "item_armor_bytime",
             "e": 4,
             "sS": 1,
@@ -10535,6 +10802,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 269,
             "s": "item_armorpercent_bytime",
             "e": 4,
             "sS": 1,
@@ -10550,6 +10818,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 270,
             "s": "item_hp_bytime",
             "e": 4,
             "sS": 1,
@@ -10565,6 +10834,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 271,
             "s": "item_mana_bytime",
             "e": 4,
             "sS": 1,
@@ -10580,6 +10850,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 272,
             "s": "item_maxdamage_bytime",
             "e": 4,
             "sS": 1,
@@ -10597,6 +10868,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 273,
             "s": "item_maxdamage_percent_bytime",
             "e": 4,
             "sS": 1,
@@ -10614,6 +10886,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 274,
             "s": "item_strength_bytime",
             "e": 4,
             "sS": 1,
@@ -10629,6 +10902,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 275,
             "s": "item_dexterity_bytime",
             "e": 4,
             "sS": 1,
@@ -10644,6 +10918,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 276,
             "s": "item_energy_bytime",
             "e": 4,
             "sS": 1,
@@ -10659,6 +10934,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 277,
             "s": "item_vitality_bytime",
             "e": 4,
             "sS": 1,
@@ -10674,6 +10950,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 278,
             "s": "item_tohit_bytime",
             "e": 4,
             "sS": 1,
@@ -10689,6 +10966,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 279,
             "s": "item_tohitpercent_bytime",
             "e": 4,
             "sS": 1,
@@ -10704,6 +10982,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 280,
             "s": "item_cold_damagemax_bytime",
             "e": 4,
             "sS": 1,
@@ -10719,6 +10998,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 281,
             "s": "item_fire_damagemax_bytime",
             "e": 4,
             "sS": 1,
@@ -10734,6 +11014,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 282,
             "s": "item_ltng_damagemax_bytime",
             "e": 4,
             "sS": 1,
@@ -10749,6 +11030,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 283,
             "s": "item_pois_damagemax_bytime",
             "e": 4,
             "sS": 1,
@@ -10764,6 +11046,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 284,
             "s": "item_resist_cold_bytime",
             "e": 4,
             "sS": 1,
@@ -10779,6 +11062,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 285,
             "s": "item_resist_fire_bytime",
             "e": 4,
             "sS": 1,
@@ -10794,6 +11078,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 286,
             "s": "item_resist_ltng_bytime",
             "e": 4,
             "sS": 1,
@@ -10809,6 +11094,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 287,
             "s": "item_resist_pois_bytime",
             "e": 4,
             "sS": 1,
@@ -10824,6 +11110,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 288,
             "s": "item_absorb_cold_bytime",
             "e": 4,
             "sS": 1,
@@ -10839,6 +11126,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 289,
             "s": "item_absorb_fire_bytime",
             "e": 4,
             "sS": 1,
@@ -10854,6 +11142,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 290,
             "s": "item_absorb_ltng_bytime",
             "e": 4,
             "sS": 1,
@@ -10869,6 +11158,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 291,
             "s": "item_absorb_pois_bytime",
             "e": 4,
             "sS": 1,
@@ -10880,6 +11170,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 292,
             "s": "item_find_gold_bytime",
             "e": 4,
             "sS": 1,
@@ -10895,6 +11186,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 293,
             "s": "item_find_magic_bytime",
             "e": 4,
             "sS": 1,
@@ -10910,6 +11202,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 294,
             "s": "item_regenstamina_bytime",
             "e": 4,
             "sS": 1,
@@ -10925,6 +11218,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 295,
             "s": "item_stamina_bytime",
             "e": 4,
             "sS": 1,
@@ -10940,6 +11234,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 296,
             "s": "item_damage_demon_bytime",
             "e": 4,
             "sS": 1,
@@ -10955,6 +11250,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 297,
             "s": "item_damage_undead_bytime",
             "e": 4,
             "sS": 1,
@@ -10970,6 +11266,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 298,
             "s": "item_tohit_demon_bytime",
             "e": 4,
             "sS": 1,
@@ -10985,6 +11282,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 299,
             "s": "item_tohit_undead_bytime",
             "e": 4,
             "sS": 1,
@@ -11000,6 +11298,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 300,
             "s": "item_crushingblow_bytime",
             "e": 4,
             "sS": 1,
@@ -11015,6 +11314,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 301,
             "s": "item_openwounds_bytime",
             "e": 4,
             "sS": 1,
@@ -11030,6 +11330,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 302,
             "s": "item_kick_damage_bytime",
             "e": 4,
             "sS": 1,
@@ -11045,6 +11346,7 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 303,
             "s": "item_deadlystrike_bytime",
             "e": 4,
             "sS": 1,
@@ -11060,11 +11362,13 @@ export let vanilla_constants_99 = {
             ]
         },
         {
+            "id": 304,
             "s": "item_find_gems_bytime",
             "e": 4,
             "sS": 1
         },
         {
+            "id": 305,
             "s": "item_pierce_cold",
             "sS": 1,
             "sB": 8,
@@ -11075,6 +11379,7 @@ export let vanilla_constants_99 = {
             "dN": "-%d%% to Enemy Cold Resistance"
         },
         {
+            "id": 306,
             "s": "item_pierce_fire",
             "sS": 1,
             "sB": 8,
@@ -11085,6 +11390,7 @@ export let vanilla_constants_99 = {
             "dN": "-%d%% to Enemy Fire Resistance"
         },
         {
+            "id": 307,
             "s": "item_pierce_ltng",
             "sS": 1,
             "sB": 8,
@@ -11095,6 +11401,7 @@ export let vanilla_constants_99 = {
             "dN": "-%d%% to Enemy Lightning Resistance"
         },
         {
+            "id": 308,
             "s": "item_pierce_pois",
             "sS": 1,
             "sB": 8,
@@ -11105,88 +11412,109 @@ export let vanilla_constants_99 = {
             "dN": "-%d%% to Enemy Poison Resistance"
         },
         {
+            "id": 309,
             "s": "item_damage_vs_monster",
             "sS": 1
         },
         {
+            "id": 310,
             "s": "item_damage_percent_vs_monster",
             "sS": 1
         },
         {
+            "id": 311,
             "s": "item_tohit_vs_monster",
             "sS": 1
         },
         {
+            "id": 312,
             "s": "item_tohit_percent_vs_monster",
             "sS": 1
         },
         {
+            "id": 313,
             "s": "item_ac_vs_monster",
             "sS": 1
         },
         {
+            "id": 314,
             "s": "item_ac_percent_vs_monster",
             "sS": 1
         },
         {
+            "id": 315,
             "s": "firelength",
             "sS": 1
         },
         {
+            "id": 316,
             "s": "burningmin",
             "sS": 1
         },
         {
+            "id": 317,
             "s": "burningmax",
             "sS": 1
         },
         {
+            "id": 318,
             "s": "progressive_damage",
             "sS": 1
         },
         {
+            "id": 319,
             "s": "progressive_steal",
             "sS": 1
         },
         {
+            "id": 320,
             "s": "progressive_other",
             "sS": 1
         },
         {
+            "id": 321,
             "s": "progressive_fire",
             "sS": 1
         },
         {
+            "id": 322,
             "s": "progressive_cold",
             "sS": 1
         },
         {
+            "id": 323,
             "s": "progressive_lightning",
             "sS": 1
         },
         {
+            "id": 324,
             "s": "item_extra_charges",
             "sS": 1,
             "sB": 6,
             "sA": 0
         },
         {
+            "id": 325,
             "s": "progressive_tohit",
             "sS": 1
         },
         {
+            "id": 326,
             "s": "poison_count",
             "sS": 1
         },
         {
+            "id": 327,
             "s": "damage_framerate",
             "sS": 1
         },
         {
+            "id": 328,
             "s": "pierce_idx",
             "sS": 1
         },
         {
+            "id": 329,
             "s": "passive_fire_mastery",
             "sS": 1,
             "sB": 9,
@@ -11197,6 +11525,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% to Fire Skill Damage"
         },
         {
+            "id": 330,
             "s": "passive_ltng_mastery",
             "sS": 1,
             "sB": 9,
@@ -11207,6 +11536,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% to Lightning Skill Damage"
         },
         {
+            "id": 331,
             "s": "passive_cold_mastery",
             "sS": 1,
             "sB": 9,
@@ -11217,6 +11547,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% to Cold Skill Damage"
         },
         {
+            "id": 332,
             "s": "passive_pois_mastery",
             "sS": 1,
             "sB": 9,
@@ -11227,6 +11558,7 @@ export let vanilla_constants_99 = {
             "dN": "%+d%% to Poison Skill Damage"
         },
         {
+            "id": 333,
             "s": "passive_fire_pierce",
             "sS": 1,
             "sB": 8,
@@ -11237,6 +11569,7 @@ export let vanilla_constants_99 = {
             "dN": "-%d%% to Enemy Fire Resistance"
         },
         {
+            "id": 334,
             "s": "passive_ltng_pierce",
             "sS": 1,
             "sB": 8,
@@ -11247,6 +11580,7 @@ export let vanilla_constants_99 = {
             "dN": "-%d%% to Enemy Lightning Resistance"
         },
         {
+            "id": 335,
             "s": "passive_cold_pierce",
             "sS": 1,
             "sB": 8,
@@ -11257,6 +11591,7 @@ export let vanilla_constants_99 = {
             "dN": "-%d%% to Enemy Cold Resistance"
         },
         {
+            "id": 336,
             "s": "passive_pois_pierce",
             "sS": 1,
             "sB": 8,
@@ -11267,123 +11602,147 @@ export let vanilla_constants_99 = {
             "dN": "-%d%% to Enemy Poison Resistance"
         },
         {
+            "id": 337,
             "s": "passive_critical_strike",
             "sS": 1,
             "sB": 8,
             "sA": 0
         },
         {
+            "id": 338,
             "s": "passive_dodge",
             "sS": 1,
             "sB": 7,
             "sA": 0
         },
         {
+            "id": 339,
             "s": "passive_avoid",
             "sS": 1,
             "sB": 7,
             "sA": 0
         },
         {
+            "id": 340,
             "s": "passive_evade",
             "sS": 1,
             "sB": 7,
             "sA": 0
         },
         {
+            "id": 341,
             "s": "passive_warmth",
             "sS": 1,
             "sB": 8,
             "sA": 0
         },
         {
+            "id": 342,
             "s": "passive_mastery_melee_th",
             "sS": 1,
             "sB": 8,
             "sA": 0
         },
         {
+            "id": 343,
             "s": "passive_mastery_melee_dmg",
             "sS": 1,
             "sB": 8,
             "sA": 0
         },
         {
+            "id": 344,
             "s": "passive_mastery_melee_crit",
             "sS": 1,
             "sB": 8,
             "sA": 0
         },
         {
+            "id": 345,
             "s": "passive_mastery_throw_th",
             "sS": 1,
             "sB": 8,
             "sA": 0
         },
         {
+            "id": 346,
             "s": "passive_mastery_throw_dmg",
             "sS": 1,
             "sB": 8,
             "sA": 0
         },
         {
+            "id": 347,
             "s": "passive_mastery_throw_crit",
             "sS": 1,
             "sB": 8,
             "sA": 0
         },
         {
+            "id": 348,
             "s": "passive_weaponblock",
             "sS": 1,
             "sB": 8,
             "sA": 0
         },
         {
+            "id": 349,
             "s": "passive_summon_resist",
             "sS": 1,
             "sB": 8,
             "sA": 0
         },
         {
+            "id": 350,
             "s": "modifierlist_skill"
         },
         {
+            "id": 351,
             "s": "modifierlist_level"
         },
         {
+            "id": 352,
             "s": "last_sent_hp_pct",
             "sS": 1
         },
         {
+            "id": 353,
             "s": "source_unit_type"
         },
         {
+            "id": 354,
             "s": "source_unit_id"
         },
         {
+            "id": 355,
             "s": "shortparam1"
         },
         {
+            "id": 356,
             "s": "questitemdifficulty",
             "sB": 2,
             "sA": 0
         },
         {
+            "id": 357,
             "s": "passive_mag_mastery",
             "sS": 1,
             "sB": 9,
             "sA": 50
         },
         {
+            "id": 358,
             "s": "passive_mag_pierce",
             "sS": 1,
             "sB": 8,
             "sA": 0
         },
         {
+            "id": 359,
             "s": "skill_cooldown"
         },
         {
+            "id": 360,
             "s": "skill_missile_damage_scale"
         }
     ],

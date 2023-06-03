@@ -7,7 +7,7 @@
       <div class="octicon octicon-clippy navbar-brand">
         <i class="fa fa-fw fa-github"></i>
         <a href="https://github.com/dschu012">dschu012</a> / <a class="font-weight-bold"
-          href="https://github.com/Ricola3D/d2s-editor">d2s-editor</a>
+          href="https://github.com/dschu012/d2s-editor">d2s-editor</a>
       </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,12 +18,12 @@
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item" v-if="theme !== 'd2'">
+          <!-- <li class="nav-item" v-if="theme !== 'd2'">
             <a class="nav-link" href="#" @click="setTheme('d2')">Change Theme</a>
           </li>
           <li class="nav-item" v-if="theme === 'd2'">
             <a class="nav-link" href="#" @click="setTheme('dark')">Change Theme</a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </nav>
@@ -46,10 +46,12 @@
               <option v-for="item in itempack" :value="item" :key="item.key">{{item.key}}</option>
             </select>
           </div>
-          <div class="modal-footer d-flex">
-            <button type="button" class="btn btn-secondary" @click="loadFromString" data-dismiss="modal">Import</button>
+          <div class="modal-footer">
+            <input style="display:none;" type="file" name="d2iFile" @change="onItemFileChange" id="d2iFile">
+            <label for="d2iFile" class="mb-0 btn btn-primary">Load From File</label>
+            <button type="button" class="btn btn-primary" @click="loadBase64Item" data-dismiss="modal">Load From String</button>
             <button type="button" class="btn btn-primary" @click="loadItem" data-dismiss="modal">Load</button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -58,12 +60,12 @@
     <div class="container-fluid">
 
       <div class="row">
-        <div class="offset-lg-2 col-lg-8 mt-2">
+        <div class="offset-lg-1 col-lg-10 mt-2">
           <div class="card bg-light">
             <div class="card-body">
               <div class="alert alert-primary" role="alert">
                 This editor is still a work in progress. Some things may not work. Found a bug? <a
-                  href="https://github.com/Ricola3D/d2s-editor/issues/new">Report it.</a>
+                  href="https://github.com/dschu012/d2s-editor/issues/new">Report it.</a>
               </div>
               <form id="d2sForm">
                 <fieldset>
@@ -78,7 +80,8 @@
                         <label class="custom-file-label" for="d2sFile">*.d2s</label>
                       </div>
                       <div>
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">Create New</button>
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">Create
+                          New</button>
                         <div class="dropdown-menu dropdown-menu-right">
                           <button class="dropdown-item" type="button" @click="newChar(0)">Amazon</button>
                           <button class="dropdown-item" type="button" @click="newChar(1)">Sorceress</button>
@@ -118,16 +121,16 @@
                     </ul>
                     <div class="tab-content" id="tabs-content">
                       <div class="tab-pane show active" id="stats-content" role="tabpanel">
-                        <Stats v-model:save="save" />
+                        <Stats v-bind:save.sync="save" />
                       </div>
                       <div class="tab-pane" id="waypoints-content" role="tabpanel">
-                        <Waypoints v-model:save="save" />
+                        <Waypoints :waypoints="save.header.waypoints" v-on:update:waypoints="save.header.waypoints = $event" />
                       </div>
                       <div class="tab-pane" id="quests-content" role="tabpanel">
-                        <Quests v-model:save="save" />
+                        <Quests :save="save" v-on:update:save="save = $event" />
                       </div>
                       <div class="tab-pane" id="skills-content" role="tabpanel">
-                        <Skills v-model:save="save" />
+                        <Skills v-bind:save.sync="save" />
                       </div>
                       <div class="tab-pane" id="items-content" role="tabpanel">
                         <div v-for="(notification, idx) in notifications" :key="idx" :class="notification.alert" role="alert">
@@ -205,18 +208,18 @@
                             </div>
                           </div>
                         </div>
-                        <Equipped v-if="activeTab == 1 || activeTab == 6" v-model:items="equipped" @item-selected="onSelect" @item-event="onEvent" :id="'Equipped'" :contextMenu="$refs.contextMenu">
+                        <Equipped v-if="activeTab == 1 || activeTab == 6" :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent" :id="'Equipped'" :contextMenu="$refs.contextMenu">
                         </Equipped>
                         <Grid v-if="activeTab == 1 || activeTab == 6" :width="grid.inv.w" :height="grid.inv.h" :page="1"
-                          v-model:items="inventory" @item-selected="onSelect" @item-event="onEvent" :id="'InventoryGrid'" :contextMenu="$refs.contextMenu"></Grid>
+                          :items.sync="inventory" @item-selected="onSelect" @item-event="onEvent" :id="'InventoryGrid'" :contextMenu="$refs.contextMenu"></Grid>
                         <Grid v-if="activeTab == 3 || activeTab == 6" :width="grid.stash.w" :height="grid.stash.h" :page="5"
-                          v-model:items="stash" @item-selected="onSelect" @item-event="onEvent" :id="'StashGrid'" :contextMenu="$refs.contextMenu"></Grid>
+                          :items.sync="stash" @item-selected="onSelect" @item-event="onEvent" :id="'StashGrid'" :contextMenu="$refs.contextMenu"></Grid>
                         <Grid v-if="activeTab == 4 || activeTab == 6" :width="grid.cube.w" :height="grid.cube.h" :page="4"
-                          v-model:items="cube" @item-selected="onSelect" @item-event="onEvent" :id="'CubeGrid'" :contextMenu="$refs.contextMenu">
+                          :items.sync="cube" @item-selected="onSelect" @item-event="onEvent" :id="'CubeGrid'" :contextMenu="$refs.contextMenu">
                         </Grid>
-                        <Mercenary v-if="activeTab == 5 || activeTab == 6" v-model:items="mercenary" @item-selected="onSelect" :contextMenu="$refs.contextMenu">
+                        <Mercenary v-if="activeTab == 5 || activeTab == 6" :items.sync="mercenary" @item-selected="onSelect" :contextMenu="$refs.contextMenu">
                         </Mercenary>
-                        <ItemEditor v-if="selected" :id="'Selected'" v-model:item="selected" :location="location" ref="editor" @item-event="onEvent"></ItemEditor>
+                        <ItemEditor v-if="selected" :id="'Selected'" :item.sync="selected" :location="location" ref="editor" @item-event="onEvent"></ItemEditor>
                       </div>
                     </div>
                   </div>
@@ -317,14 +320,14 @@
       }
 
       // Set the const data
-      d2s.setConstantData("vanilla", 96, window.vanilla_constants_96);
-      d2s.setConstantData("vanilla", 97, window.vanilla_constants_96);
-      d2s.setConstantData("vanilla", 98, window.vanilla_constants_96);
-      d2s.setConstantData("vanilla", 99, window.vanilla_constants_99);
-      d2s.setConstantData("remodded", 99, window.remodded_constants_99);
+      // d2s.setConstantData("vanilla", 96, window.vanilla_constants_96);
+      // d2s.setConstantData("vanilla", 97, window.vanilla_constants_96);
+      // d2s.setConstantData("vanilla", 98, window.vanilla_constants_96);
+      // d2s.setConstantData("vanilla", 99, window.vanilla_constants_99);
+      // d2s.setConstantData("remodded", 99, window.remodded_constants_99);
 
-      window.work_mod = "remodded";
-      window.work_version = 99;
+      // window.work_mod = "remodded";
+      // window.work_version = 99;
 
       // Add all the base weapons & armors to the insertable items list
       this.addItemsPackBases("weapon_items", "Weapons");
@@ -557,7 +560,6 @@
             throw new Error('No item code in the input.')
           }
           await this.readItem(bytes, obj.mod, obj.version);
-          console.log(this.preview);
           this.paste(this.preview);
         } catch(e) {
           alert("Failed to load the item.");
@@ -792,7 +794,7 @@
       },
       async addItemsPackBases(categoryKey, categoryDisplayName) {
         let newItems = [];
-        let constants = window[`${window.work_mod}_constants_${window.work_version}`]
+        const constants = window[`${window.work_mod}_constants_${window.work_version}`]
         for (const item of Object.entries(constants[categoryKey])) {
           if (item[1].n) {
             const newItem = Object();

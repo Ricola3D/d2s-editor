@@ -2,8 +2,8 @@
   <div>
     <div class="form-row">
       <div class="col-md-12">
-        <button type="button" class="btn btn-primary" @click="onEvent('copy')">Copy</button>
         <button type="button" class="btn btn-primary" @click="onEvent('share')">Share</button>
+        <button type="button" class="btn btn-primary" @click="onEvent('copy')">Copy</button>
         <span v-if="item.location_id != 6">
           <button type="button" class="btn btn-danger" @click="onEvent('delete')">Delete</button>
         </span>
@@ -13,7 +13,7 @@
     <div></div>
     <div class="form-row">
       <div>
-        <Item v-model:item="item" clazz="item-edit"></Item>
+        <Item :item.sync="item" clazz="item-edit"></Item>
       </div>
 
       <ul className="ItemOptions">
@@ -106,25 +106,25 @@
     <span v-if="!item.simple_item">
       <div v-if="item.magic_attributes">
         <div>Item Stats</div>
-        <ItemStatsEditor v-model:item-stats="item.magic_attributes" :id="id + 'Magic'" @stat-change="onEvent('update')"></ItemStatsEditor>
+        <ItemStatsEditor :item-stats.sync="item.magic_attributes" :id="id + 'Magic'" @stat-change="onEvent('update')"></ItemStatsEditor>
       </div>
       <div v-if="item.runeword_attributes">
         <div>Runeword Stats</div>
-        <ItemStatsEditor v-model:item-stats="item.runeword_attributes" :id="id + 'Runeword'" @stat-change="onEvent('update')"></ItemStatsEditor>
+        <ItemStatsEditor :item-stats.sync="item.runeword_attributes" :id="id + 'Runeword'" @stat-change="onEvent('update')"></ItemStatsEditor>
       </div>
       <div v-if="item.set_attributes">
         <div v-for="(set_attribute, index) in item.set_attributes">
           <div>Set Stats {{index}}</div>
-          <ItemStatsEditor v-model:item-stats="set_attribute" :id="id + 'Set' + index" @stat-change="onEvent('update')"></ItemStatsEditor>
+          <ItemStatsEditor :item-stats.sync="set_attribute" :id="id + 'Set' + index" @stat-change="onEvent('update')"></ItemStatsEditor>
         </div>
       </div>
       <div v-if="item.socketed_items">
         <div>Sockets Stats</div>
-        <ItemStatsEditor v-model:item-stats="item.socketed_attributes" :id="id + 'Socketed stats'" @stat-change="onEvent('update')"></ItemStatsEditor>
+        <ItemStatsEditor :item-stats.sync="item.socketed_attributes" :id="id + 'Socketed stats'" @stat-change="onEvent('update')"></ItemStatsEditor>
       </div>
       <div v-if="item.socketed_items">
         <div v-for="(socketed_item, index) in item.socketed_items">
-          <ItemEditor ref="itemEditor" v-model:item="socketed_item" :id="id + 'Socketed' + index" @item-event="onChildEvent"></ItemEditor>
+          <ItemEditor ref="itemEditor" :item.sync="socketed_item" :id="id + 'Socketed' + index" @item-event="onChildEvent"></ItemEditor>
         </div>
       </div>
     </span>
@@ -163,8 +163,18 @@ export default {
     };
   },
   methods: {
-    onEvent(type) {
-      this.$emit('item-event', { item: this.item, type: type });
+    onUpdate(variable, value) {
+      const path = variable.split('.');
+      path.shift(); // Should be "item"
+      const edited = path.reduceRight(
+        (accumulator, currentValue) => ({[currentValue]: accumulator}),
+        value
+      );
+      const newItem = Object.assign(this.item, edited);
+      this.$emit('item-event', { item: newItem, type: 'update' });
+    },
+    onEvent(type, variable, value) {
+        this.$emit('item-event', { item: this.item, type: type });
     },
     onChildEvent(e) {
       this.$emit('item-event', { item: e.item, type: e.type });

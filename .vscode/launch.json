@@ -10,7 +10,19 @@
       "name": "vuejs: firefox",
       "url": "http://localhost:8080",
       "webRoot": "${workspaceFolder}/src",
-      "pathMappings": [{ "url": "webpack:///src/", "path": "${webRoot}/" }]
-    }
+      "pathMappings": [
+        { "url": "webpack:///src/", "path": "${webRoot}/" }
+      ]
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "vuejs: chrome",
+      "url": "http://localhost:8080",
+      "webRoot": "[YOUR_PATH_TO_THE_CODE]/src",
+      "sourceMapPathOverrides": {
+        "webpack:///src/*": "${webRoot}/*"
+      }
+ }
   ]
 }

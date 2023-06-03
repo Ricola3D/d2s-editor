@@ -767,7 +767,7 @@ function _descFunc(property, constants, v, descFunc, descVal, descString, desc2)
         case 15: {
             var skillId = property.values[1];
             var skill = constants.skills[skillId];
-            var skillStr = skill ? skill.s : "Unknown_Skill_" + skillId;
+            var skillStr = skill && skill.s? skill.s : "Unknown_Skill_" + skillId;
             descString = _sprintf(descString, property.values[2], property.values[0], skillStr);
             property.description = "" + descString;
             break;
@@ -828,7 +828,7 @@ function _descFunc(property, constants, v, descFunc, descVal, descString, desc2)
             var skill = constants.skills[property.values[0]];
             var clazz = _classFromCode(skill.c, constants);
             if (descString) {
-                property.description = _sprintf(descString, v, skill === null || skill === void 0 ? void 0 : skill.s, clazz === null || clazz === void 0 ? void 0 : clazz.co);
+                property.description = _sprintf(descString, v, skill === null || skill === void 0 ? void 0 : skill.s, clazz ? clazz === null || clazz === void 0 ? void 0 : clazz.co : "");
             }
             else {
                 property.description = "" + sign + v + " to " + (skill === null || skill === void 0 ? void 0 : skill.s) + " " + (clazz === null || clazz === void 0 ? void 0 : clazz.co);
@@ -836,8 +836,10 @@ function _descFunc(property, constants, v, descFunc, descVal, descString, desc2)
             break;
         }
         case 28: {
-            var skill = constants.skills[property.values[0]];
-            property.description = "" + sign + v + " to " + (skill === null || skill === void 0 ? void 0 : skill.s);
+            var skillId = property.values[0];
+            var skill = constants.skills[skillId];
+            var skillStr = skill && skill.s? skill.s : "Unknown_Skill_" + skillId;
+            property.description = "" + sign + v + " to " + skillStr;
             break;
         }
         case 29: {
@@ -937,8 +939,9 @@ function _groupAttributes(all_attributes, constants) {
                 var property = properties[i];
                 if (prop.np) {
                     //damage props
-                    property.values[0] += magic_attribute.values[0];
-                    property.values[1] += magic_attribute.values[1];
+                    for (var j = 0; j < prop.np; j++) {
+                        property.values[j] += magic_attribute.values[j];
+                    }
                     break;
                 }
                 //only combine attributes if the params for the descFunc are the same.
@@ -1712,11 +1715,84 @@ var Quality;
     Quality[Quality["Unique"] = 7] = "Unique";
     Quality[Quality["Crafted"] = 8] = "Crafted";
 })(Quality || (Quality = {}));
+//type FrequencyItem = [string | [FrequencyItem, FrequencyItem], number];
+//type FrequencyTable = FrequencyItem[];
+// type CompressedFrequencyItem = [string | CompressedFrequencyItem, string | CompressedFrequencyItem];
+// type HuffmanEncoded = CompressedFrequencyItem | string;
+// type HuffmanW = {
+//   [key: string]: string;
+// };
+// type HuffmanLookup = {
+//   [key: string]: {
+//     v: number;
+//     l: number;
+//   };
+// };
 // prettier-ignore
 //huffman tree
 var HUFFMAN = [[[[["w", "u"], [["8", ["y", ["5", ["j", []]]]], "h"]], ["s", [["2", "n"], "x"]]], [[["c", ["k", "f"]], "b"], [["t", "m"], ["9", "7"]]]], [" ", [[[["e", "d"], "p"], ["g", [[["z", "q"], "3"], ["v", "6"]]]], [["r", "l"], ["a", [["1", ["4", "0"]], ["i", "o"]]]]]]];
 // prettier-ignore
 var HUFFMAN_LOOKUP = { "0": { "v": 223, "l": 8 }, "1": { "v": 31, "l": 7 }, "2": { "v": 12, "l": 6 }, "3": { "v": 91, "l": 7 }, "4": { "v": 95, "l": 8 }, "5": { "v": 104, "l": 8 }, "6": { "v": 123, "l": 7 }, "7": { "v": 30, "l": 5 }, "8": { "v": 8, "l": 6 }, "9": { "v": 14, "l": 5 }, " ": { "v": 1, "l": 2 }, "a": { "v": 15, "l": 5 }, "b": { "v": 10, "l": 4 }, "c": { "v": 2, "l": 5 }, "d": { "v": 35, "l": 6 }, "e": { "v": 3, "l": 6 }, "f": { "v": 50, "l": 6 }, "g": { "v": 11, "l": 5 }, "h": { "v": 24, "l": 5 }, "i": { "v": 63, "l": 7 }, "j": { "v": 232, "l": 9 }, "k": { "v": 18, "l": 6 }, "l": { "v": 23, "l": 5 }, "m": { "v": 22, "l": 5 }, "n": { "v": 44, "l": 6 }, "o": { "v": 127, "l": 7 }, "p": { "v": 19, "l": 5 }, "q": { "v": 155, "l": 8 }, "r": { "v": 7, "l": 5 }, "s": { "v": 4, "l": 4 }, "t": { "v": 6, "l": 5 }, "u": { "v": 16, "l": 5 }, "v": { "v": 59, "l": 7 }, "w": { "v": 0, "l": 5 }, "x": { "v": 28, "l": 5 }, "y": { "v": 40, "l": 7 }, "z": { "v": 27, "l": 8 } };
+// const HUFFMAN: CompressedFrequencyItem = [
+//   [
+//     [
+//       [
+//         ["w", "u"],
+//         [["8", ["y", ["5", ["j", []]]]], "h"],
+//       ],
+//       ["s", [["2", "n"], "x"]],
+//     ],
+//     [
+//       [["c", ["k", "f"]], "b"],
+//       [
+//         ["t", "m"],
+//         ["9", "7"],
+//       ],
+//     ],
+//   ],
+//   [
+//     " ",
+//     [
+//       [
+//         [["e", "d"], "p"],
+//         [
+//           "g",
+//           [
+//             [["z", "q"], "3"],
+//             ["v", "6"],
+//           ],
+//         ],
+//       ],
+//       [
+//         ["r", "l"],
+//         [
+//           "a",
+//           [
+//             ["1", ["4", "0"]],
+//             ["i", "o"],
+//           ],
+//         ],
+//       ],
+//     ],
+//   ],
+// ];
+// const HUFFMAN_W = {}; // Keys are each character, values are the binary coding
+// function dotree(node: HuffmanEncoded, prefix: string) {
+//   if (Array.isArray(node)) {
+//     dotree(node[0], prefix + "0");
+//     dotree(node[1], prefix + "1");
+//   } else if (node) {
+//     HUFFMAN_W[node] = prefix;
+//   }
+// }
+// dotree(HUFFMAN, "");
+// const HUFFMAN_LOOKUP: HuffmanLookup = {}; // Keys are each character, values are the encoded binary value & length
+// Object.keys(HUFFMAN_W).forEach(function (key, index) {
+//   HUFFMAN_LOOKUP[key] = {
+//     v: parseInt(HUFFMAN_W[key], 2),
+//     l: HUFFMAN_W[key].length,
+//   };
+// });
 function readCharItems(char, reader, mod, config) {
     return __awaiter(this, void 0, void 0, function () {
         var _a;
@@ -2350,8 +2426,14 @@ function _readSimpleBits(item, reader, version, constants, config) {
             //https://github.com/d07RiV/d07riv.github.io/blob/master/d2r.html#L11-L20
             for (var i = 0; i < 4; i++) {
                 var node = HUFFMAN;
+                var bits_1 = "";
                 do {
-                    node = node[reader.ReadBit()];
+                    var bit = reader.ReadBit();
+                    bits_1 += bit;
+                    node = node[bit];
+                    if (node === undefined) {
+                        console.log("Huffman value " + bits_1 + " is undefined.");
+                    }
                 } while (Array.isArray(node));
                 item.type += node;
             }
@@ -2449,8 +2531,8 @@ function _readMagicProperties(reader, constants) {
     var magic_attributes = [];
     while (id != 0x1ff) {
         var values = [];
-        if (id > constants.magical_properties.length) {
-            throw new Error("Invalid Stat Id: " + id + " at position " + (reader.offset - 9));
+        if (!constants.magical_properties[id]) {
+            throw new Error("Invalid magic property Id: " + id + " at position " + (reader.offset - 9));
         }
         var num_of_properties = constants.magical_properties[id].np || 1;
         for (var i = 0; i < num_of_properties; i++) {

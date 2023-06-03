@@ -2,11 +2,11 @@
   <div class="form-row">
     <div class="col-md-4" v-for="(difficulty, i) in difficulties" :key="i">
       <ul>
-        <li><label><input class="form-check-input" type="checkbox" @input="updateDiff(difficulty)" v-model="difficulty.all" :key="difficulty.key"/>{{difficulty.label}}</label></li>
+        <li><label><input class="form-check-input" type="checkbox" @input="updateDiff(difficulty, $event.target.checked)" :checked="difficulty.all" :key="difficulty.key"/>{{difficulty.label}}</label></li>
         <ul class="col-md-offset-1" v-for="(act, j) in difficulty.acts" :key="j">
-          <li><label><input class="form-check-input" type="checkbox" @input="updateAct(difficulty, act)" v-model="act.all" :key="act.key"/>{{ act.label }}</label></li>
-          <ul class="col-md-offset-2" v-for="(waypoint, k) in act.waypoints" :key="j">
-            <li><label><input class="form-check-input" type="checkbox" @input="updateWP(difficulty, act, waypoint)" v-model="save.header.waypoints[difficulty.key][act.key][waypoint.key]" :key="waypoint.key"/>{{ waypoint.label }}</label></li>
+          <li><label><input class="form-check-input" type="checkbox" @input="updateAct(difficulty, act, $event.target.checked)" :checked="act.all" :key="act.key"/>{{ act.label }}</label></li>
+          <ul class="col-md-offset-2" v-for="(waypoint, k) in act.waypoints" :key="k">
+            <li><label><input class="form-check-input" type="checkbox" @input="updateWP(difficulty, act, waypoint, $event.target.checked)" v-bind:checked="waypoints[difficulty.key][act.key][waypoint.key]" :key="waypoint.key"/>{{ waypoint.label }}</label></li>
           </ul>
         </ul>
       </ul>
@@ -83,33 +83,48 @@
   ];
   export default {
     props: {
-      save: Object,
+      waypoints: Object,
     },
     methods: {
-      updateWP(difficulty, act, wp) {
-        const value = !this.save.header.waypoints[difficulty.key][act.key][wp.key];
+      updateWP(difficulty, act, wp, value) {
+        // Uncheck act checkbock if necessary
         if(value !== act.all && act.all) {
           act.all = false;
         }
+        // Uncheck difficulty checkbock if necessary
         if(value !== difficulty.all && difficulty.all) {
           difficulty.all = false;
         }
+        
+        const newWaypoints = JSON.parse(JSON.stringify(this.waypoints));
+        newWaypoints[difficulty.key][act.key][wp.key] = value;
+
+        // Emit the modification
+        this.$emit('update:waypoints', newWaypoints);
       },
-      updateAct(difficulty, act) {
+      updateAct(difficulty, act, value, emitNow = true) {
+        const newWaypoints = JSON.parse(JSON.stringify(this.waypoints));
+
         for (const wp of act.waypoints) {
-          this.save.header.waypoints[difficulty.key][act.key][wp.key] = !act.all;
+          newWaypoints[difficulty.key][act.key][wp.key] = value;
         }
+
+        // Emit the modification
+        this.$emit('update:waypoints', newWaypoints);
       },
-      updateDiff(difficulty) {
+      updateDiff(difficulty, value) {
+        const newWaypoints = JSON.parse(JSON.stringify(this.waypoints));
         for (const act of difficulty.acts) {
-          if (!act.all && difficulty.all) {
-            act.all = true;
-          } else if (act.all && !difficulty.all) {
-            act.all = false;
+          // Update act checkbox
+          act.all = value;
+          
+          for (const wp of act.waypoints) {
+            newWaypoints[difficulty.key][act.key][wp.key] = value;
           }
-          this.updateAct(difficulty, act);
-          act.all = !difficulty.all;
         }
+
+        // Emit the modification
+        this.$emit('update:waypoints', newWaypoints);
       },
     },
     data() {

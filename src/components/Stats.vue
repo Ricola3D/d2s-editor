@@ -139,14 +139,15 @@
     },
     watch: {
       "save.header.level": function(level, s) {
+        const constants = window[`${window.work_mod}_constants_${window.work_version}`]
         this.save.attributes.level = level;
         this.save.attributes.experience = xp[level-1];
 
         const newLevel = level - s;
         this.save.attributes.unused_stats = (this.save.attributes.unused_stats ?? 0) + (newLevel * 5);
         this.save.attributes.unused_skill_points = (this.save.attributes.unused_skill_points ?? 0) + newLevel;
-        for(const cCode in constants.constants.classes) {
-          const stat = constants.constants.classes[cCode];
+        for(const cCode in constants.classes) {
+          const stat = constants.classes[cCode];
           if(stat.n === this.save.header.class) {
             this.save.attributes.max_hp += newLevel * stat.s.lpl / 4;
             this.save.attributes.current_hp += newLevel * stat.s.lpl / 4;
@@ -161,9 +162,10 @@
         }
       },
       "save.attributes.vitality": function(val, old) {
+        const constants = window[`${window.work_mod}_constants_${window.work_version}`]
         const change = val-old;
-        for (const cCode in window[`${window.work_mod}_constants_${window.work_version}`].classes) {
-          const stat = window[`${window.work_mod}_constants_${window.work_version}`].classes[cCode];
+        for (const cCode in constants.classes) {
+          const stat = constants.classes[cCode];
           if (window.stat.n === this.save.header.class) {
             this.save.attributes.max_hp += change * stat.s.lpv / 4;
             this.save.attributes.current_hp += change * stat.s.lpv / 4;
@@ -175,9 +177,10 @@
         }
       },
       "save.attributes.energy": function(val, old) {
+        const constants = window[`${window.work_mod}_constants_${window.work_version}`]
         const change = val-old;
-        for (const cCode in window[`${window.work_mod}_constants_${window.work_version}`].classes) {
-          const stat = window[`${window.work_mod}_constants_${window.work_version}`].classes[cCode];
+        for (const cCode in constants.classes) {
+          const stat = constants.classes[cCode];
           if (window.stat.n === this.save.header.class) {
             this.save.attributes.max_mana += change * stat.s.mpe / 4;
             this.save.attributes.current_mana += change * stat.s.mpe / 4;
