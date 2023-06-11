@@ -231,9 +231,11 @@
                   <button type="button" @click="unlockHell" class="btn btn-primary">Unlock Hell</button>
                   <button type="button" @click="unlockAllWPs" class="btn btn-primary">Unlock All WPs</button>
                   <button type="button" @click="setLvl99" class="btn btn-primary">Set Level 99</button>
-                  <button type="button" @click="setAllSkills20" class="btn btn-primary">Set All Skills 20</button>
-                  <button type="button" @click="unlockQs" class="btn btn-primary">Complete Skill/Stat Qs</button>
+                  <button type="button" @click="unlockAllQuests" class="btn btn-primary">Complete all Qs</button>
+                  <button type="button" @click="unlockSkillStatQs" class="btn btn-secondary">Complete Skill/Stat Qs</button>
                   <button type="button" @click="maxGold" class="btn btn-primary">Max Gold</button>
+                  <br /><br />
+                  <button type="button" @click="setAllSkills20" class="btn btn-danger">Set All Skills 20</button>
                   <br /><br />
                   <button type="button" id="d2" class="btn btn-primary" @click="saveFile('vanilla', 0x60)">Save D2</button>
                   <button type="button" id="d2r" class="btn btn-primary" @click="saveFile('vanilla', 0x63)">Save D2R</button>
@@ -711,27 +713,64 @@
         this.save.attributes.gold = this.save.header.level * 10000;
         this.save.attributes.stashed_gold = 2500000
       },
-      unlockQs() {
-        const self = this;
-        function update(difficulty, act, quest, attributes, amount) {
-          if (self.save.header[difficulty][act][quest].is_completed === false){
-            self.save.header[difficulty][act][quest].is_completed = true;
-            if (quest === "prison_of_ice"){
-              self.save.header[difficulty][act][quest].consumed_scroll = true;
-            } else {
-              for(let attribute of attributes) {
-                self.save.attributes[attribute] = (self.save.attributes[attribute] ?? 0) + amount;
-              }
+      unlockAllQuests() {
+        for (const diff of ["quests_normal", "quests_nm", "quests_hell"]) {
+          this.completeQuest(diff, "act_i", "den_of_evil", ["unused_skill_points"], 1);
+          this.completeQuest(diff, "act_i", "sisters_burial_grounds");
+          this.completeQuest(diff, "act_i", "the_search_for_cain");
+          this.completeQuest(diff, "act_i", "the_forgotten_tower");
+          this.completeQuest(diff, "act_i", "tools_of_the_trade");
+          this.completeQuest(diff, "act_i", "sisters_to_the_slaughter");
+
+          this.completeQuest(diff, "act_ii", "radaments_lair", ["unused_skill_points"], 1);
+          this.completeQuest(diff, "act_ii", "the_horadric_staff");
+          this.completeQuest(diff, "act_ii", "tainted_sun");
+          this.completeQuest(diff, "act_ii", "arcane_sanctuary");
+          this.completeQuest(diff, "act_ii", "the_summoner");
+          this.completeQuest(diff, "act_ii", "the_seven_tombs");
+
+          
+          this.completeQuest(diff, "act_iii", "the_golden_bird", ["max_hp", "current_hp"], 20);
+          this.completeQuest(diff, "act_iii", "blade_of_the_old_religion");
+          this.completeQuest(diff, "act_iii", "khalims_will");
+          this.completeQuest(diff, "act_iii", "lam_esens_tome", ["unused_stats"], 5);
+          this.completeQuest(diff, "act_iii", "the_blackened_temple");
+          this.completeQuest(diff, "act_iii", "the_guardian");
+
+          this.completeQuest(diff, "act_iv", "the_fallen_angel", ["unused_skill_points"], 2);
+          this.completeQuest(diff, "act_iv", "hellforge");
+          this.completeQuest(diff, "act_iv", "terrors_end");
+
+          this.completeQuest(diff, "act_v", "siege_on_harrogath");
+          this.completeQuest(diff, "act_v", "rescue_on_mount_arreat");
+          this.completeQuest(diff, "act_v", "prison_of_ice", null, null);
+          this.completeQuest(diff, "act_v", "betrayal_of_harrogath");
+          this.completeQuest(diff, "act_v", "rite_of_passage");
+          this.completeQuest(diff, "act_v", "eve_of_destruction");
+        }
+      },
+      completeQuest(difficulty, act, quest, attributes, amount) {
+        if (this.save.header[difficulty][act][quest].b0_is_completed === false){
+          this.save.header[difficulty][act][quest].b0_is_completed = true;
+          if (quest === "prison_of_ice"){
+            this.save.header[difficulty][act][quest].b7_custom3 = true; // Consumed scroll
+          } else if (attributes) {
+            for(let attribute of attributes) {
+              this.save.attributes[attribute] = (this.save.attributes[attribute] ?? 0) + amount;
             }
+          } else {
+            // Simple quest without stat/skill rewards
           }
         }
+      },
+      unlockSkillStatQs() {
         for (const diff of ["quests_normal", "quests_nm", "quests_hell"]) {
-          update(diff, "act_i", "den_of_evil", ["unused_skill_points"], 1);
-          update(diff, "act_ii", "radaments_lair", ["unused_skill_points"], 1);
-          update(diff, "act_iii", "lam_esens_tome", ["unused_stats"], 5);
-          update(diff, "act_iii", "the_golden_bird", ["max_hp", "current_hp"], 20);
-          update(diff, "act_iv", "the_fallen_angel", ["unused_skill_points"], 2);
-          update(diff, "act_v", "prison_of_ice", null, null);
+          this.completeQuest(diff, "act_i", "den_of_evil", ["unused_skill_points"], 1);
+          this.completeQuest(diff, "act_ii", "radaments_lair", ["unused_skill_points"], 1);
+          this.completeQuest(diff, "act_iii", "lam_esens_tome", ["unused_stats"], 5);
+          this.completeQuest(diff, "act_iii", "the_golden_bird", ["max_hp", "current_hp"], 20);
+          this.completeQuest(diff, "act_iv", "the_fallen_angel", ["unused_skill_points"], 2);
+          this.completeQuest(diff, "act_v", "prison_of_ice", null, null);
         }
       },
       unlockHell() {
@@ -740,18 +779,18 @@
             this.save.header[i][j].introduced = true;
             this.save.header[i][j].completed = true;
           }
-          this.save.header[i].act_i.sisters_to_the_slaughter.is_completed = true;
-          this.save.header[i].act_ii.the_summoner.is_completed = true;
-          this.save.header[i].act_ii.tainted_sun.is_completed = true;
-          this.save.header[i].act_ii.the_horadric_staff.is_completed = true;
-          this.save.header[i].act_ii.arcane_sanctuary.is_completed = true;
-          this.save.header[i].act_ii.the_seven_tombs.is_completed = true;
-          this.save.header[i].act_iii.khalims_will.is_completed = true;
-          this.save.header[i].act_iii.the_blackened_temple.is_completed = true;
-          this.save.header[i].act_iii.the_guardian.is_completed = true;
-          this.save.header[i].act_iv.terrors_end.is_completed = true;
-          this.save.header[i].act_v.rite_of_passage.is_completed = true;
-          this.save.header[i].act_v.eve_of_destruction.is_completed = true;
+          this.save.header[i].act_i.sisters_to_the_slaughter.b0_is_completed = true;
+          this.save.header[i].act_ii.the_summoner.b0_is_completed = true;
+          this.save.header[i].act_ii.tainted_sun.b0_is_completed = true;
+          this.save.header[i].act_ii.the_horadric_staff.b0_is_completed = true;
+          this.save.header[i].act_ii.arcane_sanctuary.b0_is_completed = true;
+          this.save.header[i].act_ii.the_seven_tombs.b0_is_completed = true;
+          this.save.header[i].act_iii.khalims_will.b0_is_completed = true;
+          this.save.header[i].act_iii.the_blackened_temple.b0_is_completed = true;
+          this.save.header[i].act_iii.the_guardian.b0_is_completed = true;
+          this.save.header[i].act_iv.terrors_end.b0_is_completed = true;
+          this.save.header[i].act_v.rite_of_passage.b0_is_completed = true;
+          this.save.header[i].act_v.eve_of_destruction.b0_is_completed = true;
         }
         for (var i of ["normal", "nm", "hell"]) {
           this.save.header.waypoints[i].act_i.rogue_encampement = true;

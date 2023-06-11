@@ -22,61 +22,75 @@
 </template>
 
 <script>
-  const flags = ["is_completed", "is_requirement_completed", "is_received",
-  "unk3", "unk4", "unk5", "unk6", "consumed_scroll", "unk8", "unk9", "unk10",
-  "unk11", "closed", "done_recently", "unk14", "unk15"]
+  const flags = [
+    "b0_is_completed",
+    "b1_is_requirement_completed",
+    "b2_is_received",
+    "b3_left_town",
+    "b4_entered_area",
+    "b5_custom1",
+    "b6_custom2",
+    "b7_custom3", // For ex for "Prison of Ice" it is consumed scroll or not
+    "b8_custom4",
+    "b9_custom5",
+    "b10_custom6",
+    "b11_custom7",
+    "b12_closed",
+    "b13_done_recently",
+    "b14_completed_now",
+    "b15_completed_before"]
 
-  const quests = [
+  const questsDefinition = [
     {
       key: "act_i", label: "Act I", all: false,
       quests: [
-        { key: "den_of_evil", label: "Den Of Evil", values: [{ key: "is_completed", label: "Completed" }] },
-        { key: "sisters_burial_grounds", label: "Sisters' Burial Grounds", values: [{ key: "is_completed", label: "Completed" }] },
-        { key: "the_search_for_cain", label: "Search for Cain", values: [{ key: "unk10", label: "Cow King Killed" }, { key: "is_completed", label: "Completed" }] },
-        { key: "the_forgotten_tower", label: "The Forgotten Tower", values: [{ key: "is_completed", label: "Completed" }] },
-        { key: "tools_of_the_trade", label: "Tools of the Trade", values: [{ key: "is_completed", label: "Completed" }] },
-        { key: "sisters_to_the_slaughter", label: "Sisters to the Slaughter", values: [{ key: "is_completed", label: "Completed" }] },
+        { key: "den_of_evil", label: "Den Of Evil", values: [{ key: "b0_is_completed", label: "Completed" }] },
+        { key: "sisters_burial_grounds", label: "Sisters' Burial Grounds", values: [{ key: "b0_is_completed", label: "Completed" }] },
+        { key: "the_search_for_cain", label: "Search for Cain", values: [{ key: "b10_custom6", label: "Cow King Killed" }, { key: "b0_is_completed", label: "Completed" }] },
+        { key: "the_forgotten_tower", label: "The Forgotten Tower", values: [{ key: "b0_is_completed", label: "Completed" }] },
+        { key: "tools_of_the_trade", label: "Tools of the Trade", values: [{ key: "b0_is_completed", label: "Completed" }] },
+        { key: "sisters_to_the_slaughter", label: "Sisters to the Slaughter", values: [{ key: "b0_is_completed", label: "Completed" }] },
       ]
     },
     {
       key: "act_ii", label: "Act II", all: false,
       quests: [
-        { key: "radaments_lair", label: "Radament's Lair", values: [{ key: "is_completed", label: "Completed" }] },
-        { key: "the_horadric_staff", label: "The Horadric Staff", values: [{ key: "is_completed", label: "Completed" }] },
-        { key: "tainted_sun", label: "Tainted Sun", values: [{ key: "is_completed", label: "Completed" }] },
-        { key: "arcane_sanctuary", label: "Arcane Sanctuary", values: [{ key: "is_completed", label: "Completed" }] },
-        { key: "the_summoner", label: "The Summoner", values: [{ key: "is_completed", label: "Completed" }] },
-        { key: "the_seven_tombs", label: "The Seven Tombs", values: [{ key: "is_completed", label: "Completed" }] },
+        { key: "radaments_lair", label: "Radament's Lair", values: [{ key: "b0_is_completed", label: "Completed" }] },
+        { key: "the_horadric_staff", label: "The Horadric Staff", values: [{ key: "b0_is_completed", label: "Completed" }] },
+        { key: "tainted_sun", label: "Tainted Sun", values: [{ key: "b0_is_completed", label: "Completed" }] },
+        { key: "arcane_sanctuary", label: "Arcane Sanctuary", values: [{ key: "b0_is_completed", label: "Completed" }] },
+        { key: "the_summoner", label: "The Summoner", values: [{ key: "b0_is_completed", label: "Completed" }] },
+        { key: "the_seven_tombs", label: "The Seven Tombs", values: [{ key: "b0_is_completed", label: "Completed" }] },
       ]
     },
     {
       key: "act_iii", label: "Act III", all: false,
       quests: [
-        { key: "the_golden_bird", label: "The Golden Bird", values: [{ key: "is_completed", label: "Completed" }] },
-        { key: "blade_of_the_old_religion", label: "Blade of the Old Religion", values: [{ key: "is_completed", label: "Completed" }] },
-        { key: "khalims_will", label: "Khalim's Will", values: [{ key: "is_completed", label: "Completed" }] },
-        { key: "lam_esens_tome", label: "Lam Esen's Tome", values: [{ key: "is_completed", label: "Completed" }] },
-        { key: "the_blackened_temple", label: "The Blackened Temple", values: [{ key: "is_completed", label: "Completed" }] },
-        { key: "the_guardian", label: "The Guardian", values: [{ key: "is_completed", label: "Completed" }] },
+        { key: "the_golden_bird", label: "The Golden Bird", values: [{ key: "b0_is_completed", label: "Completed" }] },
+        { key: "blade_of_the_old_religion", label: "Blade of the Old Religion", values: [{ key: "b0_is_completed", label: "Completed" }] },
+        { key: "khalims_will", label: "Khalim's Will", values: [{ key: "b0_is_completed", label: "Completed" }] },
+        { key: "lam_esens_tome", label: "Lam Esen's Tome", values: [{ key: "b0_is_completed", label: "Completed" }] },
+        { key: "the_blackened_temple", label: "The Blackened Temple", values: [{ key: "b0_is_completed", label: "Completed" }] },
+        { key: "the_guardian", label: "The Guardian", values: [{ key: "b0_is_completed", label: "Completed" }] },
       ]
     },
     {
       key: "act_iv", label: "Act IV", all: false,
       quests: [
-        { key: "the_fallen_angel", label: "Fallen Angel", values: [{ key: "is_completed", label: "Completed" }] },
-        { key: "hellforge", label: "Hell's Forge", values: [{ key: "is_completed", label: "Completed" }] },
-        { key: "terrors_end", label: "Terror's End", values: [{ key: "is_completed", label: "Completed" }] },
+        { key: "the_fallen_angel", label: "Fallen Angel", values: [{ key: "b0_is_completed", label: "Completed" }] },
+        { key: "hellforge", label: "Hell's Forge", values: [{ key: "b0_is_completed", label: "Completed" }] },
+        { key: "terrors_end", label: "Terror's End", values: [{ key: "b0_is_completed", label: "Completed" }] },
       ]
     },
     {
       key: "act_v", label: "Act V", all: false,
       quests: [
-        { key: "siege_on_harrogath", label: "Siege on Harrogath", values: [{ key: "is_completed", label: "Completed" }] },
-        { key: "rescue_on_mount_arreat", label: "Rescue on Mount Arreat", values: [{ key: "is_completed", label: "Completed" }] },
-        { key: "prison_of_ice", label: "Prison of Ice", values: [{ key: "consumed_scroll ", label: "Consumed Scroll" }, { key: "is_completed", label: "Completed" }] },
-        { key: "betrayal_of_harrogath", label: "Betrayal of Harrogath", values: [{ key: "is_completed", label: "Completed" }] },
-        { key: "rite_of_passage", label: "Rite of Passage", values: [{ key: "is_completed", label: "Completed" }] },
-        { key: "eve_of_destruction", label: "Eve of Destruction", values: [{ key: "is_completed", label: "Completed" }] },
+        { key: "siege_on_harrogath", label: "Siege on Harrogath", values: [{ key: "b0_is_completed", label: "Completed" }] },
+        { key: "rescue_on_mount_arreat", label: "Rescue on Mount Arreat", values: [{ key: "b0_is_completed", label: "Completed" }] },
+        { key: "prison_of_ice", label: "Prison of Ice", values: [{ key: "b7_custom3 ", label: "Consumed Scroll" }, { key: "b0_is_completed", label: "Completed" }] },
+        { key: "betrayal_of_harrogath", label: "Betrayal of Harrogath", values: [{ key: "b0_is_completed", label: "Completed" }] },
+        { key: "rite_of_passage", label: "Rite of Passage", values: [{ key: "b0_is_completed", label: "Completed" }] },
+        { key: "eve_of_destruction", label: "Eve of Destruction", values: [{ key: "b0_is_completed", label: "Completed" }] },
       ]
     },
   ];
@@ -85,12 +99,34 @@
     props: {
       save: Object,
     },
+    watch: { 
+      save: {
+        handler: function (newSave, oldSave) {
+          // Update difficulty all & act all checkboxes
+          for (const [i, difficulty] of this.difficulties.entries()) {
+            let isDifficultyAll = true;
+            for (const [j, act] of difficulty.acts.entries()) {
+              let isActAll = true;
+              for (const quest of act.quests) {
+                if (!newSave.header[difficulty.key][act.key][quest.key].b0_is_completed) {
+                  isActAll = false;
+                  isDifficultyAll = false;
+                }
+              }
+              this.difficulties[i].acts[j].all = isActAll;
+            }
+            this.difficulties[i].all = isDifficultyAll;
+          }
+        },
+        deep: true
+      }
+    },
     data() {
       return {
         difficulties: [
-          { key: 'quests_normal', all: false, label: "Normal", acts: JSON.parse(JSON.stringify(quests)) },
-          { key: 'quests_nm', all: false, label: "Nightmare", acts: JSON.parse(JSON.stringify(quests)) },
-          { key: 'quests_hell', all: false, label: "Hell", acts: JSON.parse(JSON.stringify(quests)) }
+          { key: 'quests_normal', all: false, label: "Normal", acts: JSON.parse(JSON.stringify(questsDefinition)) },
+          { key: 'quests_nm', all: false, label: "Nightmare", acts: JSON.parse(JSON.stringify(questsDefinition)) },
+          { key: 'quests_hell', all: false, label: "Hell", acts: JSON.parse(JSON.stringify(questsDefinition)) }
         ],
       };
     },

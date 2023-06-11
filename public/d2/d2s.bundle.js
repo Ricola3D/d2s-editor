@@ -718,28 +718,39 @@ function _descFunc(property, constants, v, descFunc, descVal, descString, desc2)
     var desc2Present = descFunc >= 6 && descFunc <= 10;
     switch (descFunc) {
         case 1:
+        // +[value] [string1]
         case 6:
+        // +[value] [string1] [string2]
         case 12: {
+            // +[value] [string1]
             value = "" + sign + v;
             break;
         }
         case 2:
+        // [value]% [string1]
         case 7: {
+            // [value]% [string1] [string2]
             value = v + "%";
             break;
         }
         case 3:
+        // [value] [string1]
         case 9: {
+            // [value] [string1] [string2]
             value = "" + v;
             break;
         }
         case 4:
+        // +[value]% [string1]
         case 8: {
+            // +[value]% [string1] [string2]
             value = "" + sign + v + "%";
             break;
         }
         case 5:
+        // [value*100/128]% [string1]
         case 10: {
+            // [value*100/128]% [string1] [string2]
             if (descString.indexOf("%%") < 0) {
                 value = (v * 100) / 128 + "%";
             }
@@ -749,15 +760,18 @@ function _descFunc(property, constants, v, descFunc, descVal, descString, desc2)
             break;
         }
         case 11: {
+            // Repairs 1 Durability In [100 / value] Seconds
             property.description = descString.replace(/%d/, (v / 100).toString());
             break;
         }
         case 13: {
+            // +[value] to [class] Skill Levels
             var clazz = constants.classes[property.values[0]];
             property.description = "" + sign + v + " " + clazz.as;
             break;
         }
         case 14: {
+            // +[value] to [skilltab] Skill Levels ([class] Only)
             var clazz = constants.classes[property.values[1]];
             var skillTabStr = clazz.ts[property.values[0]];
             descString = _sprintf(skillTabStr, v);
@@ -765,84 +779,100 @@ function _descFunc(property, constants, v, descFunc, descVal, descString, desc2)
             break;
         }
         case 15: {
+            // [chance]% to case [slvl] [skill] on [event]
             var skillId = property.values[1];
             var skill = constants.skills[skillId];
-            var skillStr = skill && skill.s? skill.s : "Unknown_Skill_" + skillId;
+            var skillStr = skill ? skill.s : "Unknown_Skill_" + skillId;
             descString = _sprintf(descString, property.values[2], property.values[0], skillStr);
             property.description = "" + descString;
             break;
         }
         case 16: {
+            // Level [sLvl] [skill] Aura When Equipped 
+            var skillId = property.values[0];
+            var skill = constants.skills[skillId];
+            var skillStr = skill ? skill.s : "Unknown_Skill_" + skillId;
             property.description = descString.replace(/%d/, v.toString());
-            property.description = property.description.replace(/%s/, constants.skills[property.values[0]].s);
+            property.description = property.description.replace(/%s/, skillStr);
             break;
         }
         case 17: {
-            //todo
+            // [value] [string1] (Increases near [time])
             property.description = v + " " + descString + " (Increases near [time])";
             break;
         }
         case 18: {
-            //todo
+            // [value]% [string1] (Increases near [time])
             property.description = v + "% " + descString + " (Increases near [time])";
             break;
         }
         case 19: {
+            // [value * -1]% [string1]
             property.description = _sprintf(descString, v.toString());
             break;
         }
         case 20: {
+            // [value * -1]% [string1]
             value = v * -1 + "%";
             break;
         }
         case 21: {
+            // [value * -1] [string1]
             value = "" + v * -1;
             break;
         }
         case 22: {
-            //todo
+            // [value]% [string1] [montype] (warning: this is bugged in vanilla and doesn't work properly, see CE forum)
             property.description = v + "% " + descString + " [montype]";
             break;
         }
         case 23: {
-            //todo
+            // [value]% [string1] [monster]
             property.description = v + "% " + descString + " [monster]]";
             break;
         }
         case 24: {
-            //charges
-            //legacy desc string
+            // Level [lvl] [skill] ([curr]/[max] charges)
+            var skillId = property.values[1];
+            var skill = constants.skills[skillId];
+            var skillStr = skill ? skill.s : "Unknown_Skill_" + skillId;
             if (descString.indexOf("(") == 0) {
                 var count_2 = 0;
                 descString = descString.replace(/%d/gi, function () {
                     return property.values[2 + count_2++].toString();
                 });
-                property.description = "Level " + property.values[0] + " " + constants.skills[property.values[1]].s + " " + descString;
+                property.description = "Level " + property.values[0] + " " + skillStr + " " + descString;
             }
             else {
-                property.description = _sprintf(descString, property.values[0], constants.skills[property.values[1]].s, property.values[2], property.values[3]);
+                property.description = _sprintf(descString, property.values[0], skillStr, property.values[2], property.values[3]);
             }
             break;
         }
         case 27: {
-            var skill = constants.skills[property.values[0]];
+            // +[value] to [skill] ([class] Only)
+            var skillId = property.values[0];
+            var skill = constants.skills[skillId];
+            var skillStr = skill ? skill.s : "Unknown_Skill_" + skillId;
             var clazz = _classFromCode(skill.c, constants);
+            var clazzStr = clazz ? clazz.co : "";
             if (descString) {
-                property.description = _sprintf(descString, v, skill === null || skill === void 0 ? void 0 : skill.s, clazz ? clazz === null || clazz === void 0 ? void 0 : clazz.co : "");
+                property.description = _sprintf(descString, v, skillStr, clazzStr);
             }
             else {
-                property.description = "" + sign + v + " to " + (skill === null || skill === void 0 ? void 0 : skill.s) + " " + (clazz === null || clazz === void 0 ? void 0 : clazz.co);
+                property.description = "" + sign + v + " to " + skillStr + " " + (clazz === null || clazz === void 0 ? void 0 : clazz.co);
             }
             break;
         }
         case 28: {
+            // +[value] to [skill]
             var skillId = property.values[0];
             var skill = constants.skills[skillId];
-            var skillStr = skill && skill.s? skill.s : "Unknown_Skill_" + skillId;
+            var skillStr = skill ? skill.s : "Unknown_Skill_" + skillId;
             property.description = "" + sign + v + " to " + skillStr;
             break;
         }
         case 29: {
+            // Diablo regex
             property.description = _sprintf(descString, v.toString());
             break;
         }
@@ -939,9 +969,8 @@ function _groupAttributes(all_attributes, constants) {
                 var property = properties[i];
                 if (prop.np) {
                     //damage props
-                    for (var j = 0; j < prop.np; j++) {
-                        property.values[j] += magic_attribute.values[j];
-                    }
+                    property.values[0] += magic_attribute.values[0];
+                    property.values[1] += magic_attribute.values[1];
                     break;
                 }
                 //only combine attributes if the params for the descFunc are the same.
@@ -1038,7 +1067,14 @@ var constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts"
 //todo use constants.magical_properties and csvBits
 function readAttributes(char, reader, mod) {
     var constants = constants_1.getConstantData(mod, char.header.version);
-    char.attributes = {};
+    char.attributes = {
+        // For optional values, set default
+        unused_stats: 0,
+        unused_skill_points: 0,
+        experience: 0,
+        gold: 0,
+        stashed_gold: 0,
+    };
     var header = reader.ReadString(2); //0x0000 [attributes header = 0x67, 0x66 "gf"]
     if (header != "gf") {
         // header is not present in first save after char is created
@@ -1642,6 +1678,9 @@ Object.defineProperty(exports, "enhancePlayerAttributes", { enumerable: true, ge
 var constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
 Object.defineProperty(exports, "getConstantData", { enumerable: true, get: function () { return constants_1.getConstantData; } });
 Object.defineProperty(exports, "setConstantData", { enumerable: true, get: function () { return constants_1.setConstantData; } });
+var items_1 = __webpack_require__(/*! ./items */ "./src/d2/items.ts");
+Object.defineProperty(exports, "ItemType", { enumerable: true, get: function () { return items_1.ItemType; } });
+Object.defineProperty(exports, "Quality", { enumerable: true, get: function () { return items_1.Quality; } });
 exports.types = __importStar(__webpack_require__(/*! ./types */ "./src/d2/types.ts"));
 
 
@@ -1693,7 +1732,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports._writeMagicProperties = exports._readMagicProperties = exports.writeItem = exports.readItem = exports.writeItems = exports.readItems = exports.writeCorpseItem = exports.readCorpseItems = exports.writeGolemItems = exports.readGolemItems = exports.writeMercItems = exports.readMercItems = exports.writeCharItems = exports.readCharItems = void 0;
+exports._writeMagicProperties = exports._readMagicProperties = exports.writeItem = exports.readItem = exports.writeItems = exports.readItems = exports.writeCorpseItem = exports.readCorpseItems = exports.writeGolemItems = exports.readGolemItems = exports.writeMercItems = exports.readMercItems = exports.writeCharItems = exports.readCharItems = exports.Quality = exports.ItemType = void 0;
 var bitreader_1 = __webpack_require__(/*! ../binary/bitreader */ "./src/binary/bitreader.ts");
 var bitwriter_1 = __webpack_require__(/*! ../binary/bitwriter */ "./src/binary/bitwriter.ts");
 var constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
@@ -1703,7 +1742,7 @@ var ItemType;
     ItemType[ItemType["Shield"] = 2] = "Shield";
     ItemType[ItemType["Weapon"] = 3] = "Weapon";
     ItemType[ItemType["Other"] = 4] = "Other";
-})(ItemType || (ItemType = {}));
+})(ItemType = exports.ItemType || (exports.ItemType = {}));
 var Quality;
 (function (Quality) {
     Quality[Quality["Low"] = 1] = "Low";
@@ -1714,7 +1753,7 @@ var Quality;
     Quality[Quality["Rare"] = 6] = "Rare";
     Quality[Quality["Unique"] = 7] = "Unique";
     Quality[Quality["Crafted"] = 8] = "Crafted";
-})(Quality || (Quality = {}));
+})(Quality = exports.Quality || (exports.Quality = {}));
 //type FrequencyItem = [string | [FrequencyItem, FrequencyItem], number];
 //type FrequencyTable = FrequencyItem[];
 // type CompressedFrequencyItem = [string | CompressedFrequencyItem, string | CompressedFrequencyItem];
@@ -1946,7 +1985,7 @@ function readCorpseItems(char, reader, mod, config) {
                     _d.label = 1;
                 case 1:
                     if (!(i < char.is_dead)) return [3 /*break*/, 4];
-                    reader.SkipBytes(12); //0x0004 [unk4, x_pos, y_pos]
+                    reader.SkipBytes(12); //0x0004 [b4_entered_area, x_pos, y_pos]
                     _a = char;
                     _c = (_b = char.corpse_items).concat;
                     return [4 /*yield*/, readItems(reader, mod, char.header.version, config, char)];
@@ -2084,11 +2123,7 @@ function readItem(reader, mod, version, config) {
                                 break;
                             case Quality.Magic:
                                 item.magic_prefix = reader.ReadUInt16(11);
-                                if (item.magic_prefix)
-                                    item.magic_prefix_name = constants.magic_prefixes[item.magic_prefix] ? constants.magic_prefixes[item.magic_prefix].n : null;
                                 item.magic_suffix = reader.ReadUInt16(11);
-                                if (item.magic_suffix)
-                                    item.magic_suffix_name = constants.magic_suffixes[item.magic_suffix] ? constants.magic_suffixes[item.magic_suffix].n : null;
                                 break;
                             case Quality.Set:
                                 item.set_id = reader.ReadUInt16(12);
@@ -2432,7 +2467,7 @@ function _readSimpleBits(item, reader, version, constants, config) {
                     bits_1 += bit;
                     node = node[bit];
                     if (node === undefined) {
-                        console.log("Huffman value " + bits_1 + " is undefined.");
+                        console.log("Huffman value " + bits_1 + " (left-to-right) is undefined.");
                     }
                 } while (Array.isArray(node));
                 item.type += node;
@@ -3108,7 +3143,7 @@ function _readQuests(bytes) {
 function _writeQuests(quests) {
     var writer = new bitwriter_1.BitWriter(96);
     writer.length = 96 * 8;
-    var difficultyCompleted = +quests.act_v.completed || +quests.act_v.eve_of_destruction.is_completed;
+    var difficultyCompleted = +quests.act_v.completed || +quests.act_v.eve_of_destruction.b0_is_completed;
     return writer
         .WriteUInt16(+quests.act_i.introduced)
         .WriteArray(_writeQuest(quests.act_i.den_of_evil))
@@ -3117,30 +3152,30 @@ function _writeQuests(quests) {
         .WriteArray(_writeQuest(quests.act_i.the_search_for_cain))
         .WriteArray(_writeQuest(quests.act_i.the_forgotten_tower))
         .WriteArray(_writeQuest(quests.act_i.sisters_to_the_slaughter))
-        .WriteUInt16(+quests.act_i.completed || +quests.act_i.sisters_to_the_slaughter.is_completed)
-        .WriteUInt16(+quests.act_ii.introduced || +quests.act_i.sisters_to_the_slaughter.is_completed)
+        .WriteUInt16(+quests.act_i.completed || +quests.act_i.sisters_to_the_slaughter.b0_is_completed)
+        .WriteUInt16(+quests.act_ii.introduced || +quests.act_i.sisters_to_the_slaughter.b0_is_completed)
         .WriteArray(_writeQuest(quests.act_ii.radaments_lair))
         .WriteArray(_writeQuest(quests.act_ii.the_horadric_staff))
         .WriteArray(_writeQuest(quests.act_ii.tainted_sun))
         .WriteArray(_writeQuest(quests.act_ii.arcane_sanctuary))
         .WriteArray(_writeQuest(quests.act_ii.the_summoner))
         .WriteArray(_writeQuest(quests.act_ii.the_seven_tombs))
-        .WriteUInt16(+quests.act_ii.completed || +quests.act_ii.the_seven_tombs.is_completed)
-        .WriteUInt16(+quests.act_iii.introduced || +quests.act_ii.the_seven_tombs.is_completed)
+        .WriteUInt16(+quests.act_ii.completed || +quests.act_ii.the_seven_tombs.b0_is_completed)
+        .WriteUInt16(+quests.act_iii.introduced || +quests.act_ii.the_seven_tombs.b0_is_completed)
         .WriteArray(_writeQuest(quests.act_iii.lam_esens_tome))
         .WriteArray(_writeQuest(quests.act_iii.khalims_will))
         .WriteArray(_writeQuest(quests.act_iii.blade_of_the_old_religion))
         .WriteArray(_writeQuest(quests.act_iii.the_golden_bird))
         .WriteArray(_writeQuest(quests.act_iii.the_blackened_temple))
         .WriteArray(_writeQuest(quests.act_iii.the_guardian))
-        .WriteUInt16(+quests.act_iii.completed || +quests.act_iii.the_guardian.is_completed)
-        .WriteUInt16(+quests.act_iv.introduced || +quests.act_iii.the_guardian.is_completed)
+        .WriteUInt16(+quests.act_iii.completed || +quests.act_iii.the_guardian.b0_is_completed)
+        .WriteUInt16(+quests.act_iv.introduced || +quests.act_iii.the_guardian.b0_is_completed)
         .WriteArray(_writeQuest(quests.act_iv.the_fallen_angel))
         .WriteArray(_writeQuest(quests.act_iv.terrors_end))
         .WriteArray(_writeQuest(quests.act_iv.hellforge))
-        .WriteUInt16(+quests.act_iv.completed || +quests.act_iv.terrors_end.is_completed)
+        .WriteUInt16(+quests.act_iv.completed || +quests.act_iv.terrors_end.b0_is_completed)
         .WriteArray(new Uint8Array(6))
-        .WriteUInt16(+quests.act_v.introduced || +quests.act_iv.terrors_end.is_completed)
+        .WriteUInt16(+quests.act_v.introduced || +quests.act_iv.terrors_end.b0_is_completed)
         .WriteArray(new Uint8Array(4))
         .WriteArray(_writeQuest(quests.act_v.siege_on_harrogath))
         .WriteArray(_writeQuest(quests.act_v.rescue_on_mount_arreat))
@@ -3156,54 +3191,54 @@ function _writeQuests(quests) {
 function _readQuest(bytes) {
     var quest = {};
     var reader = new bitreader_1.BitReader(bytes);
-    quest.is_completed = reader.ReadBit() === 1;
-    quest.is_requirement_completed = reader.ReadBit() === 1;
-    quest.is_received = reader.ReadBit() === 1;
+    quest.b0_is_completed = reader.ReadBit() === 1;
+    quest.b1_is_requirement_completed = reader.ReadBit() === 1;
+    quest.b2_is_received = reader.ReadBit() === 1;
     if (reader.ReadBit() === 1)
-        quest.unk3 = true;
+        quest.b3_left_town = true;
     if (reader.ReadBit() === 1)
-        quest.unk4 = true;
+        quest.b4_entered_area = true;
     if (reader.ReadBit() === 1)
-        quest.unk5 = true;
+        quest.b5_custom1 = true;
     if (reader.ReadBit() === 1)
-        quest.unk6 = true;
+        quest.b6_custom2 = true;
     if (reader.ReadBit() === 1)
-        quest.consumed_scroll = true;
+        quest.b7_custom3 = true;
     if (reader.ReadBit() === 1)
-        quest.unk8 = true;
+        quest.b8_custom4 = true;
     if (reader.ReadBit() === 1)
-        quest.unk9 = true;
+        quest.b9_custom5 = true;
     if (reader.ReadBit() === 1)
-        quest.unk10 = true;
+        quest.b10_custom6 = true;
     if (reader.ReadBit() === 1)
-        quest.unk11 = true;
-    quest.closed = reader.ReadBit() === 1;
-    quest.done_recently = reader.ReadBit() === 1;
+        quest.b11_custom7 = true;
+    quest.b12_closed = reader.ReadBit() === 1;
+    quest.b13_done_recently = reader.ReadBit() === 1;
     if (reader.ReadBit() === 1)
-        quest.unk14 = true;
+        quest.b14_completed_now = true;
     if (reader.ReadBit() === 1)
-        quest.unk15 = true;
+        quest.b15_completed_before = true;
     return quest;
 }
 function _writeQuest(quest) {
     var writer = new bitwriter_1.BitWriter(2);
     writer.length = 2 * 8;
-    writer.WriteBit(+quest.is_completed);
-    writer.WriteBit(+quest.is_requirement_completed);
-    writer.WriteBit(+quest.is_received);
-    writer.WriteBit(+quest.unk3);
-    writer.WriteBit(+quest.unk4);
-    writer.WriteBit(+quest.unk5);
-    writer.WriteBit(+quest.unk6);
-    writer.WriteBit(+quest.consumed_scroll);
-    writer.WriteBit(+quest.unk8);
-    writer.WriteBit(+quest.unk9);
-    writer.WriteBit(+quest.unk10);
-    writer.WriteBit(+quest.unk11);
-    writer.WriteBit(+quest.closed);
-    writer.WriteBit(+quest.done_recently);
-    writer.WriteBit(+quest.unk14);
-    writer.WriteBit(+quest.unk15);
+    writer.WriteBit(+quest.b0_is_completed);
+    writer.WriteBit(+quest.b1_is_requirement_completed);
+    writer.WriteBit(+quest.b2_is_received);
+    writer.WriteBit(+quest.b3_left_town);
+    writer.WriteBit(+quest.b4_entered_area);
+    writer.WriteBit(+quest.b5_custom1);
+    writer.WriteBit(+quest.b6_custom2);
+    writer.WriteBit(+quest.b7_custom3);
+    writer.WriteBit(+quest.b8_custom4);
+    writer.WriteBit(+quest.b9_custom5);
+    writer.WriteBit(+quest.b10_custom6);
+    writer.WriteBit(+quest.b11_custom7);
+    writer.WriteBit(+quest.b12_closed);
+    writer.WriteBit(+quest.b13_done_recently);
+    writer.WriteBit(+quest.b14_completed_now);
+    writer.WriteBit(+quest.b15_completed_before);
     return writer.ToArray();
 }
 function _readWaypointData(bytes) {

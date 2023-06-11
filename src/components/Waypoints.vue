@@ -15,7 +15,7 @@
 </template>
 
 <script>
-  const waypoints = [
+  const waypointsDefinition = [
     {
       key: "act_i", label: "Act I", all: false,
       waypoints: [
@@ -85,6 +85,28 @@
     props: {
       waypoints: Object,
     },
+    watch: { 
+      waypoints: {
+        handler: function (newWp, oldWp) {
+          // Update difficulty all & act all checkboxes
+          for (const [i, difficulty] of this.difficulties.entries()) {
+            let isDifficultyAll = true;
+            for (const [j, act] of difficulty.acts.entries()) {
+              let isActAll = true;
+              for (const wp of act.waypoints) {
+                if (!newWp[difficulty.key][act.key][wp.key]) {
+                  isActAll = false;
+                  isDifficultyAll = false;
+                }
+              }
+              this.difficulties[i].acts[j].all = isActAll;
+            }
+            this.difficulties[i].all = isDifficultyAll;
+          }
+        },
+        deep: true
+      }
+    },
     methods: {
       updateWP(difficulty, act, wp, value) {
         // Uncheck act checkbock if necessary
@@ -130,9 +152,9 @@
     data() {
       return {
         difficulties: [
-          { key: 'normal', all: false, label: "Normal", acts: JSON.parse(JSON.stringify(waypoints)) },
-          { key: 'nm', all: false, label: "Nightmare", acts: JSON.parse(JSON.stringify(waypoints)) },
-          { key: 'hell', all: false, label: "Hell", acts: JSON.parse(JSON.stringify(waypoints)) }
+          { key: 'normal', all: false, label: "Normal", acts: JSON.parse(JSON.stringify(waypointsDefinition)) },
+          { key: 'nm', all: false, label: "Nightmare", acts: JSON.parse(JSON.stringify(waypointsDefinition)) },
+          { key: 'hell', all: false, label: "Hell", acts: JSON.parse(JSON.stringify(waypointsDefinition)) }
         ],
       };
     }

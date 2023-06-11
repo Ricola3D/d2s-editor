@@ -29,24 +29,24 @@
           <li>
             <div v-if="item.quality == 4">
               <label>Prefix:</label>
-              <select class="edit-box" v-model.number="item.magic_prefix_name" @change="onEvent('update')">
+              <select class="edit-box" v-model.number="item.magic_prefix" @change="onEvent('update')">
                 <option value="0">None</option>
-                <option v-for="s in prefixes" :value="s.v.n" :key="s.i">{{ s.v.n }}</option>
+                <option v-for="s in prefixes" :value="s.i" :key="s.i">{{ s.i }} - {{ s.v.n }}</option>
               </select>
               <label>Suffix:</label>
-              <select class="edit-box" v-model.number="item.magic_suffix_name" @change="onEvent('update')">
+              <select class="edit-box" v-model.number="item.magic_suffix" @change="onEvent('update')">
                 <option value="0">None</option>
-                <option v-for="s in suffixes" :value="s.v.n" :key="s.i">{{ s.v.n }}</option>
+                <option v-for="s in suffixes" :value="s.i" :key="s.i">{{ s.i }} - {{ s.v.n }}</option>
               </select>
             </div>
             <div v-if="item.quality == 6 || item.quality == 8">
               <label>Prefix:</label>
-              <select class="edit-box"  v-model.number="item.rare_name" @change="onEvent('update')">
-                <option v-for="s in rare_names" :value="s.v.n" :key="s.i">{{ s.v.n }}</option>
+              <select class="edit-box"  v-model.number="item.rare_name_id" @change="onEvent('update')">
+                <option v-for="s in rare_names" :value="s.i" :key="s.i">{{ s.i }} - {{ s.v.n }}</option>
               </select>
               <label>Suffix:</label>
-              <select class="edit-box"  v-model.number="item.rare_name2" @change="onEvent('update')">
-                <option v-for="s in rare_names" :value="s.v.n" :key="s.i">{{ s.v.n }}</option>
+              <select class="edit-box"  v-model.number="item.rare_name_id2" @change="onEvent('update')">
+                <option v-for="s in rare_names" :value="s.i" :key="s.i">{{ s.i }} - {{ s.v.n }}</option>
               </select>
             </div>
           </li>
