@@ -146,7 +146,7 @@
           name = `${rare_name} ${name}`;
         }
         if (item.quality === d2s.Quality.Rare && item.rare_name_id2) {
-          const rare_name2 = constants.rare_names[item.rare_name_id2] ? constants.rare_names[item.rare_name_id2].n : null;
+          let rare_name2 = constants.rare_names[item.rare_name_id2] ? constants.rare_names[item.rare_name_id2].n : null;
           if (!rare_name2) {
             rare_name2 = `${item.rare_name_id2}_unknown`;
           }

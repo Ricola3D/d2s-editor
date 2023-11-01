@@ -694,7 +694,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 99,
-            "s": "Prayer",
+            "s": "???",
+            // "s": "Prayer",
             "c": "pal"
         },
         {
@@ -719,12 +720,14 @@ export let remodded_constants_99 = {
         },
         {
             "id": 104,
-            "s": "Defiance",
+            "s": "???",
+            // "s": "Defiance",
             "c": "pal"
         },
         {
             "id": 105,
-            "s": "Resist Cold",
+            "s": "Judge Not",
+            // "s": "Resist Cold",
             "c": "pal"
         },
         {
@@ -739,12 +742,14 @@ export let remodded_constants_99 = {
         },
         {
             "id": 108,
-            "s": "Blessed Aim",
+            "s": "???",
+            // "s": "Blessed Aim",
             "c": "pal"
         },
         {
             "id": 109,
-            "s": "Cleansing",
+            "s": "Clear Ailment",
+            // "s": "Cleansing",
             "c": "pal"
         },
         {
@@ -780,7 +785,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 116,
-            "s": "Conversion",
+            "s": "Shield Glare",
+            // "s": "Conversion",
             "c": "pal"
         },
         {
@@ -822,7 +828,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 124,
-            "s": "Redemption",
+            "s": "Pass Favor",
+            // "s": "Redemption",
             "c": "pal"
         },
         {
@@ -1169,7 +1176,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 231,
-            "s": "Carrion Vine",
+            "s": "Mycelium Recyclers",
+            // "s": "Carrion Vine",
             "c": "dru"
         },
         {
@@ -1245,7 +1253,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 246,
-            "s": "Spirit of Barbs",
+            "s": "Landslide",
+            // "s": "Spirit of Barbs",
             "c": "dru"
         },
         {
@@ -11365,7 +11374,7 @@ export let remodded_constants_99 = {
             "s": "item_maxhp_percent",
             "sS": 1,
             "sB": 10,
-            "sA": 99,
+            "sA": 97,
             "so": 58,
             "dF": 19,
             "dP": "Increase Maximum Life %d%%",
@@ -13308,7 +13317,7 @@ export let remodded_constants_99 = {
             "dF": 19,
             "dP": "%+d%% Deadly Strike",
             "dN": "%+d%% Deadly Strike",
-            "d2": "(dexterity)",
+            "d2": "(Dexterity)",
         },
         {
             "id": 258,
@@ -13641,19 +13650,14 @@ export let remodded_constants_99 = {
         },
         {
             "id": 287,
-            "s": "item_resist_pois_bytime",
-            "e": 4,
-            "sS": 1,
-            "sB": 22,
+            "s": "item_piercing_attack_per_dext",
+            "sB": 6,
             "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dP": "Poison Resist %+d%%",
-            "dN": "Poison Resist %+d%%",
-            "o": 6,
-            "os": [
-                "poisonresist"
-            ]
+            "so": 999,
+            "dF": 19,
+            "dP": "%+d%% Piercing Attack",
+            "dN": "%+d%% Piercing attack",
+            "d2": "(Dexterity)",
         },
         {
             "id": 288,
@@ -13706,7 +13710,7 @@ export let remodded_constants_99 = {
         {
             "id": 291,
             "s": "bag_gems",
-            "sB": 32,
+            "sB": 16,
             "sA": 1000,
             "so": 999,
             "dF": 19,
@@ -13717,7 +13721,7 @@ export let remodded_constants_99 = {
             "id": 292,
             "s": "bag_low_runes",
             "sB": 32,
-            "sA": 8437760,
+            "sA": 49152,
             "so": 999,
             "dF": 19,
             "dP": "Low rune points: %d",
@@ -13727,7 +13731,7 @@ export let remodded_constants_99 = {
             "id": 293,
             "s": "bag_mid_runes",
             "sB": 32,
-            "sA": 1077985280,
+            "sA": 49152,
             "so": 999,
             "dF": 19,
             "dP": "Mid rune points: %d",
@@ -13757,7 +13761,7 @@ export let remodded_constants_99 = {
             "id": 296,
             "s": "bag_hate_keys",
             "sB": 16,
-            "sA": 51200,
+            "sA": 49152,
             "so": 999,
             "dF": 19,
             "dP": "Hate keys: %d",
@@ -13767,7 +13771,7 @@ export let remodded_constants_99 = {
             "id": 297,
             "s": "bag_dest_keys",
             "sB": 16,
-            "sA": 50176,
+            "sA": 49152,
             "so": 999,
             "dF": 19,
             "dP": "Destruction keys: %d",
@@ -13777,7 +13781,7 @@ export let remodded_constants_99 = {
             "id": 298,
             "s": "bag_diablo_horns",
             "sB": 16,
-            "sA": 49664,
+            "sA": 49152,
             "so": 999,
             "dF": 19,
             "dP": "Diablo's Horn: %d",
@@ -13787,7 +13791,7 @@ export let remodded_constants_99 = {
             "id": 299,
             "s": "bag_baal_eyes",
             "sB": 16,
-            "sA": 49408,
+            "sA": 49152,
             "so": 999,
             "dF": 19,
             "dP": "Baal's Eye: %d",
@@ -13797,7 +13801,7 @@ export let remodded_constants_99 = {
             "id": 300,
             "s": "bag_mephisto_brains",
             "sB": 16,
-            "sA": 49280,
+            "sA": 49152,
             "so": 999,
             "dF": 19,
             "dP": "Mephisto's Brain: %d",
@@ -14239,7 +14243,7 @@ export let remodded_constants_99 = {
         },
         {
             "id": 357,
-            "s": "item_damage_magic_sk_damages",
+            "s": "passive_magic_mastery",
             "sB": 8,
             "sA": 0,
             "so": 100,
@@ -14477,14 +14481,23 @@ export let remodded_constants_99 = {
             "dF": 19,
             "dP": "%+d%% Open Wounds",
             "dN": "%+d%% Open Wounds",
-            "d2": "(dexterity)",
+            "d2": "(Dexterity)",
         },
         null,
         null,
         null,
         null,
         null,
-        null,
+        {
+            "id": 419,
+            "s": "bag_rare_jewels",
+            "sB": 11,
+            "sA": 10,
+            "so": 999,
+            "dF": 19,
+            "dP": "Rare Jewels: %d",
+            "dN": "Rare Jewels: %d"
+        },,
         null, // 420
         null,
         null,
@@ -18315,13 +18328,15 @@ export let remodded_constants_99 = {
         },
         {
             "id": 277,
-            "n": "Saracen's Chance",
-            "c": "amu",
-            "tc": "dpur"
+            "n": "Risen Phoenix",
+            // "n": "Saracen's Chance",
+            // "c": "amu",
+            // "tc": "dpur"
         },
         {
             "id": 278,
-            "n": "Class-specific"
+            "n": "Glacial Oasis"
+            //"n": "Class-specific"
         },
         {
             "id": 279,
@@ -18376,8 +18391,9 @@ export let remodded_constants_99 = {
         },
         {
             "id": 288,
-            "n": "The Scalper",
-            "c": "9ta"
+            "n": "Above All"
+            // "n": "The Scalper",
+            // "c": "9ta"
         },
         {
             "id": 289,
@@ -18411,10 +18427,14 @@ export let remodded_constants_99 = {
         },
         {
             "id": 293,
-            "n": "Gut Siphon",
-            "i": "invrxbu",
-            "c": "6rx",
-            "tc": "lgrn"
+            "n": "Blood Raven's Charge",
+            "i": "invswbu",
+            "c": "amb",
+            "tc": "dgld"
+            // "n": "Gut Siphon",
+            // "i": "invrxbu",
+            // "c": "6rx",
+            // "tc": "lgrn"
         },
         {
             "id": 294,
@@ -33860,6 +33880,36 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gcv",
+                        "type": "gloves",
+                        "m": "att",
+                        "p": 0,
+                        "min": 40,
+                        "max": 40
+                    }
+                ],
+                [
+                    {
+                        "code": "gcv",
+                        "type": "torso",
+                        "m": "str",
+                        "p": 0,
+                        "min": 3,
+                        "max": 3
+                    }
+                ],
+                [
+                    {
+                        "code": "gcv",
+                        "type": "boots",
+                        "m": "str",
+                        "p": 0,
+                        "min": 3,
+                        "max": 3
+                    }
+                ],
+                [
+                    {
+                        "code": "gcv",
                         "type": "helm",
                         "m": "str",
                         "p": 0,
@@ -33870,7 +33920,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gcv",
+                        "type": "belt",
+                        "m": "str",
+                        "p": 0,
+                        "min": 3,
+                        "max": 3
+                    }
+                ],
+                [
+                    {
+                        "code": "gcv",
                         "type": "shield",
+                        "m": "ac",
+                        "p": 0,
+                        "min": 8,
+                        "max": 8
+                    }
+                ],
+                [
+                    {
+                        "code": "gcv",
+                        "type": "amulet",
+                        "m": "ac",
+                        "p": 0,
+                        "min": 8,
+                        "max": 8
+                    }
+                ],
+                [
+                    {
+                        "code": "gcv",
+                        "type": "ring",
                         "m": "ac",
                         "p": 0,
                         "min": 8,
@@ -33910,6 +33990,36 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gfv",
+                        "type": "gloves",
+                        "m": "att",
+                        "p": 0,
+                        "min": 60,
+                        "max": 60
+                    }
+                ],
+                [
+                    {
+                        "code": "gfv",
+                        "type": "armor",
+                        "m": "str",
+                        "p": 0,
+                        "min": 4,
+                        "max": 4
+                    }
+                ],
+                [
+                    {
+                        "code": "gfv",
+                        "type": "boots",
+                        "m": "str",
+                        "p": 0,
+                        "min": 4,
+                        "max": 4
+                    }
+                ],
+                [
+                    {
+                        "code": "gfv",
                         "type": "helm",
                         "m": "str",
                         "p": 0,
@@ -33920,7 +34030,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gfv",
+                        "type": "belt",
+                        "m": "str",
+                        "p": 0,
+                        "min": 4,
+                        "max": 4
+                    }
+                ],
+                [
+                    {
+                        "code": "gfv",
                         "type": "shield",
+                        "m": "ac",
+                        "p": 0,
+                        "min": 12,
+                        "max": 12
+                    }
+                ],
+                [
+                    {
+                        "code": "gfv",
+                        "type": "amulet",
+                        "m": "ac",
+                        "p": 0,
+                        "min": 12,
+                        "max": 12
+                    }
+                ],
+                [
+                    {
+                        "code": "gfv",
+                        "type": "ring",
                         "m": "ac",
                         "p": 0,
                         "min": 12,
@@ -33960,6 +34100,36 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gsv",
+                        "type": "gloves",
+                        "m": "att",
+                        "p": 0,
+                        "min": 80,
+                        "max": 80
+                    }
+                ],
+                [
+                    {
+                        "code": "gsv",
+                        "type": "armor",
+                        "m": "str",
+                        "p": 0,
+                        "min": 6,
+                        "max": 6
+                    }
+                ],
+                [
+                    {
+                        "code": "gsv",
+                        "type": "boots",
+                        "m": "str",
+                        "p": 0,
+                        "min": 6,
+                        "max": 6
+                    }
+                ],
+                [
+                    {
+                        "code": "gsv",
                         "type": "helm",
                         "m": "str",
                         "p": 0,
@@ -33970,7 +34140,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gsv",
+                        "type": "belt",
+                        "m": "str",
+                        "p": 0,
+                        "min": 6,
+                        "max": 6
+                    }
+                ],
+                [
+                    {
+                        "code": "gsv",
                         "type": "shield",
+                        "m": "ac",
+                        "p": 0,
+                        "min": 18,
+                        "max": 18
+                    }
+                ],
+                [
+                    {
+                        "code": "gsv",
+                        "type": "amulet",
+                        "m": "ac",
+                        "p": 0,
+                        "min": 18,
+                        "max": 18
+                    }
+                ],
+                [
+                    {
+                        "code": "gsv",
+                        "type": "ring",
                         "m": "ac",
                         "p": 0,
                         "min": 18,
@@ -34010,6 +34210,36 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gzv",
+                        "type": "gloves",
+                        "m": "att",
+                        "p": 0,
+                        "min": 100,
+                        "max": 100
+                    }
+                ],
+                [
+                    {
+                        "code": "gzv",
+                        "type": "armor",
+                        "m": "str",
+                        "p": 0,
+                        "min": 8,
+                        "max": 8
+                    }
+                ],
+                [
+                    {
+                        "code": "gzv",
+                        "type": "boots",
+                        "m": "str",
+                        "p": 0,
+                        "min": 8,
+                        "max": 8
+                    }
+                ],
+                [
+                    {
+                        "code": "gzv",
                         "type": "helm",
                         "m": "str",
                         "p": 0,
@@ -34020,7 +34250,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gzv",
+                        "type": "belt",
+                        "m": "str",
+                        "p": 0,
+                        "min": 8,
+                        "max": 8
+                    }
+                ],
+                [
+                    {
+                        "code": "gzv",
                         "type": "shield",
+                        "m": "ac",
+                        "p": 0,
+                        "min": 24,
+                        "max": 24
+                    }
+                ],
+                [
+                    {
+                        "code": "gzv",
+                        "type": "amulet",
+                        "m": "ac",
+                        "p": 0,
+                        "min": 24,
+                        "max": 24
+                    }
+                ],
+                [
+                    {
+                        "code": "gzv",
+                        "type": "ring",
                         "m": "ac",
                         "p": 0,
                         "min": 24,
@@ -34060,6 +34320,36 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gpv",
+                        "type": "gloves",
+                        "m": "att",
+                        "p": 0,
+                        "min": 150,
+                        "max": 150
+                    }
+                ],
+                [
+                    {
+                        "code": "gpv",
+                        "type": "armor",
+                        "m": "str",
+                        "p": 0,
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "gpv",
+                        "type": "boots",
+                        "m": "str",
+                        "p": 0,
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "gpv",
                         "type": "helm",
                         "m": "str",
                         "p": 0,
@@ -34070,7 +34360,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gpv",
+                        "type": "belt",
+                        "m": "str",
+                        "p": 0,
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "gpv",
                         "type": "shield",
+                        "m": "ac",
+                        "p": 0,
+                        "min": 30,
+                        "max": 30
+                    }
+                ],
+                [
+                    {
+                        "code": "gpv",
+                        "type": "amulet",
+                        "m": "ac",
+                        "p": 0,
+                        "min": 30,
+                        "max": 30
+                    }
+                ],
+                [
+                    {
+                        "code": "gpv",
+                        "type": "ring",
                         "m": "ac",
                         "p": 0,
                         "min": 30,
@@ -34118,6 +34438,44 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gcy",
+                        "type": "gloves",
+                        "m": "ltng-min",
+                        "p": 0,
+                        "min": 1,
+                        "max": 1
+                    },
+                    {
+                        "code": "gcy",
+                        "type": "gloves",
+                        "m": "ltng-max",
+                        "p": 0,
+                        "min": 8,
+                        "max": 8
+                    }
+                ],
+                [
+                    {
+                        "code": "gcy",
+                        "type": "armor",
+                        "m": "mag%",
+                        "p": 0,
+                        "min": 9,
+                        "max": 9
+                    }
+                ],
+                [
+                    {
+                        "code": "gcy",
+                        "type": "boots",
+                        "m": "mag%",
+                        "p": 0,
+                        "min": 9,
+                        "max": 9
+                    }
+                ],
+                [
+                    {
+                        "code": "gcy",
                         "type": "helm",
                         "m": "mag%",
                         "p": 0,
@@ -34128,7 +34486,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gcy",
+                        "type": "belt",
+                        "m": "mag%",
+                        "p": 0,
+                        "min": 9,
+                        "max": 9
+                    }
+                ],
+                [
+                    {
+                        "code": "gcy",
                         "type": "shield",
+                        "m": "res-ltng",
+                        "p": 0,
+                        "min": 12,
+                        "max": 12
+                    }
+                ],
+                [
+                    {
+                        "code": "gcy",
+                        "type": "amulet",
+                        "m": "res-ltng",
+                        "p": 0,
+                        "min": 12,
+                        "max": 12
+                    }
+                ],
+                [
+                    {
+                        "code": "gcy",
+                        "type": "ring",
                         "m": "res-ltng",
                         "p": 0,
                         "min": 12,
@@ -34176,6 +34564,44 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gfy",
+                        "type": "gloves",
+                        "m": "ltng-min",
+                        "p": 0,
+                        "min": 1,
+                        "max": 1
+                    },
+                    {
+                        "code": "gfy",
+                        "type": "gloves",
+                        "m": "ltng-max",
+                        "p": 0,
+                        "min": 14,
+                        "max": 14
+                    }
+                ],
+                [
+                    {
+                        "code": "gfy",
+                        "type": "armor",
+                        "m": "mag%",
+                        "p": 0,
+                        "min": 13,
+                        "max": 13
+                    }
+                ],
+                [
+                    {
+                        "code": "gfy",
+                        "type": "boots",
+                        "m": "mag%",
+                        "p": 0,
+                        "min": 13,
+                        "max": 13
+                    }
+                ],
+                [
+                    {
+                        "code": "gfy",
                         "type": "helm",
                         "m": "mag%",
                         "p": 0,
@@ -34186,7 +34612,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gfy",
+                        "type": "belt",
+                        "m": "mag%",
+                        "p": 0,
+                        "min": 13,
+                        "max": 13
+                    }
+                ],
+                [
+                    {
+                        "code": "gfy",
                         "type": "shield",
+                        "m": "res-ltng",
+                        "p": 0,
+                        "min": 16,
+                        "max": 16
+                    }
+                ],
+                [
+                    {
+                        "code": "gfy",
+                        "type": "amulet",
+                        "m": "res-ltng",
+                        "p": 0,
+                        "min": 16,
+                        "max": 16
+                    }
+                ],
+                [
+                    {
+                        "code": "gfy",
+                        "type": "ring",
                         "m": "res-ltng",
                         "p": 0,
                         "min": 16,
@@ -34234,6 +34690,44 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gsy",
+                        "type": "gloves",
+                        "m": "ltng-min",
+                        "p": 0,
+                        "min": 1,
+                        "max": 1
+                    },
+                    {
+                        "code": "gsy",
+                        "type": "gloves",
+                        "m": "ltng-max",
+                        "p": 0,
+                        "min": 22,
+                        "max": 22
+                    }
+                ],
+                [
+                    {
+                        "code": "gsy",
+                        "type": "armor",
+                        "m": "mag%",
+                        "p": 0,
+                        "min": 16,
+                        "max": 16
+                    }
+                ],
+                [
+                    {
+                        "code": "gsy",
+                        "type": "boots",
+                        "m": "mag%",
+                        "p": 0,
+                        "min": 16,
+                        "max": 16
+                    }
+                ],
+                [
+                    {
+                        "code": "gsy",
                         "type": "helm",
                         "m": "mag%",
                         "p": 0,
@@ -34244,7 +34738,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gsy",
+                        "type": "belt",
+                        "m": "mag%",
+                        "p": 0,
+                        "min": 16,
+                        "max": 16
+                    }
+                ],
+                [
+                    {
+                        "code": "gsy",
                         "type": "shield",
+                        "m": "res-ltng",
+                        "p": 0,
+                        "min": 22,
+                        "max": 22
+                    }
+                ],
+                [
+                    {
+                        "code": "gsy",
+                        "type": "amulet",
+                        "m": "res-ltng",
+                        "p": 0,
+                        "min": 22,
+                        "max": 22
+                    }
+                ],
+                [
+                    {
+                        "code": "gsy",
+                        "type": "ring",
                         "m": "res-ltng",
                         "p": 0,
                         "min": 22,
@@ -34292,6 +34816,44 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gly",
+                        "type": "gloves",
+                        "m": "ltng-min",
+                        "p": 0,
+                        "min": 1,
+                        "max": 1
+                    },
+                    {
+                        "code": "gly",
+                        "type": "gloves",
+                        "m": "ltng-max",
+                        "p": 0,
+                        "min": 30,
+                        "max": 30
+                    }
+                ],
+                [
+                    {
+                        "code": "gly",
+                        "type": "armor",
+                        "m": "mag%",
+                        "p": 0,
+                        "min": 20,
+                        "max": 20
+                    }
+                ],
+                [
+                    {
+                        "code": "gly",
+                        "type": "boots",
+                        "m": "mag%",
+                        "p": 0,
+                        "min": 20,
+                        "max": 20
+                    }
+                ],
+                [
+                    {
+                        "code": "gly",
                         "type": "helm",
                         "m": "mag%",
                         "p": 0,
@@ -34302,7 +34864,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gly",
+                        "type": "belt",
+                        "m": "mag%",
+                        "p": 0,
+                        "min": 20,
+                        "max": 20
+                    }
+                ],
+                [
+                    {
+                        "code": "gly",
                         "type": "shield",
+                        "m": "res-ltng",
+                        "p": 0,
+                        "min": 28,
+                        "max": 28
+                    }
+                ],
+                [
+                    {
+                        "code": "gly",
+                        "type": "amulet",
+                        "m": "res-ltng",
+                        "p": 0,
+                        "min": 28,
+                        "max": 28
+                    }
+                ],
+                [
+                    {
+                        "code": "gly",
+                        "type": "ring",
                         "m": "res-ltng",
                         "p": 0,
                         "min": 28,
@@ -34350,6 +34942,44 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gpy",
+                        "type": "gloves",
+                        "m": "ltng-min",
+                        "p": 0,
+                        "min": 1,
+                        "max": 1
+                    },
+                    {
+                        "code": "gpy",
+                        "type": "gloves",
+                        "m": "ltng-max",
+                        "p": 0,
+                        "min": 40,
+                        "max": 40
+                    }
+                ],
+                [
+                    {
+                        "code": "gpy",
+                        "type": "armor",
+                        "m": "mag%",
+                        "p": 0,
+                        "min": 24,
+                        "max": 24
+                    }
+                ],
+                [
+                    {
+                        "code": "gpy",
+                        "type": "boots",
+                        "m": "mag%",
+                        "p": 0,
+                        "min": 24,
+                        "max": 24
+                    }
+                ],
+                [
+                    {
+                        "code": "gpy",
                         "type": "helm",
                         "m": "mag%",
                         "p": 0,
@@ -34360,7 +34990,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gpy",
+                        "type": "belt",
+                        "m": "mag%",
+                        "p": 0,
+                        "min": 24,
+                        "max": 24
+                    }
+                ],
+                [
+                    {
+                        "code": "gpy",
                         "type": "shield",
+                        "m": "res-ltng",
+                        "p": 0,
+                        "min": 40,
+                        "max": 40
+                    }
+                ],
+                [
+                    {
+                        "code": "gpy",
+                        "type": "amulet",
+                        "m": "res-ltng",
+                        "p": 0,
+                        "min": 40,
+                        "max": 40
+                    }
+                ],
+                [
+                    {
+                        "code": "gpy",
+                        "type": "ring",
                         "m": "res-ltng",
                         "p": 0,
                         "min": 40,
@@ -34416,6 +35076,52 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gcb",
+                        "type": "gloves",
+                        "m": "cold-min",
+                        "p": 0,
+                        "min": 1,
+                        "max": 1
+                    },
+                    {
+                        "code": "gcb",
+                        "type": "gloves",
+                        "m": "cold-max",
+                        "p": 0,
+                        "min": 3,
+                        "max": 3
+                    },
+                    {
+                        "code": "gcb",
+                        "type": "gloves",
+                        "m": "cold-len",
+                        "p": 0,
+                        "min": 25,
+                        "max": 25
+                    }
+                ],
+                [
+                    {
+                        "code": "gcb",
+                        "type": "armor",
+                        "m": "mana",
+                        "p": 0,
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "gcb",
+                        "type": "boots",
+                        "m": "mana",
+                        "p": 0,
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "gcb",
                         "type": "helm",
                         "m": "mana",
                         "p": 0,
@@ -34426,7 +35132,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gcb",
+                        "type": "belt",
+                        "m": "mana",
+                        "p": 0,
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "gcb",
                         "type": "shield",
+                        "m": "res-cold",
+                        "p": 0,
+                        "min": 12,
+                        "max": 12
+                    }
+                ],
+                [
+                    {
+                        "code": "gcb",
+                        "type": "amulet",
+                        "m": "res-cold",
+                        "p": 0,
+                        "min": 12,
+                        "max": 12
+                    }
+                ],
+                [
+                    {
+                        "code": "gcb",
+                        "type": "ring",
                         "m": "res-cold",
                         "p": 0,
                         "min": 12,
@@ -34482,6 +35218,52 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gfb",
+                        "type": "gloves",
+                        "m": "cold-min",
+                        "p": 0,
+                        "min": 3,
+                        "max": 3
+                    },
+                    {
+                        "code": "gfb",
+                        "type": "gloves",
+                        "m": "cold-max",
+                        "p": 0,
+                        "min": 5,
+                        "max": 5
+                    },
+                    {
+                        "code": "gfb",
+                        "type": "gloves",
+                        "m": "cold-len",
+                        "p": 0,
+                        "min": 35,
+                        "max": 35
+                    }
+                ],
+                [
+                    {
+                        "code": "gfb",
+                        "type": "armor",
+                        "m": "mana",
+                        "p": 0,
+                        "min": 17,
+                        "max": 17
+                    }
+                ],
+                [
+                    {
+                        "code": "gfb",
+                        "type": "boots",
+                        "m": "mana",
+                        "p": 0,
+                        "min": 17,
+                        "max": 17
+                    }
+                ],
+                [
+                    {
+                        "code": "gfb",
                         "type": "helm",
                         "m": "mana",
                         "p": 0,
@@ -34492,7 +35274,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gfb",
+                        "type": "belt",
+                        "m": "mana",
+                        "p": 0,
+                        "min": 17,
+                        "max": 17
+                    }
+                ],
+                [
+                    {
+                        "code": "gfb",
                         "type": "shield",
+                        "m": "res-cold",
+                        "p": 0,
+                        "min": 16,
+                        "max": 16
+                    }
+                ],
+                [
+                    {
+                        "code": "gfb",
+                        "type": "amulet",
+                        "m": "res-cold",
+                        "p": 0,
+                        "min": 16,
+                        "max": 16
+                    }
+                ],
+                [
+                    {
+                        "code": "gfb",
+                        "type": "ring",
                         "m": "res-cold",
                         "p": 0,
                         "min": 16,
@@ -34548,6 +35360,52 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gsb",
+                        "type": "gloves",
+                        "m": "cold-min",
+                        "p": 0,
+                        "min": 4,
+                        "max": 4
+                    },
+                    {
+                        "code": "gsb",
+                        "type": "gloves",
+                        "m": "cold-max",
+                        "p": 0,
+                        "min": 7,
+                        "max": 7
+                    },
+                    {
+                        "code": "gsb",
+                        "type": "gloves",
+                        "m": "cold-len",
+                        "p": 0,
+                        "min": 50,
+                        "max": 50
+                    }
+                ],
+                [
+                    {
+                        "code": "gsb",
+                        "type": "armor",
+                        "m": "mana",
+                        "p": 0,
+                        "min": 24,
+                        "max": 24
+                    }
+                ],
+                [
+                    {
+                        "code": "gsb",
+                        "type": "boots",
+                        "m": "mana",
+                        "p": 0,
+                        "min": 24,
+                        "max": 24
+                    }
+                ],
+                [
+                    {
+                        "code": "gsb",
                         "type": "helm",
                         "m": "mana",
                         "p": 0,
@@ -34558,7 +35416,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gsb",
+                        "type": "belt",
+                        "m": "mana",
+                        "p": 0,
+                        "min": 24,
+                        "max": 24
+                    }
+                ],
+                [
+                    {
+                        "code": "gsb",
                         "type": "shield",
+                        "m": "res-cold",
+                        "p": 0,
+                        "min": 22,
+                        "max": 22
+                    }
+                ],
+                [
+                    {
+                        "code": "gsb",
+                        "type": "amulet",
+                        "m": "res-cold",
+                        "p": 0,
+                        "min": 22,
+                        "max": 22
+                    }
+                ],
+                [
+                    {
+                        "code": "gsb",
+                        "type": "ring",
                         "m": "res-cold",
                         "p": 0,
                         "min": 22,
@@ -34614,6 +35502,52 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "glb",
+                        "type": "gloves",
+                        "m": "cold-min",
+                        "p": 0,
+                        "min": 6,
+                        "max": 6
+                    },
+                    {
+                        "code": "glb",
+                        "type": "gloves",
+                        "m": "cold-max",
+                        "p": 0,
+                        "min": 10,
+                        "max": 10
+                    },
+                    {
+                        "code": "glb",
+                        "type": "gloves",
+                        "m": "cold-len",
+                        "p": 0,
+                        "min": 60,
+                        "max": 60
+                    }
+                ],
+                [
+                    {
+                        "code": "glb",
+                        "type": "armor",
+                        "m": "mana",
+                        "p": 0,
+                        "min": 31,
+                        "max": 31
+                    }
+                ],
+                [
+                    {
+                        "code": "glb",
+                        "type": "boots",
+                        "m": "mana",
+                        "p": 0,
+                        "min": 31,
+                        "max": 31
+                    }
+                ],
+                [
+                    {
+                        "code": "glb",
                         "type": "helm",
                         "m": "mana",
                         "p": 0,
@@ -34624,7 +35558,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "glb",
+                        "type": "belt",
+                        "m": "mana",
+                        "p": 0,
+                        "min": 31,
+                        "max": 31
+                    }
+                ],
+                [
+                    {
+                        "code": "glb",
                         "type": "shield",
+                        "m": "res-cold",
+                        "p": 0,
+                        "min": 28,
+                        "max": 28
+                    }
+                ],
+                [
+                    {
+                        "code": "glb",
+                        "type": "amulet",
+                        "m": "res-cold",
+                        "p": 0,
+                        "min": 28,
+                        "max": 28
+                    }
+                ],
+                [
+                    {
+                        "code": "glb",
+                        "type": "ring",
                         "m": "res-cold",
                         "p": 0,
                         "min": 28,
@@ -34680,6 +35644,52 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gpb",
+                        "type": "gloves",
+                        "m": "cold-min",
+                        "p": 0,
+                        "min": 10,
+                        "max": 10
+                    },
+                    {
+                        "code": "gpb",
+                        "type": "gloves",
+                        "m": "cold-max",
+                        "p": 0,
+                        "min": 14,
+                        "max": 14
+                    },
+                    {
+                        "code": "gpb",
+                        "type": "gloves",
+                        "m": "cold-len",
+                        "p": 0,
+                        "min": 75,
+                        "max": 75
+                    }
+                ],
+                [
+                    {
+                        "code": "gpb",
+                        "type": "armor",
+                        "m": "mana",
+                        "p": 0,
+                        "min": 38,
+                        "max": 38
+                    }
+                ],
+                [
+                    {
+                        "code": "gpb",
+                        "type": "boots",
+                        "m": "mana",
+                        "p": 0,
+                        "min": 38,
+                        "max": 38
+                    }
+                ],
+                [
+                    {
+                        "code": "gpb",
                         "type": "helm",
                         "m": "mana",
                         "p": 0,
@@ -34690,7 +35700,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gpb",
+                        "type": "belt",
+                        "m": "mana",
+                        "p": 0,
+                        "min": 38,
+                        "max": 38
+                    }
+                ],
+                [
+                    {
+                        "code": "gpb",
                         "type": "shield",
+                        "m": "res-cold",
+                        "p": 0,
+                        "min": 40,
+                        "max": 40
+                    }
+                ],
+                [
+                    {
+                        "code": "gpb",
+                        "type": "amulet",
+                        "m": "res-cold",
+                        "p": 0,
+                        "min": 40,
+                        "max": 40
+                    }
+                ],
+                [
+                    {
+                        "code": "gpb",
+                        "type": "ring",
                         "m": "res-cold",
                         "p": 0,
                         "min": 40,
@@ -34746,6 +35786,52 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gcg",
+                        "type": "gloves",
+                        "m": "pois-min",
+                        "p": 0,
+                        "min": 34,
+                        "max": 34
+                    },
+                    {
+                        "code": "gcg",
+                        "type": "gloves",
+                        "m": "pois-max",
+                        "p": 0,
+                        "min": 34,
+                        "max": 34
+                    },
+                    {
+                        "code": "gcg",
+                        "type": "gloves",
+                        "m": "pois-len",
+                        "p": 0,
+                        "min": 75,
+                        "max": 75
+                    }
+                ],
+                [
+                    {
+                        "code": "gcg",
+                        "type": "armor",
+                        "m": "dex",
+                        "p": 0,
+                        "min": 3,
+                        "max": 3
+                    }
+                ],
+                [
+                    {
+                        "code": "gcg",
+                        "type": "boots",
+                        "m": "dex",
+                        "p": 0,
+                        "min": 3,
+                        "max": 3
+                    }
+                ],
+                [
+                    {
+                        "code": "gcg",
                         "type": "helm",
                         "m": "dex",
                         "p": 0,
@@ -34756,7 +35842,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gcg",
+                        "type": "belt",
+                        "m": "dex",
+                        "p": 0,
+                        "min": 3,
+                        "max": 3
+                    }
+                ],
+                [
+                    {
+                        "code": "gcg",
                         "type": "shield",
+                        "m": "res-pois",
+                        "p": 0,
+                        "min": 12,
+                        "max": 12
+                    }
+                ],
+                [
+                    {
+                        "code": "gcg",
+                        "type": "amulet",
+                        "m": "res-pois",
+                        "p": 0,
+                        "min": 12,
+                        "max": 12
+                    }
+                ],
+                [
+                    {
+                        "code": "gcg",
+                        "type": "ring",
                         "m": "res-pois",
                         "p": 0,
                         "min": 12,
@@ -34812,6 +35928,52 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gfg",
+                        "type": "gloves",
+                        "m": "pois-min",
+                        "p": 0,
+                        "min": 51,
+                        "max": 51
+                    },
+                    {
+                        "code": "gfg",
+                        "type": "gloves",
+                        "m": "pois-max",
+                        "p": 0,
+                        "min": 51,
+                        "max": 51
+                    },
+                    {
+                        "code": "gfg",
+                        "type": "gloves",
+                        "m": "pois-len",
+                        "p": 0,
+                        "min": 100,
+                        "max": 100
+                    }
+                ],
+                [
+                    {
+                        "code": "gfg",
+                        "type": "armor",
+                        "m": "dex",
+                        "p": 0,
+                        "min": 4,
+                        "max": 4
+                    }
+                ],
+                [
+                    {
+                        "code": "gfg",
+                        "type": "boots",
+                        "m": "dex",
+                        "p": 0,
+                        "min": 4,
+                        "max": 4
+                    }
+                ],
+                [
+                    {
+                        "code": "gfg",
                         "type": "helm",
                         "m": "dex",
                         "p": 0,
@@ -34822,7 +35984,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gfg",
+                        "type": "belt",
+                        "m": "dex",
+                        "p": 0,
+                        "min": 4,
+                        "max": 4
+                    }
+                ],
+                [
+                    {
+                        "code": "gfg",
                         "type": "shield",
+                        "m": "res-pois",
+                        "p": 0,
+                        "min": 16,
+                        "max": 16
+                    }
+                ],
+                [
+                    {
+                        "code": "gfg",
+                        "type": "amulet",
+                        "m": "res-pois",
+                        "p": 0,
+                        "min": 16,
+                        "max": 16
+                    }
+                ],
+                [
+                    {
+                        "code": "gfg",
+                        "type": "ring",
                         "m": "res-pois",
                         "p": 0,
                         "min": 16,
@@ -34878,6 +36070,52 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gsg",
+                        "type": "gloves",
+                        "m": "pois-min",
+                        "p": 0,
+                        "min": 82,
+                        "max": 82
+                    },
+                    {
+                        "code": "gsg",
+                        "type": "gloves",
+                        "m": "pois-max",
+                        "p": 0,
+                        "min": 82,
+                        "max": 82
+                    },
+                    {
+                        "code": "gsg",
+                        "type": "gloves",
+                        "m": "pois-len",
+                        "p": 0,
+                        "min": 125,
+                        "max": 125
+                    }
+                ],
+                [
+                    {
+                        "code": "gsg",
+                        "type": "armor",
+                        "m": "dex",
+                        "p": 0,
+                        "min": 6,
+                        "max": 6
+                    }
+                ],
+                [
+                    {
+                        "code": "gsg",
+                        "type": "boots",
+                        "m": "dex",
+                        "p": 0,
+                        "min": 6,
+                        "max": 6
+                    }
+                ],
+                [
+                    {
+                        "code": "gsg",
                         "type": "helm",
                         "m": "dex",
                         "p": 0,
@@ -34888,7 +36126,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gsg",
+                        "type": "belt",
+                        "m": "dex",
+                        "p": 0,
+                        "min": 6,
+                        "max": 6
+                    }
+                ],
+                [
+                    {
+                        "code": "gsg",
                         "type": "shield",
+                        "m": "res-pois",
+                        "p": 0,
+                        "min": 22,
+                        "max": 22
+                    }
+                ],
+                [
+                    {
+                        "code": "gsg",
+                        "type": "amulet",
+                        "m": "res-pois",
+                        "p": 0,
+                        "min": 22,
+                        "max": 22
+                    }
+                ],
+                [
+                    {
+                        "code": "gsg",
+                        "type": "ring",
                         "m": "res-pois",
                         "p": 0,
                         "min": 22,
@@ -34944,6 +36212,52 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "glg",
+                        "type": "gloves",
+                        "m": "pois-min",
+                        "p": 0,
+                        "min": 101,
+                        "max": 101
+                    },
+                    {
+                        "code": "glg",
+                        "type": "gloves",
+                        "m": "pois-max",
+                        "p": 0,
+                        "min": 101,
+                        "max": 101
+                    },
+                    {
+                        "code": "glg",
+                        "type": "gloves",
+                        "m": "pois-len",
+                        "p": 0,
+                        "min": 152,
+                        "max": 152
+                    }
+                ],
+                [
+                    {
+                        "code": "glg",
+                        "type": "armor",
+                        "m": "dex",
+                        "p": 0,
+                        "min": 8,
+                        "max": 8
+                    }
+                ],
+                [
+                    {
+                        "code": "glg",
+                        "type": "boots",
+                        "m": "dex",
+                        "p": 0,
+                        "min": 8,
+                        "max": 8
+                    }
+                ],
+                [
+                    {
+                        "code": "glg",
                         "type": "helm",
                         "m": "dex",
                         "p": 0,
@@ -34954,7 +36268,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "glg",
+                        "type": "belt",
+                        "m": "dex",
+                        "p": 0,
+                        "min": 8,
+                        "max": 8
+                    }
+                ],
+                [
+                    {
+                        "code": "glg",
                         "type": "shield",
+                        "m": "res-pois",
+                        "p": 0,
+                        "min": 28,
+                        "max": 28
+                    }
+                ],
+                [
+                    {
+                        "code": "glg",
+                        "type": "amulet",
+                        "m": "res-pois",
+                        "p": 0,
+                        "min": 28,
+                        "max": 28
+                    }
+                ],
+                [
+                    {
+                        "code": "glg",
+                        "type": "ring",
                         "m": "res-pois",
                         "p": 0,
                         "min": 28,
@@ -35010,6 +36354,52 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gpg",
+                        "type": "gloves",
+                        "m": "pois-min",
+                        "p": 0,
+                        "min": 143,
+                        "max": 143
+                    },
+                    {
+                        "code": "gpg",
+                        "type": "gloves",
+                        "m": "pois-max",
+                        "p": 0,
+                        "min": 143,
+                        "max": 143
+                    },
+                    {
+                        "code": "gpg",
+                        "type": "gloves",
+                        "m": "pois-len",
+                        "p": 0,
+                        "min": 179,
+                        "max": 179
+                    }
+                ],
+                [
+                    {
+                        "code": "gpg",
+                        "type": "armor",
+                        "m": "dex",
+                        "p": 0,
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "gpg",
+                        "type": "boots",
+                        "m": "dex",
+                        "p": 0,
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "gpg",
                         "type": "helm",
                         "m": "dex",
                         "p": 0,
@@ -35020,7 +36410,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gpg",
+                        "type": "belt",
+                        "m": "dex",
+                        "p": 0,
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "gpg",
                         "type": "shield",
+                        "m": "res-pois",
+                        "p": 0,
+                        "min": 40,
+                        "max": 40
+                    }
+                ],
+                [
+                    {
+                        "code": "gpg",
+                        "type": "amulet",
+                        "m": "res-pois",
+                        "p": 0,
+                        "min": 40,
+                        "max": 40
+                    }
+                ],
+                [
+                    {
+                        "code": "gpg",
+                        "type": "ring",
                         "m": "res-pois",
                         "p": 0,
                         "min": 40,
@@ -35068,6 +36488,44 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gcr",
+                        "type": "gloves",
+                        "m": "fire-min",
+                        "p": 0,
+                        "min": 3,
+                        "max": 3
+                    },
+                    {
+                        "code": "gcr",
+                        "type": "gloves",
+                        "m": "fire-max",
+                        "p": 0,
+                        "min": 4,
+                        "max": 4
+                    }
+                ],
+                [
+                    {
+                        "code": "gcr",
+                        "type": "armor",
+                        "m": "hp",
+                        "p": 0,
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "gcr",
+                        "type": "boots",
+                        "m": "hp",
+                        "p": 0,
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "gcr",
                         "type": "helm",
                         "m": "hp",
                         "p": 0,
@@ -35078,7 +36536,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gcr",
+                        "type": "belt",
+                        "m": "hp",
+                        "p": 0,
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "gcr",
                         "type": "shield",
+                        "m": "res-fire",
+                        "p": 0,
+                        "min": 12,
+                        "max": 12
+                    }
+                ],
+                [
+                    {
+                        "code": "gcr",
+                        "type": "amulet",
+                        "m": "res-fire",
+                        "p": 0,
+                        "min": 12,
+                        "max": 12
+                    }
+                ],
+                [
+                    {
+                        "code": "gcr",
+                        "type": "ring",
                         "m": "res-fire",
                         "p": 0,
                         "min": 12,
@@ -35126,6 +36614,44 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gfr",
+                        "type": "gloves",
+                        "m": "fire-min",
+                        "p": 0,
+                        "min": 5,
+                        "max": 5
+                    },
+                    {
+                        "code": "gfr",
+                        "type": "gloves",
+                        "m": "fire-max",
+                        "p": 0,
+                        "min": 8,
+                        "max": 8
+                    }
+                ],
+                [
+                    {
+                        "code": "gfr",
+                        "type": "armor",
+                        "m": "hp",
+                        "p": 0,
+                        "min": 17,
+                        "max": 17
+                    }
+                ],
+                [
+                    {
+                        "code": "gfr",
+                        "type": "boots",
+                        "m": "hp",
+                        "p": 0,
+                        "min": 17,
+                        "max": 17
+                    }
+                ],
+                [
+                    {
+                        "code": "gfr",
                         "type": "helm",
                         "m": "hp",
                         "p": 0,
@@ -35136,7 +36662,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gfr",
+                        "type": "belt",
+                        "m": "hp",
+                        "p": 0,
+                        "min": 17,
+                        "max": 17
+                    }
+                ],
+                [
+                    {
+                        "code": "gfr",
                         "type": "shield",
+                        "m": "res-fire",
+                        "p": 0,
+                        "min": 16,
+                        "max": 16
+                    }
+                ],
+                [
+                    {
+                        "code": "gfr",
+                        "type": "amulet",
+                        "m": "res-fire",
+                        "p": 0,
+                        "min": 16,
+                        "max": 16
+                    }
+                ],
+                [
+                    {
+                        "code": "gfr",
+                        "type": "ring",
                         "m": "res-fire",
                         "p": 0,
                         "min": 16,
@@ -35184,6 +36740,44 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gsr",
+                        "type": "gloves",
+                        "m": "fire-min",
+                        "p": 0,
+                        "min": 8,
+                        "max": 8
+                    },
+                    {
+                        "code": "gsr",
+                        "type": "gloves",
+                        "m": "fire-max",
+                        "p": 0,
+                        "min": 12,
+                        "max": 12
+                    }
+                ],
+                [
+                    {
+                        "code": "gsr",
+                        "type": "armor",
+                        "m": "hp",
+                        "p": 0,
+                        "min": 24,
+                        "max": 24
+                    }
+                ],
+                [
+                    {
+                        "code": "gsr",
+                        "type": "boots",
+                        "m": "hp",
+                        "p": 0,
+                        "min": 24,
+                        "max": 24
+                    }
+                ],
+                [
+                    {
+                        "code": "gsr",
                         "type": "helm",
                         "m": "hp",
                         "p": 0,
@@ -35194,7 +36788,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gsr",
+                        "type": "belt",
+                        "m": "hp",
+                        "p": 0,
+                        "min": 24,
+                        "max": 24
+                    }
+                ],
+                [
+                    {
+                        "code": "gsr",
                         "type": "shield",
+                        "m": "res-fire",
+                        "p": 0,
+                        "min": 22,
+                        "max": 22
+                    }
+                ],
+                [
+                    {
+                        "code": "gsr",
+                        "type": "amulet",
+                        "m": "res-fire",
+                        "p": 0,
+                        "min": 22,
+                        "max": 22
+                    }
+                ],
+                [
+                    {
+                        "code": "gsr",
+                        "type": "ring",
                         "m": "res-fire",
                         "p": 0,
                         "min": 22,
@@ -35242,6 +36866,44 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "glr",
+                        "type": "gloves",
+                        "m": "fire-min",
+                        "p": 0,
+                        "min": 10,
+                        "max": 10
+                    },
+                    {
+                        "code": "glr",
+                        "type": "gloves",
+                        "m": "fire-max",
+                        "p": 0,
+                        "min": 16,
+                        "max": 16
+                    }
+                ],
+                [
+                    {
+                        "code": "glr",
+                        "type": "armor",
+                        "m": "hp",
+                        "p": 0,
+                        "min": 31,
+                        "max": 31
+                    }
+                ],
+                [
+                    {
+                        "code": "glr",
+                        "type": "boots",
+                        "m": "hp",
+                        "p": 0,
+                        "min": 31,
+                        "max": 31
+                    }
+                ],
+                [
+                    {
+                        "code": "glr",
                         "type": "helm",
                         "m": "hp",
                         "p": 0,
@@ -35252,7 +36914,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "glr",
+                        "type": "belt",
+                        "m": "hp",
+                        "p": 0,
+                        "min": 31,
+                        "max": 31
+                    }
+                ],
+                [
+                    {
+                        "code": "glr",
                         "type": "shield",
+                        "m": "res-fire",
+                        "p": 0,
+                        "min": 28,
+                        "max": 28
+                    }
+                ],
+                [
+                    {
+                        "code": "glr",
+                        "type": "amulet",
+                        "m": "res-fire",
+                        "p": 0,
+                        "min": 28,
+                        "max": 28
+                    }
+                ],
+                [
+                    {
+                        "code": "glr",
+                        "type": "ring",
                         "m": "res-fire",
                         "p": 0,
                         "min": 28,
@@ -35300,6 +36992,44 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gpr",
+                        "type": "gloves",
+                        "m": "fire-min",
+                        "p": 0,
+                        "min": 15,
+                        "max": 15
+                    },
+                    {
+                        "code": "gpr",
+                        "type": "gloves",
+                        "m": "fire-max",
+                        "p": 0,
+                        "min": 20,
+                        "max": 20
+                    }
+                ],
+                [
+                    {
+                        "code": "gpr",
+                        "type": "armor",
+                        "m": "hp",
+                        "p": 0,
+                        "min": 38,
+                        "max": 38
+                    }
+                ],
+                [
+                    {
+                        "code": "gpr",
+                        "type": "boots",
+                        "m": "hp",
+                        "p": 0,
+                        "min": 38,
+                        "max": 38
+                    }
+                ],
+                [
+                    {
+                        "code": "gpr",
                         "type": "helm",
                         "m": "hp",
                         "p": 0,
@@ -35310,7 +37040,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gpr",
+                        "type": "belt",
+                        "m": "hp",
+                        "p": 0,
+                        "min": 38,
+                        "max": 38
+                    }
+                ],
+                [
+                    {
+                        "code": "gpr",
                         "type": "shield",
+                        "m": "res-fire",
+                        "p": 0,
+                        "min": 40,
+                        "max": 40
+                    }
+                ],
+                [
+                    {
+                        "code": "gpr",
+                        "type": "amulet",
+                        "m": "res-fire",
+                        "p": 0,
+                        "min": 40,
+                        "max": 40
+                    }
+                ],
+                [
+                    {
+                        "code": "gpr",
+                        "type": "ring",
                         "m": "res-fire",
                         "p": 0,
                         "min": 40,
@@ -35350,6 +37110,36 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gcw",
+                        "type": "gloves",
+                        "m": "dmg-undead",
+                        "p": 0,
+                        "min": 28,
+                        "max": 28
+                    }
+                ],
+                [
+                    {
+                        "code": "gcw",
+                        "type": "armor",
+                        "m": "att",
+                        "p": 0,
+                        "min": 20,
+                        "max": 20
+                    }
+                ],
+                [
+                    {
+                        "code": "gcw",
+                        "type": "boots",
+                        "m": "att",
+                        "p": 0,
+                        "min": 20,
+                        "max": 20
+                    }
+                ],
+                [
+                    {
+                        "code": "gcw",
                         "type": "helm",
                         "m": "att",
                         "p": 0,
@@ -35360,7 +37150,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gcw",
+                        "type": "belt",
+                        "m": "att",
+                        "p": 0,
+                        "min": 20,
+                        "max": 20
+                    }
+                ],
+                [
+                    {
+                        "code": "gcw",
                         "type": "shield",
+                        "m": "res-all",
+                        "p": 0,
+                        "min": 6,
+                        "max": 6
+                    }
+                ],
+                [
+                    {
+                        "code": "gcw",
+                        "type": "amulet",
+                        "m": "res-all",
+                        "p": 0,
+                        "min": 6,
+                        "max": 6
+                    }
+                ],
+                [
+                    {
+                        "code": "gcw",
+                        "type": "ring",
                         "m": "res-all",
                         "p": 0,
                         "min": 6,
@@ -35400,6 +37220,36 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gfw",
+                        "type": "gloves",
+                        "m": "dmg-undead",
+                        "p": 0,
+                        "min": 34,
+                        "max": 34
+                    }
+                ],
+                [
+                    {
+                        "code": "gfw",
+                        "type": "armor",
+                        "m": "att",
+                        "p": 0,
+                        "min": 40,
+                        "max": 40
+                    }
+                ],
+                [
+                    {
+                        "code": "gfw",
+                        "type": "boots",
+                        "m": "att",
+                        "p": 0,
+                        "min": 40,
+                        "max": 40
+                    }
+                ],
+                [
+                    {
+                        "code": "gfw",
                         "type": "helm",
                         "m": "att",
                         "p": 0,
@@ -35410,7 +37260,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gfw",
+                        "type": "belt",
+                        "m": "att",
+                        "p": 0,
+                        "min": 40,
+                        "max": 40
+                    }
+                ],
+                [
+                    {
+                        "code": "gfw",
                         "type": "shield",
+                        "m": "res-all",
+                        "p": 0,
+                        "min": 8,
+                        "max": 8
+                    }
+                ],
+                [
+                    {
+                        "code": "gfw",
+                        "type": "amulet",
+                        "m": "res-all",
+                        "p": 0,
+                        "min": 8,
+                        "max": 8
+                    }
+                ],
+                [
+                    {
+                        "code": "gfw",
+                        "type": "ring",
                         "m": "res-all",
                         "p": 0,
                         "min": 8,
@@ -35450,6 +37330,36 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gsw",
+                        "type": "gloves",
+                        "m": "dmg-undead",
+                        "p": 0,
+                        "min": 44,
+                        "max": 44
+                    }
+                ],
+                [
+                    {
+                        "code": "gsw",
+                        "type": "armor",
+                        "m": "att",
+                        "p": 0,
+                        "min": 60,
+                        "max": 60
+                    }
+                ],
+                [
+                    {
+                        "code": "gsw",
+                        "type": "boots",
+                        "m": "att",
+                        "p": 0,
+                        "min": 60,
+                        "max": 60
+                    }
+                ],
+                [
+                    {
+                        "code": "gsw",
                         "type": "helm",
                         "m": "att",
                         "p": 0,
@@ -35460,7 +37370,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gsw",
+                        "type": "belt",
+                        "m": "att",
+                        "p": 0,
+                        "min": 60,
+                        "max": 60
+                    }
+                ],
+                [
+                    {
+                        "code": "gsw",
                         "type": "shield",
+                        "m": "res-all",
+                        "p": 0,
+                        "min": 11,
+                        "max": 11
+                    }
+                ],
+                [
+                    {
+                        "code": "gsw",
+                        "type": "amulet",
+                        "m": "res-all",
+                        "p": 0,
+                        "min": 11,
+                        "max": 11
+                    }
+                ],
+                [
+                    {
+                        "code": "gsw",
+                        "type": "ring",
                         "m": "res-all",
                         "p": 0,
                         "min": 11,
@@ -35500,6 +37440,36 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "glw",
+                        "type": "gloves",
+                        "m": "dmg-undead",
+                        "p": 0,
+                        "min": 54,
+                        "max": 54
+                    }
+                ],
+                [
+                    {
+                        "code": "glw",
+                        "type": "armor",
+                        "m": "att",
+                        "p": 0,
+                        "min": 80,
+                        "max": 80
+                    }
+                ],
+                [
+                    {
+                        "code": "glw",
+                        "type": "boots",
+                        "m": "att",
+                        "p": 0,
+                        "min": 80,
+                        "max": 80
+                    }
+                ],
+                [
+                    {
+                        "code": "glw",
                         "type": "helm",
                         "m": "att",
                         "p": 0,
@@ -35510,7 +37480,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "glw",
+                        "type": "belt",
+                        "m": "att",
+                        "p": 0,
+                        "min": 80,
+                        "max": 80
+                    }
+                ],
+                [
+                    {
+                        "code": "glw",
                         "type": "shield",
+                        "m": "res-all",
+                        "p": 0,
+                        "min": 14,
+                        "max": 14
+                    }
+                ],
+                [
+                    {
+                        "code": "glw",
+                        "type": "amulet",
+                        "m": "res-all",
+                        "p": 0,
+                        "min": 14,
+                        "max": 14
+                    }
+                ],
+                [
+                    {
+                        "code": "glw",
+                        "type": "ring",
                         "m": "res-all",
                         "p": 0,
                         "min": 14,
@@ -35550,6 +37550,36 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gpw",
+                        "type": "gloves",
+                        "m": "dmg-undead",
+                        "p": 0,
+                        "min": 68,
+                        "max": 68
+                    }
+                ],
+                [
+                    {
+                        "code": "gpw",
+                        "type": "armor",
+                        "m": "att",
+                        "p": 0,
+                        "min": 100,
+                        "max": 100
+                    }
+                ],
+                [
+                    {
+                        "code": "gpw",
+                        "type": "boots",
+                        "m": "att",
+                        "p": 0,
+                        "min": 100,
+                        "max": 100
+                    }
+                ],
+                [
+                    {
+                        "code": "gpw",
                         "type": "helm",
                         "m": "att",
                         "p": 0,
@@ -35560,7 +37590,37 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "gpw",
+                        "type": "belt",
+                        "m": "att",
+                        "p": 0,
+                        "min": 100,
+                        "max": 100
+                    }
+                ],
+                [
+                    {
+                        "code": "gpw",
                         "type": "shield",
+                        "m": "res-all",
+                        "p": 0,
+                        "min": 19,
+                        "max": 19
+                    }
+                ],
+                [
+                    {
+                        "code": "gpw",
+                        "type": "amulet",
+                        "m": "res-all",
+                        "p": 0,
+                        "min": 19,
+                        "max": 19
+                    }
+                ],
+                [
+                    {
+                        "code": "gpw",
+                        "type": "ring",
                         "m": "res-all",
                         "p": 0,
                         "min": 19,
@@ -36245,8 +38305,56 @@ export let remodded_constants_99 = {
                         "code": "r01",
                         "type": "weapon",
                         "m": "att",
-                        "min": 50,
-                        "max": 50
+                        "min": 30,
+                        "max": 30
+                    }
+                ],
+                [
+                    {
+                        "code": "r01",
+                        "type": "gloves",
+                        "m": "light",
+                        "min": 1,
+                        "max": 1
+                    },
+                    {
+                        "code": "r01",
+                        "type": "gloves",
+                        "m": "att",
+                        "min": 30,
+                        "max": 30
+                    }
+                ],
+                [
+                    {
+                        "code": "r01",
+                        "type": "armor",
+                        "m": "light",
+                        "min": 1,
+                        "max": 1
+                    },
+                    {
+                        "code": "r01",
+                        "type": "armor",
+                        "m": "ac",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r01",
+                        "type": "boots",
+                        "m": "light",
+                        "min": 1,
+                        "max": 1
+                    },
+                    {
+                        "code": "r01",
+                        "type": "boots",
+                        "m": "ac",
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -36261,8 +38369,24 @@ export let remodded_constants_99 = {
                         "code": "r01",
                         "type": "helm",
                         "m": "ac",
-                        "min": 15,
-                        "max": 15
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r01",
+                        "type": "belt",
+                        "m": "light",
+                        "min": 1,
+                        "max": 1
+                    },
+                    {
+                        "code": "r01",
+                        "type": "belt",
+                        "m": "ac",
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -36276,6 +38400,38 @@ export let remodded_constants_99 = {
                     {
                         "code": "r01",
                         "type": "shield",
+                        "m": "ac",
+                        "min": 15,
+                        "max": 15
+                    }
+                ],
+                [
+                    {
+                        "code": "r01",
+                        "type": "amulet",
+                        "m": "light",
+                        "min": 1,
+                        "max": 1
+                    },
+                    {
+                        "code": "r01",
+                        "type": "amulet",
+                        "m": "ac",
+                        "min": 15,
+                        "max": 15
+                    }
+                ],
+                [
+                    {
+                        "code": "r01",
+                        "type": "ring",
+                        "m": "light",
+                        "min": 1,
+                        "max": 1
+                    },
+                    {
+                        "code": "r01",
+                        "type": "ring",
                         "m": "ac",
                         "min": 15,
                         "max": 15
@@ -36319,16 +38475,119 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r02",
+                        "type": "gloves",
+                        "m": "att-undead",
+                        "min": 50,
+                        "max": 50
+                    },
+                    {
+                        "code": "r02",
+                        "type": "gloves",
+                        "m": "dmg-undead",
+                        "min": 75,
+                        "max": 75
+                    }
+                ],
+                [
+                    {
+                        "code": "r02",
+                        "type": "armor",
+                        "m": "move2",
+                        "min": 5,
+                        "max": 5
+                    },
+                ],
+                [
+                    {
+                        "code": "r02",
+                        "type": "boots",
+                        "m": "move1",
+                        "min": 5,
+                        "max": 5
+                    },
+                    {
+                        "code": "r02",
+                        "type": "boots",
+                        "m": "move2",
+                        "min": 5,
+                        "max": 5
+                    },
+                    {
+                        "code": "r02",
+                        "type": "boots",
+                        "m": "move3",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r02",
                         "type": "helm",
-                        "m": "stamdrain",
-                        "min": 15,
-                        "max": 15
+                        "m": "move1",
+                        "min": 5,
+                        "max": 5
+                    },
+                    {
+                        "code": "r02",
+                        "type": "helm",
+                        "m": "move2",
+                        "min": 5,
+                        "max": 5
+                    },
+                    {
+                        "code": "r02",
+                        "type": "helm",
+                        "m": "move3",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r02",
+                        "type": "belt",
+                        "m": "move1",
+                        "min": 5,
+                        "max": 5
+                    },
+                    {
+                        "code": "r02",
+                        "type": "belt",
+                        "m": "move2",
+                        "min": 5,
+                        "max": 5
+                    },
+                    {
+                        "code": "r02",
+                        "type": "belt",
+                        "m": "move3",
+                        "min": 5,
+                        "max": 5
                     }
                 ],
                 [
                     {
                         "code": "r02",
                         "type": "shield",
+                        "m": "block",
+                        "min": 7,
+                        "max": 7
+                    }
+                ],
+                [
+                    {
+                        "code": "r02",
+                        "type": "amulet",
+                        "m": "block",
+                        "min": 7,
+                        "max": 7
+                    }
+                ],
+                [
+                    {
+                        "code": "r02",
+                        "type": "ring",
                         "m": "block",
                         "min": 7,
                         "max": 7
@@ -36365,7 +38624,43 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r03",
+                        "type": "gloves",
+                        "m": "mana-kill",
+                        "min": 2,
+                        "max": 2
+                    }
+                ],
+                [
+                    {
+                        "code": "r03",
+                        "type": "armor",
+                        "m": "mana-kill",
+                        "min": 2,
+                        "max": 2
+                    }
+                ],
+                [
+                    {
+                        "code": "r03",
+                        "type": "boots",
+                        "m": "mana-kill",
+                        "min": 2,
+                        "max": 2
+                    }
+                ],
+                [
+                    {
+                        "code": "r03",
                         "type": "helm",
+                        "m": "mana-kill",
+                        "min": 2,
+                        "max": 2
+                    }
+                ],
+                [
+                    {
+                        "code": "r03",
+                        "type": "belt",
                         "m": "mana-kill",
                         "min": 2,
                         "max": 2
@@ -36379,7 +38674,25 @@ export let remodded_constants_99 = {
                         "min": 2,
                         "max": 2
                     }
-                ]
+                ],
+                [
+                    {
+                        "code": "r03",
+                        "type": "amulet",
+                        "m": "mana-kill",
+                        "min": 2,
+                        "max": 2
+                    }
+                ],
+                [
+                    {
+                        "code": "r03",
+                        "type": "ring",
+                        "m": "mana-kill",
+                        "min": 2,
+                        "max": 2
+                    }
+                ],
             ]
         },
         "r04": {
@@ -36411,6 +38724,33 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r04",
+                        "type": "gloves",
+                        "m": "knock",
+                        "min": 1,
+                        "max": 1
+                    }
+                ],
+                [
+                    {
+                        "code": "r04",
+                        "type": "armor",
+                        "m": "ac-miss",
+                        "min": 30,
+                        "max": 30
+                    }
+                ],
+                [
+                    {
+                        "code": "r04",
+                        "type": "boots",
+                        "m": "ac-miss",
+                        "min": 30,
+                        "max": 30
+                    }
+                ],
+                [
+                    {
+                        "code": "r04",
                         "type": "helm",
                         "m": "ac-miss",
                         "min": 30,
@@ -36420,7 +38760,34 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r04",
+                        "type": "belt",
+                        "m": "ac-miss",
+                        "min": 30,
+                        "max": 30
+                    }
+                ],
+                [
+                    {
+                        "code": "r04",
                         "type": "shield",
+                        "m": "ac-miss",
+                        "min": 30,
+                        "max": 30
+                    }
+                ],
+                [
+                    {
+                        "code": "r04",
+                        "type": "amulet",
+                        "m": "ac-miss",
+                        "min": 30,
+                        "max": 30
+                    }
+                ],
+                [
+                    {
+                        "code": "r04",
+                        "type": "ring",
                         "m": "ac-miss",
                         "min": 30,
                         "max": 30
@@ -36457,7 +38824,52 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r05",
+                        "type": "gloves",
+                        "m": "reduce-ac",
+                        "min": 25,
+                        "max": 25
+                    }
+                ],
+                [
+                    {
+                        "code": "r05",
+                        "type": "armor",
+                        "m": "regen-mana",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r05",
+                        "type": "boots",
+                        "m": "regen-mana",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r05",
                         "type": "helm",
+                        "m": "regen-mana",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r05",
+                        "type": "belt",
+                        "m": "regen-mana",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r05",
+                        "type": "shield",
                         "m": "regen-mana",
                         "min": 15,
                         "max": 15
@@ -36466,7 +38878,16 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r05",
-                        "type": "shield",
+                        "type": "amulet",
+                        "m": "regen-mana",
+                        "min": 15,
+                        "max": 15
+                    }
+                ],
+                [
+                    {
+                        "code": "r05",
+                        "type": "ring",
                         "m": "regen-mana",
                         "min": 15,
                         "max": 15
@@ -36496,14 +38917,59 @@ export let remodded_constants_99 = {
                         "code": "r06",
                         "type": "weapon",
                         "m": "dmg-max",
-                        "min": 9,
-                        "max": 9
+                        "min": 6,
+                        "max": 6
+                    }
+                ],
+                [
+                    {
+                        "code": "r06",
+                        "type": "gloves",
+                        "m": "dmg-max",
+                        "min": 6,
+                        "max": 6
+                    }
+                ],
+                [
+                    {
+                        "code": "r06",
+                        "type": "armor",
+                        "m": "dmg-to-mana",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r06",
+                        "type": "boots",
+                        "m": "dmg-to-mana",
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
                     {
                         "code": "r06",
                         "type": "helm",
+                        "m": "dmg-to-mana",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r06",
+                        "type": "belt",
+                        "m": "dmg-to-mana",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r06",
+                        "type": "shield",
                         "m": "dmg-to-mana",
                         "min": 15,
                         "max": 15
@@ -36512,7 +38978,16 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r06",
-                        "type": "shield",
+                        "type": "amulet",
+                        "m": "dmg-to-mana",
+                        "min": 15,
+                        "max": 15
+                    }
+                ],
+                [
+                    {
+                        "code": "r06",
+                        "type": "ring",
                         "m": "dmg-to-mana",
                         "min": 15,
                         "max": 15
@@ -36543,8 +39018,36 @@ export let remodded_constants_99 = {
                         "type": "weapon",
                         "m": "dmg-pois",
                         "p": 125,
-                        "min": 154,
-                        "max": 154
+                        "min": 78,
+                        "max": 78
+                    }
+                ],
+                [
+                    {
+                        "code": "r07",
+                        "type": "gloves",
+                        "m": "dmg-pois",
+                        "p": 125,
+                        "min": 78,
+                        "max": 78
+                    }
+                ],
+                [
+                    {
+                        "code": "r07",
+                        "type": "armor",
+                        "m": "res-pois",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r07",
+                        "type": "boots",
+                        "m": "res-pois",
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -36552,8 +39055,17 @@ export let remodded_constants_99 = {
                         "code": "r07",
                         "type": "helm",
                         "m": "res-pois",
-                        "min": 30,
-                        "max": 30
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r07",
+                        "type": "belt",
+                        "m": "res-pois",
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -36561,8 +39073,26 @@ export let remodded_constants_99 = {
                         "code": "r07",
                         "type": "shield",
                         "m": "res-pois",
-                        "min": 35,
-                        "max": 35
+                        "min": 20,
+                        "max": 20
+                    }
+                ],
+                [
+                    {
+                        "code": "r07",
+                        "type": "amulet",
+                        "m": "res-pois",
+                        "min": 20,
+                        "max": 20
+                    }
+                ],
+                [
+                    {
+                        "code": "r07",
+                        "type": "ring",
+                        "m": "res-pois",
+                        "min": 20,
+                        "max": 20
                     }
                 ]
             ]
@@ -36589,8 +39119,35 @@ export let remodded_constants_99 = {
                         "code": "r08",
                         "type": "weapon",
                         "m": "dmg-fire",
-                        "min": 5,
-                        "max": 30
+                        "min": 3,
+                        "max": 15
+                    }
+                ],
+                [
+                    {
+                        "code": "r08",
+                        "type": "gloves",
+                        "m": "dmg-fire",
+                        "min": 3,
+                        "max": 15
+                    }
+                ],
+                [
+                    {
+                        "code": "r08",
+                        "type": "armor",
+                        "m": "res-fire",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r08",
+                        "type": "boots",
+                        "m": "res-fire",
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -36598,8 +39155,17 @@ export let remodded_constants_99 = {
                         "code": "r08",
                         "type": "helm",
                         "m": "res-fire",
-                        "min": 30,
-                        "max": 30
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r08",
+                        "type": "belt",
+                        "m": "res-fire",
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -36607,8 +39173,26 @@ export let remodded_constants_99 = {
                         "code": "r08",
                         "type": "shield",
                         "m": "res-fire",
-                        "min": 35,
-                        "max": 35
+                        "min": 20,
+                        "max": 20
+                    }
+                ],
+                [
+                    {
+                        "code": "r08",
+                        "type": "amulet",
+                        "m": "res-fire",
+                        "min": 20,
+                        "max": 20
+                    }
+                ],
+                [
+                    {
+                        "code": "r08",
+                        "type": "ring",
+                        "m": "res-fire",
+                        "min": 20,
+                        "max": 20
                     }
                 ]
             ]
@@ -36636,7 +39220,34 @@ export let remodded_constants_99 = {
                         "type": "weapon",
                         "m": "dmg-ltng",
                         "min": 1,
-                        "max": 50
+                        "max": 25
+                    }
+                ],
+                [
+                    {
+                        "code": "r09",
+                        "type": "gloves",
+                        "m": "dmg-ltng",
+                        "min": 1,
+                        "max": 25
+                    }
+                ],
+                [
+                    {
+                        "code": "r09",
+                        "type": "armor",
+                        "m": "res-ltng",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r09",
+                        "type": "boots",
+                        "m": "res-ltng",
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -36644,8 +39255,17 @@ export let remodded_constants_99 = {
                         "code": "r09",
                         "type": "helm",
                         "m": "res-ltng",
-                        "min": 30,
-                        "max": 30
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r09",
+                        "type": "belts",
+                        "m": "res-ltng",
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -36653,8 +39273,26 @@ export let remodded_constants_99 = {
                         "code": "r09",
                         "type": "shield",
                         "m": "res-ltng",
-                        "min": 35,
-                        "max": 35
+                        "min": 20,
+                        "max": 20
+                    }
+                ],
+                [
+                    {
+                        "code": "r09",
+                        "type": "amulet",
+                        "m": "res-ltng",
+                        "min": 20,
+                        "max": 20
+                    }
+                ],
+                [
+                    {
+                        "code": "r09",
+                        "type": "ring",
+                        "m": "res-ltng",
+                        "min": 20,
+                        "max": 20
                     }
                 ]
             ]
@@ -36682,8 +39320,36 @@ export let remodded_constants_99 = {
                         "type": "weapon",
                         "m": "dmg-cold",
                         "p": 75,
-                        "min": 3,
-                        "max": 14
+                        "min": 2,
+                        "max": 7
+                    }
+                ],
+                [
+                    {
+                        "code": "r10",
+                        "type": "gloves",
+                        "m": "dmg-cold",
+                        "p": 75,
+                        "min": 2,
+                        "max": 7
+                    }
+                ],
+                [
+                    {
+                        "code": "r10",
+                        "type": "armor",
+                        "m": "res-cold",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r10",
+                        "type": "boots",
+                        "m": "res-cold",
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -36691,8 +39357,17 @@ export let remodded_constants_99 = {
                         "code": "r10",
                         "type": "helm",
                         "m": "res-cold",
-                        "min": 30,
-                        "max": 30
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r10",
+                        "type": "belt",
+                        "m": "res-cold",
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -36700,8 +39375,26 @@ export let remodded_constants_99 = {
                         "code": "r10",
                         "type": "shield",
                         "m": "res-cold",
-                        "min": 35,
-                        "max": 35
+                        "min": 20,
+                        "max": 20
+                    }
+                ],
+                [
+                    {
+                        "code": "r10",
+                        "type": "amulet",
+                        "m": "res-cold",
+                        "min": 20,
+                        "max": 20
+                    }
+                ],
+                [
+                    {
+                        "code": "r10",
+                        "type": "ring",
+                        "m": "res-cold",
+                        "min": 20,
+                        "max": 20
                     }
                 ]
             ]
@@ -36728,8 +39421,35 @@ export let remodded_constants_99 = {
                         "code": "r11",
                         "type": "weapon",
                         "m": "lifesteal",
-                        "min": 7,
-                        "max": 7
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r11",
+                        "type": "gloves",
+                        "m": "lifesteal",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r11",
+                        "type": "armor",
+                        "m": "thorns",
+                        "min": 14,
+                        "max": 14
+                    }
+                ],
+                [
+                    {
+                        "code": "r11",
+                        "type": "boots",
+                        "m": "thorns",
+                        "min": 14,
+                        "max": 14
                     }
                 ],
                 [
@@ -36744,7 +39464,34 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r11",
+                        "type": "belt",
+                        "m": "thorns",
+                        "min": 14,
+                        "max": 14
+                    }
+                ],
+                [
+                    {
+                        "code": "r11",
                         "type": "shield",
+                        "m": "thorns",
+                        "min": 14,
+                        "max": 14
+                    }
+                ],
+                [
+                    {
+                        "code": "r11",
+                        "type": "amulet",
+                        "m": "thorns",
+                        "min": 14,
+                        "max": 14
+                    }
+                ],
+                [
+                    {
+                        "code": "r11",
+                        "type": "ring",
                         "m": "thorns",
                         "min": 14,
                         "max": 14
@@ -36781,7 +39528,52 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r12",
+                        "type": "gloves",
+                        "m": "dmg-min",
+                        "min": 9,
+                        "max": 9
+                    }
+                ],
+                [
+                    {
+                        "code": "r12",
+                        "type": "armor",
+                        "m": "red-dmg",
+                        "min": 4,
+                        "max": 4
+                    }
+                ],
+                [
+                    {
+                        "code": "r12",
+                        "type": "boots",
+                        "m": "red-dmg",
+                        "min": 4,
+                        "max": 4
+                    }
+                ],
+                [
+                    {
+                        "code": "r12",
                         "type": "helm",
+                        "m": "red-dmg",
+                        "min": 4,
+                        "max": 4
+                    }
+                ],
+                [
+                    {
+                        "code": "r12",
+                        "type": "belt",
+                        "m": "red-dmg",
+                        "min": 4,
+                        "max": 4
+                    }
+                ],
+                [
+                    {
+                        "code": "r12",
+                        "type": "shield",
                         "m": "red-dmg",
                         "min": 7,
                         "max": 7
@@ -36790,7 +39582,16 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r12",
-                        "type": "shield",
+                        "type": "amulet",
+                        "m": "red-dmg",
+                        "min": 7,
+                        "max": 7
+                    }
+                ],
+                [
+                    {
+                        "code": "r12",
+                        "type": "ring",
                         "m": "red-dmg",
                         "min": 7,
                         "max": 7
@@ -36820,8 +39621,35 @@ export let remodded_constants_99 = {
                         "code": "r13",
                         "type": "weapon",
                         "m": "swing2",
-                        "min": 20,
-                        "max": 20
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r13",
+                        "type": "gloves",
+                        "m": "swing2",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r13",
+                        "type": "torso",
+                        "m": "balance2",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r13",
+                        "type": "boots",
+                        "m": "balance2",
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -36829,6 +39657,24 @@ export let remodded_constants_99 = {
                         "code": "r13",
                         "type": "helm",
                         "m": "balance2",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r13",
+                        "type": "belt",
+                        "m": "balance2",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r13",
+                        "type": "shield",
+                        "m": "block2",
                         "min": 20,
                         "max": 20
                     }
@@ -36836,7 +39682,16 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r13",
-                        "type": "shield",
+                        "type": "amulet",
+                        "m": "block2",
+                        "min": 20,
+                        "max": 20
+                    }
+                ],
+                [
+                    {
+                        "code": "r13",
+                        "type": "ring",
                         "m": "block2",
                         "min": 20,
                         "max": 20
@@ -36866,14 +39721,59 @@ export let remodded_constants_99 = {
                         "code": "r14",
                         "type": "weapon",
                         "m": "howl",
-                        "min": 32,
-                        "max": 32
+                        "min": 25,
+                        "max": 25
+                    }
+                ],
+                [
+                    {
+                        "code": "r14",
+                        "type": "gloves",
+                        "m": "howl",
+                        "min": 25,
+                        "max": 25
+                    }
+                ],
+                [
+                    {
+                        "code": "r14",
+                        "type": "torso",
+                        "m": "regen",
+                        "min": 3,
+                        "max": 3
+                    }
+                ],
+                [
+                    {
+                        "code": "r14",
+                        "type": "boots",
+                        "m": "regen",
+                        "min": 3,
+                        "max": 3
                     }
                 ],
                 [
                     {
                         "code": "r14",
                         "type": "helm",
+                        "m": "regen",
+                        "min": 3,
+                        "max": 3
+                    }
+                ],
+                [
+                    {
+                        "code": "r14",
+                        "type": "belt",
+                        "m": "regen",
+                        "min": 3,
+                        "max": 3
+                    }
+                ],
+                [
+                    {
+                        "code": "r14",
+                        "type": "shield",
                         "m": "regen",
                         "min": 7,
                         "max": 7
@@ -36882,7 +39782,16 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r14",
-                        "type": "shield",
+                        "type": "amulet",
+                        "m": "regen",
+                        "min": 7,
+                        "max": 7
+                    }
+                ],
+                [
+                    {
+                        "code": "r14",
+                        "type": "ring",
                         "m": "regen",
                         "min": 7,
                         "max": 7
@@ -36919,6 +39828,33 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r15",
+                        "type": "gloves",
+                        "m": "ease",
+                        "min": -20,
+                        "max": -20
+                    }
+                ],
+                [
+                    {
+                        "code": "r15",
+                        "type": "armor",
+                        "m": "ease",
+                        "min": -15,
+                        "max": -15
+                    }
+                ],
+                [
+                    {
+                        "code": "r15",
+                        "type": "boots",
+                        "m": "ease",
+                        "min": -15,
+                        "max": -15
+                    }
+                ],
+                [
+                    {
+                        "code": "r15",
                         "type": "helm",
                         "m": "ease",
                         "min": -15,
@@ -36928,7 +39864,34 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r15",
+                        "type": "belt",
+                        "m": "ease",
+                        "min": -15,
+                        "max": -15
+                    }
+                ],
+                [
+                    {
+                        "code": "r15",
                         "type": "shield",
+                        "m": "ease",
+                        "min": -15,
+                        "max": -15
+                    }
+                ],
+                [
+                    {
+                        "code": "r15",
+                        "type": "amulet",
+                        "m": "ease",
+                        "min": -15,
+                        "max": -15
+                    }
+                ],
+                [
+                    {
+                        "code": "r15",
+                        "type": "ring",
                         "m": "ease",
                         "min": -15,
                         "max": -15
@@ -36965,6 +39928,33 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r16",
+                        "type": "gloves",
+                        "m": "vit",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r16",
+                        "type": "armor",
+                        "m": "vit",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r16",
+                        "type": "boots",
+                        "m": "vit",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r16",
                         "type": "helm",
                         "m": "vit",
                         "min": 10,
@@ -36974,7 +39964,34 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r16",
+                        "type": "belt",
+                        "m": "vit",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r16",
                         "type": "shield",
+                        "m": "vit",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r16",
+                        "type": "amulet",
+                        "m": "vit",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r16",
+                        "type": "ring",
                         "m": "vit",
                         "min": 10,
                         "max": 10
@@ -37011,6 +40028,33 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r17",
+                        "type": "gloves",
+                        "m": "enr",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r17",
+                        "type": "armor",
+                        "m": "enr",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r17",
+                        "type": "boots",
+                        "m": "enr",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r17",
                         "type": "helm",
                         "m": "enr",
                         "min": 10,
@@ -37020,7 +40064,34 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r17",
+                        "type": "belt",
+                        "m": "enr",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r17",
                         "type": "shield",
+                        "m": "enr",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r17",
+                        "type": "amulet",
+                        "m": "enr",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r17",
+                        "type": "ring",
                         "m": "enr",
                         "min": 10,
                         "max": 10
@@ -37057,6 +40128,33 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r18",
+                        "type": "gloves",
+                        "m": "dex",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r18",
+                        "type": "armor",
+                        "m": "dex",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r18",
+                        "type": "boots",
+                        "m": "dex",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r18",
                         "type": "helm",
                         "m": "dex",
                         "min": 10,
@@ -37066,7 +40164,34 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r18",
+                        "type": "belt",
+                        "m": "dex",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r18",
                         "type": "shield",
+                        "m": "dex",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r18",
+                        "type": "amulet",
+                        "m": "dex",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r18",
+                        "type": "ring",
                         "m": "dex",
                         "min": 10,
                         "max": 10
@@ -37103,6 +40228,33 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r19",
+                        "type": "gloves",
+                        "m": "str",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r19",
+                        "type": "armor",
+                        "m": "str",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r19",
+                        "type": "boots",
+                        "m": "str",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r19",
                         "type": "helm",
                         "m": "str",
                         "min": 10,
@@ -37112,7 +40264,34 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r19",
+                        "type": "belt",
+                        "m": "str",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r19",
                         "type": "shield",
+                        "m": "str",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r19",
+                        "type": "amulet",
+                        "m": "str",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r19",
+                        "type": "ring",
                         "m": "str",
                         "min": 10,
                         "max": 10
@@ -37149,6 +40328,33 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r20",
+                        "type": "gloves",
+                        "m": "gold%",
+                        "min": 75,
+                        "max": 75
+                    }
+                ],
+                [
+                    {
+                        "code": "r20",
+                        "type": "armor",
+                        "m": "gold%",
+                        "min": 50,
+                        "max": 50
+                    }
+                ],
+                [
+                    {
+                        "code": "r20",
+                        "type": "boots",
+                        "m": "gold%",
+                        "min": 50,
+                        "max": 50
+                    }
+                ],
+                [
+                    {
+                        "code": "r20",
                         "type": "helm",
                         "m": "gold%",
                         "min": 50,
@@ -37158,7 +40364,34 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r20",
+                        "type": "belt",
+                        "m": "gold%",
+                        "min": 50,
+                        "max": 50
+                    }
+                ],
+                [
+                    {
+                        "code": "r20",
                         "type": "shield",
+                        "m": "gold%",
+                        "min": 50,
+                        "max": 50
+                    }
+                ],
+                [
+                    {
+                        "code": "r20",
+                        "type": "amulet",
+                        "m": "gold%",
+                        "min": 50,
+                        "max": 50
+                    }
+                ],
+                [
+                    {
+                        "code": "r20",
+                        "type": "ring",
                         "m": "gold%",
                         "min": 50,
                         "max": 50
@@ -37188,21 +40421,73 @@ export let remodded_constants_99 = {
                         "code": "r21",
                         "type": "weapon",
                         "m": "att-demon",
-                        "min": 100,
-                        "max": 100
+                        "min": 50,
+                        "max": 50
                     },
                     {
                         "code": "r21",
                         "type": "weapon",
                         "m": "dmg-demon",
-                        "min": 75,
-                        "max": 75
+                        "min": 40,
+                        "max": 40
+                    }
+                ],
+                [
+                    {
+                        "code": "r21",
+                        "type": "gloves",
+                        "m": "att-demon",
+                        "min": 50,
+                        "max": 50
+                    },
+                    {
+                        "code": "r21",
+                        "type": "gloves",
+                        "m": "dmg-demon",
+                        "min": 40,
+                        "max": 40
+                    }
+                ],
+                [
+                    {
+                        "code": "r21",
+                        "type": "armor",
+                        "m": "ac%",
+                        "min": 20,
+                        "max": 20
+                    }
+                ],
+                [
+                    {
+                        "code": "r21",
+                        "type": "boots",
+                        "m": "ac%",
+                        "min": 20,
+                        "max": 20
                     }
                 ],
                 [
                     {
                         "code": "r21",
                         "type": "helm",
+                        "m": "ac%",
+                        "min": 20,
+                        "max": 20
+                    }
+                ],
+                [
+                    {
+                        "code": "r21",
+                        "type": "belt",
+                        "m": "ac%",
+                        "min": 20,
+                        "max": 20
+                    }
+                ],
+                [
+                    {
+                        "code": "r21",
+                        "type": "shield",
                         "m": "ac%",
                         "min": 30,
                         "max": 30
@@ -37211,7 +40496,16 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r21",
-                        "type": "shield",
+                        "type": "amulet",
+                        "m": "ac%",
+                        "min": 30,
+                        "max": 30
+                    }
+                ],
+                [
+                    {
+                        "code": "r21",
+                        "type": "ring",
                         "m": "ac%",
                         "min": 30,
                         "max": 30
@@ -37241,8 +40535,35 @@ export let remodded_constants_99 = {
                         "code": "r22",
                         "type": "weapon",
                         "m": "openwounds",
-                        "min": 25,
-                        "max": 25
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r22",
+                        "type": "gloves",
+                        "m": "openwounds",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r22",
+                        "type": "armor",
+                        "m": "res-all",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r22",
+                        "type": "boots",
+                        "m": "res-all",
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -37250,14 +40571,41 @@ export let remodded_constants_99 = {
                         "code": "r22",
                         "type": "helm",
                         "m": "res-all",
-                        "min": 15,
-                        "max": 15
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r22",
+                        "type": "belt",
+                        "m": "res-all",
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
                     {
                         "code": "r22",
                         "type": "shield",
+                        "m": "res-all",
+                        "min": 22,
+                        "max": 22
+                    }
+                ],
+                [
+                    {
+                        "code": "r22",
+                        "type": "amulet",
+                        "m": "res-all",
+                        "min": 22,
+                        "max": 22
+                    }
+                ],
+                [
+                    {
+                        "code": "r22",
+                        "type": "ring",
                         "m": "res-all",
                         "min": 22,
                         "max": 22
@@ -37294,7 +40642,52 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r23",
+                        "type": "gloves",
+                        "m": "noheal",
+                        "min": 1,
+                        "max": 1
+                    }
+                ],
+                [
+                    {
+                        "code": "r23",
+                        "type": "armor",
+                        "m": "red-mag",
+                        "min": 3,
+                        "max": 3
+                    }
+                ],
+                [
+                    {
+                        "code": "r23",
+                        "type": "boots",
+                        "m": "red-mag",
+                        "min": 3,
+                        "max": 3
+                    }
+                ],
+                [
+                    {
+                        "code": "r23",
                         "type": "helm",
+                        "m": "red-mag",
+                        "min": 3,
+                        "max": 3
+                    }
+                ],
+                [
+                    {
+                        "code": "r23",
+                        "type": "belt",
+                        "m": "red-mag",
+                        "min": 3,
+                        "max": 3
+                    }
+                ],
+                [
+                    {
+                        "code": "r23",
+                        "type": "shield",
                         "m": "red-mag",
                         "min": 7,
                         "max": 7
@@ -37303,7 +40696,16 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r23",
-                        "type": "shield",
+                        "type": "amulet",
+                        "m": "red-mag",
+                        "min": 7,
+                        "max": 7
+                    }
+                ],
+                [
+                    {
+                        "code": "r23",
+                        "type": "ring",
                         "m": "red-mag",
                         "min": 7,
                         "max": 7
@@ -37333,8 +40735,35 @@ export let remodded_constants_99 = {
                         "code": "r24",
                         "type": "weapon",
                         "m": "mag%",
-                        "min": 30,
-                        "max": 30
+                        "min": 15,
+                        "max": 15
+                    }
+                ],
+                [
+                    {
+                        "code": "r24",
+                        "type": "gloves",
+                        "m": "mag%",
+                        "min": 15,
+                        "max": 15
+                    }
+                ],
+                [
+                    {
+                        "code": "r24",
+                        "type": "armor",
+                        "m": "mag%",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r24",
+                        "type": "boots",
+                        "m": "mag%",
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -37342,8 +40771,17 @@ export let remodded_constants_99 = {
                         "code": "r24",
                         "type": "helm",
                         "m": "mag%",
-                        "min": 25,
-                        "max": 25
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r24",
+                        "type": "belt",
+                        "m": "mag%",
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -37351,8 +40789,26 @@ export let remodded_constants_99 = {
                         "code": "r24",
                         "type": "shield",
                         "m": "mag%",
-                        "min": 25,
-                        "max": 25
+                        "min": 20,
+                        "max": 20
+                    }
+                ],
+                [
+                    {
+                        "code": "r24",
+                        "type": "amulet",
+                        "m": "mag%",
+                        "min": 20,
+                        "max": 20
+                    }
+                ],
+                [
+                    {
+                        "code": "r24",
+                        "type": "ring",
+                        "m": "mag%",
+                        "min": 20,
+                        "max": 20
                     }
                 ]
             ]
@@ -37379,8 +40835,35 @@ export let remodded_constants_99 = {
                         "code": "r25",
                         "type": "weapon",
                         "m": "att%",
-                        "min": 20,
-                        "max": 20
+                        "min": 15,
+                        "max": 15
+                    }
+                ],
+                [
+                    {
+                        "code": "r25",
+                        "type": "gloves",
+                        "m": "att%",
+                        "min": 15,
+                        "max": 15
+                    }
+                ],
+                [
+                    {
+                        "code": "r25",
+                        "type": "armor",
+                        "m": "res-pois-max",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r25",
+                        "type": "boots",
+                        "m": "res-pois-max",
+                        "min": 5,
+                        "max": 5
                     }
                 ],
                 [
@@ -37395,7 +40878,34 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r25",
+                        "type": "belt",
+                        "m": "res-pois-max",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r25",
                         "type": "shield",
+                        "m": "res-pois-max",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r25",
+                        "type": "amulet",
+                        "m": "res-pois-max",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r25",
+                        "type": "ring",
                         "m": "res-pois-max",
                         "min": 5,
                         "max": 5
@@ -37425,8 +40935,35 @@ export let remodded_constants_99 = {
                         "code": "r26",
                         "type": "weapon",
                         "m": "manasteal",
-                        "min": 7,
-                        "max": 7
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r26",
+                        "type": "gloves",
+                        "m": "manasteal",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r26",
+                        "type": "armor",
+                        "m": "res-fire-max",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r26",
+                        "type": "boots",
+                        "m": "res-fire-max",
+                        "min": 5,
+                        "max": 5
                     }
                 ],
                 [
@@ -37441,7 +40978,34 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r26",
+                        "type": "belt",
+                        "m": "res-fire-max",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r26",
                         "type": "shield",
+                        "m": "res-fire-max",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r26",
+                        "type": "amulet",
+                        "m": "res-fire-max",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r26",
+                        "type": "ring",
                         "m": "res-fire-max",
                         "min": 5,
                         "max": 5
@@ -37471,8 +41035,35 @@ export let remodded_constants_99 = {
                         "code": "r27",
                         "type": "weapon",
                         "m": "dmg%",
-                        "min": 50,
-                        "max": 50
+                        "min": 35,
+                        "max": 35
+                    }
+                ],
+                [
+                    {
+                        "code": "r27",
+                        "type": "gloves",
+                        "m": "dmg%",
+                        "min": 35,
+                        "max": 35
+                    }
+                ],
+                [
+                    {
+                        "code": "r27",
+                        "type": "armor",
+                        "m": "res-cold-max",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r27",
+                        "type": "boots",
+                        "m": "res-cold-max",
+                        "min": 5,
+                        "max": 5
                     }
                 ],
                 [
@@ -37487,7 +41078,34 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r27",
+                        "type": "belt",
+                        "m": "res-cold-max",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r27",
                         "type": "shield",
+                        "m": "res-cold-max",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r27",
+                        "type": "amulet",
+                        "m": "res-cold-max",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r27",
+                        "type": "ring",
                         "m": "res-cold-max",
                         "min": 5,
                         "max": 5
@@ -37517,8 +41135,35 @@ export let remodded_constants_99 = {
                         "code": "r28",
                         "type": "weapon",
                         "m": "deadly",
-                        "min": 20,
-                        "max": 20
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r28",
+                        "type": "gloves",
+                        "m": "deadly",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r28",
+                        "type": "armor",
+                        "m": "res-ltng-max",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r28",
+                        "type": "boots",
+                        "m": "res-ltng-max",
+                        "min": 5,
+                        "max": 5
                     }
                 ],
                 [
@@ -37533,7 +41178,34 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r28",
+                        "type": "belt",
+                        "m": "res-ltng-max",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r28",
                         "type": "shield",
+                        "m": "res-ltng-max",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r28",
+                        "type": "amulet",
+                        "m": "res-ltng-max",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r28",
+                        "type": "ring",
                         "m": "res-ltng-max",
                         "min": 5,
                         "max": 5
@@ -37570,6 +41242,33 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r29",
+                        "type": "gloves",
+                        "m": "stupidity",
+                        "min": 1,
+                        "max": 1
+                    }
+                ],
+                [
+                    {
+                        "code": "r29",
+                        "type": "armor",
+                        "m": "mana%",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r29",
+                        "type": "boots",
+                        "m": "mana%",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r29",
                         "type": "helm",
                         "m": "mana%",
                         "min": 5,
@@ -37579,7 +41278,34 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r29",
+                        "type": "belt",
+                        "m": "mana%",
+                        "min": 5,
+                        "max": 5
+                    }
+                ],
+                [
+                    {
+                        "code": "r29",
                         "type": "shield",
+                        "m": "mana",
+                        "min": 50,
+                        "max": 50
+                    }
+                ],
+                [
+                    {
+                        "code": "r29",
+                        "type": "amulet",
+                        "m": "mana",
+                        "min": 50,
+                        "max": 50
+                    }
+                ],
+                [
+                    {
+                        "code": "r29",
+                        "type": "ring",
                         "m": "mana",
                         "min": 50,
                         "max": 50
@@ -37609,8 +41335,35 @@ export let remodded_constants_99 = {
                         "code": "r30",
                         "type": "weapon",
                         "m": "crush",
-                        "min": 20,
-                        "max": 20
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r30",
+                        "type": "gloves",
+                        "m": "crush",
+                        "min": 10,
+                        "max": 10
+                    }
+                ],
+                [
+                    {
+                        "code": "r30",
+                        "type": "armor",
+                        "m": "red-dmg%",
+                        "min": 8,
+                        "max": 8
+                    }
+                ],
+                [
+                    {
+                        "code": "r30",
+                        "type": "boots",
+                        "m": "red-dmg%",
+                        "min": 8,
+                        "max": 8
                     }
                 ],
                 [
@@ -37625,7 +41378,34 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r30",
+                        "type": "belt",
+                        "m": "red-dmg%",
+                        "min": 8,
+                        "max": 8
+                    }
+                ],
+                [
+                    {
+                        "code": "r30",
                         "type": "shield",
+                        "m": "red-dmg%",
+                        "min": 8,
+                        "max": 8
+                    }
+                ],
+                [
+                    {
+                        "code": "r30",
+                        "type": "amulet",
+                        "m": "red-dmg%",
+                        "min": 8,
+                        "max": 8
+                    }
+                ],
+                [
+                    {
+                        "code": "r30",
+                        "type": "ring",
                         "m": "red-dmg%",
                         "min": 8,
                         "max": 8
@@ -37662,16 +41442,70 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r31",
+                        "type": "gloves",
+                        "m": "ignore-ac",
+                        "min": 1,
+                        "max": 1
+                    }
+                ],
+                [
+                    {
+                        "code": "r31",
+                        "type": "armor",
+                        "m": "hp%",
+                        "min": 2,
+                        "max": 2
+                    }
+                ],
+                [
+                    {
+                        "code": "r31",
+                        "type": "boots",
+                        "m": "hp%",
+                        "min": 2,
+                        "max": 2
+                    }
+                ],
+                [
+                    {
+                        "code": "r31",
                         "type": "helm",
                         "m": "hp%",
-                        "min": 5,
-                        "max": 5
+                        "min": 2,
+                        "max": 2
+                    }
+                ],
+                [
+                    {
+                        "code": "r31",
+                        "type": "belt",
+                        "m": "hp%",
+                        "min": 2,
+                        "max": 2
                     }
                 ],
                 [
                     {
                         "code": "r31",
                         "type": "shield",
+                        "m": "hp",
+                        "min": 50,
+                        "max": 50
+                    }
+                ],
+                [
+                    {
+                        "code": "r31",
+                        "type": "amulet",
+                        "m": "hp",
+                        "min": 50,
+                        "max": 50
+                    }
+                ],
+                [
+                    {
+                        "code": "r31",
+                        "type": "ring",
                         "m": "hp",
                         "min": 50,
                         "max": 50
@@ -37701,8 +41535,35 @@ export let remodded_constants_99 = {
                         "code": "r32",
                         "type": "weapon",
                         "m": "freeze",
-                        "min": 3,
-                        "max": 3
+                        "min": 2,
+                        "max": 2
+                    }
+                ],
+                [
+                    {
+                        "code": "r32",
+                        "type": "gloves",
+                        "m": "freeze",
+                        "min": 2,
+                        "max": 2
+                    }
+                ],
+                [
+                    {
+                        "code": "r32",
+                        "type": "armor",
+                        "m": "nofreeze",
+                        "min": 1,
+                        "max": 1
+                    }
+                ],
+                [
+                    {
+                        "code": "r32",
+                        "type": "boots",
+                        "m": "nofreeze",
+                        "min": 1,
+                        "max": 1
                     }
                 ],
                 [
@@ -37717,7 +41578,34 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r32",
+                        "type": "belt",
+                        "m": "nofreeze",
+                        "min": 1,
+                        "max": 1
+                    }
+                ],
+                [
+                    {
+                        "code": "r32",
                         "type": "shield",
+                        "m": "nofreeze",
+                        "min": 1,
+                        "max": 1
+                    }
+                ],
+                [
+                    {
+                        "code": "r32",
+                        "type": "amulet",
+                        "m": "nofreeze",
+                        "min": 1,
+                        "max": 1
+                    }
+                ],
+                [
+                    {
+                        "code": "r32",
+                        "type": "ring",
                         "m": "nofreeze",
                         "min": 1,
                         "max": 1
@@ -37754,6 +41642,33 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r33",
+                        "type": "gloves",
+                        "m": "indestruct",
+                        "min": 1,
+                        "max": 1
+                    }
+                ],
+                [
+                    {
+                        "code": "r33",
+                        "type": "armor",
+                        "m": "indestruct",
+                        "min": 1,
+                        "max": 1
+                    }
+                ],
+                [
+                    {
+                        "code": "r33",
+                        "type": "boots",
+                        "m": "indestruct",
+                        "min": 1,
+                        "max": 1
+                    }
+                ],
+                [
+                    {
+                        "code": "r33",
                         "type": "helm",
                         "m": "indestruct",
                         "min": 1,
@@ -37763,7 +41678,34 @@ export let remodded_constants_99 = {
                 [
                     {
                         "code": "r33",
+                        "type": "belt",
+                        "m": "indestruct",
+                        "min": 1,
+                        "max": 1
+                    }
+                ],
+                [
+                    {
+                        "code": "r33",
                         "type": "shield",
+                        "m": "indestruct",
+                        "min": 1,
+                        "max": 1
+                    }
+                ],
+                [
+                    {
+                        "code": "r33",
+                        "type": "amulet",
+                        "m": "indestruct",
+                        "min": 1,
+                        "max": 1
+                    }
+                ],
+                [
+                    {
+                        "code": "r33",
+                        "type": "ring",
                         "m": "indestruct",
                         "min": 1,
                         "max": 1
