@@ -802,7 +802,7 @@ export let remodded_constants_99 = {
         {
             "id": 119,
             "s": "Faithful Follower",
-            //"s": "Sanctuary",
+            // "s": "Sanctuary",
             "c": "pal"
         },
         {
@@ -1565,7 +1565,7 @@ export let remodded_constants_99 = {
         {
             "id": 381,
             "s": "Vigor (item)"
-        },,
+        },
         {
             "id": 382,
             "s": "Meditation (item)"
@@ -1902,7 +1902,10 @@ export let remodded_constants_99 = {
             "s": "Activate Weight System"
         },
         null,
-        null,
+        {
+            "id": 655,
+            "s": "Mini Diablo (item)"
+        },,
         null,
         null,
         null,
@@ -10682,12 +10685,6 @@ export let remodded_constants_99 = {
                 "f": 17
             }
         ],
-        "levelreq": [
-            {
-                "s": "item_levelreq",
-                "f": 1
-            }
-        ],
         "ethereal": [
             {
                 "f": 23
@@ -10758,7 +10755,31 @@ export let remodded_constants_99 = {
                 "s": "item_charge_noconsume",
                 "f": 1
             }
-        ]
+        ],
+        "spell-power": [
+            {
+                "s": "item_spell_power",
+                "f": 37
+            }
+        ],
+        "combat-power": [
+            {
+                "s": "item_combat_power",
+                "f": 38
+            }
+        ],
+        "summon-power": [
+            {
+                "s": "item_combat_power",
+                "f": 39
+            }
+        ],
+        "increase-weight": [
+            {
+                "s": "item_increase_charm_weight",
+                "f": 39
+            }
+        ],
     },
     "magical_properties": [
         {
@@ -11702,12 +11723,13 @@ export let remodded_constants_99 = {
         },
         {
             "id": 92,
-            "s": "item_levelreq",
+            "s": "item_extra_level_req",
             "sB": 7,
             "sA": 25,
             "so": 999,
             "dF": 19,
             "dP": "Req levels %+d (Enhances)",
+            "dN": "Req levels %+d (Enhances)",
         },
         {
             "id": 93,
@@ -11724,11 +11746,7 @@ export let remodded_constants_99 = {
             "id": 94,
             "s": "item_levelreqpct",
             "sB": 7,
-            "sA": 64,
-            "o": 13,
-            "os": [
-                "item_levelreq"
-            ]
+            "sA": 64
         },
         {
             "id": 95,
@@ -13522,8 +13540,14 @@ export let remodded_constants_99 = {
         },
         {
             "id": 263,
-            "s": "item_absorb_crush",
-            "sS": 1
+            "s": "item_dexterity_percent",
+            "sS": 1,
+            "sB": 10,
+            "sA": 90,
+            "so": 999,
+            "dF": 19,
+            "dP": "Increase Dexterity by %d%%",
+            "dN": "Increase Dexterity by %d%%",
         },
         {
             "id": 264,
@@ -13538,8 +13562,14 @@ export let remodded_constants_99 = {
         },
         {
             "id": 265,
-            "s": "item_absorb_slash_percent",
-            "sS": 1
+            "s": "item_energy_percent",
+            "sS": 1,
+            "sB": 19,
+            "sA": 90,
+            "so": 999,
+            "dF": 19,
+            "dP": "Increase Energy by %d%%",
+            "dN": "Increase Energy by %d%%",
         },
         {
             "id": 266,
@@ -13679,13 +13709,13 @@ export let remodded_constants_99 = {
         },
         {
             "id": 276,
-            "s": "item_additional_missiles",
+            "s": "item_spell_power",
             "sB": 8,
             "sA": 16,
             "so": 999,
             "dF": 19,
-            "dP": "Extra missiles: %+d",
-            "dN": "Extra missiles: %+d",
+            "dP": "%+d Spell Power",
+            "dN": "%+d Spell Power",
         },
         {
             "id": 277,
@@ -13705,13 +13735,13 @@ export let remodded_constants_99 = {
         },
         {
             "id": 278,
-            "s": "item_additional_attacks",
+            "s": "item_combat_power",
             "sB": 8,
             "sA": 16,
             "so": 999,
             "dF": 19,
-            "dP": "Extra attacks: %+d",
-            "dN": "Extra attacks: %+d",
+            "dP": "%+d Combat Power",
+            "dN": "%+d Combat Power",
         },
         {
             "id": 279,
@@ -13776,13 +13806,13 @@ export let remodded_constants_99 = {
         },
         {
             "id": 283,
-            "s": "item_extra_summon",
+            "s": "item_summon_power",
             "sB": 9,
             "sA": 16,
             "so": 999,
             "dF": 19,
-            "dP": "Extra summon: %+d",
-            "dN": "Extra summon: %+d",
+            "dP": "%+d Summon Power",
+            "dN": "%+d Summon Power",
         },
         {
             "id": 284,
@@ -14525,7 +14555,30 @@ export let remodded_constants_99 = {
             "dN": "Unique cores: %d"
         },
         null,
-        null,
+        {
+            // Tower Shield 5
+            // Kite Shield 7
+            // Dragon Shield 26
+            // Monarch 60
+            // Targe 6-7
+            // Rondache 8-9
+            // Heraldic Shield 10-11
+            // Aerin Shield 12-13
+            // Crown Shield 16
+            // Pavise 19
+            // Akaran Rondache 24
+            // Protector Shield 30
+            // Royal Shield 38
+            // Sacred Targe 50
+            "id": 388,
+            "s": "shield_unknown",
+            "sB": 32,
+            "sA": 0,
+            "so": 999,
+            "dF": 19,
+            "dP": "Shield unknown %d",
+            "dN": "Shield unknown %d"
+        },
         null,
         null, // 390
         null,
@@ -14680,8 +14733,26 @@ export let remodded_constants_99 = {
             "dN": "%+d%% Open Wounds",
             "d2": "(Dexterity)",
         },
-        null,
-        null,
+        {
+            "id": 414,
+            "s": "charm_weight",
+            "sB": 11,
+            "sA": 10,
+            "so": 999,
+            "dF": 19,
+            "dP": "Charm weight: %d",
+            "dN": "Charm weight: %d",
+        },
+        {
+            "id": 415,
+            "s": "item_increase_charm_weight",
+            "sB": 11,
+            "sA": 10,
+            "so": 999,
+            "dF": 19,
+            "dP": "Increase charm max weight by %d",
+            "dN": "Decrease charm max weight by %d",
+        },
         null,
         null,
         null,
@@ -14694,8 +14765,17 @@ export let remodded_constants_99 = {
             "dF": 19,
             "dP": "Rare Jewels: %d",
             "dN": "Rare Jewels: %d"
-        },,
-        null, // 420
+        },
+        {
+            "id": 420,
+            "s": "bag_full_rejuv_potions",
+            "sB": 11,
+            "sA": 10,
+            "so": 999,
+            "dF": 19,
+            "dP": "Full Rejuv's: %d",
+            "dN": "Full Rejuv's: %d"
+        }, // 420
         null,
         null,
         null,
@@ -17926,10 +18006,14 @@ export let remodded_constants_99 = {
         },
         {
             "id": 222,
-            "n": "Corpsemourn",
-            "i": "invxaru",
-            "c": "xar",
-            "tc": "blac"
+            // "n": "Corpsemourn",
+            // "i": "invxaru",
+            // "c": "xar",
+            // "tc": "blac"
+            "n": "Flamebellow",
+            "i": "invgisu",
+            "c": "7gs",
+            "tc": "cred"
         },
         {
             "id": 223,
@@ -18335,7 +18419,7 @@ export let remodded_constants_99 = {
         {
             "id": 278,
             "n": "Glacial Oasis"
-            //"n": "Class-specific"
+            // "n": "Class-specific"
         },
         {
             "id": 279,
@@ -18945,9 +19029,11 @@ export let remodded_constants_99 = {
         },
         {
             "id": 381,
-            "n": "Annihilus",
-            "i": "invmss",
-            "c": "cm1"
+            // "n": "Annihilus",
+            // "i": "invmss",
+            // "c": "cm1"
+            "n": "String of Ears",
+            "c": "zlb"
         },
         {
             "id": 382,
@@ -18956,9 +19042,11 @@ export let remodded_constants_99 = {
         },
         {
             "id": 383,
-            "n": "Cranebeak",
-            "i": "invmpiu",
-            "c": "7mp"
+            // "n": "Cranebeak",
+            // "i": "invmpiu",
+            // "c": "7mp"
+            "n": "Gloom's Trap",
+            "c": "zmb"
         },
         {
             "id": 384,
@@ -41708,6 +41796,206 @@ export let remodded_constants_99 = {
                         "m": "indestruct",
                         "min": 1,
                         "max": 1
+                    }
+                ]
+            ]
+        },
+        "r34": {
+            "iq": 0,
+            "n": "Di Rune",
+            "hi": 0,
+            "gt": 0,
+            "i": "invrDi",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Socket Filler",
+            "c": [
+                "Rune",
+                "Socket Filler",
+                "Miscellaneous"
+            ],
+            "m": [
+                [
+                    {
+                        "code": "r34",
+                        "type": "weapon",
+                        "m": "combat-power",
+                        "min": 2,
+                        "max": 2
+                    }
+                ],
+                [
+                    {
+                        "code": "r34",
+                        "type": "gloves",
+                        "m": "combat-power",
+                        "min": 2,
+                        "max": 2
+                    }
+                ],
+                [
+                    {
+                        "code": "r34",
+                        "type": "armor",
+                        "m": "spell-power",
+                        "min": 2,
+                        "max": 2
+                    }
+                ],
+                [
+                    {
+                        "code": "r34",
+                        "type": "boots",
+                        "m": "spell-power",
+                        "min": 2,
+                        "max": 2
+                    }
+                ],
+                [
+                    {
+                        "code": "r34",
+                        "type": "helm",
+                        "m": "spell-power",
+                        "min": 2,
+                        "max": 2
+                    }
+                ],
+                [
+                    {
+                        "code": "r34",
+                        "type": "belt",
+                        "m": "spell-power",
+                        "min": 2,
+                        "max": 2
+                    }
+                ],
+                [
+                    {
+                        "code": "r34",
+                        "type": "shield",
+                        "m": "summon-power",
+                        "min": 2,
+                        "max": 2
+                    }
+                ],
+                [
+                    {
+                        "code": "r34",
+                        "type": "amulet",
+                        "m": "summon-power",
+                        "min": 2,
+                        "max": 2
+                    }
+                ],
+                [
+                    {
+                        "code": "r34",
+                        "type": "ring",
+                        "m": "summon-power",
+                        "min": 2,
+                        "max": 2
+                    }
+                ]
+            ]
+        },
+        "r35": {
+            "iq": 0,
+            "n": "Ab Rune",
+            "hi": 0,
+            "gt": 0,
+            "i": "invrAb",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Socket Filler",
+            "c": [
+                "Rune",
+                "Socket Filler",
+                "Miscellaneous"
+            ],
+            "m": [
+                [
+                    {
+                        "code": "r35",
+                        "type": "weapon",
+                        "m": "extra-weight",
+                        "min": 3,
+                        "max": 3
+                    }
+                ],
+                [
+                    {
+                        "code": "r35",
+                        "type": "gloves",
+                        "m": "extra-weight",
+                        "min": 3,
+                        "max": 3
+                    }
+                ],
+                [
+                    {
+                        "code": "r35",
+                        "type": "armor",
+                        "m": "extra-weight",
+                        "min": 3,
+                        "max": 3
+                    }
+                ],
+                [
+                    {
+                        "code": "r35",
+                        "type": "boots",
+                        "m": "extra-weight",
+                        "min": 3,
+                        "max": 3
+                    }
+                ],
+                [
+                    {
+                        "code": "r35",
+                        "type": "helm",
+                        "m": "extra-weight",
+                        "min": 3,
+                        "max": 3
+                    }
+                ],
+                [
+                    {
+                        "code": "r35",
+                        "type": "belt",
+                        "m": "extra-weight",
+                        "min": 3,
+                        "max": 3
+                    }
+                ],
+                [
+                    {
+                        "code": "r35",
+                        "type": "shield",
+                        "m": "extra-weight",
+                        "min": 3,
+                        "max": 3
+                    }
+                ],
+                [
+                    {
+                        "code": "r35",
+                        "type": "amulet",
+                        "m": "extra-weight",
+                        "min": 3,
+                        "max": 3
+                    }
+                ],
+                [
+                    {
+                        "code": "r35",
+                        "type": "ring",
+                        "m": "extra-weight",
+                        "min": 3,
+                        "max": 3
                     }
                 ]
             ]

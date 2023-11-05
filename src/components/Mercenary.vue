@@ -2,12 +2,24 @@
   <div class="inventory">
     <span class="head">
       <Item v-if="head" v-model:item="head" @click.native="onSelect(head)" @contextmenu.prevent.stop="itemRC($event, head)"/></span>
+    <span class="neck">
+      <Item v-if="neck" v-model:item="neck" @click.native="onSelect(neck)" @contextmenu.prevent.stop="itemRC($event, neck)"/></span>
     <span class="torso">
       <Item v-if="torso" v-model:item="torso" @click.native="onSelect(torso)" @contextmenu.prevent.stop="itemRC($event, torso)"/></span>
     <span class="right-hand weapon">
       <Item v-if="right_hand" v-model:item="right_hand" @click.native="onSelect(right_hand)" @contextmenu.prevent.stop="itemRC($event, right_hand)"/></span>
     <span class="left-hand weapon">
       <Item v-if="left_hand" v-model:item="left_hand" @click.native="onSelect(left_hand)" @contextmenu.prevent.stop="itemRC($event, left_hand)"/></span>
+    <span class="right-finger ring">
+      <Item v-if="right_finger" v-model:item="right_finger" @click.native="onSelect(right_finger)" @contextmenu.prevent.stop="itemRC($event, right_finger)"/></span>
+    <span class="left-finger ring">
+      <Item v-if="left_finger" v-model:item="left_finger" @click.native="onSelect(left_finger)" @contextmenu.prevent.stop="itemRC($event, left_finger)"/></span>
+    <span class="waist">
+      <Item v-if="waist" v-model:item="waist" @click.native="onSelect(waist)" @contextmenu.prevent.stop="itemRC($event, waist)"/></span>
+    <span class="feet">
+      <Item v-if="feet" v-model:item="feet" @click.native="onSelect(feet)" @contextmenu.prevent.stop="itemRC($event, feet)"/></span>
+    <span class="hands">
+      <Item v-if="hands" v-model:item="hands" @click.native="onSelect(hands)" @contextmenu.prevent.stop="itemRC($event, hands)"/></span>
   </div>
 </template>
 

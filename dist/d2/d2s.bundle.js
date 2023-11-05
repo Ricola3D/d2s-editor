@@ -788,7 +788,7 @@ function _descFunc(property, constants, v, descFunc, descVal, descString, desc2)
             break;
         }
         case 16: {
-            // Level [sLvl] [skill] Aura When Equipped 
+            // Level [sLvl] [skill] Aura When Equipped
             var skillId = property.values[0];
             var skill = constants.skills[skillId];
             var skillStr = skill ? skill.s : "Unknown_Skill_" + skillId;
@@ -921,7 +921,7 @@ function _sprintf(str) {
         .replace("%%", "%");
 }
 function _itemStatCostFromStat(stat, constants) {
-    return constants.magical_properties.findIndex(function (e) { return e.s === stat; });
+    return constants.magical_properties.findIndex(function (e) { return e && e.s === stat; });
 }
 function _classFromCode(code, constants) {
     return constants.classes.filter(function (e) { return e.c === code; })[0];
