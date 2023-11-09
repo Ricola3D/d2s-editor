@@ -14568,8 +14568,10 @@ export let remodded_constants_99 = {
             // Pavise 19
             // Akaran Rondache 24
             // Protector Shield 30
+            // Gilded Shield 32-33
             // Royal Shield 38
             // Sacred Targe 50
+            // Zakarum Shield 80-81
             "id": 388,
             "s": "shield_unknown",
             "sB": 32,
@@ -24748,7 +24750,1583 @@ export let remodded_constants_99 = {
                 "Necromancer Item",
                 "Class Specific"
             ]
+        },
+        /* New item types ReMoDDeD - begin */
+        "Ca1": {
+            "nc": "Ca1",
+            "exc": "Ca2",
+            "elc": "Ca3",
+            "iq": 0,
+            "n": "Cape",
+            "minac": 8, // TODO
+            "maxac": 11, // TODO
+            "durability": 20, // TODO
+            "rs": 12, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "Custom/cloak",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Assassin Item",
+				"Class Specific"
+            ]
+        },
+		"Ca2": {
+            "nc": "Ca1",
+            "exc": "Ca2",
+            "elc": "Ca3",
+            "iq": 1,
+            "n": "Mantle",
+            "minac": 102, // TODO
+            "maxac": 117, // TODO
+            "durability": 20, // TODO
+            "rs": 38, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "Custom/cloak",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Assassin Item",
+				"Class Specific"
+            ]
+        },
+		"Ca3": {
+            "nc": "Ca1",
+            "exc": "Ca2",
+            "elc": "Ca3",
+            "iq": 2,
+            "n": "Cloak",
+            "minac": 361, // TODO
+            "maxac": 467, // TODO
+            "durability": 20, // TODO
+            "rs": 77, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "Custom/cloak",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Assassin Item",
+				"Class Specific"
+            ]
+        },
+        "Oa1": {
+            "nc": "Oa1",
+            "exc": "Oa2",
+            "elc": "Oa3",
+            "iq": 0,
+            "n": "Bark Armor",
+            "minac": 8, // TODO
+            "maxac": 11, // TODO
+            "durability": 20, // TODO
+            "rs": 12, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "Custom/oaken_armor",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Necromancer Item",
+				"Class Specific"
+            ]
+        },
+		"Oa2": {
+            "nc": "Oa1",
+            "exc": "Oa2",
+            "elc": "Oa3",
+            "iq": 1,
+            "n": "Cedar Chest",
+            "minac": 102, // TODO
+            "maxac": 117, // TODO
+            "durability": 20, // TODO
+            "rs": 38, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "Custom/oaken_armor",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Necromancer Item",
+				"Class Specific"
+            ]
+        },
+		"Oa3": {
+            "nc": "Oa1",
+            "exc": "Oa2",
+            "elc": "Oa3",
+            "iq": 2,
+            "n": "Oaken Armor",
+            "minac": 361, // TODO
+            "maxac": 467, // TODO
+            "durability": 20, // TODO
+            "rs": 77, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "Custom/oaken_armor",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Necromancer Item",
+				"Class Specific"
+            ]
+        },
+        "Wp1": {
+            "nc": "Wp1",
+            "exc": "Wp2",
+            "elc": "Wp3",
+            "iq": 0,
+            "n": "Wolf Cloth",
+            "minac": 8, // TODO
+            "maxac": 11, // TODO
+            "durability": 20, // TODO
+            "rs": 12, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "Custom/wolf_armor",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Druid Item",
+				"Class Specific"
+            ]
+        },
+		"Wp2": {
+            "nc": "Wp1",
+            "exc": "Wp2",
+            "elc": "Wp3",
+            "iq": 1,
+            "n": "Dire Pelt",
+            "minac": 102, // TODO
+            "maxac": 117, // TODO
+            "durability": 20, // TODO
+            "rs": 38, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "Custom/wolf_armor",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Druid Item",
+				"Class Specific"
+            ]
+        },
+		"Wp3": {
+            "nc": "Wp1",
+            "exc": "Wp2",
+            "elc": "Wp3",
+            "iq": 2,
+            "n": "Fenris Fur",
+            "minac": 361, // TODO
+            "maxac": 467, // TODO
+            "durability": 20, // TODO
+            "rs": 77, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "Custom/wolf_armor",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Druid Item",
+				"Class Specific"
+            ]
+        },
+        "Gg1": {
+            "nc": "Gg1",
+            "exc": "Gg2",
+            "elc": "Gg3",
+            "iq": 0,
+            "n": "Bear Hide",
+            "minac": 8, // TODO
+            "maxac": 11, // TODO
+            "durability": 20, // TODO
+            "rs": 12, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "Custom/bear_armor",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Druid Item",
+				"Class Specific"
+            ]
+        },
+		"Gg2": {
+            "nc": "Gg1",
+            "exc": "Gg2",
+            "elc": "Gg3",
+            "iq": 1,
+            "n": "Sleuth Slough",
+            "minac": 102, // TODO
+            "maxac": 117, // TODO
+            "durability": 20, // TODO
+            "rs": 38, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "Custom/bear_armor",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Druid Item",
+				"Class Specific"
+            ]
+        },
+		"Gg3": {
+            "nc": "Gg1",
+            "exc": "Gg2",
+            "elc": "Gg3",
+            "iq": 2,
+            "n": "Grizzly Gear",
+            "minac": 361, // TODO
+            "maxac": 467, // TODO
+            "durability": 20, // TODO
+            "rs": 77, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "Custom/bear_armor",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Druid Item",
+				"Class Specific"
+            ]
+        },
+        "Ab1": {
+            "nc": "Ab1",
+            "exc": "Ab2",
+            "elc": "Ab3",
+            "iq": 0,
+            "n": "Silent Sneakers",
+            "minac": 2, // TODO
+            "maxac": 3, // TODO
+            "durability": 12, // TODO
+            "mind": 3, // TODO
+            "maxd": 8, // TODO
+            "rs": 0, // TODO
+            "rd": 0, // TODO
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/asn_boot",
+            "iw": 2,
+            "ih": 2,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Boots",
+                "Any Armor",
+				"Assassin Item",
+				"Class Specific"
+            ]
+        },
+		"Ab2": {
+            "nc": "Ab1",
+            "exc": "Ab2",
+            "elc": "Ab3",
+            "iq": 1,
+            "n": "Combat Kicks",
+            "minac": 28, // TODO
+            "maxac": 35, // TODO
+            "durability": 12, // TODO
+            "mind": 26, // TODO
+            "maxd": 46, // TODO
+            "rs": 20, // TODO
+            "rd": 0, // TODO
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/asn_boot",
+            "iw": 2,
+            "ih": 2,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Boots",
+                "Any Armor",
+				"Assassin Item",
+				"Class Specific"
+            ]
+        },
+		"Ab3": {
+            "nc": "Ab1",
+            "exc": "Ab2",
+            "elc": "Ab3",
+            "iq": 2,
+            "n": "Bladed Boots",
+            "minac": 54, // TODO
+            "maxac": 62, // TODO
+            "durability": 12, // TODO
+            "mind": 65, // TODO
+            "maxd": 100, // TODO
+            "rs": 50, // TODO
+            "rd": 0, // TODO
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/asn_boot",
+            "iw": 2,
+            "ih": 2,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Boots",
+                "Any Armor",
+				"Assassin Item",
+				"Class Specific"
+            ]
+        },
+        "Bp1": {
+            "nc": "Bp1",
+            "exc": "Bp2",
+            "elc": "Bp3",
+            "iq": 0,
+            "n": "Blessed Plate",
+            "minac": 8, // TODO
+            "maxac": 11, // TODO
+            "durability": 20, // TODO
+            "rs": 12, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "Custom/blessed_plate",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Paladin Item",
+				"Class Specific"
+            ]
+        },
+		"Bp2": {
+            "nc": "Bp1",
+            "exc": "Bp2",
+            "elc": "Bp3",
+            "iq": 1,
+            "n": "Hallowed Armor",
+            "minac": 102, // TODO
+            "maxac": 117, // TODO
+            "durability": 20, // TODO
+            "rs": 38, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "Custom/blessed_plate",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Paladin Item",
+				"Class Specific"
+            ]
+        },
+		"Bp3": {
+            "nc": "Bp1",
+            "exc": "Bp2",
+            "elc": "Bp3",
+            "iq": 2,
+            "n": "Enlightened Plate",
+            "minac": 361, // TODO
+            "maxac": 467, // TODO
+            "durability": 20, // TODO
+            "rs": 77, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "Custom/blessed_plate",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Paladin Item",
+				"Class Specific"
+            ]
+        },
+        "Bp4": {
+            "nc": "Bp4",
+            "exc": "Bp5",
+            "elc": "Bp6",
+            "iq": 0,
+            "n": "Blessed Plate (legacy)",
+            "minac": 8, // TODO
+            "maxac": 11, // TODO
+            "durability": 20, // TODO
+            "rs": 12, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "Custom/blessed_plate",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Paladin Item",
+				"Class Specific"
+            ]
+        },
+		"Bp5": {
+            "nc": "Bp4",
+            "exc": "Bp5",
+            "elc": "Bp6",
+            "iq": 1,
+            "n": "Hallowed Armor (legacy)",
+            "minac": 102, // TODO
+            "maxac": 117, // TODO
+            "durability": 20, // TODO
+            "rs": 38, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "Custom/blessed_plate",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Paladin Item",
+				"Class Specific"
+            ]
+        },
+		"Bp6": {
+            "nc": "Bp4",
+            "exc": "Bp5",
+            "elc": "Bp6",
+            "iq": 2,
+            "n": "Enlightened Plate (legacy)",
+            "minac": 361, // TODO
+            "maxac": 467, // TODO
+            "durability": 20, // TODO
+            "rs": 77, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "Custom/blessed_plate",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Paladin Item",
+				"Class Specific"
+            ]
+        },
+        "Vg1": {
+            "nc": "Vg1",
+            "exc": "Vg2",
+            "elc": "Vg3",
+            "iq": 0,
+            "n": "Arcanic Touch",
+            "minac": 2, // TODO
+            "maxac": 3, // TODO
+            "durability": 12, // TODO
+            "rs": 0, // TODO
+            "rd": 0, // TODO
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/sorc_gaunts",
+            "iw": 2,
+            "ih": 2,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Gloves",
+                "Any Armor",
+				"Sorceress Item",
+				"Class Specific"
+            ]
+        },
+		"Vg2": {
+            "nc": "Vg1",
+            "exc": "Vg2",
+            "elc": "Vg3",
+            "iq": 1,
+            "n": "Elemental Outreach",
+            "minac": 28, // TODO
+            "maxac": 35, // TODO
+            "durability": 12, // TODO
+            "rs": 20, // TODO
+            "rd": 0, // TODO
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/sorc_gaunts",
+            "iw": 2,
+            "ih": 2,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Gloves",
+                "Any Armor",
+				"Sorceress Item",
+				"Class Specific"
+            ]
+        },
+		"Vg3": {
+            "nc": "Vg1",
+            "exc": "Vg2",
+            "elc": "Vg3",
+            "iq": 2,
+            "n": "Vizjerei Vestige",
+            "minac": 54, // TODO
+            "maxac": 62, // TODO
+            "durability": 12, // TODO
+            "rs": 50, // TODO
+            "rd": 0, // TODO
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/sorc_gaunts",
+            "iw": 2,
+            "ih": 2,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Gloves",
+                "Any Armor",
+				"Sorceress Item",
+				"Class Specific"
+            ]
+        },
+        "Vg4": {
+            "nc": "Vg4",
+            "exc": "Vg5",
+            "elc": "Vg6",
+            "iq": 0,
+            "n": "Arcanic Touch (legacy)",
+            "minac": 2, // TODO
+            "maxac": 3, // TODO
+            "durability": 12, // TODO
+            "rs": 0, // TODO
+            "rd": 0, // TODO
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/sorc_gaunts",
+            "iw": 2,
+            "ih": 2,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Gloves",
+                "Any Armor",
+				"Sorceress Item",
+				"Class Specific"
+            ]
+        },
+		"Vg5": {
+            "nc": "Vg4",
+            "exc": "Vg5",
+            "elc": "Vg6",
+            "iq": 1,
+            "n": "Elemental Outreach (legacy)",
+            "minac": 28, // TODO
+            "maxac": 35, // TODO
+            "durability": 12, // TODO
+            "rs": 20, // TODO
+            "rd": 0, // TODO
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/sorc_gaunts",
+            "iw": 2,
+            "ih": 2,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Gloves",
+                "Any Armor",
+				"Sorceress Item",
+				"Class Specific"
+            ]
+        },
+		"Vg6": {
+            "nc": "Vg4",
+            "exc": "Vg5",
+            "elc": "Vg6",
+            "iq": 2,
+            "n": "Vizjerei Vestige (legacy)",
+            "minac": 54, // TODO
+            "maxac": 62, // TODO
+            "durability": 12, // TODO
+            "rs": 50, // TODO
+            "rd": 0, // TODO
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/sorc_gaunts",
+            "iw": 2,
+            "ih": 2,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Gloves",
+                "Any Armor",
+				"Sorceress Item",
+				"Class Specific"
+            ]
+        },
+        "Bb1": {
+            "nc": "Bb1",
+            "exc": "Bb2",
+            "elc": "Bb3",
+            "iq": 0,
+            "n": "Strong Belt",
+            "minac": 2, // TODO
+            "maxac": 2, // TODO
+            "durability": 12, // TODO
+            "rs": 0, // TODO
+            "rd": 0, // TODO
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/strong_belt",
+            "iw": 2,
+            "ih": 1,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Belt",
+                "Any Armor",
+				"Barbarian Item",
+				"Class Specific"
+            ]
+        },
+		"Bb2": {
+            "nc": "Bb1",
+            "exc": "Bb2",
+            "elc": "Bb3",
+            "iq": 1,
+            "n": "Mighty Belt",
+            "minac": 29, // TODO
+            "maxac": 34, // TODO
+            "durability": 12, // TODO
+            "rs": 20, // TODO
+            "rd": 0, // TODO
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/strong_belt",
+            "iw": 2,
+            "ih": 1,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Belt",
+                "Any Armor",
+				"Barbarian Item",
+				"Class Specific"
+            ]
+        },
+		"Bb3": {
+            "nc": "Bb1",
+            "exc": "Bb2",
+            "elc": "Bb3",
+            "iq": 2,
+            "n": "Arreat Belt",
+            "minac": 55, // TODO
+            "maxac": 62, // TODO
+            "durability": 12, // TODO
+            "rs": 50, // TODO
+            "rd": 0, // TODO
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/strong_belt",
+            "iw": 2,
+            "ih": 1,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Belt",
+                "Any Armor",
+				"Barbarian Item",
+				"Class Specific"
+            ]
+        },
+        "Bb4": {
+            "nc": "Bb4",
+            "exc": "Bb5",
+            "elc": "Bb6",
+            "iq": 0,
+            "n": "Strong Belt (legacy)",
+            "minac": 2, // TODO
+            "maxac": 2, // TODO
+            "durability": 12, // TODO
+            "rs": 0, // TODO
+            "rd": 0, // TODO
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/strong_belt",
+            "iw": 2,
+            "ih": 1,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Belt",
+                "Any Armor",
+				"Barbarian Item",
+				"Class Specific"
+            ]
+        },
+		"Bb5": {
+            "nc": "Bb4",
+            "exc": "Bb5",
+            "elc": "Bb6",
+            "iq": 1,
+            "n": "Mighty Belt (legacy)",
+            "minac": 29, // TODO
+            "maxac": 34, // TODO
+            "durability": 12, // TODO
+            "rs": 20, // TODO
+            "rd": 0, // TODO
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/strong_belt",
+            "iw": 2,
+            "ih": 1,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Belt",
+                "Any Armor",
+				"Barbarian Item",
+				"Class Specific"
+            ]
+        },
+		"Bb6": {
+            "nc": "Bb4",
+            "exc": "Bb5",
+            "elc": "Bb6",
+            "iq": 2,
+            "n": "Arreat Belt (legacy)",
+            "minac": 55, // TODO
+            "maxac": 62, // TODO
+            "durability": 12, // TODO
+            "rs": 50, // TODO
+            "rd": 0, // TODO
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/strong_belt",
+            "iw": 2,
+            "ih": 1,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Belt",
+                "Any Armor",
+				"Barbarian Item",
+				"Class Specific"
+            ]
+        },
+        "Zc1": {
+            "nc": "Zc1",
+            "exc": "Zc2",
+            "elc": "Zc3",
+            "iq": 0,
+            "n": "Skovos Circle",
+            "minac": 30, // TODO
+            "maxac": 40, // TODO
+            "durability": 30, // TODO
+            "rs": 0, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "invci3",
+            "iw": 2,
+            "ih": 2,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Helm",
+            "c": [
+                "Circlet",
+                "Helm",
+                "Any Armor",
+				"Amazon Item",
+				"Class Specific"
+            ]
+        },
+		"Zc2": {
+            "nc": "Zc1",
+            "exc": "Zc2",
+            "elc": "Zc3",
+            "iq": 1,
+            "n": "Island Crown",
+            "minac": 40, // TODO
+            "maxac": 50, // TODO
+            "durability": 25, // TODO
+            "rs": 0, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "invci3",
+            "iw": 2,
+            "ih": 2,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Helm",
+            "c": [
+                "Circlet",
+                "Helm",
+                "Any Armor",
+				"Amazon Item",
+				"Class Specific"
+            ]
+        },
+        "Zc3": {
+            "nc": "Zc1",
+            "exc": "Zc2",
+            "elc": "Zc3",
+            "iq": 2,
+            "n": "Sister's Stone",
+            "minac": 50, // TODO
+            "maxac": 60, // TODO
+            "durability": 20, // TODO
+            "rs": 0, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "invci3",
+            "iw": 2,
+            "ih": 2,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Helm",
+            "c": [
+                "Circlet",
+                "Helm",
+                "Any Armor",
+				"Amazon Item",
+				"Class Specific"
+            ]
+        },
+        "Zc4": {
+            "nc": "Zc4",
+            "exc": "Zc5",
+            "elc": "Zc6",
+            "iq": 0,
+            "n": "Skovos Circle (legacy)",
+            "minac": 30, // TODO
+            "maxac": 40, // TODO
+            "durability": 30, // TODO
+            "rs": 0, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "invci3",
+            "iw": 2,
+            "ih": 2,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Helm",
+            "c": [
+                "Circlet",
+                "Helm",
+                "Any Armor",
+				"Amazon Item",
+				"Class Specific"
+            ]
+        },
+		"Zc5": {
+            "nc": "Zc4",
+            "exc": "Zc5",
+            "elc": "Zc6",
+            "iq": 1,
+            "n": "Island Crown (legacy)",
+            "minac": 40, // TODO
+            "maxac": 50, // TODO
+            "durability": 25, // TODO
+            "rs": 0, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "invci3",
+            "iw": 2,
+            "ih": 2,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Helm",
+            "c": [
+                "Circlet",
+                "Helm",
+                "Any Armor",
+				"Amazon Item",
+				"Class Specific"
+            ]
+        },
+        "Zc6": {
+            "nc": "Zc4",
+            "exc": "Zc5",
+            "elc": "Zc6",
+            "iq": 2,
+            "n": "Sister's Stone (legacy)",
+            "minac": 50, // TODO
+            "maxac": 60, // TODO
+            "durability": 20, // TODO
+            "rs": 0, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "invci3",
+            "iw": 2,
+            "ih": 2,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Helm",
+            "c": [
+                "Circlet",
+                "Helm",
+                "Any Armor",
+				"Amazon Item",
+				"Class Specific"
+            ]
+        },
+        "Pc1": {
+            "nc": "Pc1",
+            "exc": "Pc2",
+            "elc": "Pc3",
+            "iq": 0,
+            "n": "Palisade Helm",
+            "minac": 3, // TODO
+            "maxac": 5, // TODO
+            "durability": 12, // TODO
+            "rs": 0, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "invcrn",
+            "ui": "invcrn",
+            "si": "invcrn",
+            "iw": 2,
+            "ih": 2,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Helm",
+                "Any Armor",
+				"Paladin Item",
+				"Class Specific"
+            ]
+        },
+		"Pc2": {
+            "nc": "Pc1",
+            "exc": "Pc2",
+            "elc": "Pc3",
+            "iq": 1,
+            "n": "Anointed Crown",
+            "minac": 45, // TODO
+            "maxac": 53, // TODO
+            "durability": 12, // TODO
+            "rs": 20, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "invcrn",
+            "iw": 2,
+            "ih": 2,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Helm",
+                "Any Armor",
+				"Paladin Item",
+				"Class Specific"
+            ]
+        },
+		"Pc3": {
+            "nc": "Pc1",
+            "exc": "Pc2",
+            "elc": "Pc3",
+            "iq": 2,
+            "n": "Treasured Headdress",
+            "minac": 98, // TODO
+            "maxac": 141, // TODO
+            "durability": 12, // TODO
+            "rs": 50, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "invcrn",
+            "iw": 2,
+            "ih": 2,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Helm",
+                "Any Armor",
+				"Paladin Item",
+				"Class Specific"
+            ]
+        },
+        "Ag1": {
+            "nc": "Ag1",
+            "exc": "Ag2",
+            "elc": "Ag3",
+            "iq": 0,
+            "n": "Trainee's Gloves",
+            "minac": 2, // TODO
+            "maxac": 3, // TODO
+            "durability": 12, // TODO
+            "rs": 0, // TODO
+            "rd": 0, // TODO
+            "hi": 0,
+            "gt": 0,
+            "i": "invlgl",
+            "iw": 2,
+            "ih": 2,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Gloves",
+                "Any Armor",
+				"Amazon Item",
+				"Class Specific"
+            ]
+        },
+		"Ag2": {
+            "nc": "Ag1",
+            "exc": "Ag2",
+            "elc": "Ag3",
+            "iq": 1,
+            "n": "Adept Gloves",
+            "minac": 28, // TODO
+            "maxac": 35, // TODO
+            "durability": 12, // TODO
+            "rs": 20, // TODO
+            "rd": 0, // TODO
+            "hi": 0,
+            "gt": 0,
+            "i": "invvgl",
+            "iw": 2,
+            "ih": 2,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Gloves",
+                "Any Armor",
+				"Amazon Item",
+				"Class Specific"
+            ]
+        },
+		"Ag3": {
+            "nc": "Ag1",
+            "exc": "Ag2",
+            "elc": "Ag3",
+            "iq": 2,
+            "n": "Huntress Gloves",
+            "minac": 54, // TODO
+            "maxac": 62, // TODO
+            "durability": 12, // TODO
+            "rs": 50, // TODO
+            "rd": 0, // TODO
+            "hi": 0,
+            "gt": 0,
+            "i": "invlgl",
+            "iw": 2,
+            "ih": 2,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Gloves",
+                "Any Armor",
+				"Amazon Item",
+				"Class Specific"
+            ]
+        },
+        "Ag4": {
+            "nc": "Ag4",
+            "exc": "Ag5",
+            "elc": "Ag6",
+            "iq": 0,
+            "n": "Trainee's Gloves (legacy)",
+            "minac": 2, // TODO
+            "maxac": 3, // TODO
+            "durability": 12, // TODO
+            "rs": 0, // TODO
+            "rd": 0, // TODO
+            "hi": 0,
+            "gt": 0,
+            "i": "invlgl",
+            "iw": 2,
+            "ih": 2,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Gloves",
+                "Any Armor",
+				"Amazon Item",
+				"Class Specific"
+            ]
+        },
+		"Ag5": {
+            "nc": "Ag4",
+            "exc": "Ag5",
+            "elc": "Ag6",
+            "iq": 1,
+            "n": "Adept Gloves (legacy)",
+            "minac": 28, // TODO
+            "maxac": 35, // TODO
+            "durability": 12, // TODO
+            "rs": 20, // TODO
+            "rd": 0, // TODO
+            "hi": 0,
+            "gt": 0,
+            "i": "invvgl",
+            "iw": 2,
+            "ih": 2,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Gloves",
+                "Any Armor",
+				"Amazon Item",
+				"Class Specific"
+            ]
+        },
+		"Ag6": {
+            "nc": "Ag4",
+            "exc": "Ag5",
+            "elc": "Ag6",
+            "iq": 2,
+            "n": "Huntress Gloves (legacy)",
+            "minac": 54, // TODO
+            "maxac": 62, // TODO
+            "durability": 12, // TODO
+            "rs": 50, // TODO
+            "rd": 0, // TODO
+            "hi": 0,
+            "gt": 0,
+            "i": "invlgl",
+            "iw": 2,
+            "ih": 2,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Gloves",
+                "Any Armor",
+				"Amazon Item",
+				"Class Specific"
+            ]
+        },
+        "Na1": {
+            "nc": "Na1",
+            "exc": "Na2",
+            "elc": "Na3",
+            "iq": 0,
+            "n": "Ribcage",
+            "minac": 8, // TODO
+            "maxac": 11, // TODO
+            "durability": 20, // TODO
+            "rs": 12, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "invqlt",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Necromancer Item",
+				"Class Specific"
+            ]
+        },
+		"Na2": {
+            "nc": "Na1",
+            "exc": "Na2",
+            "elc": "Na3",
+            "iq": 1,
+            "n": "Ossein Armor",
+            "minac": 102, // TODO
+            "maxac": 117, // TODO
+            "durability": 20, // TODO
+            "rs": 38, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "invrng",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Necromancer Item",
+				"Class Specific"
+            ]
+        },
+		"Na3": {
+            "nc": "Na1",
+            "exc": "Na2",
+            "elc": "Na3",
+            "iq": 2,
+            "n": "Bone Guard",
+            "minac": 361, // TODO
+            "maxac": 467, // TODO
+            "durability": 20, // TODO
+            "rs": 77, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "invqlt",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Necromancer Item",
+				"Class Specific"
+            ]
+        },
+        "Na4": {
+            "nc": "Na4",
+            "exc": "Na5",
+            "elc": "Na6",
+            "iq": 0,
+            "n": "Ribcage (legacy)",
+            "minac": 8, // TODO
+            "maxac": 11, // TODO
+            "durability": 20, // TODO
+            "rs": 12, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "invqlt",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Necromancer Item",
+				"Class Specific"
+            ]
+        },
+		"Na5": {
+            "nc": "Na4",
+            "exc": "Na5",
+            "elc": "Na6",
+            "iq": 1,
+            "n": "Ossein Armor (legacy)",
+            "minac": 102, // TODO
+            "maxac": 117, // TODO
+            "durability": 20, // TODO
+            "rs": 38, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "invrng",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Necromancer Item",
+				"Class Specific"
+            ]
+        },
+		"Na6": {
+            "nc": "Na4",
+            "exc": "Na5",
+            "elc": "Na6",
+            "iq": 2,
+            "n": "Bone Guard (legacy)",
+            "minac": 361, // TODO
+            "maxac": 467, // TODO
+            "durability": 20, // TODO
+            "rs": 77, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "invqlt",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Necromancer Item",
+				"Class Specific"
+            ]
+        },
+        "Sa1": {
+            "nc": "Sa1",
+            "exc": "Sa2",
+            "elc": "Sa3",
+            "iq": 0,
+            "n": "Gewand",
+            "minac": 8, // TODO
+            "maxac": 11, // TODO
+            "durability": 20, // TODO
+            "rs": 12, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "invqlt",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Sorceress Item",
+				"Class Specific"
+            ]
+        },
+		"Sa2": {
+            "nc": "Sa1",
+            "exc": "Sa2",
+            "elc": "Sa3",
+            "iq": 1,
+            "n": "Robe",
+            "minac": 102, // TODO
+            "maxac": 117, // TODO
+            "durability": 20, // TODO
+            "rs": 38, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "invlea",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Sorceress Item",
+				"Class Specific"
+            ]
+        },
+		"Sa3": {
+            "nc": "Sa1",
+            "exc": "Sa2",
+            "elc": "Sa3",
+            "iq": 2,
+            "n": "Vestment",
+            "minac": 361, // TODO
+            "maxac": 467, // TODO
+            "durability": 20, // TODO
+            "rs": 77, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "invqlt",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Sorceress Item",
+				"Class Specific"
+            ]
+        },
+        "Sa4": {
+            "nc": "Sa4",
+            "exc": "Sa5",
+            "elc": "Sa6",
+            "iq": 0,
+            "n": "Gewand (legacy)",
+            "minac": 8, // TODO
+            "maxac": 11, // TODO
+            "durability": 20, // TODO
+            "rs": 12, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "invqlt",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Sorceress Item",
+				"Class Specific"
+            ]
+        },
+		"Sa5": {
+            "nc": "Sa4",
+            "exc": "Sa5",
+            "elc": "Sa6",
+            "iq": 1,
+            "n": "Robe (legacy)",
+            "minac": 102, // TODO
+            "maxac": 117, // TODO
+            "durability": 20, // TODO
+            "rs": 38, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "invlea",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Sorceress Item",
+				"Class Specific"
+            ]
+        },
+		"Sa6": {
+            "nc": "Sa4",
+            "exc": "Sa5",
+            "elc": "Sa6",
+            "iq": 2,
+            "n": "Vestment (legacy)",
+            "minac": 361, // TODO
+            "maxac": 467, // TODO
+            "durability": 20, // TODO
+            "rs": 77, // TODO
+            "rd": 0, // TODO
+            "hi": 1,
+            "gt": 1,
+            "i": "invqlt",
+            "iw": 2,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor",
+				"Sorceress Item",
+				"Class Specific"
+            ]
         }
+        /* New item types ReMoDDeD - end */
     },
     "weapon_items": {
         "hax": {
@@ -25614,28 +27192,30 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Katana",
             // "n": "Two-Handed Sword",
-            "durability": 44,
-            "mind": 2,
-            "maxd": 9,
-            "min2d": 8,
-            "max2d": 17,
-            "rs": 35,
-            "rd": 27,
+            "durability": 44, // TODO
+            "mind": 2, // TODO
+            "maxd": 9, // TODO
+            "min2d": 8, // TODO
+            "max2d": 17, // TODO
+            "rs": 35, // TODO
+            "rd": 27, // TODO
             "hi": 1,
             "gt": 0,
-            "i": "inv2hs",
-            "ui": "inv2hsu",
-            "si": "inv2hsu",
+            "i": "Custom/katana",
+            "ui": "Custom/katana",
+            "si": "Custom/katana",
             "iw": 1,
             "ih": 4,
-            "it": 2,
+            "it": 2, // TODO
             "ig": [],
             "eq1n": "Swords and Knives",
             "c": [
                 "Sword",
                 "Swords and Knives",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+				"Assassin Item",
+				"Class Specific"
             ]
         },
         "clm": {
@@ -28091,28 +29671,30 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Nihonto",
             // "n": "Espandon",
-            "durability": 44,
-            "mind": 8,
-            "maxd": 26,
-            "min2d": 18,
-            "max2d": 40,
-            "rs": 73,
-            "rd": 61,
+            "durability": 44, // TODO
+            "mind": 8, // TODO
+            "maxd": 26, // TODO
+            "min2d": 18, // TODO
+            "max2d": 40, // TODO
+            "rs": 73, // TODO
+            "rd": 61, // TODO
             "hi": 1,
             "gt": 0,
-            "i": "inv2hs",
-            "ui": "inv2hsu",
-            "si": "inv2hsu",
+            "i": "Custom/katana",
+            "ui": "Custom/katana",
+            "si": "Custom/katana",
             "iw": 1,
             "ih": 4,
-            "it": 2,
+            "it": 2, // TODO
             "ig": [],
             "eq1n": "Swords and Knives",
             "c": [
                 "Sword",
                 "Swords and Knives",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+				"Assassin Item",
+				"Class Specific"
             ]
         },
         "9cm": {
@@ -30958,28 +32540,30 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Shinogi",
             // "n": "Legend Sword",
-            "durability": 44,
-            "mind": 22,
-            "maxd": 56,
-            "min2d": 50,
-            "max2d": 94,
-            "rs": 175,
-            "rd": 100,
+            "durability": 44, // TODO
+            "mind": 22, // TODO
+            "maxd": 56, // TODO
+            "min2d": 50, // TODO
+            "max2d": 94, // TODO
+            "rs": 175, // TODO
+            "rd": 100, // TODO
             "hi": 1,
             "gt": 0,
-            "i": "inv2hs",
-            "ui": "inv2hsu",
-            "si": "inv2hsu",
+            "i": "Custom/katana",
+            "ui": "Custom/katana",
+            "si": "Custom/katana",
             "iw": 1,
             "ih": 4,
-            "it": 2,
+            "it": 2, // TODO
             "ig": [],
             "eq1n": "Swords and Knives",
             "c": [
                 "Sword",
                 "Swords and Knives",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+				"Assassin Item",
+				"Class Specific"
             ]
         },
         "7cm": {
@@ -33135,7 +34719,789 @@ export let remodded_constants_99 = {
                 "Amazon Item",
                 "Class Specific"
             ]
+        },
+        /* New item types ReMoDDeD - begin */
+        "Ds1": {
+            "nc": "Ds1",
+            "exc": "Ds2",
+            "elc": "Ds3",
+            "iq": 0,
+            "n": "Spell Stick",
+            "durability": 20, // TODO
+            "min2d": 1, // TODO
+            "max2d": 5, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invsst",
+            "iw": 1,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Staves And Rods",
+            "c": [
+                "Staff",
+                "Staves And Rods",
+                "Blunt",
+                "Melee Weapon",
+                "Weapon",
+				"Druid Item",
+				"Class Specific"
+            ]
+        },
+		"Ds2": {
+            "nc": "Ds1",
+            "exc": "Ds2",
+            "elc": "Ds3",
+            "iq": 1,
+            "n": "Elemental Staff",
+            "durability": 20, // TODO
+            "min2d": 6, // TODO
+            "max2d": 21, // TODO
+            "rs": 25, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invsst",
+            "iw": 1,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Staves And Rods",
+            "c": [
+                "Staff",
+                "Staves And Rods",
+                "Blunt",
+                "Melee Weapon",
+                "Weapon",
+				"Druid Item",
+				"Class Specific"
+            ]
+        },
+		"Ds3": {
+            "nc": "Ds1",
+            "exc": "Ds2",
+            "elc": "Ds3",
+            "iq": 2,
+            "n": "Naturecaller",
+            "durability": 20, // TODO
+            "min2d": 69, // TODO
+            "max2d": 85, // TODO
+            "rs": 25, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invsst",
+            "iw": 1,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Staves And Rods",
+            "c": [
+                "Staff",
+                "Staves And Rods",
+                "Blunt",
+                "Melee Weapon",
+                "Weapon",
+				"Druid Item",
+				"Class Specific"
+            ]
+        },
+		"Ds4": {
+            "nc": "Ds4",
+            "exc": "Ds5",
+            "elc": "Ds6",
+            "iq": 0,
+            "n": "Spell Stick (legacy)",
+            "durability": 20, // TODO
+            "min2d": 1, // TODO
+            "max2d": 5, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invwst",
+            "iw": 1,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Staves And Rods",
+            "c": [
+                "Staff",
+                "Staves And Rods",
+                "Blunt",
+                "Melee Weapon",
+                "Weapon",
+				"Druid Item",
+				"Class Specific"
+            ]
+        },
+		"Ds5": {
+            "nc": "Ds4",
+            "exc": "Ds5",
+            "elc": "Ds6",
+            "iq": 1,
+            "n": "Elemental Staff (legacy)",
+            "durability": 20, // TODO
+            "min2d": 6, // TODO
+            "max2d": 21, // TODO
+            "rs": 25, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invwst",
+            "iw": 1,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Staves And Rods",
+            "c": [
+                "Staff",
+                "Staves And Rods",
+                "Blunt",
+                "Melee Weapon",
+                "Weapon",
+				"Druid Item",
+				"Class Specific"
+            ]
+        },
+		"Ds6": {
+            "nc": "Ds4",
+            "exc": "Ds5",
+            "elc": "Ds6",
+            "iq": 2,
+            "n": "Naturecaller (legacy)",
+            "durability": 20, // TODO
+            "min2d": 69, // TODO
+            "max2d": 85, // TODO
+            "rs": 25, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invwst",
+            "iw": 1,
+            "ih": 3,
+            "it": 8, // TODO
+            "ig": [],
+            "eq1n": "Staves And Rods",
+            "c": [
+                "Staff",
+                "Staves And Rods",
+                "Blunt",
+                "Melee Weapon",
+                "Weapon",
+				"Druid Item",
+				"Class Specific"
+            ]
+        },
+        "Pm1": {
+            "nc": "Pm1",
+            "exc": "Pm2",
+            "elc": "Pm3",
+            "iq": 0,
+            "n": "Blessed Mace",
+            "durability": 72, // TODO
+            "mind": 7, // TODO
+            "maxd": 16, // TODO
+            "rs": 36, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invmst",
+            "ui": "invmstu",
+            "si": "invmstu",
+            "iw": 1,
+            "ih": 3,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Blunt",
+            "c": [
+                "Mace",
+                "Blunt",
+                "Melee Weapon",
+                "Weapon",
+				"Paladin Item",
+				"Class Specific"
+            ]
+        },
+		"Pm2": {
+            "nc": "Pm1",
+            "exc": "Pm2",
+            "elc": "Pm3",
+            "iq": 1,
+            "n": "Holy Mace",
+            "durability": 72, // TODO
+            "mind": 20, // TODO
+            "maxd": 31, // TODO
+            "rs": 74, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invmst",
+            "ui": "invmstu",
+            "si": "invmstu",
+            "iw": 1,
+            "ih": 3,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Blunt",
+            "c": [
+                "Mace",
+                "Blunt",
+                "Melee Weapon",
+                "Weapon",
+				"Paladin Item",
+				"Class Specific"
+            ]
+        },
+		"Pm3": {
+            "nc": "Pm1",
+            "exc": "Pm2",
+            "elc": "Pm3",
+            "iq": 2,
+            "n": "Divine Mace",
+            "durability": 72, // TODO
+            "mind": 43, // TODO
+            "maxd": 53, // TODO
+            "rs": 153, // TODO
+            "rd": 44, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invmst",
+            "ui": "invmstu",
+            "si": "invmstu",
+            "iw": 1,
+            "ih": 3,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Blunt",
+            "c": [
+                "Mace",
+                "Blunt",
+                "Melee Weapon",
+                "Weapon",
+				"Paladin Item",
+				"Class Specific"
+            ]
+        },
+        "Bm1": {
+            "nc": "Bm1",
+            "exc": "Bm2",
+            "elc": "Bm3",
+            "iq": 0,
+            "n": "Mighty Axe",
+            "durability": 50, // TODO
+            "min2d": 22, // TODO
+            "max2d": 45, // TODO
+            "rs": 70, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invgix",
+            "iw": 2,
+            "ih": 3,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Melee Weapon",
+            "c": [
+                "Axe",
+                "Melee Weapon",
+                "Weapon",
+				"Barbarian Item",
+				"Class Specific"
+            ]
+        },
+		"Bm2": {
+            "nc": "Bm1",
+            "exc": "Bm2",
+            "elc": "Bm3",
+            "iq": 1,
+            "n": "Bonebreaking Axe",
+            "durability": 50, // TODO
+            "min2d": 43, // TODO
+            "max2d": 85, // TODO
+            "rs": 125, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invgix",
+            "ui": "inv9giu",
+            "si": "inv9giu",
+            "iw": 2,
+            "ih": 3,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Melee Weapon",
+            "c": [
+                "Axe",
+                "Melee Weapon",
+                "Weapon",
+				"Barbarian Item",
+				"Class Specific"
+            ]
+        },
+		"Bm3": {
+            "nc": "Bm1",
+            "exc": "Bm2",
+            "elc": "Bm3",
+            "iq": 2,
+            "n": "Decapitating Axe",
+            "durability": 50, // TODO
+            "min2d": 60, // TODO
+            "max2d": 124, // TODO
+            "rs": 164, // TODO
+            "rd": 55, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invgix",
+            "iw": 2,
+            "ih": 3,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Melee Weapon",
+            "c": [
+                "Axe",
+                "Melee Weapon",
+                "Weapon",
+				"Barbarian Item",
+				"Class Specific"
+            ]
+        },
+        "Bm4": {
+            "nc": "Bm4",
+            "exc": "Bm5",
+            "elc": "Bm6",
+            "iq": 0,
+            "n": "Mighty Sword",
+            "durability": 50, // TODO
+            "mind": 12, // TODO
+            "maxd": 20, // TODO
+            "min2d": 25, // TODO
+            "max2d": 42, // TODO
+            "rs": 100, // TODO
+            "rd": 60, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invgsd",
+            "ui": "invgsdu",
+            "si": "invgsdu",
+            "iw": 2,
+            "ih": 4,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Swords and Knives",
+            "c": [
+                "Sword",
+                "Swords and Knives",
+                "Melee Weapon",
+                "Weapon",
+				"Barbarian Item",
+				"Class Specific"
+            ]
+        },
+		"Bm5": {
+            "nc": "Bm4",
+            "exc": "Bm5",
+            "elc": "Bm6",
+            "iq": 1,
+            "n": "Bonebreaking Sword",
+            "durability": 50, // TODO
+            "mind": 24, // TODO
+            "maxd": 40, // TODO
+            "min2d": 47, // TODO
+            "max2d": 80, // TODO
+            "rs": 170, // TODO
+            "rd": 110, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invgsd",
+            "ui": "invgsdu",
+            "si": "invgsdu",
+            "iw": 2,
+            "ih": 4,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Swords and Knives",
+            "c": [
+                "Sword",
+                "Swords and Knives",
+                "Melee Weapon",
+                "Weapon",
+				"Barbarian Item",
+				"Class Specific"
+            ]
+        },
+		"Bm6": {
+            "nc": "Bm4",
+            "exc": "Bm5",
+            "elc": "Bm6",
+            "iq": 2,
+            "n": "Decapitating Sword",
+            "durability": 50, // TODO
+            "mind": 25, // TODO
+            "maxd": 65, // TODO
+            "min2d": 58, // TODO
+            "max2d": 115, // TODO
+            "rs": 189, // TODO
+            "rd": 110, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invgsd",
+            "ui": "invgsdu",
+            "si": "invgsdu",
+            "iw": 2,
+            "ih": 4,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Swords and Knives",
+            "c": [
+                "Sword",
+                "Swords and Knives",
+                "Melee Weapon",
+                "Weapon",
+				"Barbarian Item",
+				"Class Specific"
+            ]
+        },
+        "Bm7": {
+            "nc": "Bm7",
+            "exc": "Bm8",
+            "elc": "Bm9",
+            "iq": 0,
+            "n": "Mighty Hammer",
+            "durability": 60, // TODO
+            "min2d": 38, // TODO
+            "max2d": 58, // TODO
+            "rs": 99, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invgma",
+            "ui": "invgma",
+            "si": "invgma",
+            "iw": 2,
+            "ih": 3,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Blunt",
+            "c": [
+                "Hammer",
+                "Blunt",
+                "Melee Weapon",
+                "Weapon",
+				"Barbarian Item",
+				"Class Specific"
+            ]
+        },
+		"Bm8": {
+            "nc": "Bm7",
+            "exc": "Bm8",
+            "elc": "Bm9",
+            "iq": 1,
+            "n": "Bonebreaking Hammer",
+            "durability": 60, // TODO
+            "min2d": 61, // TODO
+            "max2d": 99, // TODO
+            "rs": 169, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invgma",
+            "iw": 2,
+            "ih": 3,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Blunt",
+            "c": [
+                "Hammer",
+                "Blunt",
+                "Melee Weapon",
+                "Weapon",
+				"Barbarian Item",
+				"Class Specific"
+            ]
+        },
+		"Bm9": {
+            "nc": "Bm7",
+            "exc": "Bm8",
+            "elc": "Bm9",
+            "iq": 2,
+            "n": "Decapitating Hammer",
+            "durability": 60, // TODO
+            "min2d": 33, // TODO
+            "max2d": 180, // TODO
+            "rs": 253, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invgma",
+            "iw": 2,
+            "ih": 3,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Blunt",
+            "c": [
+                "Hammer",
+                "Blunt",
+                "Melee Weapon",
+                "Weapon",
+				"Barbarian Item",
+				"Class Specific"
+            ]
+        },
+        "Bf1": {
+            "nc": "Bf1",
+            "exc": "Bf2",
+            "elc": "Bf3",
+            "iq": 0,
+            "n": "Flurry Axe",
+            "durability": 24, // TODO
+            "mind": 4, // TODO
+            "maxd": 11, // TODO
+            "rs": 32, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invaxe",
+            "ui": "invaxeu",
+            "si": "invaxeu",
+            "iw": 2,
+            "ih": 3,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Melee Weapon",
+            "c": [
+                "Axe",
+                "Melee Weapon",
+                "Weapon",
+				"Barbarian Item",
+				"Class Specific"
+            ]
+        },
+		"Bf2": {
+            "nc": "Bf1",
+            "exc": "Bf2",
+            "elc": "Bf3",
+            "iq": 1,
+            "n": "Splitting Axe",
+            "durability": 24, // TODO
+            "mind": 10, // TODO
+            "maxd": 33, // TODO
+            "rs": 68, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invaxe",
+            "ui": "invaxeu",
+            "si": "invaxeu",
+            "iw": 2,
+            "ih": 3,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Melee Weapon",
+            "c": [
+                "Axe",
+                "Melee Weapon",
+                "Weapon",
+				"Barbarian Item",
+				"Class Specific"
+            ]
+        },
+		"Bf3": {
+            "nc": "Bf1",
+            "exc": "Bf2",
+            "elc": "Bf3",
+            "iq": 2,
+            "n": "Hellforged Axe",
+            "durability": 24, // TODO
+            "mind": 38, // TODO
+            "maxd": 60, // TODO
+            "rs": 115, // TODO
+            "rd": 83, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invaxe",
+            "ui": "invaxeu",
+            "si": "invaxeu",
+            "iw": 2,
+            "ih": 3,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Melee Weapon",
+            "c": [
+                "Axe",
+                "Melee Weapon",
+                "Weapon",
+				"Barbarian Item",
+				"Class Specific"
+            ]
+        },
+        "Bf4": {
+            "nc": "Bf4",
+            "exc": "Bf5",
+            "elc": "Bf6",
+            "iq": 0,
+            "n": "Flurry Sword",
+            "durability": 32, // TODO
+            "mind": 7, // TODO
+            "maxd": 14, // TODO
+            "rs": 48, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invbsd",
+            "ui": "invbsdu",
+            "si": "invbsdu",
+            "iw": 2,
+            "ih": 3,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Swords and Knives",
+            "c": [
+                "Sword",
+                "Swords and Knives",
+                "Melee Weapon",
+                "Weapon",
+				"Barbarian Item",
+				"Class Specific"
+            ]
+        },
+		"Bf5": {
+            "nc": "Bf4",
+            "exc": "Bf5",
+            "elc": "Bf6",
+            "iq": 1,
+            "n": "Berserker Sword",
+            "durability": 32, // TODO
+            "mind": 16, // TODO
+            "maxd": 34, // TODO
+            "rs": 92, // TODO
+            "rd": 43, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invbsd",
+            "iw": 2,
+            "ih": 3,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Swords and Knives",
+            "c": [
+                "Sword",
+                "Swords and Knives",
+                "Melee Weapon",
+                "Weapon",
+				"Barbarian Item",
+				"Class Specific"
+            ]
+        },
+		"Bf6": {
+            "nc": "Bf4",
+            "exc": "Bf5",
+            "elc": "Bf6",
+            "iq": 2,
+            "n": "Bloodletting Sword",
+            "durability": 32, // TODO
+            "mind": 37, // TODO
+            "maxd": 53, // TODO
+            "rs": 142, // TODO
+            "rd": 112, // TODO
+            "hi": 1,
+            "gt": 0,
+            "i": "invbsd",
+            "iw": 2,
+            "ih": 3,
+            "it": 2, // TODO
+            "ig": [],
+            "eq1n": "Swords and Knives",
+            "c": [
+                "Sword",
+                "Swords and Knives",
+                "Melee Weapon",
+                "Weapon",
+				"Barbarian Item",
+				"Class Specific"
+            ]
+        },
+        "k01": {
+            "nc": "k01",
+            "exc": "k02",
+            "elc": "k03",
+            "iq": 0,
+            "n": "Chokuto",
+            "durability": 44,
+            "mind": 2,
+            "maxd": 9,
+            "min2d": 8,
+            "max2d": 17,
+            "rs": 35,
+            "rd": 27,
+            "hi": 1,
+            "gt": 0,
+            "i": "Custom/katana",
+            "ui": "Custom/katana",
+            "si": "Custom/katana",
+            "iw": 1,
+            "ih": 4,
+            "it": 2,
+            "ig": [],
+            "eq1n": "Swords and Knives",
+            "c": [
+                "Sword",
+                "Swords and Knives",
+                "Melee Weapon",
+                "Weapon",
+				"Assassin Item",
+				"Class Specific"
+            ]
+        },
+		"k02": {
+            "nc": "k01",
+            "exc": "k02",
+            "elc": "k03",
+            "iq": 1,
+            "n": "Odachi",
+            "durability": 44,
+            "mind": 8,
+            "maxd": 26,
+            "min2d": 18,
+            "max2d": 40,
+            "rs": 73,
+            "rd": 61,
+            "hi": 1,
+            "gt": 0,
+            "i": "Custom/katana",
+            "ui": "Custom/katana",
+            "si": "Custom/katana",
+            "iw": 1,
+            "ih": 4,
+            "it": 2,
+            "ig": [],
+            "eq1n": "Swords and Knives",
+            "c": [
+                "Sword",
+                "Swords and Knives",
+                "Melee Weapon",
+                "Weapon",
+				"Assassin Item",
+				"Class Specific"
+            ]
+        },
+		"k03": {
+            "nc": "k01",
+            "exc": "k02",
+            "elc": "k03",
+            "iq": 2,
+            "n": "Ninjato",
+            "durability": 44,
+            "mind": 22,
+            "maxd": 56,
+            "min2d": 50,
+            "max2d": 94,
+            "rs": 175,
+            "rd": 100,
+            "hi": 1,
+            "gt": 0,
+            "i": "Custom/katana",
+            "ui": "Custom/katana",
+            "si": "Custom/katana",
+            "iw": 1,
+            "ih": 4,
+            "it": 2,
+            "ig": [],
+            "eq1n": "Swords and Knives",
+            "c": [
+                "Sword",
+                "Swords and Knives",
+                "Melee Weapon",
+                "Weapon",
+				"Assassin Item",
+				"Class Specific"
+            ]
         }
+        /* New item types ReMoDDeD - end */
     },
     "other_items": {
         "elx": {
@@ -42235,7 +44601,9272 @@ export let remodded_constants_99 = {
             "c": [
                 "Quest"
             ]
+        },
+        /* New item types ReMoDDeD - begin */
+        "Gu1": {
+            "iq": 0,
+            "n": "Gold Pile",
+            "s": 1,
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/gold_s",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Gold",
+                "Miscellaneous"
+            ]
+        },
+        "Gu2": {
+            "iq": 0,
+            "n": "Medium Gold Pile (legacy)",
+            "s": 1,
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/gold_m",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Gold",
+                "Miscellaneous"
+            ]
+        },
+        "Gu3": {
+            "iq": 0,
+            "n": "Large Gold Pile (legacy)",
+            "s": 1,
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/gold_l",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Gold",
+                "Miscellaneous"
+            ]
+        },
+        "Gu4": {
+            "iq": 0,
+            "n": "Extra Large Gold Pile (legacy)",
+            "s": 1,
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/gold_xl",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Gold",
+                "Miscellaneous"
+            ]
+        },
+        "Gu5": {
+            "iq": 0,
+            "n": "Extra Large Gold Pile 2 (legacy)",
+            "s": 1,
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/gold_xl",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Gold",
+                "Miscellaneous"
+            ]
+        },
+        "y08": {
+            "iq": 0,
+            "n": "The Statue of Mythos",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/mythos_log",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Tracking",
+                "Miscellaneous"
+            ]
+        },
+        "y09": {
+            "iq": 0,
+            "n": "Trasure Chest 1",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y10": {
+            "iq": 0,
+            "n": "Trasure Chest 2",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y11": {
+            "iq": 0,
+            "n": "Trasure Chest 3",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y12": {
+            "iq": 0,
+            "n": "Trasure Chest 4",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y13": {
+            "iq": 0,
+            "n": "Trasure Chest 5",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y14": {
+            "iq": 0,
+            "n": "Trasure Chest 6",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y15": {
+            "iq": 0,
+            "n": "Trasure Chest 7",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y16": {
+            "iq": 0,
+            "n": "Trasure Chest 8",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y17": {
+            "iq": 0,
+            "n": "Trasure Chest 9",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y18": {
+            "iq": 0,
+            "n": "Trasure Chest 10",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y19": {
+            "iq": 0,
+            "n": "Trasure Chest 11",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y20": {
+            "iq": 0,
+            "n": "Trasure Chest 12",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y21": {
+            "iq": 0,
+            "n": "Trasure Chest 13 (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y22": {
+            "iq": 0,
+            "n": "Trasure Chest 14 (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y23": {
+            "iq": 0,
+            "n": "Trasure Chest 15 (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y24": {
+            "iq": 0,
+            "n": "Trasure Chest 16 (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y25": {
+            "iq": 0,
+            "n": "Trasure Chest 17 (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y26": {
+            "iq": 0,
+            "n": "Trasure Chest 18 (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y27": {
+            "iq": 0,
+            "n": "Trasure Chest 19 (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y28": {
+            "iq": 0,
+            "n": "Trasure Chest 20 (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y29": {
+            "iq": 0,
+            "n": "Trasure Chest 21 (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y30": {
+            "iq": 0,
+            "n": "Trasure Chest 22 (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y31": {
+            "iq": 0,
+            "n": "Trasure Chest 23 (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y32": {
+            "iq": 0,
+            "n": "Trasure Chest 24 (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Chest",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Treasure",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Y20": {
+            "iq": 0,
+            "n": "Gold Bar",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/GoldBar",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Gold",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "GBd": {
+            "iq": 0,
+            "n": "Gold Bar Splitter",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/GoldBarDG",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Gold",
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Rgx": {
+            "iq": 0,
+            "n": "Ramaladni's Gift",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/ramaladnis_gift",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Cr1": {
+            "iq": 0,
+            "n": "Sparking Crystal (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/sparkingcrystal",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Cr2": {
+            "iq": 0,
+            "n": "Burning Crystal (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/burningcrystal",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Cr3": {
+            "iq": 0,
+            "n": "Frigid Crystal (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/frigidcrystal",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Cr4": {
+            "iq": 0,
+            "n": "Toxic Crystal (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/toxiccrystal",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Cr5": {
+            "iq": 0,
+            "n": "Hardened Crystal (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/hardenedcrystal",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Cr6": {
+            "iq": 0,
+            "n": "Shining Crystal (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/shiningcrystal",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "RXs": {
+            "iq": 0,
+            "n": "Reckoning Shard (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/reckoningshard",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "RXS": {
+            "iq": 0,
+            "n": "Reckoning Stone (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/reckoningstone",
+            "iw": 1,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "FSO": {
+            "iq": 0,
+            "n": "Fusing Ore (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/fusingore",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "UAP": {
+            "iq": 0,
+            "n": "Apparatus (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/apparatus",
+            "iw": 1,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "UCR": {
+            "iq": 0,
+            "n": "Unique Core (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/uniquecore",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Bbp": {
+            "iq": 0,
+            "n": "Basic Blueprints (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/bblueprint",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Xbp": {
+            "iq": 0,
+            "n": "Exceptional Blueprints (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/xblueprint",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Ebp": {
+            "iq": 0,
+            "n": "Elite Blueprints (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/eblueprint",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "S01": {
+            "iq": 0,
+            "n": "Soul Fragment",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/soulfragment",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "BoH": {
+            "iq": 0,
+            "n": "Beacon of Hope",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/beacon",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "EcW": {
+            "iq": 0,
+            "n": "Enchanted Wood (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enchanted_wood",
+            "iw": 1,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "IN1": {
+            "iq": 0,
+            "n": "Ashy Bone (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/ashy_bone",
+            "iw": 2,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "IN2": {
+            "iq": 0,
+            "n": "Broken Bone (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/broken_bone",
+            "iw": 2,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "IN3": {
+            "iq": 0,
+            "n": "Soulless Skull (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/kaa_skull",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "IN4": {
+            "iq": 0,
+            "n": "Frail Skull (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/frail_skull",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "IN5": {
+            "iq": 0,
+            "n": "Nevermelt Ice (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/never_melt",
+            "iw": 1,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "IN6": {
+            "iq": 0,
+            "n": "Charge Vein (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/charge_vein",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "IN7": {
+            "iq": 0,
+            "n": "Life Spark (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/life_spark",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "TK0": {
+            "iq": 0,
+            "n": "Expansion Token",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/token_global",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "TK1": {
+            "iq": 0,
+            "n": "Amazon Token",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/token_amazon",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "TK2": {
+            "iq": 0,
+            "n": "Sorceress Token",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/token_sorceress",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "TK3": {
+            "iq": 0,
+            "n": "Necromancer Token",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/token_necromancer",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "TK4": {
+            "iq": 0,
+            "n": "Paladin Token",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/token_paladin",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "TK5": {
+            "iq": 0,
+            "n": "Barbarian Token",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/token_barbarian",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "TK6": {
+            "iq": 0,
+            "n": "Druid Token",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/token_druid",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "TK7": {
+            "iq": 0,
+            "n": "Assassin Token",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/token_assassin",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "TK8": {
+            "iq": 0,
+            "n": "Token Forger",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/token_forger",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z01": {
+            "iq": 0,
+            "n": "Storage Bag<br>Quality of Life",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/storagebag",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z02": {
+            "iq": 0,
+            "n": "Amethyst Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_gb1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z03": {
+            "iq": 0,
+            "n": "Topaz Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_gb2",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z04": {
+            "iq": 0,
+            "n": "Sapphire Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_gb3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z05": {
+            "iq": 0,
+            "n": "Emerald Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_gb4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z06": {
+            "iq": 0,
+            "n": "Ruby Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_gb5",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z07": {
+            "iq": 0,
+            "n": "Diamond Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_gb6",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z08": {
+            "iq": 0,
+            "n": "Skull Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_gb7",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z09": {
+            "iq": 0,
+            "n": "El Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z10": {
+            "iq": 0,
+            "n": "Eld Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb2",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z11": {
+            "iq": 0,
+            "n": "Tir Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z12": {
+            "iq": 0,
+            "n": "Nef Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z13": {
+            "iq": 0,
+            "n": "Eth Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb5",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z14": {
+            "iq": 0,
+            "n": "Ith Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb6",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z15": {
+            "iq": 0,
+            "n": "Tal Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb7",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z16": {
+            "iq": 0,
+            "n": "Ral Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb8",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z17": {
+            "iq": 0,
+            "n": "Ort Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb9",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z18": {
+            "iq": 0,
+            "n": "Thul Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb10",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z19": {
+            "iq": 0,
+            "n": "Amn Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb11",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z20": {
+            "iq": 0,
+            "n": "Sol Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb12",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z21": {
+            "iq": 0,
+            "n": "Shael Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb13",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z22": {
+            "iq": 0,
+            "n": "Dol Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb14",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z23": {
+            "iq": 0,
+            "n": "Hel Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb15",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z24": {
+            "iq": 0,
+            "n": "Io Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb16",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z25": {
+            "iq": 0,
+            "n": "Lum Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb17",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z26": {
+            "iq": 0,
+            "n": "Ko Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb18",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z27": {
+            "iq": 0,
+            "n": "Fal Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb19",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z28": {
+            "iq": 0,
+            "n": "Lem Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb20",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z29": {
+            "iq": 0,
+            "n": "Pul Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb21",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z30": {
+            "iq": 0,
+            "n": "Um Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb22",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z31": {
+            "iq": 0,
+            "n": "Mal Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb23",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z32": {
+            "iq": 0,
+            "n": "Ist Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb24",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z33": {
+            "iq": 0,
+            "n": "Gul Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb25",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z34": {
+            "iq": 0,
+            "n": "Vex Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb26",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z35": {
+            "iq": 0,
+            "n": "Ohm Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb27",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z36": {
+            "iq": 0,
+            "n": "Lo Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb28",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z37": {
+            "iq": 0,
+            "n": "Sur Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb29",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z38": {
+            "iq": 0,
+            "n": "Ber Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb30",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z39": {
+            "iq": 0,
+            "n": "Jah Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb31",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z40": {
+            "iq": 0,
+            "n": "Cham Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb32",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z41": {
+            "iq": 0,
+            "n": "Zod Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/remover_rb33",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z42": {
+            "iq": 0,
+            "n": "Key of Terror Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/removerkb",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z43": {
+            "iq": 0,
+            "n": "Key of Hate Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/removerkb",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z44": {
+            "iq": 0,
+            "n": "Key of Destruction Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/removerkb",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z45": {
+            "iq": 0,
+            "n": "Diablo's Horn Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/removerob",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z46": {
+            "iq": 0,
+            "n": "Baal's Eye Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/removerob",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z47": {
+            "iq": 0,
+            "n": "Mephisto's Brain Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/removerob",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z48": {
+            "iq": 0,
+            "n": "Low -> Mid Rune Points Converter",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/runeconverter",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z49": {
+            "iq": 0,
+            "n": "Mid -> High Rune Points Converter",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/runeconverter",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z50": {
+            "iq": 0,
+            "n": "Low <- Mid Rune Points Converter",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/runeconverter",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z51": {
+            "iq": 0,
+            "n": "Mid <- High Rune Points Converter",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/runeconverter",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "Z52": {
+            "iq": 0,
+            "n": "Empty Bottle",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/cd_empty",
+            "iw": 1,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Dye",
+                "Miscellaneous"
+            ]
+        },
+        "Z53": {
+            "iq": 0,
+            "n": "Color Dye: White",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/cd_white",
+            "iw": 1,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Dye",
+                "Miscellaneous"
+            ]
+        },
+        "Z54": {
+            "iq": 0,
+            "n": "Color Dye: Black",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/cd_black",
+            "iw": 1,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Dye",
+                "Miscellaneous"
+            ]
+        },
+        "Z55": {
+            "iq": 0,
+            "n": "Color Dye: Blue",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/cd_blue",
+            "iw": 1,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Dye",
+                "Miscellaneous"
+            ]
+        },
+        "Z56": {
+            "iq": 0,
+            "n": "Color Dye: Red",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/cd_red",
+            "iw": 1,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Dye",
+                "Miscellaneous"
+            ]
+        },
+        "Z57": {
+            "iq": 0,
+            "n": "Color Dye: Green",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/cd_green",
+            "iw": 1,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Dye",
+                "Miscellaneous"
+            ]
+        },
+        "Z58": {
+            "iq": 0,
+            "n": "Color Dye: Yellow",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/cd_yellow",
+            "iw": 1,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Dye",
+                "Miscellaneous"
+            ]
+        },
+        "Z59": {
+            "iq": 0,
+            "n": "Color Dye: Purple",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/cd_purple",
+            "iw": 1,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Dye",
+                "Miscellaneous"
+            ]
+        },
+        "Z60": {
+            "iq": 0,
+            "n": "+2 Level Requirement<br>+2 Strength<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z61": {
+            "iq": 0,
+            "n": "+2 Level Requirement<br>+2 Dexterity<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z62": {
+            "iq": 0,
+            "n": "+2 Level Requirement<br>+2 Vitality<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z63": {
+            "iq": 0,
+            "n": "+2 Level Requirement<br>+2 Energy<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z64": {
+            "iq": 0,
+            "n": "+3 Level Requirement<br>+1% Faster Run/Walk<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z65": {
+            "iq": 0,
+            "n": "+3 Level Requirement<br>+1% Faster Hit Recovery<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z66": {
+            "iq": 0,
+            "n": "+3 Level Requirement<br>+1% Faster Block Rate<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z66": {
+            "iq": 0,
+            "n": "+3 Level Requirement<br>+1% Faster Block Rate<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z67": {
+            "iq": 0,
+            "n": "+3 Level Requirement<br>+1% Faster Attack Rate<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z68": {
+            "iq": 0,
+            "n": "+3 Level Requirement<br>+1% Faster Cast Rate<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z69": {
+            "iq": 0,
+            "n": "+3 Level Requirement<br>+2% Summon HP<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z70": {
+            "iq": 0,
+            "n": "+3 Level Requirement<br>+2% Summon Damage<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z71": {
+            "iq": 0,
+            "n": "+3 Level Requirement<br>+2% Summon Combat Rating<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z72": {
+            "iq": 0,
+            "n": "+3 Level Requirement<br>Increase Curse Duration by 1s<br>Enhancement Crystal (Unlimited)<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z73": {
+            "iq": 0,
+            "n": "+3 Level Requirement<br>Increase Curse Radius by 1<br>Enhancement Crystal (Unlimited)<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z74": {
+            "iq": 0,
+            "n": "+3 Level Requirement<br>Curse Duration On Self Reduced by 3%<br>Enhancement Crystal (Unlimited)<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z75": {
+            "iq": 0,
+            "n": "+3 Level Requirement<br>+1% Block Chance<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z76": {
+            "iq": 0,
+            "n": "+3 Level Requirement<br>+2% Fire Resist<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z77": {
+            "iq": 0,
+            "n": "+3 Level Requirement<br>+2% Cold Resist<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z78": {
+            "iq": 0,
+            "n": "+3 Level Requirement<br>+2% Lightning Resist<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z79": {
+            "iq": 0,
+            "n": "+3 Level Requirement<br>+2% Poison Resist<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z80": {
+            "iq": 0,
+            "n": "+5 Level Requirement<br>+5% Bonus to Attack Rating<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z81": {
+            "iq": 0,
+            "n": "+4 Level Requirement<br>+150 Attack Rating<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z82": {
+            "iq": 0,
+            "n": "+2 Level Requirement<br>+1-4 Damage<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z83": {
+            "iq": 0,
+            "n": "+3 Level Requirement<br>+4% Enhanced Damage<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z84": {
+            "iq": 0,
+            "n": "+2 Level Requirement<br>+4-7 Fire Damage<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z85": {
+            "iq": 0,
+            "n": "+2 Level Requirement<br>+4-7 Cold Damage<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z86": {
+            "iq": 0,
+            "n": "+2 Level Requirement<br>+4-14 Lightning Damage<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z87": {
+            "iq": 0,
+            "n": "+2 Level Requirement<br>+10-20 Poison Damage over 2s<br>Enhancement Crystal (Unlimited)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z88": {
+            "iq": 0,
+            "n": "+5 Level Requirement<br>+5% Magic Find<br>Enhancement Crystal (10 Uses per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal2",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z89": {
+            "iq": 0,
+            "n": "+5 Level Requirement<br>+10% Gold Find<br>Enhancement Crystal (10 Uses per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal2",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z90": {
+            "iq": 0,
+            "n": "+5 Level Requirement<br>+1% Life Steal<br>Enhancement Crystal (10 Uses per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal2",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z91": {
+            "iq": 0,
+            "n": "+5 Level Requirement<br>+1% Mana Steal<br>Enhancement Crystal (10 Uses per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal2",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z92": {
+            "iq": 0,
+            "n": "+2 Level Requirement<br>+5% Mana Regen<br>Enhancement Crystal (10 Uses per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal2",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z93": {
+            "iq": 0,
+            "n": "+2 Level Requirement<br>Hits Reduce Def by 10<br>Enhancement Crystal (10 Uses per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal2",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z94": {
+            "iq": 0,
+            "n": "+2 Level Requirement<br>+5 Physical Damage Reduction<br>Enhancement Crystal (10 Uses per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal2",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z95": {
+            "iq": 0,
+            "n": "+2 Level Requirement<br>+5 Magical Damage Reduction<br>Enhancement Crystal (10 Uses per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal2",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z96": {
+            "iq": 0,
+            "n": "+30 Level Requirement<br>+1 to All Skills<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z97": {
+            "iq": 0,
+            "n": "+30 Level Requirement<br>+10% All Resist<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z98": {
+            "iq": 0,
+            "n": "+15 Level Requirement<br>+5% Crushing Blow<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "Z99": {
+            "iq": 0,
+            "n": "+15 Level Requirement<br>+5% Open Wounds<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "z00": {
+            "iq": 0,
+            "n": "+15 Level Requirement<br>+5% Deadly Strike<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "z01": {
+            "iq": 0,
+            "n": "+25 Level Requirement<br>+1 Summoning Power<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "z02": {
+            "iq": 0,
+            "n": "+25 Level Requirement<br>+1 Combat Power<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "z03": {
+            "iq": 0,
+            "n": "+25 Level Requirement<br>+1 Spell Power<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "z04": {
+            "iq": 0,
+            "n": "+25 Level Requirement<br>+5% Max Fire Resist<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "z05": {
+            "iq": 0,
+            "n": "+25 Level Requirement<br>+5% Max Cold Resist<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "z06": {
+            "iq": 0,
+            "n": "+25 Level Requirement<br>+5% Max Lightning Resist<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "z07": {
+            "iq": 0,
+            "n": "+25 Level Requirement<br>+5% Max Poison Resist<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "z08": {
+            "iq": 0,
+            "n": "+10 Level Requirement<br>-10% Enemy Fire Resistance<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "z09": {
+            "iq": 0,
+            "n": "+10 Level Requirement<br>-10% Enemy Cold Resistance<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "z10": {
+            "iq": 0,
+            "n": "+10 Level Requirement<br>-10% Enemy Lightning Resistance<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "z11": {
+            "iq": 0,
+            "n": "+10 Level Requirement<br>-10% Enemy Poison Resistance<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "z12": {
+            "iq": 0,
+            "n": "+15 Level Requirement<br>Enemy Cold Immunity Reduced by 10%<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "z13": {
+            "iq": 0,
+            "n": "+15 Level Requirement<br>Enemy Fire Immunity Reduced by 10%<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "z14": {
+            "iq": 0,
+            "n": "+15 Level Requirement<br>Enemy Lightning Immunity Reduced by 10%<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "z15": {
+            "iq": 0,
+            "n": "+15 Level Requirement<br>Enemy Poison Immunity Reduced by 10%<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "z16": {
+            "iq": 0,
+            "n": "+15 Level Requirement<br>Enemy Physical Immunity Reduced by 10%<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "z17": {
+            "iq": 0,
+            "n": "+15 Level Requirement<br>Enemy Magic Immunity Reduced by 10%<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "z18": {
+            "iq": 0,
+            "n": "+30 Level Requirement<br>All Enemy Immunities Reduced by 10%<br>Enhancement Crystal (1 Use per Item)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "y33": {
+            "iq": 0,
+            "n": "Gem Vein",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/gemvein",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Enhance",
+                "Miscellaneous"
+            ]
+        },
+        "y66": {
+            "iq": 0,
+            "n": "Starter's Cube of Endless Convenience",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/reroller",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "y67": {
+            "iq": 0,
+            "n": "Starter's Cube of Endless Convenience (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/reroller",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "a00": {
+            "iq": 0,
+            "n": "Unique Weapon Blood Contract",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a01": {
+            "iq": 0,
+            "n": "Unique Armor Blood Contract",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a02": {
+            "iq": 0,
+            "n": "Unique Jewelry Blood Contract=",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a03": {
+            "iq": 0,
+            "n": "Set Weapon Blood Contract",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a04": {
+            "iq": 0,
+            "n": "Set Armor Blood Contract",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a05": {
+            "iq": 0,
+            "n": "Set Jewelry Blood Contract",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a06": {
+            "iq": 0,
+            "n": "(Cube with your Soul Tracker to receive an HP buff)<br>Scroll of Triumph",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/triumph_scroll",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "a07": {
+            "iq": 0,
+            "n": "Unique Paladin Shield Blood Contract (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a07": {
+            "iq": 0,
+            "n": "Unique Paladin Shield Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a08": {
+            "iq": 0,
+            "n": "Unique Paladin Shield Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a09": {
+            "iq": 0,
+            "n": "Unique Assassin Boots Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a10": {
+            "iq": 0,
+            "n": "Unique Assassin Boots Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a11": {
+            "iq": 0,
+            "n": "Unique Assassin Boots Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a12": {
+            "iq": 0,
+            "n": "Unique Axe Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a13": {
+            "iq": 0,
+            "n": "Unique Axe Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a14": {
+            "iq": 0,
+            "n": "Unique Axe Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a15": {
+            "iq": 0,
+            "n": "Unique Belt Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a16": {
+            "iq": 0,
+            "n": "Unique Belt Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a17": {
+            "iq": 0,
+            "n": "Unique Belt Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a18": {
+            "iq": 0,
+            "n": "Unique Necromancer Helm Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a19": {
+            "iq": 0,
+            "n": "Unique Necromancer Helm Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a20": {
+            "iq": 0,
+            "n": "Unique Necromancer Helm Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a21": {
+            "iq": 0,
+            "n": "Unique Boots Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a22": {
+            "iq": 0,
+            "n": "Unique Boots Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a23": {
+            "iq": 0,
+            "n": "Unique Boots Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a24": {
+            "iq": 0,
+            "n": "Unique Bow Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a25": {
+            "iq": 0,
+            "n": "Unique Bow Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a26": {
+            "iq": 0,
+            "n": "Unique Bow Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a27": {
+            "iq": 0,
+            "n": "Unique Druid Branch Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a28": {
+            "iq": 0,
+            "n": "Unique Druid Branch Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a29": {
+            "iq": 0,
+            "n": "Unique Druid Branch Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a30": {
+            "iq": 0,
+            "n": "Unique Necromancer Shield Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a31": {
+            "iq": 0,
+            "n": "Unique Necromancer Shield Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a32": {
+            "iq": 0,
+            "n": "Unique Necromancer Shield Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a33": {
+            "iq": 0,
+            "n": "Unique Circlet Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a34": {
+            "iq": 0,
+            "n": "Unique Circlet Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a35": {
+            "iq": 0,
+            "n": "Unique Circlet Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a36": {
+            "iq": 0,
+            "n": "Unique Club Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a37": {
+            "iq": 0,
+            "n": "Unique Club Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a38": {
+            "iq": 0,
+            "n": "Unique Club Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a39": {
+            "iq": 0,
+            "n": "Unique Gloves Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a40": {
+            "iq": 0,
+            "n": "Unique Gloves Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a41": {
+            "iq": 0,
+            "n": "Unique Gloves Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a42": {
+            "iq": 0,
+            "n": "Unique Assassin Claws Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a43": {
+            "iq": 0,
+            "n": "Unique Assassin Claws Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a44": {
+            "iq": 0,
+            "n": "Unique Assassin Claws Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a45": {
+            "iq": 0,
+            "n": "Unique Assassin Blade Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a46": {
+            "iq": 0,
+            "n": "Unique Assassin Blade Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a47": {
+            "iq": 0,
+            "n": "Unique Assassin Blade Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a48": {
+            "iq": 0,
+            "n": "Unique Hammer Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a49": {
+            "iq": 0,
+            "n": "Unique Hammer Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a50": {
+            "iq": 0,
+            "n": "Unique Hammer Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a51": {
+            "iq": 0,
+            "n": "Unique Necromancer Shield Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a52": {
+            "iq": 0,
+            "n": "Unique Necromancer Shield Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a53": {
+            "iq": 0,
+            "n": "Unique Necromancer Shield Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a54": {
+            "iq": 0,
+            "n": "Unique Helm Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a55": {
+            "iq": 0,
+            "n": "Unique Helm Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a56": {
+            "iq": 0,
+            "n": "Unique Helm Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a57": {
+            "iq": 0,
+            "n": "Unique Javelin Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a58": {
+            "iq": 0,
+            "n": "Unique Javelin Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a59": {
+            "iq": 0,
+            "n": "Unique Javelin Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a60": {
+            "iq": 0,
+            "n": "Unique Assassin Sword Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a61": {
+            "iq": 0,
+            "n": "Unique Assassin Sword Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a62": {
+            "iq": 0,
+            "n": "Unique Assassin Sword Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a63": {
+            "iq": 0,
+            "n": "Unique Knife Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a64": {
+            "iq": 0,
+            "n": "Unique Knife Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a65": {
+            "iq": 0,
+            "n": "Unique Knife Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a66": {
+            "iq": 0,
+            "n": "Unique Mace Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a67": {
+            "iq": 0,
+            "n": "Unique Mace Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a68": {
+            "iq": 0,
+            "n": "Unique Mace Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a69": {
+            "iq": 0,
+            "n": "Unique Barbarian Axe Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a70": {
+            "iq": 0,
+            "n": "Unique Barbarian Axe Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a71": {
+            "iq": 0,
+            "n": "Unique Barbarian Axe Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a72": {
+            "iq": 0,
+            "n": "Unique Barbarian Hammer Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a73": {
+            "iq": 0,
+            "n": "Unique Barbarian Hammer Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a74": {
+            "iq": 0,
+            "n": "Unique Barbarian Hammer Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a75": {
+            "iq": 0,
+            "n": "Unique Necromancer Dagger Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a76": {
+            "iq": 0,
+            "n": "Unique Necromancer Dagger Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a77": {
+            "iq": 0,
+            "n": "Unique Necromancer Dagger Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a78": {
+            "iq": 0,
+            "n": "Unique Orb Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a79": {
+            "iq": 0,
+            "n": "Unique Orb Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a80": {
+            "iq": 0,
+            "n": "Unique Orb Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a81": {
+            "iq": 0,
+            "n": "Unique Paladin Armor Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a82": {
+            "iq": 0,
+            "n": "Unique Paladin Armor Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a83": {
+            "iq": 0,
+            "n": "Unique Paladin Armor Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a84": {
+            "iq": 0,
+            "n": "Unique Druid Armor Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a85": {
+            "iq": 0,
+            "n": "Unique Druid Armor Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a86": {
+            "iq": 0,
+            "n": "Unique Druid Armor Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a87": {
+            "iq": 0,
+            "n": "Unique Barbarian Helm Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a88": {
+            "iq": 0,
+            "n": "Unique Barbarian Helm Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a89": {
+            "iq": 0,
+            "n": "Unique Barbarian Helm Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a90": {
+            "iq": 0,
+            "n": "Unique Polearm Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a91": {
+            "iq": 0,
+            "n": "Unique Polearm Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a92": {
+            "iq": 0,
+            "n": "Unique Polearm Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a93": {
+            "iq": 0,
+            "n": "Unique Scepter Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a94": {
+            "iq": 0,
+            "n": "Unique Scepter Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a95": {
+            "iq": 0,
+            "n": "Unique Scepter Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a96": {
+            "iq": 0,
+            "n": "Unique Necromancer Scythe Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a97": {
+            "iq": 0,
+            "n": "Unique Necromancer Scythe Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a98": {
+            "iq": 0,
+            "n": "Unique Necromancer Scythe Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "a99": {
+            "iq": 0,
+            "n": "Unique Shield Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A00": {
+            "iq": 0,
+            "n": "Unique Shield Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A01": {
+            "iq": 0,
+            "n": "Unique Shield Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A02": {
+            "iq": 0,
+            "n": "Unique Staff Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A03": {
+            "iq": 0,
+            "n": "Unique Staff Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A04": {
+            "iq": 0,
+            "n": "Unique Staff Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A05": {
+            "iq": 0,
+            "n": "Unique Sword Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A06": {
+            "iq": 0,
+            "n": "Unique Sword Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A07": {
+            "iq": 0,
+            "n": "Unique Sword Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A08": {
+            "iq": 0,
+            "n": "Unique Throwing Axe Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A09": {
+            "iq": 0,
+            "n": "Unique Throwing Axe Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A10": {
+            "iq": 0,
+            "n": "Unique Throwing Axe Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A11": {
+            "iq": 0,
+            "n": "Unique Throwing Knife Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A12": {
+            "iq": 0,
+            "n": "Unique Throwing Knife Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A13": {
+            "iq": 0,
+            "n": "Unique Throwing Knife Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A14": {
+            "iq": 0,
+            "n": "Unique Chest Armor Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A15": {
+            "iq": 0,
+            "n": "Unique Chest Armor Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A16": {
+            "iq": 0,
+            "n": "Unique Chest Armor Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A17": {
+            "iq": 0,
+            "n": "Unique Wand Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A18": {
+            "iq": 0,
+            "n": "Unique Wand Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A19": {
+            "iq": 0,
+            "n": "Unique Wand Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A20": {
+            "iq": 0,
+            "n": "Unique Druid Armor Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A21": {
+            "iq": 0,
+            "n": "Unique Druid Armor Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A22": {
+            "iq": 0,
+            "n": "Unique Druid Armor Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A23": {
+            "iq": 0,
+            "n": "Unique Sorceress Blade Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A24": {
+            "iq": 0,
+            "n": "Unique Sorceress Blade Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A25": {
+            "iq": 0,
+            "n": "Unique Sorceress Blade Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A26": {
+            "iq": 0,
+            "n": "Unique Amazon Shield Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A27": {
+            "iq": 0,
+            "n": "Unique Amazon Shield Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A28": {
+            "iq": 0,
+            "n": "Unique Amazon Shield Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A29": {
+            "iq": 0,
+            "n": "Set Amazon Bow Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A30": {
+            "iq": 0,
+            "n": "Set Amazon Bow Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A31": {
+            "iq": 0,
+            "n": "Set Amazon Bow Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A32": {
+            "iq": 0,
+            "n": "Set Amazon Javelin Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A33": {
+            "iq": 0,
+            "n": "Set Amazon Javelin Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A34": {
+            "iq": 0,
+            "n": "Set Amazon Javelin Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A35": {
+            "iq": 0,
+            "n": "Set Paladin Shield Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A36": {
+            "iq": 0,
+            "n": "Set Paladin Shield Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A37": {
+            "iq": 0,
+            "n": "Set Paladin Shield Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A38": {
+            "iq": 0,
+            "n": "Set Assassin Boots Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A39": {
+            "iq": 0,
+            "n": "Set Assassin Boots Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A40": {
+            "iq": 0,
+            "n": "Set Assassin Boots Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A41": {
+            "iq": 0,
+            "n": "Set Axe Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A42": {
+            "iq": 0,
+            "n": "Set Axe Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A43": {
+            "iq": 0,
+            "n": "Set Axe Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A44": {
+            "iq": 0,
+            "n": "Set Belt Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A45": {
+            "iq": 0,
+            "n": "Set Belt Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A46": {
+            "iq": 0,
+            "n": "Set Belt Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A47": {
+            "iq": 0,
+            "n": "Set Necromancer Helm Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A48": {
+            "iq": 0,
+            "n": "Set Necromancer Helm Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A49": {
+            "iq": 0,
+            "n": "Set Necromancer Helm Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A50": {
+            "iq": 0,
+            "n": "Set Boots Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A51": {
+            "iq": 0,
+            "n": "Set Boots Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A52": {
+            "iq": 0,
+            "n": "Set Boots Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A53": {
+            "iq": 0,
+            "n": "Set Bow Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A54": {
+            "iq": 0,
+            "n": "Set Bow Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A55": {
+            "iq": 0,
+            "n": "Set Bow Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A56": {
+            "iq": 0,
+            "n": "Set Druid Branch Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A57": {
+            "iq": 0,
+            "n": "Set Druid Branch Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A58": {
+            "iq": 0,
+            "n": "Set Druid Branch Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A59": {
+            "iq": 0,
+            "n": "Set Necromancer Shield Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A60": {
+            "iq": 0,
+            "n": "Set Necromancer Shield Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A61": {
+            "iq": 0,
+            "n": "Set Necromancer Shield Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A62": {
+            "iq": 0,
+            "n": "Set Circlet Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A63": {
+            "iq": 0,
+            "n": "Set Circlet Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A64": {
+            "iq": 0,
+            "n": "Set Circlet Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A65": {
+            "iq": 0,
+            "n": "Set Club Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A66": {
+            "iq": 0,
+            "n": "Set Club Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A67": {
+            "iq": 0,
+            "n": "Set Club Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A68": {
+            "iq": 0,
+            "n": "Set Gloves Blood Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A69": {
+            "iq": 0,
+            "n": "Set Gloves Blood Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A70": {
+            "iq": 0,
+            "n": "Set Gloves Blood Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A71": {
+            "iq": 0,
+            "n": "Set Assassin Claws Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A72": {
+            "iq": 0,
+            "n": "Set Assassin Claws Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A73": {
+            "iq": 0,
+            "n": "Set Assassin Claws Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A74": {
+            "iq": 0,
+            "n": "Set Assassin Blade Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A75": {
+            "iq": 0,
+            "n": "Set Assassin Blade Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A76": {
+            "iq": 0,
+            "n": "Set Assassin Blade Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A77": {
+            "iq": 0,
+            "n": "Set Hammer Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A78": {
+            "iq": 0,
+            "n": "Set Hammer Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A79": {
+            "iq": 0,
+            "n": "Set Hammer Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A80": {
+            "iq": 0,
+            "n": "Set Necromancer Shield Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A81": {
+            "iq": 0,
+            "n": "Set Necromancer Shield Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A82": {
+            "iq": 0,
+            "n": "Set Necromancer Shield Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A83": {
+            "iq": 0,
+            "n": "Set Helm Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A84": {
+            "iq": 0,
+            "n": "Set Helm Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A85": {
+            "iq": 0,
+            "n": "Set Helm Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A86": {
+            "iq": 0,
+            "n": "Set Javelin Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A87": {
+            "iq": 0,
+            "n": "Set Javelin Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A88": {
+            "iq": 0,
+            "n": "Set Javelin Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A89": {
+            "iq": 0,
+            "n": "Set Assassin Sword Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A90": {
+            "iq": 0,
+            "n": "Set Assassin Sword Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A91": {
+            "iq": 0,
+            "n": "Set Assassin Sword Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A92": {
+            "iq": 0,
+            "n": "Set Knife Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A93": {
+            "iq": 0,
+            "n": "Set Knife Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A94": {
+            "iq": 0,
+            "n": "Set Knife Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A95": {
+            "iq": 0,
+            "n": "Set Mace Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A96": {
+            "iq": 0,
+            "n": "Set Mace Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A97": {
+            "iq": 0,
+            "n": "Set Mace Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A98": {
+            "iq": 0,
+            "n": "Set Barbarian Axe Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "A99": {
+            "iq": 0,
+            "n": "Set Barbarian Axe Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b00": {
+            "iq": 0,
+            "n": "Set Barbarian Axe Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b01": {
+            "iq": 0,
+            "n": "Set Barbarian Hammer Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b02": {
+            "iq": 0,
+            "n": "Set Barbarian Hammer Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b03": {
+            "iq": 0,
+            "n": "Set Barbarian Hammer Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b04": {
+            "iq": 0,
+            "n": "Set Necromancer Dagger Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b05": {
+            "iq": 0,
+            "n": "Set Necromancer Dagger Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b06": {
+            "iq": 0,
+            "n": "Set Necromancer Dagger Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b07": {
+            "iq": 0,
+            "n": "Set Orb Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b08": {
+            "iq": 0,
+            "n": "Set Orb Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b09": {
+            "iq": 0,
+            "n": "Set Orb Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b10": {
+            "iq": 0,
+            "n": "Set Paladin Armor Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b11": {
+            "iq": 0,
+            "n": "Set Paladin Armor Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b12": {
+            "iq": 0,
+            "n": "Set Paladin Armor Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b13": {
+            "iq": 0,
+            "n": "Set Druid Armor Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b14": {
+            "iq": 0,
+            "n": "Set Druid Armor Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b15": {
+            "iq": 0,
+            "n": "Set Druid Armor Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b16": {
+            "iq": 0,
+            "n": "Set Barbarian Helm Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b17": {
+            "iq": 0,
+            "n": "Set Barbarian Helm Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b18": {
+            "iq": 0,
+            "n": "Set Barbarian Helm Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b19": {
+            "iq": 0,
+            "n": "Set Polearm Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b20": {
+            "iq": 0,
+            "n": "Set Polearm Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b21": {
+            "iq": 0,
+            "n": "Set Polearm Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b22": {
+            "iq": 0,
+            "n": "Set Scepter Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b23": {
+            "iq": 0,
+            "n": "Set Scepter Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b24": {
+            "iq": 0,
+            "n": "Set Scepter Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b25": {
+            "iq": 0,
+            "n": "Set Necromancer Scythe Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b26": {
+            "iq": 0,
+            "n": "Set Necromancer Scythe Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b27": {
+            "iq": 0,
+            "n": "Set Necromancer Scythe Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b28": {
+            "iq": 0,
+            "n": "Set Shield Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b29": {
+            "iq": 0,
+            "n": "Set Shield Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b30": {
+            "iq": 0,
+            "n": "Set Shield Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b31": {
+            "iq": 0,
+            "n": "Set Staff Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b32": {
+            "iq": 0,
+            "n": "Set Staff Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b33": {
+            "iq": 0,
+            "n": "Set Staff Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b34": {
+            "iq": 0,
+            "n": "Set Sword Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b35": {
+            "iq": 0,
+            "n": "Set Sword Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b36": {
+            "iq": 0,
+            "n": "Set Sword Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b37": {
+            "iq": 0,
+            "n": "Set Throwing Axe Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b38": {
+            "iq": 0,
+            "n": "Set Throwing Axe Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b39": {
+            "iq": 0,
+            "n": "Set Throwing Axe Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b40": {
+            "iq": 0,
+            "n": "Set Throwing Knife Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b41": {
+            "iq": 0,
+            "n": "Set Throwing Knife Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b42": {
+            "iq": 0,
+            "n": "Set Throwing Knife Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b43": {
+            "iq": 0,
+            "n": "Set Chest Armor Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b44": {
+            "iq": 0,
+            "n": "Set Chest Armor Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b45": {
+            "iq": 0,
+            "n": "Set Chest Armor Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b46": {
+            "iq": 0,
+            "n": "Set Wand Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b47": {
+            "iq": 0,
+            "n": "Set Wand Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b48": {
+            "iq": 0,
+            "n": "Set Wand Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b49": {
+            "iq": 0,
+            "n": "Set Druid Armor Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b50": {
+            "iq": 0,
+            "n": "Set Druid Armor Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b51": {
+            "iq": 0,
+            "n": "Set Druid Armor Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b52": {
+            "iq": 0,
+            "n": "Set Sorceress Blade Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b53": {
+            "iq": 0,
+            "n": "Set Sorceress Blade Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b54": {
+            "iq": 0,
+            "n": "Set Sorceress Blade Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b55": {
+            "iq": 0,
+            "n": "Set Amazon Shield Contract (Normal) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b56": {
+            "iq": 0,
+            "n": "Set Amazon Shield Contract (Exceptional) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "b57": {
+            "iq": 0,
+            "n": "Set Amazon Shield Contract (Elite) (legacy)",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/Blood_Contract",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Blood Contract",
+                "Miscellaneous"
+            ]
+        },
+        "z19": {
+            "iq": 0,
+            "n": "+2 Strength<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z20": {
+            "iq": 0,
+            "n": "+2 Dexterity<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z21": {
+            "iq": 0,
+            "n": "+2 Vitality<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z22": {
+            "iq": 0,
+            "n": "+2 Energy<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z23": {
+            "iq": 0,
+            "n": "+1% Faster Run/Walk<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z24": {
+            "iq": 0,
+            "n": "+1% Faster Hit Recovery<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z25": {
+            "iq": 0,
+            "n": "+1% Faster Block Rate<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z26": {
+            "iq": 0,
+            "n": "+1% Faster Attack Rate<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z27": {
+            "iq": 0,
+            "n": "+1% Faster Cast Speed<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z28": {
+            "iq": 0,
+            "n": "+2% Summon HP<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z29": {
+            "iq": 0,
+            "n": "+2% Summon Damage<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z30": {
+            "iq": 0,
+            "n": "+1% Summon Combat Rating<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z31": {
+            "iq": 0,
+            "n": "Increase Curse Duration by 1s<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z32": {
+            "iq": 0,
+            "n": "Increase Curse Radius by 1<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z33": {
+            "iq": 0,
+            "n": "Curse Duration on Self Reduced by 3%<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z34": {
+            "iq": 0,
+            "n": "+1% Block Chance<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z35": {
+            "iq": 0,
+            "n": "+2% Fire Resist<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z36": {
+            "iq": 0,
+            "n": "+2% Cold Resist<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z37": {
+            "iq": 0,
+            "n": "+2% Lightning Resist<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z38": {
+            "iq": 0,
+            "n": "+2% Poison Resist<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z39": {
+            "iq": 0,
+            "n": "+5% Bonus to Attack Rating<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z40": {
+            "iq": 0,
+            "n": "+150 to Attack Rating<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z41": {
+            "iq": 0,
+            "n": "+1-4 Damage<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z42": {
+            "iq": 0,
+            "n": "+4% Enhanced Damage<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z43": {
+            "iq": 0,
+            "n": "+4-7 Fire Damage<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z44": {
+            "iq": 0,
+            "n": "+4-7 Cold Damage<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z45": {
+            "iq": 0,
+            "n": "+1-14 Lightning Damage<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z46": {
+            "iq": 0,
+            "n": "+10-10 Poison Damage over 2s<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z47": {
+            "iq": 0,
+            "n": "+5% Magic Find<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z48": {
+            "iq": 0,
+            "n": "+10% Gold Find<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z49": {
+            "iq": 0,
+            "n": "+1% Life Steal<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z50": {
+            "iq": 0,
+            "n": "+1% Mana Steal<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z51": {
+            "iq": 0,
+            "n": "+5% Mana Regen<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z52": {
+            "iq": 0,
+            "n": "Hits Reduce Def by 10<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z53": {
+            "iq": 0,
+            "n": "+5 Physical Damage Reduction<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z54": {
+            "iq": 0,
+            "n": "+5 Magical Damage Reduction<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z55": {
+            "iq": 0,
+            "n": "+1 to All Skills<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z56": {
+            "iq": 0,
+            "n": "+10 to All Resist<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z57": {
+            "iq": 0,
+            "n": "+5% Crushing Blow<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z58": {
+            "iq": 0,
+            "n": "+5% Open Wounds<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z59": {
+            "iq": 0,
+            "n": "+5% Deadly Strike<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z60": {
+            "iq": 0,
+            "n": "+1 Summoning Power<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z61": {
+            "iq": 0,
+            "n": "+1 Combat Power<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z62": {
+            "iq": 0,
+            "n": "+1 Spell Power<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z63": {
+            "iq": 0,
+            "n": "+5% Max Fire Resist<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z64": {
+            "iq": 0,
+            "n": "+5% Max Cold Resist<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z65": {
+            "iq": 0,
+            "n": "+5% Max Lightning Resist<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z66": {
+            "iq": 0,
+            "n": "+5% Max Poison Resist<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z67": {
+            "iq": 0,
+            "n": "-10% Enemy Fire Resist<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z68": {
+            "iq": 0,
+            "n": "-10% Enemy Cold Resist<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z69": {
+            "iq": 0,
+            "n": "-10% Enemy Lightning Resist<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z70": {
+            "iq": 0,
+            "n": "-10% Enemy Poison Resist<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z71": {
+            "iq": 0,
+            "n": "-10% Enemy Fire Immunity<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z72": {
+            "iq": 0,
+            "n": "-10% Enemy Cold Immunity<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z73": {
+            "iq": 0,
+            "n": "-10% Enemy Lightning Immunity<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z74": {
+            "iq": 0,
+            "n": "-10% Enemy Poison Immunity<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z75": {
+            "iq": 0,
+            "n": "-10% Enemy Physical Immunity<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z76": {
+            "iq": 0,
+            "n": "-10% Enemy Magic Immunity<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "z77": {
+            "iq": 0,
+            "n": "-10% All Enemy Immunities<br>Enhancement Remover Crystal",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/enhancecrystal4",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "b64": {
+            "iq": 0,
+            "n": "Socket Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/srmv",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "b65": {
+            "iq": 0,
+            "n": "Premium Socket Remover",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/ssrmv",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Miscellaneous"
+            ]
+        },
+        "K01": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 11 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K02": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 12 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K03": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 13 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K04": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 14 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K05": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 15 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K06": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 16 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K07": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 17 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K08": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 18 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K09": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 19 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K10": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 20 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K11": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 21 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K12": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 22 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K13": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 23 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K14": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 24 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K15": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 25 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K16": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 26 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K17": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 27 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K18": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 28 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K19": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 29 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K20": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 30 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K21": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 31 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K22": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 32 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K23": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 33 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K24": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 34 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K25": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 35 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K26": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 36 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K27": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 37 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K28": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 38 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K29": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 39 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K30": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 40 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K31": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 41 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K32": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 42 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K33": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 43 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K34": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 44 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K35": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 45 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K36": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 46 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K37": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 47 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K38": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 48 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K39": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 49 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K40": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 50 of Torment Trial",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K41": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 11 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K42": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 12 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K43": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 13 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K44": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 14 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K45": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 15 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K46": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 16 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K47": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 17 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K48": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 18 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K49": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 19 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K50": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 20 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K51": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 21 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K52": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 22 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K53": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 23 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K54": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 24 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K55": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 25 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K56": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 26 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K57": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 27 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K58": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 28 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K59": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 29 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K60": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 30 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K61": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 31 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K62": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 32 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K63": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 33 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K64": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 34 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K65": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 35 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K66": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 36 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K67": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 37 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K68": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 38 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K69": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 39 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K70": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 40 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K71": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 41 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K72": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 42 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K73": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 43 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K74": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 44 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K75": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 45 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K76": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 46 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K77": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 47 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K78": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 48 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K79": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 49 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
+        },
+        "K80": {
+            "iq": 0,
+            "n": "Scroll of Torment<br>Level 50 of Icy Hell",
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom/tt_ticket",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Cube Material",
+                "Torment Trials",
+                "Miscellaneous"
+            ]
         }
+        /* New item types ReMoDDeD - end */
     },
     "version": "vanilla_constants_99"
 };
