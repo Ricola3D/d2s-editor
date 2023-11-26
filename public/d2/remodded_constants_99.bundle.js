@@ -694,9 +694,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 99,
-            "s": "???",
-            // "s": "Prayer",
-            "c": "pal"
+            "s": "Prayer (item)",
+            // "c": "pal"
         },
         {
             "id": 100,
@@ -720,9 +719,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 104,
-            "s": "???",
-            // "s": "Defiance",
-            "c": "pal"
+            "s": "Defiance (item)",
+            // "c": "pal"
         },
         {
             "id": 105,
@@ -742,9 +740,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 108,
-            "s": "???",
-            // "s": "Blessed Aim",
-            "c": "pal"
+            "s": "Blessed Aim (item)",
+            // "c": "pal"
         },
         {
             "id": 109,
@@ -1000,25 +997,43 @@ export let remodded_constants_99 = {
             "c": "bar"
         },
         {
-            "id": 155,
+            "id": 156,
             "s": "Artic Blast (item)",
         },
-        null,
-        null,
-        null,
+        {
+            "id": 157,
+            "s": "Slow Missile (item)"
+        },
+        {
+            "id": 158,
+            "s": "Shock Wave (item)"
+        },
+        {
+            "id": 159,
+            "s": "Hunger (item)"
+        },
         {
             "id": 160,
             "s": "Oak Sage (item)",
         },
         {
             "id": 161,
-            "s": "Feeble Frame (item)" // New
+            "s": "Feeble Frame (item)"
+        },
+        {
+            "id": 162,
+            "s": "Teleport (item)"
+        },
+        {
+            "id": 163,
+            "s": "Double Strike (item)"
         },
         null,
         null,
-        null,
-        null,
-        null,
+        {
+            "id": 166,
+            "s": "Solar Creeper (item)"
+        },
         {
             "id": 167,
             "s": "Spirit of Barbs (item)",
@@ -1027,14 +1042,25 @@ export let remodded_constants_99 = {
             "id": 168,
             "s": "Heart of Wolverine (item)",
         },
-        null,
+        {
+            "id": 169,
+            "s":"Summon Spirit Wolf (item)"},
         {
             "id": 170,
-            "s": "Lightning (oskill)",
+            "s": "Lightning (item)",
         },
-        null,
-        null,
-        null,
+        {
+            "id": 171,
+            "s":"Carrion Vine (item)"
+        },
+        {
+            "id": 172,
+            "s":"Attract (item)"
+        },
+        {
+            "id": 173,
+            "s":"Inferno (item)"
+        },
         {
             "id": 174,
             "s": "Hold Fast",
@@ -1045,7 +1071,10 @@ export let remodded_constants_99 = {
             "s": "Chance for Glory",
             "c": "pal"
         },
-        null,
+        {
+            "id": 176,
+            "s":"Devotion Rewarded (item)"
+        },
         {
             "id": 177,
             "s": "Hear My Prayer",
@@ -1063,7 +1092,10 @@ export let remodded_constants_99 = {
             "id": 180,
             "s": "Patient Zero", // New
         }, // 180
-        null,
+        {
+            "id": 181,
+            "s":"Skull Mob (item)"
+        },
         {
             "id": 182,
             "s": "Electro Ball (item)",
@@ -1747,19 +1779,43 @@ export let remodded_constants_99 = {
         null, // 500
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        {
+            "id": 503,
+            "s": "Soul of Amazon [Tier 1/10] (item)"
+        },
+        {
+            "id": 504,
+            "s": "Soul of Sorceress [Tier 1/10] (item)"
+        },
+        {
+            "id": 505,
+            "s": "Soul of Necromancer [Tier 1/10] (item)"
+        },
+        {
+            "id": 506,
+            "s": "Soul of Paladin [Tier 1/10] (item)"
+        },
+        {
+            "id": 507,
+            "s": "Soul of Barbarian [Tier 1/10] (item)"
+        },
+        {
+            "id": 508,
+            "s": "Soul of Druid [Tier 1/10] (item)"
+        },
+        {
+            "id": 509,
+            "s": "Soul of Assassin [Tier 1/10] (item)"
+        },
         null, // 510
         null,
         null,
         null,
         null,
-        null,
+        {
+            "id": 515,
+            "s": "Holy Shock (item)"
+        },
         null,
         null,
         null,
@@ -1769,7 +1825,10 @@ export let remodded_constants_99 = {
         null,
         null,
         null,
-        null,
+        {
+            "id": 525,
+            "s": "Pack Call (item)"
+        },
         null,
         null,
         null,
@@ -1796,7 +1855,10 @@ export let remodded_constants_99 = {
         null,
         null, // 550
         null,
-        null,
+        {
+            "id": 552,
+            "s": "Hurricane (item)"
+        },
         null,
         null,
         null,
@@ -1806,69 +1868,258 @@ export let remodded_constants_99 = {
         null,
         null, // 560
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null, // 570
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null, // 580
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null, // 590
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null, // 600
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null, // 610
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null, // 620
-        null,
-        null,
-        null,
-        null,
+        {
+            "id": 562,
+            "s": "Soul of Amazon [Tier 2/10] (item)"
+        },
+        {
+            "id": 563,
+            "s": "Soul of Sorceress [Tier 2/10] (item)"
+        },
+        {
+            "id": 564,
+            "s": "Soul of Necromancer [Tier 2/10] (item)"
+        },
+        {
+            "id": 565,
+            "s": "Soul of Paladin [Tier 2/10] (item)"
+        },
+        {
+            "id": 566,
+            "s": "Soul of Barbarian [Tier 2/10] (item)"
+        },
+        {
+            "id": 567,
+            "s": "Soul of Druid [Tier 2/10] (item)"
+        },
+        {
+            "id": 568,
+            "s": "Soul of Assassin [Tier 2/10] (item)"
+        },
+        {
+            "id": 569,
+            "s": "Soul of Amazon [Tier 3/10] (item)"
+        },
+        {
+            "id": 570,
+            "s": "Soul of Sorceress [Tier 3/10] (item)"
+        },
+        {
+            "id": 571,
+            "s": "Soul of Necromancer [Tier 3/10] (item)"
+        },
+        {
+            "id": 572,
+            "s": "Soul of Paladin [Tier 3/10] (item)"
+        },
+        {
+            "id": 573,
+            "s": "Soul of Barbarian [Tier 3/10] (item)"
+        },
+        {
+            "id": 574,
+            "s": "Soul of Druid [Tier 3/10] (item)"
+        },
+        {
+            "id": 575,
+            "s": "Soul of Assassin [Tier 3/10] (item)"
+        },
+        {
+            "id": 576,
+            "s": "Soul of Amazon [Tier 4/10] (item)"
+        },
+        {
+            "id": 577,
+            "s": "Soul of Sorceress [Tier 4/10] (item)"
+        },
+        {
+            "id": 578,
+            "s": "Soul of Necromancer [Tier 4/10] (item)"
+        },
+        {
+            "id": 579,
+            "s": "Soul of Paladin [Tier 4/10] (item)"
+        },
+        {
+            "id": 580,
+            "s": "Soul of Barbarian [Tier 4/10] (item)"
+        },
+        {
+            "id": 581,
+            "s": "Soul of Druid [Tier 4/10] (item)"
+        },
+        {
+            "id": 582,
+            "s": "Soul of Assassin [Tier 4/10] (item)"
+        },
+        {
+            "id": 583,
+            "s": "Soul of Amazon [Tier 5/10] (item)"
+        },
+        {
+            "id": 584,
+            "s": "Soul of Sorceress [Tier 5/10] (item)"
+        },
+        {
+            "id": 585,
+            "s": "Soul of Necromancer [Tier 5/10] (item)"
+        },
+        {
+            "id": 586,
+            "s": "Soul of Paladin [Tier 5/10] (item)"
+        },
+        {
+            "id": 587,
+            "s": "Soul of Barbarian [Tier 5/10] (item)"
+        },
+        {
+            "id": 588,
+            "s": "Soul of Druid [Tier 5/10] (item)"
+        },
+        {
+            "id": 589,
+            "s": "Soul of Assassin [Tier 5/10] (item)"
+        },
+        {
+            "id": 590,
+            "s": "Soul of Amazon [Tier 6/10] (item)"
+        },
+        {
+            "id": 591,
+            "s": "Soul of Sorceress [Tier 6/10] (item)"
+        },
+        {
+            "id": 592,
+            "s": "Soul of Necromancer [Tier 6/10] (item)"
+        },
+        {
+            "id": 593,
+            "s": "Soul of Paladin [Tier 6/10] (item)"
+        },
+        {
+            "id": 594,
+            "s": "Soul of Barbarian [Tier 6/10] (item)"
+        },
+        {
+            "id": 595,
+            "s": "Soul of Druid [Tier 6/10] (item)"
+        },
+        {
+            "id": 596,
+            "s": "Soul of Assassin [Tier 6/10] (item)"
+        },
+        {
+            "id": 597,
+            "s": "Soul of Amazon [Tier 7/10] (item)"
+        },
+        {
+            "id": 598,
+            "s": "Soul of Sorceress [Tier 7/10] (item)"
+        },
+        {
+            "id": 599,
+            "s": "Soul of Necromancer [Tier 7/10] (item)"
+        },
+        {
+            "id": 600,
+            "s": "Soul of Paladin [Tier 7/10] (item)"
+        },
+        {
+            "id": 601,
+            "s": "Soul of Barbarian [Tier 7/10] (item)"
+        },
+        {
+            "id": 602,
+            "s": "Soul of Druid [Tier 7/10] (item)"
+        },
+        {
+            "id": 603,
+            "s": "Soul of Assassin [Tier 7/10] (item)"
+        },
+        {
+            "id": 604,
+            "s": "Soul of Amazon [Tier 8/10] (item)"
+        },
+        {
+            "id": 605,
+            "s": "Soul of Sorceress [Tier 8/10] (item)"
+        },
+        {
+            "id": 606,
+            "s": "Soul of Necromancer [Tier 8/10] (item)"
+        },
+        {
+            "id": 607,
+            "s": "Soul of Paladin [Tier 8/10] (item)"
+        },
+        {
+            "id": 608,
+            "s": "Soul of Barbarian [Tier 8/10] (item)"
+        },
+        {
+            "id": 609,
+            "s": "Soul of Druid [Tier 8/10] (item)"
+        },
+        {
+            "id": 610,
+            "s": "Soul of Assassin [Tier 8/10] (item)"
+        },
+        {
+            "id": 611,
+            "s": "Soul of Amazon [Tier 9/10] (item)"
+        },
+        {
+            "id": 612,
+            "s": "Soul of Sorceress [Tier 9/10] (item)"
+        },
+        {
+            "id": 613,
+            "s": "Soul of Necromancer [Tier 9/10] (item)"
+        },
+        {
+            "id": 614,
+            "s": "Soul of Paladin [Tier 9/10] (item)"
+        },
+        {
+            "id": 615,
+            "s": "Soul of Barbarian [Tier 9/10] (item)"
+        },
+        {
+            "id": 616,
+            "s": "Soul of Druid [Tier 9/10] (item)"
+        },
+        {
+            "id": 617,
+            "s": "Soul of Assassin [Tier 9/10] (item)"
+        },
+        {
+            "id": 618,
+            "s": "Soul of Amazon [Tier 10/10] (item)"
+        },
+        {
+            "id": 619,
+            "s": "Soul of Sorceress [Tier 10/10] (item)"
+        },
+        {
+            "id": 620,
+            "s": "Soul of Necromancer [Tier 10/10] (item)"
+        }, // 620
+        {
+            "id": 621,
+            "s": "Soul of Paladin [Tier 10/10] (item)"
+        },
+        {
+            "id": 622,
+            "s": "Soul of Barbarian [Tier 10/10] (item)"
+        },
+        {
+            "id": 623,
+            "s": "Soul of Druid [Tier 10/10] (item)"
+        },
+        {
+            "id": 624,
+            "s": "Soul of Assassin [Tier 10/10] (item)"
+        },
         null,
         null,
         null,
@@ -1905,12 +2156,45 @@ export let remodded_constants_99 = {
         {
             "id": 655,
             "s": "Mini Diablo (item)"
-        },,
+        },
         null,
         null,
         null,
         null,
         null, // 660
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null, // 670
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null, // 680
+        {
+            "id": 681,
+            "s": "Werebear (item)"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null, // 690
     ],
     "rare_names": [
         null,
@@ -2915,7 +3199,10 @@ export let remodded_constants_99 = {
         }
     ],
     "magic_prefixes": [
-        null,
+        {
+            "id": 0,
+            "n": "0 TOTO"
+        },
         {
             "id": 1,
             "n": "TOTO"
@@ -2958,7 +3245,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 10,
-            "n": "TOTO"
+            "n": "Burly"
+            // "n": "TOTO"
         },
         {
             "id": 11,
@@ -3005,8 +3293,9 @@ export let remodded_constants_99 = {
         },
         {
             "id": 20,
-            "n": "Vulpine",
-            "tc": "cblu"
+            "n": "Burly"
+            // "n": "Vulpine",
+            // "tc": "cblu"
         },
         {
             "id": 21,
@@ -3027,7 +3316,10 @@ export let remodded_constants_99 = {
         },
         {
             "id": 25,
-            "n": "Tireless"
+            "n": "Burly",
+            "desc": "+13-30 Defense",
+            "target": "Grand Charms(17[13-15];22[16-22];27[23-30]), Large Charms(26[13-18];32[20-30])",
+            // "n": "Tireless"
         },
         {
             "id": 26,
@@ -3047,7 +3339,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 30,
-            "n": "Silver"
+            "n": "Ivory"
+            // "n": "Silver"
         },
         {
             "id": 31
@@ -3090,8 +3383,9 @@ export let remodded_constants_99 = {
         },
         {
             "id": 40,
-            "n": "Lord's",
-            "tc": "dgld"
+            "n": "Enlightened"
+            // "n": "Lord's",
+            // "tc": "dgld"
         },
         {
             "id": 41,
@@ -3133,8 +3427,9 @@ export let remodded_constants_99 = {
         },
         {
             "id": 50,
-            "n": "Glowing",
-            "tc": "lyel"
+            "n": "Void"
+            // "n": "Glowing",
+            // "tc": "lyel"
         },
         {
             "id": 51,
@@ -3176,8 +3471,9 @@ export let remodded_constants_99 = {
         },
         {
             "id": 60,
-            "n": "Dragon's",
-            "tc": "cblu"
+            "n": "Red"
+            // "n": "Dragon's",
+            // "tc": "cblu"
         },
         {
             "id": 61,
@@ -3220,7 +3516,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 70,
-            "n": "Cobalt"
+            "n": "Bloody"
+            // "n": "Cobalt"
         },
         {
             "id": 71,
@@ -3261,7 +3558,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 80,
-            "n": "TOTO"
+            "n": "Serrated"
+            // "n": "TOTO"
         },
         {
             "id": 81,
@@ -3302,8 +3600,9 @@ export let remodded_constants_99 = {
         },
         {
             "id": 90,
-            "n": "Amber",
-            "tc": "lyel"
+            "n": "Carmine"
+            // "n": "Amber",
+            // "tc": "lyel"
         },
         {
             "id": 91,
@@ -3346,7 +3645,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 100,
-            "n": "TOTO"
+            "n": "Burly"
+            // "n": "TOTO"
         },
         {
             "id": 101,
@@ -3392,7 +3692,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 110,
-            "n": "Angel's"
+            "n": "Ruby"
+            // "n": "Angel's"
         },
         {
             "id": 111,
@@ -3436,7 +3737,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 120,
-            "n": "Stout"
+            "n": "Vicious"
+            // "n": "Stout"
         },
         {
             "id": 121,
@@ -3476,7 +3778,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 130,
-            "n": "Stout"
+            "n": "Brown"
+            // "n": "Stout"
         },
         {
             "id": 131,
@@ -3517,8 +3820,9 @@ export let remodded_constants_99 = {
         },
         {
             "id": 140,
-            "n": "Eburine",
-            "tc": "whit"
+            "n": "Rugged"
+            // "n": "Eburine",
+            // "tc": "whit"
         },
         {
             "id": 141,
@@ -3648,8 +3952,11 @@ export let remodded_constants_99 = {
         },
         {
             "id": 167,
-            "n": "Crimson",
-            "tc": "dred"
+            "n": "Steel",
+            "desc": "+25-36 to Attack Rating",
+            "target": "Small Charms(57)",
+            // "n": "Crimson",
+            // "tc": "dred"
         },
         {
             "id": 168,
@@ -3661,7 +3968,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 170,
-            "n": "Jagged"
+            "n": "Steel"
+            // "n": "Jagged"
         },
         {
             "id": 171,
@@ -3706,8 +4014,9 @@ export let remodded_constants_99 = {
         },
         {
             "id": 180,
-            "n": "Jagged",
-            "tc": "blac"
+            "n": "Argent"
+            // "n": "Jagged",
+            // "tc": "blac"
         },
         {
             "id": 181,
@@ -3752,13 +4061,17 @@ export let remodded_constants_99 = {
         },
         {
             "id": 190,
-            "n": "Massive",
-            "tc": "dgld"
+            "n": "Sharp"
+            // "n": "Massive",
+            // "tc": "dgld"
         },
         {
             "id": 191,
-            "n": "Savage",
-            "tc": "dgld"
+            "n": "Fine",
+            "desc": "+10-48 to Attack Rating; +1-6 to Maximum Damage",
+            "target": "Grand Charms(15[10-20/1-3];22[21-48/4-6])"
+            // "n": "Savage",
+            // "tc": "dgld"
         },
         {
             "id": 192,
@@ -3770,7 +4083,8 @@ export let remodded_constants_99 = {
         {
             "id": 193,
             "n": "Fine",
-            "desc": "1-3max & 10-20ar",
+            "desc": "+10-20 to Attack Rating; +1-3 to Maximum Damage",
+            "target": "Large Charms(19), Small Charms(28)",
             // "n": "Ferocious",
             // "tc": "blac"
         },
@@ -3806,7 +4120,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 200,
-            "n": "Dun"
+            "n": "King's"
+            // "n": "Dun"
         },
         {
             "id": 201,
@@ -3846,7 +4161,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 210,
-            "n": "Rugged"
+            "n": "Falcon Eye"
+            // "n": "Rugged"
         },
         {
             "id": 211,
@@ -3886,7 +4202,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 220,
-            "n": "Bronze"
+            "n": "King's"
+            // "n": "Bronze"
         },
         {
             "id": 221,
@@ -3926,7 +4243,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 230,
-            "n": "Iron"
+            "n": "Wailing"
+            // "n": "Iron"
         },
         {
             "id": 231,
@@ -3970,7 +4288,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 240,
-            "n": "Steel"
+            "n": "Emerald"
+            // "n": "Steel"
         },
         {
             "id": 241,
@@ -4015,7 +4334,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 250,
-            "n": "Argent"
+            "n": "Lizard's"
+            // "n": "Argent"
         },
         {
             "id": 251,
@@ -4066,7 +4386,8 @@ export let remodded_constants_99 = {
         {
             "id": 260,
             "n": "Serpent's",
-            "desc": "13-17mana",
+            "desc": "+13-17 to Mana",
+            "target": "Small Charms(48)",
             // "n": "Soldier's"
         },
         {
@@ -4114,8 +4435,9 @@ export let remodded_constants_99 = {
         },
         {
             "id": 270,
-            "n": "Howling",
-            "tc": "oran"
+            "n": "Bahamut's"
+            // "n": "Howling",
+            // "tc": "oran"
         },
         {
             "id": 271,
@@ -4159,7 +4481,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 280,
-            "n": "Lucky"
+            "n": "Shimmering"
+            // "n": "Lucky"
         },
         {
             "id": 281,
@@ -4172,7 +4495,8 @@ export let remodded_constants_99 = {
         {
             "id": 283,
             "n": "Shimmering",
-            "desc": "3-5allres",
+            "desc": "All Resistances +3-5%",
+            "target": "Small Charms(33)"
             // "n": "Emerald"
         },
         {
@@ -4201,7 +4525,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 290,
-            "n": "Serpent's"
+            "n": "Rainbow"
+            // "n": "Serpent's"
         },
         {
             "id": 291,
@@ -4241,7 +4566,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 300,
-            "n": "Lizard's"
+            "n": "Lapis"
+            // "n": "Lizard's"
         },
         {
             "id": 301,
@@ -4287,8 +4613,9 @@ export let remodded_constants_99 = {
         },
         {
             "id": 310,
-            "n": "Dragon's",
-            "tc": "cblu"
+            "n": "Sapphire"
+            // "n": "Dragon's",
+            //"tc": "cblu"
         },
         {
             "id": 311,
@@ -4334,7 +4661,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 320,
-            "n": "Ruby", // Ruby, 31-40ed
+            "n": "Ruby",
+            "desc": "31-40ed",
             "tc": "lpur"
         },
         {
@@ -4386,8 +4714,9 @@ export let remodded_constants_99 = {
         },
         {
             "id": 330,
-            "n": "Scintillating",
-            "tc": "lpur"
+            "n": "Drake's"
+            // "n": "Scintillating",
+            // "tc": "lpur"
         },
         {
             "id": 331,
@@ -4436,7 +4765,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 340,
-            "n": "Cobalt"
+            "n": "Garnet"
+            // "n": "Cobalt"
         },
         {
             "id": 341,
@@ -4480,7 +4810,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 350,
-            "n": "Azure"
+            "n": "Ruby"
+            // "n": "Azure"
         },
         {
             "id": 351,
@@ -4523,7 +4854,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 360,
-            "n": "Garnet"
+            "n": "Amber"
+            // "n": "Garnet"
         },
         {
             "id": 361,
@@ -4567,7 +4899,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 370,
-            "n": "Russet"
+            "n": "Amber"
+            // "n": "Russet"
         },
         {
             "id": 371,
@@ -4610,7 +4943,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 380,
-            "n": "Amber"
+            "n": "Jade"
+            // "n": "Amber"
         },
         {
             "id": 381,
@@ -4654,7 +4988,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 390,
-            "n": "Ocher"
+            "n": "Jade"
+            // "n": "Ocher"
         },
         {
             "id": 391,
@@ -4697,7 +5032,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 400,
-            "n": "Emerald"
+            "n": "Victorious"
+            // "n": "Emerald"
         },
         {
             "id": 401,
@@ -4743,7 +5079,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 410,
-            "n": "Viridian"
+            "n": "Jeweler's"
+            // "n": "Viridian"
         },
         {
             "id": 411,
@@ -4786,7 +5123,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 420,
-            "n": "Mechanic's"
+            "n": "Astral"
+            // "n": "Mechanic's"
         },
         {
             "id": 421,
@@ -4828,7 +5166,7 @@ export let remodded_constants_99 = {
         },
         {
             "id": 430,
-            "n": "Fletcher's"
+            "n": "Fletcher's" // OK
         },
         {
             "id": 431,
@@ -4840,17 +5178,23 @@ export let remodded_constants_99 = {
         },
         {
             "id": 433,
-            "n": "Fletcher's"
+            "n": "Fletcher's",
+            "desc": "+1 to Bow and Crossbow Skills (Amazon only)",
+            "target": "Bows(20), Crossbows(20), Gloves(20), Grand Charms(50)"
         },
         {
             "id": 434,
-            "n": "Bowyer's",
-            "tc": "lgld"
+            "n": "Acrobat's",
+            "desc": "+1 to Passive and Magic Skills (Amazon only)",
+            "target": "Amulets(20), Circlets(20), Gloves(20), Grand Charms(50)",
+            // "n": "Bowyer's",
+            // "tc": "lgld"
         },
         {
             "id": 435,
-            "n": "Harpoonist",
-            "desc": "+1javelinandspearsktab"
+            "n": "Harpoonist's",
+            "desc": "+1 to Javelin & Spear Skills (Amazon Only)",
+            "target": "Gloves(20), Spears(20), Grand Charms(50)",
             // "n": "Archer's",
             // "tc": "lgld"
         },
@@ -4874,7 +5218,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 440,
-            "n": "Spearmaiden's",
+            "n": "Gymnastic",
+            // "n": "Spearmaiden's",
             "tc": "lgld"
         },
         {
@@ -4896,19 +5241,25 @@ export let remodded_constants_99 = {
         },
         {
             "id": 445,
-            "n": "Burning"
+            "n": "Burning",
+            "desc": "+1 to Fire Skills (Sorceress only)",
+            "target": "Amulets(20), Circlets(20), Orbs(20), Staves(20), Grand Charms(50)",
         },
         {
             "id": 446,
-            "n": "Blazing",
-            "tc": "lgld"
+            "n": "Sparking",
+            "desc": "+1 to Lightning Skills (Sorceress only)",
+            "target": "Amulets(20), Circlets(20), Orbs(20), Staves(20), Grand Charms(50)",
+            // "n": "Blazing",
+            //"tc": "lgld"
         },
         {
             "id": 447,
             "n": "Chilling",
-            "desc": "+1coldsktab",
+            "desc": "+1 to Cold Skills (Sorceress only)",
+            "target": "Amulets(20), Circlets(20), Orbs(20), Staves(20), Grand Charms(50)",
             // "n": "Volcanic",
-            "tc": "lgld"
+            //"tc": "lgld"
         },
         {
             "id": 448,
@@ -4921,7 +5272,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 450,
-            "n": "Powered",
+            "n": "Volcanic",
+            // "n": "Powered",
             "tc": "lgld"
         },
         {
@@ -4952,25 +5304,29 @@ export let remodded_constants_99 = {
         },
         {
             "id": 457,
-            "n": "Hexing"
+            "n": "Hexing",
+            "desc": "+1 to Curses (Necromancer only)",
+            "target": "Amulets(20), Circlets(20), Heads(20), Wands(20), Grand Charms(50)",
         },
         {
             "id": 458,
             "n": "Fungal",
-            "desc": "+1pnb",
+            "desc": "+1 to Poison and Bone Skills (Necromancer only)",
+            "target": "Amulets(20), Circlets(20), Heads(20), Daggers(20), Wands(20), Grand Charms(50)",
             // "n": "Blighting",
-            "tc": "lgld"
+            //"tc": "lgld"
         },
         {
             "id": 459,
             "n": "Graverobber's",
-            "desc": "+1necrosummonsktab",
+            "desc": "Amulets(20), Circlets(20), Heads(20), Wands(20), Grand Charms(50)",
             // "n": "Cursing",
             // "tc": "lgld"
         },
         {
             "id": 460,
-            "n": "Fungal"
+            "n": "Hexing"
+            // "n": "Fungal"
         },
         {
             "id": 461,
@@ -5011,17 +5367,24 @@ export let remodded_constants_99 = {
         {
             "id": 469,
             "n": "Lion Branded",
-            "desc": "+1palacombatsktab"
+            "desc": "+1 to Combat Skills (Paladin only)",
+            "target": "Amulets(20), Circlets(20), Maces(20), Paladin Shields(20), Scepters(20), Shields(20), Swords(20), Grand Charms(50)"
         },
         {
             "id": 470,
-            "n": "Hawk Branded",
-            "tc": "lgld"
+            "n": "Captain's",
+            "desc": "+1 to Offensive Advantage (Paladin only)",
+            "target": "Amulets(20), Circlets(20), Maces(20), Paladin Shields(20), Scepters(20), Shields(20), Swords(20), Grand Charms(50)",
+            // "n": "Hawk Branded",
+            // "tc": "lgld"
         },
         {
             "id": 471,
-            "n": "Rose Branded",
-            "tc": "lgld"
+            "n": "Preserver's",
+            "desc": "+1 to Ascending Leadership (Paladin only)",
+            "target": "Amulets(20), Circlets(20), Paladin Shields(20), Shields(20), Grand Charms(50)",
+            // "n": "Rose Branded",
+            // "tc": "lgld"
         },
         {
             "id": 472,
@@ -5061,23 +5424,28 @@ export let remodded_constants_99 = {
         },
         {
             "id": 480,
-            "n": "Sounding"
+            "n": "Guardian's"
+            // "n": "Sounding"
         },
         {
             "id": 481,
-            "n": "Expert's"
+            "n": "Expert's",
+            "desc": "+1 to Close Quarters (Barbarian Only)",
+            "target": "Barbarian Helms(20), Helms(20), Weapons(20), Grand Charms(50)",
         },
         {
             "id": 482,
             "n": "Fanatic",
-            "desc": "+1warmasterysktab",
+            "desc": "+1 to War Mastery (Barbarian Only)",
+            "target": "Amulets(20), Barbarian Helms(20), Weapons(20), Grand Charms(50)",
             // "n": "Veteran's",
             // "tc": "lgld"
         },
         {
             "id": 483,
             "n": "Sounding",
-            "desc": "+1destructiverangesktab",
+            "desc": "+1 to Destructive Range (Barbarian Only)",
+            "target": "Amulets(20), Barbarian Helms(20), Weapons(20), Grand Charms(50)"
             // "n": "Master's",
             // "tc": "lgld"
         },
@@ -5111,7 +5479,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 490,
-            "n": "Trainer's"
+            "n": "Sounding"
+            // "n": "Trainer's"
         },
         {
             "id": 491,
@@ -5135,8 +5504,10 @@ export let remodded_constants_99 = {
         },
         {
             "id": 495,
-            "n": "Keeper's",
-            "tc": "lgld"
+            "n": "Natural",
+            "desc": "+1blazewolfsktab",
+            //"n": "Keeper's",
+            //"tc": "lgld"
         },
         {
             "id": 496,
@@ -5158,8 +5529,9 @@ export let remodded_constants_99 = {
         },
         {
             "id": 500,
-            "n": "Terrene",
-            "tc": "lgld"
+            "n": "Feral"
+            // "n": "Terrene",
+            // "tc": "lgld"
         },
         {
             "id": 501,
@@ -5181,17 +5553,24 @@ export let remodded_constants_99 = {
         {
             "id": 505,
             "n": "Entrapping",
-            "desc": "+1trapsktab",
+            "desc": "+1 to Traps (Assassin only)",
+            "target": "Amulets(20), Circlets(20), Katars(20), Grand Charms(50)"
         },
         {
             "id": 506,
-            "n": "Trickster's",
-            "tc": "lgld"
+            "n": "Mentalist's",
+            "desc": "+1 to Shadow Disciplines (Assassin only)",
+            "target": "Amulets(20), Circlets(20), Helms(20), Katars(20), Grand Charms(50)",
+            // "n": "Trickster's",
+            // "tc": "lgld"
         },
         {
             "id": 507,
-            "n": "Cunning",
-            "tc": "lgld"
+            "n": "Shogukusha's",
+            "desc": "+1 to Martial Arts (Assassin only)",
+            "target": "Amulets(20), Circlets(20), Gloves(20), Helms(20), Katars(20), Grand Charms(50)",
+            // "n": "Cunning",
+            // "tc": "lgld"
         },
         {
             "id": 508,
@@ -5204,8 +5583,9 @@ export let remodded_constants_99 = {
         },
         {
             "id": 510,
-            "n": "Shadow",
-            "tc": "lgld"
+            "n": "Cunning"
+            // "n": "Shadow",
+            // "tc": "lgld"
         },
         {
             "id": 511,
@@ -5754,12 +6134,16 @@ export let remodded_constants_99 = {
         {
             "id": 627,
             "n": "Toxic",
-            "desc": "100psndmg",
+            "desc": "+100 poison damage over 5 seconds",
+            "target": "Small Charms(63)"
             // "n": "Smoldering"
         },
         {
             "id": 628,
-            "n": "Smoking"
+            "n": "Pestilent",
+            "desc": "+175 poison damage over 6 seconds",
+            "target": "Large Charms(66), Small Charms(88)",
+            // "n": "Smoking"
         },
         {
             "id": 629,
@@ -5946,7 +6330,10 @@ export let remodded_constants_99 = {
         }
     ],
     "magic_suffixes": [
-        null,
+        {
+            "id": 0,
+            "n": "0 TOTO"
+        },
         {
             "id": 1,
             "n": "of Health"
@@ -7009,7 +7396,10 @@ export let remodded_constants_99 = {
         },
         {
             "id": 248,
-            "n": "of Accuracy"
+            "n": "of Anthrax",
+            "desc": "Adds 50 Poison Damage Over 6 Seconds",
+            "target": "Grand Charms(21), Large Charms(33), Small Charms(44)",
+            // "n": "of Accuracy"
         },
         {
             "id": 249,
@@ -7124,7 +7514,10 @@ export let remodded_constants_99 = {
         },
         {
             "id": 275,
-            "n": "of Honor"
+            "n": "of Balance",
+            "desc": "12% Faster Hit Recovery",
+            "target": "Grand Charms(1)",
+            // "n": "of Honor"
         },
         {
             "id": 276,
@@ -7132,7 +7525,10 @@ export let remodded_constants_99 = {
         },
         {
             "id": 277,
-            "n": "of Greed"
+            "n": "of Balance",
+            "desc": "5% Faster Hit Recovery",
+            "target": "Small Charms(37)",
+            // "n": "of Greed"
         },
         {
             "id": 278,
@@ -7279,7 +7675,8 @@ export let remodded_constants_99 = {
         {
             "id": 310,
             "n": "of Good Luck",
-            "desc": "6-7mf",
+            "desc": "6-7% Better Chance of Getting Magic Items",
+            "target": "Small Charms(47)"
             // "n": "of Light"
         },
         {
@@ -7548,7 +7945,10 @@ export let remodded_constants_99 = {
         },
         {
             "id": 372,
-            "n": "of Strength"
+            "n": "of Vita",
+            "desc": "+36-45 to Life",
+            "target": "Grand Charms(77[36-40];91[41-45])",
+            // "n": "of Strength"
         },
         {
             "id": 373,
@@ -8304,7 +8704,10 @@ export let remodded_constants_99 = {
         },
         {
             "id": 549,
-            "n": "of Frozen Orb"
+            "n": "of Haste",
+            "desc": "Reduce Cooldown by 5%",
+            "target": "Small Charms(55)",
+            // "n": "of Frozen Orb"
         },
         {
             "id": 550,
@@ -11490,15 +11893,15 @@ export let remodded_constants_99 = {
             "id": 67,
             "s": "velocitypercent",
             "sS": 1,
-            "sB": 7,
-            "sA": 30
+            "sB": 8,
+            "sA": 60
         },
         {
             "id": 68,
             "s": "attackrate",
             "sS": 1,
-            "sB": 7,
-            "sA": 30
+            "sB": 8,
+            "sA": 60
         },
         {
             "id": 69,
@@ -11561,7 +11964,7 @@ export let remodded_constants_99 = {
             "s": "item_maxhp_percent",
             "sS": 1,
             "sB": 10,
-            "sA": 97,
+            "sA": 99,
             "so": 58,
             "dF": 19,
             "dP": "Increase Maximum Life %d%%",
@@ -11858,7 +12261,7 @@ export let remodded_constants_99 = {
             "dP": "Slain Monsters Rest in Peace",
             "dN": "Slain Monsters Rest in Peace"
         },
-        {
+        { // 109 - Curse Length Reduced By % - TODO
             "id": 109,
             "s": "curse_resistance",
             "sB": 9,
@@ -12072,8 +12475,8 @@ export let remodded_constants_99 = {
             "sA": 0,
             "so": 14,
             "dF": 19,
-            "dP": "Attacker Takes Lightning Damage of %d",
-            "dN": "Attacker Takes Lightning Damage of %d"
+            "dP": "Lightning Thorns: %+d",
+            "dN": "Lightning Thorns: %+d"
         },
         {
             "id": 129,
@@ -12390,7 +12793,7 @@ export let remodded_constants_99 = {
             "s": "skill_handofathena",
             "sS": 1
         },
-        {
+        { // 162 - Skills Increasing Stamina by % - TODO
             "id": 162,
             "s": "skill_staminapercent",
             "sS": 1,
@@ -12408,7 +12811,7 @@ export let remodded_constants_99 = {
                 "maxstamina"
             ]
         },
-        {
+        { // 164 - Chance for an Uninterruptable Attack: % - TODO
             "id": 164,
             "s": "skill_concentration",
             "sS": 1
@@ -12443,7 +12846,7 @@ export let remodded_constants_99 = {
             "s": "skill_decrepify",
             "sS": 1
         },
-        {
+        { // 171 - Skills Increasing Armor by % - TODO
             "id": 171,
             "s": "skill_armor_percent",
             "sS": 1
@@ -12501,18 +12904,22 @@ export let remodded_constants_99 = {
             "s": "fade",
             "sB": 3
         },
-        {
+        { // 182 - Skill Set Armor to % - TODO
             "id": 182,
             "s": "armor_override_percent",
             "sS": 1
         },
         {
             "id": 183,
-            "s": "lasthitreactframe"
+            "s": "killtrack",
+            "cB": 32,
+            "cS": 0
         },
         {
             "id": 184,
-            "s": "create_season"
+            "s": "deathtrack",
+            "cB": 32,
+            "cS": 0
         },
         {
             "id": 185,
@@ -12765,14 +13172,14 @@ export let remodded_constants_99 = {
         {
             "id": 210,
             "s": "unused210",
-            "e": 3,
-            "sS": 1
+            "cB": 32,
+            "cS": 0
         },
         {
             "id": 211,
             "s": "unused211",
-            "e": 3,
-            "sS": 1
+            "cB": 32,
+            "cS": 0
         },
         null,
         {
@@ -13494,40 +13901,111 @@ export let remodded_constants_99 = {
         },
         {
             "id": 256,
-            "s": "item_slash_damage",
-            "sS": 1
-        },
-        {
-            "id": 257,
-            "s": "item_deadlystrike_per_dext",
+            "s": "item_openwounds_perstr",
             "sS": 1,
             "sB": 6,
             "sA": 0,
-            "so": 999,
+            "so": 82,
             "dF": 19,
-            "dP": "%+d%% Deadly Strike",
-            "dN": "%+d%% Deadly Strike",
+            "dP": "%+d%% Chance of Open Wounds",
+            "dN": "%+d%% Chance of Open Wounds",
+            "d2": "(Strength)",
+            "o": 2,
+            "op": 5,
+            "ob": "strength",
+            "os": [
+                "item_openwounds"
+            ]
+        },
+        {
+            "id": 257,
+            "s": "item_openwounds_perdex",
+            "sS": 1,
+            "sB": 6,
+            "sA": 0,
+            "so": 84,
+            "dF": 19,
+            "dP": "%+d%% Chance of Open Wounds",
+            "dN": "%+d%% Chance of Open Wounds",
             "d2": "(Dexterity)",
+            "o": 2,
+            "op": 5,
+            "ob": "dexterity",
+            "os": [
+                "item_openwounds"
+            ]
         },
         {
             "id": 258,
-            "s": "item_crush_damage",
-            "sS": 1
+            "s": "item_deadlystrike_perstr",
+            "sS": 1,
+            "sB": 6,
+            "sA": 0,
+            "so": 84,
+            "dF": 19,
+            "dP": "%+d%% Deadly Strike",
+            "dN": "%+d%% Deadly Strike",
+            "d2": "(Strength)",
+            "o": 2,
+            "op": 5,
+            "ob": "strength",
+            "os": [
+                "item_deadlystrike"
+            ]
         },
         {
             "id": 259,
-            "s": "item_crush_damage_percent",
-            "sS": 1
+            "s": "item_armor_perstr",
+            "sS": 1,
+            "sB": 6,
+            "sA": 0,
+            "so": 72,
+            "dF": 19,
+            "dP": "+%d Defense",
+            "dN": "+%d Defense",
+            "d2": "(Strength)",
+            "o": 4,
+            "op": 3,
+            "ob": "strength",
+            "os": [
+                "armorclass"
+            ]
         },
         {
             "id": 260,
-            "s": "item_thrust_damage",
-            "sS": 1
+            "s": "item_fastercastrate_perenr",
+            "sS": 1,
+            "sB": 7,
+            "sA": 20,
+            "so": 142,
+            "dF": 19,
+            "dP": "%+d%% Faster Cast Rate",
+            "dN": "%+d%% Faster Cast Rate",
+            "d2": "(Energy)",
+            "o": 2,
+            "op": 4,
+            "ob": "energy",
+            "os": [
+                "item_fastercastrate"
+            ]
         },
         {
             "id": 261,
-            "s": "item_thrust_damage_percent",
-            "sS": 1
+            "s": "item_crushingblow_perstr",
+            "sS": 1,
+            "sB": 6,
+            "sA": 0,
+            "so": 86,
+            "dF": 19,
+            "dP": "%+d%% Chance of Crushing Blow",
+            "dN": "%+d%% Chance of Crushing Blow",
+            "d2": "(Strength)",
+            "o": 2,
+            "op": 5,
+            "ob": "strength",
+            "os": [
+                "item_crushingblow"
+            ]
         },
         {
             "id": 262,
@@ -13575,19 +14053,20 @@ export let remodded_constants_99 = {
             "id": 266,
             "s": "item_area_of_effect",
             "sS": 1,
-            "sB": 23, // "11001000111011011000001"
-            "sA": 6584001, // Temporary
+            "sB": 1,
+            "sP": 22, // 1194848 - 100100011101101100000
+            "sA": 0,
             "so": 999,
             "dF": 19,
             "dP": "Area of effect",
             "dN": "Area of effect",
         },
-        {
+        { // 267 - % CtC %s when struck by a missile - TODO
             "id": 267,
             "s": "item_absorb_thrust_percent",
             "sS": 1
         },
-        {
+        { // 268 - Increase Skill Freeze Length: % - TODO
             "id": 268,
             "s": "item_armor_bytime",
             "e": 4,
@@ -13603,7 +14082,7 @@ export let remodded_constants_99 = {
                 "armorclass"
             ]
         },
-        {
+        { // 269 - Increase Skill Chill Length: % - TODO
             "id": 269,
             "s": "item_armorpercent_bytime",
             "e": 4,
@@ -13635,7 +14114,7 @@ export let remodded_constants_99 = {
                 "maxhp"
             ]
         },
-        {
+        { // 271 - Fire Thorns: - TODO
             "id": 271,
             "s": "item_fire_thorns",
             "sB": 5,
@@ -13695,7 +14174,7 @@ export let remodded_constants_99 = {
             "dgP": "Life And Mana Gained When Hit: %+d"
         },
         {
-            "id": 274,
+            "id": 275,
             "s": "item_life_ongethit",
             "sB": 12,
             "sA": 0,
@@ -13717,7 +14196,7 @@ export let remodded_constants_99 = {
             "dP": "%+d Spell Power",
             "dN": "%+d Spell Power",
         },
-        {
+        { // 277 - Cold Thorns: - TODO
             "id": 277,
             "s": "item_vitality_bytime",
             "e": 4,
@@ -13743,7 +14222,7 @@ export let remodded_constants_99 = {
             "dP": "%+d Combat Power",
             "dN": "%+d Combat Power",
         },
-        {
+        { // 297 - Essences Trapped: %d - TODO
             "id": 279,
             "s": "item_tohitpercent_bytime",
             "e": 4,
@@ -13759,7 +14238,7 @@ export let remodded_constants_99 = {
                 "item_tohit_percent"
             ]
         },
-        {
+        { // 280 - Curse Length Reduced By % - TODO
             "id": 280,
             "s": "item_cold_damagemax_bytime",
             "e": 4,
@@ -13788,7 +14267,7 @@ export let remodded_constants_99 = {
             "dgF": 19,
             "dgP": "%+d%% to All Summon Bonuses"
         },
-        {
+        { // 282 - Summon Speed: % - TODO
             "id": 282,
             "s": "item_ltng_damagemax_bytime",
             "e": 4,
@@ -13863,51 +14342,39 @@ export let remodded_constants_99 = {
         },
         {
             "id": 288,
-            "s": "item_absorb_cold_bytime",
-            "e": 4,
-            "sS": 1,
-            "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dP": "%+d Absorbs Cold Damage",
-            "dN": "%+d Absorbs Cold Damage",
-            "o": 6,
-            "os": [
-                "item_absorbcold"
-            ]
+            "s": "skill_bonesyn",
+            "cB": 7,
+            "cS": 0,
+            "sB": 8,
+            "sA": 16,
+            "so": 67,
+            "dF": 19,
+            "dP": "Increase Bone Skill Damage: %d%%",
+            "dN": "Increase Bone Skill Damage: %d%%"
         },
         {
             "id": 289,
-            "s": "item_absorb_fire_bytime",
-            "e": 4,
-            "sS": 1,
-            "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dP": "%+d Absorbs Fire Damage",
-            "dN": "%+d Absorbs Fire Damage",
-            "o": 6,
-            "os": [
-                "item_absorbfire"
-            ]
+            "s": "skill_rage",
+            "cB": 7,
+            "cS": 0,
+            "sB": 8,
+            "sA": 16,
+            "so": 67,
+            "dF": 19,
+            "dP": "Rage Point: %d",
+            "dN": "Rage Point: %d"
         },
         {
             "id": 290,
-            "s": "item_absorb_ltng_bytime",
-            "e": 4,
-            "sS": 1,
-            "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dP": "%+d Absorbs Lightning Damage",
-            "dN": "%+d Absorbs Lightning Damage",
-            "o": 6,
-            "os": [
-                "item_absorblight"
-            ]
+            "s": "skill_focus",
+            "cB": 7,
+            "cS": 0,
+            "sB": 8,
+            "sA": 16,
+            "so": 67,
+            "dF": 19,
+            "dP": "Focus Points: %d",
+            "dN": "Focus Points: %d"
         },
         {
             "id": 291,
@@ -14333,21 +14800,33 @@ export let remodded_constants_99 = {
             "s": "passive_dodge",
             "sS": 1,
             "sB": 7,
-            "sA": 0
+            "sA": 0,
+            "so": 999,
+            "dF": 19,
+            "dP": "Chance to Dodge Attack: %d%",
+            "dN": "Chance to Dodge Attack: %d%",
         },
         {
             "id": 339,
             "s": "passive_avoid",
             "sS": 1,
             "sB": 7,
-            "sA": 0
+            "sA": 0,
+            "so": 999,
+            "dF": 19,
+            "dP": "Chance to Avoid Attack: %d%",
+            "dN": "Chance to Avoid Attack: %d%",
         },
         {
             "id": 340,
             "s": "passive_evade",
             "sS": 1,
             "sB": 7,
-            "sA": 0
+            "sA": 0,
+            "so": 999,
+            "dF": 19,
+            "dP": "Chance to Evade Attack: %d%",
+            "dN": "Chance to Evade Attack: %d%",
         },
         {
             "id": 341,
@@ -14471,13 +14950,13 @@ export let remodded_constants_99 = {
             "id": 360,
             "s": "skill_missile_damage_scale"
         },
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        null, // 361 - Color Dyed: White - TODO
+        null, // 362 - Color Dyed: Black - TODO
+        null, // 363 - Color Dyed: Blue - TODO
+        null, // 364 - Color Dyed: Red - TODO
+        null, // 365 - Color Dyed: Green - TODO
+        null, // 366 - Color Dyed: Yellow - TODO
+        null, // 367 - Color Dyed: Purple - TODO
         null,
         {
             "id": 369,
@@ -14489,18 +14968,85 @@ export let remodded_constants_99 = {
             "dP": "Set cores: %d",
             "dN": "Set cores: %d"
         },
-        null, // 370
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        {
+            "id": 370,
+            "s": "beacon_amazon_soul_tier",
+            "sB": 11,
+            "sA": 10,
+            "so": 999,
+            "dF": 19,
+            "dP": "Amazon Soul Tier: %d",
+            "dN": "Amazon Soul Tier: %d",
+        }, // 370
+        {
+            "id": 371,
+            "s": "beacon_sorceress_soul_tier",
+            "sB": 11,
+            "sA": 10,
+            "so": 999,
+            "dF": 19,
+            "dP": "Sorceress Soul Tier: %d",
+            "dN": "Sorceress Soul Tier: %d",
+        },
+        {
+            "id": 372,
+            "s": "beacon_necromancer_soul_tier",
+            "sB": 11,
+            "sA": 10,
+            "so": 999,
+            "dF": 19,
+            "dP": "Necromancer Soul Tier: %d",
+            "dN": "Necromancer Soul Tier: %d",
+        },
+        {
+            "id": 373,
+            "s": "beacon_paladin_soul_tier",
+            "sB": 11,
+            "sA": 10,
+            "so": 999,
+            "dF": 19,
+            "dP": "Paladin Soul Tier: %d",
+            "dN": "Paladin Soul Tier: %d",
+        },
+        {
+            "id": 374,
+            "s": "beacon_barbarian_soul_tier",
+            "sB": 11,
+            "sA": 10,
+            "so": 999,
+            "dF": 19,
+            "dP": "Barbarian Soul Tier: %d",
+            "dN": "Barbarian Soul Tier: %d",
+        },
+        {
+            "id": 375,
+            "s": "beacon_druid_soul_tier",
+            "sB": 11,
+            "sA": 10,
+            "so": 999,
+            "dF": 19,
+            "dP": "Druid Soul Tier: %d",
+            "dN": "Druid Soul Tier: %d",
+        },
+        {
+            "id": 376,
+            "s": "beacon_assassin_soul_tier",
+            "sB": 11,
+            "sA": 10,
+            "so": 999,
+            "dF": 19,
+            "dP": "Assassin Soul Tier: %d",
+            "dN": "Assassin Soul Tier: %d",
+        },
         {
             "id": 377,
-            "s": "unsocket_recipe_consumed",
+            "s": "item_single_use_recipe_used",
             "sB": 1,
-            "sA": 0
+            "sA": 0,
+            "so": 999,
+            "dF": 19,
+            "dP": "Single-use recipe used %d",
+            "dN": "Single-use recipe used %d",
         },
         null,
         {
@@ -14524,7 +15070,7 @@ export let remodded_constants_99 = {
             "dN": "(Mercenary Only)"
         }, // 380
         null,
-        null,
+        null, // 382 - Slows Target by % TODO
         null,
         {
             "id": 384,
@@ -14554,7 +15100,7 @@ export let remodded_constants_99 = {
             "dP": "Unique cores: %d",
             "dN": "Unique cores: %d"
         },
-        null,
+        null, // 387 - Reckoning Slots TODO
         {
             // Tower Shield 5
             // Kite Shield 7
@@ -14582,11 +15128,58 @@ export let remodded_constants_99 = {
             "dN": "Shield unknown %d"
         },
         null,
-        null, // 390
-        null,
-        null,
-        null,
-        null,
+        {
+            "id": 390,
+            "s": "soul_tracker_kills",
+            "sB": 1,
+            "sA": 0,
+            "sP": 32, // 2448426767 - 10010001111100000000011100001111
+            "so": 999,
+            "dF": 19,
+            "dP": "Kills: %d",
+            "dN": "Kills: %d"
+        },
+        null /*{
+            "id": 391,
+            "s": "soul_tracker_391 (legacy)",
+            "sB": 23,
+            "sA": 0,
+            "so": 999,
+            "dF": 19,
+            "dP": "Tracker 391 %d",
+            "dN": "Tracker 391 %d"
+        }*/,
+        null /*{
+            "id": 392,
+            "s": "soul_tracker_392 (legacy)",
+            "sB": 11,
+            "sA": 10,
+            "so": 999,
+            "dF": 19,
+            "dP": "Tracker 392 %d",
+            "dN": "Tracker 392 %d"
+        }*/,
+        {
+            "id": 393,
+            "s": "soul_tracker_deaths",
+            "sB": 1,
+            "sA": 0,
+            "so": 999,
+            "dF": 19,
+            "dP": "Deaths: %d",
+            "dN": "Deaths: %d"
+        },
+        {
+            "id": 394,
+            "s": "soul_tracker_394",
+            "sB": 1,
+            "sA": 0,
+            "sP": 22, // 2391105 - 1001000111110001000001
+            "so": 999,
+            "dF": 19,
+            "dP": "Tracker Unknown %d",
+            "dN": "Tracker Unknown %d"
+        },
         null,
         {
             "id": 396,
@@ -14672,7 +15265,16 @@ export let remodded_constants_99 = {
             "dP": "Increase Feral Rage max leech by %d%%",
             "dN": "Increase Feral Rage max leech by %d%%"
         },
-        null,
+        {
+            "id": 406,
+            "s": "beacon_shards_count",
+            "sB": 11,
+            "sA": 10,
+            "so": 999,
+            "dF": 19,
+            "dP": "Souls shards: %d",
+            "dN": "Souls shards: %d",
+        },
         {
             "id": 407,
             "s": "item_fireskill",
@@ -14722,7 +15324,16 @@ export let remodded_constants_99 = {
             "dP": "%+d to Magic Skills",
             "dN": "%+d to Magic Skills"
         },
-        null,
+        {
+            "id": 412,
+            "s": "beacon_souls_count",
+            "sB": 11,
+            "sA": 10,
+            "so": 999,
+            "dF": 19,
+            "dP": "Souls count: %d",
+            "dN": "Souls count: %d",
+        },
         {
             "id": 413,
             "s": "item_openwound_per_dext",
@@ -14780,12 +15391,57 @@ export let remodded_constants_99 = {
         }, // 420
         null,
         null,
+        {
+            "id": 423,
+            "s": "soul_tracker_maxhp_percent_perkill",
+            "sB": 1,
+            "sA": 0,
+            "so": 999,
+            "dF": 19,
+            "dP": "%+d%% Max HP (+1% per 10,000 kills)",
+            "dN": "%+d%% Max HP (+1% per 10,000 kills)"
+        },
+        {
+            "id": 424,
+            "s": "item_fasterattackrate_perstrength",
+            "sB": 7,
+            "sA": 20,
+            "so": 999,
+            "dF": 19,
+            "dP": "%+d% Icreased Attack Speed (Strength)",
+            "dN": "%+d% Icreased Attack Speed (Strength)",
+        },
+        {
+            "id": 425,
+            "s": "item_tohit_perenergy",
+            "sB": 7,
+            "sA": 20,
+            "so": 999,
+            "dF": 19,
+            "dP": "%+d to Attack Rating (Energy)",
+            "dN": "%+d to Attack Rating (Energy)",
+        },
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        {
+            "id": 427,
+            "s": "item_increase_buff_duration",
+            "sB": 11,
+            "sA": 10,
+            "so": 999,
+            "dF": 19,
+            "dP": "Increase Buff Durations by %d%",
+            "dN": "Decrease Buff Durations by %d%",
+        },
+        {
+            "id": 428,
+            "s": "item_raise_leoric_chosen",
+            "sB": 5,
+            "sA": 15,
+            "so": 999,
+            "dF": 19,
+            "dP": "Raises %d Leoric's Chosen",
+            "dN": "Raises %d Leoric's Chosen",
+        },
         null,
         null, // 430
         null,
@@ -16359,6 +17015,50 @@ export let remodded_constants_99 = {
             "n": "Sander's Superstition",
             "c": "bwn",
             "tc": "lpur"
+        },
+        null,
+        null,
+        null,
+        null, // 130
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null, // 140
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null, // 150
+        null,
+        null,
+        {
+            "id": 153,
+            "n": "Rathma's Fortress",
+            "c": "rin",
+            "tc": "lgry"
+        },
+        {
+            "id": 154,
+            "n": "Stacato's Sigil",
+            "c": "rin",
+            "tc": "lgry"
+        },
+        {
+            "id": 155,
+            "n": "Mamba's Circle",
+            "c": "rin",
+            "tc": "lgry"
         }
     ],
     "unq_items": [
@@ -19255,6 +19955,90 @@ export let remodded_constants_99 = {
         },
         null,
         null, // 480
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null, // 490
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null, // 500
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null, // 510
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null, // 520
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null, // 530
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null, // 540
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null, // 550
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+            "id": 558,
+            "n": "The Statue of Mythos",
+            "c": "y08"
+        },
+        null,
+        null, // 560
     ],
     "stackables": {
         "tkf": {
@@ -19690,10 +20474,10 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Scale Mail",
             "minac": 57,
-            "maxac": 60,
-            "durability": 36,
-            "rs": 44,
-            "rd": 0,
+            "maxac": 60, // TODO 61
+            "durability": 36, // OK
+            "rs": 44, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 1,
             "i": "invscl",
@@ -19995,10 +20779,10 @@ export let remodded_constants_99 = {
             "n": "Large Shield",
             "minac": 12,
             "maxac": 14,
-            "durability": 24,
-            "mind": 2,
-            "maxd": 4,
-            "rs": 34,
+            "durability": 24, // OK
+            "mind": 5, // OK
+            "maxd": 6, // OK
+            "rs": 34, // OK
             "rd": 0,
             "hi": 1,
             "gt": 2,
@@ -20339,11 +21123,11 @@ export let remodded_constants_99 = {
             "n": "Greaves",
             "minac": 12,
             "maxac": 15,
-            "durability": 24,
-            "mind": 10,
-            "maxd": 20,
-            "rs": 70,
-            "rd": 0,
+            "durability": 24, // OK
+            "mind": 10, // OK
+            "maxd": 20, // OK
+            "rs": 70, // OK
+            "rd": 0, // OK
             "hi": 0,
             "gt": 0,
             "i": "invhbt",
@@ -20511,11 +21295,11 @@ export let remodded_constants_99 = {
             "n": "Bone Shield",
             "minac": 10,
             "maxac": 30,
-            "durability": 40,
-            "mind": 3,
-            "maxd": 6,
-            "rs": 25,
-            "rd": 0,
+            "durability": 40, // OK
+            "mind": 3, // OK
+            "maxd": 6, // OK
+            "rs": 25, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 2,
             "i": "invbsh",
@@ -20594,10 +21378,10 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Sallet",
             "minac": 52,
-            "maxac": 62,
-            "durability": 18,
-            "rs": 43,
-            "rd": 0,
+            "maxac": 62, // TODO 63
+            "durability": 18, // OK
+            "rs": 43, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 1,
             "i": "invskp",
@@ -20722,10 +21506,10 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Death Mask",
             "minac": 54,
-            "maxac": 86,
-            "durability": 20,
-            "rs": 55,
-            "rd": 0,
+            "maxac": 86, // TODO 87
+            "durability": 20, // OK
+            "rs": 55, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 1,
             "i": "invmsk",
@@ -20746,10 +21530,10 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Ghost Armor",
             "minac": 102,
-            "maxac": 117,
-            "durability": 20,
-            "rs": 38,
-            "rd": 0,
+            "maxac": 117, // TODO 118
+            "durability": 20, // OK
+            "rs": 38, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 1,
             "i": "invqlt",
@@ -20795,7 +21579,7 @@ export let remodded_constants_99 = {
             "n": "Demonhide Armor",
             "minac": 122,
             "maxac": 136,
-            "durability": 28,
+            "durability": 28, // OK
             "rs": 50,
             "rd": 0,
             "hi": 1,
@@ -20819,9 +21603,9 @@ export let remodded_constants_99 = {
             "n": "Trellised Armor",
             "minac": 138,
             "maxac": 153,
-            "durability": 32,
-            "rs": 61,
-            "rd": 0,
+            "durability": 32, // OK
+            "rs": 61, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 1,
             "i": "invstu",
@@ -20893,8 +21677,8 @@ export let remodded_constants_99 = {
             "n": "Mesh Armor",
             "minac": 198,
             "maxac": 213,
-            "durability": 45,
-            "rs": 92,
+            "durability": 45, // OK
+            "rs": 92, // OK
             "rd": 0,
             "hi": 1,
             "gt": 1,
@@ -20917,9 +21701,9 @@ export let remodded_constants_99 = {
             "n": "Cuirass",
             "minac": 188,
             "maxac": 202,
-            "durability": 50,
-            "rs": 65,
-            "rd": 0,
+            "durability": 50, // OK
+            "rs": 65, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 1,
             "i": "invbrs",
@@ -21038,9 +21822,9 @@ export let remodded_constants_99 = {
             "n": "Chaos Armor",
             "minac": 315,
             "maxac": 342,
-            "durability": 70,
-            "rs": 140,
-            "rd": 0,
+            "durability": 70, // OK
+            "rs": 140, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 1,
             "i": "invful",
@@ -21141,11 +21925,11 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Round Shield",
             "minac": 47,
-            "maxac": 55,
-            "durability": 64,
+            "maxac": 55, // TODO 56
+            "durability": 64, // OK
             "mind": 7,
             "maxd": 14,
-            "rs": 53,
+            "rs": 53, // OK
             "rd": 0,
             "hi": 1,
             "gt": 2,
@@ -21172,11 +21956,11 @@ export let remodded_constants_99 = {
             "n": "Scutum",
             "minac": 53,
             "maxac": 61,
-            "durability": 62,
-            "mind": 11,
-            "maxd": 15,
-            "rs": 71,
-            "rd": 0,
+            "durability": 62, // OK
+            "mind": 11, // OK
+            "maxd": 15, // OK
+            "rs": 71, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 2,
             "i": "invlrg",
@@ -21463,12 +22247,12 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Mesh Boots",
             "minac": 37,
-            "maxac": 44,
-            "durability": 16,
+            "maxac": 44, // TODO 45
+            "durability": 16, // OK
             "mind": 23,
             "maxd": 52,
-            "rs": 65,
-            "rd": 0,
+            "rs": 65, // OK
+            "rd": 0, // OK
             "hi": 0,
             "gt": 0,
             "i": "invmbt",
@@ -21516,10 +22300,10 @@ export let remodded_constants_99 = {
             "n": "War Boots",
             "minac": 43,
             "maxac": 53,
-            "durability": 24,
-            "mind": 39,
-            "maxd": 80,
-            "rs": 125,
+            "durability": 24, // OK
+            "mind": 39, // OK
+            "maxd": 80, // OK
+            "rs": 125, // OK
             "rd": 0,
             "hi": 0,
             "gt": 0,
@@ -21589,10 +22373,10 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Mesh Belt",
             "minac": 35,
-            "maxac": 40,
-            "durability": 16,
-            "rs": 58,
-            "rd": 0,
+            "maxac": 40, // TODO 41
+            "durability": 16, // OK
+            "rs": 58, // OK
+            "rd": 0, // OK
             "hi": 0,
             "gt": 0,
             "i": "invmbl",
@@ -21614,9 +22398,9 @@ export let remodded_constants_99 = {
             "n": "Battle Belt",
             "minac": 37,
             "maxac": 42,
-            "durability": 18,
-            "rs": 88,
-            "rd": 0,
+            "durability": 18, // OK
+            "rs": 88, // OK
+            "rd": 0, // OK
             "hi": 0,
             "gt": 0,
             "i": "invtbl",
@@ -21662,8 +22446,8 @@ export let remodded_constants_99 = {
             "n": "Grim Helm",
             "minac": 60,
             "maxac": 125,
-            "durability": 40,
-            "rs": 58,
+            "durability": 40, // OK
+            "rs": 58, // OK
             "rd": 0,
             "hi": 1,
             "gt": 1,
@@ -21829,7 +22613,9 @@ export let remodded_constants_99 = {
             "exc": "dr9",
             "elc": "dre",
             "iq": 0,
-            "n": "Falcon Mask",
+            // "n": "Falcon Mask",
+            "n": "Cub Cap",
+            // Can have +3 Werebear
             "minac": 12,
             "maxac": 28,
             "durability": 20,
@@ -21837,7 +22623,7 @@ export let remodded_constants_99 = {
             "rd": 0,
             "hi": 1,
             "gt": 1,
-            "i": "invdr4",
+            "i": "Custom/bear_pelt",
             "iw": 2,
             "ih": 2,
             "it": 8,
@@ -21942,11 +22728,12 @@ export let remodded_constants_99 = {
             "elc": "bad",
             "iq": 0,
             "n": "Horned Helm",
+            // Can have 3 barbarian mods
             "minac": 25,
             "maxac": 30,
-            "durability": 45,
-            "rs": 45,
-            "rd": 0,
+            "durability": 90, // OK
+            "rs": 45, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 1,
             "i": "invba3",
@@ -22241,7 +23028,7 @@ export let remodded_constants_99 = {
             "n": "Unraveller Head",
             "minac": 6,
             "maxac": 10,
-            "durability": 20,
+            "durability": 40, // OK
             "rs": 18,
             "rd": 0,
             "hi": 1,
@@ -22353,9 +23140,9 @@ export let remodded_constants_99 = {
             "n": "Coronet",
             "minac": 30,
             "maxac": 40,
-            "durability": 30,
-            "rs": 0,
-            "rd": 0,
+            "durability": 30, // OK
+            "rs": 0, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 1,
             "i": "invci1",
@@ -22428,8 +23215,8 @@ export let remodded_constants_99 = {
             "n": "Shako",
             "minac": 98,
             "maxac": 141,
-            "durability": 12,
-            "rs": 50,
+            "durability": 12, // OK
+            "rs": 50, // OK
             "rd": 0,
             "hi": 1,
             "gt": 1,
@@ -22577,8 +23364,8 @@ export let remodded_constants_99 = {
             "n": "Demonhead",
             "minac": 101,
             "maxac": 154,
-            "durability": 20,
-            "rs": 102,
+            "durability": 40, // OK
+            "rs": 102, // OK
             "rd": 0,
             "hi": 1,
             "gt": 1,
@@ -22745,9 +23532,9 @@ export let remodded_constants_99 = {
             "n": "Boneweave",
             "minac": 399,
             "maxac": 505,
-            "durability": 45,
-            "rs": 158,
-            "rd": 0,
+            "durability": 45, // OK
+            "rs": 158, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 1,
             "i": "invchn",
@@ -22769,9 +23556,9 @@ export let remodded_constants_99 = {
             "n": "Great Hauberk",
             "minac": 395,
             "maxac": 501,
-            "durability": 50,
-            "rs": 118,
-            "rd": 0,
+            "durability": 50, // OK
+            "rs": 118, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 1,
             "i": "invbrs",
@@ -22993,11 +23780,11 @@ export let remodded_constants_99 = {
             "n": "Luna",
             "minac": 108,
             "maxac": 123,
-            "durability": 84,
-            "mind": 17,
-            "maxd": 29,
-            "rs": 100,
-            "rd": 0,
+            "durability": 84, // OK
+            "mind": 39, // OK
+            "maxd": 40, // OK
+            "rs": 100, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 2,
             "i": "invsml",
@@ -23113,10 +23900,10 @@ export let remodded_constants_99 = {
             "n": "Ward",
             "minac": 153,
             "maxac": 170,
-            "durability": 100,
-            "mind": 11,
-            "maxd": 35,
-            "rs": 185,
+            "durability": 100, // OK
+            "mind": 42, // OK
+            "maxd": 43, // OK
+            "rs": 185, // OK
             "rd": 0,
             "hi": 1,
             "gt": 2,
@@ -23215,9 +24002,9 @@ export let remodded_constants_99 = {
             "n": "Crusader Gauntlets",
             "minac": 59,
             "maxac": 68,
-            "durability": 18,
-            "rs": 151,
-            "rd": 0,
+            "durability": 36, // OK
+            "rs": 151, // OK
+            "rd": 0, // OK
             "hi": 0,
             "gt": 0,
             "i": "invtgl",
@@ -23263,10 +24050,10 @@ export let remodded_constants_99 = {
             "n": "Wyrmhide Boots",
             "minac": 54,
             "maxac": 62,
-            "durability": 12,
-            "mind": 65,
-            "maxd": 100,
-            "rs": 50,
+            "durability": 24, // OK
+            "mind": 65, // OK
+            "maxd": 100, // OK
+            "rs": 50, // OK
             "rd": 0,
             "hi": 0,
             "gt": 0,
@@ -23341,10 +24128,10 @@ export let remodded_constants_99 = {
             "n": "Mirrored Boots",
             "minac": 59,
             "maxac": 68,
-            "durability": 18,
-            "mind": 50,
-            "maxd": 145,
-            "rs": 163,
+            "durability": 18, // OK
+            "mind": 50, // OK
+            "maxd": 145, // OK
+            "rs": 163, // OK
             "rd": 0,
             "hi": 0,
             "gt": 0,
@@ -23393,8 +24180,8 @@ export let remodded_constants_99 = {
             "n": "Spiderweb Sash",
             "minac": 55,
             "maxac": 62,
-            "durability": 12,
-            "rs": 50,
+            "durability": 12, // OK
+            "rs": 50, // OK
             "rd": 0,
             "hi": 0,
             "gt": 0,
@@ -23569,11 +24356,11 @@ export let remodded_constants_99 = {
             "n": "Blade Barrier",
             "minac": 147,
             "maxac": 163,
-            "durability": 83,
-            "mind": 26,
-            "maxd": 40,
-            "rs": 118,
-            "rd": 0,
+            "durability": 83, // OK
+            "mind": 75, // OK
+            "maxd": 76, // OK
+            "rs": 118, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 2,
             "i": "invspk",
@@ -23680,15 +24467,17 @@ export let remodded_constants_99 = {
             "exc": "dr9",
             "elc": "dre",
             "iq": 1,
-            "n": "Sacred Feathers",
+            // "n": "Sacred Feathers",
+            "n": "Cavernous Cover",
+            // Can have +2 Werebear
             "minac": 58,
             "maxac": 87,
-            "durability": 20,
-            "rs": 62,
-            "rd": 0,
+            "durability": 20, // OK
+            "rs": 62, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 1,
-            "i": "invdr4",
+            "i": "Custom/bear_pelt",
             "iw": 2,
             "ih": 2,
             "it": 8,
@@ -23823,9 +24612,9 @@ export let remodded_constants_99 = {
             "n": "Savage Helmet",
             "minac": 85,
             "maxac": 98,
-            "durability": 50,
-            "rs": 103,
-            "rd": 0,
+            "durability": 50, // OK
+            "rs": 103, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 1,
             "i": "invba4",
@@ -23941,10 +24730,10 @@ export let remodded_constants_99 = {
             "n": "Protector Shield",
             "minac": 129,
             "maxac": 153,
-            "durability": 40,
-            "mind": 18,
-            "maxd": 24,
-            "rs": 69,
+            "durability": 40, // OK
+            "mind": 30, // OK
+            "maxd": 31, // OK
+            "rs": 69, // OK
             "rd": 0,
             "hi": 1,
             "gt": 2,
@@ -24179,9 +24968,9 @@ export let remodded_constants_99 = {
             "n": "Blood Spirit",
             "minac": 101,
             "maxac": 145,
-            "durability": 20,
-            "rs": 86,
-            "rd": 0,
+            "durability": 20, // OK
+            "rs": 86, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 1,
             "i": "invdr1",
@@ -24260,7 +25049,9 @@ export let remodded_constants_99 = {
             "exc": "dr9",
             "elc": "dre",
             "iq": 2,
-            "n": "Sky Spirit",
+            // "n": "Sky Spirit",
+            "n": "Grizzly Visor",
+            // Can have +1 Werebear
             "minac": 103,
             "maxac": 155,
             "durability": 20,
@@ -24268,7 +25059,7 @@ export let remodded_constants_99 = {
             "rd": 0,
             "hi": 1,
             "gt": 1,
-            "i": "invdr4",
+            "i": "Custom/bear_pelt",
             "iw": 2,
             "ih": 2,
             "it": 8,
@@ -24317,10 +25108,11 @@ export let remodded_constants_99 = {
             "elc": "bab",
             "iq": 2,
             "n": "Carnage Helm",
+            // Can have 3 barbarian mods
             "minac": 102,
             "maxac": 147,
-            "durability": 25,
-            "rs": 106,
+            "durability": 25, // OK
+            "rs": 106, // OK
             "rd": 0,
             "hi": 1,
             "gt": 1,
@@ -24459,11 +25251,11 @@ export let remodded_constants_99 = {
             "n": "Sacred Targe",
             "minac": 126,
             "maxac": 158,
-            "durability": 45,
-            "mind": 22,
-            "maxd": 70,
-            "rs": 86,
-            "rd": 0,
+            "durability": 90, // OK
+            "mind": 50, // OK
+            "maxd": 51, // OK
+            "rs": 86, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 2,
             "i": "invpa1",
@@ -24612,11 +25404,12 @@ export let remodded_constants_99 = {
             "elc": "neb",
             "iq": 2,
             "n": "Minion Skull",
+            // Can have +2 summon skills, +50psn over 4s
             "minac": 95,
             "maxac": 139,
-            "durability": 20,
-            "rs": 77,
-            "rd": 0,
+            "durability": 20, // OK
+            "rs": 77, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 2,
             "i": "invne1",
@@ -24852,7 +25645,7 @@ export let remodded_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor",
-				"Necromancer Item",
+				"Druid Item",
 				"Class Specific"
             ]
         },
@@ -24878,7 +25671,7 @@ export let remodded_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor",
-				"Necromancer Item",
+				"Druid Item",
 				"Class Specific"
             ]
         },
@@ -24888,11 +25681,12 @@ export let remodded_constants_99 = {
             "elc": "Oa3",
             "iq": 2,
             "n": "Oaken Armor",
+            // Can have 5-6% poison & magic skill damage
             "minac": 361, // TODO
-            "maxac": 467, // TODO
+            "maxac": 467, // TODO 471
             "durability": 20, // TODO
-            "rs": 77, // TODO
-            "rd": 0, // TODO
+            "rs": 165, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 1,
             "i": "Custom/oaken_armor",
@@ -24904,7 +25698,7 @@ export let remodded_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor",
-				"Necromancer Item",
+				"Druid Item",
 				"Class Specific"
             ]
         },
@@ -24966,11 +25760,12 @@ export let remodded_constants_99 = {
             "elc": "Wp3",
             "iq": 2,
             "n": "Fenris Fur",
+            // Can have Increase Feral Rage Max Leech by 10%
             "minac": 361, // TODO
-            "maxac": 467, // TODO
-            "durability": 20, // TODO
-            "rs": 77, // TODO
-            "rd": 0, // TODO
+            "maxac": 467, // TODO 371
+            "durability": 35, // OK
+            "rs": 70, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 1,
             "i": "Custom/wolf_armor",
@@ -25126,12 +25921,13 @@ export let remodded_constants_99 = {
             "elc": "Ab3",
             "iq": 2,
             "n": "Bladed Boots",
-            "minac": 54, // TODO
+            // Can have 11?FRW
+            "minac": 54, // TODO: 59
             "maxac": 62, // TODO
-            "durability": 12, // TODO
-            "mind": 65, // TODO
-            "maxd": 100, // TODO
-            "rs": 50, // TODO
+            "durability": 45, // OK
+            "mind": 65, // OK
+            "maxd": 125, // OK
+            "rs": 49, // TODO
             "rd": 0, // TODO
             "hi": 0,
             "gt": 0,
@@ -25310,6 +26106,7 @@ export let remodded_constants_99 = {
             "elc": "Vg3",
             "iq": 0,
             "n": "Arcanic Touch",
+            // Can have ??FCR
             "minac": 2, // TODO
             "maxac": 3, // TODO
             "durability": 12, // TODO
@@ -25336,6 +26133,7 @@ export let remodded_constants_99 = {
             "elc": "Vg3",
             "iq": 1,
             "n": "Elemental Outreach",
+            // Can have 30FCR, 5% elemental skills damage
             "minac": 28, // TODO
             "maxac": 35, // TODO
             "durability": 12, // TODO
@@ -25362,11 +26160,12 @@ export let remodded_constants_99 = {
             "elc": "Vg3",
             "iq": 2,
             "n": "Vizjerei Vestige",
+            // Can have 30FCR
             "minac": 54, // TODO
-            "maxac": 62, // TODO
-            "durability": 12, // TODO
-            "rs": 50, // TODO
-            "rd": 0, // TODO
+            "maxac": 62, // TODO 59, 68
+            "durability": 18, // OK
+            "rs": 151, // OK
+            "rd": 0, // OK
             "hi": 0,
             "gt": 0,
             "i": "Custom/sorc_gaunts",
@@ -25493,10 +26292,10 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Mighty Belt",
             "minac": 29, // TODO
-            "maxac": 34, // TODO
-            "durability": 12, // TODO
-            "rs": 20, // TODO
-            "rd": 0, // TODO
+            "maxac": 34, // TODO 46, 52
+            "durability": 24, // TODO
+            "rs": 110, // OK
+            "rd": 0, // OK
             "hi": 0,
             "gt": 0,
             "i": "Custom/strong_belt",
@@ -25519,10 +26318,10 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Arreat Belt",
             "minac": 55, // TODO
-            "maxac": 62, // TODO
-            "durability": 12, // TODO
-            "rs": 50, // TODO
-            "rd": 0, // TODO
+            "maxac": 62, // TODO 69
+            "durability": 24, // OK
+            "rs": 185, // OK
+            "rd": 0, // OK
             "hi": 0,
             "gt": 0,
             "i": "Custom/strong_belt",
@@ -25649,11 +26448,12 @@ export let remodded_constants_99 = {
             "elc": "Zc3",
             "iq": 1,
             "n": "Island Crown",
+            // Can have 3 p&m? mods
             "minac": 40, // TODO
-            "maxac": 50, // TODO
-            "durability": 25, // TODO
-            "rs": 0, // TODO
-            "rd": 0, // TODO
+            "maxac": 50, // TODO 50
+            "durability": 25, // OK
+            "rs": 0, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 1,
             "i": "invci3",
@@ -25813,9 +26613,9 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Anointed Crown",
             "minac": 45, // TODO
-            "maxac": 53, // TODO
-            "durability": 12, // TODO
-            "rs": 20, // TODO
+            "maxac": 53, // TODO 87
+            "durability": 50, // TODO
+            "rs": 103, // OK
             "rd": 0, // TODO
             "hi": 1,
             "gt": 1,
@@ -25839,10 +26639,10 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Treasured Headdress",
             "minac": 98, // TODO
-            "maxac": 141, // TODO
-            "durability": 12, // TODO
-            "rs": 50, // TODO
-            "rd": 0, // TODO
+            "maxac": 141, // TODO 140
+            "durability": 50, // OK
+            "rs": 174, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 1,
             "i": "invcrn",
@@ -25864,11 +26664,12 @@ export let remodded_constants_99 = {
             "elc": "Ag3",
             "iq": 0,
             "n": "Trainee's Gloves",
+            // Can have 0.33Dext (clvl)
             "minac": 2, // TODO
-            "maxac": 3, // TODO
-            "durability": 12, // TODO
-            "rs": 0, // TODO
-            "rd": 0, // TODO
+            "maxac": 3, // TODO 45
+            "durability": 24, // OK
+            "rs": 110, // OK
+            "rd": 0, // OK
             "hi": 0,
             "gt": 0,
             "i": "invlgl",
@@ -26045,11 +26846,11 @@ export let remodded_constants_99 = {
             "exc": "Na2",
             "elc": "Na3",
             "iq": 1,
-            "n": "Ossein Armor",
+            "n": "Ossein Armor<br>7% Faster Hit Recovery",
             "minac": 102, // TODO
-            "maxac": 117, // TODO
-            "durability": 20, // TODO
-            "rs": 38, // TODO
+            "maxac": 117, // TODO 383
+            "durability": 20, // OK
+            "rs": 77, // OK
             "rd": 0, // TODO
             "hi": 1,
             "gt": 1,
@@ -26175,7 +26976,7 @@ export let remodded_constants_99 = {
             "exc": "Sa2",
             "elc": "Sa3",
             "iq": 0,
-            "n": "Gewand",
+            "n": "Garb",
             "minac": 8, // TODO
             "maxac": 11, // TODO
             "durability": 20, // TODO
@@ -26409,17 +27210,20 @@ export let remodded_constants_99 = {
             "exc": "9mp",
             "elc": "7mp",
             "iq": 0,
-            "n": "Military Pick",
-            "durability": 26,
-            "mind": 7,
-            "maxd": 11,
-            "rs": 49,
-            "rd": 33,
+            // "n": "Military Pick",
+            "n": "Sickle",
+            "wsm": -10,
+            // Can have <100 summon dmg/life/ar, 3 bone mods
+            "durability": 33, // OK
+            "mind": 9, // OK
+            "maxd": 14, // OK
+            "rs": 40, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 0,
-            "i": "invmpi",
-            "ui": "invmpiu",
-            "si": "invmpiu",
+            "i": "Custom/sickle",
+            "ui": "Custom/sickle",
+            "si": "Custom/sickle",
             "iw": 2,
             "ih": 3,
             "it": 2,
@@ -26428,7 +27232,9 @@ export let remodded_constants_99 = {
             "c": [
                 "Axe",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Necromancer Item",
+                "Class Specific"
             ]
         },
         "wax": {
@@ -26509,10 +27315,11 @@ export let remodded_constants_99 = {
             "elc": "7bt",
             "iq": 0,
             "n": "Battle Axe",
-            "durability": 40,
-            "min2d": 12,
-            "max2d": 32,
-            "rs": 54,
+            "wsm": 10,
+            "durability": 50, // OK
+            "min2d": 15, // OK
+            "max2d": 40, // OK
+            "rs": 54, // OK
             "hi": 1,
             "gt": 0,
             "i": "invbtx",
@@ -26535,11 +27342,12 @@ export let remodded_constants_99 = {
             "elc": "7ga",
             "iq": 0,
             "n": "Great Axe",
-            "durability": 50,
-            "min2d": 9,
-            "max2d": 30,
-            "rs": 63,
-            "rd": 39,
+            "wsm": -10,
+            "durability": 63, // OK
+            "min2d": 19, // OK
+            "max2d": 44, // OK
+            "rs": 70, // OK
+            "rd": 0,
             "hi": 1,
             "gt": 0,
             "i": "invgax",
@@ -26689,7 +27497,8 @@ export let remodded_constants_99 = {
             "exc": "9cl",
             "elc": "7cl",
             "iq": 0,
-            "n": "Club",
+            // "n": "Club",
+            "n": "Bough",
             "durability": 24,
             "mind": 1,
             "maxd": 6,
@@ -26707,7 +27516,9 @@ export let remodded_constants_99 = {
                 "Club",
                 "Blunt",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Druid Item",
+                "Class Specific"
             ]
         },
         "scp": {
@@ -26923,10 +27734,11 @@ export let remodded_constants_99 = {
             "elc": "7m7",
             "iq": 0,
             "n": "Maul",
-            "durability": 60,
-            "min2d": 30,
-            "max2d": 43,
-            "rs": 69,
+            "wsm": 10,
+            "durability": 75, // OK
+            "min2d": 44, // OK
+            "max2d": 63, // OK
+            "rs": 75, // OK
             "hi": 1,
             "gt": 0,
             "i": "invmau",
@@ -26950,10 +27762,11 @@ export let remodded_constants_99 = {
             "elc": "7gm",
             "iq": 0,
             "n": "Great Maul",
-            "durability": 60,
-            "min2d": 38,
-            "max2d": 58,
-            "rs": 99,
+            "wsm": 20,
+            "durability": 75, // OK
+            "min2d": 53, // OK
+            "max2d": 78, // OK
+            "rs": 105, // OK
             "hi": 1,
             "gt": 0,
             "i": "invgma",
@@ -27083,10 +27896,11 @@ export let remodded_constants_99 = {
             "elc": "7cr",
             "iq": 0,
             "n": "Crystal Sword",
-            "durability": 20,
-            "mind": 5,
-            "maxd": 15,
-            "rs": 43,
+            "wsm": -30,
+            "durability": 25, // OK
+            "mind": 7, // OK
+            "maxd": 19, // OK
+            "rs": 43, // OK
             "hi": 1,
             "gt": 0,
             "i": "invcrs",
@@ -27224,12 +28038,13 @@ export let remodded_constants_99 = {
             "elc": "7cm",
             "iq": 0,
             "n": "Claymore",
-            "durability": 50,
-            "mind": 5,
-            "maxd": 12,
-            "min2d": 13,
-            "max2d": 30,
-            "rs": 47,
+            "wsm": 10,
+            "durability": 63, // OK
+            "mind": 7, // OK
+            "maxd": 15, // OK
+            "min2d": 17, // OK
+            "max2d": 38, // OK
+            "rs": 47, // OK
             "hi": 1,
             "gt": 0,
             "i": "invclm",
@@ -27251,13 +28066,14 @@ export let remodded_constants_99 = {
             "elc": "7gs",
             "iq": 0,
             "n": "Giant Sword",
-            "durability": 50,
-            "mind": 3,
-            "maxd": 16,
-            "min2d": 9,
-            "max2d": 28,
-            "rs": 56,
-            "rd": 34,
+            "wsm": 0,
+            "durability": 63, // OK
+            "mind": 4, // OK
+            "maxd": 20, // OK
+            "min2d": 12, // OK
+            "max2d": 35, // OK
+            "rs": 56, // OK
+            "rd": 34, // OK
             "hi": 1,
             "gt": 0,
             "i": "invgis",
@@ -27417,10 +28233,12 @@ export let remodded_constants_99 = {
             "elc": "7kr",
             "iq": 0,
             "n": "Kris",
-            "durability": 24,
-            "mind": 2,
-            "maxd": 11,
-            "rd": 45,
+            "wsm": -20,
+            "durability": 30, // OK
+            "mind": 3, // OK
+            "maxd": 14, // OK
+            "rs": 15, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 0,
             "i": "invkrs",
@@ -27562,7 +28380,9 @@ export let remodded_constants_99 = {
                 "Knife",
                 "Swords and Knives",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Assassin Item",
+                "Class Specific"
             ]
         },
         "bal": {
@@ -27766,7 +28586,9 @@ export let remodded_constants_99 = {
                 "Spear",
                 "Spears and Polearms",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Barbarian Item",
+                "Class Specific"
             ]
         },
         "spr": {
@@ -27956,11 +28778,11 @@ export let remodded_constants_99 = {
             "elc": "7s8",
             "iq": 0,
             "n": "Scythe",
-            "durability": 65,
-            "min2d": 8,
-            "max2d": 20,
-            "rs": 41,
-            "rd": 41,
+            "durability": 82, // OK
+            "min2d": 15, // OK
+            "max2d": 32, // OK
+            "rs": 35, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 0,
             "i": "invscy",
@@ -27975,7 +28797,9 @@ export let remodded_constants_99 = {
                 "Polearm",
                 "Spears and Polearms",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Necromancer Item",
+                "Class Specific"
             ]
         },
         "pax": {
@@ -28102,7 +28926,9 @@ export let remodded_constants_99 = {
                 "Staves And Rods",
                 "Blunt",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Sorceress Item",
+                "Class Specific"
             ]
         },
         "cst": {
@@ -28212,10 +29038,11 @@ export let remodded_constants_99 = {
             "elc": "6hb",
             "iq": 0,
             "n": "Hunter's Bow",
+            "wsm": -10,
             "durability": 32,
-            "min2d": 2,
-            "max2d": 6,
-            "rd": 28,
+            "min2d": 3, // OK
+            "max2d": 8, // OK
+            "rd": 28, // OK
             "hi": 1,
             "gt": 0,
             "i": "invhbw",
@@ -28237,8 +29064,8 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Long Bow",
             "durability": 28,
-            "min2d": 3,
-            "max2d": 10,
+            "min2d": 4, // OK
+            "max2d": 13, // OK
             "rs": 22,
             "rd": 19,
             "hi": 1,
@@ -28473,6 +29300,7 @@ export let remodded_constants_99 = {
             "elc": "6rx",
             "iq": 0,
             "n": "Repeating Crossbow",
+            "wsm": -40,
             "durability": 40,
             "min2d": 6,
             "max2d": 12,
@@ -28881,7 +29709,9 @@ export let remodded_constants_99 = {
             "exc": "9mp",
             "elc": "7mp",
             "iq": 1,
-            "n": "Crowbill",
+            // "n": "Crowbill",
+            "n": "Battle Sickle",
+            // Can have <?? summon dmg/life/ar, 3 bone mods
             "durability": 26,
             "mind": 14,
             "maxd": 34,
@@ -28889,9 +29719,9 @@ export let remodded_constants_99 = {
             "rd": 70,
             "hi": 1,
             "gt": 0,
-            "i": "invmpi",
-            "ui": "invmpiu",
-            "si": "invmpiu",
+            "i": "Custom/sickle",
+            "ui": "Custom/sickle",
+            "si": "Custom/sickle",
             "iw": 2,
             "ih": 3,
             "it": 2,
@@ -28900,7 +29730,9 @@ export let remodded_constants_99 = {
             "c": [
                 "Axe",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Necromancer Item",
+                "Class Specific"
             ]
         },
         "9wa": {
@@ -28909,10 +29741,11 @@ export let remodded_constants_99 = {
             "elc": "7wa",
             "iq": 1,
             "n": "Naga",
-            "durability": 26,
-            "mind": 16,
-            "maxd": 45,
-            "rs": 121,
+            "wsm": 0,
+            "durability": 33, // OK
+            "mind": 20, // OK
+            "maxd": 57, // OK
+            "rs": 121, // OK
             "hi": 1,
             "gt": 0,
             "i": "invwax",
@@ -28933,10 +29766,11 @@ export let remodded_constants_99 = {
             "elc": "7la",
             "iq": 1,
             "n": "Military Axe",
-            "durability": 30,
-            "min2d": 14,
-            "max2d": 34,
-            "rs": 73,
+            "wsm": -10,
+            "durability": 38,
+            "min2d": 18, // OK
+            "max2d": 43, // OK
+            "rs": 73, // OK
             "hi": 1,
             "gt": 0,
             "i": "invlax",
@@ -28981,10 +29815,10 @@ export let remodded_constants_99 = {
             "elc": "7bt",
             "iq": 1,
             "n": "Tabar",
-            "durability": 40,
-            "min2d": 24,
-            "max2d": 77,
-            "rs": 101,
+            "durability": 50, // OK
+            "min2d": 30, // OK
+            "max2d": 97, // OK
+            "rs": 101, // OK
             "hi": 1,
             "gt": 0,
             "i": "invbtx",
@@ -29034,10 +29868,11 @@ export let remodded_constants_99 = {
             "elc": "7gi",
             "iq": 1,
             "n": "Ancient Axe",
-            "durability": 50,
-            "min2d": 43,
-            "max2d": 85,
-            "rs": 125,
+            "wsm": 10,
+            "durability": 63, // OK
+            "min2d": 63, // OK
+            "max2d": 113, // OK
+            "rs": 150, // OK
             "hi": 1,
             "gt": 0,
             "i": "invgix",
@@ -29167,11 +30002,13 @@ export let remodded_constants_99 = {
             "exc": "9cl",
             "elc": "7cl",
             "iq": 1,
-            "n": "Cudgel",
-            "durability": 24,
-            "mind": 6,
-            "maxd": 21,
-            "rs": 25,
+            // "n": "Cudgel",
+            "n": "Limb",
+            "wsm": -10,
+            "durability": 30, // OK
+            "mind": 8, // OK
+            "maxd": 27, // OK
+            "rs": 25, // OK
             "hi": 1,
             "gt": 0,
             "i": "invclb",
@@ -29186,7 +30023,9 @@ export let remodded_constants_99 = {
                 "Club",
                 "Blunt",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Druid Item",
+                "Class Specific"
             ]
         },
         "9sc": {
@@ -29300,10 +30139,12 @@ export let remodded_constants_99 = {
             "elc": "7ma",
             "iq": 1,
             "n": "Flanged Mace",
-            "durability": 60,
-            "mind": 15,
-            "maxd": 23,
-            "rs": 61,
+            "wsm": 0,
+            // Can have 6OW
+            "durability": 75, // OK
+            "mind": 19,
+            "maxd": 29, // OK
+            "rs": 61, // OK
             "hi": 1,
             "gt": 0,
             "i": "invmac",
@@ -29325,10 +30166,11 @@ export let remodded_constants_99 = {
             "elc": "7mt",
             "iq": 1,
             "n": "Jagged Star",
-            "durability": 72,
-            "mind": 20,
-            "maxd": 31,
-            "rs": 74,
+            "wsm": 10,
+            "durability": 90, // OK
+            "mind": 25, // OK
+            "maxd": 39, // OK
+            "rs": 74, // OK
             "hi": 1,
             "gt": 0,
             "i": "invmst",
@@ -29403,10 +30245,12 @@ export let remodded_constants_99 = {
             "elc": "7m7",
             "iq": 1,
             "n": "War Club",
-            "durability": 60,
-            "min2d": 53,
-            "max2d": 78,
-            "rs": 124,
+            // Can haved 50ED vs undead
+            "wsm": 10,
+            "durability": 75, // OK
+            "min2d": 75, // OK
+            "max2d": 107, // OK
+            "rs": 150, // OK
             "hi": 1,
             "gt": 0,
             "i": "invmau",
@@ -29590,11 +30434,12 @@ export let remodded_constants_99 = {
             "elc": "7bs",
             "iq": 1,
             "n": "Battle Sword",
-            "durability": 32,
-            "mind": 16,
-            "maxd": 34,
-            "rs": 92,
-            "rd": 43,
+            "wsm": 0,
+            "durability": 40, // OK
+            "mind": 20, // OK
+            "maxd": 43, // OK
+            "rs": 92, // OK
+            "rd": 43, // OK
             "hi": 1,
             "gt": 0,
             "i": "invbsd",
@@ -29616,11 +30461,12 @@ export let remodded_constants_99 = {
             "elc": "7ls",
             "iq": 1,
             "n": "Rune Sword",
-            "durability": 44,
-            "mind": 10,
-            "maxd": 42,
-            "rs": 103,
-            "rd": 79,
+            "wsm": -10,
+            "durability": 55, // OK
+            "mind": 13, // OK
+            "maxd": 53, // OK
+            "rs": 103, // OK
+            "rd": 79, // OK
             "hi": 1,
             "gt": 0,
             "i": "invlsd",
@@ -29703,13 +30549,14 @@ export let remodded_constants_99 = {
             "elc": "7cm",
             "iq": 1,
             "n": "Dacian Falx",
-            "durability": 50,
+            "wsm": 10,
+            "durability": 126, // OK
             "mind": 13,
             "maxd": 30,
-            "min2d": 26,
-            "max2d": 61,
-            "rs": 91,
-            "rd": 20,
+            "min2d": 33, // OK
+            "max2d": 77, // OK
+            "rs": 91, // OK
+            "rd": 20, // OK
             "hi": 1,
             "gt": 0,
             "i": "invclm",
@@ -29876,11 +30723,12 @@ export let remodded_constants_99 = {
             "elc": "7di",
             "iq": 1,
             "n": "Rondel",
-            "durability": 20,
-            "mind": 10,
-            "maxd": 26,
-            "rs": 25,
-            "rd": 58,
+            "wsm": 0,
+            "durability": 25, // OK
+            "mind": 13, // OK
+            "maxd": 33, // OK
+            "rs": 25, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 0,
             "i": "invdir",
@@ -29902,11 +30750,12 @@ export let remodded_constants_99 = {
             "elc": "7kr",
             "iq": 1,
             "n": "Cinquedeas",
-            "durability": 24,
-            "mind": 15,
-            "maxd": 31,
-            "rs": 25,
-            "rd": 88,
+            "wsm": -20,
+            "durability": 30, // OK
+            "mind": 19, // OK
+            "maxd": 39, // OK
+            "rs": 25, // OK
+            "rd": 0,
             "hi": 1,
             "gt": 0,
             "i": "invkrs",
@@ -30027,14 +30876,15 @@ export let remodded_constants_99 = {
             "elc": "7bk",
             "iq": 1,
             "n": "War Dart",
+            "wsm": -20,
             "s": 1,
             "durability": 20,
-            "mind": 6,
-            "maxd": 24,
-            "minmd": 14,
-            "maxmd": 27,
-            "rs": 25,
-            "rd": 97,
+            "mind": 8, // OK
+            "maxd": 30, // OK
+            "minmd": 18, // OK
+            "maxmd": 34, // OK
+            "rs": 25, // OK
+            "rd": 97, // OK
             "gt": 0,
             "i": "invbkf",
             "iw": 1,
@@ -30053,7 +30903,9 @@ export let remodded_constants_99 = {
                 "Knife",
                 "Swords and Knives",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Assassin Item",
+                "Class Specific"
             ]
         },
         "9b8": {
@@ -30062,14 +30914,15 @@ export let remodded_constants_99 = {
             "elc": "7b8",
             "iq": 1,
             "n": "Hurlbat",
+            "wsm": -10,
             "s": 1,
             "durability": 16,
-            "mind": 13,
-            "maxd": 27,
-            "minmd": 24,
-            "maxmd": 34,
-            "rs": 25,
-            "rd": 106,
+            "mind": 17, // OK
+            "maxd": 34, // OK
+            "minmd": 30, // OK
+            "maxmd": 43, // OK
+            "rs": 25, // OK
+            "rd": 106, // OK
             "gt": 0,
             "i": "invbal",
             "iw": 2,
@@ -30096,14 +30949,15 @@ export let remodded_constants_99 = {
             "elc": "7ja",
             "iq": 1,
             "n": "War Javelin",
+            "wsm": -10,
             "s": 1,
             "durability": 10,
-            "mind": 6,
-            "maxd": 19,
-            "minmd": 14,
-            "maxmd": 32,
-            "rs": 25,
-            "rd": 25,
+            "mind": 8, // OK
+            "maxd": 24, // OK
+            "minmd": 18, // OK
+            "maxmd": 40, // OK
+            "rs": 0,
+            "rd": 25, // OK
             "gt": 0,
             "i": "invjav",
             "iw": 1,
@@ -30133,12 +30987,12 @@ export let remodded_constants_99 = {
             "n": "Great Pilum",
             "s": 1,
             "durability": 12,
-            "mind": 11,
-            "maxd": 26,
-            "minmd": 16,
-            "maxmd": 42,
-            "rs": 25,
-            "rd": 88,
+            "mind": 14, // OK
+            "maxd": 33, // OK
+            "minmd": 20, // OK
+            "maxmd": 53, // OK
+            // "rs": 25,
+            "rd": 88, // OK
             "gt": 0,
             "i": "invpil",
             "iw": 1,
@@ -30203,11 +31057,11 @@ export let remodded_constants_99 = {
             "n": "Spiculum",
             "s": 1,
             "durability": 16,
-            "mind": 13,
-            "maxd": 38,
-            "minmd": 32,
-            "maxmd": 60,
-            "rs": 98,
+            "mind": 17, // OK
+            "maxd": 48, // OK
+            "minmd": 40, // OK
+            "maxmd": 75, // OK
+            // "rs": 98,
             "rd": 73,
             "gt": 0,
             "i": "invglv",
@@ -30236,14 +31090,15 @@ export let remodded_constants_99 = {
             "elc": "7ts",
             "iq": 1,
             "n": "Harpoon",
+            "wsm": -10,
             "s": 1,
-            "durability": 18,
-            "mind": 13,
-            "maxd": 35,
-            "minmd": 18,
-            "maxmd": 54,
-            "rs": 25,
-            "rd": 118,
+            "durability": 18, // OK
+            "mind": 17, // OK
+            "maxd": 44, // OK
+            "minmd": 23, // OK
+            "maxmd": 68, // OK
+            "rs": 0, // OK
+            "rd": 100, // OK
             "gt": 0,
             "i": "invtsp",
             "iw": 1,
@@ -30262,7 +31117,9 @@ export let remodded_constants_99 = {
                 "Spear",
                 "Spears and Polearms",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Barbarian Item",
+                "Class Specific"
             ]
         },
         "9sr": {
@@ -30353,10 +31210,11 @@ export let remodded_constants_99 = {
             "elc": "7st",
             "iq": 1,
             "n": "Yari",
-            "durability": 28,
-            "min2d": 29,
-            "max2d": 59,
-            "rs": 101,
+            "wsm": 0,
+            "durability": 35, // OK
+            "min2d": 37, // OK
+            "max2d": 74, // OK
+            "rs": 101, // OK
             "hi": 1,
             "gt": 0,
             "i": "invspt",
@@ -30473,7 +31331,9 @@ export let remodded_constants_99 = {
                 "Polearm",
                 "Spears and Polearms",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Necromancer Item",
+                "Class Specific"
             ]
         },
         "9pa": {
@@ -30508,11 +31368,12 @@ export let remodded_constants_99 = {
             "elc": "7h7",
             "iq": 1,
             "n": "Bec-de-Corbin",
-            "durability": 55,
-            "min2d": 13,
-            "max2d": 85,
-            "rs": 133,
-            "rd": 91,
+            "wsm": 0,
+            "durability": 69,
+            "min2d": 17,
+            "max2d": 107,
+            "rs": 133, // OK
+            "rd": 91, // OK
             "hi": 1,
             "gt": 0,
             "i": "invhal",
@@ -30577,7 +31438,9 @@ export let remodded_constants_99 = {
                 "Staves And Rods",
                 "Blunt",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Sorceress Item",
+                "Class Specific"
             ]
         },
         "8ls": {
@@ -30612,10 +31475,11 @@ export let remodded_constants_99 = {
             "elc": "6cs",
             "iq": 1,
             "n": "Cedar Staff",
-            "durability": 35,
-            "min2d": 11,
-            "max2d": 32,
-            "rs": 25,
+            "wsm": 10,
+            "durability": 44, // OK
+            "min2d": 14,
+            "max2d": 40,
+            "rs": 25, // OK
             "hi": 1,
             "gt": 0,
             "i": "invcst",
@@ -30640,10 +31504,12 @@ export let remodded_constants_99 = {
             "elc": "6bs",
             "iq": 1,
             "n": "Gothic Staff",
-            "durability": 40,
-            "min2d": 14,
-            "max2d": 34,
-            "rs": 25,
+            "wsm": 0,
+            // Can have 3 sorc mods
+            "durability": 50, // OK
+            "min2d": 18, // OK
+            "max2d": 43, // OK
+            "rs": 25, // OK
             "hi": 1,
             "gt": 0,
             "i": "invbst",
@@ -30744,11 +31610,12 @@ export let remodded_constants_99 = {
             "elc": "6lb",
             "iq": 1,
             "n": "Cedar Bow",
+            "wsm": 0,
             "durability": 28,
-            "min2d": 10,
-            "max2d": 29,
-            "rs": 53,
-            "rd": 49,
+            "min2d": 13, // OK
+            "max2d": 37, // OK
+            "rs": 53, // OK
+            "rd": 49, // OK
             "hi": 1,
             "gt": 0,
             "i": "invlbw",
@@ -30771,11 +31638,12 @@ export let remodded_constants_99 = {
             "elc": "6cb",
             "iq": 1,
             "n": "Double Bow",
+            "wsm": -10,
             "durability": 36,
-            "min2d": 11,
-            "max2d": 26,
-            "rs": 58,
-            "rd": 73,
+            "min2d": 14, // OK
+            "max2d": 33, // OK
+            "rs": 58, // OK
+            "rd": 73, // OK
             "hi": 1,
             "gt": 0,
             "i": "invcbw",
@@ -30798,11 +31666,12 @@ export let remodded_constants_99 = {
             "elc": "6s7",
             "iq": 1,
             "n": "Short Siege Bow",
+            "wsm": 0,
             "durability": 40,
-            "min2d": 13,
-            "max2d": 30,
-            "rs": 65,
-            "rd": 80,
+            "min2d": 17, // OK
+            "max2d": 35, // OK
+            "rs": 65, // OK
+            "rd": 80, // OK
             "hi": 1,
             "gt": 0,
             "i": "invsbb",
@@ -30825,11 +31694,12 @@ export let remodded_constants_99 = {
             "elc": "6l7",
             "iq": 1,
             "n": "Large Siege Bow",
+            "wsm": 10,
             "durability": 44,
-            "min2d": 10,
-            "max2d": 42,
-            "rs": 80,
-            "rd": 95,
+            "min2d": 13, // OK
+            "max2d": 53, // OK
+            "rs": 80, // OK
+            "rd": 95, // OK
             "hi": 1,
             "gt": 0,
             "i": "invlbb",
@@ -30850,11 +31720,12 @@ export let remodded_constants_99 = {
             "elc": "6sw",
             "iq": 1,
             "n": "Rune Bow",
+            "wsm": 0,
             "durability": 48,
-            "min2d": 14,
-            "max2d": 35,
-            "rs": 73,
-            "rd": 103,
+            "min2d": 18, // OK
+            "max2d": 44, // OK
+            "rs": 73, // OK
+            "rd": 103, // OK
             "hi": 1,
             "gt": 0,
             "i": "invswb",
@@ -31146,11 +32017,13 @@ export let remodded_constants_99 = {
             "elc": "7cs",
             "iq": 0,
             "n": "Cestus",
-            "durability": 72,
-            "mind": 7,
-            "maxd": 15,
-            "rs": 42,
-            "rd": 42,
+            "wsm": 0,
+            // Can have 3 assassin mods, +1OW
+            "durability": 90, // OK
+            "mind": 9, // OK
+            "maxd": 19, // OK
+            "rs": 42, // OK
+            "rd": 42, // OK
             "hi": 1,
             "gt": 0,
             "i": "invaxf",
@@ -31176,11 +32049,13 @@ export let remodded_constants_99 = {
             "elc": "7lw",
             "iq": 0,
             "n": "Claws",
-            "durability": 64,
-            "mind": 8,
-            "maxd": 15,
-            "rs": 46,
-            "rd": 46,
+            "wsm": -10,
+            // Can have 5OW, 6+ED, 3 shadow/trap mods
+            "durability": 80, // OK
+            "mind": 10, // OK
+            "maxd": 19, // OK
+            "rs": 46, // OK
+            "rd": 46, // OK
             "hi": 1,
             "gt": 0,
             "i": "invclw",
@@ -31378,7 +32253,9 @@ export let remodded_constants_99 = {
             "elc": "7lw",
             "iq": 1,
             "n": "Greater Claws",
-            "durability": 52,
+            "wsm": -20,
+            // Can have 6OW, 3 shadow/trap mods, 25ED
+            "durability": 65, // OK
             "mind": 18,
             "maxd": 37,
             "rs": 76,
@@ -31492,7 +32369,9 @@ export let remodded_constants_99 = {
             "elc": "7wb",
             "iq": 2,
             "n": "Wrist Sword",
-            "durability": 56,
+            "wsm": -10, // OK
+            // Can have 3 assassin mods
+            "durability": 70, // OK
             "mind": 34,
             "maxd": 45,
             "rs": 105,
@@ -31550,7 +32429,9 @@ export let remodded_constants_99 = {
             "elc": "7cs",
             "iq": 2,
             "n": "Battle Cestus",
-            "durability": 72,
+            "wsm": -10,
+            // Can have 7OW, 3 shadow/trap mods
+            "durability": 90, // OK
             "mind": 36,
             "maxd": 42,
             "rs": 110,
@@ -31744,17 +32625,20 @@ export let remodded_constants_99 = {
             "exc": "9mp",
             "elc": "7mp",
             "iq": 2,
-            "n": "War Spike",
-            "durability": 26,
-            "mind": 30,
-            "maxd": 48,
-            "rs": 133,
-            "rd": 54,
+            // "n": "War Spike",
+            "n": "Reaper Sickle",
+            "wsm": -10,
+            // Can have <100 summon dmg/life/ar, 3 bone mods
+            "durability": 33, // OK
+            "mind": 38, // OK
+            "maxd": 60, // OK
+            "rs": 133, // OK
+            "rd": 54, // OK
             "hi": 1,
             "gt": 0,
-            "i": "invmpi",
-            "ui": "invmpiu",
-            "si": "invmpiu",
+            "i": "Custom/sickle",
+            "ui": "Custom/sickle",
+            "si": "Custom/sickle",
             "iw": 2,
             "ih": 3,
             "it": 2,
@@ -31763,7 +32647,9 @@ export let remodded_constants_99 = {
             "c": [
                 "Axe",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Necromancer Item",
+                "Class Specific"
             ]
         },
         "7wa": {
@@ -31797,10 +32683,10 @@ export let remodded_constants_99 = {
             "elc": "7la",
             "iq": 2,
             "n": "Feral Axe",
-            "durability": 30,
-            "min2d": 25,
-            "max2d": 123,
-            "rs": 196,
+            "durability": 76, // OK
+            "min2d": 32, // OK
+            "max2d": 154, // OK
+            "rs": 196, // OK
             "hi": 1,
             "gt": 0,
             "i": "invlax",
@@ -31821,11 +32707,12 @@ export let remodded_constants_99 = {
             "elc": "7ba",
             "iq": 2,
             "n": "Silver-edged Axe",
-            "durability": 35,
-            "min2d": 62,
-            "max2d": 110,
-            "rs": 166,
-            "rd": 65,
+            "wsm": 0,
+            "durability": 43, // OK
+            "min2d": 78, // OK
+            "max2d": 138, // OK
+            "rs": 166, // OK
+            "rd": 65, // OK
             "hi": 1,
             "gt": 0,
             "i": "invbrx",
@@ -31873,11 +32760,12 @@ export let remodded_constants_99 = {
             "elc": "7ga",
             "iq": 2,
             "n": "Champion Axe",
-            "durability": 50,
-            "min2d": 59,
-            "max2d": 94,
-            "rs": 167,
-            "rd": 59,
+            "wsm": -10,
+            "durability": 126, // OK
+            "min2d": 88, // OK
+            "max2d": 175, // OK
+            "rs": 200, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 0,
             "i": "invgax",
@@ -31951,7 +32839,9 @@ export let remodded_constants_99 = {
             "elc": "7yw",
             "iq": 2,
             "n": "Ghost Wand",
-            "durability": 14,
+            "wsm": 10,
+            // Can have +2 curse radius, 3 necromancer mods
+            "durability": 19, // OK
             "mind": 20,
             "maxd": 40,
             "rs": 25,
@@ -32030,7 +32920,8 @@ export let remodded_constants_99 = {
             "exc": "9cl",
             "elc": "7cl",
             "iq": 2,
-            "n": "Truncheon",
+            // "n": "Truncheon",
+            "n": "Branch",
             "durability": 55,
             "mind": 35,
             "maxd": 43,
@@ -32050,7 +32941,9 @@ export let remodded_constants_99 = {
                 "Club",
                 "Blunt",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Druid Item",
+                "Class Specific"
             ]
         },
         "7sc": {
@@ -32140,10 +33033,11 @@ export let remodded_constants_99 = {
             "elc": "7sp",
             "iq": 2,
             "n": "Tyrant Club",
-            "durability": 65,
-            "mind": 32,
-            "maxd": 58,
-            "rs": 133,
+            "wsm": 0,
+            "durability": 164, // OK
+            "mind": 40, // OK
+            "maxd": 73, // OK
+            "rs": 133, // OK
             "hi": 1,
             "gt": 0,
             "i": "invspc",
@@ -32248,10 +33142,12 @@ export let remodded_constants_99 = {
             "elc": "7wh",
             "iq": 2,
             "n": "Legendary Mallet",
-            "durability": 65,
-            "mind": 50,
-            "maxd": 61,
-            "rs": 189,
+            "wsm": 20,
+            // Can have 50ED vs undead
+            "durability": 82, // OK
+            "mind": 63, // OK
+            "maxd": 77, // OK
+            "rs": 189, // OK
             "hi": 1,
             "gt": 0,
             "i": "invwhm",
@@ -32349,11 +33245,12 @@ export let remodded_constants_99 = {
             "elc": "7sm",
             "iq": 2,
             "n": "Ataghan",
-            "durability": 22,
-            "mind": 26,
-            "maxd": 46,
-            "rs": 138,
-            "rd": 95,
+            "wsm": -20,
+            "durability": 28, // OK
+            "mind": 33, // OK
+            "maxd": 58, // OK
+            "rs": 138, // OK
+            "rd": 95, // OK
             "hi": 1,
             "gt": 0,
             "i": "invscm",
@@ -32377,11 +33274,12 @@ export let remodded_constants_99 = {
             "elc": "7sb",
             "iq": 2,
             "n": "Elegant Blade",
-            "durability": 32,
-            "mind": 33,
-            "maxd": 45,
-            "rs": 109,
-            "rd": 122,
+            "wsm": -10,
+            "durability": 80, // OK
+            "mind": 42, // OK
+            "maxd": 57, // OK
+            "rs": 109, // OK
+            "rd": 122, // OK
             "hi": 1,
             "gt": 0,
             "i": "invsbr",
@@ -32431,11 +33329,13 @@ export let remodded_constants_99 = {
             "elc": "7cr",
             "iq": 2,
             "n": "Phase Blade",
+            "wsm": -30,
+            // Can have +1-5 Double Strike
             "durability": 0,
-            "mind": 31,
-            "maxd": 35,
-            "rs": 25,
-            "rd": 136,
+            "mind": 39, // OK
+            "maxd": 44, // OK
+            "rs": 25, // OK
+            "rd": 136, // OK
             "hi": 1,
             "gt": 0,
             "i": "invcrs",
@@ -32538,15 +33438,15 @@ export let remodded_constants_99 = {
             "exc": "92h",
             "elc": "72h",
             "iq": 2,
-            "n": "Shinogi",
             // "n": "Legend Sword",
-            "durability": 44, // TODO
-            "mind": 22, // TODO
-            "maxd": 56, // TODO
-            "min2d": 50, // TODO
-            "max2d": 94, // TODO
-            "rs": 175, // TODO
-            "rd": 100, // TODO
+            "n": "Shinogi",
+            "wsm": -20,
+            // Can have <=50 no consume, +3 assassin mods
+            "durability": 55, // OK
+            "mind": 28, // OK
+            "maxd": 70, // OK
+            "rs": 175, // OK
+            "rd": 100, // OK
             "hi": 1,
             "gt": 0,
             "i": "Custom/katana",
@@ -32600,13 +33500,14 @@ export let remodded_constants_99 = {
             "elc": "7gs",
             "iq": 2,
             "n": "Balrog Blade",
-            "durability": 50,
-            "mind": 15,
-            "maxd": 75,
-            "min2d": 55,
-            "max2d": 118,
-            "rs": 185,
-            "rd": 87,
+            "wsm": 0,
+            "durability": 63, // OK
+            "mind": 19, // OK
+            "maxd": 94, // OK
+            "min2d": 69, // OK
+            "max2d": 148, // OK
+            "rs": 185, // OK
+            "rd": 87, // OK
             "hi": 1,
             "gt": 0,
             "i": "invgis",
@@ -32630,13 +33531,14 @@ export let remodded_constants_99 = {
             "elc": "7b7",
             "iq": 2,
             "n": "Champion Sword",
-            "durability": 40,
-            "mind": 24,
-            "maxd": 54,
-            "min2d": 71,
-            "max2d": 83,
-            "rs": 163,
-            "rd": 103,
+            "wsm": -10,
+            "durability": 50, // OK
+            "mind": 30, // OK
+            "maxd": 68, // OK
+            "min2d": 89, // OK
+            "max2d": 104, // OK
+            "rs": 163, // OK
+            "rd": 103, // OK
             "hi": 1,
             "gt": 0,
             "i": "invbsw",
@@ -32660,13 +33562,14 @@ export let remodded_constants_99 = {
             "elc": "7fb",
             "iq": 2,
             "n": "Colossus Sword",
-            "durability": 50,
-            "mind": 26,
-            "maxd": 70,
-            "min2d": 61,
-            "max2d": 121,
-            "rs": 182,
-            "rd": 95,
+            "wsm": 0,
+            "durability": 63, // OK
+            "mind": 33, // OK
+            "maxd": 88, // OK
+            "min2d": 77, // OK
+            "max2d": 152, // OK
+            "rs": 182, // OK
+            "rd": 95, // OK
             "hi": 1,
             "gt": 0,
             "i": "invflb",
@@ -32688,13 +33591,14 @@ export let remodded_constants_99 = {
             "elc": "7gd",
             "iq": 2,
             "n": "Colossus Blade",
-            "durability": 50,
-            "mind": 25,
-            "maxd": 65,
-            "min2d": 58,
-            "max2d": 115,
-            "rs": 189,
-            "rd": 110,
+            "wsm": 10,
+            "durability": 63, // OK
+            "mind": 32, // OK
+            "maxd": 82, // OK
+            "min2d": 73, // OK
+            "max2d": 144, // OK
+            "rs": 189, // OK
+            "rd": 110, // OK
             "hi": 1,
             "gt": 0,
             "i": "invgsd",
@@ -32770,11 +33674,12 @@ export let remodded_constants_99 = {
             "elc": "7kr",
             "iq": 2,
             "n": "Fanged Knife",
-            "durability": 36,
-            "mind": 15,
-            "maxd": 57,
-            "rs": 42,
-            "rd": 86,
+            "wsm": -20,
+            "durability": 45, // OK
+            "mind": 19, // OK
+            "maxd": 72, // OK
+            "rs": 42, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 0,
             "i": "invkrs",
@@ -32798,11 +33703,12 @@ export let remodded_constants_99 = {
             "elc": "7bl",
             "iq": 2,
             "n": "Legend Spike",
-            "durability": 47,
-            "mind": 31,
-            "maxd": 47,
-            "rs": 65,
-            "rd": 67,
+            "wsm": -10,
+            "durability": 69, // OK
+            "mind": 39,
+            "maxd": 59, // OK
+            "rs": 65, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 0,
             "i": "invbld",
@@ -32826,12 +33732,12 @@ export let remodded_constants_99 = {
             "n": "Flying Knife",
             "s": 1,
             "durability": 6,
-            "mind": 23,
-            "maxd": 54,
-            "minmd": 23,
-            "maxmd": 54,
+            "mind": 29, // OK
+            "maxd": 68, // OK
+            "minmd": 29, // OK
+            "maxmd": 68, // OK
             "rs": 48,
-            "rd": 141,
+            // "rd": 141,
             "gt": 0,
             "i": "invtkn",
             "iw": 1,
@@ -32893,14 +33799,15 @@ export let remodded_constants_99 = {
             "elc": "7bk",
             "iq": 2,
             "n": "Winged Knife",
+            "wsm": -20,
             "s": 1,
-            "durability": 20,
-            "mind": 27,
-            "maxd": 35,
-            "minmd": 23,
-            "maxmd": 39,
-            "rs": 45,
-            "rd": 142,
+            "durability": 20, // OK
+            "mind": 29, // OK
+            "maxd": 49,
+            "minmd": 34, // OK
+            "maxmd": 44, // OK
+            "rs": 45, // OK
+            "rd": 142, // OK
             "gt": 0,
             "i": "invbkf",
             "ui": "invtk3",
@@ -32920,7 +33827,9 @@ export let remodded_constants_99 = {
                 "Knife",
                 "Swords and Knives",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Assassin Item",
+                "Class Specific"
             ]
         },
         "7b8": {
@@ -32963,14 +33872,15 @@ export let remodded_constants_99 = {
             "elc": "7ja",
             "iq": 2,
             "n": "Hyperion Javelin",
+            "wsm": -10,
             "s": 1,
             "durability": 10,
-            "mind": 21,
-            "maxd": 57,
-            "minmd": 28,
-            "maxmd": 55,
-            "rs": 98,
-            "rd": 123,
+            "mind": 27, // OK
+            "maxd": 72, // OK
+            "minmd": 35, // OK
+            "maxmd": 69, // OK
+            "rs": 0, // OK
+            "rd": 123, // OK
             "gt": 0,
             "i": "invjav",
             "iw": 1,
@@ -33103,12 +34013,14 @@ export let remodded_constants_99 = {
             "elc": "7ts",
             "iq": 2,
             "n": "Winged Harpoon",
+            "wsm": -10,
+            // Can have 7DS, 7OW, 3 barbarian mods
             "s": 1,
             "durability": 18,
-            "mind": 27,
-            "maxd": 35,
-            "minmd": 11,
-            "maxmd": 77,
+            "mind": 34, // OK
+            "maxd": 44, // OK
+            "minmd": 14, // OK
+            "maxmd": 97, // OK
             "rs": 76,
             "rd": 145,
             "gt": 0,
@@ -33129,7 +34041,11 @@ export let remodded_constants_99 = {
                 "Spear",
                 "Spears and Polearms",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Barbarian Item",
+                "Class Specific",
+                "Barbarian Item",
+                "Class Specific"
             ]
         },
         "7sr": {
@@ -33164,11 +34080,12 @@ export let remodded_constants_99 = {
             "elc": "7tr",
             "iq": 2,
             "n": "Stygian Pike",
-            "durability": 35,
-            "min2d": 29,
-            "max2d": 144,
-            "rs": 168,
-            "rd": 97,
+            "wsm": 0,
+            "durability": 44, // OK
+            "min2d": 37, // OK
+            "max2d": 180, // OK
+            "rs": 168, // OK
+            "rd": 97, // OK
             "hi": 1,
             "gt": 0,
             "i": "invtri",
@@ -33192,9 +34109,9 @@ export let remodded_constants_99 = {
             "elc": "7br",
             "iq": 2,
             "n": "Mancatcher",
-            "durability": 28,
-            "min2d": 42,
-            "max2d": 92,
+            "durability": 35, // OK
+            "min2d": 53, // OK
+            "max2d": 115, // OK
             "rs": 132,
             "rd": 134,
             "hi": 1,
@@ -33244,11 +34161,12 @@ export let remodded_constants_99 = {
             "elc": "7p7",
             "iq": 2,
             "n": "War Pike",
-            "durability": 25,
-            "min2d": 33,
-            "max2d": 178,
-            "rs": 165,
-            "rd": 106,
+            "wsm": 20,
+            "durability": 32, // OK
+            "min2d": 42,
+            "max2d": 223, // OK
+            "rs": 165, // OK
+            "rd": 106, // OK
             "hi": 1,
             "gt": 0,
             "i": "invpik",
@@ -33270,11 +34188,12 @@ export let remodded_constants_99 = {
             "elc": "7o7",
             "iq": 2,
             "n": "Ogre Axe",
-            "durability": 50,
-            "min2d": 28,
-            "max2d": 145,
-            "rs": 195,
-            "rd": 75,
+            "wsm": 0,
+            "durability": 63, // OK
+            "min2d": 35, // OK
+            "max2d": 182, // OK
+            "rs": 195, // OK
+            "rd": 75, // OK
             "hi": 1,
             "gt": 0,
             "i": "invbar",
@@ -33296,11 +34215,12 @@ export let remodded_constants_99 = {
             "elc": "7vo",
             "iq": 2,
             "n": "Colossus Voulge",
-            "durability": 50,
-            "min2d": 17,
-            "max2d": 165,
-            "rs": 210,
-            "rd": 55,
+            "wsm": 10,
+            "durability": 63, // OK
+            "min2d": 22, // OK
+            "max2d": 207, // OK
+            "rs": 210, // OK
+            "rd": 55, // OK
             "hi": 1,
             "gt": 0,
             "i": "invvou",
@@ -33321,12 +34241,14 @@ export let remodded_constants_99 = {
             "exc": "9s8",
             "elc": "7s8",
             "iq": 2,
-            "n": "Thresher",
-            "durability": 65,
-            "min2d": 12,
-            "max2d": 141,
-            "rs": 152,
-            "rd": 118,
+            // "n": "Thresher",
+            "n": "Reaper Scythe",
+            "wsm": -20,
+            "durability": 82, // OK
+            "min2d": 15, // OK
+            "max2d": 177, // OK
+            "rs": 100, // OK
+            "rd": 0, // OK
             "hi": 1,
             "gt": 0,
             "i": "invscy",
@@ -33341,7 +34263,9 @@ export let remodded_constants_99 = {
                 "Polearm",
                 "Spears and Polearms",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Necromancer Item",
+                "Class Specific"
             ]
         },
         "7pa": {
@@ -33350,11 +34274,11 @@ export let remodded_constants_99 = {
             "elc": "7pa",
             "iq": 2,
             "n": "Cryptic Axe",
-            "durability": 65,
-            "min2d": 33,
-            "max2d": 150,
-            "rs": 165,
-            "rd": 103,
+            "durability": 82, // OK
+            "min2d": 42, // OK
+            "max2d": 188, // OK
+            "rs": 165, // OK
+            "rd": 103, // OK
             "hi": 1,
             "gt": 0,
             "i": "invpax",
@@ -33376,11 +34300,12 @@ export let remodded_constants_99 = {
             "elc": "7h7",
             "iq": 2,
             "n": "Great Poleaxe",
-            "durability": 55,
-            "min2d": 46,
-            "max2d": 127,
-            "rs": 179,
-            "rd": 99,
+            "wsm": 0,
+            "durability": 69, // OK
+            "min2d": 58, // OK
+            "max2d": 159, // OK
+            "rs": 179, // OK
+            "rd": 99, // OK
             "hi": 1,
             "gt": 0,
             "i": "invhal",
@@ -33428,10 +34353,12 @@ export let remodded_constants_99 = {
             "elc": "6ss",
             "iq": 2,
             "n": "Walking Stick",
-            "durability": 20,
-            "min2d": 69,
-            "max2d": 85,
-            "rs": 25,
+            // Can have 50ED, 3 sorceress mods
+            "wsm": -10,
+            "durability": 50, // OK
+            "min2d": 87, // OK
+            "max2d": 107, // OK
+            "rs": 25, // OK
             "hi": 1,
             "gt": 0,
             "i": "invsst",
@@ -33445,7 +34372,9 @@ export let remodded_constants_99 = {
                 "Staves And Rods",
                 "Blunt",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Sorceress Item",
+                "Class Specific"
             ]
         },
         "6ls": {
@@ -33588,11 +34517,12 @@ export let remodded_constants_99 = {
             "elc": "6hb",
             "iq": 2,
             "n": "Blade Bow",
+            "wsm": -10,
             "durability": 32,
-            "min2d": 21,
-            "max2d": 41,
-            "rs": 76,
-            "rd": 119,
+            "min2d": 27, // OK
+            "max2d": 52, // OK
+            "rs": 76, // OK
+            "rd": 119, // OK
             "hi": 1,
             "gt": 0,
             "i": "invhbw",
@@ -33665,11 +34595,12 @@ export let remodded_constants_99 = {
             "elc": "6s7",
             "iq": 2,
             "n": "Diamond Bow",
+            "wsm": 0,
             "durability": 40,
-            "min2d": 33,
-            "max2d": 40,
-            "rs": 89,
-            "rd": 132,
+            "min2d": 42, // OK
+            "max2d": 50, // OK
+            "rs": 89, // OK
+            "rd": 132, // OK
             "hi": 1,
             "gt": 0,
             "i": "invsbb",
@@ -33769,11 +34700,12 @@ export let remodded_constants_99 = {
             "elc": "6lx",
             "iq": 2,
             "n": "Pellet Bow",
+            "wsm": -10,
             "durability": 30,
-            "min2d": 28,
-            "max2d": 73,
-            "rs": 83,
-            "rd": 155,
+            "min2d": 35, // OK
+            "max2d": 92, // OK
+            "rs": 83, // OK
+            "rd": 155, // OK
             "hi": 1,
             "gt": 0,
             "i": "invlxb",
@@ -33796,11 +34728,12 @@ export let remodded_constants_99 = {
             "elc": "6mx",
             "iq": 2,
             "n": "Gorgon Crossbow",
+            "wsm": 0,
             "durability": 40,
-            "min2d": 25,
-            "max2d": 87,
-            "rs": 117,
-            "rd": 105,
+            "min2d": 32, // OK
+            "max2d": 109, // OK
+            "rs": 117, // OK
+            "rd": 105, // OK
             "hi": 1,
             "gt": 0,
             "i": "invmxb",
@@ -33823,11 +34756,11 @@ export let remodded_constants_99 = {
             "elc": "6hx",
             "iq": 2,
             "n": "Colossus Crossbow",
-            "durability": 50,
-            "min2d": 32,
-            "max2d": 91,
-            "rs": 163,
-            "rd": 77,
+            "durability": 50, // OK
+            "min2d": 40, // OK
+            "max2d": 114, // OK
+            "rs": 163, // OK
+            "rd": 77, // OK
             "hi": 1,
             "gt": 0,
             "i": "invhxb",
@@ -33851,8 +34784,8 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Demon Crossbow",
             "durability": 40,
-            "min2d": 26,
-            "max2d": 40,
+            "min2d": 33, // OK
+            "max2d": 50, // OK
             "rs": 141,
             "rd": 98,
             "hi": 1,
@@ -33977,9 +34910,10 @@ export let remodded_constants_99 = {
             "elc": "obf",
             "iq": 0,
             "n": "Jared's Stone",
-            "durability": 50,
-            "mind": 8,
-            "maxd": 18,
+            "wsm": 10,
+            "durability": 127, // OK
+            "mind": 10, // OK
+            "maxd": 23, // OK
             "hi": 1,
             "gt": 0,
             "i": "invob5",
@@ -34210,9 +35144,10 @@ export let remodded_constants_99 = {
             "elc": "obd",
             "iq": 1,
             "n": "Cloudy Sphere",
-            "durability": 35,
-            "mind": 11,
-            "maxd": 29,
+            "wsm": 0,
+            "durability": 49, // OK
+            "mind": 14, // OK
+            "maxd": 37, // OK
             "hi": 1,
             "gt": 0,
             "i": "invob3",
@@ -34443,9 +35378,10 @@ export let remodded_constants_99 = {
             "elc": "obb",
             "iq": 2,
             "n": "Heavenly Stone",
-            "durability": 20,
-            "mind": 21,
-            "maxd": 46,
+            "wsm": -10,
+            "durability": 50, // OK
+            "mind": 27, // OK
+            "maxd": 58, // OK
             "hi": 1,
             "gt": 0,
             "i": "invob1",
@@ -34468,9 +35404,11 @@ export let remodded_constants_99 = {
             "elc": "obc",
             "iq": 2,
             "n": "Eldritch Orb",
-            "durability": 30,
-            "mind": 18,
-            "maxd": 50,
+            "wsm": -10,
+            // Can have +55life, 3 sorc mods, 50ED vs undead
+            "durability": 38, // OK
+            "mind": 23, // OK
+            "maxd": 63, // OK
             "hi": 1,
             "gt": 0,
             "i": "invob2",
@@ -34599,11 +35537,13 @@ export let remodded_constants_99 = {
             "elc": "amc",
             "iq": 2,
             "n": "Grand Matron Bow",
+            "wsm": 10,
+            // Can have +2-20IAS +1-2Archery +3 bow/passive mods
             "durability": 55,
-            "min2d": 14,
-            "max2d": 72,
-            "rs": 108,
-            "rd": 152,
+            "min2d": 18, // OK
+            "max2d": 90, // OK
+            "rs": 108, // OK
+            "rd": 152, // OK
             "hi": 1,
             "gt": 0,
             "i": "invam2",
@@ -34688,14 +35628,17 @@ export let remodded_constants_99 = {
             "elc": "amf",
             "iq": 2,
             "n": "Matriarchal Javelin",
+            // Can have 30%AR, 3 javelin mods
+            "wsm": -10,
+            // 
             "s": 1,
             "durability": 6,
-            "mind": 30,
-            "maxd": 54,
-            "minmd": 35,
-            "maxmd": 66,
-            "rs": 107,
-            "rd": 151,
+            "mind": 38, // OK
+            "maxd": 68, // OK
+            "minmd": 44, // OK
+            "maxmd": 83, // OK
+            "rs": 80, // OK
+            "rd": 120, // OK
             "gt": 0,
             "i": "invam5",
             "iw": 1,
@@ -34754,10 +35697,12 @@ export let remodded_constants_99 = {
             "elc": "Ds3",
             "iq": 1,
             "n": "Elemental Staff",
-            "durability": 20, // TODO
-            "min2d": 6, // TODO
-            "max2d": 21, // TODO
-            "rs": 25, // TODO
+            // Can have 3 bear? mods, 50ED vs undead
+            "wsm": 20,
+            "durability": 63, // OK
+            "min2d": 30, // OK
+            "max2d": 73, // OK
+            "rs": 25, // OK
             "hi": 1,
             "gt": 0,
             "i": "invsst",
@@ -34782,10 +35727,11 @@ export let remodded_constants_99 = {
             "elc": "Ds3",
             "iq": 2,
             "n": "Naturecaller",
-            "durability": 20, // TODO
-            "min2d": 69, // TODO
-            "max2d": 85, // TODO
-            "rs": 25, // TODO
+            // Can have 50ED vs undead
+            "durability": 33, // OK
+            "min2d": 104, // OK
+            "max2d": 124, // OK
+            "rs": 34, // OK
             "hi": 1,
             "gt": 0,
             "i": "invsst",
@@ -34951,11 +35897,13 @@ export let remodded_constants_99 = {
             "elc": "Pm3",
             "iq": 2,
             "n": "Divine Mace",
-            "durability": 72, // TODO
-            "mind": 43, // TODO
-            "maxd": 53, // TODO
-            "rs": 153, // TODO
-            "rd": 44, // TODO
+            "wsm": 0,
+            // Can have 3OW, 3 paladin mods, 50ED vs undeads
+            "durability": 75, // OK
+            "mind": 52, // OK
+            "maxd": 62, // OK
+            "rs": 145, // OK
+            "rd": 46, // OK
             "hi": 1,
             "gt": 0,
             "i": "invmst",
@@ -35007,10 +35955,12 @@ export let remodded_constants_99 = {
             "elc": "Bm3",
             "iq": 1,
             "n": "Bonebreaking Axe",
-            "durability": 50, // TODO
-            "min2d": 43, // TODO
-            "max2d": 85, // TODO
-            "rs": 125, // TODO
+            "wsm": 10,
+            // Can have -25def per hit, 3 barbarian mods
+            "durability": 63, // OK
+            "min2d": 63, // OK
+            "max2d": 113, // OK
+            "rs": 150, // OK
             "hi": 1,
             "gt": 0,
             "i": "invgix",
@@ -35062,13 +36012,15 @@ export let remodded_constants_99 = {
             "elc": "Bm6",
             "iq": 0,
             "n": "Mighty Sword",
-            "durability": 50, // TODO
+            "wsm": 10,
+            // Can have 3 barbarian mods
+            "durability": 63, // OK
             "mind": 12, // TODO
             "maxd": 20, // TODO
-            "min2d": 25, // TODO
-            "max2d": 42, // TODO
-            "rs": 100, // TODO
-            "rd": 60, // TODO
+            "min2d": 32, // OK
+            "max2d": 53, // OK
+            "rs": 100, // OK
+            "rd": 60, // OK
             "hi": 1,
             "gt": 0,
             "i": "invgsd",
@@ -35094,11 +36046,11 @@ export let remodded_constants_99 = {
             "elc": "Bm6",
             "iq": 1,
             "n": "Bonebreaking Sword",
-            "durability": 50, // TODO
-            "mind": 24, // TODO
-            "maxd": 40, // TODO
-            "min2d": 47, // TODO
-            "max2d": 80, // TODO
+            "durability": 62, // OK
+            "mind": 30, // OK
+            "maxd": 50, // OK
+            "min2d": 59, // OK
+            "max2d": 100, // OK
             "rs": 170, // TODO
             "rd": 110, // TODO
             "hi": 1,
@@ -35187,10 +36139,12 @@ export let remodded_constants_99 = {
             "elc": "Bm9",
             "iq": 1,
             "n": "Bonebreaking Hammer",
-            "durability": 60, // TODO
+            "wsm": 20,
+            // Can have 7FHR, 3 barb mods
+            "durability": 75, // OK
             "min2d": 61, // TODO
             "max2d": 99, // TODO
-            "rs": 169, // TODO
+            "rs": 180, // OK
             "hi": 1,
             "gt": 0,
             "i": "invgma",
@@ -35269,10 +36223,12 @@ export let remodded_constants_99 = {
             "elc": "Bf3",
             "iq": 1,
             "n": "Splitting Axe",
-            "durability": 24, // TODO
-            "mind": 10, // TODO
-            "maxd": 33, // TODO
-            "rs": 68, // TODO
+            "wsm": 0,
+            // Can have 7DS
+            "durability": 33, // OK
+            "mind": 20, // OK
+            "maxd": 57, // OK
+            "rs": 121, // OK
             "hi": 1,
             "gt": 0,
             "i": "invaxe",
@@ -35443,11 +36399,11 @@ export let remodded_constants_99 = {
             "elc": "k03",
             "iq": 1,
             "n": "Odachi",
-            "durability": 44,
-            "mind": 8,
-            "maxd": 26,
-            "min2d": 18,
-            "max2d": 40,
+            "wsm": -20,
+            // Can have <=50 noconsume, 3 shadow/martial mods
+            "durability": 71, // OK
+            "mind": 104, // OK
+            "maxd": 71, // OK
             "rs": 73,
             "rd": 61,
             "hi": 1,
@@ -35475,13 +36431,12 @@ export let remodded_constants_99 = {
             "elc": "k03",
             "iq": 2,
             "n": "Ninjato",
-            "durability": 44,
-            "mind": 22,
-            "maxd": 56,
-            "min2d": 50,
-            "max2d": 94,
-            "rs": 175,
-            "rd": 100,
+            "wsm": -20,
+            "durability": 55, // OK
+            "mind": 28, // OK
+            "maxd": 70, // OK
+            "rs": 175, // OK
+            "rd": 100, // OK
             "hi": 1,
             "gt": 0,
             "i": "Custom/katana",
@@ -44690,12 +45645,13 @@ export let remodded_constants_99 = {
         },
         "y08": {
             "iq": 0,
-            "n": "The Statue of Mythos",
+            "n": "Soul Tracker",
             "hi": 0,
             "gt": 0,
             "i": "Custom/mythos_log",
+            "ui": "Custom/mythos_log",
             "iw": 1,
-            "ih": 1,
+            "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
@@ -44705,7 +45661,7 @@ export let remodded_constants_99 = {
         },
         "y09": {
             "iq": 0,
-            "n": "Trasure Chest 1",
+            "n": "Treasure Chest 1",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -44721,7 +45677,7 @@ export let remodded_constants_99 = {
         },
         "y10": {
             "iq": 0,
-            "n": "Trasure Chest 2",
+            "n": "Treasure Chest 2",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -44737,7 +45693,7 @@ export let remodded_constants_99 = {
         },
         "y11": {
             "iq": 0,
-            "n": "Trasure Chest 3",
+            "n": "Treasure Chest 3",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -44753,7 +45709,7 @@ export let remodded_constants_99 = {
         },
         "y12": {
             "iq": 0,
-            "n": "Trasure Chest 4",
+            "n": "Treasure Chest 4",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -44769,7 +45725,7 @@ export let remodded_constants_99 = {
         },
         "y13": {
             "iq": 0,
-            "n": "Trasure Chest 5",
+            "n": "Treasure Chest 5",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -44785,7 +45741,7 @@ export let remodded_constants_99 = {
         },
         "y14": {
             "iq": 0,
-            "n": "Trasure Chest 6",
+            "n": "Treasure Chest 6",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -44801,7 +45757,7 @@ export let remodded_constants_99 = {
         },
         "y15": {
             "iq": 0,
-            "n": "Trasure Chest 7",
+            "n": "Treasure Chest 7",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -44817,7 +45773,7 @@ export let remodded_constants_99 = {
         },
         "y16": {
             "iq": 0,
-            "n": "Trasure Chest 8",
+            "n": "Treasure Chest 8",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -44833,7 +45789,7 @@ export let remodded_constants_99 = {
         },
         "y17": {
             "iq": 0,
-            "n": "Trasure Chest 9",
+            "n": "Treasure Chest 9",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -44849,7 +45805,7 @@ export let remodded_constants_99 = {
         },
         "y18": {
             "iq": 0,
-            "n": "Trasure Chest 10",
+            "n": "Treasure Chest 10",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -44865,7 +45821,7 @@ export let remodded_constants_99 = {
         },
         "y19": {
             "iq": 0,
-            "n": "Trasure Chest 11",
+            "n": "Treasure Chest 11",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -44881,7 +45837,7 @@ export let remodded_constants_99 = {
         },
         "y20": {
             "iq": 0,
-            "n": "Trasure Chest 12",
+            "n": "Treasure Chest 12",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -44897,7 +45853,7 @@ export let remodded_constants_99 = {
         },
         "y21": {
             "iq": 0,
-            "n": "Trasure Chest 13 (legacy)",
+            "n": "Treasure Chest 13 (legacy)",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -44913,7 +45869,7 @@ export let remodded_constants_99 = {
         },
         "y22": {
             "iq": 0,
-            "n": "Trasure Chest 14 (legacy)",
+            "n": "Treasure Chest 14 (legacy)",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -44929,7 +45885,7 @@ export let remodded_constants_99 = {
         },
         "y23": {
             "iq": 0,
-            "n": "Trasure Chest 15 (legacy)",
+            "n": "Treasure Chest 15 (legacy)",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -44945,7 +45901,7 @@ export let remodded_constants_99 = {
         },
         "y24": {
             "iq": 0,
-            "n": "Trasure Chest 16 (legacy)",
+            "n": "Treasure Chest 16 (legacy)",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -44961,7 +45917,7 @@ export let remodded_constants_99 = {
         },
         "y25": {
             "iq": 0,
-            "n": "Trasure Chest 17 (legacy)",
+            "n": "Treasure Chest 17 (legacy)",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -44977,7 +45933,7 @@ export let remodded_constants_99 = {
         },
         "y26": {
             "iq": 0,
-            "n": "Trasure Chest 18 (legacy)",
+            "n": "Treasure Chest 18 (legacy)",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -44993,7 +45949,7 @@ export let remodded_constants_99 = {
         },
         "y27": {
             "iq": 0,
-            "n": "Trasure Chest 19 (legacy)",
+            "n": "Treasure Chest 19 (legacy)",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -45009,7 +45965,7 @@ export let remodded_constants_99 = {
         },
         "y28": {
             "iq": 0,
-            "n": "Trasure Chest 20 (legacy)",
+            "n": "Treasure Chest 20 (legacy)",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -45025,7 +45981,7 @@ export let remodded_constants_99 = {
         },
         "y29": {
             "iq": 0,
-            "n": "Trasure Chest 21 (legacy)",
+            "n": "Treasure Chest 21 (legacy)",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -45041,7 +45997,7 @@ export let remodded_constants_99 = {
         },
         "y30": {
             "iq": 0,
-            "n": "Trasure Chest 22 (legacy)",
+            "n": "Treasure Chest 22 (legacy)",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -45057,7 +46013,7 @@ export let remodded_constants_99 = {
         },
         "y31": {
             "iq": 0,
-            "n": "Trasure Chest 23 (legacy)",
+            "n": "Treasure Chest 23 (legacy)",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -45073,7 +46029,7 @@ export let remodded_constants_99 = {
         },
         "y32": {
             "iq": 0,
-            "n": "Trasure Chest 24 (legacy)",
+            "n": "Treasure Chest 24 (legacy)",
             "hi": 0,
             "gt": 0,
             "i": "Custom/Chest",
@@ -45090,6 +46046,7 @@ export let remodded_constants_99 = {
         "Y20": {
             "iq": 0,
             "n": "Gold Bar",
+			"s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/GoldBar",
@@ -45122,6 +46079,7 @@ export let remodded_constants_99 = {
         "Rgx": {
             "iq": 0,
             "n": "Ramaladni's Gift",
+			"s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/ramaladnis_gift",
@@ -47705,913 +48663,985 @@ export let remodded_constants_99 = {
         },
         "a10": {
             "iq": 0,
-            "n": "Unique Assassin Boots Blood Contract (Exceptional) (legacy)",
+            "n": "Codex of Gluttony 1:1",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cgrn",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a11": {
             "iq": 0,
-            "n": "Unique Assassin Boots Blood Contract (Elite) (legacy)",
+            "n": "Codex of Gluttony 1:2",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cgrn",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a12": {
             "iq": 0,
-            "n": "Unique Axe Blood Contract (Normal) (legacy)",
+            "n": "Codex of Gluttony 1:3",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cgrn",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a13": {
             "iq": 0,
-            "n": "Unique Axe Blood Contract (Exceptional) (legacy)",
+            "n": "Codex of Gluttony 1:4",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cgrn",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a14": {
             "iq": 0,
-            "n": "Unique Axe Blood Contract (Elite) (legacy)",
+            "n": "Codex of Gluttony 1:5",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cgrn",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a15": {
             "iq": 0,
-            "n": "Unique Belt Blood Contract (Normal) (legacy)",
+            "n": "Codex of Gluttony 1:6",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cgrn",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a16": {
             "iq": 0,
-            "n": "Unique Belt Blood Contract (Exceptional) (legacy)",
+            "n": "Codex of Gluttony 1:7",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cgrn",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a17": {
             "iq": 0,
-            "n": "Unique Belt Blood Contract (Elite) (legacy)",
+            "n": "Codex of Lust 2:1",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "dpur",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a18": {
             "iq": 0,
-            "n": "Unique Necromancer Helm Blood Contract (Normal) (legacy)",
+            "n": "Codex of Lust 2:2",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "dpur",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a19": {
             "iq": 0,
-            "n": "Unique Necromancer Helm Blood Contract (Exceptional) (legacy)",
+            "n": "Codex of Lust 2:3",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "dpur",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a20": {
             "iq": 0,
-            "n": "Unique Necromancer Helm Blood Contract (Elite) (legacy)",
+            "n": "Codex of Lust 2:4",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "dpur",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a21": {
             "iq": 0,
-            "n": "Unique Boots Blood Contract (Normal) (legacy)",
+            "n": "Codex of Lust 2:5",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "dpur",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a22": {
             "iq": 0,
-            "n": "Unique Boots Blood Contract (Exceptional) (legacy)",
+            "n": "Codex of Lust 2:6",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "dpur",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a23": {
             "iq": 0,
-            "n": "Unique Boots Blood Contract (Elite) (legacy)",
+            "n": "Codex of Lust 2:7",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "dpur",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a24": {
             "iq": 0,
-            "n": "Unique Bow Blood Contract (Normal) (legacy)",
+            "n": "Codex of Greed 3:1",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "lgld",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a25": {
             "iq": 0,
-            "n": "Unique Bow Blood Contract (Exceptional) (legacy)",
+            "n": "Codex of Greed 3:2",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "lgld",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a26": {
             "iq": 0,
-            "n": "Unique Bow Blood Contract (Elite) (legacy)",
+            "n": "Codex of Greed 3:3",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "lgld",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a27": {
             "iq": 0,
-            "n": "Unique Druid Branch Blood Contract (Normal) (legacy)",
+            "n": "Codex of Greed 3:4",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "lgld",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a28": {
             "iq": 0,
-            "n": "Unique Druid Branch Blood Contract (Exceptional) (legacy)",
+            "n": "Codex of Greed 3:5",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "lgld",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a29": {
             "iq": 0,
-            "n": "Unique Druid Branch Blood Contract (Elite) (legacy)",
+            "n": "Codex of Greed 3:6",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "lgld",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a30": {
             "iq": 0,
-            "n": "Unique Necromancer Shield Blood Contract (Normal) (legacy)",
+            "n": "Codex of Greed 3:7",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "lgld",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a31": {
             "iq": 0,
-            "n": "Unique Necromancer Shield Blood Contract (Exceptional) (legacy)",
+            "n": "Codex of Wrath 4:1",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "blac",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a32": {
             "iq": 0,
-            "n": "Unique Necromancer Shield Blood Contract (Elite) (legacy)",
+            "n": "Codex of Wrath 4:2",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "blac",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a33": {
             "iq": 0,
-            "n": "Unique Circlet Blood Contract (Normal) (legacy)",
+            "n": "Codex of Wrath 4:3",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "blac",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a34": {
             "iq": 0,
-            "n": "Unique Circlet Blood Contract (Exceptional) (legacy)",
+            "n": "Codex of Wrath 4:4",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "blac",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a35": {
             "iq": 0,
-            "n": "Unique Circlet Blood Contract (Elite) (legacy)",
+            "n": "Codex of Wrath 4:5",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "blac",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a36": {
             "iq": 0,
-            "n": "Unique Club Blood Contract (Normal) (legacy)",
+            "n": "Codex of Wrath 4:6",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "blac",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a37": {
             "iq": 0,
-            "n": "Unique Club Blood Contract (Exceptional) (legacy)",
+            "n": "Codex of Wrath 4:7",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "blac",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a38": {
             "iq": 0,
-            "n": "Unique Club Blood Contract (Elite) (legacy)",
+            "n": "Codex of Sloth 5:1",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "lblu",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a39": {
             "iq": 0,
-            "n": "Unique Gloves Blood Contract (Normal) (legacy)",
+            "n": "Codex of Sloth 5:2",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "lblu",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a40": {
             "iq": 0,
-            "n": "Unique Gloves Blood Contract (Exceptional) (legacy)",
+            "n": "Codex of Sloth 5:3",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "lblu",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a41": {
             "iq": 0,
-            "n": "Unique Gloves Blood Contract (Elite) (legacy)",
+            "n": "Codex of Sloth 5:4",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "lblu",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a42": {
             "iq": 0,
-            "n": "Unique Assassin Claws Blood Contract (Normal) (legacy)",
+            "n": "Codex of Sloth 5:5",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "lblu",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a43": {
             "iq": 0,
-            "n": "Unique Assassin Claws Blood Contract (Exceptional) (legacy)",
+            "n": "Codex of Sloth 5:6",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "lblu",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a44": {
             "iq": 0,
-            "n": "Unique Assassin Claws Blood Contract (Elite) (legacy)",
+            "n": "Codex of Sloth 5:7",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "lblu",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a45": {
             "iq": 0,
-            "n": "Unique Assassin Blade Blood Contract (Normal) (legacy)",
+            "n": "Codex of Vanity 6:1",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cred",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a46": {
             "iq": 0,
-            "n": "Unique Assassin Blade Blood Contract (Exceptional) (legacy)",
+            "n": "Codex of Vanity 6:2",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cred",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a47": {
             "iq": 0,
-            "n": "Unique Assassin Blade Blood Contract (Elite) (legacy)",
+            "n": "Codex of Vanity 6:3",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cred",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a48": {
             "iq": 0,
-            "n": "Unique Hammer Blood Contract (Normal) (legacy)",
+            "n": "Codex of Vanity 6:4",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cred",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a49": {
             "iq": 0,
-            "n": "Unique Hammer Blood Contract (Exceptional) (legacy)",
+            "n": "Codex of Vanity 6:5",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cred",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a50": {
             "iq": 0,
-            "n": "Unique Hammer Blood Contract (Elite) (legacy)",
+            "n": "Codex of Vanity 6:6",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cred",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a51": {
             "iq": 0,
-            "n": "Unique Necromancer Shield Blood Contract (Normal) (legacy)",
+            "n": "Codex of Vanity 6:7",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cred",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a52": {
             "iq": 0,
-            "n": "Unique Necromancer Shield Blood Contract (Exceptional) (legacy)",
+            "n": "Codex of Hubris 7:1",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cblu",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a53": {
             "iq": 0,
-            "n": "Unique Necromancer Shield Blood Contract (Elite) (legacy)",
+            "n": "Codex of Hubris 7:2",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cblu",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a54": {
             "iq": 0,
-            "n": "Unique Helm Blood Contract (Normal) (legacy)",
+            "n": "Codex of Hubris 7:3",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cblu",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a55": {
             "iq": 0,
-            "n": "Unique Helm Blood Contract (Exceptional) (legacy)",
+            "n": "Codex of Hubris 7:4",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cblu",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a56": {
             "iq": 0,
-            "n": "Unique Helm Blood Contract (Elite) (legacy)",
+            "n": "Codex of Hubris 7:5",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cblu",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a57": {
             "iq": 0,
-            "n": "Unique Javelin Blood Contract (Normal) (legacy)",
+            "n": "Codex of Hubris 7:6",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cblu",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a58": {
             "iq": 0,
-            "n": "Unique Javelin Blood Contract (Exceptional) (legacy)",
+            "n": "Codex of Hubris 7:7",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cblu",
+            "iw": 1,
             "ih": 2,
             "it": 0,
             "ig": [],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Codex",
                 "Miscellaneous"
             ]
         },
         "a59": {
             "iq": 0,
-            "n": "Unique Javelin Blood Contract (Elite) (legacy)",
+            "n": "Gula's Testament of Gluttony",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cgrn",
+            "iw": 1,
             "ih": 2,
             "it": 0,
-            "ig": [],
+            "ig": [
+                "invrbk"
+            ],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Testament",
                 "Miscellaneous"
             ]
         },
         "a60": {
             "iq": 0,
-            "n": "Unique Assassin Sword Blood Contract (Normal) (legacy)",
+            "n": "Luxuria's Testament of Lust",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "dpur",
+            "iw": 1,
             "ih": 2,
             "it": 0,
-            "ig": [],
+            "ig": [
+                "invrbk"
+            ],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Testament",
                 "Miscellaneous"
             ]
         },
         "a61": {
             "iq": 0,
-            "n": "Unique Assassin Sword Blood Contract (Exceptional) (legacy)",
+            "n": "Avaritia's Testament of Greed",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "lgld",
+            "iw": 1,
             "ih": 2,
             "it": 0,
-            "ig": [],
+            "ig": [
+                "invrbk"
+            ],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Testament",
                 "Miscellaneous"
             ]
         },
         "a62": {
             "iq": 0,
-            "n": "Unique Assassin Sword Blood Contract (Elite) (legacy)",
+            "n": "Ira's Testament of Wrath",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "blac",
+            "iw": 1,
             "ih": 2,
             "it": 0,
-            "ig": [],
+            "ig": [
+                "invrbk"
+            ],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Testament",
                 "Miscellaneous"
             ]
         },
         "a63": {
             "iq": 0,
-            "n": "Unique Knife Blood Contract (Normal) (legacy)",
+            "n": "Acedia's Testament of Sloth",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cblu",
+            "iw": 1,
             "ih": 2,
             "it": 0,
-            "ig": [],
+            "ig": [
+                "invrbk"
+            ],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Testament",
                 "Miscellaneous"
             ]
         },
         "a64": {
             "iq": 0,
-            "n": "Unique Knife Blood Contract (Exceptional) (legacy)",
+            "n": "Vanagloria's Testament of Vanity",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cred",
+            "iw": 1,
             "ih": 2,
             "it": 0,
-            "ig": [],
+            "ig": [
+                "invrbk"
+            ],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Testament",
                 "Miscellaneous"
             ]
         },
         "a65": {
             "iq": 0,
-            "n": "Unique Knife Blood Contract (Elite) (legacy)",
+            "n": "Superbia's Testament of Hubris",
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "tc": "cblu",
+            "iw": 1,
             "ih": 2,
             "it": 0,
-            "ig": [],
+            "ig": [
+                "invrbk"
+            ],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "Testament",
                 "Miscellaneous"
             ]
         },
         "a66": {
             "iq": 0,
-            "n": "Unique Mace Blood Contract (Normal) (legacy)",
+            "n": "Edyrem's Encyclopedia of Evil", // Seven Deadly Sins unique
             "hi": 0,
             "gt": 0,
-            "i": "Custom/Blood_Contract",
-            "iw": 2,
+            "i": "invrbk",
+            "iw": 10,
             "ih": 2,
             "it": 0,
-            "ig": [],
+            "ig": [
+                "invrbk"
+            ],
             "c": [
                 "Cube Material",
-                "Blood Contract",
+                "EEE",
                 "Miscellaneous"
             ]
         },
@@ -52559,6 +53589,7 @@ export let remodded_constants_99 = {
         "b64": {
             "iq": 0,
             "n": "Socket Remover",
+			"s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/srmv",
@@ -52574,6 +53605,7 @@ export let remodded_constants_99 = {
         "b65": {
             "iq": 0,
             "n": "Premium Socket Remover",
+			"s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/ssrmv",
@@ -52588,7 +53620,8 @@ export let remodded_constants_99 = {
         },
         "K01": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 11 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 11 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52604,7 +53637,8 @@ export let remodded_constants_99 = {
         },
         "K02": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 12 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 12 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52620,7 +53654,8 @@ export let remodded_constants_99 = {
         },
         "K03": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 13 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 13 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52636,7 +53671,8 @@ export let remodded_constants_99 = {
         },
         "K04": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 14 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 14 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52652,7 +53688,8 @@ export let remodded_constants_99 = {
         },
         "K05": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 15 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 15 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52668,7 +53705,8 @@ export let remodded_constants_99 = {
         },
         "K06": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 16 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 16 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52684,7 +53722,8 @@ export let remodded_constants_99 = {
         },
         "K07": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 17 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 17 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52700,7 +53739,8 @@ export let remodded_constants_99 = {
         },
         "K08": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 18 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 18 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52716,7 +53756,8 @@ export let remodded_constants_99 = {
         },
         "K09": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 19 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 19 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52732,7 +53773,8 @@ export let remodded_constants_99 = {
         },
         "K10": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 20 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 20 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52748,7 +53790,8 @@ export let remodded_constants_99 = {
         },
         "K11": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 21 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 21 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52764,7 +53807,8 @@ export let remodded_constants_99 = {
         },
         "K12": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 22 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 22 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52780,7 +53824,8 @@ export let remodded_constants_99 = {
         },
         "K13": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 23 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 23 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52796,7 +53841,8 @@ export let remodded_constants_99 = {
         },
         "K14": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 24 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 24 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52812,7 +53858,8 @@ export let remodded_constants_99 = {
         },
         "K15": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 25 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 25 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52828,7 +53875,8 @@ export let remodded_constants_99 = {
         },
         "K16": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 26 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 26 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52844,7 +53892,8 @@ export let remodded_constants_99 = {
         },
         "K17": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 27 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 27 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52860,7 +53909,8 @@ export let remodded_constants_99 = {
         },
         "K18": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 28 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 28 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52876,7 +53926,8 @@ export let remodded_constants_99 = {
         },
         "K19": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 29 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 29 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52892,7 +53943,8 @@ export let remodded_constants_99 = {
         },
         "K20": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 30 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 30 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52908,7 +53960,8 @@ export let remodded_constants_99 = {
         },
         "K21": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 31 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 31 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52924,7 +53977,8 @@ export let remodded_constants_99 = {
         },
         "K22": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 32 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 32 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52940,7 +53994,8 @@ export let remodded_constants_99 = {
         },
         "K23": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 33 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 33 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52956,7 +54011,8 @@ export let remodded_constants_99 = {
         },
         "K24": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 34 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 34 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52972,7 +54028,8 @@ export let remodded_constants_99 = {
         },
         "K25": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 35 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 35 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -52988,7 +54045,8 @@ export let remodded_constants_99 = {
         },
         "K26": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 36 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 36 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53004,7 +54062,8 @@ export let remodded_constants_99 = {
         },
         "K27": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 37 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 37 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53020,7 +54079,8 @@ export let remodded_constants_99 = {
         },
         "K28": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 38 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 38 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53036,7 +54096,8 @@ export let remodded_constants_99 = {
         },
         "K29": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 39 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 39 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53052,7 +54113,8 @@ export let remodded_constants_99 = {
         },
         "K30": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 40 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 40 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53068,7 +54130,8 @@ export let remodded_constants_99 = {
         },
         "K31": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 41 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 41 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53084,7 +54147,8 @@ export let remodded_constants_99 = {
         },
         "K32": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 42 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 42 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53100,7 +54164,8 @@ export let remodded_constants_99 = {
         },
         "K33": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 43 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 43 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53116,7 +54181,8 @@ export let remodded_constants_99 = {
         },
         "K34": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 44 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 44 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53132,7 +54198,8 @@ export let remodded_constants_99 = {
         },
         "K35": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 45 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 45 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53148,7 +54215,8 @@ export let remodded_constants_99 = {
         },
         "K36": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 46 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 46 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53164,7 +54232,8 @@ export let remodded_constants_99 = {
         },
         "K37": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 47 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 47 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53180,7 +54249,8 @@ export let remodded_constants_99 = {
         },
         "K38": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 48 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 48 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53196,7 +54266,8 @@ export let remodded_constants_99 = {
         },
         "K39": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 49 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 49 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53212,7 +54283,8 @@ export let remodded_constants_99 = {
         },
         "K40": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 50 of Torment Trial",
+            "n": "Scroll of Torment<br>Level 50 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53229,6 +54301,7 @@ export let remodded_constants_99 = {
         "K41": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 11 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53245,6 +54318,7 @@ export let remodded_constants_99 = {
         "K42": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 12 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53261,6 +54335,7 @@ export let remodded_constants_99 = {
         "K43": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 13 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53277,6 +54352,7 @@ export let remodded_constants_99 = {
         "K44": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 14 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53293,6 +54369,7 @@ export let remodded_constants_99 = {
         "K45": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 15 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53309,6 +54386,7 @@ export let remodded_constants_99 = {
         "K46": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 16 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53325,6 +54403,7 @@ export let remodded_constants_99 = {
         "K47": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 17 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53341,6 +54420,7 @@ export let remodded_constants_99 = {
         "K48": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 18 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53357,6 +54437,7 @@ export let remodded_constants_99 = {
         "K49": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 19 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53373,6 +54454,7 @@ export let remodded_constants_99 = {
         "K50": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 20 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53389,6 +54471,7 @@ export let remodded_constants_99 = {
         "K51": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 21 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53405,6 +54488,7 @@ export let remodded_constants_99 = {
         "K52": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 22 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53421,6 +54505,7 @@ export let remodded_constants_99 = {
         "K53": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 23 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53437,6 +54522,7 @@ export let remodded_constants_99 = {
         "K54": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 24 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53453,6 +54539,7 @@ export let remodded_constants_99 = {
         "K55": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 25 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53469,6 +54556,7 @@ export let remodded_constants_99 = {
         "K56": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 26 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53485,6 +54573,7 @@ export let remodded_constants_99 = {
         "K57": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 27 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53501,6 +54590,7 @@ export let remodded_constants_99 = {
         "K58": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 28 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53517,6 +54607,7 @@ export let remodded_constants_99 = {
         "K59": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 29 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53533,6 +54624,7 @@ export let remodded_constants_99 = {
         "K60": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 30 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53549,6 +54641,7 @@ export let remodded_constants_99 = {
         "K61": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 31 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53565,6 +54658,7 @@ export let remodded_constants_99 = {
         "K62": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 32 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53581,6 +54675,7 @@ export let remodded_constants_99 = {
         "K63": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 33 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53597,6 +54692,7 @@ export let remodded_constants_99 = {
         "K64": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 34 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53613,6 +54709,7 @@ export let remodded_constants_99 = {
         "K65": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 35 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53629,6 +54726,7 @@ export let remodded_constants_99 = {
         "K66": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 36 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53645,6 +54743,7 @@ export let remodded_constants_99 = {
         "K67": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 37 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53661,6 +54760,7 @@ export let remodded_constants_99 = {
         "K68": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 38 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53677,6 +54777,7 @@ export let remodded_constants_99 = {
         "K69": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 39 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53693,6 +54794,7 @@ export let remodded_constants_99 = {
         "K70": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 40 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53709,6 +54811,7 @@ export let remodded_constants_99 = {
         "K71": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 41 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53725,6 +54828,7 @@ export let remodded_constants_99 = {
         "K72": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 42 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53741,6 +54845,7 @@ export let remodded_constants_99 = {
         "K73": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 43 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53757,6 +54862,7 @@ export let remodded_constants_99 = {
         "K74": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 44 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53773,6 +54879,7 @@ export let remodded_constants_99 = {
         "K75": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 45 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53789,6 +54896,7 @@ export let remodded_constants_99 = {
         "K76": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 46 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53805,6 +54913,7 @@ export let remodded_constants_99 = {
         "K77": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 47 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53821,6 +54930,7 @@ export let remodded_constants_99 = {
         "K78": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 48 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53837,6 +54947,7 @@ export let remodded_constants_99 = {
         "K79": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 49 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",
@@ -53853,6 +54964,7 @@ export let remodded_constants_99 = {
         "K80": {
             "iq": 0,
             "n": "Scroll of Torment<br>Level 50 of Icy Hell",
+            "s": 1,
             "hi": 0,
             "gt": 0,
             "i": "Custom/tt_ticket",

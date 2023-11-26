@@ -129,28 +129,28 @@
           if (!magic_prefix_name) {
             magic_prefix_name = `${item.magic_prefix}_unknown`;
           }
-          name = `${magic_prefix_name} ${name}`;
+          name = `${magic_prefix_name}(${item.magic_prefix}) ${name}`;
         }
         if (item.quality === d2s.Quality.Magic && item.magic_suffix) {
           let magic_suffix_name = constants.magic_suffixes[item.magic_suffix] ? constants.magic_suffixes[item.magic_suffix].n : null;
           if (!magic_suffix_name) {
             magic_suffix_name = `${item.magic_suffix}_unknown`;
           }
-          name = `${name} ${magic_suffix_name}`;
+          name = `${name} ${magic_suffix_name}(${item.magic_suffix})`;
         }
         if (item.quality === d2s.Quality.Rare && item.rare_name_id) {
           let rare_name = constants.rare_names[item.rare_name_id] ? constants.rare_names[item.rare_name_id].n : null;
           if (!rare_name) {
             rare_name = `${item.rare_name_id}_unknown`;
           }
-          name = `${rare_name} ${name}`;
+          name = `${rare_name}(${item.rare_name_id}) ${name}`;
         }
         if (item.quality === d2s.Quality.Rare && item.rare_name_id2) {
           let rare_name2 = constants.rare_names[item.rare_name_id2] ? constants.rare_names[item.rare_name_id2].n : null;
           if (!rare_name2) {
             rare_name2 = `${item.rare_name_id2}_unknown`;
           }
-          name = `${name} ${rare_name2}`;
+          name = `${name} ${rare_name2}(${item.rare_name_id2})`;
         }
         const personalizedName = item.personalized_name ? `${item.personalized_name}'s ` : '';
         if (item.quality === d2s.Quality.Set && item.set_id) {

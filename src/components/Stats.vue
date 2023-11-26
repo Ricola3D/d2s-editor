@@ -120,6 +120,18 @@
           :min="min(15)" :max="max(15)" @input="change(15, save.attributes, 'stashed_gold')">
       </div>
     </div>
+    <div class="form-row">
+      <div class="col-md-2">
+        <label for="unused210">Kills</label>
+        <input type="number" class="form-control" id="unused210" v-model.number="save.attributes.unused210" :min="min(14)"
+          :max="max(14)" @input="change(14, save.attributes, 'unused210')">
+      </div>
+      <div class="col-md-2">
+        <label for="unused211">Deaths</label>
+        <input type="number" class="form-control" id="unused211" v-model.number="save.attributes.unused211"
+          :min="min(15)" :max="max(15)" @input="change(15, save.attributes, 'unused211')">
+      </div>
+    </div>
   </div>
 </template>
 

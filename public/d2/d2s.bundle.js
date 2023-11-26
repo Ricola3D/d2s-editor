@@ -504,7 +504,7 @@ function enhanceItem(item, mod, version, level, config, parent) {
                 item.max_durability = details.durability - Math.ceil(details.durability / 2) + 1;
             }
         }
-        if (item.multiple_pictures) {
+        if (item.multiple_pictures && details.ig && details.ig[item.picture_id]) {
             item.inv_file = details.ig[item.picture_id];
         }
         if (item.magic_prefix || item.magic_suffix) {
@@ -1074,6 +1074,10 @@ function readAttributes(char, reader, mod) {
         experience: 0,
         gold: 0,
         stashed_gold: 0,
+        killtrack: 0,
+        deathtrack: 0,
+        unused210: 0,
+        unused211: 0,
     };
     var header = reader.ReadString(2); //0x0000 [attributes header = 0x67, 0x66 "gf"]
     if (header != "gf") {
@@ -1097,6 +1101,10 @@ function readAttributes(char, reader, mod) {
                 experience: 0,
                 gold: 0,
                 stashed_gold: 0,
+                killtrack: 0,
+                deathtrack: 0,
+                unused210: 0,
+                unused211: 0,
             };
             return;
         }
@@ -1125,11 +1133,13 @@ function readAttributes(char, reader, mod) {
 exports.readAttributes = readAttributes;
 function writeAttributes(char, constants) {
     return __awaiter(this, void 0, void 0, function () {
-        var writer, i, property, value, size;
+        var writer, attributeIds, _i, attributeIds_1, i, property, value, size;
         return __generator(this, function (_a) {
             writer = new bitwriter_1.BitWriter();
             writer.WriteString("gf", 2); //0x0000 [attributes header = 0x67, 0x66 "gf"]
-            for (i = 0; i < 16; i++) {
+            attributeIds = Array.from(Array(16).keys()).concat([210, 211]);
+            for (_i = 0, attributeIds_1 = attributeIds; _i < attributeIds_1.length; _i++) {
+                i = attributeIds_1[_i];
                 property = constants.magical_properties[i];
                 if (property === undefined) {
                     throw new Error("Invalid attribute: " + property);
@@ -1170,6 +1180,10 @@ var Attributes = {
     experience: "experience",
     gold: "gold",
     goldbank: "stashed_gold",
+    killtrack: "killtrack",
+    deathtrack: "deathtrack",
+    unused210: "unused210",
+    unused211: "unused211",
 };
 
 
@@ -1754,7 +1768,7 @@ var Quality;
     Quality[Quality["Unique"] = 7] = "Unique";
     Quality[Quality["Crafted"] = 8] = "Crafted";
 })(Quality = exports.Quality || (exports.Quality = {}));
-// Right now I'm missing characters (case sensitive) E, F, H, I, J, L, M, Q, U, X.
+// Right now I'm missing characters (case sensitive) E, F, I, J, L, M, Q, U, X.
 // prettier-ignore
 //huffman tree
 var HUFFMAN = [
@@ -2077,7 +2091,10 @@ var HUFFMAN = [
                                                         ],
                                                         /*11101 111101000*/ [
                                                             /*011101 111101000*/ [
-                                                                /*0011101 111101000*/ [],
+                                                                /*0011101 111101000*/ [
+                                                                    /*0011101 111101000*/ [],
+                                                                    /*1011101 111101000*/ "H"
+                                                                ],
                                                                 /*1011101 111101000*/ []
                                                             ],
                                                             /*111101 111101000*/ [
@@ -2343,7 +2360,7 @@ var HUFFMAN_LOOKUP = {
     //"E": { "v": 0, "l": 0 }, /**/
     //"F": { "v": 0, "l": 0 }, /**/
     "G": { "v": 109544, "l": 17 },
-    //"H": { "v": 0, "l": 0 }, /**/
+    "H": { "v": 80872, "l": 17 },
     //"I": { "v": 0, "l": 0 }, /**/
     //"J": { "v": 0, "l": 0 }, /**/
     "K": { "v": 19432, "l": 17 },
@@ -3107,7 +3124,7 @@ function _readMagicProperties(reader, constants) {
                 throw new Error("Cannot find Magical Property for id: " + id + " at position " + reader.offset);
             }
             if (prop.sP) {
-                var param = reader.ReadUInt16(prop.sP);
+                var param = reader.ReadUInt32(prop.sP);
                 switch (prop.dF) {
                     case 14: //+skill to skilltab
                         values.push(param & 0x7);
@@ -3134,7 +3151,7 @@ function _readMagicProperties(reader, constants) {
             if (!prop.sB) {
                 throw new Error("Save Bits is undefined for stat: " + id + ":" + prop.s + " at position " + reader.offset);
             }
-            var v = reader.ReadUInt16(prop.sB);
+            var v = reader.ReadUInt32(prop.sB);
             if (prop.sA) {
                 v -= prop.sA;
             }
