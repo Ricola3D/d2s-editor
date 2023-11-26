@@ -11549,7 +11549,7 @@ export let remodded_constants_99 = {
             "s": "normal_damage_reduction",
             "sS": 1,
             "sB": 6,
-            "sA": 0,
+            "sA": 5,
             "so": 22,
             "dF": 19,
             "dP": "Damage Reduced by %d",
@@ -12581,7 +12581,7 @@ export let remodded_constants_99 = {
             "s": "item_deadlystrike",
             "sS": 1,
             "sB": 7,
-            "sA": 0,
+            "sA": 5,
             "so": 85,
             "dF": 19,
             "dP": "%+d%% Deadly Strike",
@@ -20167,10 +20167,270 @@ export let remodded_constants_99 = {
         "key": {
             "n": "Key"
         },
-        "rps": {},
-        "rpl": {},
-        "bps": {},
-        "bpl": {}
+        "rps": {
+            "n": "Small Red Potion"
+        },
+        "rpl": {
+            "n": "Large Red Potion"
+        },
+        "bps": {
+            "n": "Small Blue Potion"
+        },
+        "bpl": {
+            "n": "Large Blue Potion"
+        },
+        "Rgx": {
+            "n": "Ramaladni's Gift"
+        },
+        "Y20": {
+            "n": "Gold Bar"
+        },
+        "b64": {
+            "n": "Socket Remover"
+        },
+        "b65": {
+            "n": "Premium Socket Remover"
+        },
+        "K01": {
+            "n": "Scroll of Torment<br>Level 11 of Icy Hell"
+        },
+        "K02": {
+            "n": "Scroll of Torment<br>Level 12 of Icy Hell"
+        },
+        "K03": {
+            "n": "Scroll of Torment<br>Level 13 of Icy Hell"
+        },
+        "K04": {
+            "n": "Scroll of Torment<br>Level 14 of Icy Hell"
+        },
+        "K05": {
+            "n": "Scroll of Torment<br>Level 15 of Icy Hell"
+        },
+        "K06": {
+            "n": "Scroll of Torment<br>Level 16 of Icy Hell"
+        },
+        "K07": {
+            "n": "Scroll of Torment<br>Level 17 of Icy Hell"
+        },
+        "K08": {
+            "n": "Scroll of Torment<br>Level 18 of Icy Hell"
+        },
+        "K09": {
+            "n": "Scroll of Torment<br>Level 19 of Icy Hell"
+        },
+        "K10": {
+            "n": "Scroll of Torment<br>Level 20 of Icy Hell"
+        },
+        "K11": {
+            "n": "Scroll of Torment<br>Level 21 of Icy Hell"
+        },
+        "K12": {
+            "n": "Scroll of Torment<br>Level 22 of Icy Hell"
+        },
+        "K13": {
+            "n": "Scroll of Torment<br>Level 23 of Icy Hell"
+        },
+        "K14": {
+            "n": "Scroll of Torment<br>Level 24 of Icy Hell"
+        },
+        "K15": {
+            "n": "Scroll of Torment<br>Level 25 of Icy Hell"
+        },
+        "K16": {
+            "n": "Scroll of Torment<br>Level 26 of Icy Hell"
+        },
+        "K17": {
+            "n": "Scroll of Torment<br>Level 27 of Icy Hell"
+        },
+        "K18": {
+            "n": "Scroll of Torment<br>Level 28 of Icy Hell"
+        },
+        "K19": {
+            "n": "Scroll of Torment<br>Level 29 of Icy Hell"
+        },
+        "K20": {
+            "n": "Scroll of Torment<br>Level 30 of Icy Hell"
+        },
+        "K21": {
+            "n": "Scroll of Torment<br>Level 31 of Icy Hell"
+        },
+        "K22": {
+            "n": "Scroll of Torment<br>Level 32 of Icy Hell"
+        },
+        "K23": {
+            "n": "Scroll of Torment<br>Level 33 of Icy Hell"
+        },
+        "K24": {
+            "n": "Scroll of Torment<br>Level 34 of Icy Hell"
+        },
+        "K25": {
+            "n": "Scroll of Torment<br>Level 35 of Icy Hell"
+        },
+        "K26": {
+            "n": "Scroll of Torment<br>Level 36 of Icy Hell"
+        },
+        "K27": {
+            "n": "Scroll of Torment<br>Level 37 of Icy Hell"
+        },
+        "K28": {
+            "n": "Scroll of Torment<br>Level 38 of Icy Hell"
+        },
+        "K29": {
+            "n": "Scroll of Torment<br>Level 39 of Icy Hell"
+        },
+        "K30": {
+            "n": "Scroll of Torment<br>Level 40 of Icy Hell"
+        },
+        "K31": {
+            "n": "Scroll of Torment<br>Level 41 of Icy Hell"
+        },
+        "K32": {
+            "n": "Scroll of Torment<br>Level 42 of Icy Hell"
+        },
+        "K33": {
+            "n": "Scroll of Torment<br>Level 43 of Icy Hell"
+        },
+        "K34": {
+            "n": "Scroll of Torment<br>Level 44 of Icy Hell"
+        },
+        "K35": {
+            "n": "Scroll of Torment<br>Level 45 of Icy Hell"
+        },
+        "K36": {
+            "n": "Scroll of Torment<br>Level 46 of Icy Hell"
+        },
+        "K37": {
+            "n": "Scroll of Torment<br>Level 47 of Icy Hell"
+        },
+        "K38": {
+            "n": "Scroll of Torment<br>Level 48 of Icy Hell"
+        },
+        "K39": {
+            "n": "Scroll of Torment<br>Level 49 of Icy Hell"
+        },
+        "K40": {
+            "n": "Scroll of Torment<br>Level 50 of Icy Hell"
+        },
+        "K41": {
+            "n": "Scroll of Torment<br>Level 11 of Torment Trial"
+        },
+        "K42": {
+            "n": "Scroll of Torment<br>Level 12 of Torment Trial"
+        },
+        "K43": {
+            "n": "Scroll of Torment<br>Level 13 of Torment Trial"
+        },
+        "K44": {
+            "n": "Scroll of Torment<br>Level 14 of Torment Trial"
+        },
+        "K45": {
+            "n": "Scroll of Torment<br>Level 15 of Torment Trial"
+        },
+        "K46": {
+            "n": "Scroll of Torment<br>Level 16 of Torment Trial"
+        },
+        "K47": {
+            "n": "Scroll of Torment<br>Level 17 of Torment Trial"
+        },
+        "K48": {
+            "n": "Scroll of Torment<br>Level 18 of Torment Trial"
+        },
+        "K49": {
+            "n": "Scroll of Torment<br>Level 19 of Torment Trial"
+        },
+        "K50": {
+            "n": "Scroll of Torment<br>Level 20 of Torment Trial"
+        },
+        "K51": {
+            "n": "Scroll of Torment<br>Level 21 of Torment Trial"
+        },
+        "K52": {
+            "n": "Scroll of Torment<br>Level 22 of Torment Trial"
+        },
+        "K53": {
+            "n": "Scroll of Torment<br>Level 23 of Torment Trial"
+        },
+        "K54": {
+            "n": "Scroll of Torment<br>Level 24 of Torment Trial"
+        },
+        "K55": {
+            "n": "Scroll of Torment<br>Level 25 of Torment Trial"
+        },
+        "K56": {
+            "n": "Scroll of Torment<br>Level 26 of Torment Trial"
+        },
+        "K57": {
+            "n": "Scroll of Torment<br>Level 27 of Torment Trial"
+        },
+        "K58": {
+            "n": "Scroll of Torment<br>Level 28 of Torment Trial"
+        },
+        "K59": {
+            "n": "Scroll of Torment<br>Level 29 of Torment Trial"
+        },
+        "K60": {
+            "n": "Scroll of Torment<br>Level 30 of Torment Trial"
+        },
+        "K61": {
+            "n": "Scroll of Torment<br>Level 31 of Torment Trial"
+        },
+        "K62": {
+            "n": "Scroll of Torment<br>Level 32 of Torment Trial"
+        },
+        "K63": {
+            "n": "Scroll of Torment<br>Level 33 of Torment Trial"
+        },
+        "K64": {
+            "n": "Scroll of Torment<br>Level 34 of Torment Trial"
+        },
+        "K65": {
+            "n": "Scroll of Torment<br>Level 35 of Torment Trial"
+        },
+        "K66": {
+            "n": "Scroll of Torment<br>Level 36 of Torment Trial"
+        },
+        "K67": {
+            "n": "Scroll of Torment<br>Level 37 of Torment Trial"
+        },
+        "K68": {
+            "n": "Scroll of Torment<br>Level 38 of Torment Trial"
+        },
+        "K69": {
+            "n": "Scroll of Torment<br>Level 39 of Torment Trial"
+        },
+        "K70": {
+            "n": "Scroll of Torment<br>Level 40 of Torment Trial"
+        },
+        "K71": {
+            "n": "Scroll of Torment<br>Level 41 of Torment Trial"
+        },
+        "K72": {
+            "n": "Scroll of Torment<br>Level 42 of Torment Trial"
+        },
+        "K73": {
+            "n": "Scroll of Torment<br>Level 43 of Torment Trial"
+        },
+        "K74": {
+            "n": "Scroll of Torment<br>Level 44 of Torment Trial"
+        },
+        "K75": {
+            "n": "Scroll of Torment<br>Level 45 of Torment Trial"
+        },
+        "K76": {
+            "n": "Scroll of Torment<br>Level 46 of Torment Trial"
+        },
+        "K77": {
+            "n": "Scroll of Torment<br>Level 47 of Torment Trial"
+        },
+        "K78": {
+            "n": "Scroll of Torment<br>Level 48 of Torment Trial"
+        },
+        "K79": {
+            "n": "Scroll of Torment<br>Level 49 of Torment Trial"
+        },
+        "K80": {
+            "n": "Scroll of Torment<br>Level 50 of Torment Trial"
+        }
     },
     "armor_items": {
         "cap": {
@@ -45558,6 +45818,20 @@ export let remodded_constants_99 = {
             ]
         },
         /* New item types ReMoDDeD - begin */
+        "Rgx": {
+            "nc": "Rgx",
+            "exc": "Rgx",
+            "elc": "Rgx",
+            "iq": 1,
+            "n": "Ramaladnis's Gift",
+            "s": 1,
+            "hi": 0,
+            "gt": 0,
+            "i": "Custom//ramaladnis_gift.dc6",
+            "iw": 1,
+            "ih": 1,
+            "it": 0
+        },
         "Gu1": {
             "iq": 0,
             "n": "Gold Pile",
@@ -45578,7 +45852,7 @@ export let remodded_constants_99 = {
         "Gu2": {
             "iq": 0,
             "n": "Medium Gold Pile (legacy)",
-            "s": 1,
+            "s": 0,
             "hi": 0,
             "gt": 0,
             "i": "Custom/gold_m",
@@ -45612,7 +45886,7 @@ export let remodded_constants_99 = {
         "Gu4": {
             "iq": 0,
             "n": "Extra Large Gold Pile (legacy)",
-            "s": 1,
+            "s": 0,
             "hi": 0,
             "gt": 0,
             "i": "Custom/gold_xl",
@@ -54300,7 +54574,7 @@ export let remodded_constants_99 = {
         },
         "K41": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 11 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 11 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54317,7 +54591,7 @@ export let remodded_constants_99 = {
         },
         "K42": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 12 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 12 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54334,7 +54608,7 @@ export let remodded_constants_99 = {
         },
         "K43": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 13 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 13 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54351,7 +54625,7 @@ export let remodded_constants_99 = {
         },
         "K44": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 14 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 14 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54368,7 +54642,7 @@ export let remodded_constants_99 = {
         },
         "K45": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 15 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 15 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54385,7 +54659,7 @@ export let remodded_constants_99 = {
         },
         "K46": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 16 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 16 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54402,7 +54676,7 @@ export let remodded_constants_99 = {
         },
         "K47": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 17 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 17 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54419,7 +54693,7 @@ export let remodded_constants_99 = {
         },
         "K48": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 18 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 18 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54436,7 +54710,7 @@ export let remodded_constants_99 = {
         },
         "K49": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 19 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 19 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54453,7 +54727,7 @@ export let remodded_constants_99 = {
         },
         "K50": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 20 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 20 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54470,7 +54744,7 @@ export let remodded_constants_99 = {
         },
         "K51": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 21 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 21 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54487,7 +54761,7 @@ export let remodded_constants_99 = {
         },
         "K52": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 22 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 22 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54504,7 +54778,7 @@ export let remodded_constants_99 = {
         },
         "K53": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 23 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 23 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54521,7 +54795,7 @@ export let remodded_constants_99 = {
         },
         "K54": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 24 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 24 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54538,7 +54812,7 @@ export let remodded_constants_99 = {
         },
         "K55": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 25 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 25 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54555,7 +54829,7 @@ export let remodded_constants_99 = {
         },
         "K56": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 26 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 26 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54572,7 +54846,7 @@ export let remodded_constants_99 = {
         },
         "K57": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 27 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 27 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54589,7 +54863,7 @@ export let remodded_constants_99 = {
         },
         "K58": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 28 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 28 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54606,7 +54880,7 @@ export let remodded_constants_99 = {
         },
         "K59": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 29 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 29 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54623,7 +54897,7 @@ export let remodded_constants_99 = {
         },
         "K60": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 30 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 30 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54640,7 +54914,7 @@ export let remodded_constants_99 = {
         },
         "K61": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 31 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 31 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54657,7 +54931,7 @@ export let remodded_constants_99 = {
         },
         "K62": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 32 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 32 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54674,7 +54948,7 @@ export let remodded_constants_99 = {
         },
         "K63": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 33 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 33 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54691,7 +54965,7 @@ export let remodded_constants_99 = {
         },
         "K64": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 34 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 34 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54708,7 +54982,7 @@ export let remodded_constants_99 = {
         },
         "K65": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 35 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 35 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54725,7 +54999,7 @@ export let remodded_constants_99 = {
         },
         "K66": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 36 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 36 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54742,7 +55016,7 @@ export let remodded_constants_99 = {
         },
         "K67": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 37 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 37 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54759,7 +55033,7 @@ export let remodded_constants_99 = {
         },
         "K68": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 38 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 38 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54776,7 +55050,7 @@ export let remodded_constants_99 = {
         },
         "K69": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 39 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 39 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54793,7 +55067,7 @@ export let remodded_constants_99 = {
         },
         "K70": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 40 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 40 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54810,7 +55084,7 @@ export let remodded_constants_99 = {
         },
         "K71": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 41 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 41 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54827,7 +55101,7 @@ export let remodded_constants_99 = {
         },
         "K72": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 42 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 42 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54844,7 +55118,7 @@ export let remodded_constants_99 = {
         },
         "K73": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 43 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 43 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54861,7 +55135,7 @@ export let remodded_constants_99 = {
         },
         "K74": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 44 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 44 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54878,7 +55152,7 @@ export let remodded_constants_99 = {
         },
         "K75": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 45 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 45 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54895,7 +55169,7 @@ export let remodded_constants_99 = {
         },
         "K76": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 46 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 46 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54912,7 +55186,7 @@ export let remodded_constants_99 = {
         },
         "K77": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 47 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 47 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54929,7 +55203,7 @@ export let remodded_constants_99 = {
         },
         "K78": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 48 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 48 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54946,7 +55220,7 @@ export let remodded_constants_99 = {
         },
         "K79": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 49 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 49 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,
@@ -54963,7 +55237,7 @@ export let remodded_constants_99 = {
         },
         "K80": {
             "iq": 0,
-            "n": "Scroll of Torment<br>Level 50 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 50 of Torment Trial",
             "s": 1,
             "hi": 0,
             "gt": 0,

@@ -75,51 +75,34 @@
     },
     methods: {
       socketStyle(idx) {
-        const y = [[50], [25, 75], [5, 50, 95]];
-        const x = [[50], [10, 90]];
-        const i = idx - 1;
-        switch (this.item.total_nr_of_sockets) {
-          case 1:
-          case 2:
-          case 3: {
-            const j = this.item.total_nr_of_sockets - 1;
-            if (this.item.inv_height > 2 || this.item.total_nr_of_sockets < 3) {
-              return {
-                transform: `translateX(-${x[0][0]}%) translateY(-${y[j][i]}%)`,
-                top: `${y[j][i]}%`,
-                left: `${x[0][0]}%`,
-              };
-            }
-            const k = [y[2][0], y[2][2], y[2][2]];
-            const l = [x[0][0], x[1][0], x[1][1]];
-            return {
-              transform: `translateX(-${l[i]}%) translateY(-${k[i]}%)`,
-              top: `${k[i]}%`,
-              left: `${l[i]}%`,
-            };
+        const cellSize = 32.
+        const countX = Math.max(1, Math.ceil(this.item.total_nr_of_sockets / this.item.inv_height))
+        const countY = Math.ceil(this.item.total_nr_of_sockets / countX)
+        console.log("CountX: " + countX + ", CountY=" + countY)
+        let i = 0
+        let j = 0
+        if (this.item.total_nr_of_sockets == 5) {
+          // Exception, draw like the 5 of a dice
+          if (idx < 3) {
+            i = (idx - 1) % countX
+            j = Math.floor((idx - 1) / countX)
+          } else if (idx == 3) {
+            i = 1 / (this.item.inv_height - 1)
+            j = 1 / (this.item.inv_width - 1)
+          } else {
+            i = (idx) % countX
+            j = Math.floor((idx) / countX)
           }
-          case 4:
-          case 6: {
-            const j = (this.item.total_nr_of_sockets / 2) - 1;
-            return {
-              transform: `translateX(-${x[1][i % 2]}%) translateY(-${y[j][Math.floor(i / 2)]}%)`,
-              top: `${y[j][Math.floor(i / 2)]}%`,
-              left: `${x[1][i % 2]}%`,
-            };
-          }
-          case 5: {
-            const k = [y[2][0], y[2][0], y[2][2], y[2][2], y[2][1]];
-            const l = [x[1][0], x[1][1], x[1][0], x[1][1], x[0][0]];
-            return {
-              transform: `translateX(-${l[i]}%) translateY(-${k[i]}%)`,
-              top: `${k[i]}%`,
-              left: `${l[i]}%`,
-            };
-          }
-          default: {
-            return {};
-          }
+        } else {
+          // Columns & rows
+          i = (idx - 1) % countX
+          j = Math.floor((idx - 1) / countX)
         }
+        return {
+            transform: `translateX(${cellSize * ( (i+0.5) * this.item.inv_width/countX - 0.5)}px) translateY(${cellSize * ( (j+0.5) * this.item.inv_height/countY - 0.5) }px)`,
+            top: `0`,
+            left: `0`,
+          };
       },
       itemName(item) {
         let name = item.type_name;
