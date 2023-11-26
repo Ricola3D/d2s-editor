@@ -83,7 +83,7 @@
           <li>
             <div v-if="item.socketed">
               <label>Sockets:</label>
-              <input class="edit-box" type="number" v-model.number="item.total_nr_of_sockets" @input="onEvent('update')" min="1" :max="maxSockets(item)">
+              <input class="edit-box" type="number" v-model.number="item.total_nr_of_sockets" @input="onEvent('update')" min="1" :max="maxSockets()">
             </div>
           </li>
           <li>
@@ -182,8 +182,8 @@ export default {
     onMove() {
       this.$emit('item-event', { item: this.item, location: this.location, type: 'move' });
     },
-    maxSockets(item) {
-      return item.inv_width * item.inv_height
+    maxSockets() {
+      return this.item.inv_width * this.item.inv_height
     },
     findBasesInConstants(code, items) {
       const base = items[code];

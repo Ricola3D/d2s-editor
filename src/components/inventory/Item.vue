@@ -78,7 +78,6 @@
         const cellSize = 32.
         const countX = Math.max(1, Math.ceil(this.item.total_nr_of_sockets / this.item.inv_height))
         const countY = Math.ceil(this.item.total_nr_of_sockets / countX)
-        console.log("CountX: " + countX + ", CountY=" + countY)
         let i = 0
         let j = 0
         if (this.item.total_nr_of_sockets == 5) {
@@ -97,6 +96,14 @@
           // Columns & rows
           i = (idx - 1) % countX
           j = Math.floor((idx - 1) / countX)
+
+          // Special case for 3
+          if (this.item.total_nr_of_sockets == 3) {
+            if (idx == 3 ) {
+              // Center last socket
+              i = 0.5
+            }
+          }
         }
         return {
             transform: `translateX(${cellSize * ( (i+0.5) * this.item.inv_width/countX - 0.5)}px) translateY(${cellSize * ( (j+0.5) * this.item.inv_height/countY - 0.5) }px)`,
