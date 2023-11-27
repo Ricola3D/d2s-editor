@@ -98,8 +98,8 @@
           j = Math.floor((idx - 1) / countX)
 
           // Special case for 3
-          if (this.item.total_nr_of_sockets == 3) {
-            if (idx == 3 ) {
+          if (countX > 1 && this.item.total_nr_of_sockets % 2) {
+            if (idx == this.item.total_nr_of_sockets ) {
               // Center last socket
               i = 0.5
             }
