@@ -655,11 +655,17 @@
         if (a[1] >= b[3] || b[1] >= a[3]) return false;
         return true;
       },
-      setPropertiesOnSave() {
+      async setPropertiesOnSave() {
+        // let saveClone = JSON.parse(JSON.stringify(this.save))
+        // let that = this;
+        // [... saveClone.items, ... saveClone.merc_items, ... saveClone.corpse_items, saveClone.golem_item].forEach(item => {
+        //   that.setPropertiesOnItem(item);
+        // });
+        // this.save = saveClone
         let that = this;
-        [... this.save.items, ... this.save.merc_items, ... this.save.corpse_items, this.save.golem_item].forEach(item => {
-          that.setPropertiesOnItem(item);
-        });
+        for (const item of [... this.save.items, ... this.save.merc_items, ... this.save.corpse_items, this.save.golem_item]) {
+          await that.setPropertiesOnItem(item);
+        }
       },
       async setPropertiesOnItem(item) {
         if (!item) {

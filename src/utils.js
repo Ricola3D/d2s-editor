@@ -1,3 +1,7 @@
+const NodeCache = require( "node-cache" );
+
+const imageCache = new NodeCache( { checkperiod: 0, useClones: false } );
+
 const colors = {
   whit: 0,
   lgry: 1,
@@ -64,16 +68,33 @@ export default {
     return typedArray.buffer;
   },
   async b64PNGFromDC6(item) {
-    let response;
-    try {
-      response = await fetch(`d2/game_data/${window.work_mod}/version_${window.work_version}/global/items/${item.inv_file}.dc6`, { signal: AbortSignal.timeout(1500) });
-    } catch (e) {
-      return null;
+    let path = `d2/game_data/${window.work_mod}/version_${window.work_version}/global/items/${item.inv_file}.dc6`
+    let dc6
+    if (imageCache.has(path)){
+      dc6 = imageCache.get(path)
+    } else {
+      let response;
+      try {
+        response = await fetch(path, { signal: AbortSignal.timeout(1500) });
+      } catch (e) {
+        return null;
+      }
+      if (response.status !== 200) {
+        return null;
+      }
+      let arrayBuffer
+      try {
+        arrayBuffer = await response.arrayBuffer()
+      } catch (e) {
+        return null;
+      }
+      dc6 = new Uint8Array(arrayBuffer);
+
+      // Save in cache
+      imageCache.set( path, dc6, 10000 )
     }
-    if (response.status !== 200) {
-      return null;
-    }
-    const dc6 = new Uint8Array(await response.arrayBuffer());
+
+    // Transform to a colorized picture
     let idx = 32;
     const width = dc6[idx] | dc6[idx + 1] << 8 | dc6[idx + 2] << 16 | dc6[idx + 2] << 24;
     idx = 36;
@@ -103,7 +124,7 @@ export default {
     }
     let canvas = document.createElement('canvas'),
       context = canvas.getContext('2d'),
-      data = context.createImageData(width, height);
+      imgData = context.createImageData(width, height);
     canvas.height = height;
     canvas.width = width;
     for (let y = 0; y < height; y += 1) {
@@ -120,20 +141,20 @@ export default {
           }
         }
         const rgb = window.palettes["ACT1"][paletteIdx];
-        data.data[offset] = rgb[0];
-        data.data[offset + 1] = rgb[1];
-        data.data[offset + 2] = rgb[2];
-        data.data[offset + 3] = 255;
+        imgData.data[offset] = rgb[0];
+        imgData.data[offset + 1] = rgb[1];
+        imgData.data[offset + 2] = rgb[2];
+        imgData.data[offset + 3] = 255;
       }
     }
-
+    
     // put data to context at (0, 0)
-    context.putImageData(data, 0, 0);
-
+    context.putImageData(imgData, 0, 0);
     // output image
     //var img = new Image();
-    var src = canvas.toDataURL('image/png');
+    let src = canvas.toDataURL('image/png');
     canvas.remove();
+
     return src;
   },
   shift(number, shift) {
