@@ -1586,23 +1586,23 @@ export let remodded_constants_99 = {
         null,
         null,
         null,
+        null,
         {
-            "id": 379,
+            "id": 380,
             "s": "Sanctuary (item)"
         },
         {
-            "id": 380,
+            "id": 381,
             "s": "Redemption (item)"
         },
         {
-            "id": 381,
+            "id": 382,
             "s": "Vigor (item)"
         },
         {
-            "id": 382,
+            "id": 383,
             "s": "Meditation (item)"
         },
-        null,
         null,
         null,
         null,
@@ -2120,7 +2120,10 @@ export let remodded_constants_99 = {
             "id": 624,
             "s": "Soul of Assassin [Tier 10/10] (item)"
         },
-        null,
+        {
+            "id": 625,
+            "s": "Blink Strike (item)"
+        },
         null,
         null,
         null,
@@ -2181,7 +2184,10 @@ export let remodded_constants_99 = {
         null,
         null,
         null,
-        null, // 680
+        {
+            "id": 680,
+            "s": "Adrenaline (item)"
+        }, // 680
         {
             "id": 681,
             "s": "Werebear (item)"
@@ -11451,7 +11457,7 @@ export let remodded_constants_99 = {
             "s": "secondary_mindamage",
             "sS": 1,
             "sB": 6,
-            "sA": 1,
+            "sA": 0,
             "so": 124,
             "dF": 19,
             "dP": "%+d to Minimum Damage",
@@ -15459,13 +15465,13 @@ export let remodded_constants_99 = {
         },
         {
             "id": 426,
-            "s": "unknown426",
+            "s": "item_fasterattackrate_perenergy",
             "sB": 7,
             "sA": 20,
             "so": 999,
             "dF": 19,
-            "dP": "Unknown426 %d",
-            "dN": "Unknown426 %d",
+            "dP": "%+d% Increased Attack Speed (Energy)",
+            "dN": "%+d% Increased Attack Speed (Energy)",
         },
         {
             "id": 427,
