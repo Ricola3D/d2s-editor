@@ -1689,7 +1689,10 @@ export let remodded_constants_99 = {
         },
         null,
         null,
-        null,
+        {
+            "id": 446,
+            "s": "Blizzard (item)"
+        },
         {
             "id": 447,
             "s": "Poison Nova (item)"
@@ -1781,33 +1784,36 @@ export let remodded_constants_99 = {
         null,
         {
             "id": 503,
-            "s": "Soul of Amazon [Tier 1/10] (item)"
+            "s": "Reduce Physical Resistance (item)"
         },
         {
             "id": 504,
-            "s": "Soul of Sorceress [Tier 1/10] (item)"
+            "s": "Soul of Amazon [Tier 1/10] (item)"
         },
         {
             "id": 505,
-            "s": "Soul of Necromancer [Tier 1/10] (item)"
+            "s": "Soul of Sorceress [Tier 1/10] (item)"
         },
         {
             "id": 506,
-            "s": "Soul of Paladin [Tier 1/10] (item)"
+            "s": "Soul of Necromancer [Tier 1/10] (item)"
         },
         {
             "id": 507,
-            "s": "Soul of Barbarian [Tier 1/10] (item)"
+            "s": "Soul of Paladin [Tier 1/10] (item)"
         },
         {
             "id": 508,
-            "s": "Soul of Druid [Tier 1/10] (item)"
+            "s": "Soul of Barbarian [Tier 1/10] (item)"
         },
         {
             "id": 509,
-            "s": "Soul of Assassin [Tier 1/10] (item)"
+            "s": "Soul of Druid [Tier 1/10] (item)"
         },
-        null, // 510
+        {
+            "id": 510,
+            "s": "Soul of Assassin [Tier 1/10] (item)"
+        }, // 510
         null,
         null,
         null,
@@ -2193,7 +2199,10 @@ export let remodded_constants_99 = {
             "s": "Werebear (item)"
         },
         null,
-        null,
+        {
+            "id": 683,
+            "s": "Raise Leoric's Chosen (item)"
+        },
         null,
         null,
         null,

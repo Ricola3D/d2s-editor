@@ -671,7 +671,8 @@
         if (!item) {
           return;
         }
-        if (!item.magic_attributes) item.magic_attributes = [];    
+        if (!item.magic_attributes) item.magic_attributes = [];  
+        //item.src = "./images/loading.gif"
         item.src = await utils.b64PNGFromDC6(item);
         if (!item.socketed_items) {
           return;

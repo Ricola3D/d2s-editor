@@ -13,13 +13,16 @@ This is a basic Diablo 2 save editor for D2 and D2R. The parser uses the TXT dat
 
 ### How to use on your own mod
 
-1. Install Node version 16 (newer will provoke settings issues with openssl).
+1. Install Node **version 16** (newer will provoke settings issues with openssl).
 2. Clone this repo or download a zip.
-3. Extract your MPQ data to a public/data folder in the same directory as the repo. (the tool needs TXTs, strings, pallettes, and item dc6s to work properly)
-4. Run 
+3. Open **Node.js Command Prompt**.
+4. On first install or version updates, in the command prompt, run the following commands to install the editor:
 ```
 npm install
 npm run build
+```
+5. Run the command below to start the editor
+```
 npm run serve
 ```
-4. Go to http://localhost:${PORT}/ verify everything works.
+6. Go to http://localhost:8080/ with your web browser to access the editor.

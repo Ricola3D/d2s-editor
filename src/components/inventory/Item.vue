@@ -1,7 +1,8 @@
 <template>
   <div>
     <div ref="itemRef" tabindex="0" :class="itemClass" v-on:dragstart="dragStart">
-      <img :src="item.src" :class="{ ethereal: item.ethereal}" alt="X"/>
+      <img v-if="item.src" :src="item.src" :class="{ ethereal: item.ethereal}"/>
+      <img v-else src="/images/loading.gif" :style="{ opacity: 0.5 }">
       <div v-if="item.total_nr_of_sockets && tooltipShown" class="sockets">
         <div :style="socketStyle(idx)" class="socket"
           :class="{ 'empty-socket': !item.socketed_items || !item.socketed_items[idx-1]}"
