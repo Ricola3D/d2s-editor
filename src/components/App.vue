@@ -6,8 +6,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="octicon octicon-clippy navbar-brand">
         <i class="fa fa-fw fa-github"></i>
-        <a href="https://github.com/dschu012">dschu012</a> / <a class="font-weight-bold"
-          href="https://github.com/dschu012/d2s-editor">d2s-editor</a>
+        <a href="https://github.com/ricola3d">Ricola3D</a> / <a class="font-weight-bold"
+          href="https://github.com/ricola3d/d2s-editor">d2s-editor</a>
       </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -656,12 +656,6 @@
         return true;
       },
       async setPropertiesOnSave() {
-        // let saveClone = JSON.parse(JSON.stringify(this.save))
-        // let that = this;
-        // [... saveClone.items, ... saveClone.merc_items, ... saveClone.corpse_items, saveClone.golem_item].forEach(item => {
-        //   that.setPropertiesOnItem(item);
-        // });
-        // this.save = saveClone
         let that = this;
         for (const item of [... this.save.items, ... this.save.merc_items, ... this.save.corpse_items, this.save.golem_item]) {
           await that.setPropertiesOnItem(item);
@@ -672,14 +666,13 @@
           return;
         }
         if (!item.magic_attributes) item.magic_attributes = [];  
-        //item.src = "./images/loading.gif"
-        item.src = await utils.b64PNGFromDC6(item);
+        item.src = await utils.getInventoryImageSrc(item);
         if (!item.socketed_items) {
           return;
         }
         item.socketed_attributes = [];
         for(let i = 0; i < item.socketed_items.length; i++) {
-          item.socketed_items[i].src = await utils.b64PNGFromDC6(item.socketed_items[i]);
+          item.socketed_items[i].src = await utils.getInventoryImageSrc(item.socketed_items[i]);
           item.socketed_items[i].magic_attributes.forEach((it, idx) => { if (item.socketed_attributes.findIndex(x => x.id == it.id) == -1) item.socketed_attributes.push(it) });
         }
       },

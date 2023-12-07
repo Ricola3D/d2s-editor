@@ -484,6 +484,8 @@ function enhanceItem(item, mod, version, level, config, parent) {
             item.reqdex = details.rd;
         if (details.i)
             item.inv_file = details.i;
+        if (details.hdi)
+            item.hd_inv_file = details.hdi;
         if (details.ih)
             item.inv_height = details.ih;
         if (details.iw)
@@ -536,6 +538,8 @@ function enhanceItem(item, mod, version, level, config, parent) {
                 item.inv_file = details.ui;
             if (unq && unq.i)
                 item.inv_file = unq.i;
+            if (unq && unq.hdi)
+                item.hd_inv_file = unq.hdi;
             if (unq && unq.tc)
                 item.transform_color = unq.tc;
         }
@@ -545,6 +549,8 @@ function enhanceItem(item, mod, version, level, config, parent) {
                 item.inv_file = details.ui;
             if (set && set.i)
                 item.inv_file = set.i;
+            if (set && set.hdi)
+                item.hd_inv_file = set.hdi;
             if (set && set.tc)
                 item.transform_color = set.tc;
         }

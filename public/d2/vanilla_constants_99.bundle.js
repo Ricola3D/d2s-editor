@@ -1,6 +1,7 @@
 export let vanilla_constants_99 = {
     "classes": [
         {
+            "id": 0,
             "n": "Amazon",
             "c": "ama",
             "as": "%+d to Amazon Skill Levels",
@@ -28,6 +29,7 @@ export let vanilla_constants_99 = {
             }
         },
         {
+            "id": 1,
             "n": "Sorceress",
             "c": "sor",
             "as": "%+d to Sorceress Skill Levels",
@@ -55,6 +57,7 @@ export let vanilla_constants_99 = {
             }
         },
         {
+            "id": 2,
             "n": "Necromancer",
             "c": "nec",
             "as": "%+d to Necromancer Skill Levels",
@@ -82,6 +85,7 @@ export let vanilla_constants_99 = {
             }
         },
         {
+            "id": 3,
             "n": "Paladin",
             "c": "pal",
             "as": "%+d to Paladin Skill Levels",
@@ -109,6 +113,7 @@ export let vanilla_constants_99 = {
             }
         },
         {
+            "id": 4,
             "n": "Barbarian",
             "c": "bar",
             "as": "%+d to Barbarian Skill Levels",
@@ -136,6 +141,7 @@ export let vanilla_constants_99 = {
             }
         },
         {
+            "id": 5,
             "n": "Druid",
             "c": "dru",
             "as": "%+d to Druid Skill Levels",
@@ -163,6 +169,7 @@ export let vanilla_constants_99 = {
             }
         },
         {
+            "id": 6,
             "n": "Assassin",
             "c": "ass",
             "as": "%+d to Assassin Skill Levels",
@@ -192,620 +199,776 @@ export let vanilla_constants_99 = {
     ],
     "skills": [
         {
+            "id": 0,
             "s": "Attack"
         },
         {
+            "id": 1,
             "s": "Kick"
         },
         {
+            "id": 2,
             "s": "Throw"
         },
         {
+            "id": 3,
             "s": "Unsummon"
         },
         {
+            "id": 4,
             "s": "Left Hand Throw"
         },
         {
+            "id": 5,
             "s": "Left Hand Swing"
         },
         {
+            "id": 6,
             "s": "Magic Arrow",
             "c": "ama"
         },
         {
+            "id": 7,
             "s": "Fire Arrow",
             "c": "ama"
         },
         {
+            "id": 8,
             "s": "Inner Sight",
             "c": "ama"
         },
         {
+            "id": 9,
             "s": "Critical Strike",
             "c": "ama"
         },
         {
+            "id": 10,
             "s": "Jab",
             "c": "ama"
         },
         {
+            "id": 11,
             "s": "Cold Arrow",
             "c": "ama"
         },
         {
+            "id": 12,
             "s": "Multiple Shot",
             "c": "ama"
         },
         {
+            "id": 13,
             "s": "Dodge",
             "c": "ama"
         },
         {
+            "id": 14,
             "s": "Power Strike",
             "c": "ama"
         },
         {
+            "id": 15,
             "s": "Poison Javelin",
             "c": "ama"
         },
         {
+            "id": 16,
             "s": "Exploding Arrow",
             "c": "ama"
         },
         {
+            "id": 17,
             "s": "Slow Missiles",
             "c": "ama"
         },
         {
+            "id": 18,
             "s": "Avoid",
             "c": "ama"
         },
         {
+            "id": 19,
             "s": "Impale",
             "c": "ama"
         },
         {
+            "id": 20,
             "s": "Lightning Bolt",
             "c": "ama"
         },
         {
+            "id": 21,
             "s": "Ice Arrow",
             "c": "ama"
         },
         {
+            "id": 22,
             "s": "Guided Arrow",
             "c": "ama"
         },
         {
+            "id": 23,
             "s": "Penetrate",
             "c": "ama"
         },
         {
+            "id": 24,
             "s": "Charged Strike",
             "c": "ama"
         },
         {
+            "id": 25,
             "s": "Plague Javelin",
             "c": "ama"
         },
         {
+            "id": 26,
             "s": "Strafe",
             "c": "ama"
         },
         {
+            "id": 27,
             "s": "Immolation Arrow",
             "c": "ama"
         },
         {
+            "id": 28,
             "s": "Decoy",
             "c": "ama"
         },
         {
+            "id": 29,
             "s": "Evade",
             "c": "ama"
         },
         {
+            "id": 30,
             "s": "Fend",
             "c": "ama"
         },
         {
+            "id": 31,
             "s": "Freezing Arrow",
             "c": "ama"
         },
         {
+            "id": 32,
             "s": "Valkyrie",
             "c": "ama"
         },
         {
+            "id": 33,
             "s": "Pierce",
             "c": "ama"
         },
         {
+            "id": 34,
             "s": "Lightning Strike",
             "c": "ama"
         },
         {
+            "id": 35,
             "s": "Lightning Fury",
             "c": "ama"
         },
         {
+            "id": 36,
             "s": "Fire Bolt",
             "c": "sor"
         },
         {
+            "id": 37,
             "s": "Warmth",
             "c": "sor"
         },
         {
+            "id": 38,
             "s": "Charged Bolt",
             "c": "sor"
         },
         {
+            "id": 39,
             "s": "Ice Bolt",
             "c": "sor"
         },
         {
+            "id": 40,
             "s": "Frozen Armor",
             "c": "sor"
         },
         {
+            "id": 41,
             "s": "Inferno",
             "c": "sor"
         },
         {
+            "id": 42,
             "s": "Static Field",
             "c": "sor"
         },
         {
+            "id": 43,
             "s": "Telekinesis",
             "c": "sor"
         },
         {
+            "id": 44,
             "s": "Frost Nova",
             "c": "sor"
         },
         {
+            "id": 45,
             "s": "Ice Blast",
             "c": "sor"
         },
         {
+            "id": 46,
             "s": "Blaze",
             "c": "sor"
         },
         {
+            "id": 47,
             "s": "Fire Ball",
             "c": "sor"
         },
         {
+            "id": 48,
             "s": "Nova",
             "c": "sor"
         },
         {
+            "id": 49,
             "s": "Lightning",
             "c": "sor"
         },
         {
+            "id": 50,
             "s": "Shiver Armor",
             "c": "sor"
         },
         {
+            "id": 51,
             "s": "Fire Wall",
             "c": "sor"
         },
         {
+            "id": 52,
             "s": "Enchant",
             "c": "sor"
         },
         {
+            "id": 53,
             "s": "Chain Lightning",
             "c": "sor"
         },
         {
+            "id": 54,
             "s": "Teleport",
             "c": "sor"
         },
         {
+            "id": 55,
             "s": "Glacial Spike",
             "c": "sor"
         },
         {
+            "id": 56,
             "s": "Meteor",
             "c": "sor"
         },
         {
+            "id": 57,
             "s": "Thunder Storm",
             "c": "sor"
         },
         {
+            "id": 58,
             "s": "Energy Shield",
             "c": "sor"
         },
         {
+            "id": 59,
             "s": "Blizzard",
             "c": "sor"
         },
         {
+            "id": 60,
             "s": "Chilling Armor",
             "c": "sor"
         },
         {
+            "id": 61,
             "s": "Fire Mastery",
             "c": "sor"
         },
         {
+            "id": 62,
             "s": "Hydra",
             "c": "sor"
         },
         {
+            "id": 63,
             "s": "Lightning Mastery",
             "c": "sor"
         },
         {
+            "id": 64,
             "s": "Frozen Orb",
             "c": "sor"
         },
         {
+            "id": 65,
             "s": "Cold Mastery",
             "c": "sor"
         },
         {
+            "id": 66,
             "s": "Amplify Damage",
             "c": "nec"
         },
         {
+            "id": 67,
             "s": "Teeth",
             "c": "nec"
         },
         {
+            "id": 68,
             "s": "Bone Armor",
             "c": "nec"
         },
         {
+            "id": 69,
             "s": "Skeleton Mastery",
             "c": "nec"
         },
         {
+            "id": 70,
             "s": "Raise Skeleton",
             "c": "nec"
         },
         {
+            "id": 71,
             "s": "Dim Vision",
             "c": "nec"
         },
         {
+            "id": 72,
             "s": "Weaken",
             "c": "nec"
         },
         {
+            "id": 73,
             "s": "Poison Dagger",
             "c": "nec"
         },
         {
+            "id": 74,
             "s": "Corpse Explosion",
             "c": "nec"
         },
         {
+            "id": 75,
             "s": "Clay Golem",
             "c": "nec"
         },
         {
+            "id": 76,
             "s": "Iron Maiden",
             "c": "nec"
         },
         {
+            "id": 77,
             "s": "Terror",
             "c": "nec"
         },
         {
+            "id": 78,
             "s": "Bone Wall",
             "c": "nec"
         },
         {
+            "id": 79,
             "s": "Golem Mastery",
             "c": "nec"
         },
         {
+            "id": 80,
             "s": "Raise Skeletal Mage",
             "c": "nec"
         },
         {
+            "id": 81,
             "s": "Confuse",
             "c": "nec"
         },
         {
+            "id": 82,
             "s": "Life Tap",
             "c": "nec"
         },
         {
+            "id": 83,
             "s": "Poison Explosion",
             "c": "nec"
         },
         {
+            "id": 84,
             "s": "Bone Spear",
             "c": "nec"
         },
         {
+            "id": 85,
             "s": "Blood Golem",
             "c": "nec"
         },
         {
+            "id": 86,
             "s": "Attract",
             "c": "nec"
         },
         {
+            "id": 87,
             "s": "Decrepify",
             "c": "nec"
         },
         {
+            "id": 88,
             "s": "Bone Prison",
             "c": "nec"
         },
         {
+            "id": 89,
             "s": "Summon Resist",
             "c": "nec"
         },
         {
+            "id": 90,
             "s": "Iron Golem",
             "c": "nec"
         },
         {
+            "id": 91,
             "s": "Lower Resist",
             "c": "nec"
         },
         {
+            "id": 92,
             "s": "Poison Nova",
             "c": "nec"
         },
         {
+            "id": 93,
             "s": "Bone Spirit",
             "c": "nec"
         },
         {
+            "id": 94,
             "s": "Fire Golem",
             "c": "nec"
         },
         {
+            "id": 95,
             "s": "Revive",
             "c": "nec"
         },
         {
+            "id": 96,
             "s": "Sacrifice",
             "c": "pal"
         },
         {
+            "id": 97,
             "s": "Smite",
             "c": "pal"
         },
         {
+            "id": 98,
             "s": "Might",
             "c": "pal"
         },
         {
+            "id": 99,
             "s": "Prayer",
             "c": "pal"
         },
         {
+            "id": 100,
             "s": "Resist Fire",
             "c": "pal"
         },
         {
+            "id": 101,
             "s": "Holy Bolt",
             "c": "pal"
         },
         {
+            "id": 102,
             "s": "Holy Fire",
             "c": "pal"
         },
         {
+            "id": 103,
             "s": "Thorns",
             "c": "pal"
         },
         {
+            "id": 104,
             "s": "Defiance",
             "c": "pal"
         },
         {
+            "id": 105,
             "s": "Resist Cold",
             "c": "pal"
         },
         {
+            "id": 106,
             "s": "Zeal",
             "c": "pal"
         },
         {
+            "id": 107,
             "s": "Charge",
             "c": "pal"
         },
         {
+            "id": 108,
             "s": "Blessed Aim",
             "c": "pal"
         },
         {
+            "id": 109,
             "s": "Cleansing",
             "c": "pal"
         },
         {
+            "id": 110,
             "s": "Resist Lightning",
             "c": "pal"
         },
         {
+            "id": 111,
             "s": "Vengeance",
             "c": "pal"
         },
         {
+            "id": 112,
             "s": "Blessed Hammer",
             "c": "pal"
         },
         {
+            "id": 113,
             "s": "Concentration",
             "c": "pal"
         },
         {
+            "id": 114,
             "s": "Holy Freeze",
             "c": "pal"
         },
         {
+            "id": 115,
             "s": "Vigor",
             "c": "pal"
         },
         {
+            "id": 116,
             "s": "Conversion",
             "c": "pal"
         },
         {
+            "id": 117,
             "s": "Holy Shield",
             "c": "pal"
         },
         {
+            "id": 118,
             "s": "Holy Shock",
             "c": "pal"
         },
         {
+            "id": 119,
             "s": "Sanctuary",
             "c": "pal"
         },
         {
+            "id": 120,
             "s": "Meditation",
             "c": "pal"
         },
         {
+            "id": 121,
             "s": "Fist of the Heavens",
             "c": "pal"
         },
         {
+            "id": 122,
             "s": "Fanaticism",
             "c": "pal"
         },
         {
+            "id": 123,
             "s": "Conviction",
             "c": "pal"
         },
         {
+            "id": 124,
             "s": "Redemption",
             "c": "pal"
         },
         {
+            "id": 125,
             "s": "Salvation",
             "c": "pal"
         },
         {
+            "id": 126,
             "s": "Bash",
             "c": "bar"
         },
         {
+            "id": 127,
             "s": "Blade Mastery",
             "c": "bar"
         },
         {
+            "id": 128,
             "s": "Axe Mastery",
             "c": "bar"
         },
         {
+            "id": 129,
             "s": "Mace Mastery",
             "c": "bar"
         },
         {
+            "id": 130,
             "s": "Howl",
             "c": "bar"
         },
         {
+            "id": 131,
             "s": "Find Potion",
             "c": "bar"
         },
         {
+            "id": 132,
             "s": "Leap",
             "c": "bar"
         },
         {
+            "id": 133,
             "s": "Double Swing",
             "c": "bar"
         },
         {
+            "id": 134,
             "s": "Polearm Mastery",
             "c": "bar"
         },
         {
+            "id": 135,
             "s": "Throwing Mastery",
             "c": "bar"
         },
         {
+            "id": 136,
             "s": "Spear Mastery",
             "c": "bar"
         },
         {
+            "id": 137,
             "s": "Taunt",
             "c": "bar"
         },
         {
+            "id": 138,
             "s": "Shout",
             "c": "bar"
         },
         {
+            "id": 139,
             "s": "Stun",
             "c": "bar"
         },
         {
+            "id": 140,
             "s": "Double Throw",
             "c": "bar"
         },
         {
+            "id": 141,
             "s": "Increased Stamina",
             "c": "bar"
         },
         {
+            "id": 142,
             "s": "Find Item",
             "c": "bar"
         },
         {
+            "id": 143,
             "s": "Leap Attack",
             "c": "bar"
         },
         {
+            "id": 144,
             "s": "Concentrate",
             "c": "bar"
         },
         {
+            "id": 145,
             "s": "Iron Skin",
             "c": "bar"
         },
         {
+            "id": 146,
             "s": "Battle Cry",
             "c": "bar"
         },
         {
+            "id": 147,
             "s": "Frenzy",
             "c": "bar"
         },
         {
+            "id": 148,
             "s": "Increased Speed",
             "c": "bar"
         },
         {
+            "id": 149,
             "s": "Battle Orders",
             "c": "bar"
         },
         {
+            "id": 150,
             "s": "Grim Ward",
             "c": "bar"
         },
         {
+            "id": 151,
             "s": "Whirlwind",
             "c": "bar"
         },
         {
+            "id": 152,
             "s": "Berserk",
             "c": "bar"
         },
         {
+            "id": 153,
             "s": "Natural Resistance",
             "c": "bar"
         },
         {
+            "id": 154,
             "s": "War Cry",
             "c": "bar"
         },
         {
+            "id": 155,
             "s": "Battle Command",
             "c": "bar"
         },
@@ -851,6 +1014,7 @@ export let vanilla_constants_99 = {
         null,
         null,
         {
+            "id": 197,
             "s": "Firestorm"
         },
         null,
@@ -873,254 +1037,318 @@ export let vanilla_constants_99 = {
         null,
         null,
         {
+            "id": 217,
             "s": "Scroll of Identify"
         },
         {
+            "id": 218,
             "s": "Tome of Identify"
         },
         {
+            "id": 219,
             "s": "Scroll of Town Portal"
         },
         {
+            "id": 220,
             "s": "Tome of Town Portal"
         },
         {
+            "id": 221,
             "s": "Raven",
             "c": "dru"
         },
         {
+            "id": 222,
             "s": "Poison Creeper",
             "c": "dru"
         },
         {
+            "id": 223,
             "s": "Werewolf",
             "c": "dru"
         },
         {
+            "id": 224,
             "s": "Lycanthropy",
             "c": "dru"
         },
         {
+            "id": 225,
             "s": "Firestorm",
             "c": "dru"
         },
         {
+            "id": 226,
             "s": "Oak Sage",
             "c": "dru"
         },
         {
+            "id": 227,
             "s": "Summon Spirit Wolf",
             "c": "dru"
         },
         {
+            "id": 228,
             "s": "Werebear",
             "c": "dru"
         },
         {
+            "id": 229,
             "s": "Molten Boulder",
             "c": "dru"
         },
         {
+            "id": 230,
             "s": "Arctic Blast",
             "c": "dru"
         },
         {
+            "id": 231,
             "s": "Carrion Vine",
             "c": "dru"
         },
         {
+            "id": 232,
             "s": "Feral Rage",
             "c": "dru"
         },
         {
+            "id": 233,
             "s": "Maul",
             "c": "dru"
         },
         {
+            "id": 234,
             "s": "Fissure",
             "c": "dru"
         },
         {
+            "id": 235,
             "s": "Cyclone Armor",
             "c": "dru"
         },
         {
+            "id": 236,
             "s": "Heart of Wolverine",
             "c": "dru"
         },
         {
+            "id": 237,
             "s": "Summon Dire Wolf",
             "c": "dru"
         },
         {
+            "id": 238,
             "s": "Rabies",
             "c": "dru"
         },
         {
+            "id": 239,
             "s": "Fire Claws",
             "c": "dru"
         },
         {
+            "id": 240,
             "s": "Twister",
             "c": "dru"
         },
         {
+            "id": 241,
             "s": "Solar Creeper",
             "c": "dru"
         },
         {
+            "id": 242,
             "s": "Hunger",
             "c": "dru"
         },
         {
+            "id": 243,
             "s": "Shock Wave",
             "c": "dru"
         },
         {
+            "id": 244,
             "s": "Volcano",
             "c": "dru"
         },
         {
+            "id": 245,
             "s": "Tornado",
             "c": "dru"
         },
         {
+            "id": 246,
             "s": "Spirit of Barbs",
             "c": "dru"
         },
         {
+            "id": 247,
             "s": "Summon Grizzly",
             "c": "dru"
         },
         {
+            "id": 248,
             "s": "Fury",
             "c": "dru"
         },
         {
+            "id": 249,
             "s": "Armageddon",
             "c": "dru"
         },
         {
+            "id": 250,
             "s": "Hurricane",
             "c": "dru"
         },
         {
+            "id": 251,
             "s": "Fire Blast",
             "c": "ass"
         },
         {
+            "id": 252,
             "s": "Claw Mastery",
             "c": "ass"
         },
         {
+            "id": 253,
             "s": "Psychic Hammer",
             "c": "ass"
         },
         {
+            "id": 254,
             "s": "Tiger Strike",
             "c": "ass"
         },
         {
+            "id": 255,
             "s": "Dragon Talon",
             "c": "ass"
         },
         {
+            "id": 256,
             "s": "Shock Web",
             "c": "ass"
         },
         {
+            "id": 257,
             "s": "Blade Sentinel",
             "c": "ass"
         },
         {
+            "id": 258,
             "s": "Burst of Speed",
             "c": "ass"
         },
         {
+            "id": 259,
             "s": "Fists of Fire",
             "c": "ass"
         },
         {
+            "id": 260,
             "s": "Dragon Claw",
             "c": "ass"
         },
         {
+            "id": 261,
             "s": "Charged Bolt Sentry",
             "c": "ass"
         },
         {
+            "id": 262,
             "s": "Wake of Fire",
             "c": "ass"
         },
         {
+            "id": 263,
             "s": "Weapon Block",
             "c": "ass"
         },
         {
+            "id": 264,
             "s": "Cloak of Shadows",
             "c": "ass"
         },
         {
+            "id": 265,
             "s": "Cobra Strike",
             "c": "ass"
         },
         {
+            "id": 266,
             "s": "Blade Fury",
             "c": "ass"
         },
         {
+            "id": 267,
             "s": "Fade",
             "c": "ass"
         },
         {
+            "id": 268,
             "s": "Shadow Warrior",
             "c": "ass"
         },
         {
+            "id": 269,
             "s": "Claws of Thunder",
             "c": "ass"
         },
         {
+            "id": 270,
             "s": "Dragon Tail",
             "c": "ass"
         },
         {
+            "id": 271,
             "s": "Lightning Sentry",
             "c": "ass"
         },
         {
+            "id": 272,
             "s": "Wake of Inferno",
             "c": "ass"
         },
         {
+            "id": 273,
             "s": "Mind Blast",
             "c": "ass"
         },
         {
+            "id": 274,
             "s": "Blades of Ice",
             "c": "ass"
         },
         {
+            "id": 275,
             "s": "Dragon Flight",
             "c": "ass"
         },
         {
+            "id": 276,
             "s": "Death Sentry",
             "c": "ass"
         },
         {
+            "id": 277,
             "s": "Blade Shield",
             "c": "ass"
         },
         {
+            "id": 278,
             "s": "Venom",
             "c": "ass"
         },
         {
+            "id": 279,
             "s": "Shadow Master",
             "c": "ass"
         },
         {
+            "id": 280,
             "s": "Phoenix Strike",
             "c": "ass"
         },
@@ -1194,6 +1422,7 @@ export let vanilla_constants_99 = {
         null,
         null,
         {
+            "id": 350,
             "s": "Delirium"
         },
         null,
@@ -1202,5221 +1431,7106 @@ export let vanilla_constants_99 = {
         null,
         null,
         null,
-        {},
-        {},
         {
+            "id": 357
+        },
+        {
+            "id": 358
+        },
+        {
+            "id": 359,
             "s": "Scroll of Town Portal"
         },
-        {},
-        {},
-        {},
-        {},
-        {},
-        null,
-        null,
-        null,
-        null,
-        null,
-        {},
         {
+            "id": 360
+        },
+        {
+            "id": 361
+        },
+        {
+            "id": 362
+        },
+        {
+            "id": 363
+        },
+        {
+            "id": 364
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+            "id": 370
+        },
+        {
+            "id": 371,
             "s": "Mark of the Bear"
         },
         {
+            "id": 372,
             "s": "Mark of the Wolf"
         }
     ],
     "rare_names": [
         null,
         {
+            "id": 1,
+            "index": 0,
             "n": "Bite"
         },
         {
+            "id": 2,
+            "index": 1,
             "n": "Scratch"
         },
         {
+            "id": 3,
+            "index": 2,
             "n": "Scalpel"
         },
         {
+            "id": 4,
+            "index": 3,
             "n": "Fang"
         },
         {
+            "id": 5,
+            "index": 4,
             "n": "Gutter"
         },
         {
+            "id": 6,
+            "index": 5,
             "n": "Thirst"
         },
         {
+            "id": 7,
+            "index": 6,
             "n": "Razor"
         },
         {
+            "id": 8,
+            "index": 7,
             "n": "Scythe"
         },
         {
+            "id": 9,
+            "index": 8,
             "n": "Edge"
         },
         {
+            "id": 10,
+            "index": 9,
             "n": "Saw"
         },
         {
+            "id": 11,
+            "index": 10,
             "n": "Splitter"
         },
         {
+            "id": 12,
+            "index": 11,
             "n": "Cleaver"
         },
         {
+            "id": 13,
+            "index": 12,
             "n": "Sever"
         },
         {
+            "id": 14,
+            "index": 13,
             "n": "Sunder"
         },
         {
+            "id": 15,
+            "index": 14,
             "n": "Rend"
         },
         {
+            "id": 16,
+            "index": 15,
             "n": "Mangler"
         },
         {
+            "id": 17,
+            "index": 16,
             "n": "Slayer"
         },
         {
+            "id": 18,
+            "index": 17,
             "n": "Reaver"
         },
         {
+            "id": 19,
+            "index": 18,
             "n": "Spawn"
         },
         {
+            "id": 20,
+            "index": 19,
             "n": "Gnash"
         },
         {
+            "id": 21,
+            "index": 20,
             "n": "Star"
         },
         {
+            "id": 22,
+            "index": 21,
             "n": "Blow"
         },
         {
+            "id": 23,
+            "index": 22,
             "n": "Smasher"
         },
         {
+            "id": 24,
+            "index": 23,
             "n": "Bane"
         },
-        {},
         {
+            "id": 25,
+            "index": 24
+        },
+        {
+            "id": 26,
+            "index": 25,
             "n": "Breaker"
         },
         {
+            "id": 27,
+            "index": 26,
             "n": "Grinder"
         },
         {
+            "id": 28,
+            "index": 27,
             "n": "Crack"
         },
         {
+            "id": 29,
+            "index": 28,
             "n": "Mallet"
         },
         {
+            "id": 30,
+            "index": 29,
             "n": "Knell"
         },
         {
+            "id": 31,
+            "index": 30,
             "n": "Lance"
         },
         {
+            "id": 32,
+            "index": 31,
             "n": "Spike"
         },
         {
+            "id": 33,
+            "index": 32,
             "n": "Impaler"
         },
         {
+            "id": 34,
+            "index": 33,
             "n": "Skewer"
         },
         {
+            "id": 35,
+            "index": 34,
             "n": "Prod"
         },
         {
+            "id": 36,
+            "index": 35,
             "n": "Scourge"
         },
         {
+            "id": 37,
+            "index": 36,
             "n": "Wand"
         },
         {
+            "id": 38,
+            "index": 37,
             "n": "Wrack"
         },
         {
+            "id": 39,
+            "index": 38,
             "n": "Barb"
         },
         {
+            "id": 40,
+            "index": 39,
             "n": "Needle"
         },
         {
+            "id": 41,
+            "index": 40,
             "n": "Dart"
         },
         {
+            "id": 42,
+            "index": 41,
             "n": "Bolt"
         },
         {
+            "id": 43,
+            "index": 42,
             "n": "Quarrel"
         },
         {
+            "id": 44,
+            "index": 43,
             "n": "Fletch"
         },
         {
+            "id": 45,
+            "index": 44,
             "n": "Flight"
         },
         {
+            "id": 46,
+            "index": 45,
             "n": "Nock"
         },
         {
+            "id": 47,
+            "index": 46,
             "n": "Horn"
         },
         {
+            "id": 48,
+            "index": 47,
             "n": "Stinger"
         },
         {
+            "id": 49,
+            "index": 48,
             "n": "Quill"
         },
         {
+            "id": 50,
+            "index": 49,
             "n": "Goad"
         },
         {
+            "id": 51,
+            "index": 50,
             "n": "Branch"
         },
         {
+            "id": 52,
+            "index": 51,
             "n": "Spire"
         },
         {
+            "id": 53,
+            "index": 52,
             "n": "Song"
         },
         {
+            "id": 54,
+            "index": 53,
             "n": "Call"
         },
         {
+            "id": 55,
+            "index": 54,
             "n": "Cry"
         },
         {
+            "id": 56,
+            "index": 55,
             "n": "Spell"
         },
         {
+            "id": 57,
+            "index": 56,
             "n": "Chant"
         },
         {
+            "id": 58,
+            "index": 57,
             "n": "Weaver"
         },
         {
+            "id": 59,
+            "index": 58,
             "n": "Gnarl"
         },
         {
+            "id": 60,
+            "index": 59,
             "n": "Visage"
         },
         {
+            "id": 61,
+            "index": 60,
             "n": "Crest"
         },
         {
+            "id": 62,
+            "index": 61,
             "n": "Circlet"
         },
         {
+            "id": 63,
+            "index": 62,
             "n": "Veil"
         },
         {
+            "id": 64,
+            "index": 63,
             "n": "Hood"
         },
         {
+            "id": 65,
+            "index": 64,
             "n": "Mask"
         },
         {
+            "id": 66,
+            "index": 65,
             "n": "Brow"
         },
         {
+            "id": 67,
+            "index": 66,
             "n": "Casque"
         },
         {
+            "id": 68,
+            "index": 67,
             "n": "Visor"
         },
         {
+            "id": 69,
+            "index": 68,
             "n": "Cowl"
         },
         {
+            "id": 70,
+            "index": 69,
             "n": "Hide"
         },
         {
+            "id": 71,
+            "index": 70,
             "n": "Pelt"
         },
         {
+            "id": 72,
+            "index": 71,
             "n": "Carapace"
         },
         {
+            "id": 73,
+            "index": 72,
             "n": "Coat"
         },
         {
+            "id": 74,
+            "index": 73,
             "n": "Wrap"
         },
         {
+            "id": 75,
+            "index": 74,
             "n": "Suit"
         },
         {
+            "id": 76,
+            "index": 75,
             "n": "Cloak"
         },
         {
+            "id": 77,
+            "index": 76,
             "n": "Shroud"
         },
         {
+            "id": 78,
+            "index": 77,
             "n": "Jack"
         },
         {
+            "id": 79,
+            "index": 78,
             "n": "Mantle"
         },
         {
+            "id": 80,
+            "index": 79,
             "n": "Guard"
         },
         {
+            "id": 81,
+            "index": 80,
             "n": "Badge"
         },
         {
+            "id": 82,
+            "index": 81,
             "n": "Rock"
         },
         {
+            "id": 83,
+            "index": 82,
             "n": "Aegis"
         },
         {
+            "id": 84,
+            "index": 83,
             "n": "Ward"
         },
         {
+            "id": 85,
+            "index": 84,
             "n": "Tower"
         },
         {
+            "id": 86,
+            "index": 85,
             "n": "Shield"
         },
         {
+            "id": 87,
+            "index": 86,
             "n": "Wing"
         },
         {
+            "id": 88,
+            "index": 87,
             "n": "Mark"
         },
         {
+            "id": 89,
+            "index": 88,
             "n": "Emblem"
         },
         {
+            "id": 90,
+            "index": 89,
             "n": "Hand"
         },
         {
+            "id": 91,
+            "index": 90,
             "n": "Fist"
         },
         {
+            "id": 92,
+            "index": 91,
             "n": "Claw"
         },
         {
+            "id": 93,
+            "index": 92,
             "n": "Clutches"
         },
         {
+            "id": 94,
+            "index": 93,
             "n": "Grip"
         },
         {
+            "id": 95,
+            "index": 94,
             "n": "Grasp"
         },
         {
+            "id": 96,
+            "index": 95,
             "n": "Hold"
         },
         {
+            "id": 97,
+            "index": 96,
             "n": "Touch"
         },
         {
+            "id": 98,
+            "index": 97,
             "n": "Finger"
         },
         {
+            "id": 99,
+            "index": 98,
             "n": "Knuckle"
         },
         {
+            "id": 100,
+            "index": 99,
             "n": "Shank"
         },
         {
+            "id": 101,
+            "index": 100,
             "n": "Spur"
         },
         {
+            "id": 102,
+            "index": 101,
             "n": "Tread"
         },
         {
+            "id": 103,
+            "index": 102,
             "n": "Stalker"
         },
         {
+            "id": 104,
+            "index": 103,
             "n": "Greaves"
         },
         {
+            "id": 105,
+            "index": 104,
             "n": "Blazer"
         },
         {
+            "id": 106,
+            "index": 105,
             "n": "Nails"
         },
         {
+            "id": 107,
+            "index": 106,
             "n": "Trample"
         },
         {
+            "id": 108,
+            "index": 107,
             "n": "Brogues"
         },
         {
+            "id": 109,
+            "index": 108,
             "n": "Track"
         },
         {
+            "id": 110,
+            "index": 109,
             "n": "Slippers"
         },
         {
+            "id": 111,
+            "index": 110,
             "n": "Clasp"
         },
         {
+            "id": 112,
+            "index": 111,
             "n": "Buckle"
         },
         {
+            "id": 113,
+            "index": 112,
             "n": "Harness"
         },
         {
+            "id": 114,
+            "index": 113,
             "n": "Lock"
         },
         {
+            "id": 115,
+            "index": 114,
             "n": "Fringe"
         },
         {
+            "id": 116,
+            "index": 115,
             "n": "Winding"
         },
         {
+            "id": 117,
+            "index": 116,
             "n": "Chain"
         },
-        {},
         {
+            "id": 118,
+            "index": 117
+        },
+        {
+            "id": 119,
+            "index": 118,
             "n": "Lash"
         },
         {
+            "id": 120,
+            "index": 119,
             "n": "Cord"
         },
         {
+            "id": 121,
+            "index": 120,
             "n": "Knot"
         },
         {
+            "id": 122,
+            "index": 121,
             "n": "Circle"
         },
         {
+            "id": 123,
+            "index": 122,
             "n": "Loop"
         },
         {
+            "id": 124,
+            "index": 123,
             "n": "Eye"
         },
         {
+            "id": 125,
+            "index": 124,
             "n": "Turn"
         },
         {
+            "id": 126,
+            "index": 125,
             "n": "Spiral"
         },
         {
+            "id": 127,
+            "index": 126,
             "n": "Coil"
         },
         {
+            "id": 128,
+            "index": 127,
             "n": "Gyre"
         },
         {
+            "id": 129,
+            "index": 128,
             "n": "Band"
         },
         {
+            "id": 130,
+            "index": 129,
             "n": "Whorl"
         },
         {
+            "id": 131,
+            "index": 130,
             "n": "Talisman"
         },
         {
+            "id": 132,
+            "index": 131,
             "n": "Heart"
         },
         {
+            "id": 133,
+            "index": 132,
             "n": "Noose"
         },
         {
+            "id": 134,
+            "index": 133,
             "n": "Necklace"
         },
         {
+            "id": 135,
+            "index": 134,
             "n": "Collar"
         },
         {
+            "id": 136,
+            "index": 135,
             "n": "Beads"
         },
         {
+            "id": 137,
+            "index": 136,
             "n": "Torc"
         },
         {
+            "id": 138,
+            "index": 137,
             "n": "Gorget"
         },
-        {},
         {
+            "id": 139,
+            "index": 138
+        },
+        {
+            "id": 140,
+            "index": 139,
             "n": "Wood"
         },
         {
+            "id": 141,
+            "index": 140,
             "n": "Brand"
         },
         {
+            "id": 142,
+            "index": 141,
             "n": "Bludgeon"
         },
         {
+            "id": 143,
+            "index": 142,
             "n": "Cudgel"
         },
         {
+            "id": 144,
+            "index": 143,
             "n": "Loom"
         },
         {
+            "id": 145,
+            "index": 144,
             "n": "Harp"
         },
         {
+            "id": 146,
+            "index": 145,
             "n": "Master"
         },
         {
+            "id": 147,
+            "index": 146,
             "n": "Bar"
         },
         {
+            "id": 148,
+            "index": 147,
             "n": "Hew"
         },
         {
+            "id": 149,
+            "index": 148,
             "n": "Crook"
         },
         {
+            "id": 150,
+            "index": 149,
             "n": "Mar"
         },
         {
+            "id": 151,
+            "index": 150,
             "n": "Shell"
         },
         {
+            "id": 152,
+            "index": 151,
             "n": "Stake"
         },
         {
+            "id": 153,
+            "index": 152,
             "n": "Picket"
         },
         {
+            "id": 154,
+            "index": 153,
             "n": "Pale"
         },
         {
+            "id": 155,
+            "index": 154,
             "n": "Flange"
         },
         {
+            "id": 156,
+            "index": 0,
             "n": "Beast"
         },
         {
+            "id": 157,
+            "index": 1,
             "n": "Eagle"
         },
         {
+            "id": 158,
+            "index": 2,
             "n": "Raven"
         },
         {
+            "id": 159,
+            "index": 3,
             "n": "Viper"
         },
-        {},
         {
+            "id": 160,
+            "index": 4
+        },
+        {
+            "id": 161,
+            "index": 5,
             "n": "Skull"
         },
         {
+            "id": 162,
+            "index": 6,
             "n": "Blood"
         },
         {
+            "id": 163,
+            "index": 7,
             "n": "Dread"
         },
         {
+            "id": 164,
+            "index": 8,
             "n": "Doom"
         },
         {
+            "id": 165,
+            "index": 9,
             "n": "Grim"
         },
         {
+            "id": 166,
+            "index": 10,
             "n": "Bone"
         },
         {
+            "id": 167,
+            "index": 11,
             "n": "Death"
         },
         {
+            "id": 168,
+            "index": 12,
             "n": "Shadow"
         },
         {
+            "id": 169,
+            "index": 13,
             "n": "Storm"
         },
         {
+            "id": 170,
+            "index": 14,
             "n": "Rune"
         },
         {
+            "id": 171,
+            "index": 15,
             "n": "Plague"
         },
         {
+            "id": 172,
+            "index": 16,
             "n": "Stone"
         },
-        {},
         {
+            "id": 173,
+            "index": 17
+        },
+        {
+            "id": 174,
+            "index": 18,
             "n": "Spirit"
         },
         {
+            "id": 175,
+            "index": 19,
             "n": "Storm"
         },
         {
+            "id": 176,
+            "index": 20,
             "n": "Demon"
         },
         {
+            "id": 177,
+            "index": 21,
             "n": "Cruel"
         },
         {
+            "id": 178,
+            "index": 22,
             "n": "Empyrian"
         },
         {
+            "id": 179,
+            "index": 23,
             "n": "Bramble"
         },
         {
+            "id": 180,
+            "index": 24,
             "n": "Pain"
         },
         {
+            "id": 181,
+            "index": 25,
             "n": "Loath"
         },
         {
+            "id": 182,
+            "index": 26,
             "n": "Glyph"
         },
         {
+            "id": 183,
+            "index": 27,
             "n": "Imp"
         },
-        {},
         {
+            "id": 184,
+            "index": 28
+        },
+        {
+            "id": 185,
+            "index": 29,
             "n": "Hailstone"
         },
         {
+            "id": 186,
+            "index": 30,
             "n": "Gale"
         },
         {
+            "id": 187,
+            "index": 31,
             "n": "Dire"
         },
         {
+            "id": 188,
+            "index": 32,
             "n": "Soul"
         },
         {
+            "id": 189,
+            "index": 33,
             "n": "Brimstone"
         },
         {
+            "id": 190,
+            "index": 34,
             "n": "Corpse"
         },
         {
+            "id": 191,
+            "index": 35,
             "n": "Carrion"
         },
         {
+            "id": 192,
+            "index": 36,
             "n": "Armageddon"
         },
         {
+            "id": 193,
+            "index": 37,
             "n": "Havoc"
         },
         {
+            "id": 194,
+            "index": 38,
             "n": "Bitter"
         },
         {
+            "id": 195,
+            "index": 39,
             "n": "Entropy"
         },
         {
+            "id": 196,
+            "index": 40,
             "n": "Chaos"
         },
         {
+            "id": 197,
+            "index": 41,
             "n": "Order"
         },
         {
+            "id": 198,
+            "index": 42,
             "n": "Rule"
         },
         {
+            "id": 199,
+            "index": 43,
             "n": "Warp"
         },
         {
+            "id": 200,
+            "index": 44,
             "n": "Rift"
         },
         {
+            "id": 201,
+            "index": 45,
             "n": "Corruption"
         }
     ],
     "magic_prefixes": [
         null,
-        {},
         {
+            "id": 1
+        },
+        {
+            "id": 2,
             "n": "Sturdy"
         },
         {
+            "id": 3,
             "n": "Strong"
         },
         {
+            "id": 4,
             "n": "Glorious"
         },
         {
+            "id": 5,
             "n": "Blessed"
         },
         {
+            "id": 6,
             "n": "Saintly",
             "tc": "dgld"
         },
         {
+            "id": 7,
             "n": "Holy",
             "tc": "dgld"
         },
         {
+            "id": 8,
             "n": "Devious",
             "tc": "dblu"
         },
         {
+            "id": 9,
             "n": "Fortified",
             "tc": "dblu"
         },
-        {},
-        {},
-        {},
         {
+            "id": 10
+        },
+        {
+            "id": 11
+        },
+        {
+            "id": 12
+        },
+        {
+            "id": 13,
             "n": "Jagged"
         },
         {
+            "id": 14,
             "n": "Deadly"
         },
         {
+            "id": 15,
             "n": "Vicious"
         },
         {
+            "id": 16,
             "n": "Brutal"
         },
         {
+            "id": 17,
             "n": "Massive",
             "tc": "dgld"
         },
         {
+            "id": 18,
             "n": "Savage",
             "tc": "dgld"
         },
         {
+            "id": 19,
             "n": "Merciless",
             "tc": "dgld"
         },
         {
+            "id": 20,
             "n": "Vulpine",
             "tc": "cblu"
         },
-        {},
-        {},
-        {},
-        {},
         {
+            "id": 21
+        },
+        {
+            "id": 22
+        },
+        {
+            "id": 23
+        },
+        {
+            "id": 24
+        },
+        {
+            "id": 25,
             "n": "Tireless"
         },
         {
+            "id": 26,
             "n": "Rugged"
         },
         {
+            "id": 27,
             "n": "Bronze"
         },
         {
+            "id": 28,
             "n": "Iron"
         },
         {
+            "id": 29,
             "n": "Steel"
         },
         {
+            "id": 30,
             "n": "Silver"
         },
-        {},
         {
+            "id": 31
+        },
+        {
+            "id": 32,
             "n": "Gold",
             "tc": "lgld"
         },
         {
+            "id": 33,
             "n": "Platinum",
             "tc": "lgld"
         },
         {
+            "id": 34,
             "n": "Meteoric",
             "tc": "lgld"
         },
         {
+            "id": 35,
             "n": "Sharp"
         },
         {
+            "id": 36,
             "n": "Fine"
         },
         {
+            "id": 37,
             "n": "Warrior's"
         },
         {
+            "id": 38,
             "n": "Soldier's"
         },
         {
+            "id": 39,
             "n": "Knight's",
             "tc": "dgld"
         },
         {
+            "id": 40,
             "n": "Lord's",
             "tc": "dgld"
         },
         {
+            "id": 41,
             "n": "King's",
             "tc": "dgld"
         },
         {
+            "id": 42,
             "n": "Howling",
             "tc": "oran"
         },
         {
+            "id": 43,
             "n": "Fortuitous"
         },
-        {},
-        {},
-        {},
-        {},
-        {},
         {
+            "id": 44
+        },
+        {
+            "id": 45
+        },
+        {
+            "id": 46
+        },
+        {
+            "id": 47
+        },
+        {
+            "id": 48
+        },
+        {
+            "id": 49,
             "n": "Glimmering"
         },
         {
+            "id": 50,
             "n": "Glowing",
             "tc": "lyel"
         },
-        {},
-        {},
         {
+            "id": 51
+        },
+        {
+            "id": 52
+        },
+        {
+            "id": 53,
             "n": "Lizard's"
         },
-        {},
         {
+            "id": 54
+        },
+        {
+            "id": 55,
             "n": "Snake's"
         },
         {
+            "id": 56,
             "n": "Serpent's"
         },
         {
+            "id": 57,
             "n": "Serpent's"
         },
         {
+            "id": 58,
             "n": "Drake's",
             "tc": "cblu"
         },
         {
+            "id": 59,
             "n": "Dragon's",
             "tc": "cblu"
         },
         {
+            "id": 60,
             "n": "Dragon's",
             "tc": "cblu"
         },
         {
+            "id": 61,
             "n": "Wyrm's",
             "tc": "cblu"
         },
-        {},
-        {},
         {
+            "id": 62
+        },
+        {
+            "id": 63
+        },
+        {
+            "id": 64,
             "n": "Prismatic",
             "tc": "lpur"
         },
         {
+            "id": 65,
             "n": "Prismatic",
             "tc": "lpur"
         },
         {
+            "id": 66,
             "n": "Azure"
         },
         {
+            "id": 67,
             "n": "Lapis"
         },
         {
+            "id": 68,
             "n": "Lapis"
         },
         {
+            "id": 69,
             "n": "Cobalt"
         },
         {
+            "id": 70,
             "n": "Cobalt"
         },
-        {},
         {
+            "id": 71
+        },
+        {
+            "id": 72,
             "n": "Sapphire",
             "tc": "lblu"
         },
-        {},
-        {},
         {
+            "id": 73
+        },
+        {
+            "id": 74
+        },
+        {
+            "id": 75,
             "n": "Crimson"
         },
         {
+            "id": 76,
             "n": "Burgundy"
         },
         {
+            "id": 77,
             "n": "Burgundy"
         },
         {
+            "id": 78,
             "n": "Garnet"
         },
         {
+            "id": 79,
             "n": "Garnet"
         },
-        {},
         {
+            "id": 80
+        },
+        {
+            "id": 81,
             "n": "Ruby",
             "tc": "lred"
         },
-        {},
-        {},
         {
+            "id": 82
+        },
+        {
+            "id": 83
+        },
+        {
+            "id": 84,
             "n": "Ocher"
         },
         {
+            "id": 85,
             "n": "Tangerine"
         },
         {
+            "id": 86,
             "n": "Tangerine"
         },
         {
+            "id": 87,
             "n": "Coral"
         },
         {
+            "id": 88,
             "n": "Coral"
         },
-        {},
         {
+            "id": 89
+        },
+        {
+            "id": 90,
             "n": "Amber",
             "tc": "lyel"
         },
-        {},
-        {},
         {
+            "id": 91
+        },
+        {
+            "id": 92
+        },
+        {
+            "id": 93,
             "n": "Beryl"
         },
         {
+            "id": 94,
             "n": "Jade"
         },
         {
+            "id": 95,
             "n": "Jade"
         },
         {
+            "id": 96,
             "n": "Viridian"
         },
         {
+            "id": 97,
             "n": "Viridian"
         },
-        {},
         {
+            "id": 98
+        },
+        {
+            "id": 99,
             "n": "Emerald",
             "tc": "lgrn"
         },
-        {},
         {
+            "id": 100
+        },
+        {
+            "id": 101,
             "n": "Fletcher's"
         },
         {
+            "id": 102,
             "n": "Archer's",
             "tc": "cgrn"
         },
         {
+            "id": 103,
             "n": "Archer's",
             "tc": "cgrn"
         },
         {
+            "id": 104,
             "n": "Monk's"
         },
         {
+            "id": 105,
             "n": "Priest's",
             "tc": "cgrn"
         },
         {
+            "id": 106,
             "n": "Priest's",
             "tc": "cgrn"
         },
         {
+            "id": 107,
             "n": "Summoner's"
         },
         {
+            "id": 108,
             "n": "Necromancer's",
             "tc": "cgrn"
         },
         {
+            "id": 109,
             "n": "Necromancer's",
             "tc": "cgrn"
         },
         {
+            "id": 110,
             "n": "Angel's"
         },
         {
+            "id": 111,
             "n": "Arch-Angel's",
             "tc": "cgrn"
         },
         {
+            "id": 112,
             "n": "Arch-Angel's",
             "tc": "cgrn"
         },
         {
+            "id": 113,
             "n": "Slayer's"
         },
         {
+            "id": 114,
             "n": "Berserker's",
             "tc": "cgrn"
         },
         {
+            "id": 115,
             "n": "Berserker's",
             "tc": "cgrn"
         },
-        {},
-        {},
         {
+            "id": 116
+        },
+        {
+            "id": 117
+        },
+        {
+            "id": 118,
             "n": "Triumphant"
         },
         {
+            "id": 119,
             "n": "Stout"
         },
         {
+            "id": 120,
             "n": "Stout"
         },
         {
+            "id": 121,
             "n": "Stout"
         },
         {
+            "id": 122,
             "n": "Burly"
         },
         {
+            "id": 123,
             "n": "Burly"
         },
         {
+            "id": 124,
             "n": "Burly"
         },
         {
+            "id": 125,
             "n": "Stalwart"
         },
         {
+            "id": 126,
             "n": "Stalwart"
         },
         {
+            "id": 127,
             "n": "Stalwart"
         },
         {
+            "id": 128,
             "n": "Stout"
         },
         {
+            "id": 129,
             "n": "Stout"
         },
         {
+            "id": 130,
             "n": "Stout"
         },
         {
+            "id": 131,
             "n": "Burly"
         },
         {
+            "id": 132,
             "n": "Burly"
         },
         {
+            "id": 133,
             "n": "Stalwart"
         },
         {
+            "id": 134,
             "n": "Stalwart"
         },
         {
+            "id": 135,
             "n": "Stout"
         },
         {
+            "id": 136,
             "n": "Stout"
         },
         {
+            "id": 137,
             "n": "Burly"
         },
         {
+            "id": 138,
             "n": "Stalwart"
         },
         {
+            "id": 139,
             "n": "Blanched",
             "tc": "whit"
         },
         {
+            "id": 140,
             "n": "Eburine",
             "tc": "whit"
         },
         {
+            "id": 141,
             "n": "Bone",
             "tc": "whit"
         },
         {
+            "id": 142,
             "n": "Ivory",
             "tc": "whit"
         },
         {
+            "id": 143,
             "n": "Sturdy"
         },
         {
+            "id": 144,
             "n": "Sturdy"
         },
         {
+            "id": 145,
             "n": "Strong"
         },
         {
+            "id": 146,
             "n": "Glorious"
         },
         {
+            "id": 147,
             "n": "Blessed"
         },
         {
+            "id": 148,
             "n": "Saintly",
             "tc": "dgld"
         },
         {
+            "id": 149,
             "n": "Holy",
             "tc": "dgld"
         },
         {
+            "id": 150,
             "n": "Godly",
             "tc": "dgld"
         },
         {
+            "id": 151,
             "n": "Devious"
         },
         {
+            "id": 152,
             "n": "Void"
         },
         {
+            "id": 153,
             "n": "Null",
             "tc": "dblu"
         },
         {
+            "id": 154,
             "n": "Antimagic",
             "tc": "dblu"
         },
         {
+            "id": 155,
             "n": "Red"
         },
         {
+            "id": 156,
             "n": "Red"
         },
         {
+            "id": 157,
             "n": "Sanguinary"
         },
         {
+            "id": 158,
             "n": "Sanguinary"
         },
         {
+            "id": 159,
             "n": "Bloody"
         },
         {
+            "id": 160,
             "n": "Red",
             "tc": "dred"
         },
         {
+            "id": 161,
             "n": "Sanguinary",
             "tc": "dred"
         },
         {
+            "id": 162,
             "n": "Bloody",
             "tc": "dred"
         },
         {
+            "id": 163,
             "n": "Red",
             "tc": "dred"
         },
         {
+            "id": 164,
             "n": "Sanguinary",
             "tc": "dred"
         },
         {
+            "id": 165,
             "n": "Bloody",
             "tc": "dred"
         },
         {
+            "id": 166,
             "n": "Scarlet",
             "tc": "dred"
         },
         {
+            "id": 167,
             "n": "Crimson",
             "tc": "dred"
         },
         {
+            "id": 168,
             "n": "Jagged"
         },
         {
+            "id": 169,
             "n": "Jagged"
         },
         {
+            "id": 170,
             "n": "Jagged"
         },
         {
+            "id": 171,
             "n": "Forked"
         },
         {
+            "id": 172,
             "n": "Forked"
         },
         {
+            "id": 173,
             "n": "Serrated"
         },
         {
+            "id": 174,
             "n": "Serrated"
         },
         {
+            "id": 175,
             "n": "Jagged",
             "tc": "blac"
         },
         {
+            "id": 176,
             "n": "Jagged",
             "tc": "blac"
         },
         {
+            "id": 177,
             "n": "Forked",
             "tc": "blac"
         },
         {
+            "id": 178,
             "n": "Forked",
             "tc": "blac"
         },
         {
+            "id": 179,
             "n": "Serrated",
             "tc": "blac"
         },
         {
+            "id": 180,
             "n": "Jagged",
             "tc": "blac"
         },
         {
+            "id": 181,
             "n": "Forked",
             "tc": "blac"
         },
         {
+            "id": 182,
             "n": "Serrated",
             "tc": "blac"
         },
         {
+            "id": 183,
             "n": "Carbuncle",
             "tc": "dred"
         },
         {
+            "id": 184,
             "n": "Carmine",
             "tc": "dred"
         },
         {
+            "id": 185,
             "n": "Vermilion",
             "tc": "dred"
         },
         {
+            "id": 186,
             "n": "Jagged"
         },
         {
+            "id": 187,
             "n": "Deadly"
         },
         {
+            "id": 188,
             "n": "Vicious"
         },
         {
+            "id": 189,
             "n": "Brutal"
         },
         {
+            "id": 190,
             "n": "Massive",
             "tc": "dgld"
         },
         {
+            "id": 191,
             "n": "Savage",
             "tc": "dgld"
         },
         {
+            "id": 192,
             "n": "Merciless",
             "tc": "dgld"
         },
         {
+            "id": 193,
             "n": "Ferocious",
             "tc": "blac"
         },
         {
+            "id": 194,
             "n": "Cruel",
             "tc": "blac"
         },
         {
+            "id": 195,
             "n": "Cinnabar",
             "tc": "dred"
         },
         {
+            "id": 196,
             "n": "Rusty",
             "tc": "dred"
         },
         {
+            "id": 197,
             "n": "Realgar",
             "tc": "dred"
         },
         {
+            "id": 198,
             "n": "Ruby",
             "tc": "dred"
         },
         {
+            "id": 199,
             "n": "Vulpine",
             "tc": "cblu"
         },
         {
+            "id": 200,
             "n": "Dun"
         },
         {
+            "id": 201,
             "n": "Tireless"
         },
         {
+            "id": 202,
             "n": "Tireless"
         },
         {
+            "id": 203,
             "n": "Brown"
         },
         {
+            "id": 204,
             "n": "Rugged"
         },
         {
+            "id": 205,
             "n": "Rugged"
         },
         {
+            "id": 206,
             "n": "Rugged"
         },
         {
+            "id": 207,
             "n": "Rugged"
         },
         {
+            "id": 208,
             "n": "Rugged"
         },
         {
+            "id": 209,
             "n": "Rugged"
         },
         {
+            "id": 210,
             "n": "Rugged"
         },
         {
+            "id": 211,
             "n": "Rugged"
         },
         {
+            "id": 212,
             "n": "Rugged"
         },
         {
+            "id": 213,
             "n": "Rugged"
         },
         {
+            "id": 214,
             "n": "Rugged"
         },
         {
+            "id": 215,
             "n": "Vigorous"
         },
         {
+            "id": 216,
             "n": "Chestnut"
         },
         {
+            "id": 217,
             "n": "Maroon"
         },
         {
+            "id": 218,
             "n": "Bronze"
         },
         {
+            "id": 219,
             "n": "Bronze"
         },
         {
+            "id": 220,
             "n": "Bronze"
         },
         {
+            "id": 221,
             "n": "Iron"
         },
         {
+            "id": 222,
             "n": "Iron"
         },
         {
+            "id": 223,
             "n": "Iron"
         },
         {
+            "id": 224,
             "n": "Steel"
         },
         {
+            "id": 225,
             "n": "Steel"
         },
         {
+            "id": 226,
             "n": "Steel"
         },
         {
+            "id": 227,
             "n": "Bronze"
         },
         {
+            "id": 228,
             "n": "Bronze"
         },
         {
+            "id": 229,
             "n": "Bronze"
         },
         {
+            "id": 230,
             "n": "Iron"
         },
         {
+            "id": 231,
             "n": "Iron"
         },
         {
+            "id": 232,
             "n": "Steel"
         },
         {
+            "id": 233,
             "n": "Steel"
         },
         {
+            "id": 234,
             "n": "Bronze"
         },
         {
+            "id": 235,
             "n": "Bronze"
         },
         {
+            "id": 236,
             "n": "Iron"
         },
         {
+            "id": 237,
             "n": "Steel"
         },
         {
+            "id": 238,
             "n": "Bronze"
         },
         {
+            "id": 239,
             "n": "Iron"
         },
         {
+            "id": 240,
             "n": "Steel"
         },
         {
+            "id": 241,
             "n": "Silver"
         },
         {
+            "id": 242,
             "n": "Gold",
             "tc": "lgld"
         },
         {
+            "id": 243,
             "n": "Platinum",
             "tc": "lgld"
         },
         {
+            "id": 244,
             "n": "Meteoric",
             "tc": "lgld"
         },
         {
+            "id": 245,
             "n": "Strange",
             "tc": "lgld"
         },
         {
+            "id": 246,
             "n": "Weird",
             "tc": "lgld"
         },
         {
+            "id": 247,
             "n": "Nickel"
         },
         {
+            "id": 248,
             "n": "Tin"
         },
         {
+            "id": 249,
             "n": "Silver"
         },
         {
+            "id": 250,
             "n": "Argent"
         },
         {
+            "id": 251,
             "n": "Fine"
         },
         {
+            "id": 252,
             "n": "Fine"
         },
         {
+            "id": 253,
             "n": "Sharp"
         },
         {
+            "id": 254,
             "n": "Fine"
         },
         {
+            "id": 255,
             "n": "Sharp"
         },
         {
+            "id": 256,
             "n": "Fine"
         },
         {
+            "id": 257,
             "n": "Sharp"
         },
         {
+            "id": 258,
             "n": "Fine"
         },
         {
+            "id": 259,
             "n": "Warrior's"
         },
         {
+            "id": 260,
             "n": "Soldier's"
         },
         {
+            "id": 261,
             "n": "Knight's",
             "tc": "dgld"
         },
         {
+            "id": 262,
             "n": "Lord's",
             "tc": "dgld"
         },
         {
+            "id": 263,
             "n": "King's",
             "tc": "dgld"
         },
         {
+            "id": 264,
             "n": "Master's",
             "tc": "dgld"
         },
         {
+            "id": 265,
             "n": "Grandmaster's",
             "tc": "dgld"
         },
         {
+            "id": 266,
             "n": "Glimmering"
         },
         {
+            "id": 267,
             "n": "Glowing",
             "tc": "lyel"
         },
         {
+            "id": 268,
             "n": "Bright"
         },
         {
+            "id": 269,
             "n": "Screaming",
             "tc": "oran"
         },
         {
+            "id": 270,
             "n": "Howling",
             "tc": "oran"
         },
         {
+            "id": 271,
             "n": "Wailing",
             "tc": "oran"
         },
         {
+            "id": 272,
             "n": "Screaming",
             "tc": "oran"
         },
         {
+            "id": 273,
             "n": "Howling",
             "tc": "oran"
         },
         {
+            "id": 274,
             "n": "Wailing",
             "tc": "oran"
         },
         {
+            "id": 275,
             "n": "Lucky"
         },
         {
+            "id": 276,
             "n": "Lucky"
         },
         {
+            "id": 277,
             "n": "Lucky"
         },
         {
+            "id": 278,
             "n": "Lucky"
         },
         {
+            "id": 279,
             "n": "Lucky"
         },
         {
+            "id": 280,
             "n": "Lucky"
         },
         {
+            "id": 281,
             "n": "Felicitous"
         },
         {
+            "id": 282,
             "n": "Fortuitous"
         },
         {
+            "id": 283,
             "n": "Emerald"
         },
         {
+            "id": 284,
             "n": "Lizard's"
         },
         {
+            "id": 285,
             "n": "Lizard's"
         },
         {
+            "id": 286,
             "n": "Lizard's"
         },
         {
+            "id": 287,
             "n": "Snake's"
         },
         {
+            "id": 288,
             "n": "Snake's"
         },
         {
+            "id": 289,
             "n": "Snake's"
         },
         {
+            "id": 290,
             "n": "Serpent's"
         },
         {
+            "id": 291,
             "n": "Serpent's"
         },
         {
+            "id": 292,
             "n": "Serpent's"
         },
         {
+            "id": 293,
             "n": "Lizard's"
         },
         {
+            "id": 294,
             "n": "Lizard's"
         },
         {
+            "id": 295,
             "n": "Lizard's"
         },
         {
+            "id": 296,
             "n": "Snake's"
         },
         {
+            "id": 297,
             "n": "Snake's"
         },
         {
+            "id": 298,
             "n": "Serpent's"
         },
         {
+            "id": 299,
             "n": "Serpent's"
         },
         {
+            "id": 300,
             "n": "Lizard's"
         },
         {
+            "id": 301,
             "n": "Lizard's"
         },
         {
+            "id": 302,
             "n": "Snake's"
         },
         {
+            "id": 303,
             "n": "Serpent's"
         },
         {
+            "id": 304,
             "n": "Lizard's"
         },
         {
+            "id": 305,
             "n": "Snake's"
         },
         {
+            "id": 306,
             "n": "Serpent's"
         },
         {
+            "id": 307,
             "n": "Serpent's"
         },
         {
+            "id": 308,
             "n": "Drake's",
             "tc": "cblu"
         },
         {
+            "id": 309,
             "n": "Dragon's",
             "tc": "cblu"
         },
         {
+            "id": 310,
             "n": "Dragon's",
             "tc": "cblu"
         },
         {
+            "id": 311,
             "n": "Wyrm's",
             "tc": "cblu"
         },
         {
+            "id": 312,
             "n": "Great Wyrm's",
             "tc": "cblu"
         },
         {
+            "id": 313,
             "n": "Bahamut's",
             "tc": "cblu"
         },
         {
+            "id": 314,
             "n": "Zircon",
             "tc": "cblu"
         },
         {
+            "id": 315,
             "n": "Jacinth",
             "tc": "cblu"
         },
         {
+            "id": 316,
             "n": "Turquoise",
             "tc": "cblu"
         },
         {
+            "id": 317,
             "n": "Shimmering"
         },
         {
+            "id": 318,
             "n": "Shimmering"
         },
         {
+            "id": 319,
             "n": "Shimmering"
         },
         {
+            "id": 320,
             "n": "Shimmering",
             "tc": "lpur"
         },
         {
+            "id": 321,
             "n": "Shimmering",
             "tc": "lpur"
         },
         {
+            "id": 322,
             "n": "Shimmering",
             "tc": "lpur"
         },
         {
+            "id": 323,
             "n": "Shimmering",
             "tc": "lpur"
         },
         {
+            "id": 324,
             "n": "Rainbow",
             "tc": "lpur"
         },
         {
+            "id": 325,
             "n": "Scintillating",
             "tc": "lpur"
         },
         {
+            "id": 326,
             "n": "Prismatic",
             "tc": "lpur"
         },
         {
+            "id": 327,
             "n": "Chromatic",
             "tc": "lpur"
         },
         {
+            "id": 328,
             "n": "Shimmering",
             "tc": "lpur"
         },
         {
+            "id": 329,
             "n": "Rainbow",
             "tc": "lpur"
         },
         {
+            "id": 330,
             "n": "Scintillating",
             "tc": "lpur"
         },
         {
+            "id": 331,
             "n": "Prismatic",
             "tc": "lpur"
         },
         {
+            "id": 332,
             "n": "Chromatic",
             "tc": "lpur"
         },
         {
+            "id": 333,
             "n": "Shimmering",
             "tc": "lpur"
         },
         {
+            "id": 334,
             "n": "Rainbow",
             "tc": "lpur"
         },
         {
+            "id": 335,
             "n": "Scintillating",
             "tc": "lpur"
         },
         {
+            "id": 336,
             "n": "Shimmering",
             "tc": "lpur"
         },
         {
+            "id": 337,
             "n": "Scintillating",
             "tc": "lpur"
         },
         {
+            "id": 338,
             "n": "Azure"
         },
         {
+            "id": 339,
             "n": "Lapis"
         },
         {
+            "id": 340,
             "n": "Cobalt"
         },
         {
+            "id": 341,
             "n": "Sapphire"
         },
         {
+            "id": 342,
             "n": "Azure"
         },
         {
+            "id": 343,
             "n": "Lapis"
         },
         {
+            "id": 344,
             "n": "Cobalt",
             "tc": "lblu"
         },
         {
+            "id": 345,
             "n": "Sapphire",
             "tc": "lblu"
         },
         {
+            "id": 346,
             "n": "Azure"
         },
         {
+            "id": 347,
             "n": "Lapis"
         },
         {
+            "id": 348,
             "n": "Cobalt",
             "tc": "lblu"
         },
         {
+            "id": 349,
             "n": "Sapphire",
             "tc": "lblu"
         },
         {
+            "id": 350,
             "n": "Azure"
         },
         {
+            "id": 351,
             "n": "Lapis"
         },
         {
+            "id": 352,
             "n": "Lapis"
         },
         {
+            "id": 353,
             "n": "Cobalt"
         },
         {
+            "id": 354,
             "n": "Cobalt"
         },
         {
+            "id": 355,
             "n": "Sapphire",
             "tc": "lblu"
         },
         {
+            "id": 356,
             "n": "Lapis Lazuli",
             "tc": "lblu"
         },
         {
+            "id": 357,
             "n": "Sapphire",
             "tc": "lblu"
         },
         {
+            "id": 358,
             "n": "Crimson"
         },
         {
+            "id": 359,
             "n": "Russet"
         },
         {
+            "id": 360,
             "n": "Garnet"
         },
         {
+            "id": 361,
             "n": "Ruby"
         },
         {
+            "id": 362,
             "n": "Crimson"
         },
         {
+            "id": 363,
             "n": "Russet"
         },
         {
+            "id": 364,
             "n": "Garnet",
             "tc": "lred"
         },
         {
+            "id": 365,
             "n": "Ruby",
             "tc": "lred"
         },
         {
+            "id": 366,
             "n": "Crimson"
         },
         {
+            "id": 367,
             "n": "Russet",
             "tc": "lred"
         },
         {
+            "id": 368,
             "n": "Garnet",
             "tc": "lred"
         },
         {
+            "id": 369,
             "n": "Ruby"
         },
         {
+            "id": 370,
             "n": "Russet"
         },
         {
+            "id": 371,
             "n": "Russet"
         },
         {
+            "id": 372,
             "n": "Garnet"
         },
         {
+            "id": 373,
             "n": "Garnet"
         },
         {
+            "id": 374,
             "n": "Ruby",
             "tc": "lred"
         },
         {
+            "id": 375,
             "n": "Garnet",
             "tc": "lred"
         },
         {
+            "id": 376,
             "n": "Ruby",
             "tc": "lred"
         },
         {
+            "id": 377,
             "n": "Tangerine"
         },
         {
+            "id": 378,
             "n": "Ocher"
         },
         {
+            "id": 379,
             "n": "Coral"
         },
         {
+            "id": 380,
             "n": "Amber"
         },
         {
+            "id": 381,
             "n": "Tangerine"
         },
         {
+            "id": 382,
             "n": "Ocher"
         },
         {
+            "id": 383,
             "n": "Coral",
             "tc": "lyel"
         },
         {
+            "id": 384,
             "n": "Amber",
             "tc": "lyel"
         },
         {
+            "id": 385,
             "n": "Tangerine"
         },
         {
+            "id": 386,
             "n": "Ocher"
         },
         {
+            "id": 387,
             "n": "Coral",
             "tc": "lyel"
         },
         {
+            "id": 388,
             "n": "Amber",
             "tc": "lyel"
         },
         {
+            "id": 389,
             "n": "Tangerine"
         },
         {
+            "id": 390,
             "n": "Ocher"
         },
         {
+            "id": 391,
             "n": "Ocher"
         },
         {
+            "id": 392,
             "n": "Coral"
         },
         {
+            "id": 393,
             "n": "Coral"
         },
         {
+            "id": 394,
             "n": "Amber",
             "tc": "lyel"
         },
         {
+            "id": 395,
             "n": "Camphor",
             "tc": "lyel"
         },
         {
+            "id": 396,
             "n": "Ambergris",
             "tc": "lyel"
         },
         {
+            "id": 397,
             "n": "Beryl"
         },
         {
+            "id": 398,
             "n": "Viridian"
         },
         {
+            "id": 399,
             "n": "Jade"
         },
         {
+            "id": 400,
             "n": "Emerald"
         },
         {
+            "id": 401,
             "n": "Beryl"
         },
         {
+            "id": 402,
             "n": "Viridian"
         },
         {
+            "id": 403,
             "n": "Jade",
             "tc": "cgrn"
         },
         {
+            "id": 404,
             "n": "Emerald",
             "tc": "cgrn"
         },
         {
+            "id": 405,
             "n": "Beryl"
         },
         {
+            "id": 406,
             "n": "Viridian"
         },
         {
+            "id": 407,
             "n": "Jade",
             "tc": "cgrn"
         },
         {
+            "id": 408,
             "n": "Emerald",
             "tc": "cgrn"
         },
         {
+            "id": 409,
             "n": "Beryl"
         },
         {
+            "id": 410,
             "n": "Viridian"
         },
         {
+            "id": 411,
             "n": "Viridian"
         },
         {
+            "id": 412,
             "n": "Jade"
         },
         {
+            "id": 413,
             "n": "Jade"
         },
         {
+            "id": 414,
             "n": "Emerald",
             "tc": "cgrn"
         },
         {
+            "id": 415,
             "n": "Beryl",
             "tc": "cgrn"
         },
         {
+            "id": 416,
             "n": "Jade",
             "tc": "cgrn"
         },
         {
+            "id": 417,
             "n": "Triumphant"
         },
         {
+            "id": 418,
             "n": "Victorious"
         },
         {
+            "id": 419,
             "n": "Aureolic"
         },
         {
+            "id": 420,
             "n": "Mechanic's"
         },
         {
+            "id": 421,
             "n": "Artisan's"
         },
         {
+            "id": 422,
             "n": "Jeweler's"
         },
         {
+            "id": 423,
             "n": "Lunar"
         },
         {
+            "id": 424,
             "n": "Arcadian"
         },
         {
+            "id": 425,
             "n": "Unearthly"
         },
         {
+            "id": 426,
             "n": "Astral"
         },
         {
+            "id": 427,
             "n": "Elysian",
             "tc": "dgld"
         },
         {
+            "id": 428,
             "n": "Celestial",
             "tc": "dgld"
         },
         {
+            "id": 429,
             "n": "Diamond"
         },
         {
+            "id": 430,
             "n": "Fletcher's"
         },
         {
+            "id": 431,
             "n": "Acrobatic"
         },
         {
+            "id": 432,
             "n": "Harpoonist's"
         },
         {
+            "id": 433,
             "n": "Fletcher's"
         },
         {
+            "id": 434,
             "n": "Bowyer's",
             "tc": "lgld"
         },
         {
+            "id": 435,
             "n": "Archer's",
             "tc": "lgld"
         },
         {
+            "id": 436,
             "n": "Acrobatic"
         },
         {
+            "id": 437,
             "n": "Gymnastic",
             "tc": "lgld"
         },
         {
+            "id": 438,
             "n": "Athletic",
             "tc": "lgld"
         },
         {
+            "id": 439,
             "n": "Harpoonist's"
         },
         {
+            "id": 440,
             "n": "Spearmaiden's",
             "tc": "lgld"
         },
         {
+            "id": 441,
             "n": "Lancer's",
             "tc": "lgld"
         },
         {
+            "id": 442,
             "n": "Burning"
         },
         {
+            "id": 443,
             "n": "Sparking"
         },
         {
+            "id": 444,
             "n": "Chilling"
         },
         {
+            "id": 445,
             "n": "Burning"
         },
         {
+            "id": 446,
             "n": "Blazing",
             "tc": "lgld"
         },
         {
+            "id": 447,
             "n": "Volcanic",
             "tc": "lgld"
         },
         {
+            "id": 448,
             "n": "Sparking"
         },
         {
+            "id": 449,
             "n": "Charged",
             "tc": "lgld"
         },
         {
+            "id": 450,
             "n": "Powered",
             "tc": "lgld"
         },
         {
+            "id": 451,
             "n": "Chilling"
         },
         {
+            "id": 452,
             "n": "Freezing",
             "tc": "lgld"
         },
         {
+            "id": 453,
             "n": "Glacial",
             "tc": "lgld"
         },
         {
+            "id": 454,
             "n": "Hexing"
         },
         {
+            "id": 455,
             "n": "Fungal"
         },
         {
+            "id": 456,
             "n": "Graverobber's"
         },
         {
+            "id": 457,
             "n": "Hexing"
         },
         {
+            "id": 458,
             "n": "Blighting",
             "tc": "lgld"
         },
         {
+            "id": 459,
             "n": "Cursing",
             "tc": "lgld"
         },
         {
+            "id": 460,
             "n": "Fungal"
         },
         {
+            "id": 461,
             "n": "Noxious",
             "tc": "lgld"
         },
         {
+            "id": 462,
             "n": "Venomous",
             "tc": "lgld"
         },
         {
+            "id": 463,
             "n": "Graverobber's"
         },
         {
+            "id": 464,
             "n": "Mojo",
             "tc": "lgld"
         },
         {
+            "id": 465,
             "n": "Golemlord's",
             "tc": "lgld"
         },
         {
+            "id": 466,
             "n": "Lion Branded"
         },
         {
+            "id": 467,
             "n": "Captain's"
         },
         {
+            "id": 468,
             "n": "Preserver's"
         },
         {
+            "id": 469,
             "n": "Lion Branded"
         },
         {
+            "id": 470,
             "n": "Hawk Branded",
             "tc": "lgld"
         },
         {
+            "id": 471,
             "n": "Rose Branded",
             "tc": "lgld"
         },
         {
+            "id": 472,
             "n": "Captain's"
         },
         {
+            "id": 473,
             "n": "Commander's",
             "tc": "lgld"
         },
         {
+            "id": 474,
             "n": "Marshal's",
             "tc": "lgld"
         },
         {
+            "id": 475,
             "n": "Preserver's"
         },
         {
+            "id": 476,
             "n": "Warden's",
             "tc": "lgld"
         },
         {
+            "id": 477,
             "n": "Guardian's",
             "tc": "lgld"
         },
         {
+            "id": 478,
             "n": "Expert's"
         },
         {
+            "id": 479,
             "n": "Fanatic"
         },
         {
+            "id": 480,
             "n": "Sounding"
         },
         {
+            "id": 481,
             "n": "Expert's"
         },
         {
+            "id": 482,
             "n": "Veteran's",
             "tc": "lgld"
         },
         {
+            "id": 483,
             "n": "Master's",
             "tc": "lgld"
         },
         {
+            "id": 484,
             "n": "Fanatic"
         },
         {
+            "id": 485,
             "n": "Raging",
             "tc": "lgld"
         },
         {
+            "id": 486,
             "n": "Furious",
             "tc": "lgld"
         },
         {
+            "id": 487,
             "n": "Sounding"
         },
         {
+            "id": 488,
             "n": "Resonant",
             "tc": "lgld"
         },
         {
+            "id": 489,
             "n": "Echoing",
             "tc": "lgld"
         },
         {
+            "id": 490,
             "n": "Trainer's"
         },
         {
+            "id": 491,
             "n": "Spiritual"
         },
         {
+            "id": 492,
             "n": "Natural"
         },
         {
+            "id": 493,
             "n": "Trainer's"
         },
         {
+            "id": 494,
             "n": "Caretaker's",
             "tc": "lgld"
         },
         {
+            "id": 495,
             "n": "Keeper's",
             "tc": "lgld"
         },
         {
+            "id": 496,
             "n": "Spiritual"
         },
         {
+            "id": 497,
             "n": "Feral",
             "tc": "lgld"
         },
         {
+            "id": 498,
             "n": "Communal",
             "tc": "lgld"
         },
         {
+            "id": 499,
             "n": "Natural"
         },
         {
+            "id": 500,
             "n": "Terrene",
             "tc": "lgld"
         },
         {
+            "id": 501,
             "n": "Gaean",
             "tc": "lgld"
         },
         {
+            "id": 502,
             "n": "Entrapping"
         },
         {
+            "id": 503,
             "n": "Mentalist's"
         },
         {
+            "id": 504,
             "n": "Shogukusha's"
         },
         {
+            "id": 505,
             "n": "Entrapping"
         },
         {
+            "id": 506,
             "n": "Trickster's",
             "tc": "lgld"
         },
         {
+            "id": 507,
             "n": "Cunning",
             "tc": "lgld"
         },
         {
+            "id": 508,
             "n": "Mentalist's"
         },
         {
+            "id": 509,
             "n": "Psychic",
             "tc": "lgld"
         },
         {
+            "id": 510,
             "n": "Shadow",
             "tc": "lgld"
         },
         {
+            "id": 511,
             "n": "Shogukusha's"
         },
         {
+            "id": 512,
             "n": "Sensei's",
             "tc": "lgld"
         },
         {
+            "id": 513,
             "n": "Kenshi's",
             "tc": "lgld"
         },
         {
+            "id": 514,
             "n": "Enlightened",
             "tc": "whit"
         },
         {
+            "id": 515,
             "n": "Enlightened",
             "tc": "whit"
         },
         {
+            "id": 516,
             "n": "Honorable",
             "tc": "whit"
         },
         {
+            "id": 517,
             "n": "Honorable",
             "tc": "whit"
         },
         {
+            "id": 518,
             "n": "Righteous",
             "tc": "whit"
         },
         {
+            "id": 519,
             "n": "Righteous",
             "tc": "whit"
         },
         {
+            "id": 520,
             "n": "Faithful",
             "tc": "whit"
         },
         {
+            "id": 521,
             "n": "Faithful",
             "tc": "whit"
         },
         {
+            "id": 522,
             "n": "Knave's",
             "tc": "whit"
         },
         {
+            "id": 523,
             "n": "Jack's",
             "tc": "whit"
         },
         {
+            "id": 524,
             "n": "Jester's",
             "tc": "whit"
         },
         {
+            "id": 525,
             "n": "Joker's",
             "tc": "whit"
         },
         {
+            "id": 526,
             "n": "Fool's",
             "tc": "whit"
         },
         {
+            "id": 527,
             "n": "Alarming",
             "tc": "whit"
         },
         {
+            "id": 528,
             "n": "Calling",
             "tc": "whit"
         },
         {
+            "id": 529,
             "n": "Yelling",
             "tc": "whit"
         },
         {
+            "id": 530,
             "n": "Howling",
             "tc": "whit"
         },
         {
+            "id": 531,
             "n": "Grinding",
             "tc": "whit"
         },
         {
+            "id": 532,
             "n": "Paradox",
             "tc": "whit"
         },
         {
+            "id": 533,
             "n": "Paradox",
             "tc": "whit"
         },
         {
+            "id": 534,
             "n": "Robineye",
             "tc": "whit"
         },
         {
+            "id": 535,
             "n": "Sparroweye",
             "tc": "whit"
         },
         {
+            "id": 536,
             "n": "Falconeye",
             "tc": "whit"
         },
         {
+            "id": 537,
             "n": "Hawkeye",
             "tc": "whit"
         },
         {
+            "id": 538,
             "n": "Eagleeye",
             "tc": "whit"
         },
         {
+            "id": 539,
             "n": "Visionary",
             "tc": "whit"
         },
         {
+            "id": 540,
             "n": "Mnemonic",
             "tc": "cblu"
         },
         {
+            "id": 541,
             "n": "Snowy",
             "tc": "lblu"
         },
         {
+            "id": 542,
             "n": "Shivering",
             "tc": "lblu"
         },
         {
+            "id": 543,
             "n": "Boreal",
             "tc": "lblu"
         },
         {
+            "id": 544,
             "n": "Hibernal",
             "tc": "lblu"
         },
         {
+            "id": 545,
             "n": "Fiery",
             "tc": "dred"
         },
         {
+            "id": 546,
             "n": "Smoldering",
             "tc": "dred"
         },
         {
+            "id": 547,
             "n": "Smoking",
             "tc": "dred"
         },
         {
+            "id": 548,
             "n": "Flaming",
             "tc": "dred"
         },
         {
+            "id": 549,
             "n": "Condensing",
             "tc": "dred"
         },
         {
+            "id": 550,
             "n": "Static",
             "tc": "lyel"
         },
         {
+            "id": 551,
             "n": "Glowing",
             "tc": "lyel"
         },
         {
+            "id": 552,
             "n": "Buzzing",
             "tc": "lyel"
         },
         {
+            "id": 553,
             "n": "Arcing",
             "tc": "lyel"
         },
         {
+            "id": 554,
             "n": "Shocking",
             "tc": "lyel"
         },
         {
+            "id": 555,
             "n": "Septic",
             "tc": "dgrn"
         },
         {
+            "id": 556,
             "n": "Foul",
             "tc": "dgrn"
         },
         {
+            "id": 557,
             "n": "Corrosive",
             "tc": "dgrn"
         },
         {
+            "id": 558,
             "n": "Toxic",
             "tc": "dgrn"
         },
         {
+            "id": 559,
             "n": "Pestilent",
             "tc": "dgrn"
         },
         {
+            "id": 560,
             "n": "Maiden's"
         },
         {
+            "id": 561,
             "n": "Valkyrie's",
             "tc": "cgrn"
         },
         {
+            "id": 562,
             "n": "Maiden's"
         },
         {
+            "id": 563,
             "n": "Valkyrie's",
             "tc": "cgrn"
         },
         {
+            "id": 564,
             "n": "Monk's"
         },
         {
+            "id": 565,
             "n": "Priest's",
             "tc": "cgrn"
         },
         {
+            "id": 566,
             "n": "Monk's"
         },
         {
+            "id": 567,
             "n": "Priest's",
             "tc": "cgrn"
         },
         {
+            "id": 568,
             "n": "Monk's"
         },
         {
+            "id": 569,
             "n": "Priest's",
             "tc": "cgrn"
         },
         {
+            "id": 570,
             "n": "Summoner's"
         },
         {
+            "id": 571,
             "n": "Necromancer's",
             "tc": "cgrn"
         },
         {
+            "id": 572,
             "n": "Summoner's"
         },
         {
+            "id": 573,
             "n": "Necromancer's",
             "tc": "cgrn"
         },
         {
+            "id": 574,
             "n": "Angel's"
         },
         {
+            "id": 575,
             "n": "Arch-Angel's",
             "tc": "cgrn"
         },
         {
+            "id": 576,
             "n": "Angel's"
         },
         {
+            "id": 577,
             "n": "Arch-Angel's",
             "tc": "cgrn"
         },
         {
+            "id": 578,
             "n": "Slayer's"
         },
         {
+            "id": 579,
             "n": "Berserker's",
             "tc": "cgrn"
         },
         {
+            "id": 580,
             "n": "Slayer's"
         },
         {
+            "id": 581,
             "n": "Berserker's",
             "tc": "cgrn"
         },
         {
+            "id": 582,
             "n": "Slayer's"
         },
         {
+            "id": 583,
             "n": "Berserker's",
             "tc": "cgrn"
         },
         {
+            "id": 584,
             "n": "Shaman's"
         },
         {
+            "id": 585,
             "n": "Hierophant's",
             "tc": "cgrn"
         },
         {
+            "id": 586,
             "n": "Shaman's"
         },
         {
+            "id": 587,
             "n": "Hierophant's",
             "tc": "cgrn"
         },
         {
+            "id": 588,
             "n": "Magekiller's"
         },
         {
+            "id": 589,
             "n": "Witch-hunter's",
             "tc": "cgrn"
         },
         {
+            "id": 590,
             "n": "Magekiller's"
         },
         {
+            "id": 591,
             "n": "Witch-hunter's",
             "tc": "cgrn"
         },
         {
+            "id": 592,
             "n": "Compact"
         },
         {
+            "id": 593,
             "n": "Thin"
         },
         {
+            "id": 594,
             "n": "Dense"
         },
         {
+            "id": 595,
             "n": "Consecrated"
         },
         {
+            "id": 596,
             "n": "Pure",
             "tc": "lgld"
         },
         {
+            "id": 597,
             "n": "Sacred",
             "tc": "lgld"
         },
         {
+            "id": 598,
             "n": "Hallowed",
             "tc": "lgld"
         },
         {
+            "id": 599,
             "n": "Divine",
             "tc": "lgld"
         },
         {
+            "id": 600,
             "n": "Pearl"
         },
         {
+            "id": 601,
             "n": "Crimson"
         },
         {
+            "id": 602,
             "n": "Red"
         },
         {
+            "id": 603,
             "n": "Sanguinary"
         },
         {
+            "id": 604,
             "n": "Bloody"
         },
         {
+            "id": 605,
             "n": "Red",
             "tc": "dred"
         },
         {
+            "id": 606,
             "n": "Sanguinary",
             "tc": "dred"
         },
         {
+            "id": 607,
             "n": "Red",
             "tc": "dred"
         },
         {
+            "id": 608,
             "n": "Jagged"
         },
         {
+            "id": 609,
             "n": "Forked"
         },
         {
+            "id": 610,
             "n": "Serrated"
         },
         {
+            "id": 611,
             "n": "Jagged",
             "tc": "blac"
         },
         {
+            "id": 612,
             "n": "Forked",
             "tc": "blac"
         },
         {
+            "id": 613,
             "n": "Jagged",
             "tc": "blac"
         },
         {
+            "id": 614,
             "n": "Snowy"
         },
         {
+            "id": 615,
             "n": "Shivering"
         },
         {
+            "id": 616,
             "n": "Boreal"
         },
         {
+            "id": 617,
             "n": "Hibernal"
         },
         {
+            "id": 618,
             "n": "Snowy"
         },
         {
+            "id": 619,
             "n": "Shivering"
         },
         {
+            "id": 620,
             "n": "Boreal",
             "tc": "lblu"
         },
         {
+            "id": 621,
             "n": "Hibernal",
             "tc": "lblu"
         },
         {
+            "id": 622,
             "n": "Snowy"
         },
         {
+            "id": 623,
             "n": "Shivering"
         },
         {
+            "id": 624,
             "n": "Boreal",
             "tc": "lblu"
         },
         {
+            "id": 625,
             "n": "Hibernal",
             "tc": "lblu"
         },
         {
+            "id": 626,
             "n": "Fiery"
         },
         {
+            "id": 627,
             "n": "Smoldering"
         },
         {
+            "id": 628,
             "n": "Smoking"
         },
         {
+            "id": 629,
             "n": "Flaming"
         },
         {
+            "id": 630,
             "n": "Fiery"
         },
         {
+            "id": 631,
             "n": "Smoldering"
         },
         {
+            "id": 632,
             "n": "Smoking",
             "tc": "lred"
         },
         {
+            "id": 633,
             "n": "Flaming",
             "tc": "lred"
         },
         {
+            "id": 634,
             "n": "Fiery"
         },
         {
+            "id": 635,
             "n": "Smoldering"
         },
         {
+            "id": 636,
             "n": "Smoking",
             "tc": "lred"
         },
         {
+            "id": 637,
             "n": "Flaming",
             "tc": "lred"
         },
         {
+            "id": 638,
             "n": "Static"
         },
         {
+            "id": 639,
             "n": "Glowing"
         },
         {
+            "id": 640,
             "n": "Arcing"
         },
         {
+            "id": 641,
             "n": "Shocking"
         },
         {
+            "id": 642,
             "n": "Static"
         },
         {
+            "id": 643,
             "n": "Glowing"
         },
         {
+            "id": 644,
             "n": "Arcing",
             "tc": "whit"
         },
         {
+            "id": 645,
             "n": "Shocking",
             "tc": "whit"
         },
         {
+            "id": 646,
             "n": "Static"
         },
         {
+            "id": 647,
             "n": "Glowing"
         },
         {
+            "id": 648,
             "n": "Arcing",
             "tc": "whit"
         },
         {
+            "id": 649,
             "n": "Shocking",
             "tc": "whit"
         },
         {
+            "id": 650,
             "n": "Septic"
         },
         {
+            "id": 651,
             "n": "Foul"
         },
         {
+            "id": 652,
             "n": "Toxic"
         },
         {
+            "id": 653,
             "n": "Pestilent"
         },
         {
+            "id": 654,
             "n": "Septic"
         },
         {
+            "id": 655,
             "n": "Foul"
         },
         {
+            "id": 656,
             "n": "Toxic",
             "tc": "dgrn"
         },
         {
+            "id": 657,
             "n": "Pestilent",
             "tc": "dgrn"
         },
         {
+            "id": 658,
             "n": "Septic"
         },
         {
+            "id": 659,
             "n": "Foul"
         },
         {
+            "id": 660,
             "n": "Toxic",
             "tc": "dgrn"
         },
         {
+            "id": 661,
             "n": "Pestilent",
             "tc": "dgrn"
         },
         {
+            "id": 662,
             "n": "Tireless"
         },
         {
+            "id": 663,
             "n": "Lizard's"
         },
         {
+            "id": 664,
             "n": "Azure"
         },
         {
+            "id": 665,
             "n": "Crimson"
         },
         {
+            "id": 666,
             "n": "Tangerine"
         },
         {
+            "id": 667,
             "n": "Beryl"
         },
         {
+            "id": 668,
             "n": "Godly",
             "tc": "dgld"
         },
         {
+            "id": 669,
             "n": "Cruel",
             "tc": "blac"
         },
-        {}
+        {
+            "id": 670
+        }
     ],
     "magic_suffixes": [
         null,
         {
+            "id": 1,
             "n": "of Health"
         },
         {
+            "id": 2,
             "n": "of Protection"
         },
         {
+            "id": 3,
             "n": "of Absorption"
         },
         {
+            "id": 4,
             "n": "of Life",
             "tc": "dblu"
         },
-        {},
         {
+            "id": 5
+        },
+        {
+            "id": 6,
             "n": "of Warding"
         },
         {
+            "id": 7,
             "n": "of the Sentinel"
         },
         {
+            "id": 8,
             "n": "of Guarding"
         },
         {
+            "id": 9,
             "n": "of Negation"
         },
-        {},
         {
+            "id": 10
+        },
+        {
+            "id": 11,
             "n": "of Piercing"
         },
         {
+            "id": 12,
             "n": "of Bashing"
         },
         {
+            "id": 13,
             "n": "of Puncturing"
         },
         {
+            "id": 14,
             "n": "of Thorns"
         },
         {
+            "id": 15,
             "n": "of Spikes",
             "tc": "oran"
         },
         {
+            "id": 16,
             "n": "of Readiness"
         },
         {
+            "id": 17,
             "n": "of Alacrity"
         },
         {
+            "id": 18,
             "n": "of Swiftness"
         },
         {
+            "id": 19,
             "n": "of Quickness",
             "tc": "dyel"
         },
         {
+            "id": 20,
             "n": "of Blocking"
         },
         {
+            "id": 21,
             "n": "of Deflecting"
         },
         {
+            "id": 22,
             "n": "of the Apprentice"
         },
         {
+            "id": 23,
             "n": "of the Magus"
         },
         {
+            "id": 24,
             "n": "of Frost"
         },
         {
+            "id": 25,
             "n": "of the Glacier"
         },
         {
+            "id": 26,
             "n": "of Frost"
         },
         {
+            "id": 27,
             "n": "of Thawing"
         },
         {
+            "id": 28,
             "n": "of Flame"
         },
         {
+            "id": 29,
             "n": "of Fire"
         },
         {
+            "id": 30,
             "n": "of Burning",
             "tc": "dred"
         },
         {
+            "id": 31,
             "n": "of Flame"
         },
         {
+            "id": 32,
             "n": "of Shock"
         },
         {
+            "id": 33,
             "n": "of Lightning"
         },
         {
+            "id": 34,
             "n": "of Thunder",
             "tc": "dyel"
         },
         {
+            "id": 35,
             "n": "of Shock"
         },
         {
+            "id": 36,
             "n": "of Craftmanship"
         },
         {
+            "id": 37,
             "n": "of Quality"
         },
         {
+            "id": 38,
             "n": "of Maiming"
         },
         {
+            "id": 39,
             "n": "of Slaying"
         },
         {
+            "id": 40,
             "n": "of Gore"
         },
         {
+            "id": 41,
             "n": "of Carnage",
             "tc": "blac"
         },
         {
+            "id": 42,
             "n": "of Slaughter",
             "tc": "blac"
         },
         {
+            "id": 43,
             "n": "of Maiming"
         },
         {
+            "id": 44,
             "n": "of Worth"
         },
         {
+            "id": 45,
             "n": "of Measure"
         },
         {
+            "id": 46,
             "n": "of Excellence"
         },
         {
+            "id": 47,
             "n": "of Performance",
             "tc": "blac"
         },
         {
+            "id": 48,
             "n": "of Measure"
         },
         {
+            "id": 49,
             "n": "of Blight"
         },
         {
+            "id": 50,
             "n": "of Venom"
         },
         {
+            "id": 51,
             "n": "of Pestilence",
             "tc": "dgrn"
         },
         {
+            "id": 52,
             "n": "of Blight"
         },
         {
+            "id": 53,
             "n": "of Dexterity"
         },
         {
+            "id": 54,
             "n": "of Dexterity"
         },
         {
+            "id": 55,
             "n": "of Skill"
         },
         {
+            "id": 56,
             "n": "of Skill"
         },
         {
+            "id": 57,
             "n": "of Accuracy"
         },
         {
+            "id": 58,
             "n": "of Precision"
         },
         {
+            "id": 59,
             "n": "of Precision"
         },
         {
+            "id": 60,
             "n": "of Perfection",
             "tc": "dgld"
         },
         {
+            "id": 61,
             "n": "of Balance"
         },
         {
+            "id": 62,
             "n": "of Stability",
             "tc": "dyel"
         },
-        {},
         {
+            "id": 63
+        },
+        {
+            "id": 64,
             "n": "of Regeneration"
         },
         {
+            "id": 65,
             "n": "of Regeneration"
         },
         {
+            "id": 66,
             "n": "of Regeneration"
         },
         {
+            "id": 67,
             "n": "of Regrowth",
             "tc": "cred"
         },
         {
+            "id": 68,
             "n": "of Regrowth",
             "tc": "cred"
         },
         {
+            "id": 69,
             "n": "of Vileness"
         },
-        {},
         {
+            "id": 70
+        },
+        {
+            "id": 71,
             "n": "of Greed"
         },
         {
+            "id": 72,
             "n": "of Wealth",
             "tc": "lgld"
         },
         {
+            "id": 73,
             "n": "of Chance"
         },
         {
+            "id": 74,
             "n": "of Fortune",
             "tc": "lgld"
         },
         {
+            "id": 75,
             "n": "of Energy"
         },
         {
+            "id": 76,
             "n": "of Energy"
         },
         {
+            "id": 77,
             "n": "of the Mind"
         },
         {
+            "id": 78,
             "n": "of Brilliance"
         },
         {
+            "id": 79,
             "n": "of Sorcery",
             "tc": "dgld"
         },
         {
+            "id": 80,
             "n": "of Wizardry",
             "tc": "dgld"
         },
         {
+            "id": 81,
             "n": "of the Bear"
         },
         {
+            "id": 82,
             "n": "of Light"
         },
         {
+            "id": 83,
             "n": "of Radiance"
         },
         {
+            "id": 84,
             "n": "of the Sun"
         },
         {
+            "id": 85,
             "n": "of Life"
         },
         {
+            "id": 86,
             "n": "of the Jackal"
         },
         {
+            "id": 87,
             "n": "of the Fox"
         },
         {
+            "id": 88,
             "n": "of the Wolf"
         },
         {
+            "id": 89,
             "n": "of the Wolf"
         },
         {
+            "id": 90,
             "n": "of the Tiger"
         },
         {
+            "id": 91,
             "n": "of the Mammoth",
             "tc": "cred"
         },
         {
+            "id": 92,
             "n": "of the Mammoth",
             "tc": "cred"
         },
         {
+            "id": 93,
             "n": "of the Colossus",
             "tc": "cred"
         },
         {
+            "id": 94,
             "n": "of the Leech"
         },
         {
+            "id": 95,
             "n": "of the Locust",
             "tc": "cred"
         },
         {
+            "id": 96,
             "n": "of the Bat"
         },
         {
+            "id": 97,
             "n": "of the Vampire",
             "tc": "cblu"
         },
         {
+            "id": 98,
             "n": "of Defiance",
             "tc": "dred"
         },
         {
+            "id": 99,
             "n": "of Amelioration"
         },
         {
+            "id": 100,
             "n": "of Remedy"
         },
-        {},
         {
+            "id": 101
+        },
+        {
+            "id": 102,
             "n": "of Simplicity"
         },
         {
+            "id": 103,
             "n": "of Ease"
         },
-        {},
         {
+            "id": 104
+        },
+        {
+            "id": 105,
             "n": "of Strength"
         },
         {
+            "id": 106,
             "n": "of Might"
         },
         {
+            "id": 107,
             "n": "of the Ox"
         },
         {
+            "id": 108,
             "n": "of the Ox"
         },
         {
+            "id": 109,
             "n": "of the Giant",
             "tc": "dgld"
         },
         {
+            "id": 110,
             "n": "of the Giant",
             "tc": "dgld"
         },
         {
+            "id": 111,
             "n": "of the Titan",
             "tc": "dgld"
         },
         {
+            "id": 112,
             "n": "of Pacing"
         },
         {
+            "id": 113,
             "n": "of Haste"
         },
         {
+            "id": 114,
             "n": "of Speed"
         },
         {
+            "id": 115,
             "n": "of Health"
         },
         {
+            "id": 116,
             "n": "of Protection"
         },
         {
+            "id": 117,
             "n": "of Absorption"
         },
         {
+            "id": 118,
             "n": "of Life",
             "tc": "dblu"
         },
         {
+            "id": 119,
             "n": "of Life Everlasting"
         },
         {
+            "id": 120,
             "n": "of Protection"
         },
         {
+            "id": 121,
             "n": "of Absorption"
         },
         {
+            "id": 122,
             "n": "of Life"
         },
         {
+            "id": 123,
             "n": "of Amicae"
         },
         {
+            "id": 124,
             "n": "of Warding"
         },
         {
+            "id": 125,
             "n": "of the Sentinel"
         },
         {
+            "id": 126,
             "n": "of Guarding"
         },
         {
+            "id": 127,
             "n": "of Negation"
         },
         {
+            "id": 128,
             "n": "of the Sentinel"
         },
         {
+            "id": 129,
             "n": "of Guarding"
         },
         {
+            "id": 130,
             "n": "of Negation"
         },
         {
+            "id": 131,
             "n": "of Coolness"
         },
         {
+            "id": 132,
             "n": "of Inflammability"
         },
         {
+            "id": 133,
             "n": "of Amianthus"
         },
         {
+            "id": 134,
             "n": "of Quenching"
         },
         {
+            "id": 135,
             "n": "of Coolness"
         },
         {
+            "id": 136,
             "n": "of Inflammability"
         },
         {
+            "id": 137,
             "n": "of Amianthus"
         },
         {
+            "id": 138,
             "n": "of Quenching"
         },
         {
+            "id": 139,
             "n": "of Faith"
         },
         {
+            "id": 140,
             "n": "of Resistance"
         },
         {
+            "id": 141,
             "n": "of Insulation"
         },
         {
+            "id": 142,
             "n": "of Grounding"
         },
         {
+            "id": 143,
             "n": "of the Dynamo"
         },
         {
+            "id": 144,
             "n": "of Resistance"
         },
         {
+            "id": 145,
             "n": "of Insulation"
         },
         {
+            "id": 146,
             "n": "of Grounding"
         },
         {
+            "id": 147,
             "n": "of the Dynamo"
         },
         {
+            "id": 148,
             "n": "of Stoicism"
         },
         {
+            "id": 149,
             "n": "of Warming"
         },
         {
+            "id": 150,
             "n": "of Thawing"
         },
         {
+            "id": 151,
             "n": "of the Dunes"
         },
         {
+            "id": 152,
             "n": "of the Scirocco"
         },
         {
+            "id": 153,
             "n": "of Warming"
         },
         {
+            "id": 154,
             "n": "of Thawing"
         },
         {
+            "id": 155,
             "n": "of the Dunes"
         },
         {
+            "id": 156,
             "n": "of the Scirocco"
         },
         {
+            "id": 157,
             "n": "of Desire"
         },
         {
+            "id": 158,
             "n": "of Piercing"
         },
         {
+            "id": 159,
             "n": "of Bashing"
         },
         {
+            "id": 160,
             "n": "of Puncturing"
         },
         {
+            "id": 161,
             "n": "of Thorns"
         },
         {
+            "id": 162,
             "n": "of Spikes",
             "tc": "oran"
         },
         {
+            "id": 163,
             "n": "of Razors",
             "tc": "oran"
         },
         {
+            "id": 164,
             "n": "of Swords",
             "tc": "oran"
         },
         {
+            "id": 165,
             "n": "of Malice"
         },
         {
+            "id": 166,
             "n": "of Readiness"
         },
         {
+            "id": 167,
             "n": "of Alacrity"
         },
         {
+            "id": 168,
             "n": "of Swiftness"
         },
         {
+            "id": 169,
             "n": "of Quickness",
             "tc": "dyel"
         },
         {
+            "id": 170,
             "n": "of Alacrity",
             "tc": "dyel"
         },
         {
+            "id": 171,
             "n": "of Fervor"
         },
         {
+            "id": 172,
             "n": "of Blocking"
         },
         {
+            "id": 173,
             "n": "of Deflecting"
         },
         {
+            "id": 174,
             "n": "of the Apprentice"
         },
         {
+            "id": 175,
             "n": "of the Magus"
         },
         {
+            "id": 176,
             "n": "of Frost"
         },
         {
+            "id": 177,
             "n": "of the Icicle"
         },
         {
+            "id": 178,
             "n": "of the Glacier",
             "tc": "dblu"
         },
         {
+            "id": 179,
             "n": "of Winter",
             "tc": "dblu"
         },
         {
+            "id": 180,
             "n": "of Frost"
         },
         {
+            "id": 181,
             "n": "of Frigidity",
             "tc": "dblu"
         },
         {
+            "id": 182,
             "n": "of Thawing"
         },
         {
+            "id": 183,
             "n": "of Flame"
         },
         {
+            "id": 184,
             "n": "of Fire"
         },
         {
+            "id": 185,
             "n": "of Burning",
             "tc": "dred"
         },
         {
+            "id": 186,
             "n": "of Incineration",
             "tc": "dred"
         },
         {
+            "id": 187,
             "n": "of Flame"
         },
         {
+            "id": 188,
             "n": "of Passion",
             "tc": "dred"
         },
         {
+            "id": 189,
             "n": "of Shock"
         },
         {
+            "id": 190,
             "n": "of Lightning"
         },
         {
+            "id": 191,
             "n": "of Thunder",
             "tc": "dyel"
         },
         {
+            "id": 192,
             "n": "of Storms",
             "tc": "dyel"
         },
         {
+            "id": 193,
             "n": "of Shock"
         },
         {
+            "id": 194,
             "n": "of Ennui",
             "tc": "dyel"
         },
         {
+            "id": 195,
             "n": "of Craftmanship"
         },
         {
+            "id": 196,
             "n": "of Quality"
         },
         {
+            "id": 197,
             "n": "of Maiming"
         },
         {
+            "id": 198,
             "n": "of Slaying"
         },
         {
+            "id": 199,
             "n": "of Gore"
         },
         {
+            "id": 200,
             "n": "of Carnage",
             "tc": "blac"
         },
         {
+            "id": 201,
             "n": "of Slaughter",
             "tc": "blac"
         },
         {
+            "id": 202,
             "n": "of Butchery",
             "tc": "blac"
         },
         {
+            "id": 203,
             "n": "of Evisceration",
             "tc": "blac"
         },
         {
+            "id": 204,
             "n": "of Maiming"
         },
         {
+            "id": 205,
             "n": "of Craftmanship"
         },
         {
+            "id": 206,
             "n": "of Craftmanship"
         },
         {
+            "id": 207,
             "n": "of Craftmanship"
         },
         {
+            "id": 208,
             "n": "of Quality"
         },
         {
+            "id": 209,
             "n": "of Quality"
         },
         {
+            "id": 210,
             "n": "of Maiming"
         },
         {
+            "id": 211,
             "n": "of Maiming"
         },
         {
+            "id": 212,
             "n": "of Craftmanship"
         },
         {
+            "id": 213,
             "n": "of Craftmanship"
         },
         {
+            "id": 214,
             "n": "of Quality"
         },
         {
+            "id": 215,
             "n": "of Quality"
         },
         {
+            "id": 216,
             "n": "of Maiming"
         },
         {
+            "id": 217,
             "n": "of Craftmanship"
         },
         {
+            "id": 218,
             "n": "of Quality"
         },
         {
+            "id": 219,
             "n": "of Maiming"
         },
         {
+            "id": 220,
             "n": "of Ire"
         },
         {
+            "id": 221,
             "n": "of Wrath",
             "tc": "blac"
         },
         {
+            "id": 222,
             "n": "of Carnage",
             "tc": "blac"
         },
         {
+            "id": 223,
             "n": "of Worth"
         },
         {
+            "id": 224,
             "n": "of Measure"
         },
         {
+            "id": 225,
             "n": "of Excellence"
         },
         {
+            "id": 226,
             "n": "of Performance",
             "tc": "blac"
         },
         {
+            "id": 227,
             "n": "of Transcendence",
             "tc": "blac"
         },
         {
+            "id": 228,
             "n": "of Worth"
         },
         {
+            "id": 229,
             "n": "of Measure"
         },
         {
+            "id": 230,
             "n": "of Excellence"
         },
         {
+            "id": 231,
             "n": "of Performance"
         },
         {
+            "id": 232,
             "n": "of Joyfulness",
             "tc": "whit"
         },
         {
+            "id": 233,
             "n": "of Bliss",
             "tc": "whit"
         },
         {
+            "id": 234,
             "n": "of Blight"
         },
         {
+            "id": 235,
             "n": "of Venom"
         },
         {
+            "id": 236,
             "n": "of Pestilence",
             "tc": "dgrn"
         },
         {
+            "id": 237,
             "n": "of Anthrax",
             "tc": "dgrn"
         },
         {
+            "id": 238,
             "n": "of Blight"
         },
         {
+            "id": 239,
             "n": "of Envy",
             "tc": "dgrn"
         },
         {
+            "id": 240,
             "n": "of Dexterity"
         },
         {
+            "id": 241,
             "n": "of Skill"
         },
         {
+            "id": 242,
             "n": "of Accuracy"
         },
         {
+            "id": 243,
             "n": "of Precision"
         },
         {
+            "id": 244,
             "n": "of Perfection",
             "tc": "dgld"
         },
         {
+            "id": 245,
             "n": "of Nirvana",
             "tc": "dgld"
         },
         {
+            "id": 246,
             "n": "of Dexterity"
         },
         {
+            "id": 247,
             "n": "of Skill"
         },
         {
+            "id": 248,
             "n": "of Accuracy"
         },
         {
+            "id": 249,
             "n": "of Precision"
         },
         {
+            "id": 250,
             "n": "of Perfection",
             "tc": "dgld"
         },
         {
+            "id": 251,
             "n": "of Dexterity"
         },
         {
+            "id": 252,
             "n": "of Skill"
         },
         {
+            "id": 253,
             "n": "of Accuracy"
         },
         {
+            "id": 254,
             "n": "of Precision",
             "tc": "dgld"
         },
         {
+            "id": 255,
             "n": "of Dexterity"
         },
         {
+            "id": 256,
             "n": "of Dexterity"
         },
         {
+            "id": 257,
             "n": "of Dexterity"
         },
         {
+            "id": 258,
             "n": "of Dexterity"
         },
         {
+            "id": 259,
             "n": "of Dexterity"
         },
         {
+            "id": 260,
             "n": "of Dexterity"
         },
         {
+            "id": 261,
             "n": "of Daring"
         },
         {
+            "id": 262,
             "n": "of Balance"
         },
         {
+            "id": 263,
             "n": "of Equilibrium"
         },
         {
+            "id": 264,
             "n": "of Stability",
             "tc": "dyel"
         },
         {
+            "id": 265,
             "n": "of Balance"
         },
         {
+            "id": 266,
             "n": "of Balance"
         },
         {
+            "id": 267,
             "n": "of Balance",
             "tc": "dyel"
         },
         {
+            "id": 268,
             "n": "of Truth"
         },
         {
+            "id": 269,
             "n": "of Regeneration"
         },
         {
+            "id": 270,
             "n": "of Regeneration"
         },
         {
+            "id": 271,
             "n": "of Regeneration"
         },
         {
+            "id": 272,
             "n": "of Regrowth",
             "tc": "cred"
         },
         {
+            "id": 273,
             "n": "of Regrowth",
             "tc": "cred"
         },
         {
+            "id": 274,
             "n": "of Revivification",
             "tc": "cred"
         },
         {
+            "id": 275,
             "n": "of Honor"
         },
         {
+            "id": 276,
             "n": "of Vileness"
         },
         {
+            "id": 277,
             "n": "of Greed"
         },
         {
+            "id": 278,
             "n": "of Wealth",
             "tc": "lgld"
         },
         {
+            "id": 279,
             "n": "of Greed"
         },
         {
+            "id": 280,
             "n": "of Greed"
         },
         {
+            "id": 281,
             "n": "of Greed"
         },
         {
+            "id": 282,
             "n": "of Greed"
         },
         {
+            "id": 283,
             "n": "of Greed"
         },
         {
+            "id": 284,
             "n": "of Greed"
         },
         {
+            "id": 285,
             "n": "of Avarice"
         },
         {
+            "id": 286,
             "n": "of Chance"
         },
         {
+            "id": 287,
             "n": "of Fortune",
             "tc": "lgld"
         },
         {
+            "id": 288,
             "n": "of Fortune",
             "tc": "lgld"
         },
         {
+            "id": 289,
             "n": "of Luck",
             "tc": "lgld"
         },
         {
+            "id": 290,
             "n": "of Fortune"
         },
         {
+            "id": 291,
             "n": "of Good Luck"
         },
         {
+            "id": 292,
             "n": "of Prosperity"
         },
         {
+            "id": 293,
             "n": "of Energy"
         },
         {
+            "id": 294,
             "n": "of the Mind"
         },
         {
+            "id": 295,
             "n": "of Brilliance"
         },
         {
+            "id": 296,
             "n": "of Sorcery"
         },
         {
+            "id": 297,
             "n": "of Wizardry",
             "tc": "dgld"
         },
         {
+            "id": 298,
             "n": "of Enlightenment",
             "tc": "dgld"
         },
         {
+            "id": 299,
             "n": "of Energy"
         },
         {
+            "id": 300,
             "n": "of the Mind"
         },
         {
+            "id": 301,
             "n": "of Brilliance"
         },
         {
+            "id": 302,
             "n": "of Sorcery"
         },
         {
+            "id": 303,
             "n": "of Wizardry",
             "tc": "dgld"
         },
         {
+            "id": 304,
             "n": "of Energy"
         },
         {
+            "id": 305,
             "n": "of the Mind"
         },
         {
+            "id": 306,
             "n": "of Brilliance"
         },
         {
+            "id": 307,
             "n": "of Sorcery",
             "tc": "dgld"
         },
         {
+            "id": 308,
             "n": "of Knowledge"
         },
         {
+            "id": 309,
             "n": "of the Bear"
         },
         {
+            "id": 310,
             "n": "of Light"
         },
         {
+            "id": 311,
             "n": "of Radiance"
         },
         {
+            "id": 312,
             "n": "of the Sun"
         },
         {
+            "id": 313,
             "n": "of the Jackal"
         },
         {
+            "id": 314,
             "n": "of the Fox"
         },
         {
+            "id": 315,
             "n": "of the Wolf"
         },
         {
+            "id": 316,
             "n": "of the Tiger"
         },
         {
+            "id": 317,
             "n": "of the Mammoth",
             "tc": "cred"
         },
         {
+            "id": 318,
             "n": "of the Colossus",
             "tc": "cred"
         },
         {
+            "id": 319,
             "n": "of the Squid",
             "tc": "cred"
         },
         {
+            "id": 320,
             "n": "of the Whale",
             "tc": "cred"
         },
         {
+            "id": 321,
             "n": "of the Jackal"
         },
         {
+            "id": 322,
             "n": "of the Fox"
         },
         {
+            "id": 323,
             "n": "of the Wolf"
         },
         {
+            "id": 324,
             "n": "of the Tiger"
         },
         {
+            "id": 325,
             "n": "of the Mammoth",
             "tc": "cred"
         },
         {
+            "id": 326,
             "n": "of the Colossus",
             "tc": "cred"
         },
         {
+            "id": 327,
             "n": "of the Jackal"
         },
         {
+            "id": 328,
             "n": "of the Fox"
         },
         {
+            "id": 329,
             "n": "of the Wolf"
         },
         {
+            "id": 330,
             "n": "of the Tiger"
         },
         {
+            "id": 331,
             "n": "of the Mammoth",
             "tc": "cred"
         },
         {
+            "id": 332,
             "n": "of Life"
         },
         {
+            "id": 333,
             "n": "of Life"
         },
         {
+            "id": 334,
             "n": "of Life"
         },
         {
+            "id": 335,
             "n": "of Sustenance"
         },
         {
+            "id": 336,
             "n": "of Sustenance"
         },
         {
+            "id": 337,
             "n": "of Sustenance"
         },
         {
+            "id": 338,
             "n": "of Vita"
         },
         {
+            "id": 339,
             "n": "of Vita"
         },
         {
+            "id": 340,
             "n": "of Vita"
         },
         {
+            "id": 341,
             "n": "of Life"
         },
         {
+            "id": 342,
             "n": "of Life"
         },
         {
+            "id": 343,
             "n": "of Sustenance"
         },
         {
+            "id": 344,
             "n": "of Sustenance"
         },
         {
+            "id": 345,
             "n": "of Vita"
         },
         {
+            "id": 346,
             "n": "of Vita"
         },
         {
+            "id": 347,
             "n": "of Life"
         },
         {
+            "id": 348,
             "n": "of Sustenance"
         },
         {
+            "id": 349,
             "n": "of Vita"
         },
         {
+            "id": 350,
             "n": "of Spirit"
         },
         {
+            "id": 351,
             "n": "of Hope"
         },
         {
+            "id": 352,
             "n": "of the Leech"
         },
         {
+            "id": 353,
             "n": "of the Locust",
             "tc": "cred"
         },
         {
+            "id": 354,
             "n": "of the Lamprey",
             "tc": "cred"
         },
         {
+            "id": 355,
             "n": "of the Leech"
         },
         {
+            "id": 356,
             "n": "of the Locust"
         },
         {
+            "id": 357,
             "n": "of the Lamprey",
             "tc": "cred"
         },
         {
+            "id": 358,
             "n": "of the Leech",
             "tc": "cred"
         },
         {
+            "id": 359,
             "n": "of the Bat"
         },
         {
+            "id": 360,
             "n": "of the Wraith",
             "tc": "cred"
         },
         {
+            "id": 361,
             "n": "of the Vampire",
             "tc": "cred"
         },
         {
+            "id": 362,
             "n": "of the Bat"
         },
         {
+            "id": 363,
             "n": "of the Wraith"
         },
         {
+            "id": 364,
             "n": "of the Vampire",
             "tc": "cred"
         },
         {
+            "id": 365,
             "n": "of the Bat",
             "tc": "cred"
         },
         {
+            "id": 366,
             "n": "of Defiance",
             "tc": "dred"
         },
         {
+            "id": 367,
             "n": "of Amelioration"
         },
         {
+            "id": 368,
             "n": "of Remedy"
         },
         {
+            "id": 369,
             "n": "of Simplicity"
         },
         {
+            "id": 370,
             "n": "of Ease"
         },
         {
+            "id": 371,
             "n": "of Freedom"
         },
         {
+            "id": 372,
             "n": "of Strength"
         },
         {
+            "id": 373,
             "n": "of Might"
         },
         {
+            "id": 374,
             "n": "of the Ox"
         },
         {
+            "id": 375,
             "n": "of the Giant"
         },
         {
+            "id": 376,
             "n": "of the Titan",
             "tc": "dgld"
         },
         {
+            "id": 377,
             "n": "of Atlas",
             "tc": "dgld"
         },
         {
+            "id": 378,
             "n": "of Strength"
         },
         {
+            "id": 379,
             "n": "of Might"
         },
         {
+            "id": 380,
             "n": "of the Ox"
         },
         {
+            "id": 381,
             "n": "of the Giant"
         },
         {
+            "id": 382,
             "n": "of the Titan",
             "tc": "dgld"
         },
         {
+            "id": 383,
             "n": "of Strength"
         },
         {
+            "id": 384,
             "n": "of Might"
         },
         {
+            "id": 385,
             "n": "of the Ox"
         },
         {
+            "id": 386,
             "n": "of the Giant",
             "tc": "dgld"
         },
         {
+            "id": 387,
             "n": "of Strength"
         },
         {
+            "id": 388,
             "n": "of Strength"
         },
         {
+            "id": 389,
             "n": "of Strength"
         },
         {
+            "id": 390,
             "n": "of Strength"
         },
         {
+            "id": 391,
             "n": "of Strength"
         },
         {
+            "id": 392,
             "n": "of Strength"
         },
         {
+            "id": 393,
             "n": "of Virility"
         },
         {
+            "id": 394,
             "n": "of Pacing"
         },
         {
+            "id": 395,
             "n": "of Haste"
         },
         {
+            "id": 396,
             "n": "of Speed"
         },
         {
+            "id": 397,
             "n": "of Transportation"
         },
         {
+            "id": 398,
             "n": "of Acceleration"
         },
         {
+            "id": 399,
             "n": "of Inertia"
         },
         {
+            "id": 400,
             "n": "of Inertia"
         },
         {
+            "id": 401,
             "n": "of Inertia"
         },
         {
+            "id": 402,
             "n": "of Self-Repair"
         },
         {
+            "id": 403,
             "n": "of Restoration"
         },
         {
+            "id": 404,
             "n": "of Ages"
         },
         {
+            "id": 405,
             "n": "of Replenishing"
         },
         {
+            "id": 406,
             "n": "of Propogation"
         },
         {
+            "id": 407,
             "n": "of the Centaur",
             "tc": "cred"
         },
         {
+            "id": 408,
             "n": "of Memory",
             "tc": "cred"
         },
         {
+            "id": 409,
             "n": "of the Elephant",
             "tc": "cred"
         },
         {
+            "id": 410,
             "n": "of Power",
             "tc": "dgld"
         },
         {
+            "id": 411,
             "n": "of Grace",
             "tc": "dgld"
         },
         {
+            "id": 412,
             "n": "of Grace and Power",
             "tc": "dgld"
         },
         {
+            "id": 413,
             "n": "of the Yeti",
             "tc": "lblu"
         },
         {
+            "id": 414,
             "n": "of the Phoenix",
             "tc": "cred"
         },
         {
+            "id": 415,
             "n": "of the Efreeti",
             "tc": "cblu"
         },
         {
+            "id": 416,
             "n": "of the Cobra",
             "tc": "dyel"
         },
         {
+            "id": 417,
             "n": "of the Elements",
             "tc": "dgld"
         },
         {
+            "id": 418,
             "n": "of Firebolts"
         },
         {
+            "id": 419,
             "n": "of Firebolts"
         },
         {
+            "id": 420,
             "n": "of Firebolts"
         },
         {
+            "id": 421,
             "n": "of Charged Bolt"
         },
         {
+            "id": 422,
             "n": "of Charged Bolt"
         },
         {
+            "id": 423,
             "n": "of Charged Bolt"
         },
         {
+            "id": 424,
             "n": "of Icebolt",
             "tc": "lblu"
         },
         {
+            "id": 425,
             "n": "of Frozen Armor"
         },
         {
+            "id": 426,
             "n": "of Static Field"
         },
         {
+            "id": 427,
             "n": "of Telekinesis"
         },
         {
+            "id": 428,
             "n": "of Frost Shield",
             "tc": "lblu"
         },
         {
+            "id": 429,
             "n": "of Ice Blast"
         },
         {
+            "id": 430,
             "n": "of Blaze"
         },
         {
+            "id": 431,
             "n": "of Fire Ball"
         },
         {
+            "id": 432,
             "n": "of Nova",
             "tc": "cblu"
         },
         {
+            "id": 433,
             "n": "of Nova",
             "tc": "cblu"
         },
         {
+            "id": 434,
             "n": "of Nova Shield",
             "tc": "cblu"
         },
         {
+            "id": 435,
             "n": "of Nova Shield",
             "tc": "cblu"
         },
         {
+            "id": 436,
             "n": "of Nova Shield",
             "tc": "cblu"
         },
         {
+            "id": 437,
             "n": "of Lightning",
             "tc": "cblu"
         },
         {
+            "id": 438,
             "n": "of Lightning",
             "tc": "cblu"
         },
         {
+            "id": 439,
             "n": "of Shiver Armor"
         },
         {
+            "id": 440,
             "n": "of Fire Wall"
         },
         {
+            "id": 441,
             "n": "of Enchant"
         },
         {
+            "id": 442,
             "n": "of Chain Lightning"
         },
         {
+            "id": 443,
             "n": "of Chain Lightning"
         },
         {
+            "id": 444,
             "n": "of Chain Lightning"
         },
         {
+            "id": 445,
             "n": "of Teleport Shield",
             "tc": "whit"
         },
         {
+            "id": 446,
             "n": "of Teleport Shield",
             "tc": "whit"
         },
         {
+            "id": 447,
             "n": "of Teleport Shield",
             "tc": "whit"
         },
         {
+            "id": 448,
             "n": "of Glacial Spike"
         },
         {
+            "id": 449,
             "n": "of Meteor"
         },
         {
+            "id": 450,
             "n": "of Thunder Storm"
         },
         {
+            "id": 451,
             "n": "of Energy Shield"
         },
         {
+            "id": 452,
             "n": "of Blizzard"
         },
         {
+            "id": 453,
             "n": "of Chilling Armor"
         },
         {
+            "id": 454,
             "n": "of Hydra Shield",
             "tc": "cred"
         },
         {
+            "id": 455,
             "n": "of Frozen Orb"
         },
         {
+            "id": 456,
             "n": "of Dawn"
         },
         {
+            "id": 457,
             "n": "of Sunlight"
         },
         {
+            "id": 458,
             "n": "of Magic Arrow"
         },
         {
+            "id": 459,
             "n": "of Magic Arrow"
         },
         {
+            "id": 460,
             "n": "of Fire Arrow"
         },
         {
+            "id": 461,
             "n": "of Fire Arrow"
         },
         {
+            "id": 462,
             "n": "of Inner Sight"
         },
         {
+            "id": 463,
             "n": "of Inner Sight"
         },
         {
+            "id": 464,
             "n": "of Jab"
         },
         {
+            "id": 465,
             "n": "of Jab"
         },
         {
+            "id": 466,
             "n": "of Cold Arrow"
         },
         {
+            "id": 467,
             "n": "of Cold Arrow"
         },
         {
+            "id": 468,
             "n": "of Multiple Shot"
         },
         {
+            "id": 469,
             "n": "of Multiple Shot"
         },
         {
+            "id": 470,
             "n": "of Power Strike"
         },
         {
+            "id": 471,
             "n": "of Power Strike"
         },
         {
+            "id": 472,
             "n": "of Poison Jab"
         },
         {
+            "id": 473,
             "n": "of Poison Jab"
         },
         {
+            "id": 474,
             "n": "of Exploding Arrow"
         },
         {
+            "id": 475,
             "n": "of Exploding Arrow"
         },
         {
+            "id": 476,
             "n": "of Slow Missile"
         },
         {
+            "id": 477,
             "n": "of Slow Missile"
         },
         {
+            "id": 478,
             "n": "of Impaling Strike"
         },
         {
+            "id": 479,
             "n": "of Impaling Strike"
         },
         {
+            "id": 480,
             "n": "of Lightning Javelin"
         },
         {
+            "id": 481,
             "n": "of Lightning Javelin"
         },
         {
+            "id": 482,
             "n": "of Ice Arrow"
         },
         {
+            "id": 483,
             "n": "of Ice Arrow"
         },
         {
+            "id": 484,
             "n": "of Guided Arrow"
         },
         {
+            "id": 485,
             "n": "of Guided Arrow"
         },
         {
+            "id": 486,
             "n": "of Charged Strike"
         },
         {
+            "id": 487,
             "n": "of Charged Strike"
         },
         {
+            "id": 488,
             "n": "of Plague Jab"
         },
         {
+            "id": 489,
             "n": "of Plague Jab"
         },
         {
+            "id": 490,
             "n": "of Immolating Arrow"
         },
         {
+            "id": 491,
             "n": "of Immolating Arrow"
         },
         {
+            "id": 492,
             "n": "of Fending"
         },
         {
+            "id": 493,
             "n": "of Fending"
         },
         {
+            "id": 494,
             "n": "of Freezing Arrow"
         },
         {
+            "id": 495,
             "n": "of Freezing Arrow"
         },
         {
+            "id": 496,
             "n": "of Lightning Strike"
         },
         {
+            "id": 497,
             "n": "of Lightning Strike"
         },
         {
+            "id": 498,
             "n": "of Lightning Fury"
         },
         {
+            "id": 499,
             "n": "of Lightning Fury"
         },
         {
+            "id": 500,
             "n": "of Fire Bolt"
         },
         {
+            "id": 501,
             "n": "of Fire Bolt"
         },
         {
+            "id": 502,
             "n": "of Charged Bolt"
         },
         {
+            "id": 503,
             "n": "of Charged Bolt"
         },
         {
+            "id": 504,
             "n": "of Ice Bolt"
         },
         {
+            "id": 505,
             "n": "of Ice Bolt"
         },
         {
+            "id": 506,
             "n": "of Frozen Armor"
         },
         {
+            "id": 507,
             "n": "of Frozen Armor"
         },
         {
+            "id": 508,
             "n": "of Static Field"
         },
         {
+            "id": 509,
             "n": "of Static Field"
         },
         {
+            "id": 510,
             "n": "of Telekinesis"
         },
         {
+            "id": 511,
             "n": "of Telekinesis"
         },
         {
+            "id": 512,
             "n": "of Frost Nova"
         },
         {
+            "id": 513,
             "n": "of Frost Nova"
         },
         {
+            "id": 514,
             "n": "of Ice Blast"
         },
         {
+            "id": 515,
             "n": "of Ice Blast"
         },
         {
+            "id": 516,
             "n": "of Blazing"
         },
         {
+            "id": 517,
             "n": "of Blazing"
         },
         {
+            "id": 518,
             "n": "of Fire Ball"
         },
         {
+            "id": 519,
             "n": "of Fire Ball"
         },
         {
+            "id": 520,
             "n": "of Nova"
         },
         {
+            "id": 521,
             "n": "of Nova"
         },
         {
+            "id": 522,
             "n": "of Lightning"
         },
         {
+            "id": 523,
             "n": "of Lightning"
         },
         {
+            "id": 524,
             "n": "of Shiver Armor"
         },
         {
+            "id": 525,
             "n": "of Shiver Armor"
         },
         {
+            "id": 526,
             "n": "of Fire Wall"
         },
         {
+            "id": 527,
             "n": "of Fire Wall"
         },
         {
+            "id": 528,
             "n": "of Enchantment"
         },
         {
+            "id": 529,
             "n": "of Enchantment"
         },
         {
+            "id": 530,
             "n": "of Chain Lightning"
         },
         {
+            "id": 531,
             "n": "of Chain Lightning"
         },
         {
+            "id": 532,
             "n": "of Teleportation"
         },
         {
+            "id": 533,
             "n": "of Teleportation"
         },
         {
+            "id": 534,
             "n": "of Glacial Spike"
         },
         {
+            "id": 535,
             "n": "of Glacial Spike"
         },
         {
+            "id": 536,
             "n": "of Meteor"
         },
         {
+            "id": 537,
             "n": "of Meteor"
         },
         {
+            "id": 538,
             "n": "of Thunder Storm"
         },
         {
+            "id": 539,
             "n": "of Thunder Storm"
         },
         {
+            "id": 540,
             "n": "of Energy Shield"
         },
         {
+            "id": 541,
             "n": "of Energy Shield"
         },
         {
+            "id": 542,
             "n": "of Blizzard"
         },
         {
+            "id": 543,
             "n": "of Blizzard"
         },
         {
+            "id": 544,
             "n": "of Chilling Armor"
         },
         {
+            "id": 545,
             "n": "of Chilling Armor"
         },
         {
+            "id": 546,
             "n": "of Hydra"
         },
         {
+            "id": 547,
             "n": "of Hydra"
         },
         {
+            "id": 548,
             "n": "of Frozen Orb"
         },
         {
+            "id": 549,
             "n": "of Frozen Orb"
         },
         {
+            "id": 550,
             "n": "of Amplify Damage"
         },
         {
+            "id": 551,
             "n": "of Amplify Damage"
         },
         {
+            "id": 552,
             "n": "of Teeth"
         },
         {
+            "id": 553,
             "n": "of Teeth"
         },
         {
+            "id": 554,
             "n": "of Bone Armor"
         },
         {
+            "id": 555,
             "n": "of Bone Armor"
         },
         {
+            "id": 556,
             "n": "of Raise Skeleton"
         },
         {
+            "id": 557,
             "n": "of Raise Skeleton"
         },
         {
+            "id": 558,
             "n": "of Dim Vision"
         },
         {
+            "id": 559,
             "n": "of Dim Vision"
         },
         {
+            "id": 560,
             "n": "of Weaken"
         },
         {
+            "id": 561,
             "n": "of Weaken"
         },
         {
+            "id": 562,
             "n": "of Poison Dagger"
         },
         {
+            "id": 563,
             "n": "of Poison Dagger"
         },
         {
+            "id": 564,
             "n": "of Corpse Explosion"
         },
         {
+            "id": 565,
             "n": "of Corpse Explosion"
         },
         {
+            "id": 566,
             "n": "of Clay Golem"
         },
         {
+            "id": 567,
             "n": "of Clay Golem"
         },
         {
+            "id": 568,
             "n": "of Iron Maiden"
         },
         {
+            "id": 569,
             "n": "of Iron Maiden"
         },
         {
+            "id": 570,
             "n": "of Terror"
         },
         {
+            "id": 571,
             "n": "of Terror"
         },
         {
+            "id": 572,
             "n": "of Bone Wall"
         },
         {
+            "id": 573,
             "n": "of Bone Wall"
         },
         {
+            "id": 574,
             "n": "of Skeletal Mages"
         },
         {
+            "id": 575,
             "n": "of Skeletal Mages"
         },
         {
+            "id": 576,
             "n": "of Confusion"
         },
         {
+            "id": 577,
             "n": "of Confusion"
         },
         {
+            "id": 578,
             "n": "of Life Tap"
         },
         {
+            "id": 579,
             "n": "of Life Tap"
         },
         {
+            "id": 580,
             "n": "of Poison Explosion"
         },
         {
+            "id": 581,
             "n": "of Poison Explosion"
         },
         {
+            "id": 582,
             "n": "of Bone Spear"
         },
         {
+            "id": 583,
             "n": "of Bone Spear"
         },
         {
+            "id": 584,
             "n": "of Blood Golem"
         },
         {
+            "id": 585,
             "n": "of Blood Golem"
         },
         {
+            "id": 586,
             "n": "of Attract"
         },
         {
+            "id": 587,
             "n": "of Attract"
         },
         {
+            "id": 588,
             "n": "of Decrepify"
         },
         {
+            "id": 589,
             "n": "of Decrepify"
         },
         {
+            "id": 590,
             "n": "of Bone Prison"
         },
         {
+            "id": 591,
             "n": "of Bone Prison"
         },
         {
+            "id": 592,
             "n": "of Iron Golem"
         },
         {
+            "id": 593,
             "n": "of Iron Golem"
         },
         {
+            "id": 594,
             "n": "of Lower Resistance"
         },
         {
+            "id": 595,
             "n": "of Lower Resistance"
         },
         {
+            "id": 596,
             "n": "of Poison Nova"
         },
         {
+            "id": 597,
             "n": "of Poison Nova"
         },
         {
+            "id": 598,
             "n": "of Bone Spirit"
         },
         {
+            "id": 599,
             "n": "of Bone Spirit"
         },
         {
+            "id": 600,
             "n": "of Fire Golem"
         },
         {
+            "id": 601,
             "n": "of Fire Golem"
         },
         {
+            "id": 602,
             "n": "of Revivification"
         },
         {
+            "id": 603,
             "n": "of Revivification"
         },
         {
+            "id": 604,
             "n": "of Sacrifice"
         },
         {
+            "id": 605,
             "n": "of Sacrifice"
         },
         {
+            "id": 606,
             "n": "of Holy Bolt"
         },
         {
+            "id": 607,
             "n": "of Holy Bolt"
         },
         {
+            "id": 608,
             "n": "of Zeal"
         },
         {
+            "id": 609,
             "n": "of Zeal"
         },
         {
+            "id": 610,
             "n": "of Vengeance"
         },
         {
+            "id": 611,
             "n": "of Vengeance"
         },
         {
+            "id": 612,
             "n": "of Blessed Hammer"
         },
         {
+            "id": 613,
             "n": "of Blessed Hammer"
         },
         {
+            "id": 614,
             "n": "of Conversion"
         },
         {
+            "id": 615,
             "n": "of Conversion"
         },
         {
+            "id": 616,
             "n": "of Fist of the Heavens"
         },
         {
+            "id": 617,
             "n": "of Fist of the Heavens"
         },
         {
+            "id": 618,
             "n": "of Bashing"
         },
         {
+            "id": 619,
             "n": "of Bashing"
         },
         {
+            "id": 620,
             "n": "of Howl"
         },
         {
+            "id": 621,
             "n": "of Howl"
         },
         {
+            "id": 622,
             "n": "of Find Potion"
         },
         {
+            "id": 623,
             "n": "of Find Potion"
         },
         {
+            "id": 624,
             "n": "of Taunt"
         },
         {
+            "id": 625,
             "n": "of Taunt"
         },
         {
+            "id": 626,
             "n": "of Shout"
         },
         {
+            "id": 627,
             "n": "of Shout"
         },
         {
+            "id": 628,
             "n": "of Stun"
         },
         {
+            "id": 629,
             "n": "of Stun"
         },
         {
+            "id": 630,
             "n": "of Find Item"
         },
         {
+            "id": 631,
             "n": "of Find Item"
         },
         {
+            "id": 632,
             "n": "of Concentration"
         },
         {
+            "id": 633,
             "n": "of Concentration"
         },
         {
+            "id": 634,
             "n": "of Battle Cry"
         },
         {
+            "id": 635,
             "n": "of Battle Cry"
         },
         {
+            "id": 636,
             "n": "of Battle Orders"
         },
         {
+            "id": 637,
             "n": "of Battle Orders"
         },
         {
+            "id": 638,
             "n": "of Grim Ward"
         },
         {
+            "id": 639,
             "n": "of Grim Ward"
         },
         {
+            "id": 640,
             "n": "of War Cry"
         },
         {
+            "id": 641,
             "n": "of War Cry"
         },
         {
+            "id": 642,
             "n": "of Battle Command"
         },
         {
+            "id": 643,
             "n": "of Battle Command"
         },
         {
+            "id": 644,
             "n": "of Firestorms"
         },
         {
+            "id": 645,
             "n": "of Firestorms"
         },
         {
+            "id": 646,
             "n": "of Molten Boulder"
         },
         {
+            "id": 647,
             "n": "of Molten Boulder"
         },
         {
+            "id": 648,
             "n": "of Fissure"
         },
         {
+            "id": 649,
             "n": "of Fissure"
         },
         {
+            "id": 650,
             "n": "of Cyclone Armor"
         },
         {
+            "id": 651,
             "n": "of Cyclone Armor"
         },
         {
+            "id": 652,
             "n": "of Twister"
         },
         {
+            "id": 653,
             "n": "of Twister"
         },
         {
+            "id": 654,
             "n": "of Volcano"
         },
         {
+            "id": 655,
             "n": "of Volcano"
         },
         {
+            "id": 656,
             "n": "of Tornado"
         },
         {
+            "id": 657,
             "n": "of Tornado"
         },
         {
+            "id": 658,
             "n": "of Armageddon"
         },
         {
+            "id": 659,
             "n": "of Armageddon"
         },
         {
+            "id": 660,
             "n": "of Hurricane"
         },
         {
+            "id": 661,
             "n": "of Hurricane"
         },
         {
+            "id": 662,
             "n": "of Amplify Damage"
         },
         {
+            "id": 663,
             "n": "of the Icicle",
             "tc": "dblu"
         },
         {
+            "id": 664,
             "n": "of the Glacier",
             "tc": "dblu"
         },
         {
+            "id": 665,
             "n": "of Fire",
             "tc": "dred"
         },
         {
+            "id": 666,
             "n": "of Burning",
             "tc": "dred"
         },
         {
+            "id": 667,
             "n": "of Lightning",
             "tc": "dyel"
         },
         {
+            "id": 668,
             "n": "of Thunder",
             "tc": "dyel"
         },
         {
+            "id": 669,
             "n": "of Daring"
         },
         {
+            "id": 670,
             "n": "of Daring"
         },
         {
+            "id": 671,
             "n": "of Knowledge"
         },
         {
+            "id": 672,
             "n": "of Knowledge"
         },
         {
+            "id": 673,
             "n": "of Virility"
         },
         {
+            "id": 674,
             "n": "of Virility"
         },
         {
+            "id": 675,
             "n": "of Readiness"
         },
         {
+            "id": 676,
             "n": "of Craftmanship"
         },
         {
+            "id": 677,
             "n": "of Quality"
         },
         {
+            "id": 678,
             "n": "of Maiming"
         },
         {
+            "id": 679,
             "n": "of Craftmanship"
         },
         {
+            "id": 680,
             "n": "of Quality"
         },
         {
+            "id": 681,
             "n": "of Craftmanship"
         },
         {
+            "id": 682,
             "n": "of Blight"
         },
         {
+            "id": 683,
             "n": "of Venom"
         },
         {
+            "id": 684,
             "n": "of Pestilence"
         },
         {
+            "id": 685,
             "n": "of Anthrax"
         },
         {
+            "id": 686,
             "n": "of Blight"
         },
         {
+            "id": 687,
             "n": "of Venom"
         },
         {
+            "id": 688,
             "n": "of Pestilence",
             "tc": "dgrn"
         },
         {
+            "id": 689,
             "n": "of Anthrax",
             "tc": "dgrn"
         },
         {
+            "id": 690,
             "n": "of Blight"
         },
         {
+            "id": 691,
             "n": "of Venom"
         },
         {
+            "id": 692,
             "n": "of Pestilence",
             "tc": "dgrn"
         },
         {
+            "id": 693,
             "n": "of Anthrax",
             "tc": "dgrn"
         },
         {
+            "id": 694,
             "n": "of Frost"
         },
         {
+            "id": 695,
             "n": "of the Icicle"
         },
         {
+            "id": 696,
             "n": "of the Glacier"
         },
         {
+            "id": 697,
             "n": "of Winter"
         },
         {
+            "id": 698,
             "n": "of Frost"
         },
         {
+            "id": 699,
             "n": "of the Icicle"
         },
         {
+            "id": 700,
             "n": "of the Glacier",
             "tc": "dblu"
         },
         {
+            "id": 701,
             "n": "of Winter",
             "tc": "dblu"
         },
         {
+            "id": 702,
             "n": "of Frost"
         },
         {
+            "id": 703,
             "n": "of the Icicle"
         },
         {
+            "id": 704,
             "n": "of the Glacier",
             "tc": "dblu"
         },
         {
+            "id": 705,
             "n": "of Winter",
             "tc": "dblu"
         },
         {
+            "id": 706,
             "n": "of Flame"
         },
         {
+            "id": 707,
             "n": "of Fire"
         },
         {
+            "id": 708,
             "n": "of Burning"
         },
         {
+            "id": 709,
             "n": "of Incineration"
         },
         {
+            "id": 710,
             "n": "of Flame"
         },
         {
+            "id": 711,
             "n": "of Fire"
         },
         {
+            "id": 712,
             "n": "of Burning",
             "tc": "dred"
         },
         {
+            "id": 713,
             "n": "of Incineration",
             "tc": "dred"
         },
         {
+            "id": 714,
             "n": "of Flame"
         },
         {
+            "id": 715,
             "n": "of Fire"
         },
         {
+            "id": 716,
             "n": "of Burning",
             "tc": "dred"
         },
         {
+            "id": 717,
             "n": "of Incineration",
             "tc": "dred"
         },
         {
+            "id": 718,
             "n": "of Shock"
         },
         {
+            "id": 719,
             "n": "of Lightning"
         },
         {
+            "id": 720,
             "n": "of Thunder"
         },
         {
+            "id": 721,
             "n": "of Storms"
         },
         {
+            "id": 722,
             "n": "of Shock"
         },
         {
+            "id": 723,
             "n": "of Lightning"
         },
         {
+            "id": 724,
             "n": "of Thunder",
             "tc": "dyel"
         },
         {
+            "id": 725,
             "n": "of Storms",
             "tc": "dyel"
         },
         {
+            "id": 726,
             "n": "of Shock"
         },
         {
+            "id": 727,
             "n": "of Lightning"
         },
         {
+            "id": 728,
             "n": "of Thunder",
             "tc": "dyel"
         },
         {
+            "id": 729,
             "n": "of Storms",
             "tc": "dyel"
         },
         {
+            "id": 730,
             "n": "of Dexterity"
         },
         {
+            "id": 731,
             "n": "of Dexterity"
         },
         {
+            "id": 732,
             "n": "of Strength"
         },
         {
+            "id": 733,
             "n": "of Strength"
         },
         {
+            "id": 734,
             "n": "of Thorns"
         },
         {
+            "id": 735,
             "n": "of Frost"
         },
         {
+            "id": 736,
             "n": "of Flame"
         },
         {
+            "id": 737,
             "n": "of Blight"
         },
         {
+            "id": 738,
             "n": "of Shock"
         },
         {
+            "id": 739,
             "n": "of Regeneration"
         },
         {
+            "id": 740,
             "n": "of Energy"
         },
         {
+            "id": 741,
             "n": "of Light"
         },
         {
+            "id": 742,
             "n": "of the Leech"
         },
         {
+            "id": 743,
             "n": "of the Locust"
         },
         {
+            "id": 744,
             "n": "of the Lamprey",
             "tc": "cred"
         },
         {
+            "id": 745,
             "n": "of the Bat"
         },
         {
+            "id": 746,
             "n": "of the Wraith"
         },
         {
+            "id": 747,
             "n": "of the Vampire",
             "tc": "cred"
         },
-        {}
+        {
+            "id": 748
+        }
     ],
     "properties": {
         "ac": [
@@ -11775,3130 +13889,4811 @@ export let vanilla_constants_99 = {
         null,
         null,
         {
+            "id": 27,
             "n": "Ancients' Pledge"
         },
         {
+            "id": 28,
             "n": "Armageddon"
         },
         {
+            "id": 29,
             "n": "Authority"
         },
         {
+            "id": 30,
             "n": "Beast"
         },
         {
+            "id": 31,
             "n": "Beauty"
         },
         {
+            "id": 32,
             "n": "Black"
         },
         {
+            "id": 33,
             "n": "Blood"
         },
         {
+            "id": 34,
             "n": "Bone"
         },
         {
+            "id": 35,
             "n": "Bramble"
         },
         {
+            "id": 36,
             "n": "Brand"
         },
         {
+            "id": 37,
             "n": "Breath of the Dying"
         },
         {
+            "id": 38,
             "n": "Broken Promise"
         },
         {
+            "id": 39,
             "n": "Call to Arms"
         },
         {
+            "id": 40,
             "n": "Chains of Honor"
         },
         {
+            "id": 41,
             "n": "Chance"
         },
         {
+            "id": 42,
             "n": "Chaos"
         },
         {
+            "id": 43,
             "n": "Crescent Moon"
         },
         {
+            "id": 44,
             "n": "Darkness"
         },
         {
+            "id": 45,
             "n": "Daylight"
         },
         {
+            "id": 46,
             "n": "Death"
         },
         {
+            "id": 47,
             "n": "Deception"
         },
         {
+            "id": 48,
             "n": "Delirium"
         },
         {
+            "id": 49,
             "n": "Desire"
         },
         {
+            "id": 50,
             "n": "Despair"
         },
         {
+            "id": 51,
             "n": "Destruction"
         },
         {
+            "id": 52,
             "n": "Doom"
         },
         {
+            "id": 53,
             "n": "Dragon"
         },
         {
+            "id": 54,
             "n": "Dread"
         },
         {
+            "id": 55,
             "n": "Dream"
         },
         {
+            "id": 56,
             "n": "Duress"
         },
         {
+            "id": 57,
             "n": "Edge"
         },
         {
+            "id": 58,
             "n": "Elation"
         },
         {
+            "id": 59,
             "n": "Enigma"
         },
         {
+            "id": 60,
             "n": "Enlightenment"
         },
         {
+            "id": 61,
             "n": "Envy"
         },
         {
+            "id": 62,
             "n": "Eternity"
         },
         {
+            "id": 63,
             "n": "Exile"
         },
         {
+            "id": 64,
             "n": "Faith"
         },
         {
+            "id": 65,
             "n": "Famine"
         },
         {
+            "id": 66,
             "n": "Flickering Flame"
         },
         {
+            "id": 67,
             "n": "Fortitude"
         },
         {
+            "id": 68,
             "n": "Fortune"
         },
         {
+            "id": 69,
             "n": "Friendship"
         },
         {
+            "id": 70,
             "n": "Fury"
         },
         {
+            "id": 71,
             "n": "Gloom"
         },
         {
+            "id": 72,
             "n": "Glory"
         },
         {
+            "id": 73,
             "n": "Grief"
         },
         {
+            "id": 74,
             "n": "Hand of Justice"
         },
         {
+            "id": 75,
             "n": "Harmony"
         },
         {
+            "id": 76,
             "n": "Hatred"
         },
         {
+            "id": 77,
             "n": "Heart of the Oak"
         },
         {
+            "id": 78,
             "n": "Heaven's Will"
         },
         {
+            "id": 79,
             "n": "Holy Tears"
         },
         {
+            "id": 80,
             "n": "Holy Thunder"
         },
         {
+            "id": 81,
             "n": "Honor"
         },
         {
+            "id": 82,
             "n": "Revenge"
         },
         {
+            "id": 83,
             "n": "Humility"
         },
         {
+            "id": 84,
             "n": "Hunger"
         },
         {
+            "id": 85,
             "n": "Ice"
         },
         {
+            "id": 86,
             "n": "Infinity"
         },
         {
+            "id": 87,
             "n": "Innocence"
         },
         {
+            "id": 88,
             "n": "Insight"
         },
         {
+            "id": 89,
             "n": "Jealousy"
         },
         {
+            "id": 90,
             "n": "Judgement"
         },
         {
+            "id": 91,
             "n": "King's Grace"
         },
         {
+            "id": 92,
             "n": "Kingslayer"
         },
         {
+            "id": 93,
             "n": "Knight's Vigil"
         },
         {
+            "id": 94,
             "n": "Knowledge"
         },
         {
+            "id": 95,
             "n": "Last Wish"
         },
         {
+            "id": 96,
             "n": "Law"
         },
         {
+            "id": 97,
             "n": "Lawbringer"
         },
         {
+            "id": 98,
             "n": "Leaf"
         },
         {
+            "id": 99,
             "n": "Lightning"
         },
         {
+            "id": 100,
             "n": "Lionheart"
         },
         {
+            "id": 101,
             "n": "Love"
         },
         {
+            "id": 102,
             "n": "Loyalty"
         },
         {
+            "id": 103,
             "n": "Lust"
         },
         {
+            "id": 104,
             "n": "Madness"
         },
         null,
         {
+            "id": 106,
             "n": "Malice"
         },
         {
+            "id": 107,
             "n": "Melody"
         },
         {
+            "id": 108,
             "n": "Memory"
         },
         {
+            "id": 109,
             "n": "Mist"
         },
         {
+            "id": 110,
             "n": "Morning"
         },
         {
+            "id": 111,
             "n": "Mystery"
         },
         {
+            "id": 112,
             "n": "Myth"
         },
         {
+            "id": 113,
             "n": "Nadir"
         },
         {
+            "id": 114,
             "n": "Nature's Kingdom"
         },
         {
+            "id": 115,
             "n": "Night"
         },
         {
+            "id": 116,
             "n": "Oath"
         },
         {
+            "id": 117,
             "n": "Obedience"
         },
         {
+            "id": 118,
             "n": "Oblivion"
         },
         {
+            "id": 119,
             "n": "Obsession"
         },
         {
+            "id": 120,
             "n": "Passion"
         },
         {
+            "id": 121,
             "n": "Patience"
         },
         {
+            "id": 122,
             "n": "Pattern"
         },
         {
+            "id": 123,
             "n": "Peace"
         },
         {
+            "id": 124,
             "n": "Voice of Reason"
         },
         {
+            "id": 125,
             "n": "Penitence"
         },
         {
+            "id": 126,
             "n": "Peril"
         },
         {
+            "id": 127,
             "n": "Pestilence"
         },
         {
+            "id": 128,
             "n": "Phoenix"
         },
         {
+            "id": 129,
             "n": "Piety"
         },
         {
+            "id": 130,
             "n": "Pillar of Faith"
         },
         {
+            "id": 131,
             "n": "Plague"
         },
         {
+            "id": 132,
             "n": "Praise"
         },
         {
+            "id": 133,
             "n": "Prayer"
         },
         {
+            "id": 134,
             "n": "Pride"
         },
         {
+            "id": 135,
             "n": "Principle"
         },
         {
+            "id": 136,
             "n": "Prowess in Battle"
         },
         {
+            "id": 137,
             "n": "Prudence"
         },
         {
+            "id": 138,
             "n": "Punishment"
         },
         {
+            "id": 139,
             "n": "Purity"
         },
         {
+            "id": 140,
             "n": "Question"
         },
         {
+            "id": 141,
             "n": "Radiance"
         },
         {
+            "id": 142,
             "n": "Rain"
         },
         {
+            "id": 143,
             "n": "Reason"
         },
         {
+            "id": 144,
             "n": "Red"
         },
         {
+            "id": 145,
             "n": "Rhyme"
         },
         {
+            "id": 146,
             "n": "Rift"
         },
         {
+            "id": 147,
             "n": "Sanctuary"
         },
         {
+            "id": 148,
             "n": "Serendipity"
         },
         {
+            "id": 149,
             "n": "Shadow"
         },
         {
+            "id": 150,
             "n": "Shadow of Doubt"
         },
         {
+            "id": 151,
             "n": "Silence"
         },
         {
+            "id": 152,
             "n": "Siren's Song"
         },
         {
+            "id": 153,
             "n": "Smoke"
         },
         {
+            "id": 154,
             "n": "Sorrow"
         },
         {
+            "id": 155,
             "n": "Spirit"
         },
         {
+            "id": 156,
             "n": "Splendor"
         },
         {
+            "id": 157,
             "n": "Starlight"
         },
         {
+            "id": 158,
             "n": "Stealth"
         },
         {
+            "id": 159,
             "n": "Steel"
         },
         {
+            "id": 160,
             "n": "Still Water"
         },
         {
+            "id": 161,
             "n": "Sting"
         },
         {
+            "id": 162,
             "n": "Stone"
         },
         {
+            "id": 163,
             "n": "Storm"
         },
         {
+            "id": 164,
             "n": "Strength"
         },
         {
+            "id": 165,
             "n": "Tempest"
         },
         {
+            "id": 166,
             "n": "Temptation"
         },
         {
+            "id": 167,
             "n": "Terror"
         },
         {
+            "id": 168,
             "n": "Thirst"
         },
         {
+            "id": 169,
             "n": "Thought"
         },
         {
+            "id": 170,
             "n": "Thunder"
         },
         {
+            "id": 171,
             "n": "Time"
         },
         {
+            "id": 172,
             "n": "Tradition"
         },
         {
+            "id": 173,
             "n": "Treachery"
         },
         {
+            "id": 174,
             "n": "Trust"
         },
         {
+            "id": 175,
             "n": "Truth"
         },
         {
+            "id": 176,
             "n": "Unbending Will"
         },
         {
+            "id": 177,
             "n": "Valor"
         },
         {
+            "id": 178,
             "n": "Vengeance"
         },
         {
+            "id": 179,
             "n": "Venom"
         },
         {
+            "id": 180,
             "n": "Victory"
         },
         {
+            "id": 181,
             "n": "Voice"
         },
         {
+            "id": 182,
             "n": "Void"
         },
         {
+            "id": 183,
             "n": "War"
         },
         {
+            "id": 184,
             "n": "Water"
         },
         {
+            "id": 185,
             "n": "Wealth"
         },
         {
+            "id": 186,
             "n": "Whisper"
         },
         {
+            "id": 187,
             "n": "White"
         },
         {
+            "id": 188,
             "n": "Wind"
         },
         {
+            "id": 189,
             "n": "Wings of Hope"
         },
         {
+            "id": 190,
             "n": "Wisdom"
         },
         {
+            "id": 191,
             "n": "Woe"
         },
         {
+            "id": 192,
             "n": "Wonder"
         },
         {
+            "id": 193,
             "n": "Wrath"
         },
         {
+            "id": 194,
             "n": "Youth"
         },
         {
+            "id": 195,
             "n": "Zephyr"
         },
         {
+            "id": 196,
             "n": "Hustle"
         },
         {
+            "id": 197,
             "n": "Hustle"
         },
         {
+            "id": 198,
             "n": "Mosaic"
         },
         {
+            "id": 199,
             "n": "Metamorphosis"
         },
         {
+            "id": 200,
             "n": "Ground"
         },
         {
+            "id": 201,
             "n": "Temper"
         },
         {
+            "id": 202,
             "n": "Hearth"
         },
         {
+            "id": 203,
             "n": "Cure"
         },
         {
+            "id": 204,
             "n": "Bulwark"
         }
     ],
     "set_items": [
         {
+            "id": 0,
+            "index": "Civerb's Ward",
             "n": "Civerb's Ward",
             "c": "lrg",
             "tc": "lyel"
         },
         {
+            "id": 1,
+            "index": "Civerb's Icon",
             "n": "Civerb's Icon",
             "c": "amu",
             "tc": "lyel"
         },
         {
+            "id": 2,
+            "index": "Civerb's Cudgel",
             "n": "Civerb's Cudgel",
             "c": "gsc",
-            "tc": "lyel"
+            "tc": "lyel",
+            "hdi": "weapon/scepter/grand_scepter"
         },
         {
+            "id": 3,
+            "index": "Hsarus' Iron Heel",
             "n": "Hsarus' Iron Heel",
             "c": "mbt",
             "tc": "dred"
         },
         {
+            "id": 4,
+            "index": "Hsarus' Iron Fist",
             "n": "Hsarus' Iron Fist",
             "c": "buc",
             "tc": "dred"
         },
         {
+            "id": 5,
+            "index": "Hsarus' Iron Stay",
             "n": "Hsarus' Iron Stay",
             "c": "mbl",
             "tc": "dred"
         },
         {
+            "id": 6,
+            "index": "Cleglaw's Tooth",
             "n": "Cleglaw's Tooth",
             "c": "lsd",
-            "tc": "lred"
+            "tc": "lred",
+            "hdi": "weapon/sword/hellplague"
         },
         {
+            "id": 7,
+            "index": "Cleglaw's Claw",
             "n": "Cleglaw's Claw",
             "c": "sml",
             "tc": "lred"
         },
         {
+            "id": 8,
+            "index": "Cleglaw's Pincers",
             "n": "Cleglaw's Pincers",
             "c": "mgl",
             "tc": "lred"
         },
         {
+            "id": 9,
+            "index": "Iratha's Collar",
             "n": "Iratha's Collar",
             "c": "amu",
             "tc": "lgry"
         },
         {
+            "id": 10,
+            "index": "Iratha's Cuff",
             "n": "Iratha's Cuff",
             "c": "tgl",
             "tc": "lgry"
         },
         {
+            "id": 11,
+            "index": "Iratha's Coil",
             "n": "Iratha's Coil",
             "c": "crn",
             "tc": "lgry"
         },
         {
+            "id": 12,
+            "index": "Iratha's Cord",
             "n": "Iratha's Cord",
             "c": "tbl",
             "tc": "lgry"
         },
         {
+            "id": 13,
+            "index": "Isenhart's Lightbrand",
             "n": "Isenhart's Lightbrand",
             "c": "bsd",
-            "tc": "lgld"
+            "tc": "lgld",
+            "hdi": "weapon/sword/griswolds_edge"
         },
         {
+            "id": 14,
+            "index": "Isenhart's Parry",
             "n": "Isenhart's Parry",
             "c": "gts",
             "tc": "lgld"
         },
         {
+            "id": 15,
+            "index": "Isenhart's Case",
             "n": "Isenhart's Case",
             "c": "brs",
             "tc": "lgld"
         },
         {
+            "id": 16,
+            "index": "Isenhart's Horns",
             "n": "Isenhart's Horns",
             "c": "fhl",
             "tc": "lgld"
         },
         {
+            "id": 17,
+            "index": "Vidala's Barb",
             "n": "Vidala's Barb",
             "c": "lbb",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "weapon/bow/long_battle_bow"
         },
         {
+            "id": 18,
+            "index": "Vidala's Fetlock",
             "n": "Vidala's Fetlock",
             "c": "tbt",
             "tc": "blac"
         },
         {
+            "id": 19,
+            "index": "Vidala's Ambush",
             "n": "Vidala's Ambush",
             "c": "lea",
             "tc": "blac"
         },
         {
+            "id": 20,
+            "index": "Vidala's Snare",
             "n": "Vidala's Snare",
             "c": "amu",
             "tc": "blac"
         },
         {
+            "id": 21,
+            "index": "Milabrega's Orb",
             "n": "Milabrega's Orb",
             "c": "kit",
             "tc": "dblu"
         },
         {
+            "id": 22,
+            "index": "Milabrega's Rod",
             "n": "Milabrega's Rod",
             "c": "wsp",
-            "tc": "dblu"
+            "tc": "dblu",
+            "hdi": "weapon/scepter/war_scepter"
         },
         {
+            "id": 23,
+            "index": "Milabrega's Diadem",
             "n": "Milabrega's Diadem",
             "c": "crn",
             "tc": "dblu"
         },
         {
+            "id": 24,
+            "index": "Milabrega's Robe",
             "n": "Milabrega's Robe",
             "c": "aar",
             "tc": "dblu"
         },
         {
+            "id": 25,
+            "index": "Cathan's Rule",
             "n": "Cathan's Rule",
             "c": "bst",
-            "tc": "dgrn"
+            "tc": "dgrn",
+            "hdi": "weapon/staff/battle_staff"
         },
         {
+            "id": 26,
+            "index": "Cathan's Mesh",
             "n": "Cathan's Mesh",
             "c": "chn",
             "tc": "dgrn"
         },
         {
+            "id": 27,
+            "index": "Cathan's Visage",
             "n": "Cathan's Visage",
             "c": "msk",
             "tc": "dgrn"
         },
         {
+            "id": 28,
+            "index": "Cathan's Sigil",
             "n": "Cathan's Sigil",
             "c": "amu",
             "tc": "dgrn"
         },
         {
+            "id": 29,
+            "index": "Cathan's Seal",
             "n": "Cathan's Seal",
             "c": "rin",
             "tc": "dgrn"
         },
         {
+            "id": 30,
+            "index": "Tancred's Crowbill",
             "n": "Tancred's Crowbill",
             "c": "mpi",
-            "tc": "dgld"
+            "tc": "dgld",
+            "hdi": "weapon/axe/mindrend"
         },
         {
+            "id": 31,
+            "index": "Tancred's Spine",
             "n": "Tancred's Spine",
             "c": "ful",
             "tc": "dgld"
         },
         {
+            "id": 32,
+            "index": "Tancred's Hobnails",
             "n": "Tancred's Hobnails",
             "c": "lbt",
             "tc": "dgld"
         },
         {
+            "id": 33,
+            "index": "Tancred's Weird",
             "n": "Tancred's Weird",
             "c": "amu",
             "tc": "dgld"
         },
         {
+            "id": 34,
+            "index": "Tancred's Skull",
             "n": "Tancred's Skull",
             "c": "bhm",
             "tc": "dgld"
         },
         {
+            "id": 35,
+            "index": "Sigon's Gage",
             "n": "Sigon's Gage",
             "c": "hgl",
             "tc": "whit"
         },
         {
+            "id": 36,
+            "index": "Sigon's Visor",
             "n": "Sigon's Visor",
             "c": "ghm",
             "tc": "whit"
         },
         {
+            "id": 37,
+            "index": "Sigon's Shelter",
             "n": "Sigon's Shelter",
             "c": "gth",
             "tc": "whit"
         },
         {
+            "id": 38,
+            "index": "Sigon's Sabot",
             "n": "Sigon's Sabot",
             "c": "hbt",
             "tc": "whit"
         },
         {
+            "id": 39,
+            "index": "Sigon's Wrap",
             "n": "Sigon's Wrap",
             "c": "hbl",
             "tc": "whit"
         },
         {
+            "id": 40,
+            "index": "Sigon's Guard",
             "n": "Sigon's Guard",
             "c": "tow",
             "tc": "whit"
         },
         {
+            "id": 41,
+            "index": "Infernal Cranium",
             "n": "Infernal Cranium",
             "c": "cap",
             "tc": "lyel"
         },
         {
+            "id": 42,
+            "index": "Infernal Torch",
             "n": "Infernal Torch",
             "c": "gwn",
-            "tc": "lyel"
+            "tc": "lyel",
+            "hdi": "weapon/wand/grim_wand"
         },
         {
+            "id": 43,
+            "index": "Infernal Sign",
             "n": "Infernal Sign",
             "c": "tbl",
             "tc": "lyel"
         },
         {
+            "id": 44,
+            "index": "Berserker's Headgear",
             "n": "Berserker's Headgear",
             "c": "hlm",
             "tc": "dred"
         },
         {
+            "id": 45,
+            "index": "Berserker's Hauberk",
             "n": "Berserker's Hauberk",
             "c": "spl",
             "tc": "dred"
         },
         {
+            "id": 46,
+            "index": "Berserker's Hatchet",
             "n": "Berserker's Hatchet",
             "c": "2ax",
-            "tc": "dred"
+            "tc": "dred",
+            "hdi": "weapon/axe/double_axe"
         },
         {
+            "id": 47,
+            "index": "Death's Hand",
             "n": "Death's Hand",
             "c": "lgl",
             "tc": "lred"
         },
         {
+            "id": 48,
+            "index": "Death's Guard",
             "n": "Death's Guard",
             "c": "lbl",
             "tc": "lred"
         },
         {
+            "id": 49,
+            "index": "Death's Touch",
             "n": "Death's Touch",
             "c": "wsd",
-            "tc": "lred"
+            "tc": "lred",
+            "hdi": "weapon/sword/war_sword"
         },
         {
+            "id": 50,
+            "index": "Angelic Sickle",
             "n": "Angelic Sickle",
             "c": "sbr",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "weapon/sword/krintizs_skewer"
         },
         {
+            "id": 51,
+            "index": "Angelic Mantle",
             "n": "Angelic Mantle",
             "c": "rng",
             "tc": "lgry"
         },
         {
+            "id": 52,
+            "index": "Angelic Halo",
             "n": "Angelic Halo",
             "c": "rin",
             "tc": "lgry"
         },
         {
+            "id": 53,
+            "index": "Angelic Wings",
             "n": "Angelic Wings",
             "c": "amu",
             "tc": "lgry"
         },
         {
+            "id": 54,
+            "index": "Arctic Horn",
             "n": "Arctic Horn",
             "c": "swb",
-            "tc": "lgld"
+            "tc": "lgld",
+            "hdi": "weapon/bow/hellclap"
         },
         {
+            "id": 55,
+            "index": "Arctic Furs",
             "n": "Arctic Furs",
             "c": "qui",
             "tc": "lgld"
         },
         {
+            "id": 56,
+            "index": "Arctic Binding",
             "n": "Arctic Binding",
             "c": "vbl",
             "tc": "lgld"
         },
         {
+            "id": 57,
+            "index": "Arctic Mitts",
             "n": "Arctic Mitts",
             "c": "tgl",
             "tc": "lgld"
         },
         {
+            "id": 58,
+            "index": "Arcanna's Sign",
             "n": "Arcanna's Sign",
             "c": "amu",
             "tc": "blac"
         },
         {
+            "id": 59,
+            "index": "Arcanna's Deathwand",
             "n": "Arcanna's Deathwand",
             "c": "wst",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "weapon/staff/war_staff"
         },
         {
+            "id": 60,
+            "index": "Arcanna's Head",
             "n": "Arcanna's Head",
             "c": "skp",
             "tc": "blac"
         },
         {
+            "id": 61,
+            "index": "Arcanna's Flesh",
             "n": "Arcanna's Flesh",
             "c": "ltp",
             "tc": "blac"
         },
         {
+            "id": 62,
+            "index": "Natalya's Totem",
             "n": "Natalya's Totem",
             "c": "xh9",
             "tc": "dgry"
         },
         {
+            "id": 63,
+            "index": "Natalya's Mark",
             "n": "Natalya's Mark",
             "c": "7qr",
-            "tc": "dgry"
+            "tc": "dgry",
+            "hdi": "weapon/h2h/natalyas_mark"
         },
         {
+            "id": 64,
+            "index": "Natalya's Shadow",
             "n": "Natalya's Shadow",
             "c": "ucl",
             "tc": "dgry"
         },
         {
+            "id": 65,
+            "index": "Natalya's Soul",
             "n": "Natalya's Soul",
             "c": "xmb",
             "tc": "dgry"
         },
         {
+            "id": 66,
+            "index": "Aldur's Stony Gaze",
             "n": "Aldur's Stony Gaze",
             "c": "dr8",
             "tc": "oran"
         },
         {
+            "id": 67,
+            "index": "Aldur's Deception",
             "n": "Aldur's Deception",
             "c": "uul",
             "tc": "oran"
         },
         {
+            "id": 68,
+            "index": "Aldur's Gauntlet",
             "n": "Aldur's Rhythm",
             "c": "9mt",
-            "tc": "oran"
+            "tc": "oran",
+            "hdi": "weapon/mace/bloodrise"
         },
         {
+            "id": 69,
+            "index": "Aldur's Advance",
             "n": "Aldur's Advance",
             "c": "xtb",
             "tc": "oran"
         },
         {
+            "id": 70,
+            "index": "Immortal King's Will",
             "n": "Immortal King's Will",
             "c": "ba5",
             "tc": "lgry"
         },
         {
+            "id": 71,
+            "index": "Immortal King's Soul Cage",
             "n": "Immortal King's Soul Cage",
             "c": "uar",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "armor/armor/victors_silk"
         },
         {
+            "id": 72,
+            "index": "Immortal King's Detail",
             "n": "Immortal King's Detail",
             "c": "zhb",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "armor/belt/girdle_h"
         },
         {
+            "id": 73,
+            "index": "Immortal King's Forge",
             "n": "Immortal King's Forge",
             "c": "xhg",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "armor/glove/gaunlets_h"
         },
         {
+            "id": 74,
+            "index": "Immortal King's Pillar",
             "n": "Immortal King's Pillar",
             "c": "xhb",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "armor/boot/plate_boots"
         },
         {
+            "id": 75,
+            "index": "Immortal King's Stone Crusher",
             "n": "Immortal King's Stone Crusher",
             "c": "7m7",
             "tc": "lgry"
         },
         {
+            "id": 76,
+            "index": "Tal Rasha's Fire-Spun Cloth",
             "n": "Tal Rasha's Fine-Spun Cloth",
             "c": "zmb",
-            "tc": "dpur"
+            "tc": "dpur",
+            "hdi": "armor/belt/belt_m"
         },
         {
+            "id": 77,
+            "index": "Tal Rasha's Adjudication",
             "n": "Tal Rasha's Adjudication",
             "c": "amu",
             "tc": "dpur"
         },
         {
+            "id": 78,
+            "index": "Tal Rasha's Lidless Eye",
             "n": "Tal Rasha's Lidless Eye",
             "c": "oba",
             "tc": "dpur"
         },
         {
+            "id": 79,
+            "index": "Tal Rasha's Howling Wind",
             "n": "Tal Rasha's Guardianship",
             "c": "uth",
-            "tc": "dpur"
+            "tc": "dpur",
+            "hdi": "armor/armor/gothic_plate"
         },
         {
+            "id": 80,
+            "index": "Tal Rasha's Horadric Crest",
             "n": "Tal Rasha's Horadric Crest",
             "c": "xsk",
-            "tc": "dpur"
+            "tc": "dpur",
+            "hdi": "armor/helmet/mask"
         },
         {
+            "id": 81,
+            "index": "Griswold's Valor",
             "n": "Griswold's Valor",
             "c": "urn",
-            "tc": "dgld"
+            "tc": "dgld",
+            "hdi": "armor/helmet/crown"
         },
         {
+            "id": 82,
+            "index": "Griswold's Heart",
             "n": "Griswold's Heart",
             "c": "xar",
-            "tc": "dgld"
+            "tc": "dgld",
+            "hdi": "armor/armor/corpsemourn"
         },
         {
+            "id": 83,
+            "index": "Griswolds's Redemption",
             "n": "Griswold's Redemption",
             "c": "7ws",
             "tc": "dgld"
         },
         {
+            "id": 84,
+            "index": "Griswold's Honor",
             "n": "Griswold's Honor",
             "c": "paf",
-            "tc": "dgld"
+            "tc": "dgld",
+            "hdi": "armor/shield/crown_shield"
         },
         {
+            "id": 85,
+            "index": "Trang-Oul's Guise",
             "n": "Trang-Oul's Guise",
             "c": "uh9",
-            "tc": "dgld"
+            "tc": "dgld",
+            "hdi": "armor/helmet/wormskull"
         },
         {
+            "id": 86,
+            "index": "Trang-Oul's Scales",
             "n": "Trang-Oul's Scales",
             "c": "xul",
-            "tc": "dyel"
+            "tc": "dyel",
+            "hdi": "armor/armor/full_plate_mail"
         },
         {
+            "id": 87,
+            "index": "Trang-Oul's Wing",
             "n": "Trang-Oul's Wing",
             "c": "ne9",
-            "tc": "dyel"
+            "tc": "dyel",
+            "hdi": "armor/voodoo_head/gargoyle_head"
         },
         {
+            "id": 88,
+            "index": "Trang-Oul's Claws",
             "n": "Trang-Oul's Claws",
             "c": "xmg",
-            "tc": "dyel"
+            "tc": "dyel",
+            "hdi": "armor/glove/bracers_m"
         },
         {
+            "id": 89,
+            "index": "Trang-Oul's Girth",
             "n": "Trang-Oul's Girth",
             "c": "utc",
-            "tc": "dyel"
+            "tc": "dyel",
+            "hdi": "armor/belt/heavy_belt"
         },
         {
+            "id": 90,
+            "index": "M'avina's True Sight",
             "n": "M'avina's True Sight",
             "c": "ci3",
-            "tc": "whit"
+            "tc": "whit",
+            "hdi": "armor/circlet/diadem"
         },
         {
+            "id": 91,
+            "index": "M'avina's Embrace",
             "n": "M'avina's Embrace",
             "c": "uld",
-            "tc": "whit"
+            "tc": "whit",
+            "hdi": "armor/armor/field_plate"
         },
         {
+            "id": 92,
+            "index": "M'avina's Icy Clutch",
             "n": "M'avina's Icy Clutch",
             "c": "xtg",
-            "tc": "whit"
+            "tc": "whit",
+            "hdi": "armor/glove/light_gauntlets"
         },
         {
+            "id": 93,
+            "index": "M'avina's Tenet",
             "n": "M'avina's Tenet",
             "c": "zvb",
-            "tc": "whit"
+            "tc": "whit",
+            "hdi": "armor/belt/light_belt"
         },
         {
+            "id": 94,
+            "index": "M'avina's Caster",
             "n": "M'avina's Caster",
             "c": "amc",
             "tc": "whit"
         },
         {
+            "id": 95,
+            "index": "Telling of Beads",
             "n": "Telling of Beads",
             "c": "amu",
             "tc": "lblu"
         },
         {
+            "id": 96,
+            "index": "Laying of Hands",
             "n": "Laying of Hands",
             "c": "ulg",
-            "tc": "lblu"
+            "tc": "lblu",
+            "hdi": "armor/glove/gloves_l"
         },
         {
+            "id": 97,
+            "index": "Rite of Passage",
             "n": "Rite of Passage",
             "c": "xlb",
-            "tc": "lblu"
+            "tc": "lblu",
+            "hdi": "armor/boot/leather_boots"
         },
         {
+            "id": 98,
+            "index": "Spiritual Custodian",
             "n": "Dark Adherent",
             "c": "uui",
-            "tc": "lblu"
+            "tc": "lblu",
+            "hdi": "armor/armor/quilted_armor"
         },
         {
+            "id": 99,
+            "index": "Credendum",
             "n": "Credendum",
             "c": "umc",
-            "tc": "lblu"
+            "tc": "lblu",
+            "hdi": "armor/belt/belt_m"
         },
         {
+            "id": 100,
+            "index": "Dangoon's Teaching",
             "n": "Dangoon's Teaching",
             "c": "7ma"
         },
         {
+            "id": 101,
+            "index": "Heaven's Taebaek",
             "n": "Taebaek's Glory",
-            "c": "uts"
+            "c": "uts",
+            "hdi": "armor/shield/heavens_taebaek"
         },
         {
+            "id": 102,
+            "index": "Haemosu's Adament",
             "n": "Haemosu's Adamant",
-            "c": "xrs"
+            "c": "xrs",
+            "hdi": "armor/armor/haemosus_adament"
         },
         {
+            "id": 103,
+            "index": "Ondal's Almighty",
             "n": "Ondal's Almighty",
-            "c": "uhm"
+            "c": "uhm",
+            "hdi": "armor/helmet/ondals_almighty"
         },
         {
+            "id": 104,
+            "index": "Guillaume's Face",
             "n": "Guillaume's Face",
             "c": "xhm",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "armor/helmet/great_helm"
         },
         {
+            "id": 105,
+            "index": "Wilhelm's Pride",
             "n": "Wilhelm's Pride",
             "c": "ztb",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "armor/belt/heavy_belt"
         },
         {
+            "id": 106,
+            "index": "Magnus' Skin",
             "n": "Magnus' Skin",
             "c": "xvg",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "armor/glove/heavy_gloves"
         },
         {
+            "id": 107,
+            "index": "Wihtstan's Guard",
             "n": "Whitstan's Guard",
             "c": "xml",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "armor/shield/mosers_blessed_circle"
         },
         {
+            "id": 108,
+            "index": "Hwanin's Splendor",
             "n": "Hwanin's Splendor",
-            "c": "xrn"
+            "c": "xrn",
+            "hdi": "armor/helmet/crown_of_thieves"
         },
         {
+            "id": 109,
+            "index": "Hwanin's Refuge",
             "n": "Hwanin's Refuge",
-            "c": "xcl"
+            "c": "xcl",
+            "hdi": "armor/armor/scale_mail"
         },
         {
+            "id": 110,
+            "index": "Hwanin's Seal",
             "n": "Hwanin's Blessing",
-            "c": "mbl"
+            "c": "mbl",
+            "hdi": "armor/belt/belt_m"
         },
         {
+            "id": 111,
+            "index": "Hwanin's Justice",
             "n": "Hwanin's Justice",
             "c": "9vo"
         },
         {
+            "id": 112,
+            "index": "Sazabi's Cobalt Redeemer",
             "n": "Sazabi's Cobalt Redeemer",
             "c": "7ls",
             "tc": "dblu"
         },
         {
+            "id": 113,
+            "index": "Sazabi's Ghost Liberator",
             "n": "Sazabi's Ghost Liberator",
             "c": "upl",
-            "tc": "dblu"
+            "tc": "dblu",
+            "hdi": "armor/armor/splint_mail"
         },
         {
+            "id": 114,
+            "index": "Sazabi's Mental Sheath",
             "n": "Sazabi's Mental Sheath",
             "c": "xhl",
-            "tc": "dblu"
+            "tc": "dblu",
+            "hdi": "armor/helmet/duskdeep"
         },
         {
+            "id": 115,
+            "index": "Bul-Kathos' Sacred Charge",
             "n": "Bul-Kathos' Sacred Charge",
             "c": "7gd",
             "tc": "dgrn"
         },
         {
+            "id": 116,
+            "index": "Bul-Kathos' Tribal Guardian",
             "n": "Bul-Kathos' Tribal Guardian",
             "c": "7wd",
             "tc": "dgrn"
         },
         {
+            "id": 117,
+            "index": "Cow King's Horns",
             "n": "Cow King's Horns",
             "c": "xap"
         },
         {
+            "id": 118,
+            "index": "Cow King's Hide",
             "n": "Cow King's Hide",
             "c": "stu"
         },
         {
+            "id": 119,
+            "index": "Cow King's Hoofs",
             "n": "Cow King's Hooves",
             "c": "vbt"
         },
         {
+            "id": 120,
+            "index": "Naj's Puzzler",
             "n": "Naj's Puzzler",
             "c": "6cs"
         },
         {
+            "id": 121,
+            "index": "Naj's Light Plate",
             "n": "Naj's Light Plate",
             "c": "ult"
         },
         {
+            "id": 122,
+            "index": "Naj's Circlet",
             "n": "Naj's Circlet",
             "c": "ci0"
         },
         {
+            "id": 123,
+            "index": "McAuley's Paragon",
             "n": "Sander's Paragon",
             "c": "cap",
             "tc": "lpur"
         },
         {
+            "id": 124,
+            "index": "McAuley's Riprap",
             "n": "Sander's Riprap",
             "c": "vbt",
             "tc": "lpur"
         },
         {
+            "id": 125,
+            "index": "McAuley's Taboo",
             "n": "Sander's Taboo",
             "c": "vgl",
             "tc": "lpur"
         },
         {
+            "id": 126,
+            "index": "McAuley's Superstition",
             "n": "Sander's Superstition",
             "c": "bwn",
-            "tc": "lpur"
+            "tc": "lpur",
+            "hdi": "weapon/wand/gravenspine"
         }
     ],
     "unq_items": [
         {
+            "id": 0,
+            "index": "The Gnasher",
             "n": "The Gnasher",
             "i": "invhaxu",
-            "c": "hax"
+            "c": "hax",
+            "hdi": "weapon/axe/the_gnasher"
         },
         {
+            "id": 1,
+            "index": "Deathspade",
             "n": "Deathspade",
             "i": "invaxeu",
-            "c": "axe"
+            "c": "axe",
+            "hdi": "weapon/axe/deathspade"
         },
         {
+            "id": 2,
+            "index": "Bladebone",
             "n": "Bladebone",
             "c": "2ax",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "weapon/axe/double_axe"
         },
         {
+            "id": 3,
+            "index": "Mindrend",
             "n": "Skull Splitter",
             "i": "invmpiu",
-            "c": "mpi"
+            "c": "mpi",
+            "hdi": "weapon/axe/mindrend"
         },
         {
+            "id": 4,
+            "index": "Rakescar",
             "n": "Rakescar",
             "c": "wax",
-            "tc": "dgry"
+            "tc": "dgry",
+            "hdi": "weapon/axe/war_axe"
         },
         {
+            "id": 5,
+            "index": "Fechmars Axe",
             "n": "Axe of Fechmar",
             "c": "lax",
-            "tc": "lpur"
+            "tc": "lpur",
+            "hdi": "weapon/axe/large_axe"
         },
         {
+            "id": 6,
+            "index": "Goreshovel",
             "n": "Goreshovel",
             "c": "bax",
-            "tc": "dpur"
+            "tc": "dpur",
+            "hdi": "weapon/axe/broad_axe"
         },
         {
+            "id": 7,
+            "index": "The Chieftan",
             "n": "The Chieftain",
             "i": "invbtxu",
-            "c": "btx"
+            "c": "btx",
+            "hdi": "weapon/axe/the_chieftan"
         },
         {
+            "id": 8,
+            "index": "Brainhew",
             "n": "Brainhew",
             "i": "invgaxu",
-            "c": "gax"
+            "c": "gax",
+            "hdi": "weapon/axe/brainhew"
         },
         {
+            "id": 9,
+            "index": "The Humongous",
             "n": "Humongous",
             "c": "gix",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "weapon/axe/giant_axe"
         },
         {
+            "id": 10,
+            "index": "Iros Torch",
             "n": "Torch of Iro",
             "i": "invwndu",
-            "c": "wnd"
+            "c": "wnd",
+            "hdi": "weapon/wand/iros_torch"
         },
         {
+            "id": 11,
+            "index": "Maelstromwrath",
             "n": "Maelstrom",
             "c": "ywn",
-            "tc": "dblu"
+            "tc": "dblu",
+            "hdi": "weapon/wand/yew_wand"
         },
         {
+            "id": 12,
+            "index": "Gravenspine",
             "n": "Gravenspine",
             "i": "invbwnu",
-            "c": "bwn"
+            "c": "bwn",
+            "hdi": "weapon/wand/gravenspine"
         },
         {
+            "id": 13,
+            "index": "Umes Lament",
             "n": "Ume's Lament",
             "c": "gwn",
-            "tc": "lblu"
+            "tc": "lblu",
+            "hdi": "weapon/wand/grim_wand"
         },
         {
+            "id": 14,
+            "index": "Felloak",
             "n": "Felloak",
             "i": "invclbu",
-            "c": "clb"
+            "c": "clb",
+            "hdi": "weapon/club/felloak"
         },
         {
+            "id": 15,
+            "index": "Knell Striker",
             "n": "Knell Striker",
             "c": "scp",
-            "tc": "dred"
+            "tc": "dred",
+            "hdi": "weapon/scepter/scepter"
         },
         {
+            "id": 16,
+            "index": "Rusthandle",
             "n": "Rusthandle",
             "c": "gsc",
-            "tc": "lgld"
+            "tc": "lgld",
+            "hdi": "weapon/scepter/grand_scepter"
         },
         {
+            "id": 17,
+            "index": "Stormeye",
             "n": "Stormeye",
             "c": "wsp",
-            "tc": "cred"
+            "tc": "cred",
+            "hdi": "weapon/scepter/war_scepter"
         },
         {
+            "id": 18,
+            "index": "Stoutnail",
             "n": "Stoutnail",
             "i": "invspcu",
-            "c": "spc"
+            "c": "spc",
+            "hdi": "weapon/club/stoutnail"
         },
         {
+            "id": 19,
+            "index": "Crushflange",
             "n": "Crushflange",
             "c": "mac",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "weapon/mace/mace"
         },
         {
+            "id": 20,
+            "index": "Bloodrise",
             "n": "Bloodrise",
             "i": "invmstu",
-            "c": "mst"
+            "c": "mst",
+            "hdi": "weapon/mace/bloodrise"
         },
         {
+            "id": 21,
+            "index": "The Generals Tan Do Li Ga",
             "n": "The General's Tan Do Li Ga",
             "c": "fla",
-            "tc": "dblu"
+            "tc": "dblu",
+            "hdi": "weapon/mace/flail"
         },
         {
+            "id": 22,
+            "index": "Ironstone",
             "n": "Ironstone",
             "c": "whm",
-            "tc": "cblu"
+            "tc": "cblu",
+            "hdi": "weapon/hammer/war_hammer"
         },
         {
+            "id": 23,
+            "index": "Bonesob",
             "n": "Bonesnap",
             "i": "invmauu",
-            "c": "mau"
+            "c": "mau",
+            "hdi": "weapon/hammer/bonesob"
         },
         {
+            "id": 24,
+            "index": "Steeldriver",
             "n": "Steeldriver",
             "i": "invgma",
             "c": "gma",
-            "tc": "cgrn"
+            "tc": "cgrn",
+            "hdi": "weapon/hammer/great_maul"
         },
         {
+            "id": 25,
+            "index": "Rixots Keen",
             "n": "Rixot's Keen",
             "c": "ssd",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "weapon/sword/short_sword"
         },
         {
+            "id": 26,
+            "index": "Blood Crescent",
             "n": "Blood Crescent",
             "i": "invscmu",
-            "c": "scm"
+            "c": "scm",
+            "hdi": "weapon/sword/blood_crescent"
         },
         {
+            "id": 27,
+            "index": "Krintizs Skewer",
             "n": "Skewer of Krintiz",
             "i": "inv9sbu",
-            "c": "sbr"
+            "c": "sbr",
+            "hdi": "weapon/sword/krintizs_skewer"
         },
         {
+            "id": 28,
+            "index": "Gleamscythe",
             "n": "Gleamscythe",
             "i": "invflcu",
-            "c": "flc"
+            "c": "flc",
+            "hdi": "weapon/sword/gleamscythe"
         },
         {
+            "id": 29,
+            "index": "Azurewrath",
             "n": "Azurewrath",
             "i": "invcrsu",
-            "c": "crs"
+            "c": "crs",
+            "hdi": "weapon/sword/crystal_sword"
         },
         {
+            "id": 30,
+            "index": "Griswolds Edge",
             "n": "Griswold's Edge",
             "i": "invbsdu",
-            "c": "bsd"
+            "c": "bsd",
+            "hdi": "weapon/sword/griswolds_edge"
         },
         {
+            "id": 31,
+            "index": "Hellplague",
             "n": "Hellplague",
             "i": "invlsdu",
-            "c": "lsd"
+            "c": "lsd",
+            "hdi": "weapon/sword/hellplague"
         },
         {
+            "id": 32,
+            "index": "Culwens Point",
             "n": "Culwen's Point",
             "c": "wsd",
-            "tc": "whit"
+            "tc": "whit",
+            "hdi": "weapon/sword/war_sword"
         },
         {
+            "id": 33,
+            "index": "Shadowfang",
             "n": "Shadowfang",
             "i": "inv2hsu",
-            "c": "2hs"
+            "c": "2hs",
+            "hdi": "weapon/sword/shadowfang"
         },
         {
+            "id": 34,
+            "index": "Soulflay",
             "n": "Soulflay",
             "c": "clm",
-            "tc": "dgrn"
+            "tc": "dgrn",
+            "hdi": "weapon/sword/claymore"
         },
         {
+            "id": 35,
+            "index": "Kinemils Awl",
             "n": "Kinemil's Awl",
             "i": "invgisu",
-            "c": "gis"
+            "c": "gis",
+            "hdi": "weapon/sword/kinemils_awl"
         },
         {
+            "id": 36,
+            "index": "Blacktongue",
             "n": "Blacktongue",
             "i": "invbswu",
-            "c": "bsw"
+            "c": "bsw",
+            "hdi": "weapon/sword/blacktongue"
         },
         {
+            "id": 37,
+            "index": "Ripsaw",
             "n": "Ripsaw",
             "c": "flb",
-            "tc": "cblu"
+            "tc": "cblu",
+            "hdi": "weapon/sword/flamberge"
         },
         {
+            "id": 38,
+            "index": "The Patriarch",
             "n": "The Patriarch",
             "i": "invgsdu",
-            "c": "gsd"
+            "c": "gsd",
+            "hdi": "weapon/sword/the_patriarch"
         },
         {
+            "id": 39,
+            "index": "Gull",
             "n": "Gull",
             "c": "dgr",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "weapon/knife/dagger"
         },
         {
+            "id": 40,
+            "index": "The Diggler",
             "n": "The Diggler",
             "c": "dir",
-            "tc": "dgry"
+            "tc": "dgry",
+            "hdi": "weapon/knife/dirk"
         },
         {
+            "id": 41,
+            "index": "The Jade Tan Do",
             "n": "The Jade Tan Do",
             "i": "invkrsu",
-            "c": "kri"
+            "c": "kri",
+            "hdi": "weapon/knife/the_jade_tan_do"
         },
         {
+            "id": 42,
+            "index": "Irices Shard",
             "n": "Spectral Shard",
             "c": "bld",
-            "tc": "dblu"
+            "tc": "dblu",
+            "hdi": "weapon/knife/blade"
         },
         {
+            "id": 43,
+            "index": "The Dragon Chang",
             "n": "The Dragon Chang",
             "c": "spr",
-            "tc": "dpur"
+            "tc": "dpur",
+            "hdi": "weapon/spear/spear"
         },
         {
+            "id": 44,
+            "index": "Razortine",
             "n": "Razortine",
             "i": "invtriu",
-            "c": "tri"
+            "c": "tri",
+            "hdi": "weapon/spear/razortine"
         },
         {
+            "id": 45,
+            "index": "Bloodthief",
             "n": "Bloodthief",
             "c": "brn",
-            "tc": "whit"
+            "tc": "whit",
+            "hdi": "weapon/spear/brandistock"
         },
         {
+            "id": 46,
+            "index": "Lance of Yaggai",
             "n": "Lance of Yaggai",
             "c": "spt",
-            "tc": "lred"
+            "tc": "lred",
+            "hdi": "weapon/spear/spetum"
         },
         {
+            "id": 47,
+            "index": "The Tannr Gorerod",
             "n": "The Tannr Gorerod",
             "c": "pik",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "weapon/spear/pike"
         },
         {
+            "id": 48,
+            "index": "Dimoaks Hew",
             "n": "Dimoak's Hew",
             "c": "bar",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "weapon/polearm/bardiche"
         },
         {
+            "id": 49,
+            "index": "Steelgoad",
             "n": "Steelgoad",
             "c": "vou",
-            "tc": "cgrn"
+            "tc": "cgrn",
+            "hdi": "weapon/polearm/voulge"
         },
         {
+            "id": 50,
+            "index": "Soul Harvest",
             "n": "Soul Harvest",
             "i": "invscyu",
-            "c": "scy"
+            "c": "scy",
+            "hdi": "weapon/polearm/soul_harvest"
         },
         {
+            "id": 51,
+            "index": "The Battlebranch",
             "n": "The Battlebranch",
             "c": "pax",
-            "tc": "lblu"
+            "tc": "lblu",
+            "hdi": "weapon/polearm/poleaxe"
         },
         {
+            "id": 52,
+            "index": "Woestave",
             "n": "Woestave",
             "c": "hal",
-            "tc": "dblu"
+            "tc": "dblu",
+            "hdi": "weapon/polearm/halberd"
         },
         {
+            "id": 53,
+            "index": "The Grim Reaper",
             "n": "The Grim Reaper",
             "c": "wsc",
-            "tc": "lpur"
+            "tc": "lpur",
+            "hdi": "weapon/polearm/war_scythe"
         },
         {
+            "id": 54,
+            "index": "Bane Ash",
             "n": "Bane Ash",
             "c": "sst",
-            "tc": "lgrn"
+            "tc": "lgrn",
+            "hdi": "weapon/staff/short_staff"
         },
         {
+            "id": 55,
+            "index": "Serpent Lord",
             "n": "Serpent Lord",
             "c": "lst",
-            "tc": "cgrn"
+            "tc": "cgrn",
+            "hdi": "weapon/staff/long_staff"
         },
         {
+            "id": 56,
+            "index": "Lazarus Spire",
             "n": "Spire of Lazarus",
             "i": "invcstu",
-            "c": "cst"
+            "c": "cst",
+            "hdi": "weapon/staff/lazarus_spire"
         },
         {
+            "id": 57,
+            "index": "The Salamander",
             "n": "The Salamander",
             "c": "bst",
-            "tc": "dred"
+            "tc": "dred",
+            "hdi": "weapon/staff/battle_staff"
         },
         {
+            "id": 58,
+            "index": "The Iron Jang Bong",
             "n": "The Iron Jang Bong",
             "c": "wst",
-            "tc": "dyel"
+            "tc": "dyel",
+            "hdi": "weapon/staff/war_staff"
         },
         {
+            "id": 59,
+            "index": "Pluckeye",
             "n": "Pluckeye",
             "c": "sbw",
-            "tc": "cblu"
+            "tc": "cblu",
+            "hdi": "weapon/bow/short_bow"
         },
         {
+            "id": 60,
+            "index": "Witherstring",
             "n": "Witherstring",
             "c": "hbw",
-            "tc": "lred"
+            "tc": "lred",
+            "hdi": "weapon/bow/hunters_bow"
         },
         {
+            "id": 61,
+            "index": "Rimeraven",
             "n": "Raven Claw",
             "c": "lbw",
-            "tc": "dred"
+            "tc": "dred",
+            "hdi": "weapon/bow/long_bow"
         },
         {
+            "id": 62,
+            "index": "Piercerib",
             "n": "Rogue's Bow",
             "i": "invcbwu",
-            "c": "cbw"
+            "c": "cbw",
+            "hdi": "weapon/bow/piercerib"
         },
         {
+            "id": 63,
+            "index": "Pullspite",
             "n": "Stormstrike",
             "i": "invsbbu",
-            "c": "sbb"
+            "c": "sbb",
+            "hdi": "weapon/bow/pullspite"
         },
         {
+            "id": 64,
+            "index": "Wizendraw",
             "n": "Wizendraw",
             "c": "lbb",
-            "tc": "dgrn"
+            "tc": "dgrn",
+            "hdi": "weapon/bow/long_battle_bow"
         },
         {
+            "id": 65,
+            "index": "Hellclap",
             "n": "Hellclap",
             "i": "invswbu",
-            "c": "swb"
+            "c": "swb",
+            "hdi": "weapon/bow/hellclap"
         },
         {
+            "id": 66,
+            "index": "Blastbark",
             "n": "Blastbark",
             "c": "lwb",
-            "tc": "lyel"
+            "tc": "lyel",
+            "hdi": "weapon/bow/long_war_bow"
         },
         {
+            "id": 67,
+            "index": "Leadcrow",
             "n": "Leadcrow",
             "i": "invlxbu",
-            "c": "lxb"
+            "c": "lxb",
+            "hdi": "weapon/bow/leadcrow"
         },
         {
+            "id": 68,
+            "index": "Ichorsting",
             "n": "Ichorsting",
             "i": "invmxbu",
-            "c": "mxb"
+            "c": "mxb",
+            "hdi": "weapon/bow/ichorsting"
         },
         {
+            "id": 69,
+            "index": "Hellcast",
             "n": "Hellcast",
             "i": "invhxbu",
-            "c": "hxb"
+            "c": "hxb",
+            "hdi": "weapon/bow/hellcast"
         },
         {
+            "id": 70,
+            "index": "Doomspittle",
             "n": "Doomslinger",
             "i": "invrxbu",
-            "c": "rxb"
+            "c": "rxb",
+            "hdi": "weapon/bow/doomspittle"
         },
         {
+            "id": 71,
+            "index": "War Bonnet",
             "n": "Biggin's Bonnet",
             "i": "invcapu",
-            "c": "cap"
+            "c": "cap",
+            "hdi": "armor/helmet/war_bonnet"
         },
         {
+            "id": 72,
+            "index": "Tarnhelm",
             "n": "Tarnhelm",
             "c": "skp",
-            "tc": "oran"
+            "tc": "oran",
+            "hdi": "armor/helmet/skull_cap"
         },
         {
+            "id": 73,
+            "index": "Coif of Glory",
             "n": "Coif of Glory",
             "i": "invhlmu",
-            "c": "hlm"
+            "c": "hlm",
+            "hdi": "armor/helmet/coif_of_glory"
         },
         {
+            "id": 74,
+            "index": "Duskdeep",
             "n": "Duskdeep",
             "i": "invfhlu",
-            "c": "fhl"
+            "c": "fhl",
+            "hdi": "armor/helmet/duskdeep"
         },
         {
+            "id": 75,
+            "index": "Wormskull",
             "n": "Wormskull",
             "i": "invbhmu",
-            "c": "bhm"
+            "c": "bhm",
+            "hdi": "armor/helmet/wormskull"
         },
         {
+            "id": 76,
+            "index": "Howltusk",
             "n": "Howltusk",
             "c": "ghm",
-            "tc": "dgry"
+            "tc": "dgry",
+            "hdi": "armor/helmet/great_helm"
         },
         {
+            "id": 77,
+            "index": "Undead Crown",
             "n": "Undead Crown",
             "c": "crn",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "armor/helmet/crown"
         },
         {
+            "id": 78,
+            "index": "The Face of Horror",
             "n": "The Face of Horror",
             "c": "msk",
-            "tc": "lblu"
+            "tc": "lblu",
+            "hdi": "armor/helmet/mask"
         },
         {
+            "id": 79,
+            "index": "Greyform",
             "n": "Greyform",
             "c": "qui",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "armor/armor/quilted_armor"
         },
         {
+            "id": 80,
+            "index": "Blinkbats Form",
             "n": "Blinkbat's Form",
             "c": "lea",
-            "tc": "dred"
+            "tc": "dred",
+            "hdi": "armor/armor/leather_armor"
         },
         {
+            "id": 81,
+            "index": "The Centurion",
             "n": "The Centurion",
             "c": "hla",
-            "tc": "cred"
+            "tc": "cred",
+            "hdi": "armor/armor/hard_leather_armor"
         },
         {
+            "id": 82,
+            "index": "Twitchthroe",
             "n": "Twitchthroe",
             "c": "stu",
-            "tc": "lgrn"
+            "tc": "lgrn",
+            "hdi": "armor/armor/studded_leather"
         },
         {
+            "id": 83,
+            "index": "Darkglow",
             "n": "Darkglow",
             "c": "rng",
-            "tc": "dgrn"
+            "tc": "dgrn",
+            "hdi": "armor/armor/ring_mail"
         },
         {
+            "id": 84,
+            "index": "Hawkmail",
             "n": "Hawkmail",
             "c": "scl",
-            "tc": "cgrn"
+            "tc": "cgrn",
+            "hdi": "armor/armor/scale_mail"
         },
         {
+            "id": 85,
+            "index": "Sparking Mail",
             "n": "Sparking Mail",
             "c": "chn",
-            "tc": "lyel"
+            "tc": "lyel",
+            "hdi": "armor/armor/chain_mail"
         },
         {
+            "id": 86,
+            "index": "Venomsward",
             "n": "Venom Ward",
             "c": "brs",
-            "tc": "dyel"
+            "tc": "dyel",
+            "hdi": "armor/armor/breast_plate"
         },
         {
+            "id": 87,
+            "index": "Iceblink",
             "n": "Iceblink",
             "c": "spl",
-            "tc": "lgld"
+            "tc": "lgld",
+            "hdi": "armor/armor/splint_mail"
         },
         {
+            "id": 88,
+            "index": "Boneflesh",
             "n": "Boneflesh",
             "c": "plt",
-            "tc": "dgld"
+            "tc": "dgld",
+            "hdi": "armor/armor/plate_mail"
         },
         {
+            "id": 89,
+            "index": "Rockfleece",
             "n": "Rockfleece",
             "c": "fld",
-            "tc": "dgry"
+            "tc": "dgry",
+            "hdi": "armor/armor/field_plate"
         },
         {
+            "id": 90,
+            "index": "Rattlecage",
             "n": "Rattlecage",
             "c": "gth",
-            "tc": "dpur"
+            "tc": "dpur",
+            "hdi": "armor/armor/gothic_plate"
         },
         {
+            "id": 91,
+            "index": "Goldskin",
             "n": "Goldskin",
             "i": "invfulu",
-            "c": "ful"
+            "c": "ful",
+            "hdi": "armor/armor/goldskin"
         },
         {
+            "id": 92,
+            "index": "Victors Silk",
             "n": "Silks of the Victor",
             "i": "invaaru",
-            "c": "aar"
+            "c": "aar",
+            "hdi": "armor/armor/victors_silk"
         },
         {
+            "id": 93,
+            "index": "Heavenly Garb",
             "n": "Heavenly Garb",
             "c": "ltp",
-            "tc": "cblu"
+            "tc": "cblu",
+            "hdi": "armor/armor/light_plate"
         },
         {
+            "id": 94,
+            "index": "Pelta Lunata",
             "n": "Pelta Lunata",
             "i": "invbucu",
-            "c": "buc"
+            "c": "buc",
+            "hdi": "armor/shield/pelta_lunata"
         },
         {
+            "id": 95,
+            "index": "Umbral Disk",
             "n": "Umbral Disk",
             "i": "invsmlu",
-            "c": "sml"
+            "c": "sml",
+            "hdi": "armor/shield/umbral_disk"
         },
         {
+            "id": 96,
+            "index": "Stormguild",
             "n": "Stormguild",
             "i": "invlrgu",
-            "c": "lrg"
+            "c": "lrg",
+            "hdi": "armor/shield/stormguild"
         },
         {
+            "id": 97,
+            "index": "Wall of the Eyeless",
             "n": "Wall of the Eyeless",
             "i": "invbshu",
-            "c": "bsh"
+            "c": "bsh",
+            "hdi": "armor/shield/wall_of_the_eyeless"
         },
         {
+            "id": 98,
+            "index": "Swordback Hold",
             "n": "Swordback Hold",
             "i": "invspku",
-            "c": "spk"
+            "c": "spk",
+            "hdi": "armor/shield/swordback_hold"
         },
         {
+            "id": 99,
+            "index": "Steelclash",
             "n": "Steelclash",
             "i": "invkitu",
-            "c": "kit"
+            "c": "kit",
+            "hdi": "armor/shield/steelclash"
         },
         {
+            "id": 100,
+            "index": "Bverrit Keep",
             "n": "Bverrit Keep",
             "i": "invtowu",
-            "c": "tow"
+            "c": "tow",
+            "hdi": "armor/shield/bverrit_keep"
         },
         {
+            "id": 101,
+            "index": "The Ward",
             "n": "The Ward",
             "i": "invgtsu",
-            "c": "gts"
+            "c": "gts",
+            "hdi": "armor/shield/the_ward"
         },
         {
+            "id": 102,
+            "index": "The Hand of Broc",
             "n": "The Hand of Broc",
             "c": "lgl",
-            "tc": "cblu"
+            "tc": "cblu",
+            "hdi": "armor/glove/gloves_l"
         },
         {
+            "id": 103,
+            "index": "Bloodfist",
             "n": "Bloodfist",
             "c": "vgl",
-            "tc": "oran"
+            "tc": "oran",
+            "hdi": "armor/glove/heavy_gloves"
         },
         {
+            "id": 104,
+            "index": "Chance Guards",
             "n": "Chance Guards",
             "c": "mgl",
-            "tc": "lred"
+            "tc": "lred",
+            "hdi": "armor/glove/bracers_m"
         },
         {
+            "id": 105,
+            "index": "Magefist",
             "n": "Magefist",
             "c": "tgl",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "armor/glove/light_gauntlets"
         },
         {
+            "id": 106,
+            "index": "Frostburn",
             "n": "Frostburn",
             "c": "hgl",
-            "tc": "dred"
+            "tc": "dred",
+            "hdi": "armor/glove/gaunlets_h"
         },
         {
+            "id": 107,
+            "index": "Hotspur",
             "n": "Hotspur",
             "c": "lbt",
-            "tc": "cred"
+            "tc": "cred",
+            "hdi": "armor/boot/leather_boots"
         },
         {
+            "id": 108,
+            "index": "Gorefoot",
             "n": "Gorefoot",
             "c": "vbt",
-            "tc": "dblu"
+            "tc": "dblu",
+            "hdi": "armor/boot/heavy_boots"
         },
         {
+            "id": 109,
+            "index": "Treads of Cthon",
             "n": "Treads of Cthon",
             "c": "mbt",
-            "tc": "lgrn"
+            "tc": "lgrn",
+            "hdi": "armor/boot/chain_boots"
         },
         {
+            "id": 110,
+            "index": "Goblin Toe",
             "n": "Goblin Toe",
             "c": "tbt",
-            "tc": "dgry"
+            "tc": "dgry",
+            "hdi": "armor/boot/light_plate_boots"
         },
         {
+            "id": 111,
+            "index": "Tearhaunch",
             "n": "Tearhaunch",
             "c": "hbt",
-            "tc": "dgrn"
+            "tc": "dgrn",
+            "hdi": "armor/boot/plate_boots"
         },
         {
+            "id": 112,
+            "index": "Lenyms Cord",
             "n": "Lenymo",
             "c": "lbl",
-            "tc": "cgrn"
+            "tc": "cgrn",
+            "hdi": "armor/belt/sash_l"
         },
         {
+            "id": 113,
+            "index": "Snakecord",
             "n": "Snakecord",
             "c": "vbl",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "armor/belt/light_belt"
         },
         {
+            "id": 114,
+            "index": "Nightsmoke",
             "n": "Nightsmoke",
             "c": "mbl",
-            "tc": "lyel"
+            "tc": "lyel",
+            "hdi": "armor/belt/belt_m"
         },
         {
+            "id": 115,
+            "index": "Goldwrap",
             "n": "Goldwrap",
             "c": "tbl",
-            "tc": "lblu"
+            "tc": "lblu",
+            "hdi": "armor/belt/heavy_belt"
         },
         {
+            "id": 116,
+            "index": "Bladebuckle",
             "n": "Bladebuckle",
             "c": "hbl",
-            "tc": "dyel"
+            "tc": "dyel",
+            "hdi": "armor/belt/girdle_h"
         },
         {
+            "id": 117,
+            "index": "Nokozan Relic",
             "n": "Nokozan Relic",
-            "c": "amu"
+            "c": "amu",
+            "hdi": "misc/amulet/amulet"
         },
         {
+            "id": 118,
+            "index": "The Eye of Etlich",
             "n": "The Eye of Etlich",
-            "c": "amu"
+            "c": "amu",
+            "hdi": "misc/amulet/amulet"
         },
         {
+            "id": 119,
+            "index": "The Mahim-Oak Curio",
             "n": "The Mahim-Oak Curio",
-            "c": "amu"
+            "c": "amu",
+            "hdi": "misc/amulet/amulet"
         },
         {
+            "id": 120,
+            "index": "Nagelring",
             "n": "Nagelring",
-            "c": "rin"
+            "c": "rin",
+            "hdi": "misc/ring/ring"
         },
         {
+            "id": 121,
+            "index": "Manald Heal",
             "n": "Manald Heal",
-            "c": "rin"
+            "c": "rin",
+            "hdi": "misc/ring/ring"
         },
         {
+            "id": 122,
+            "index": "The Stone of Jordan",
             "n": "The Stone of Jordan",
-            "c": "rin"
+            "c": "rin",
+            "hdi": "misc/ring/ring"
         },
         {
+            "id": 123,
+            "index": "Amulet of the Viper",
             "n": "Amulet of the Viper",
-            "c": "vip"
+            "c": "vip",
+            "hdi": "misc/amulet/viper_amulet"
         },
         {
+            "id": 124,
+            "index": "Staff of Kings",
             "n": "Staff of Kings",
-            "c": "msf"
+            "c": "msf",
+            "hdi": "weapon/staff/staff_of_the_kings"
         },
         {
+            "id": 125,
+            "index": "Horadric Staff",
             "n": "Horadric Staff",
-            "c": "hst"
+            "c": "hst",
+            "hdi": "weapon/staff/horadric_staff"
         },
         {
+            "id": 126,
+            "index": "Hell Forge Hammer",
             "n": "Hell Forge Hammer",
-            "c": "hfh"
+            "c": "hfh",
+            "hdi": "weapon/hammer/hellforge_hammer"
         },
         {
+            "id": 127,
+            "index": "KhalimFlail",
             "n": "Khalim's Flail",
-            "c": "qf1"
+            "c": "qf1",
+            "hdi": "weapon/mace/khalim_flail"
         },
         {
+            "id": 128,
+            "index": "SuperKhalimFlail",
             "n": "Khalim's Will",
-            "c": "qf2"
+            "c": "qf2",
+            "hdi": "weapon/mace/super_khalim_flail"
         },
         {
+            "id": 129,
+            "index": "Coldkill",
             "n": "Coldkill",
             "i": "invhaxu",
             "c": "9ha",
-            "tc": "cblu"
+            "tc": "cblu",
+            "hdi": "weapon/axe/the_gnasher"
         },
         {
+            "id": 130,
+            "index": "Butcher's Pupil",
             "n": "Butcher's Pupil",
             "i": "invaxeu",
             "c": "9ax",
-            "tc": "cblu"
+            "tc": "cblu",
+            "hdi": "weapon/axe/deathspade"
         },
         {
+            "id": 131,
+            "index": "Islestrike",
             "n": "Islestrike",
-            "c": "92a"
+            "c": "92a",
+            "hdi": "weapon/axe/double_axe"
         },
         {
+            "id": 132,
+            "index": "Pompe's Wrath",
             "n": "Pompeii's Wrath",
             "i": "invmpiu",
             "c": "9mp",
-            "tc": "cred"
+            "tc": "cred",
+            "hdi": "weapon/axe/mindrend"
         },
         {
+            "id": 133,
+            "index": "Guardian Naga",
             "n": "Guardian Naga",
-            "c": "9wa"
+            "c": "9wa",
+            "hdi": "weapon/axe/war_axe"
         },
         {
+            "id": 134,
+            "index": "Warlord's Trust",
             "n": "Warlord's Trust",
             "c": "9la",
-            "tc": "whit"
+            "tc": "whit",
+            "hdi": "weapon/axe/large_axe"
         },
         {
+            "id": 135,
+            "index": "Spellsteel",
             "n": "Spellsteel",
             "c": "9ba",
-            "tc": "whit"
+            "tc": "whit",
+            "hdi": "weapon/axe/broad_axe"
         },
         {
+            "id": 136,
+            "index": "Stormrider",
             "n": "Stormrider",
             "i": "inv9btu",
             "c": "9bt",
-            "tc": "lred"
+            "tc": "lred",
+            "hdi": "weapon/axe/stormrider"
         },
         {
+            "id": 137,
+            "index": "Boneslayer Blade",
             "n": "Boneslayer Blade",
             "i": "invgaxu",
-            "c": "9ga"
+            "c": "9ga",
+            "hdi": "weapon/axe/brainhew"
         },
         {
+            "id": 138,
+            "index": "The Minataur",
             "n": "The Minotaur",
             "i": "inv9giu",
-            "c": "9gi"
+            "c": "9gi",
+            "hdi": "weapon/axe/the_minataur"
         },
         {
+            "id": 139,
+            "index": "Suicide Branch",
             "n": "Suicide Branch",
-            "c": "9wn"
+            "c": "9wn",
+            "hdi": "weapon/wand/wand"
         },
         {
+            "id": 140,
+            "index": "Carin Shard",
             "n": "Carin Shard",
             "c": "9yw",
-            "tc": "cblu"
+            "tc": "cblu",
+            "hdi": "weapon/wand/yew_wand"
         },
         {
+            "id": 141,
+            "index": "Arm of King Leoric",
             "n": "Arm of King Leoric",
             "i": "invbwnu",
-            "c": "9bw"
+            "c": "9bw",
+            "hdi": "weapon/wand/gravenspine"
         },
         {
+            "id": 142,
+            "index": "Blackhand Key",
             "n": "Blackhand Key",
             "i": "inv9gwu",
             "c": "9gw",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "weapon/wand/blackhand_key"
         },
         {
+            "id": 143,
+            "index": "Dark Clan Crusher",
             "n": "Dark Clan Crusher",
             "i": "invclbu",
             "c": "9cl",
-            "tc": "dgld"
+            "tc": "dgld",
+            "hdi": "weapon/club/felloak"
         },
         {
+            "id": 144,
+            "index": "Zakarum's Hand",
             "n": "Zakarum's Hand",
             "c": "9sc",
-            "tc": "lpur"
+            "tc": "lpur",
+            "hdi": "weapon/scepter/scepter"
         },
         {
+            "id": 145,
+            "index": "The Fetid Sprinkler",
             "n": "The Fetid Sprinkler",
-            "c": "9qs"
+            "c": "9qs",
+            "hdi": "weapon/scepter/grand_scepter"
         },
         {
+            "id": 146,
+            "index": "Hand of Blessed Light",
             "n": "Hand of Blessed Light",
-            "c": "9ws"
+            "c": "9ws",
+            "hdi": "weapon/scepter/war_scepter"
         },
         {
+            "id": 147,
+            "index": "Fleshrender",
             "n": "Fleshrender",
             "i": "invspcu",
-            "c": "9sp"
+            "c": "9sp",
+            "hdi": "weapon/club/stoutnail"
         },
         {
+            "id": 148,
+            "index": "Sureshrill Frost",
             "n": "Sureshrill Frost",
-            "c": "9ma"
+            "c": "9ma",
+            "hdi": "weapon/mace/mace"
         },
         {
+            "id": 149,
+            "index": "Moonfall",
             "n": "Moonfall",
             "i": "invmstu",
-            "c": "9mt"
+            "c": "9mt",
+            "hdi": "weapon/mace/bloodrise"
         },
         {
+            "id": 150,
+            "index": "Baezil's Vortex",
             "n": "Baezil's Vortex",
             "c": "9fl",
-            "tc": "dblu"
+            "tc": "dblu",
+            "hdi": "weapon/mace/flail"
         },
         {
+            "id": 151,
+            "index": "Earthshaker",
             "n": "Earthshaker",
-            "c": "9wh"
+            "c": "9wh",
+            "hdi": "weapon/hammer/war_hammer"
         },
         {
+            "id": 152,
+            "index": "Bloodtree Stump",
             "n": "Bloodtree Stump",
-            "c": "9m9"
+            "c": "9m9",
+            "hdi": "weapon/hammer/maul"
         },
         {
+            "id": 153,
+            "index": "The Gavel of Pain",
             "n": "The Gavel of Pain",
             "i": "inv9gmu",
-            "c": "9gm"
+            "c": "9gm",
+            "hdi": "weapon/hammer/the_gavel_of_pain"
         },
         {
+            "id": 154,
+            "index": "Bloodletter",
             "n": "Bloodletter",
             "c": "9ss",
-            "tc": "cred"
+            "tc": "cred",
+            "hdi": "weapon/sword/short_sword"
         },
         {
+            "id": 155,
+            "index": "Coldsteel Eye",
             "n": "Coldsteel Eye",
             "i": "invscmu",
-            "c": "9sm"
+            "c": "9sm",
+            "hdi": "weapon/sword/blood_crescent"
         },
         {
+            "id": 156,
+            "index": "Hexfire",
             "n": "Hexfire",
             "i": "invsbru",
-            "c": "9sb"
+            "c": "9sb",
+            "hdi": "weapon/sword/hexfire"
         },
         {
+            "id": 157,
+            "index": "Blade of Ali Baba",
             "n": "Blade of Ali Baba",
             "c": "9fc",
-            "tc": "cred"
+            "tc": "cred",
+            "hdi": "weapon/sword/falchion"
         },
         {
+            "id": 158,
+            "index": "Ginther's Rift",
             "n": "Ginther's Rift",
             "i": "inv9cru",
-            "c": "9cr"
+            "c": "9cr",
+            "hdi": "weapon/sword/ginthers_rift"
         },
         {
+            "id": 159,
+            "index": "Headstriker",
             "n": "Headstriker",
             "c": "9bs",
-            "tc": "bwht"
+            "tc": "bwht",
+            "hdi": "weapon/sword/broad_sword"
         },
         {
+            "id": 160,
+            "index": "Plague Bearer",
             "n": "Plague Bearer",
             "i": "inv9lsu",
-            "c": "9ls"
+            "c": "9ls",
+            "hdi": "weapon/sword/plague_bearer"
         },
         {
+            "id": 161,
+            "index": "The Atlantian",
             "n": "The Atlantean",
             "c": "9wd",
-            "tc": "lblu"
+            "tc": "lblu",
+            "hdi": "weapon/sword/war_sword"
         },
         {
+            "id": 162,
+            "index": "Crainte Vomir",
             "n": "Crainte Vomir",
             "i": "inv2hsu",
-            "c": "92h"
+            "c": "92h",
+            "hdi": "weapon/sword/shadowfang"
         },
         {
+            "id": 163,
+            "index": "Bing Sz Wang",
             "n": "Bing Sz Wang",
-            "c": "9cm"
+            "c": "9cm",
+            "hdi": "weapon/sword/claymore"
         },
         {
+            "id": 164,
+            "index": "The Vile Husk",
             "n": "The Vile Husk",
             "i": "invgisu",
             "c": "9gs",
-            "tc": "dgry"
+            "tc": "dgry",
+            "hdi": "weapon/sword/kinemils_awl"
         },
         {
+            "id": 165,
+            "index": "Cloudcrack",
             "n": "Cloudcrack",
             "i": "invbswu",
-            "c": "9b9"
+            "c": "9b9",
+            "hdi": "weapon/sword/blacktongue"
         },
         {
+            "id": 166,
+            "index": "Todesfaelle Flamme",
             "n": "Todesfaelle Flamme",
             "i": "inv9fbu",
-            "c": "9fb"
+            "c": "9fb",
+            "hdi": "weapon/sword/todesfaelle_flamme"
         },
         {
+            "id": 167,
+            "index": "Swordguard",
             "n": "Swordguard",
             "i": "invgsdu",
             "c": "9gd",
-            "tc": "bwht"
+            "tc": "bwht",
+            "hdi": "weapon/sword/the_patriarch"
         },
         {
+            "id": 168,
+            "index": "Spineripper",
             "n": "Spineripper",
-            "c": "9dg"
+            "c": "9dg",
+            "hdi": "weapon/knife/dagger"
         },
         {
+            "id": 169,
+            "index": "Heart Carver",
             "n": "Heart Carver",
-            "c": "9di"
+            "c": "9di",
+            "hdi": "weapon/knife/dirk"
         },
         {
+            "id": 170,
+            "index": "Blackbog's Sharp",
             "n": "Blackbog's Sharp",
             "i": "invkrsu",
-            "c": "9kr"
+            "c": "9kr",
+            "hdi": "weapon/knife/the_jade_tan_do"
         },
         {
+            "id": 171,
+            "index": "Stormspike",
             "n": "Stormspike",
             "i": "inv9blu",
             "c": "9bl",
-            "tc": "cblu"
+            "tc": "cblu",
+            "hdi": "weapon/knife/stormspike"
         },
         {
+            "id": 172,
+            "index": "The Impaler",
             "n": "The Impaler",
             "c": "9sr",
-            "tc": "lred"
+            "tc": "lred",
+            "hdi": "weapon/spear/spear"
         },
         {
+            "id": 173,
+            "index": "Kelpie Snare",
             "n": "Kelpie Snare",
             "i": "invtriu",
-            "c": "9tr"
+            "c": "9tr",
+            "hdi": "weapon/spear/razortine"
         },
         {
+            "id": 174,
+            "index": "Soulfeast Tine",
             "n": "Soulfeast Tine",
             "i": "inv9bru",
             "c": "9br",
-            "tc": "lyel"
+            "tc": "lyel",
+            "hdi": "weapon/spear/soulfeast_tine"
         },
         {
+            "id": 175,
+            "index": "Hone Sundan",
             "n": "Hone Sundan",
-            "c": "9st"
+            "c": "9st",
+            "hdi": "weapon/spear/spetum"
         },
         {
+            "id": 176,
+            "index": "Spire of Honor",
             "n": "Spire of Honor",
             "c": "9p9",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "weapon/spear/pike"
         },
         {
+            "id": 177,
+            "index": "The Meat Scraper",
             "n": "The Meat Scraper",
             "c": "9b7",
-            "tc": "dred"
+            "tc": "dred",
+            "hdi": "weapon/polearm/bardiche"
         },
         {
+            "id": 178,
+            "index": "Blackleach Blade",
             "n": "Blackleach Blade",
             "c": "9vo",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "weapon/polearm/voulge"
         },
         {
+            "id": 179,
+            "index": "Athena's Wrath",
             "n": "Athena's Wrath",
             "i": "inv9s8u",
-            "c": "9s8"
+            "c": "9s8",
+            "hdi": "weapon/polearm/athenas_wrath"
         },
         {
+            "id": 180,
+            "index": "Pierre Tombale Couant",
             "n": "Pierre Tombale Couant",
             "c": "9pa",
-            "tc": "lgld"
+            "tc": "lgld",
+            "hdi": "weapon/polearm/poleaxe"
         },
         {
+            "id": 181,
+            "index": "Husoldal Evo",
             "n": "Husoldal Evo",
-            "c": "9h9"
+            "c": "9h9",
+            "hdi": "weapon/polearm/halberd"
         },
         {
+            "id": 182,
+            "index": "Grim's Burning Dead",
             "n": "Grim's Burning Dead",
             "c": "9wc",
-            "tc": "cred"
+            "tc": "cred",
+            "hdi": "weapon/polearm/war_scythe"
         },
         {
+            "id": 183,
+            "index": "Razorswitch",
             "n": "Razorswitch",
-            "c": "8ss"
+            "c": "8ss",
+            "hdi": "weapon/staff/short_staff"
         },
         {
+            "id": 184,
+            "index": "Ribcracker",
             "n": "Ribcracker",
             "c": "8ls",
-            "tc": "lblu"
+            "tc": "lblu",
+            "hdi": "weapon/staff/long_staff"
         },
         {
+            "id": 185,
+            "index": "Chromatic Ire",
             "n": "Chromatic Ire",
             "i": "invcstu",
-            "c": "8cs"
+            "c": "8cs",
+            "hdi": "weapon/staff/lazarus_spire"
         },
         {
+            "id": 186,
+            "index": "Warpspear",
             "n": "Warpspear",
             "c": "8bs",
-            "tc": "cblu"
+            "tc": "cblu",
+            "hdi": "weapon/staff/battle_staff"
         },
         {
+            "id": 187,
+            "index": "Skullcollector",
             "n": "Skull Collector",
             "i": "inv8wsu",
             "c": "8ws",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "weapon/staff/skullcollector"
         },
         {
+            "id": 188,
+            "index": "Skystrike",
             "n": "Skystrike",
-            "c": "8sb"
+            "c": "8sb",
+            "hdi": "weapon/bow/short_bow"
         },
         {
+            "id": 189,
+            "index": "Riphook",
             "n": "Riphook",
             "c": "8hb",
-            "tc": "cred"
+            "tc": "cred",
+            "hdi": "weapon/bow/hunters_bow"
         },
         {
+            "id": 190,
+            "index": "Kuko Shakaku",
             "n": "Kuko Shakaku",
             "i": "inv8lbu",
             "c": "8lb",
-            "tc": "lpur"
+            "tc": "lpur",
+            "hdi": "weapon/bow/kuko_shakaku"
         },
         {
+            "id": 191,
+            "index": "Endlesshail",
             "n": "Endlesshail",
             "i": "invcbwu",
-            "c": "8cb"
+            "c": "8cb",
+            "hdi": "weapon/bow/piercerib"
         },
         {
+            "id": 192,
+            "index": "Whichwild String",
             "n": "Witchwild String",
             "i": "inv8s8u",
             "c": "8s8",
-            "tc": "lblu"
+            "tc": "lblu",
+            "hdi": "weapon/bow/whichwild_string"
         },
         {
+            "id": 193,
+            "index": "Cliffkiller",
             "n": "Cliffkiller",
-            "c": "8l8"
+            "c": "8l8",
+            "hdi": "weapon/bow/long_battle_bow"
         },
         {
+            "id": 194,
+            "index": "Magewrath",
             "n": "Magewrath",
             "i": "invswbu",
-            "c": "8sw"
+            "c": "8sw",
+            "hdi": "weapon/bow/hellclap"
         },
         {
+            "id": 195,
+            "index": "Godstrike Arch",
             "n": "Goldstrike Arch",
             "c": "8lw",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "weapon/bow/long_war_bow"
         },
         {
+            "id": 196,
+            "index": "Langer Briser",
             "n": "Langer Briser",
             "i": "inv8lxu",
-            "c": "8lx"
+            "c": "8lx",
+            "hdi": "weapon/bow/langer_briser"
         },
         {
+            "id": 197,
+            "index": "Pus Spiter",
             "n": "Pus Spitter",
             "i": "inv8mxu",
             "c": "8mx",
-            "tc": "cgrn"
+            "tc": "cgrn",
+            "hdi": "weapon/bow/pus_spiter"
         },
         {
+            "id": 198,
+            "index": "Buriza-Do Kyanon",
             "n": "Buriza-Do Kyanon",
             "i": "invhxbu",
-            "c": "8hx"
+            "c": "8hx",
+            "hdi": "weapon/bow/hellcast"
         },
         {
+            "id": 199,
+            "index": "Demon Machine",
             "n": "Demon Machine",
             "i": "invrxbu",
             "c": "8rx",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "weapon/bow/doomspittle"
         },
         {
+            "id": 200,
+            "index": "Armor",
             "n": "Armor"
         },
         {
+            "id": 201,
+            "index": "Peasent Crown",
             "n": "Peasant Crown",
-            "c": "xap"
+            "c": "xap",
+            "hdi": "armor/helmet/cap_hat"
         },
         {
+            "id": 202,
+            "index": "Rockstopper",
             "n": "Rockstopper",
             "i": "invxkpu",
-            "c": "xkp"
+            "c": "xkp",
+            "hdi": "armor/helmet/rockstopper"
         },
         {
+            "id": 203,
+            "index": "Stealskull",
             "n": "Stealskull",
             "i": "invhlmu",
-            "c": "xlm"
+            "c": "xlm",
+            "hdi": "armor/helmet/coif_of_glory"
         },
         {
+            "id": 204,
+            "index": "Darksight Helm",
             "n": "Darksight Helm",
             "i": "invfhlu",
             "c": "xhl",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "armor/helmet/duskdeep"
         },
         {
+            "id": 205,
+            "index": "Valkiry Wing",
             "n": "Valkyrie Wing",
-            "c": "xhm"
+            "c": "xhm",
+            "hdi": "armor/helmet/great_helm"
         },
         {
+            "id": 206,
+            "index": "Crown of Thieves",
             "n": "Crown of Thieves",
             "i": "invxrnu",
             "c": "xrn",
-            "tc": "dgld"
+            "tc": "dgld",
+            "hdi": "armor/helmet/crown_of_thieves"
         },
         {
+            "id": 207,
+            "index": "Blackhorn's Face",
             "n": "Blackhorn's Face",
             "c": "xsk",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "armor/helmet/mask"
         },
         {
+            "id": 208,
+            "index": "Vampiregaze",
             "n": "Vampire Gaze",
             "i": "invbhmu",
             "c": "xh9",
-            "tc": "cgrn"
+            "tc": "cgrn",
+            "hdi": "armor/helmet/wormskull"
         },
         {
+            "id": 209,
+            "index": "The Spirit Shroud",
             "n": "The Spirit Shroud",
-            "c": "xui"
+            "c": "xui",
+            "hdi": "armor/armor/quilted_armor"
         },
         {
+            "id": 210,
+            "index": "Skin of the Vipermagi",
             "n": "Skin of the Vipermagi",
             "c": "xea",
-            "tc": "dblu"
+            "tc": "dblu",
+            "hdi": "armor/armor/leather_armor"
         },
         {
+            "id": 211,
+            "index": "Skin of the Flayerd One",
             "n": "Skin of the Flayed One",
             "c": "xla",
-            "tc": "lred"
+            "tc": "lred",
+            "hdi": "armor/armor/hard_leather_armor"
         },
         {
+            "id": 212,
+            "index": "Ironpelt",
             "n": "Iron Pelt",
             "i": "invxtuu",
             "c": "xtu",
-            "tc": "dgry"
+            "tc": "dgry",
+            "hdi": "armor/armor/ironpelt"
         },
         {
+            "id": 213,
+            "index": "Spiritforge",
             "n": "Spirit Forge",
-            "c": "xng"
+            "c": "xng",
+            "hdi": "armor/armor/ring_mail"
         },
         {
+            "id": 214,
+            "index": "Crow Caw",
             "n": "Crow Caw",
-            "c": "xcl"
+            "c": "xcl",
+            "hdi": "armor/armor/scale_mail"
         },
         {
+            "id": 215,
+            "index": "Shaftstop",
             "n": "Shaftstop",
-            "c": "xhn"
+            "c": "xhn",
+            "hdi": "armor/armor/chain_mail"
         },
         {
+            "id": 216,
+            "index": "Duriel's Shell",
             "n": "Duriel's Shell",
             "c": "xrs",
-            "tc": "oran"
+            "tc": "oran",
+            "hdi": "armor/armor/breast_plate"
         },
         {
+            "id": 217,
+            "index": "Skullder's Ire",
             "n": "Skullder's Ire",
-            "c": "xpl"
+            "c": "xpl",
+            "hdi": "armor/armor/splint_mail"
         },
         {
+            "id": 218,
+            "index": "Guardian Angel",
             "n": "Guardian Angel",
             "c": "xlt",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "armor/armor/plate_mail"
         },
         {
+            "id": 219,
+            "index": "Toothrow",
             "n": "Toothrow",
             "c": "xld",
-            "tc": "whit"
+            "tc": "whit",
+            "hdi": "armor/armor/field_plate"
         },
         {
+            "id": 220,
+            "index": "Atma's Wail",
             "n": "Atma's Wail",
-            "c": "xth"
+            "c": "xth",
+            "hdi": "armor/armor/gothic_plate"
         },
         {
+            "id": 221,
+            "index": "Black Hades",
             "n": "Black Hades",
-            "c": "xul"
+            "c": "xul",
+            "hdi": "armor/armor/full_plate_mail"
         },
         {
+            "id": 222,
+            "index": "Corpsemourn",
             "n": "Corpsemourn",
             "i": "invxaru",
             "c": "xar",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "armor/armor/corpsemourn"
         },
         {
+            "id": 223,
+            "index": "Que-Hegan's Wisdon",
             "n": "Que-Hegan's Wisdom",
-            "c": "xtp"
+            "c": "xtp",
+            "hdi": "armor/armor/light_plate"
         },
         {
+            "id": 224,
+            "index": "Visceratuant",
             "n": "Visceratuant",
             "i": "invbucu",
-            "c": "xuc"
+            "c": "xuc",
+            "hdi": "armor/shield/pelta_lunata"
         },
         {
+            "id": 225,
+            "index": "Mosers Blessed Circle",
             "n": "Moser's Blessed Circle",
             "i": "invxmlu",
-            "c": "xml"
+            "c": "xml",
+            "hdi": "armor/shield/mosers_blessed_circle"
         },
         {
+            "id": 226,
+            "index": "Stormchaser",
             "n": "Stormchaser",
             "i": "invxrgu",
             "c": "xrg",
-            "tc": "cblu"
+            "tc": "cblu",
+            "hdi": "armor/shield/stormchaser"
         },
         {
+            "id": 227,
+            "index": "Tiamat's Rebuke",
             "n": "Tiamat's Rebuke",
             "i": "invkitu",
             "c": "xit",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "armor/shield/steelclash"
         },
         {
+            "id": 228,
+            "index": "Kerke's Sanctuary",
             "n": "Gerke's Sanctuary",
             "i": "invtowu",
             "c": "xow",
-            "tc": "lgrn"
+            "tc": "lgrn",
+            "hdi": "armor/shield/bverrit_keep"
         },
         {
+            "id": 229,
+            "index": "Radimant's Sphere",
             "n": "Radament's Sphere",
             "i": "invgtsu",
-            "c": "xts"
+            "c": "xts",
+            "hdi": "armor/shield/the_ward"
         },
         {
+            "id": 230,
+            "index": "Lidless Wall",
             "n": "Lidless Wall",
             "i": "invxshu",
             "c": "xsh",
-            "tc": "dgld"
+            "tc": "dgld",
+            "hdi": "armor/shield/lidless_wall"
         },
         {
+            "id": 231,
+            "index": "Lance Guard",
             "n": "Lance Guard",
             "i": "invxpku",
-            "c": "xpk"
+            "c": "xpk",
+            "hdi": "armor/shield/lance_guard"
         },
         {
+            "id": 232,
+            "index": "Venom Grip",
             "n": "Venom Grip",
-            "c": "xlg"
+            "c": "xlg",
+            "hdi": "armor/glove/gloves_l"
         },
         {
+            "id": 233,
+            "index": "Gravepalm",
             "n": "Gravepalm",
-            "c": "xvg"
+            "c": "xvg",
+            "hdi": "armor/glove/heavy_gloves"
         },
         {
+            "id": 234,
+            "index": "Ghoulhide",
             "n": "Ghoulhide",
-            "c": "xmg"
+            "c": "xmg",
+            "hdi": "armor/glove/bracers_m"
         },
         {
+            "id": 235,
+            "index": "Lavagout",
             "n": "Lava Gout",
-            "c": "xtg"
+            "c": "xtg",
+            "hdi": "armor/glove/light_gauntlets"
         },
         {
+            "id": 236,
+            "index": "Hellmouth",
             "n": "Hellmouth",
-            "c": "xhg"
+            "c": "xhg",
+            "hdi": "armor/glove/gaunlets_h"
         },
         {
+            "id": 237,
+            "index": "Infernostride",
             "n": "Infernostride",
-            "c": "xlb"
+            "c": "xlb",
+            "hdi": "armor/boot/leather_boots"
         },
         {
+            "id": 238,
+            "index": "Waterwalk",
             "n": "Waterwalk",
-            "c": "xvb"
+            "c": "xvb",
+            "hdi": "armor/boot/heavy_boots"
         },
         {
+            "id": 239,
+            "index": "Silkweave",
             "n": "Silkweave",
-            "c": "xmb"
+            "c": "xmb",
+            "hdi": "armor/boot/chain_boots"
         },
         {
+            "id": 240,
+            "index": "Wartraveler",
             "n": "War Traveler",
-            "c": "xtb"
+            "c": "xtb",
+            "hdi": "armor/boot/light_plate_boots"
         },
         {
+            "id": 241,
+            "index": "Gorerider",
             "n": "Gore Rider",
-            "c": "xhb"
+            "c": "xhb",
+            "hdi": "armor/boot/plate_boots"
         },
         {
+            "id": 242,
+            "index": "String of Ears",
             "n": "String of Ears",
-            "c": "zlb"
+            "c": "zlb",
+            "hdi": "armor/belt/sash_l"
         },
         {
+            "id": 243,
+            "index": "Razortail",
             "n": "Razortail",
-            "c": "zvb"
+            "c": "zvb",
+            "hdi": "armor/belt/light_belt"
         },
         {
+            "id": 244,
+            "index": "Gloomstrap",
             "n": "Gloom's Trap",
-            "c": "zmb"
+            "c": "zmb",
+            "hdi": "armor/belt/belt_m"
         },
         {
+            "id": 245,
+            "index": "Snowclash",
             "n": "Snowclash",
-            "c": "ztb"
+            "c": "ztb",
+            "hdi": "armor/belt/heavy_belt"
         },
         {
+            "id": 246,
+            "index": "Thudergod's Vigor",
             "n": "Thundergod's Vigor",
-            "c": "zhb"
+            "c": "zhb",
+            "hdi": "armor/belt/girdle_h"
         },
-        {},
         {
+            "id": 247,
+            "index": "Elite Uniques"
+        },
+        {
+            "id": 248,
+            "index": "Harlequin Crest",
             "n": "Harlequin Crest",
             "c": "uap",
-            "tc": "cgrn"
+            "tc": "cgrn",
+            "hdi": "armor/helmet/cap_hat"
         },
         {
+            "id": 249,
+            "index": "Veil of Steel",
             "n": "Veil of Steel",
             "c": "uhm",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "armor/helmet/great_helm"
         },
         {
+            "id": 250,
+            "index": "The Gladiator's Bane",
             "n": "The Gladiator's Bane",
             "c": "utu",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "armor/armor/studded_leather"
         },
         {
+            "id": 251,
+            "index": "Arkaine's Valor",
             "n": "Arkaine's Valor",
             "c": "upl",
-            "tc": "lred"
+            "tc": "lred",
+            "hdi": "armor/armor/splint_mail"
         },
         {
+            "id": 252,
+            "index": "Blackoak Shield",
             "n": "Blackoak Shield",
             "i": "invsmlu",
-            "c": "uml"
+            "c": "uml",
+            "hdi": "armor/shield/umbral_disk"
         },
         {
+            "id": 253,
+            "index": "Stormshield",
             "n": "Stormshield",
             "i": "invkitu",
-            "c": "uit"
+            "c": "uit",
+            "hdi": "armor/shield/steelclash"
         },
         {
+            "id": 254,
+            "index": "Hellslayer",
             "n": "Hellslayer",
             "i": "invbtxu",
             "c": "7bt",
-            "tc": "dred"
+            "tc": "dred",
+            "hdi": "weapon/axe/the_chieftan"
         },
         {
+            "id": 255,
+            "index": "Messerschmidt's Reaver",
             "n": "Messerschmidt's Reaver",
             "i": "invgaxu",
             "c": "7ga",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "weapon/axe/brainhew"
         },
         {
+            "id": 256,
+            "index": "Baranar's Star",
             "n": "Baranar's Star",
             "i": "invmstu",
             "c": "7mt",
-            "tc": "lred"
+            "tc": "lred",
+            "hdi": "weapon/mace/bloodrise"
         },
         {
+            "id": 257,
+            "index": "Schaefer's Hammer",
             "n": "Schaefer's Hammer",
             "c": "7wh",
-            "tc": "lblu"
+            "tc": "lblu",
+            "hdi": "weapon/hammer/war_hammer"
         },
         {
+            "id": 258,
+            "index": "The Cranium Basher",
             "n": "The Cranium Basher",
             "c": "7gm",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "weapon/hammer/great_maul"
         },
         {
+            "id": 259,
+            "index": "Lightsabre",
             "n": "Lightsabre",
             "i": "invcrsu",
-            "c": "7cr"
+            "c": "7cr",
+            "hdi": "weapon/sword/lightsabre"
         },
         {
+            "id": 260,
+            "index": "Doombringer",
             "n": "Doombringer",
             "i": "invbswu",
             "c": "7b7",
-            "tc": "dred"
+            "tc": "dred",
+            "hdi": "weapon/sword/blacktongue"
         },
         {
+            "id": 261,
+            "index": "The Grandfather",
             "n": "The Grandfather",
             "i": "invgsdu",
             "c": "7gd",
-            "tc": "lyel"
+            "tc": "lyel",
+            "hdi": "weapon/sword/the_patriarch"
         },
         {
+            "id": 262,
+            "index": "Wizardspike",
             "n": "Wizardspike",
             "c": "7dg",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "weapon/knife/dagger"
         },
         {
+            "id": 263,
+            "index": "Constricting Ring",
             "n": "Constricting Ring",
             "c": "rin",
             "tc": "cblu"
         },
         {
+            "id": 264,
+            "index": "Stormspire",
             "n": "Stormspire",
             "c": "7wc",
-            "tc": "dblu"
+            "tc": "dblu",
+            "hdi": "weapon/polearm/war_scythe"
         },
         {
+            "id": 265,
+            "index": "Eaglehorn",
             "n": "Eaglehorn",
             "c": "6l7",
-            "tc": "dgld"
+            "tc": "dgld",
+            "hdi": "weapon/bow/long_battle_bow"
         },
         {
+            "id": 266,
+            "index": "Windforce",
             "n": "Windforce",
             "c": "6lw",
-            "tc": "dyel"
+            "tc": "dyel",
+            "hdi": "weapon/bow/long_war_bow"
         },
         {
+            "id": 267,
+            "index": "Rings",
             "n": "Rings"
         },
         {
+            "id": 268,
+            "index": "Bul Katho's Wedding Band",
             "n": "Bul-Kathos' Wedding Band",
             "c": "rin",
-            "tc": "dpur"
+            "tc": "dpur",
+            "hdi": "misc/ring/ring"
         },
         {
+            "id": 269,
+            "index": "The Cat's Eye",
             "n": "The Cat's Eye",
             "c": "amu",
-            "tc": "oran"
+            "tc": "oran",
+            "hdi": "misc/amulet/amulet"
         },
         {
+            "id": 270,
+            "index": "The Rising Sun",
             "n": "The Rising Sun",
             "c": "amu",
-            "tc": "lgld"
+            "tc": "lgld",
+            "hdi": "misc/amulet/amulet"
         },
         {
+            "id": 271,
+            "index": "Crescent Moon",
             "n": "Crescent Moon",
             "c": "amu",
-            "tc": "lblu"
+            "tc": "lblu",
+            "hdi": "misc/amulet/amulet"
         },
         {
+            "id": 272,
+            "index": "Mara's Kaleidoscope",
             "n": "Mara's Kaleidoscope",
             "c": "amu",
-            "tc": "oran"
+            "tc": "oran",
+            "hdi": "misc/amulet/amulet"
         },
         {
+            "id": 273,
+            "index": "Atma's Scarab",
             "n": "Atma's Scarab",
             "c": "amu",
-            "tc": "cgrn"
+            "tc": "cgrn",
+            "hdi": "misc/amulet/amulet"
         },
         {
+            "id": 274,
+            "index": "Dwarf Star",
             "n": "Dwarf Star",
             "c": "rin",
-            "tc": "dgry"
+            "tc": "dgry",
+            "hdi": "misc/ring/ring"
         },
         {
+            "id": 275,
+            "index": "Raven Frost",
             "n": "Raven Frost",
             "c": "rin",
-            "tc": "cblu"
+            "tc": "cblu",
+            "hdi": "misc/ring/ring"
         },
         {
+            "id": 276,
+            "index": "Highlord's Wrath",
             "n": "Highlord's Wrath",
             "c": "amu",
-            "tc": "bwht"
+            "tc": "bwht",
+            "hdi": "misc/amulet/amulet"
         },
         {
+            "id": 277,
+            "index": "Saracen's Chance",
             "n": "Saracen's Chance",
             "c": "amu",
-            "tc": "dpur"
+            "tc": "dpur",
+            "hdi": "misc/amulet/amulet"
         },
         {
+            "id": 278,
+            "index": "Class Specific",
             "n": "Class-specific"
         },
         {
+            "id": 279,
+            "index": "Arreat's Face",
             "n": "Arreat's Face",
-            "c": "baa"
+            "c": "baa",
+            "hdi": "armor/helmet/avenger_guard"
         },
         {
+            "id": 280,
+            "index": "Homunculus",
             "n": "Homunculus",
-            "c": "nea"
+            "c": "nea",
+            "hdi": "armor/voodoo_head/demon_head"
         },
         {
+            "id": 281,
+            "index": "Titan's Revenge",
             "n": "Titan's Revenge",
-            "c": "ama"
+            "c": "ama",
+            "hdi": "weapon/javelin/maiden_javelin"
         },
         {
+            "id": 282,
+            "index": "Lycander's Aim",
             "n": "Lycander's Aim",
-            "c": "am7"
+            "c": "am7",
+            "hdi": "weapon/bow/reflex_bow"
         },
         {
+            "id": 283,
+            "index": "Lycander's Flank",
             "n": "Lycander's Flank",
-            "c": "am9"
+            "c": "am9",
+            "hdi": "weapon/spear/maiden_pike"
         },
         {
+            "id": 284,
+            "index": "The Oculus",
             "n": "The Oculus",
-            "c": "oba"
+            "c": "oba",
+            "hdi": "weapon/orb/dragon_stone"
         },
         {
+            "id": 285,
+            "index": "Herald of Zakarum",
             "n": "Herald of Zakarum",
-            "c": "pa9"
+            "c": "pa9",
+            "hdi": "armor/shield/aerin_shield"
         },
         {
+            "id": 286,
+            "index": "Cutthroat1",
             "n": "Bartuc's Cut-Throat",
-            "c": "9tw"
+            "c": "9tw",
+            "hdi": "weapon/h2h/claws"
         },
         {
+            "id": 287,
+            "index": "Jalal's Mane",
             "n": "Jalal's Mane",
-            "c": "dra"
+            "c": "dra",
+            "hdi": "armor/pelt/spirit_mask"
         },
         {
+            "id": 288,
+            "index": "The Scalper",
             "n": "The Scalper",
-            "c": "9ta"
+            "c": "9ta",
+            "hdi": "weapon/axe/throwing_axe"
         },
         {
+            "id": 289,
+            "index": "Bloodmoon",
             "n": "Bloodmoon",
             "i": "invsbru",
             "c": "7sb",
-            "tc": "cred"
+            "tc": "cred",
+            "hdi": "weapon/sword/hexfire"
         },
         {
+            "id": 290,
+            "index": "Djinnslayer",
             "n": "Djinn Slayer",
             "i": "invscmu",
             "c": "7sm",
-            "tc": "dpur"
+            "tc": "dpur",
+            "hdi": "weapon/sword/blood_crescent"
         },
         {
+            "id": 291,
+            "index": "Deathbit",
             "n": "Deathbit",
-            "c": "9tk"
+            "c": "9tk",
+            "hdi": "weapon/knife/throwing_knife"
         },
         {
+            "id": 292,
+            "index": "Warshrike",
             "n": "Warshrike",
             "i": "invtk3",
             "c": "7bk",
-            "tc": "bwht"
+            "tc": "bwht",
+            "hdi": "weapon/knife/warshrike"
         },
         {
+            "id": 293,
+            "index": "Gutsiphon",
             "n": "Gut Siphon",
             "i": "invrxbu",
             "c": "6rx",
-            "tc": "lgrn"
+            "tc": "lgrn",
+            "hdi": "weapon/bow/doomspittle"
         },
         {
+            "id": 294,
+            "index": "Razoredge",
             "n": "Razor's Edge",
             "i": "invhaxu",
-            "c": "7ha"
+            "c": "7ha",
+            "hdi": "weapon/axe/the_gnasher"
         },
         {
+            "id": 295,
+            "index": "Gore Ripper",
             "n": "Gore Ripper",
             "tc": "dred"
         },
         {
+            "id": 296,
+            "index": "Demonlimb",
             "n": "Demon Limb",
             "i": "invspcu",
             "c": "7sp",
-            "tc": "dgrn"
+            "tc": "dgrn",
+            "hdi": "weapon/club/stoutnail"
         },
         {
+            "id": 297,
+            "index": "Steelshade",
             "n": "Steel Shade",
             "i": "invhlmu",
             "c": "ulm",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "armor/helmet/coif_of_glory"
         },
         {
+            "id": 298,
+            "index": "Tomb Reaver",
             "n": "Tomb Reaver",
             "c": "7pa",
-            "tc": "lyel"
+            "tc": "lyel",
+            "hdi": "weapon/polearm/poleaxe"
         },
         {
+            "id": 299,
+            "index": "Deaths's Web",
             "n": "Death's Web",
             "c": "7gw",
-            "tc": "bwht"
+            "tc": "bwht",
+            "hdi": "weapon/wand/grim_wand"
         },
         {
+            "id": 300,
+            "index": "Nature's Peace",
             "n": "Nature's Peace",
             "c": "rin",
-            "tc": "dgrn"
+            "tc": "dgrn",
+            "hdi": "misc/ring/ring"
         },
         {
+            "id": 301,
+            "index": "Azurewrath",
             "n": "Azurewrath",
             "i": "invcrs",
             "c": "7cr"
         },
         {
+            "id": 302,
+            "index": "Seraph's Hymn",
             "n": "Seraph's Hymn",
             "i": "invamu2",
             "c": "amu",
-            "tc": "bwht"
+            "tc": "bwht",
+            "hdi": "misc/amulet/amulet2"
         },
         {
+            "id": 303,
+            "index": "Zakarum's Salvation",
             "n": "Zakarum's Salvation"
         },
         {
+            "id": 304,
+            "index": "Fleshripper",
             "n": "Fleshripper",
             "i": "invkrsu",
             "c": "7kr",
-            "tc": "dred"
+            "tc": "dred",
+            "hdi": "weapon/knife/the_jade_tan_do"
         },
         {
+            "id": 305,
+            "index": "Odium",
             "n": "Odium"
         },
         {
+            "id": 306,
+            "index": "Horizon's Tornado",
             "n": "Horizon's Tornado",
             "c": "7fl",
-            "tc": "dpur"
+            "tc": "dpur",
+            "hdi": "weapon/mace/flail"
         },
         {
+            "id": 307,
+            "index": "Stone Crusher",
             "n": "Stone Crusher",
-            "c": "7wh"
+            "c": "7wh",
+            "hdi": "weapon/hammer/war_hammer"
         },
         {
+            "id": 308,
+            "index": "Jadetalon",
             "n": "Jade Talon",
             "c": "7wb",
-            "tc": "cgrn"
+            "tc": "cgrn",
+            "hdi": "weapon/h2h/katar"
         },
         {
+            "id": 309,
+            "index": "Shadowdancer",
             "n": "Shadow Dancer",
             "c": "uhb",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "armor/boot/plate_boots"
         },
         {
+            "id": 310,
+            "index": "Cerebus",
             "n": "Cerebus' Bite",
             "c": "drb",
-            "tc": "bwht"
+            "tc": "bwht",
+            "hdi": "armor/pelt/wolf_head"
         },
         {
+            "id": 311,
+            "index": "Tyrael's Might",
             "n": "Tyrael's Might",
             "i": "invaaru",
             "c": "uar",
-            "tc": "dblu"
+            "tc": "dblu",
+            "hdi": "armor/armor/victors_silk"
         },
         {
+            "id": 312,
+            "index": "Souldrain",
             "n": "Soul Drainer",
             "c": "umg",
-            "tc": "dred"
+            "tc": "dred",
+            "hdi": "armor/glove/bracers_m"
         },
         {
+            "id": 313,
+            "index": "Runemaster",
             "n": "Rune Master",
             "c": "72a",
-            "tc": "lblu"
+            "tc": "lblu",
+            "hdi": "weapon/axe/double_axe"
         },
         {
+            "id": 314,
+            "index": "Deathcleaver",
             "n": "Death Cleaver",
-            "c": "7wa"
+            "c": "7wa",
+            "hdi": "weapon/axe/war_axe"
         },
         {
+            "id": 315,
+            "index": "Executioner's Justice",
             "n": "Executioner's Justice",
             "c": "7gi",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "weapon/axe/giant_axe"
         },
         {
+            "id": 316,
+            "index": "Stoneraven",
             "n": "Stoneraven",
-            "c": "amd"
+            "c": "amd",
+            "hdi": "weapon/spear/maiden_spear"
         },
         {
+            "id": 317,
+            "index": "Leviathan",
             "n": "Leviathan",
             "c": "uld",
-            "tc": "cgrn"
+            "tc": "cgrn",
+            "hdi": "armor/armor/field_plate"
         },
         {
+            "id": 318,
+            "index": "Larzuk's Champion",
             "n": "Larzuk's Champion",
             "i": "invhfh"
         },
         {
+            "id": 319,
+            "index": "Wisp",
             "n": "Wisp Projector",
             "c": "rin",
-            "tc": "bwht"
+            "tc": "bwht",
+            "hdi": "misc/ring/ring"
         },
         {
+            "id": 320,
+            "index": "Gargoyle's Bite",
             "n": "Gargoyle's Bite",
             "c": "7ts",
-            "tc": "cgrn"
+            "tc": "cgrn",
+            "hdi": "weapon/javelin/throwing_spear"
         },
         {
+            "id": 321,
+            "index": "Lacerator",
             "n": "Lacerator",
             "c": "7b8",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "weapon/axe/balanced_axe"
         },
         {
+            "id": 322,
+            "index": "Mang Song's Lesson",
             "n": "Mang Song's Lesson",
             "i": "inv8wsu",
             "c": "6ws",
-            "tc": "dgld"
+            "tc": "dgld",
+            "hdi": "weapon/staff/skullcollector"
         },
         {
+            "id": 323,
+            "index": "Viperfork",
             "n": "Viperfork",
             "c": "7br",
-            "tc": "dgrn"
+            "tc": "dgrn",
+            "hdi": "weapon/spear/brandistock"
         },
         {
+            "id": 324,
+            "index": "Ethereal Edge",
             "n": "Ethereal Edge",
             "c": "7ba",
-            "tc": "whit"
+            "tc": "whit",
+            "hdi": "weapon/axe/broad_axe"
         },
         {
+            "id": 325,
+            "index": "Demonhorn's Edge",
             "n": "Demonhorn's Edge",
             "c": "bad",
-            "tc": "dgry"
+            "tc": "dgry",
+            "hdi": "armor/helmet/horned_helm"
         },
         {
+            "id": 326,
+            "index": "The Reaper's Toll",
             "n": "The Reaper's Toll",
             "i": "invscy",
-            "c": "7s8"
+            "c": "7s8",
+            "hdi": "weapon/polearm/scythe"
         },
         {
+            "id": 327,
+            "index": "Spiritkeeper",
             "n": "Spirit Keeper",
-            "c": "drd"
+            "c": "drd",
+            "hdi": "armor/pelt/antlers"
         },
         {
+            "id": 328,
+            "index": "Hellrack",
             "n": "Hellrack",
             "i": "invhxbu",
-            "c": "6hx"
+            "c": "6hx",
+            "hdi": "weapon/bow/hellcast"
         },
         {
+            "id": 329,
+            "index": "Alma Negra",
             "n": "Alma Negra",
             "c": "pac",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "armor/shield/rondache"
         },
         {
+            "id": 330,
+            "index": "Darkforge Spawn",
             "n": "Darkforce Spawn",
             "c": "nef",
-            "tc": "cred"
+            "tc": "cred",
+            "hdi": "armor/voodoo_head/demon_head"
         },
         {
+            "id": 331,
+            "index": "Widowmaker",
             "n": "Widowmaker",
             "i": "invswbu",
             "c": "6sw",
-            "tc": "dred"
+            "tc": "dred",
+            "hdi": "weapon/bow/hellclap"
         },
         {
+            "id": 332,
+            "index": "Bloodraven's Charge",
             "n": "Blood Raven's Charge",
             "i": "invswbu",
             "c": "amb",
-            "tc": "dgld"
+            "tc": "dgld",
+            "hdi": "weapon/bow/hellclap"
         },
         {
+            "id": 333,
+            "index": "Ghostflame",
             "n": "Ghostflame",
             "c": "7bl",
-            "tc": "cblu"
+            "tc": "cblu",
+            "hdi": "weapon/knife/blade"
         },
         {
+            "id": 334,
+            "index": "Shadowkiller",
             "n": "Shadow Killer",
             "i": "invaxfu",
-            "c": "7cs"
+            "c": "7cs",
+            "hdi": "weapon/h2h/shadowkiller"
         },
         {
+            "id": 335,
+            "index": "Gimmershred",
             "n": "Gimmershred",
-            "c": "7ta"
+            "c": "7ta",
+            "hdi": "weapon/axe/throwing_axe"
         },
         {
+            "id": 336,
+            "index": "Griffon's Eye",
             "n": "Griffon's Eye",
-            "c": "ci3"
+            "c": "ci3",
+            "hdi": "armor/circlet/diadem"
         },
         {
+            "id": 337,
+            "index": "Windhammer",
             "n": "Windhammer",
             "i": "invmau",
             "c": "7m7",
-            "tc": "cblu"
+            "tc": "cblu",
+            "hdi": "weapon/hammer/maul"
         },
         {
+            "id": 338,
+            "index": "Thunderstroke",
             "n": "Thunderstroke",
             "c": "amf",
-            "tc": "dblu"
+            "tc": "dblu",
+            "hdi": "weapon/javelin/maiden_javelin"
         },
         {
+            "id": 339,
+            "index": "Giantmaimer",
             "n": "Giant Maimer",
             "tc": "cred"
         },
         {
+            "id": 340,
+            "index": "Demon's Arch",
             "n": "Demon's Arch",
             "c": "7s7",
-            "tc": "cred"
+            "tc": "cred",
+            "hdi": "weapon/javelin/short_spear"
         },
         {
+            "id": 341,
+            "index": "Boneflame",
             "n": "Boneflame",
             "c": "nee",
-            "tc": "dred"
+            "tc": "dred",
+            "hdi": "armor/voodoo_head/gargoyle_head"
         },
         {
+            "id": 342,
+            "index": "Steelpillar",
             "n": "Steel Pillar",
-            "c": "7p7"
+            "c": "7p7",
+            "hdi": "weapon/spear/pike"
         },
         {
+            "id": 343,
+            "index": "Nightwing's Veil",
             "n": "Nightwing's Veil",
             "c": "uhm",
-            "tc": "cblu"
+            "tc": "cblu",
+            "hdi": "armor/helmet/great_helm"
         },
         {
+            "id": 344,
+            "index": "Crown of Ages",
             "n": "Crown of Ages",
             "c": "urn",
-            "tc": "dgld"
+            "tc": "dgld",
+            "hdi": "armor/helmet/crown"
         },
         {
+            "id": 345,
+            "index": "Andariel's Visage",
             "n": "Andariel's Visage",
             "c": "usk",
-            "tc": "dred"
+            "tc": "dred",
+            "hdi": "armor/helmet/mask"
         },
         {
+            "id": 346,
+            "index": "Darkfear",
             "n": "Darkfear",
             "i": "invhlmu",
             "c": "ulm"
         },
         {
+            "id": 347,
+            "index": "Dragonscale",
             "n": "Dragonscale",
             "c": "pae",
-            "tc": "dgrn"
+            "tc": "dgrn",
+            "hdi": "armor/shield/aerin_shield"
         },
         {
+            "id": 348,
+            "index": "Steel Carapice",
             "n": "Steel Carapace",
             "c": "uul",
-            "tc": "dgry"
+            "tc": "dgry",
+            "hdi": "armor/armor/full_plate_mail"
         },
         {
+            "id": 349,
+            "index": "Medusa's Gaze",
             "n": "Medusa's Gaze",
             "i": "invtowu",
             "c": "uow",
-            "tc": "lred"
+            "tc": "lred",
+            "hdi": "armor/shield/bverrit_keep"
         },
         {
+            "id": 350,
+            "index": "Ravenlore",
             "n": "Ravenlore",
             "c": "dre",
-            "tc": "dgld"
+            "tc": "dgld",
+            "hdi": "armor/pelt/falcon_mask"
         },
         {
+            "id": 351,
+            "index": "Boneshade",
             "n": "Boneshade",
             "i": "invbwnu",
             "c": "7bw",
-            "tc": "dgry"
+            "tc": "dgry",
+            "hdi": "weapon/wand/gravenspine"
         },
         {
+            "id": 352,
+            "index": "Nethercrow",
             "n": "Nethercrow",
             "tc": "cblu"
         },
         {
+            "id": 353,
+            "index": "Flamebellow",
             "n": "Flamebellow",
             "i": "invgisu",
             "c": "7gs",
-            "tc": "cred"
+            "tc": "cred",
+            "hdi": "weapon/sword/kinemils_awl"
         },
         {
+            "id": 354,
+            "index": "Fathom",
             "n": "Death's Fathom",
-            "c": "obf"
+            "c": "obf",
+            "hdi": "weapon/orb/dragon_stone"
         },
         {
+            "id": 355,
+            "index": "Wolfhowl",
             "n": "Wolfhowl",
             "c": "bac",
-            "tc": "cred"
+            "tc": "cred",
+            "hdi": "armor/helmet/fanged_helm"
         },
         {
+            "id": 356,
+            "index": "Spirit Ward",
             "n": "Spirit Ward",
             "i": "invgtsu",
             "c": "uts",
-            "tc": "dblu"
+            "tc": "dblu",
+            "hdi": "armor/shield/the_ward"
         },
         {
+            "id": 357,
+            "index": "Kira's Guardian",
             "n": "Kira's Guardian",
             "c": "ci2",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "armor/circlet/tiara"
         },
         {
+            "id": 358,
+            "index": "Ormus' Robes",
             "n": "Ormus' Robes",
             "c": "uui",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "armor/armor/quilted_armor"
         },
         {
+            "id": 359,
+            "index": "Gheed's Fortune",
             "n": "Gheed's Fortune",
-            "c": "cm3"
+            "c": "cm3",
+            "hdi": "misc/charm/charm_large"
         },
         {
+            "id": 360,
+            "index": "Stormlash",
             "n": "Stormlash",
             "c": "7fl",
-            "tc": "dgry"
+            "tc": "dgry",
+            "hdi": "weapon/mace/flail"
         },
         {
+            "id": 361,
+            "index": "Halaberd's Reign",
             "n": "Halaberd's Reign",
-            "c": "bae"
+            "c": "bae",
+            "hdi": "armor/helmet/assault_helmet"
         },
         {
+            "id": 362,
+            "index": "Warriv's Warder",
             "n": "Warriv's Warder"
         },
         {
+            "id": 363,
+            "index": "Spike Thorn",
             "n": "Spike Thorn",
             "i": "invspku",
             "c": "upk",
-            "tc": "dyel"
+            "tc": "dyel",
+            "hdi": "armor/shield/swordback_hold"
         },
         {
+            "id": 364,
+            "index": "Dracul's Grasp",
             "n": "Dracul's Grasp",
             "c": "uvg",
-            "tc": "dred"
+            "tc": "dred",
+            "hdi": "armor/glove/heavy_gloves"
         },
         {
+            "id": 365,
+            "index": "Frostwind",
             "n": "Frostwind",
             "i": "invlsdu",
             "c": "7ls",
-            "tc": "cblu"
+            "tc": "cblu",
+            "hdi": "weapon/sword/hellplague"
         },
         {
+            "id": 366,
+            "index": "Templar's Might",
             "n": "Templar's Might",
             "i": "invaaru",
             "c": "uar",
-            "tc": "cgrn"
+            "tc": "cgrn",
+            "hdi": "armor/armor/victors_silk"
         },
         {
+            "id": 367,
+            "index": "Eschuta's temper",
             "n": "Eschuta's Temper",
-            "c": "obc"
+            "c": "obc",
+            "hdi": "weapon/orb/sacred_globe"
         },
         {
+            "id": 368,
+            "index": "Firelizard's Talons",
             "n": "Firelizard's Talons",
-            "c": "7lw"
+            "c": "7lw",
+            "hdi": "weapon/h2h/claws"
         },
         {
+            "id": 369,
+            "index": "Sandstorm Trek",
             "n": "Sandstorm Trek",
-            "c": "uvb"
+            "c": "uvb",
+            "hdi": "armor/boot/heavy_boots"
         },
         {
+            "id": 370,
+            "index": "Marrowwalk",
             "n": "Marrowwalk",
-            "c": "umb"
+            "c": "umb",
+            "hdi": "armor/boot/chain_boots"
         },
         {
+            "id": 371,
+            "index": "Heaven's Light",
             "n": "Heaven's Light",
             "c": "7sc",
-            "tc": "cblu"
+            "tc": "cblu",
+            "hdi": "weapon/scepter/scepter"
         },
         {
+            "id": 372,
+            "index": "Merman's Speed",
             "n": "Merman's Sprocket"
         },
         {
+            "id": 373,
+            "index": "Arachnid Mesh",
             "n": "Arachnid Mesh",
             "c": "ulc",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "armor/belt/sash_l"
         },
         {
+            "id": 374,
+            "index": "Nosferatu's Coil",
             "n": "Nosferatu's Coil",
-            "c": "uvc"
+            "c": "uvc",
+            "hdi": "armor/belt/light_belt"
         },
         {
+            "id": 375,
+            "index": "Metalgrid",
             "n": "Metalgrid",
-            "c": "amu"
+            "c": "amu",
+            "hdi": "misc/amulet/amulet"
         },
         {
+            "id": 376,
+            "index": "Verdugo's Hearty Cord",
             "n": "Verdungo's Hearty Cord",
             "c": "umc",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "armor/belt/belt_m"
         },
         {
+            "id": 377,
+            "index": "Sigurd's Staunch",
             "n": "Siggard's Stealth"
         },
         {
+            "id": 378,
+            "index": "Carrion Wind",
             "n": "Carrion Wind",
-            "c": "rin"
+            "c": "rin",
+            "hdi": "misc/ring/ring"
         },
         {
+            "id": 379,
+            "index": "Giantskull",
             "n": "Giant Skull",
             "i": "invbhm",
             "c": "uh9",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "armor/helmet/bone_helm"
         },
         {
+            "id": 380,
+            "index": "Ironward",
             "n": "Astreon's Iron Ward",
             "c": "7ws",
-            "tc": "blac"
+            "tc": "blac",
+            "hdi": "weapon/scepter/war_scepter"
         },
         {
+            "id": 381,
+            "index": "Annihilus",
             "n": "Annihilus",
             "i": "invmss",
-            "c": "cm1"
+            "c": "cm1",
+            "hdi": "misc/quest/mephisto_soul_stone"
         },
         {
+            "id": 382,
+            "index": "Arioc's Needle",
             "n": "Arioc's Needle",
-            "c": "7sr"
+            "c": "7sr",
+            "hdi": "weapon/spear/spear"
         },
         {
+            "id": 383,
+            "index": "Cranebeak",
             "n": "Cranebeak",
             "i": "invmpiu",
-            "c": "7mp"
+            "c": "7mp",
+            "hdi": "weapon/axe/mindrend"
         },
         {
+            "id": 384,
+            "index": "Nord's Tenderizer",
             "n": "Nord's Tenderizer",
             "i": "invclbu",
-            "c": "7cl"
+            "c": "7cl",
+            "hdi": "weapon/club/felloak"
         },
         {
+            "id": 385,
+            "index": "Earthshifter",
             "n": "Earth Shifter",
-            "c": "7gm"
+            "c": "7gm",
+            "hdi": "weapon/hammer/great_maul"
         },
         {
+            "id": 386,
+            "index": "Wraithflight",
             "n": "Wraith Flight",
             "c": "7gl",
-            "tc": "dblu"
+            "tc": "dblu",
+            "hdi": "weapon/javelin/glaive"
         },
         {
+            "id": 387,
+            "index": "Bonehew",
             "n": "Bonehew",
             "c": "7o7",
-            "tc": "bwht"
+            "tc": "bwht",
+            "hdi": "weapon/polearm/bardiche"
         },
         {
+            "id": 388,
+            "index": "Ondal's Wisdom",
             "n": "Ondal's Wisdom",
             "i": "invcstu",
-            "c": "6cs"
+            "c": "6cs",
+            "hdi": "weapon/staff/lazarus_spire"
         },
         {
+            "id": 389,
+            "index": "The Reedeemer",
             "n": "The Redeemer",
-            "c": "7sc"
+            "c": "7sc",
+            "hdi": "weapon/scepter/scepter"
         },
         {
+            "id": 390,
+            "index": "Headhunter's Glory",
             "n": "Head Hunter's Glory",
             "i": "invbshu",
-            "c": "ush"
+            "c": "ush",
+            "hdi": "armor/shield/wall_of_the_eyeless"
         },
         {
+            "id": 391,
+            "index": "Steelrend",
             "n": "Steelrend",
-            "c": "uhg"
+            "c": "uhg",
+            "hdi": "armor/glove/gaunlets_h"
         },
         {
+            "id": 392,
+            "index": "Rainbow Facet",
+            "n": "Rainbow Facet",
+            "c": "jew",
+            "hdi": "misc/gem/perfect_diamond"
+        },
+        {
+            "id": 393,
+            "index": "Rainbow Facet",
             "n": "Rainbow Facet",
             "c": "jew"
         },
         {
+            "id": 394,
+            "index": "Rainbow Facet",
             "n": "Rainbow Facet",
             "c": "jew"
         },
         {
+            "id": 395,
+            "index": "Rainbow Facet",
             "n": "Rainbow Facet",
             "c": "jew"
         },
         {
+            "id": 396,
+            "index": "Rainbow Facet",
             "n": "Rainbow Facet",
             "c": "jew"
         },
         {
+            "id": 397,
+            "index": "Rainbow Facet",
             "n": "Rainbow Facet",
             "c": "jew"
         },
         {
+            "id": 398,
+            "index": "Rainbow Facet",
             "n": "Rainbow Facet",
             "c": "jew"
         },
         {
+            "id": 399,
+            "index": "Rainbow Facet",
             "n": "Rainbow Facet",
             "c": "jew"
         },
         {
-            "n": "Rainbow Facet",
-            "c": "jew"
-        },
-        {
+            "id": 400,
+            "index": "Hellfire Torch",
             "n": "Hellfire Torch",
             "i": "invtrch",
-            "c": "cm2"
+            "c": "cm2",
+            "hdi": "misc/torch/torch"
         },
         {
+            "id": 401,
+            "index": "Cold Rupture",
             "n": "Cold Rupture",
             "c": "cm3",
-            "tc": "lblu"
+            "tc": "lblu",
+            "hdi": "misc/charm/charm_large"
         },
         {
+            "id": 402,
+            "index": "Flame Rift",
             "n": "Flame Rift",
             "c": "cm3",
-            "tc": "lred"
+            "tc": "lred",
+            "hdi": "misc/charm/charm_large"
         },
         {
+            "id": 403,
+            "index": "Crack of the Heavens",
             "n": "Crack of the Heavens",
             "c": "cm3",
-            "tc": "lyel"
+            "tc": "lyel",
+            "hdi": "misc/charm/charm_large"
         },
         {
+            "id": 404,
+            "index": "Rotting Fissure",
             "n": "Rotting Fissure",
             "c": "cm3",
-            "tc": "lgrn"
+            "tc": "lgrn",
+            "hdi": "misc/charm/charm_large"
         },
         {
+            "id": 405,
+            "index": "Bone Break",
             "n": "Bone Break",
             "c": "cm3",
-            "tc": "whit"
+            "tc": "whit",
+            "hdi": "misc/charm/charm_large"
         },
         {
+            "id": 406,
+            "index": "Black Cleft",
             "n": "Black Cleft",
             "c": "cm3",
-            "tc": "lgry"
+            "tc": "lgry",
+            "hdi": "misc/charm/charm_large"
         }
     ],
     "stackables": {
@@ -15049,7 +18844,7 @@ export let vanilla_constants_99 = {
             "gt": 1,
             "i": "invcap",
             "ui": "invcapu",
-            "si": "invcapu",
+            "si": "armor/armor/victors_silk",
             "iw": 2,
             "ih": 2,
             "it": 8,
@@ -15058,7 +18853,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/cap_hat"
         },
         "skp": {
             "nc": "skp",
@@ -15082,7 +18878,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/skull_cap"
         },
         "hlm": {
             "nc": "hlm",
@@ -15099,7 +18896,7 @@ export let vanilla_constants_99 = {
             "gt": 1,
             "i": "invhlm",
             "ui": "invhlmu",
-            "si": "invhlmu",
+            "si": "armor/glove/gaunlets_h",
             "iw": 2,
             "ih": 2,
             "it": 8,
@@ -15108,7 +18905,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/helm"
         },
         "fhl": {
             "nc": "fhl",
@@ -15125,7 +18923,7 @@ export let vanilla_constants_99 = {
             "gt": 1,
             "i": "invfhl",
             "ui": "invfhlu",
-            "si": "invfhlu",
+            "si": "armor/boot/plate_boots",
             "iw": 2,
             "ih": 2,
             "it": 8,
@@ -15134,7 +18932,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/full_helm"
         },
         "ghm": {
             "nc": "ghm",
@@ -15158,7 +18957,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/great_helm"
         },
         "crn": {
             "nc": "crn",
@@ -15182,7 +18982,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/crown"
         },
         "msk": {
             "nc": "msk",
@@ -15206,7 +19007,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/mask"
         },
         "qui": {
             "nc": "qui",
@@ -15230,7 +19032,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/quilted_armor"
         },
         "lea": {
             "nc": "lea",
@@ -15254,7 +19057,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/leather_armor"
         },
         "hla": {
             "nc": "hla",
@@ -15278,7 +19082,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/hard_leather_armor"
         },
         "stu": {
             "nc": "stu",
@@ -15302,7 +19107,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/studded_leather"
         },
         "rng": {
             "nc": "rng",
@@ -15326,7 +19132,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/ring_mail"
         },
         "scl": {
             "nc": "scl",
@@ -15350,7 +19157,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/scale_mail"
         },
         "chn": {
             "nc": "chn",
@@ -15374,7 +19182,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/chain_mail"
         },
         "brs": {
             "nc": "brs",
@@ -15398,7 +19207,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/breast_plate"
         },
         "spl": {
             "nc": "spl",
@@ -15422,7 +19232,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/splint_mail"
         },
         "plt": {
             "nc": "plt",
@@ -15446,7 +19257,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/plate_mail"
         },
         "fld": {
             "nc": "fld",
@@ -15470,7 +19282,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/field_plate"
         },
         "gth": {
             "nc": "gth",
@@ -15494,7 +19307,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/gothic_plate"
         },
         "ful": {
             "nc": "ful",
@@ -15511,7 +19325,7 @@ export let vanilla_constants_99 = {
             "gt": 1,
             "i": "invful",
             "ui": "invfulu",
-            "si": "invfulu",
+            "si": "armor/armor/field_plate",
             "iw": 2,
             "ih": 3,
             "it": 8,
@@ -15520,7 +19334,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/full_plate_mail"
         },
         "aar": {
             "nc": "aar",
@@ -15537,7 +19352,7 @@ export let vanilla_constants_99 = {
             "gt": 1,
             "i": "invaar",
             "ui": "invaaru",
-            "si": "invaaru",
+            "si": "armor/glove/light_gauntlets",
             "iw": 2,
             "ih": 3,
             "it": 8,
@@ -15546,7 +19361,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/ancient_armor"
         },
         "ltp": {
             "nc": "ltp",
@@ -15570,7 +19386,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/light_plate"
         },
         "buc": {
             "nc": "buc",
@@ -15600,7 +19417,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/buckler"
         },
         "sml": {
             "nc": "sml",
@@ -15630,7 +19448,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/small_shield"
         },
         "lrg": {
             "nc": "lrg",
@@ -15649,7 +19468,7 @@ export let vanilla_constants_99 = {
             "gt": 2,
             "i": "invlrg",
             "ui": "invlrgu",
-            "si": "invlrgu",
+            "si": "armor/glove/gloves_l",
             "iw": 2,
             "ih": 3,
             "it": 2,
@@ -15660,7 +19479,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/large_shield"
         },
         "kit": {
             "nc": "kit",
@@ -15679,7 +19499,7 @@ export let vanilla_constants_99 = {
             "gt": 2,
             "i": "invkit",
             "ui": "invkitu",
-            "si": "invkitu",
+            "si": "armor/belt/belt_m",
             "iw": 2,
             "ih": 3,
             "it": 2,
@@ -15690,7 +19510,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/kite_shield"
         },
         "tow": {
             "nc": "tow",
@@ -15720,7 +19541,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/tower_shield"
         },
         "gts": {
             "nc": "gts",
@@ -15739,7 +19561,7 @@ export let vanilla_constants_99 = {
             "gt": 2,
             "i": "invgts",
             "ui": "invgtsu",
-            "si": "invgtsu",
+            "si": "armor/shield/heavens_taebaek",
             "iw": 2,
             "ih": 4,
             "it": 2,
@@ -15750,7 +19572,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/gothic_shield"
         },
         "lgl": {
             "nc": "lgl",
@@ -15774,7 +19597,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Gloves",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/glove/gloves_l"
         },
         "vgl": {
             "nc": "vgl",
@@ -15798,7 +19622,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Gloves",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/glove/heavy_gloves"
         },
         "mgl": {
             "nc": "mgl",
@@ -15822,7 +19647,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Gloves",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/glove/bracers_m"
         },
         "tgl": {
             "nc": "tgl",
@@ -15846,7 +19672,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Gloves",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/glove/light_gauntlets"
         },
         "hgl": {
             "nc": "hgl",
@@ -15870,7 +19697,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Gloves",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/glove/gaunlets_h"
         },
         "lbt": {
             "nc": "lbt",
@@ -15896,7 +19724,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Boots",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/boot/leather_boots"
         },
         "vbt": {
             "nc": "vbt",
@@ -15922,7 +19751,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Boots",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/boot/heavy_boots"
         },
         "mbt": {
             "nc": "mbt",
@@ -15948,7 +19778,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Boots",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/boot/chain_boots"
         },
         "tbt": {
             "nc": "tbt",
@@ -15974,7 +19805,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Boots",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/boot/light_plate_boots"
         },
         "hbt": {
             "nc": "hbt",
@@ -16000,7 +19832,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Boots",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/boot/plate_boots"
         },
         "lbl": {
             "nc": "lbl",
@@ -16024,7 +19857,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Belt",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/belt/sash_l"
         },
         "vbl": {
             "nc": "vbl",
@@ -16048,7 +19882,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Belt",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/belt/light_belt"
         },
         "mbl": {
             "nc": "mbl",
@@ -16072,7 +19907,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Belt",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/belt/belt_m"
         },
         "tbl": {
             "nc": "tbl",
@@ -16096,7 +19932,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Belt",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/belt/heavy_belt"
         },
         "hbl": {
             "nc": "hbl",
@@ -16120,7 +19957,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Belt",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/belt/girdle_h"
         },
         "bhm": {
             "nc": "bhm",
@@ -16146,7 +19984,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/bone_helm"
         },
         "bsh": {
             "nc": "bsh",
@@ -16165,7 +20004,7 @@ export let vanilla_constants_99 = {
             "gt": 2,
             "i": "invbsh",
             "ui": "invbshu",
-            "si": "invbshu",
+            "si": "armor/boot/leather_boots",
             "iw": 2,
             "ih": 3,
             "it": 8,
@@ -16176,7 +20015,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/bone_shield"
         },
         "spk": {
             "nc": "spk",
@@ -16195,7 +20035,7 @@ export let vanilla_constants_99 = {
             "gt": 2,
             "i": "invspk",
             "ui": "invspku",
-            "si": "invspku",
+            "si": "armor/armor/quilted_armor",
             "iw": 2,
             "ih": 3,
             "it": 8,
@@ -16206,7 +20046,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/spiked_shield"
         },
         "xap": {
             "nc": "cap",
@@ -16230,7 +20071,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/cap_hat"
         },
         "xkp": {
             "nc": "skp",
@@ -16256,7 +20098,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/skull_cap"
         },
         "xlm": {
             "nc": "hlm",
@@ -16282,7 +20125,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/helm"
         },
         "xhl": {
             "nc": "fhl",
@@ -16308,7 +20152,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/full_helm"
         },
         "xhm": {
             "nc": "ghm",
@@ -16332,7 +20177,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/great_helm"
         },
         "xrn": {
             "nc": "crn",
@@ -16358,7 +20204,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/crown"
         },
         "xsk": {
             "nc": "msk",
@@ -16382,7 +20229,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/mask"
         },
         "xui": {
             "nc": "qui",
@@ -16406,7 +20254,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/quilted_armor"
         },
         "xea": {
             "nc": "lea",
@@ -16430,7 +20279,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/leather_armor"
         },
         "xla": {
             "nc": "hla",
@@ -16454,7 +20304,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/hard_leather_armor"
         },
         "xtu": {
             "nc": "stu",
@@ -16480,7 +20331,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/studded_leather"
         },
         "xng": {
             "nc": "rng",
@@ -16504,7 +20356,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/ring_mail"
         },
         "xcl": {
             "nc": "scl",
@@ -16528,7 +20381,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/scale_mail"
         },
         "xhn": {
             "nc": "chn",
@@ -16552,7 +20406,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/chain_mail"
         },
         "xrs": {
             "nc": "brs",
@@ -16577,7 +20432,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/breast_plate"
         },
         "xpl": {
             "nc": "spl",
@@ -16601,7 +20457,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/splint_mail"
         },
         "xlt": {
             "nc": "plt",
@@ -16625,7 +20482,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/plate_mail"
         },
         "xld": {
             "nc": "fld",
@@ -16649,7 +20507,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/field_plate"
         },
         "xth": {
             "nc": "gth",
@@ -16673,7 +20532,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/gothic_plate"
         },
         "xul": {
             "nc": "ful",
@@ -16697,7 +20557,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/full_plate_mail"
         },
         "xar": {
             "nc": "aar",
@@ -16723,7 +20584,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/ancient_armor"
         },
         "xtp": {
             "nc": "ltp",
@@ -16747,7 +20609,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/light_plate"
         },
         "xuc": {
             "nc": "buc",
@@ -16777,7 +20640,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/buckler"
         },
         "xml": {
             "nc": "sml",
@@ -16807,7 +20671,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/small_shield"
         },
         "xrg": {
             "nc": "lrg",
@@ -16837,7 +20702,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/large_shield"
         },
         "xit": {
             "nc": "kit",
@@ -16867,7 +20733,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/kite_shield"
         },
         "xow": {
             "nc": "tow",
@@ -16897,7 +20764,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/tower_shield"
         },
         "xts": {
             "nc": "gts",
@@ -16927,7 +20795,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/gothic_shield"
         },
         "xlg": {
             "nc": "lgl",
@@ -16951,7 +20820,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Gloves",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/glove/gloves_l"
         },
         "xvg": {
             "nc": "vgl",
@@ -16975,7 +20845,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Gloves",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/glove/heavy_gloves"
         },
         "xmg": {
             "nc": "mgl",
@@ -16999,7 +20870,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Gloves",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/glove/bracers_m"
         },
         "xtg": {
             "nc": "tgl",
@@ -17023,7 +20895,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Gloves",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/glove/light_gauntlets"
         },
         "xhg": {
             "nc": "hgl",
@@ -17047,7 +20920,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Gloves",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/glove/gaunlets_h"
         },
         "xlb": {
             "nc": "lbt",
@@ -17073,7 +20947,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Boots",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/boot/leather_boots"
         },
         "xvb": {
             "nc": "vbt",
@@ -17099,7 +20974,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Boots",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/boot/heavy_boots"
         },
         "xmb": {
             "nc": "mbt",
@@ -17125,7 +21001,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Boots",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/boot/chain_boots"
         },
         "xtb": {
             "nc": "tbt",
@@ -17151,7 +21028,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Boots",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/boot/light_plate_boots"
         },
         "xhb": {
             "nc": "hbt",
@@ -17177,7 +21055,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Boots",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/boot/plate_boots"
         },
         "zlb": {
             "nc": "lbl",
@@ -17201,7 +21080,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Belt",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/belt/sash_l"
         },
         "zvb": {
             "nc": "vbl",
@@ -17225,7 +21105,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Belt",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/belt/light_belt"
         },
         "zmb": {
             "nc": "mbl",
@@ -17249,7 +21130,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Belt",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/belt/belt_m"
         },
         "ztb": {
             "nc": "tbl",
@@ -17273,7 +21155,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Belt",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/belt/heavy_belt"
         },
         "zhb": {
             "nc": "hbl",
@@ -17297,7 +21180,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Belt",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/belt/girdle_h"
         },
         "xh9": {
             "nc": "bhm",
@@ -17323,7 +21207,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/bone_helm"
         },
         "xsh": {
             "nc": "bsh",
@@ -17353,7 +21238,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/bone_shield"
         },
         "xpk": {
             "nc": "spk",
@@ -17383,7 +21269,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/spiked_shield"
         },
         "dr1": {
             "nc": "dr1",
@@ -17411,7 +21298,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Druid Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/pelt/wolf_head"
         },
         "dr2": {
             "nc": "dr2",
@@ -17439,7 +21327,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Druid Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/pelt/hawk_helm"
         },
         "dr3": {
             "nc": "dr3",
@@ -17467,7 +21356,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Druid Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/pelt/antlers"
         },
         "dr4": {
             "nc": "dr4",
@@ -17495,7 +21385,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Druid Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/pelt/falcon_mask"
         },
         "dr5": {
             "nc": "dr5",
@@ -17523,7 +21414,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Druid Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/pelt/spirit_mask"
         },
         "ba1": {
             "nc": "ba1",
@@ -17551,7 +21443,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Barbarian Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/helmet/jawbone_cap"
         },
         "ba2": {
             "nc": "ba2",
@@ -17579,7 +21472,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Barbarian Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/helmet/fanged_helm"
         },
         "ba3": {
             "nc": "ba3",
@@ -17607,7 +21501,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Barbarian Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/helmet/horned_helm"
         },
         "ba4": {
             "nc": "ba4",
@@ -17635,7 +21530,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Barbarian Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/helmet/assault_helmet"
         },
         "ba5": {
             "nc": "ba5",
@@ -17663,7 +21559,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Barbarian Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/helmet/avenger_guard"
         },
         "pa1": {
             "nc": "pa1",
@@ -17694,7 +21591,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Paladin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/shield/targe"
         },
         "pa2": {
             "nc": "pa2",
@@ -17725,7 +21623,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Paladin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/shield/rondache"
         },
         "pa3": {
             "nc": "pa3",
@@ -17756,7 +21655,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Paladin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/shield/heraldic_shield"
         },
         "pa4": {
             "nc": "pa4",
@@ -17787,7 +21687,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Paladin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/shield/aerin_shield"
         },
         "pa5": {
             "nc": "pa5",
@@ -17818,7 +21719,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Paladin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/shield/crown_shield"
         },
         "ne1": {
             "nc": "ne1",
@@ -17847,7 +21749,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Necromancer Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/voodoo_head/preserved_head"
         },
         "ne2": {
             "nc": "ne2",
@@ -17876,7 +21779,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Necromancer Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/voodoo_head/zombie_head"
         },
         "ne3": {
             "nc": "ne3",
@@ -17905,7 +21809,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Necromancer Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/voodoo_head/unraveller_head"
         },
         "ne4": {
             "nc": "ne4",
@@ -17934,7 +21839,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Necromancer Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/voodoo_head/gargoyle_head"
         },
         "ne5": {
             "nc": "ne5",
@@ -17963,7 +21869,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Necromancer Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/voodoo_head/demon_head"
         },
         "ci0": {
             "nc": "ci0",
@@ -17988,7 +21895,8 @@ export let vanilla_constants_99 = {
                 "Circlet",
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/circlet/circlet"
         },
         "ci1": {
             "nc": "ci1",
@@ -18013,7 +21921,8 @@ export let vanilla_constants_99 = {
                 "Circlet",
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/circlet/coronet"
         },
         "ci2": {
             "nc": "ci1",
@@ -18038,7 +21947,8 @@ export let vanilla_constants_99 = {
                 "Circlet",
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/circlet/tiara"
         },
         "ci3": {
             "nc": "ci1",
@@ -18063,7 +21973,8 @@ export let vanilla_constants_99 = {
                 "Circlet",
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/circlet/diadem"
         },
         "uap": {
             "nc": "cap",
@@ -18087,7 +21998,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/cap_hat"
         },
         "ukp": {
             "nc": "skp",
@@ -18111,7 +22023,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/skull_cap"
         },
         "ulm": {
             "nc": "hlm",
@@ -18137,7 +22050,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/helm"
         },
         "uhl": {
             "nc": "fhl",
@@ -18163,7 +22077,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/full_helm"
         },
         "uhm": {
             "nc": "ghm",
@@ -18188,7 +22103,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/great_helm"
         },
         "urn": {
             "nc": "crn",
@@ -18212,7 +22128,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/crown"
         },
         "usk": {
             "nc": "msk",
@@ -18236,7 +22153,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/mask"
         },
         "uui": {
             "nc": "qui",
@@ -18260,7 +22178,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/quilted_armor"
         },
         "uea": {
             "nc": "lea",
@@ -18284,7 +22203,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/leather_armor"
         },
         "ula": {
             "nc": "hla",
@@ -18308,7 +22228,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/hard_leather_armor"
         },
         "utu": {
             "nc": "stu",
@@ -18332,7 +22253,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/studded_leather"
         },
         "ung": {
             "nc": "rng",
@@ -18356,7 +22278,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/ring_mail"
         },
         "ucl": {
             "nc": "scl",
@@ -18380,7 +22303,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/scale_mail"
         },
         "uhn": {
             "nc": "chn",
@@ -18404,7 +22328,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/chain_mail"
         },
         "urs": {
             "nc": "brs",
@@ -18428,7 +22353,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/breast_plate"
         },
         "upl": {
             "nc": "spl",
@@ -18452,7 +22378,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/splint_mail"
         },
         "ult": {
             "nc": "plt",
@@ -18476,7 +22403,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/plate_mail"
         },
         "uld": {
             "nc": "fld",
@@ -18500,7 +22428,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/field_plate"
         },
         "uth": {
             "nc": "gth",
@@ -18524,7 +22453,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/gothic_plate"
         },
         "uul": {
             "nc": "ful",
@@ -18548,7 +22478,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/full_plate_mail"
         },
         "uar": {
             "nc": "aar",
@@ -18574,7 +22505,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/ancient_armor"
         },
         "utp": {
             "nc": "ltp",
@@ -18598,7 +22530,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/armor/light_plate"
         },
         "uuc": {
             "nc": "buc",
@@ -18628,7 +22561,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/buckler"
         },
         "uml": {
             "nc": "sml",
@@ -18658,7 +22592,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/small_shield"
         },
         "urg": {
             "nc": "lrg",
@@ -18688,7 +22623,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/large_shield"
         },
         "uit": {
             "nc": "kit",
@@ -18718,7 +22654,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/kite_shield"
         },
         "uow": {
             "nc": "tow",
@@ -18748,7 +22685,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/tower_shield"
         },
         "uts": {
             "nc": "gts",
@@ -18778,7 +22716,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/gothic_shield"
         },
         "ulg": {
             "nc": "lgl",
@@ -18802,7 +22741,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Gloves",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/glove/gloves_l"
         },
         "uvg": {
             "nc": "vgl",
@@ -18826,7 +22766,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Gloves",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/glove/heavy_gloves"
         },
         "umg": {
             "nc": "mgl",
@@ -18850,7 +22791,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Gloves",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/glove/bracers_m"
         },
         "utg": {
             "nc": "tgl",
@@ -18874,7 +22816,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Gloves",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/glove/light_gauntlets"
         },
         "uhg": {
             "nc": "hgl",
@@ -18898,7 +22841,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Gloves",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/glove/gaunlets_h"
         },
         "ulb": {
             "nc": "lbt",
@@ -18924,7 +22868,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Boots",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/boot/leather_boots"
         },
         "uvb": {
             "nc": "vbt",
@@ -18950,7 +22895,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Boots",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/boot/heavy_boots"
         },
         "umb": {
             "nc": "mbt",
@@ -18976,7 +22922,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Boots",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/boot/chain_boots"
         },
         "utb": {
             "nc": "tbt",
@@ -19002,7 +22949,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Boots",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/boot/light_plate_boots"
         },
         "uhb": {
             "nc": "hbt",
@@ -19028,7 +22976,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Boots",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/boot/plate_boots"
         },
         "ulc": {
             "nc": "lbl",
@@ -19052,7 +23001,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Belt",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/belt/sash_l"
         },
         "uvc": {
             "nc": "vbl",
@@ -19076,7 +23026,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Belt",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/belt/light_belt"
         },
         "umc": {
             "nc": "mbl",
@@ -19100,7 +23051,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Belt",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/belt/belt_m"
         },
         "utc": {
             "nc": "tbl",
@@ -19124,7 +23076,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Belt",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/belt/heavy_belt"
         },
         "uhc": {
             "nc": "hbl",
@@ -19148,7 +23101,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Belt",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/belt/girdle_h"
         },
         "uh9": {
             "nc": "bhm",
@@ -19174,7 +23128,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor"
-            ]
+            ],
+            "hdi": "armor/helmet/bone_helm"
         },
         "ush": {
             "nc": "bsh",
@@ -19204,7 +23159,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/bone_shield"
         },
         "upk": {
             "nc": "spk",
@@ -19234,7 +23190,8 @@ export let vanilla_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "armor/shield/spiked_shield"
         },
         "dr6": {
             "nc": "dr1",
@@ -19262,7 +23219,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Druid Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/pelt/wolf_head"
         },
         "dr7": {
             "nc": "dr2",
@@ -19290,7 +23248,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Druid Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/pelt/hawk_helm"
         },
         "dr8": {
             "nc": "dr3",
@@ -19318,7 +23277,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Druid Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/pelt/antlers"
         },
         "dr9": {
             "nc": "dr4",
@@ -19346,7 +23306,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Druid Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/pelt/falcon_mask"
         },
         "dra": {
             "nc": "dr5",
@@ -19374,7 +23335,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Druid Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/pelt/spirit_mask"
         },
         "ba6": {
             "nc": "ba1",
@@ -19402,7 +23364,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Barbarian Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/helmet/jawbone_cap"
         },
         "ba7": {
             "nc": "ba2",
@@ -19430,7 +23393,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Barbarian Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/helmet/fanged_helm"
         },
         "ba8": {
             "nc": "ba3",
@@ -19458,7 +23422,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Barbarian Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/helmet/horned_helm"
         },
         "ba9": {
             "nc": "ba4",
@@ -19486,7 +23451,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Barbarian Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/helmet/assault_helmet"
         },
         "baa": {
             "nc": "ba5",
@@ -19514,7 +23480,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Barbarian Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/helmet/avenger_guard"
         },
         "pa6": {
             "nc": "pa1",
@@ -19545,7 +23512,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Paladin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/shield/targe"
         },
         "pa7": {
             "nc": "pa2",
@@ -19576,7 +23544,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Paladin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/shield/rondache"
         },
         "pa8": {
             "nc": "pa3",
@@ -19607,7 +23576,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Paladin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/shield/heraldic_shield"
         },
         "pa9": {
             "nc": "pa4",
@@ -19638,7 +23608,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Paladin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/shield/aerin_shield"
         },
         "paa": {
             "nc": "pa5",
@@ -19669,7 +23640,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Paladin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/shield/crown_shield"
         },
         "ne6": {
             "nc": "ne1",
@@ -19698,7 +23670,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Necromancer Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/voodoo_head/preserved_head"
         },
         "ne7": {
             "nc": "ne2",
@@ -19727,7 +23700,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Necromancer Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/voodoo_head/zombie_head"
         },
         "ne8": {
             "nc": "ne3",
@@ -19756,7 +23730,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Necromancer Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/voodoo_head/unraveller_head"
         },
         "ne9": {
             "nc": "ne4",
@@ -19785,7 +23760,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Necromancer Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/voodoo_head/gargoyle_head"
         },
         "nea": {
             "nc": "ne5",
@@ -19814,7 +23790,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Necromancer Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/voodoo_head/demon_head"
         },
         "drb": {
             "nc": "dr1",
@@ -19842,7 +23819,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Druid Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/pelt/wolf_head"
         },
         "drc": {
             "nc": "dr2",
@@ -19870,7 +23848,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Druid Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/pelt/hawk_helm"
         },
         "drd": {
             "nc": "dr3",
@@ -19898,7 +23877,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Druid Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/pelt/antlers"
         },
         "dre": {
             "nc": "dr4",
@@ -19926,7 +23906,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Druid Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/pelt/falcon_mask"
         },
         "drf": {
             "nc": "dr5",
@@ -19954,7 +23935,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Druid Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/pelt/spirit_mask"
         },
         "bab": {
             "nc": "ba1",
@@ -19982,7 +23964,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Barbarian Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/helmet/jawbone_cap"
         },
         "bac": {
             "nc": "ba2",
@@ -20010,7 +23993,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Barbarian Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/helmet/fanged_helm"
         },
         "bad": {
             "nc": "ba3",
@@ -20038,7 +24022,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Barbarian Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/helmet/horned_helm"
         },
         "bae": {
             "nc": "ba4",
@@ -20066,7 +24051,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Barbarian Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/helmet/assault_helmet"
         },
         "baf": {
             "nc": "ba5",
@@ -20094,7 +24080,8 @@ export let vanilla_constants_99 = {
                 "Any Armor",
                 "Barbarian Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/helmet/avenger_guard"
         },
         "pab": {
             "nc": "pa1",
@@ -20125,7 +24112,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Paladin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/shield/targe"
         },
         "pac": {
             "nc": "pa2",
@@ -20156,7 +24144,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Paladin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/shield/rondache"
         },
         "pad": {
             "nc": "pa3",
@@ -20187,7 +24176,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Paladin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/shield/heraldic_shield"
         },
         "pae": {
             "nc": "pa4",
@@ -20218,7 +24208,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Paladin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/shield/aerin_shield"
         },
         "paf": {
             "nc": "pa5",
@@ -20249,7 +24240,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Paladin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/shield/crown_shield"
         },
         "neb": {
             "nc": "ne1",
@@ -20278,7 +24270,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Necromancer Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/voodoo_head/preserved_head"
         },
         "neg": {
             "nc": "ne2",
@@ -20307,7 +24300,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Necromancer Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/voodoo_head/zombie_head"
         },
         "ned": {
             "nc": "ne3",
@@ -20336,7 +24330,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Necromancer Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/voodoo_head/unraveller_head"
         },
         "nee": {
             "nc": "ne4",
@@ -20365,7 +24360,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Necromancer Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/voodoo_head/gargoyle_head"
         },
         "nef": {
             "nc": "ne5",
@@ -20394,7 +24390,8 @@ export let vanilla_constants_99 = {
                 "Second Hand",
                 "Necromancer Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "armor/voodoo_head/demon_head"
         }
     },
     "weapon_items": {
@@ -20421,7 +24418,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/hand_axe"
         },
         "axe": {
             "nc": "axe",
@@ -20447,7 +24445,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/axe"
         },
         "2ax": {
             "nc": "2ax",
@@ -20471,7 +24470,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/double_axe"
         },
         "mpi": {
             "nc": "mpi",
@@ -20498,7 +24498,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/military_pick"
         },
         "wax": {
             "nc": "wax",
@@ -20522,7 +24523,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/war_axe"
         },
         "lax": {
             "nc": "lax",
@@ -20546,7 +24548,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/large_axe"
         },
         "bax": {
             "nc": "bax",
@@ -20570,7 +24573,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/broad_axe"
         },
         "btx": {
             "nc": "btx",
@@ -20596,7 +24600,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/battle_axe"
         },
         "gax": {
             "nc": "gax",
@@ -20623,7 +24628,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/great_axe"
         },
         "gix": {
             "nc": "gix",
@@ -20647,7 +24653,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/giant_axe"
         },
         "wnd": {
             "nc": "wnd",
@@ -20674,7 +24681,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/wand/wand"
         },
         "ywn": {
             "nc": "ywn",
@@ -20699,7 +24707,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/wand/yew_wand"
         },
         "bwn": {
             "nc": "bwn",
@@ -20726,7 +24735,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/wand/bone_wand"
         },
         "gwn": {
             "nc": "gwn",
@@ -20751,7 +24761,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/wand/grim_wand"
         },
         "clb": {
             "nc": "clb",
@@ -20777,7 +24788,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/club/club"
         },
         "scp": {
             "nc": "scp",
@@ -20803,7 +24815,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/scepter/scepter"
         },
         "gsc": {
             "nc": "gsc",
@@ -20829,7 +24842,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/scepter/grand_scepter"
         },
         "wsp": {
             "nc": "wsp",
@@ -20855,7 +24869,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/scepter/war_scepter"
         },
         "spc": {
             "nc": "spc",
@@ -20881,7 +24896,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/club/spiked_club"
         },
         "mac": {
             "nc": "mac",
@@ -20906,7 +24922,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/mace/mace"
         },
         "mst": {
             "nc": "mst",
@@ -20933,7 +24950,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/mace/morning_star"
         },
         "fla": {
             "nc": "fla",
@@ -20959,7 +24977,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/mace/flail"
         },
         "whm": {
             "nc": "whm",
@@ -20984,7 +25003,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/hammer/war_hammer"
         },
         "mau": {
             "nc": "mau",
@@ -21011,7 +25031,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/hammer/maul"
         },
         "gma": {
             "nc": "gma",
@@ -21038,7 +25059,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/hammer/great_maul"
         },
         "ssd": {
             "nc": "ssd",
@@ -21062,7 +25084,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/short_sword"
         },
         "scm": {
             "nc": "scm",
@@ -21089,7 +25112,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/scimitar"
         },
         "sbr": {
             "nc": "sbr",
@@ -21117,7 +25141,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/saber"
         },
         "flc": {
             "nc": "flc",
@@ -21144,7 +25169,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/falchion"
         },
         "crs": {
             "nc": "crs",
@@ -21171,7 +25197,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/crystal_sword"
         },
         "bsd": {
             "nc": "bsd",
@@ -21187,7 +25214,7 @@ export let vanilla_constants_99 = {
             "gt": 0,
             "i": "invbsd",
             "ui": "invbsdu",
-            "si": "invbsdu",
+            "si": "weapon/axe/mindrend",
             "iw": 2,
             "ih": 3,
             "it": 2,
@@ -21198,7 +25225,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/broad_sword"
         },
         "lsd": {
             "nc": "lsd",
@@ -21226,7 +25254,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/long_sword"
         },
         "wsd": {
             "nc": "wsd",
@@ -21252,7 +25281,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/war_sword"
         },
         "2hs": {
             "nc": "2hs",
@@ -21282,7 +25312,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/two_handed_sword"
         },
         "clm": {
             "nc": "clm",
@@ -21309,7 +25340,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/claymore"
         },
         "gis": {
             "nc": "gis",
@@ -21339,7 +25371,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/giant_sword"
         },
         "bsw": {
             "nc": "bsw",
@@ -21368,7 +25401,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/bastard_sword"
         },
         "flb": {
             "nc": "flb",
@@ -21396,7 +25430,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/flamberge"
         },
         "gsd": {
             "nc": "gsd",
@@ -21426,7 +25461,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/great_sword"
         },
         "dgr": {
             "nc": "dgr",
@@ -21450,7 +25486,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/knife/dagger"
         },
         "dir": {
             "nc": "dir",
@@ -21475,7 +25512,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/knife/dirk"
         },
         "kri": {
             "nc": "kri",
@@ -21502,7 +25540,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/knife/kriss"
         },
         "bld": {
             "nc": "bld",
@@ -21528,7 +25567,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/knife/blade"
         },
         "tkf": {
             "nc": "tkf",
@@ -21562,7 +25602,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/knife/throwing_knife"
         },
         "tax": {
             "nc": "tax",
@@ -21595,7 +25636,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/throwing_axe"
         },
         "bkf": {
             "nc": "bkf",
@@ -21629,7 +25671,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/knife/balanced_knife"
         },
         "bal": {
             "nc": "bal",
@@ -21662,7 +25705,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/balanced_axe"
         },
         "jav": {
             "nc": "jav",
@@ -21695,7 +25739,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/javelin/javelin"
         },
         "pil": {
             "nc": "pil",
@@ -21729,7 +25774,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/javelin/pilum"
         },
         "ssp": {
             "nc": "ssp",
@@ -21764,7 +25810,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/javelin/short_spear"
         },
         "glv": {
             "nc": "glv",
@@ -21799,7 +25846,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/javelin/glaive"
         },
         "tsp": {
             "nc": "tsp",
@@ -21833,7 +25881,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/javelin/throwing_spear"
         },
         "spr": {
             "nc": "spr",
@@ -21858,7 +25907,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/spear/spear"
         },
         "tri": {
             "nc": "tri",
@@ -21886,7 +25936,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/spear/trident"
         },
         "brn": {
             "nc": "brn",
@@ -21912,7 +25963,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/spear/brandistock"
         },
         "spt": {
             "nc": "spt",
@@ -21938,7 +25990,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/spear/spetum"
         },
         "pik": {
             "nc": "pik",
@@ -21964,7 +26017,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/spear/pike"
         },
         "bar": {
             "nc": "bar",
@@ -21989,7 +26043,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/polearm/bardiche"
         },
         "vou": {
             "nc": "vou",
@@ -22014,7 +26069,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/polearm/voulge"
         },
         "scy": {
             "nc": "scy",
@@ -22031,7 +26087,7 @@ export let vanilla_constants_99 = {
             "gt": 0,
             "i": "invscy",
             "ui": "invscyu",
-            "si": "invscyu",
+            "si": "weapon/sword/krintizs_skewer",
             "iw": 2,
             "ih": 4,
             "it": 2,
@@ -22042,7 +26098,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/polearm/scythe"
         },
         "pax": {
             "nc": "pax",
@@ -22067,7 +26124,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/polearm/poleaxe"
         },
         "hal": {
             "nc": "hal",
@@ -22093,7 +26151,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/polearm/halberd"
         },
         "wsc": {
             "nc": "wsc",
@@ -22119,7 +26178,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/polearm/war_scythe"
         },
         "sst": {
             "nc": "sst",
@@ -22144,7 +26204,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/staff/short_staff"
         },
         "lst": {
             "nc": "lst",
@@ -22169,7 +26230,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/staff/long_staff"
         },
         "cst": {
             "nc": "cst",
@@ -22196,7 +26258,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/staff/gnarled_staff"
         },
         "bst": {
             "nc": "bst",
@@ -22221,7 +26284,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/staff/battle_staff"
         },
         "wst": {
             "nc": "wst",
@@ -22246,7 +26310,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/staff/war_staff"
         },
         "sbw": {
             "nc": "sbw",
@@ -22270,7 +26335,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/short_bow"
         },
         "hbw": {
             "nc": "hbw",
@@ -22294,7 +26360,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/hunters_bow"
         },
         "lbw": {
             "nc": "lbw",
@@ -22319,7 +26386,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/long_bow"
         },
         "cbw": {
             "nc": "cbw",
@@ -22346,7 +26414,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/composite_bow"
         },
         "sbb": {
             "nc": "sbb",
@@ -22363,7 +26432,7 @@ export let vanilla_constants_99 = {
             "gt": 0,
             "i": "invsbb",
             "ui": "invsbbu",
-            "si": "invsbbu",
+            "si": "weapon/h2h/natalyas_mark",
             "iw": 2,
             "ih": 3,
             "it": 8,
@@ -22373,7 +26442,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/short_battle_bow"
         },
         "lbb": {
             "nc": "lbb",
@@ -22398,7 +26468,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/long_battle_bow"
         },
         "swb": {
             "nc": "swb",
@@ -22425,7 +26496,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/short_war_bow"
         },
         "lwb": {
             "nc": "lwb",
@@ -22450,7 +26522,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/long_war_bow"
         },
         "lxb": {
             "nc": "lxb",
@@ -22477,7 +26550,8 @@ export let vanilla_constants_99 = {
                 "Crossbow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/light_crossbow"
         },
         "mxb": {
             "nc": "mxb",
@@ -22494,7 +26568,7 @@ export let vanilla_constants_99 = {
             "gt": 0,
             "i": "invmxb",
             "ui": "invmxbu",
-            "si": "invmxbu",
+            "si": "weapon/mace/bloodrise",
             "iw": 2,
             "ih": 3,
             "it": 8,
@@ -22504,7 +26578,8 @@ export let vanilla_constants_99 = {
                 "Crossbow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/crossbow"
         },
         "hxb": {
             "nc": "hxb",
@@ -22531,7 +26606,8 @@ export let vanilla_constants_99 = {
                 "Crossbow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/heavy_crossbow"
         },
         "rxb": {
             "nc": "rxb",
@@ -22558,7 +26634,8 @@ export let vanilla_constants_99 = {
                 "Crossbow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/repeating_crossbow"
         },
         "gps": {
             "nc": "gps",
@@ -22580,7 +26657,8 @@ export let vanilla_constants_99 = {
                 "Missile Potion",
                 "Thrown Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/potion/rancid_gas_potion"
         },
         "ops": {
             "nc": "ops",
@@ -22602,7 +26680,8 @@ export let vanilla_constants_99 = {
                 "Missile Potion",
                 "Thrown Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/potion/oil_potion"
         },
         "gpm": {
             "nc": "gpm",
@@ -22624,7 +26703,8 @@ export let vanilla_constants_99 = {
                 "Missile Potion",
                 "Thrown Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/potion/choking_gas_potion"
         },
         "opm": {
             "nc": "opm",
@@ -22646,7 +26726,8 @@ export let vanilla_constants_99 = {
                 "Missile Potion",
                 "Thrown Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/potion/exploding_potion"
         },
         "gpl": {
             "nc": "gpl",
@@ -22668,7 +26749,8 @@ export let vanilla_constants_99 = {
                 "Missile Potion",
                 "Thrown Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/potion/strangling_gas_potion"
         },
         "opl": {
             "nc": "opl",
@@ -22690,7 +26772,8 @@ export let vanilla_constants_99 = {
                 "Missile Potion",
                 "Thrown Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/potion/fulminating_potion"
         },
         "d33": {
             "nc": "d33",
@@ -22715,7 +26798,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/knife/decoy_dagger"
         },
         "g33": {
             "nc": "g33",
@@ -22740,7 +26824,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/knife/gidbinn"
         },
         "leg": {
             "nc": "leg",
@@ -22764,7 +26849,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/club/wirts_leg"
         },
         "hdm": {
             "nc": "hdm",
@@ -22789,7 +26875,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/hammer/horadric_malus"
         },
         "hfh": {
             "nc": "hfh",
@@ -22813,7 +26900,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/hammer/hellforge_hammer"
         },
         "hst": {
             "nc": "hst",
@@ -22838,7 +26926,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/staff/horadric_staff"
         },
         "msf": {
             "nc": "msf",
@@ -22863,7 +26952,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/staff/staff_of_the_kings"
         },
         "9ha": {
             "nc": "hax",
@@ -22890,7 +26980,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/hand_axe"
         },
         "9ax": {
             "nc": "axe",
@@ -22916,7 +27007,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/axe"
         },
         "92a": {
             "nc": "2ax",
@@ -22940,7 +27032,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/double_axe"
         },
         "9mp": {
             "nc": "mpi",
@@ -22967,7 +27060,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/military_pick"
         },
         "9wa": {
             "nc": "wax",
@@ -22991,7 +27085,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/war_axe"
         },
         "9la": {
             "nc": "lax",
@@ -23015,7 +27110,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/large_axe"
         },
         "9ba": {
             "nc": "bax",
@@ -23039,7 +27135,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/broad_axe"
         },
         "9bt": {
             "nc": "btx",
@@ -23065,7 +27162,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/battle_axe"
         },
         "9ga": {
             "nc": "gax",
@@ -23092,7 +27190,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/great_axe"
         },
         "9gi": {
             "nc": "gix",
@@ -23118,7 +27217,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/giant_axe"
         },
         "9wn": {
             "nc": "wnd",
@@ -23144,7 +27244,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/wand/wand"
         },
         "9yw": {
             "nc": "ywn",
@@ -23170,7 +27271,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/wand/yew_wand"
         },
         "9bw": {
             "nc": "bwn",
@@ -23198,7 +27300,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/wand/bone_wand"
         },
         "9gw": {
             "nc": "gwn",
@@ -23226,7 +27329,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/wand/grim_wand"
         },
         "9cl": {
             "nc": "clb",
@@ -23253,7 +27357,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/club/club"
         },
         "9sc": {
             "nc": "scp",
@@ -23279,7 +27384,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/scepter/scepter"
         },
         "9qs": {
             "nc": "gsc",
@@ -23305,7 +27411,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/scepter/grand_scepter"
         },
         "9ws": {
             "nc": "wsp",
@@ -23331,7 +27438,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/scepter/war_scepter"
         },
         "9sp": {
             "nc": "spc",
@@ -23358,7 +27466,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/club/spiked_club"
         },
         "9ma": {
             "nc": "mac",
@@ -23383,7 +27492,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/mace/mace"
         },
         "9mt": {
             "nc": "mst",
@@ -23410,7 +27520,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/mace/morning_star"
         },
         "9fl": {
             "nc": "fla",
@@ -23436,7 +27547,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/mace/flail"
         },
         "9wh": {
             "nc": "whm",
@@ -23461,7 +27573,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/hammer/war_hammer"
         },
         "9m9": {
             "nc": "mau",
@@ -23486,7 +27599,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/hammer/maul"
         },
         "9gm": {
             "nc": "gma",
@@ -23513,7 +27627,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/hammer/great_maul"
         },
         "9ss": {
             "nc": "ssd",
@@ -23538,7 +27653,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/short_sword"
         },
         "9sm": {
             "nc": "scm",
@@ -23566,7 +27682,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/scimitar"
         },
         "9sb": {
             "nc": "sbr",
@@ -23594,7 +27711,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/saber"
         },
         "9fc": {
             "nc": "flc",
@@ -23620,7 +27738,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/falchion"
         },
         "9cr": {
             "nc": "crs",
@@ -23648,7 +27767,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/crystal_sword"
         },
         "9bs": {
             "nc": "bsd",
@@ -23674,7 +27794,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/broad_sword"
         },
         "9ls": {
             "nc": "lsd",
@@ -23702,7 +27823,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/long_sword"
         },
         "9wd": {
             "nc": "wsd",
@@ -23728,7 +27850,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/war_sword"
         },
         "92h": {
             "nc": "2hs",
@@ -23758,7 +27881,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/two_handed_sword"
         },
         "9cm": {
             "nc": "clm",
@@ -23786,7 +27910,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/claymore"
         },
         "9gs": {
             "nc": "gis",
@@ -23816,7 +27941,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/giant_sword"
         },
         "9b9": {
             "nc": "bsw",
@@ -23846,7 +27972,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/bastard_sword"
         },
         "9fb": {
             "nc": "flb",
@@ -23876,7 +28003,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/flamberge"
         },
         "9gd": {
             "nc": "gsd",
@@ -23906,7 +28034,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/great_sword"
         },
         "9dg": {
             "nc": "dgr",
@@ -23931,7 +28060,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/knife/dagger"
         },
         "9di": {
             "nc": "dir",
@@ -23957,7 +28087,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/knife/dirk"
         },
         "9kr": {
             "nc": "kri",
@@ -23985,7 +28116,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/knife/kriss"
         },
         "9bl": {
             "nc": "bld",
@@ -24013,7 +28145,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/knife/blade"
         },
         "9tk": {
             "nc": "tkf",
@@ -24048,7 +28181,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/knife/throwing_knife"
         },
         "9ta": {
             "nc": "tax",
@@ -24082,7 +28216,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/throwing_axe"
         },
         "9bk": {
             "nc": "bkf",
@@ -24117,7 +28252,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/knife/balanced_knife"
         },
         "9b8": {
             "nc": "bal",
@@ -24151,7 +28287,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/balanced_axe"
         },
         "9ja": {
             "nc": "jav",
@@ -24186,7 +28323,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/javelin/javelin"
         },
         "9pi": {
             "nc": "pil",
@@ -24221,7 +28359,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/javelin/pilum"
         },
         "9s9": {
             "nc": "ssp",
@@ -24256,7 +28395,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/javelin/short_spear"
         },
         "9gl": {
             "nc": "glv",
@@ -24291,7 +28431,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/javelin/glaive"
         },
         "9ts": {
             "nc": "tsp",
@@ -24326,7 +28467,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/javelin/throwing_spear"
         },
         "9sr": {
             "nc": "spr",
@@ -24352,7 +28494,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/spear/spear"
         },
         "9tr": {
             "nc": "tri",
@@ -24380,7 +28523,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/spear/trident"
         },
         "9br": {
             "nc": "brn",
@@ -24408,7 +28552,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/spear/brandistock"
         },
         "9st": {
             "nc": "spt",
@@ -24433,7 +28578,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/spear/spetum"
         },
         "9p9": {
             "nc": "pik",
@@ -24459,7 +28605,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/spear/pike"
         },
         "9b7": {
             "nc": "bar",
@@ -24484,7 +28631,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/polearm/bardiche"
         },
         "9vo": {
             "nc": "vou",
@@ -24509,7 +28657,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/polearm/voulge"
         },
         "9s8": {
             "nc": "scy",
@@ -24537,7 +28686,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/polearm/scythe"
         },
         "9pa": {
             "nc": "pax",
@@ -24563,7 +28713,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/polearm/poleaxe"
         },
         "9h9": {
             "nc": "hal",
@@ -24589,7 +28740,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/polearm/halberd"
         },
         "9wc": {
             "nc": "wsc",
@@ -24615,7 +28767,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/polearm/war_scythe"
         },
         "8ss": {
             "nc": "sst",
@@ -24641,7 +28794,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/staff/short_staff"
         },
         "8ls": {
             "nc": "lst",
@@ -24667,7 +28821,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/staff/long_staff"
         },
         "8cs": {
             "nc": "cst",
@@ -24695,7 +28850,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/staff/gnarled_staff"
         },
         "8bs": {
             "nc": "bst",
@@ -24721,7 +28877,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/staff/battle_staff"
         },
         "8ws": {
             "nc": "wst",
@@ -24749,7 +28906,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/staff/war_staff"
         },
         "8sb": {
             "nc": "sbw",
@@ -24774,7 +28932,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/short_bow"
         },
         "8hb": {
             "nc": "hbw",
@@ -24799,7 +28958,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/hunters_bow"
         },
         "8lb": {
             "nc": "lbw",
@@ -24826,7 +28986,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/long_bow"
         },
         "8cb": {
             "nc": "cbw",
@@ -24853,7 +29014,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/composite_bow"
         },
         "8s8": {
             "nc": "sbb",
@@ -24880,7 +29042,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/short_battle_bow"
         },
         "8l8": {
             "nc": "lbb",
@@ -24905,7 +29068,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/long_battle_bow"
         },
         "8sw": {
             "nc": "swb",
@@ -24932,7 +29096,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/short_war_bow"
         },
         "8lw": {
             "nc": "lwb",
@@ -24957,7 +29122,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/long_war_bow"
         },
         "8lx": {
             "nc": "lxb",
@@ -24984,7 +29150,8 @@ export let vanilla_constants_99 = {
                 "Crossbow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/light_crossbow"
         },
         "8mx": {
             "nc": "mxb",
@@ -25011,7 +29178,8 @@ export let vanilla_constants_99 = {
                 "Crossbow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/crossbow"
         },
         "8hx": {
             "nc": "hxb",
@@ -25038,7 +29206,8 @@ export let vanilla_constants_99 = {
                 "Crossbow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/heavy_crossbow"
         },
         "8rx": {
             "nc": "rxb",
@@ -25065,7 +29234,8 @@ export let vanilla_constants_99 = {
                 "Crossbow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/repeating_crossbow"
         },
         "qf1": {
             "nc": "fla",
@@ -25091,7 +29261,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/mace/khalim_flail"
         },
         "qf2": {
             "nc": "fla",
@@ -25115,7 +29286,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/mace/super_khalim_flail"
         },
         "ktr": {
             "nc": "ktr",
@@ -25143,7 +29315,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Assassin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/h2h/katar"
         },
         "wrb": {
             "nc": "wrb",
@@ -25171,7 +29344,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Assassin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/h2h/katar"
         },
         "axf": {
             "nc": "axf",
@@ -25201,7 +29375,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Assassin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/h2h/hatchet_hands"
         },
         "ces": {
             "nc": "ces",
@@ -25231,7 +29406,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Assassin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/h2h/hatchet_hands"
         },
         "clw": {
             "nc": "clw",
@@ -25259,7 +29435,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Assassin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/h2h/claws"
         },
         "btl": {
             "nc": "btl",
@@ -25287,7 +29464,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Assassin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/h2h/claws"
         },
         "skr": {
             "nc": "skr",
@@ -25317,7 +29495,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Assassin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/h2h/scissors_katar"
         },
         "9ar": {
             "nc": "ktr",
@@ -25345,7 +29524,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Assassin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/h2h/katar"
         },
         "9wb": {
             "nc": "wrb",
@@ -25373,7 +29553,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Assassin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/h2h/katar"
         },
         "9xf": {
             "nc": "axf",
@@ -25403,7 +29584,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Assassin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/h2h/hatchet_hands"
         },
         "9cs": {
             "nc": "ces",
@@ -25433,7 +29615,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Assassin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/h2h/hatchet_hands"
         },
         "9lw": {
             "nc": "clw",
@@ -25461,7 +29644,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Assassin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/h2h/claws"
         },
         "9tw": {
             "nc": "btl",
@@ -25489,7 +29673,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Assassin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/h2h/claws"
         },
         "9qr": {
             "nc": "skr",
@@ -25519,7 +29704,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Assassin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/h2h/scissors_katar"
         },
         "7ar": {
             "nc": "ktr",
@@ -25547,7 +29733,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Assassin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/h2h/katar"
         },
         "7wb": {
             "nc": "wrb",
@@ -25575,7 +29762,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Assassin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/h2h/katar"
         },
         "7xf": {
             "nc": "axf",
@@ -25605,7 +29793,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Assassin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/h2h/hatchet_hands"
         },
         "7cs": {
             "nc": "ces",
@@ -25635,7 +29824,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Assassin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/h2h/hatchet_hands"
         },
         "7lw": {
             "nc": "clw",
@@ -25663,7 +29853,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Assassin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/h2h/claws"
         },
         "7tw": {
             "nc": "btl",
@@ -25691,7 +29882,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Assassin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/h2h/claws"
         },
         "7qr": {
             "nc": "skr",
@@ -25721,7 +29913,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Assassin Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/h2h/scissors_katar"
         },
         "7ha": {
             "nc": "hax",
@@ -25748,7 +29941,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/hand_axe"
         },
         "7ax": {
             "nc": "axe",
@@ -25775,7 +29969,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/axe"
         },
         "72a": {
             "nc": "2ax",
@@ -25800,7 +29995,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/double_axe"
         },
         "7mp": {
             "nc": "mpi",
@@ -25827,7 +30023,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/military_pick"
         },
         "7wa": {
             "nc": "wax",
@@ -25852,7 +30049,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/war_axe"
         },
         "7la": {
             "nc": "lax",
@@ -25876,7 +30074,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/large_axe"
         },
         "7ba": {
             "nc": "bax",
@@ -25901,7 +30100,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/broad_axe"
         },
         "7bt": {
             "nc": "btx",
@@ -25928,7 +30128,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/battle_axe"
         },
         "7ga": {
             "nc": "gax",
@@ -25955,7 +30156,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/great_axe"
         },
         "7gi": {
             "nc": "gix",
@@ -25980,7 +30182,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/giant_axe"
         },
         "7wn": {
             "nc": "wnd",
@@ -26006,7 +30209,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/wand/wand"
         },
         "7yw": {
             "nc": "ywn",
@@ -26032,7 +30236,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/wand/yew_wand"
         },
         "7bw": {
             "nc": "bwn",
@@ -26060,7 +30265,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/wand/bone_wand"
         },
         "7gw": {
             "nc": "gwn",
@@ -26086,7 +30292,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/wand/grim_wand"
         },
         "7cl": {
             "nc": "clb",
@@ -26114,7 +30321,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/club/club"
         },
         "7sc": {
             "nc": "scp",
@@ -26141,7 +30349,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/scepter/scepter"
         },
         "7qs": {
             "nc": "gsc",
@@ -26168,7 +30377,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/scepter/grand_scepter"
         },
         "7ws": {
             "nc": "wsp",
@@ -26195,7 +30405,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/scepter/war_scepter"
         },
         "7sp": {
             "nc": "spc",
@@ -26222,7 +30433,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/club/spiked_club"
         },
         "7ma": {
             "nc": "mac",
@@ -26249,7 +30461,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/mace/mace"
         },
         "7mt": {
             "nc": "mst",
@@ -26277,7 +30490,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/mace/morning_star"
         },
         "7fl": {
             "nc": "fla",
@@ -26303,7 +30517,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/mace/flail"
         },
         "7wh": {
             "nc": "whm",
@@ -26328,7 +30543,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/hammer/war_hammer"
         },
         "7m7": {
             "nc": "mau",
@@ -26353,7 +30569,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/hammer/maul"
         },
         "7gm": {
             "nc": "gma",
@@ -26378,7 +30595,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/hammer/great_maul"
         },
         "7ss": {
             "nc": "ssd",
@@ -26404,7 +30622,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/short_sword"
         },
         "7sm": {
             "nc": "scm",
@@ -26432,7 +30651,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/scimitar"
         },
         "7sb": {
             "nc": "sbr",
@@ -26460,7 +30680,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/saber"
         },
         "7fc": {
             "nc": "flc",
@@ -26486,7 +30707,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/falchion"
         },
         "7cr": {
             "nc": "crs",
@@ -26514,7 +30736,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/crystal_sword"
         },
         "7bs": {
             "nc": "bsd",
@@ -26540,7 +30763,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/broad_sword"
         },
         "7ls": {
             "nc": "lsd",
@@ -26568,7 +30792,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/long_sword"
         },
         "7wd": {
             "nc": "wsd",
@@ -26594,7 +30819,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/war_sword"
         },
         "72h": {
             "nc": "2hs",
@@ -26624,7 +30850,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/two_handed_sword"
         },
         "7cm": {
             "nc": "clm",
@@ -26652,7 +30879,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/claymore"
         },
         "7gs": {
             "nc": "gis",
@@ -26682,7 +30910,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/giant_sword"
         },
         "7b7": {
             "nc": "bsw",
@@ -26712,7 +30941,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/bastard_sword"
         },
         "7fb": {
             "nc": "flb",
@@ -26740,7 +30970,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/flamberge"
         },
         "7gd": {
             "nc": "gsd",
@@ -26770,7 +31001,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/sword/great_sword"
         },
         "7dg": {
             "nc": "dgr",
@@ -26796,7 +31028,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/knife/dagger"
         },
         "7di": {
             "nc": "dir",
@@ -26822,7 +31055,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/knife/dirk"
         },
         "7kr": {
             "nc": "kri",
@@ -26850,7 +31084,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/knife/kriss"
         },
         "7bl": {
             "nc": "bld",
@@ -26876,7 +31111,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/knife/blade"
         },
         "7tk": {
             "nc": "tkf",
@@ -26911,7 +31147,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/knife/throwing_knife"
         },
         "7ta": {
             "nc": "tax",
@@ -26945,7 +31182,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/throwing_axe"
         },
         "7bk": {
             "nc": "bkf",
@@ -26981,7 +31219,8 @@ export let vanilla_constants_99 = {
                 "Swords and Knives",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/knife/balanced_knife"
         },
         "7b8": {
             "nc": "bal",
@@ -27015,7 +31254,8 @@ export let vanilla_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/axe/balanced_axe"
         },
         "7ja": {
             "nc": "jav",
@@ -27050,7 +31290,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/javelin/javelin"
         },
         "7pi": {
             "nc": "pil",
@@ -27085,7 +31326,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/javelin/pilum"
         },
         "7s7": {
             "nc": "ssp",
@@ -27120,7 +31362,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/javelin/short_spear"
         },
         "7gl": {
             "nc": "glv",
@@ -27155,7 +31398,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/javelin/glaive"
         },
         "7ts": {
             "nc": "tsp",
@@ -27190,7 +31434,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/javelin/throwing_spear"
         },
         "7sr": {
             "nc": "spr",
@@ -27216,7 +31461,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/spear/spear"
         },
         "7tr": {
             "nc": "tri",
@@ -27244,7 +31490,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/spear/trident"
         },
         "7br": {
             "nc": "brn",
@@ -27270,7 +31517,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/spear/brandistock"
         },
         "7st": {
             "nc": "spt",
@@ -27296,7 +31544,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/spear/spetum"
         },
         "7p7": {
             "nc": "pik",
@@ -27322,7 +31571,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/spear/pike"
         },
         "7o7": {
             "nc": "bar",
@@ -27348,7 +31598,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/polearm/bardiche"
         },
         "7vo": {
             "nc": "vou",
@@ -27374,7 +31625,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/polearm/voulge"
         },
         "7s8": {
             "nc": "scy",
@@ -27402,7 +31654,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/polearm/scythe"
         },
         "7pa": {
             "nc": "pax",
@@ -27428,7 +31681,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/polearm/poleaxe"
         },
         "7h7": {
             "nc": "hal",
@@ -27454,7 +31708,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/polearm/halberd"
         },
         "7wc": {
             "nc": "wsc",
@@ -27480,7 +31735,8 @@ export let vanilla_constants_99 = {
                 "Spears and Polearms",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/polearm/war_scythe"
         },
         "6ss": {
             "nc": "sst",
@@ -27506,7 +31762,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/staff/short_staff"
         },
         "6ls": {
             "nc": "lst",
@@ -27533,7 +31790,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/staff/long_staff"
         },
         "6cs": {
             "nc": "cst",
@@ -27562,7 +31820,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/staff/gnarled_staff"
         },
         "6bs": {
             "nc": "bst",
@@ -27589,7 +31848,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/staff/battle_staff"
         },
         "6ws": {
             "nc": "wst",
@@ -27615,7 +31875,8 @@ export let vanilla_constants_99 = {
                 "Blunt",
                 "Melee Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/staff/war_staff"
         },
         "6sb": {
             "nc": "sbw",
@@ -27640,7 +31901,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/short_bow"
         },
         "6hb": {
             "nc": "hbw",
@@ -27665,7 +31927,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/hunters_bow"
         },
         "6lb": {
             "nc": "lbw",
@@ -27690,7 +31953,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/long_bow"
         },
         "6cb": {
             "nc": "cbw",
@@ -27717,7 +31981,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/composite_bow"
         },
         "6s7": {
             "nc": "sbb",
@@ -27744,7 +32009,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/short_battle_bow"
         },
         "6l7": {
             "nc": "lbb",
@@ -27769,7 +32035,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/long_battle_bow"
         },
         "6sw": {
             "nc": "swb",
@@ -27796,7 +32063,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/short_war_bow"
         },
         "6lw": {
             "nc": "lwb",
@@ -27821,7 +32089,8 @@ export let vanilla_constants_99 = {
                 "Bow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/long_war_bow"
         },
         "6lx": {
             "nc": "lxb",
@@ -27848,7 +32117,8 @@ export let vanilla_constants_99 = {
                 "Crossbow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/light_crossbow"
         },
         "6mx": {
             "nc": "mxb",
@@ -27875,7 +32145,8 @@ export let vanilla_constants_99 = {
                 "Crossbow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/crossbow"
         },
         "6hx": {
             "nc": "hxb",
@@ -27902,7 +32173,8 @@ export let vanilla_constants_99 = {
                 "Crossbow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/heavy_crossbow"
         },
         "6rx": {
             "nc": "rxb",
@@ -27929,7 +32201,8 @@ export let vanilla_constants_99 = {
                 "Crossbow",
                 "Missile Weapon",
                 "Weapon"
-            ]
+            ],
+            "hdi": "weapon/bow/repeating_crossbow"
         },
         "ob1": {
             "nc": "ob1",
@@ -27954,7 +32227,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Sorceress Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/orb/eagle_orb"
         },
         "ob2": {
             "nc": "ob2",
@@ -27979,7 +32253,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Sorceress Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/orb/sacred_globe"
         },
         "ob3": {
             "nc": "ob3",
@@ -28004,7 +32279,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Sorceress Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/orb/smoked_sphere"
         },
         "ob4": {
             "nc": "ob4",
@@ -28029,7 +32305,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Sorceress Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/orb/clasped_orb"
         },
         "ob5": {
             "nc": "ob5",
@@ -28054,7 +32331,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Sorceress Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/orb/dragon_stone"
         },
         "am1": {
             "nc": "am1",
@@ -28085,7 +32363,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Amazon Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/bow/stag_bow"
         },
         "am2": {
             "nc": "am2",
@@ -28114,7 +32393,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Amazon Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/bow/reflex_bow"
         },
         "am3": {
             "nc": "am3",
@@ -28144,7 +32424,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Amazon Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/spear/maiden_spear"
         },
         "am4": {
             "nc": "am4",
@@ -28174,7 +32455,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Amazon Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/spear/maiden_pike"
         },
         "am5": {
             "nc": "am5",
@@ -28212,7 +32494,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Amazon Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/javelin/maiden_javelin"
         },
         "ob6": {
             "nc": "ob1",
@@ -28237,7 +32520,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Sorceress Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/orb/eagle_orb"
         },
         "ob7": {
             "nc": "ob2",
@@ -28262,7 +32546,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Sorceress Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/orb/sacred_globe"
         },
         "ob8": {
             "nc": "ob3",
@@ -28287,7 +32572,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Sorceress Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/orb/smoked_sphere"
         },
         "ob9": {
             "nc": "ob4",
@@ -28312,7 +32598,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Sorceress Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/orb/clasped_orb"
         },
         "oba": {
             "nc": "ob5",
@@ -28337,7 +32624,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Sorceress Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/orb/dragon_stone"
         },
         "am6": {
             "nc": "am1",
@@ -28368,7 +32656,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Amazon Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/bow/stag_bow"
         },
         "am7": {
             "nc": "am2",
@@ -28397,7 +32686,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Amazon Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/bow/reflex_bow"
         },
         "am8": {
             "nc": "am3",
@@ -28427,7 +32717,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Amazon Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/spear/maiden_spear"
         },
         "am9": {
             "nc": "am4",
@@ -28457,7 +32748,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Amazon Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/spear/maiden_pike"
         },
         "ama": {
             "nc": "am5",
@@ -28495,7 +32787,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Amazon Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/javelin/maiden_javelin"
         },
         "obb": {
             "nc": "ob1",
@@ -28520,7 +32813,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Sorceress Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/orb/eagle_orb"
         },
         "obc": {
             "nc": "ob2",
@@ -28545,7 +32839,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Sorceress Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/orb/sacred_globe"
         },
         "obd": {
             "nc": "ob3",
@@ -28570,7 +32865,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Sorceress Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/orb/smoked_sphere"
         },
         "obe": {
             "nc": "ob4",
@@ -28595,7 +32891,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Sorceress Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/orb/clasped_orb"
         },
         "obf": {
             "nc": "ob5",
@@ -28620,7 +32917,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Sorceress Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/orb/dragon_stone"
         },
         "amb": {
             "nc": "am1",
@@ -28651,7 +32949,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Amazon Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/bow/stag_bow"
         },
         "amc": {
             "nc": "am2",
@@ -28680,7 +32979,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Amazon Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/bow/reflex_bow"
         },
         "amd": {
             "nc": "am3",
@@ -28710,7 +33010,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Amazon Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/spear/maiden_spear"
         },
         "ame": {
             "nc": "am4",
@@ -28740,7 +33041,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Amazon Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/spear/maiden_pike"
         },
         "amf": {
             "nc": "am5",
@@ -28778,7 +33080,8 @@ export let vanilla_constants_99 = {
                 "Weapon",
                 "Amazon Item",
                 "Class Specific"
-            ]
+            ],
+            "hdi": "weapon/javelin/maiden_javelin"
         }
     },
     "other_items": {
@@ -28796,7 +33099,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Elixir",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/elixir"
         },
         "hpo": {
             "iq": 0,
@@ -28812,7 +33116,8 @@ export let vanilla_constants_99 = {
                 "Healing Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/healing_potion"
         },
         "mpo": {
             "iq": 0,
@@ -28828,7 +33133,8 @@ export let vanilla_constants_99 = {
                 "Mana Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/mana_potion"
         },
         "hpf": {
             "iq": 0,
@@ -28844,7 +33150,8 @@ export let vanilla_constants_99 = {
                 "Healing Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/full_healing_potion"
         },
         "mpf": {
             "iq": 0,
@@ -28860,7 +33167,8 @@ export let vanilla_constants_99 = {
                 "Mana Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/full_mana_potion"
         },
         "vps": {
             "iq": 0,
@@ -28877,7 +33185,8 @@ export let vanilla_constants_99 = {
                 "Stamina Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/stamina_potion"
         },
         "yps": {
             "iq": 0,
@@ -28894,7 +33203,8 @@ export let vanilla_constants_99 = {
                 "Antidote Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/antidote_potion"
         },
         "rvs": {
             "iq": 0,
@@ -28916,7 +33226,8 @@ export let vanilla_constants_99 = {
                 "Mana Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/rejuv_potion"
         },
         "rvl": {
             "iq": 0,
@@ -28938,7 +33249,8 @@ export let vanilla_constants_99 = {
                 "Mana Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/full_rejuv_potion"
         },
         "wms": {
             "iq": 0,
@@ -28955,7 +33267,8 @@ export let vanilla_constants_99 = {
                 "Thawing Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/thawing_potion"
         },
         "tbk": {
             "iq": 0,
@@ -28972,7 +33285,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Book",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/book/town_portal_book"
         },
         "ibk": {
             "iq": 0,
@@ -28989,7 +33303,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Book",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/book/identify_book"
         },
         "amu": {
             "iq": 0,
@@ -29009,7 +33324,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Amulet",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/amulet/amulet"
         },
         "vip": {
             "iq": 0,
@@ -29030,7 +33346,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Amulet",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/amulet/viper_amulet"
         },
         "rin": {
             "iq": 0,
@@ -29052,7 +33369,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Ring",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/ring/ring"
         },
         "gld": {
             "iq": 0,
@@ -29069,7 +33387,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Gold",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/gold/gold"
         },
         "bks": {
             "iq": 0,
@@ -29083,7 +33402,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/quest/bark_scroll"
         },
         "bkd": {
             "iq": 0,
@@ -29097,7 +33417,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/scroll/deciphered_bark_scroll"
         },
         "aqv": {
             "iq": 0,
@@ -29117,7 +33438,8 @@ export let vanilla_constants_99 = {
                 "Missile",
                 "Miscellaneous",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "misc/quiver/arrows"
         },
         "tch": {
             "iq": 0,
@@ -29133,7 +33455,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Torch",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/torch/torch"
         },
         "cqv": {
             "iq": 0,
@@ -29153,7 +33476,8 @@ export let vanilla_constants_99 = {
                 "Missile",
                 "Miscellaneous",
                 "Second Hand"
-            ]
+            ],
+            "hdi": "misc/quiver/bolts"
         },
         "tsc": {
             "iq": 0,
@@ -29169,7 +33493,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Scroll",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/scroll/town_portal_scroll"
         },
         "isc": {
             "iq": 0,
@@ -29185,7 +33510,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Scroll",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/scroll/identify_scroll"
         },
         "hrt": {
             "iq": 0,
@@ -29201,7 +33527,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Body Part",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/body_part/heart"
         },
         "brz": {
             "iq": 0,
@@ -29217,7 +33544,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Body Part",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/body_part/brain"
         },
         "jaw": {
             "iq": 0,
@@ -29233,7 +33561,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Body Part",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/body_part/jawbone"
         },
         "eyz": {
             "iq": 0,
@@ -29249,7 +33578,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Body Part",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/body_part/eye"
         },
         "hrn": {
             "iq": 0,
@@ -29265,7 +33595,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Body Part",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/body_part/horn"
         },
         "tal": {
             "iq": 0,
@@ -29281,7 +33612,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Body Part",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/body_part/tail"
         },
         "flg": {
             "iq": 0,
@@ -29297,7 +33629,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Body Part",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/body_part/flag"
         },
         "fng": {
             "iq": 0,
@@ -29313,7 +33646,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Body Part",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/body_part/fang"
         },
         "qll": {
             "iq": 0,
@@ -29329,7 +33663,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Body Part",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/body_part/quill"
         },
         "sol": {
             "iq": 0,
@@ -29345,7 +33680,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Body Part",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/body_part/soul"
         },
         "scz": {
             "iq": 0,
@@ -29377,7 +33713,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Body Part",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/body_part/soul"
         },
         "key": {
             "iq": 0,
@@ -29394,7 +33731,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Key",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/key/skeleton_key"
         },
         "luv": {
             "iq": 0,
@@ -29410,7 +33748,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Key",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/key/mephisto_key"
         },
         "xyz": {
             "iq": 0,
@@ -29423,7 +33762,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/quest/scroll_of_self_resurrect"
         },
         "j34": {
             "iq": 0,
@@ -29437,7 +33777,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/quest/jade_figurine"
         },
         "g34": {
             "iq": 0,
@@ -29451,7 +33792,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/quest/gold_bird"
         },
         "bbb": {
             "iq": 0,
@@ -29465,7 +33807,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/quest/lam_esens_tome"
         },
         "box": {
             "iq": 0,
@@ -29479,7 +33822,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/quest/horadric_cube"
         },
         "tr1": {
             "iq": 0,
@@ -29493,7 +33837,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/quest/scroll_of_horadric_quest_info"
         },
         "mss": {
             "iq": 0,
@@ -29507,7 +33852,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/quest/mephisto_soul_stone"
         },
         "ass": {
             "iq": 0,
@@ -29520,7 +33866,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/quest/book_of_skill"
         },
         "qey": {
             "iq": 0,
@@ -29534,7 +33881,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/body_part/eye"
         },
         "qhr": {
             "iq": 0,
@@ -29548,7 +33896,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/body_part/heart"
         },
         "qbr": {
             "iq": 0,
@@ -29562,7 +33911,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/body_part/brain"
         },
         "ear": {
             "iq": 0,
@@ -29578,7 +33928,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Player Body Part",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/body_part/player_ear"
         },
         "gcv": {
             "iq": 0,
@@ -29600,6 +33951,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gcv",
+                        "type": "weapon",
                         "m": "att",
                         "p": 0,
                         "min": 40,
@@ -29608,6 +33961,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gcv",
+                        "type": "helm",
                         "m": "str",
                         "p": 0,
                         "min": 3,
@@ -29616,13 +33971,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gcv",
+                        "type": "shield",
                         "m": "ac",
                         "p": 0,
                         "min": 8,
                         "max": 8
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/chipped_amethyst"
         },
         "gfv": {
             "iq": 0,
@@ -29644,6 +34002,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gfv",
+                        "type": "weapon",
                         "m": "att",
                         "p": 0,
                         "min": 60,
@@ -29652,6 +34012,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gfv",
+                        "type": "helm",
                         "m": "str",
                         "p": 0,
                         "min": 4,
@@ -29660,13 +34022,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gfv",
+                        "type": "shield",
                         "m": "ac",
                         "p": 0,
                         "min": 12,
                         "max": 12
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/flawed_amethyst"
         },
         "gsv": {
             "iq": 0,
@@ -29688,6 +34053,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gsv",
+                        "type": "weapon",
                         "m": "att",
                         "p": 0,
                         "min": 80,
@@ -29696,6 +34063,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gsv",
+                        "type": "helm",
                         "m": "str",
                         "p": 0,
                         "min": 6,
@@ -29704,13 +34073,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gsv",
+                        "type": "shield",
                         "m": "ac",
                         "p": 0,
                         "min": 18,
                         "max": 18
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/amethyst"
         },
         "gzv": {
             "iq": 0,
@@ -29732,6 +34104,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gzv",
+                        "type": "weapon",
                         "m": "att",
                         "p": 0,
                         "min": 100,
@@ -29740,6 +34114,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gzv",
+                        "type": "helm",
                         "m": "str",
                         "p": 0,
                         "min": 8,
@@ -29748,13 +34124,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gzv",
+                        "type": "shield",
                         "m": "ac",
                         "p": 0,
                         "min": 24,
                         "max": 24
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/flawless_amethyst"
         },
         "gpv": {
             "iq": 0,
@@ -29776,6 +34155,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gpv",
+                        "type": "weapon",
                         "m": "att",
                         "p": 0,
                         "min": 150,
@@ -29784,6 +34165,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gpv",
+                        "type": "helm",
                         "m": "str",
                         "p": 0,
                         "min": 10,
@@ -29792,13 +34175,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gpv",
+                        "type": "shield",
                         "m": "ac",
                         "p": 0,
                         "min": 30,
                         "max": 30
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/perfect_amethyst"
         },
         "gcy": {
             "iq": 0,
@@ -29820,12 +34206,16 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gcy",
+                        "type": "weapon",
                         "m": "ltng-min",
                         "p": 0,
                         "min": 1,
                         "max": 1
                     },
                     {
+                        "code": "gcy",
+                        "type": "weapon",
                         "m": "ltng-max",
                         "p": 0,
                         "min": 8,
@@ -29834,6 +34224,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gcy",
+                        "type": "helm",
                         "m": "mag%",
                         "p": 0,
                         "min": 9,
@@ -29842,13 +34234,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gcy",
+                        "type": "shield",
                         "m": "res-ltng",
                         "p": 0,
                         "min": 12,
                         "max": 12
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/chipped_topaz"
         },
         "gfy": {
             "iq": 0,
@@ -29870,12 +34265,16 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gfy",
+                        "type": "weapon",
                         "m": "ltng-min",
                         "p": 0,
                         "min": 1,
                         "max": 1
                     },
                     {
+                        "code": "gfy",
+                        "type": "weapon",
                         "m": "ltng-max",
                         "p": 0,
                         "min": 14,
@@ -29884,6 +34283,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gfy",
+                        "type": "helm",
                         "m": "mag%",
                         "p": 0,
                         "min": 13,
@@ -29892,13 +34293,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gfy",
+                        "type": "shield",
                         "m": "res-ltng",
                         "p": 0,
                         "min": 16,
                         "max": 16
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/flawed_topaz"
         },
         "gsy": {
             "iq": 0,
@@ -29920,12 +34324,16 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gsy",
+                        "type": "weapon",
                         "m": "ltng-min",
                         "p": 0,
                         "min": 1,
                         "max": 1
                     },
                     {
+                        "code": "gsy",
+                        "type": "weapon",
                         "m": "ltng-max",
                         "p": 0,
                         "min": 22,
@@ -29934,6 +34342,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gsy",
+                        "type": "helm",
                         "m": "mag%",
                         "p": 0,
                         "min": 16,
@@ -29942,13 +34352,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gsy",
+                        "type": "shield",
                         "m": "res-ltng",
                         "p": 0,
                         "min": 22,
                         "max": 22
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/topaz"
         },
         "gly": {
             "iq": 0,
@@ -29970,12 +34383,16 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gly",
+                        "type": "weapon",
                         "m": "ltng-min",
                         "p": 0,
                         "min": 1,
                         "max": 1
                     },
                     {
+                        "code": "gly",
+                        "type": "weapon",
                         "m": "ltng-max",
                         "p": 0,
                         "min": 30,
@@ -29984,6 +34401,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gly",
+                        "type": "helm",
                         "m": "mag%",
                         "p": 0,
                         "min": 20,
@@ -29992,13 +34411,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gly",
+                        "type": "shield",
                         "m": "res-ltng",
                         "p": 0,
                         "min": 28,
                         "max": 28
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/flawless_topaz"
         },
         "gpy": {
             "iq": 0,
@@ -30020,12 +34442,16 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gpy",
+                        "type": "weapon",
                         "m": "ltng-min",
                         "p": 0,
                         "min": 1,
                         "max": 1
                     },
                     {
+                        "code": "gpy",
+                        "type": "weapon",
                         "m": "ltng-max",
                         "p": 0,
                         "min": 40,
@@ -30034,6 +34460,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gpy",
+                        "type": "helm",
                         "m": "mag%",
                         "p": 0,
                         "min": 24,
@@ -30042,13 +34470,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gpy",
+                        "type": "shield",
                         "m": "res-ltng",
                         "p": 0,
                         "min": 40,
                         "max": 40
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/perfect_topaz"
         },
         "gcb": {
             "iq": 0,
@@ -30070,18 +34501,24 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gcb",
+                        "type": "weapon",
                         "m": "cold-min",
                         "p": 0,
                         "min": 1,
                         "max": 1
                     },
                     {
+                        "code": "gcb",
+                        "type": "weapon",
                         "m": "cold-max",
                         "p": 0,
                         "min": 3,
                         "max": 3
                     },
                     {
+                        "code": "gcb",
+                        "type": "weapon",
                         "m": "cold-len",
                         "p": 0,
                         "min": 25,
@@ -30090,6 +34527,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gcb",
+                        "type": "helm",
                         "m": "mana",
                         "p": 0,
                         "min": 10,
@@ -30098,13 +34537,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gcb",
+                        "type": "shield",
                         "m": "res-cold",
                         "p": 0,
                         "min": 12,
                         "max": 12
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/chipped_saphire"
         },
         "gfb": {
             "iq": 0,
@@ -30126,18 +34568,24 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gfb",
+                        "type": "weapon",
                         "m": "cold-min",
                         "p": 0,
                         "min": 3,
                         "max": 3
                     },
                     {
+                        "code": "gfb",
+                        "type": "weapon",
                         "m": "cold-max",
                         "p": 0,
                         "min": 5,
                         "max": 5
                     },
                     {
+                        "code": "gfb",
+                        "type": "weapon",
                         "m": "cold-len",
                         "p": 0,
                         "min": 35,
@@ -30146,6 +34594,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gfb",
+                        "type": "helm",
                         "m": "mana",
                         "p": 0,
                         "min": 17,
@@ -30154,13 +34604,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gfb",
+                        "type": "shield",
                         "m": "res-cold",
                         "p": 0,
                         "min": 16,
                         "max": 16
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/flawed_saphire"
         },
         "gsb": {
             "iq": 0,
@@ -30182,18 +34635,24 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gsb",
+                        "type": "weapon",
                         "m": "cold-min",
                         "p": 0,
                         "min": 4,
                         "max": 4
                     },
                     {
+                        "code": "gsb",
+                        "type": "weapon",
                         "m": "cold-max",
                         "p": 0,
                         "min": 7,
                         "max": 7
                     },
                     {
+                        "code": "gsb",
+                        "type": "weapon",
                         "m": "cold-len",
                         "p": 0,
                         "min": 50,
@@ -30202,6 +34661,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gsb",
+                        "type": "helm",
                         "m": "mana",
                         "p": 0,
                         "min": 24,
@@ -30210,13 +34671,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gsb",
+                        "type": "shield",
                         "m": "res-cold",
                         "p": 0,
                         "min": 22,
                         "max": 22
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/saphire"
         },
         "glb": {
             "iq": 0,
@@ -30238,18 +34702,24 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "glb",
+                        "type": "weapon",
                         "m": "cold-min",
                         "p": 0,
                         "min": 6,
                         "max": 6
                     },
                     {
+                        "code": "glb",
+                        "type": "weapon",
                         "m": "cold-max",
                         "p": 0,
                         "min": 10,
                         "max": 10
                     },
                     {
+                        "code": "glb",
+                        "type": "weapon",
                         "m": "cold-len",
                         "p": 0,
                         "min": 60,
@@ -30258,6 +34728,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "glb",
+                        "type": "helm",
                         "m": "mana",
                         "p": 0,
                         "min": 31,
@@ -30266,13 +34738,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "glb",
+                        "type": "shield",
                         "m": "res-cold",
                         "p": 0,
                         "min": 28,
                         "max": 28
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/flawless_saphire"
         },
         "gpb": {
             "iq": 0,
@@ -30294,18 +34769,24 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gpb",
+                        "type": "weapon",
                         "m": "cold-min",
                         "p": 0,
                         "min": 10,
                         "max": 10
                     },
                     {
+                        "code": "gpb",
+                        "type": "weapon",
                         "m": "cold-max",
                         "p": 0,
                         "min": 14,
                         "max": 14
                     },
                     {
+                        "code": "gpb",
+                        "type": "weapon",
                         "m": "cold-len",
                         "p": 0,
                         "min": 75,
@@ -30314,6 +34795,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gpb",
+                        "type": "helm",
                         "m": "mana",
                         "p": 0,
                         "min": 38,
@@ -30322,13 +34805,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gpb",
+                        "type": "shield",
                         "m": "res-cold",
                         "p": 0,
                         "min": 40,
                         "max": 40
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/perfect_saphire"
         },
         "gcg": {
             "iq": 0,
@@ -30350,18 +34836,24 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gcg",
+                        "type": "weapon",
                         "m": "pois-min",
                         "p": 0,
                         "min": 34,
                         "max": 34
                     },
                     {
+                        "code": "gcg",
+                        "type": "weapon",
                         "m": "pois-max",
                         "p": 0,
                         "min": 34,
                         "max": 34
                     },
                     {
+                        "code": "gcg",
+                        "type": "weapon",
                         "m": "pois-len",
                         "p": 0,
                         "min": 75,
@@ -30370,6 +34862,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gcg",
+                        "type": "helm",
                         "m": "dex",
                         "p": 0,
                         "min": 3,
@@ -30378,13 +34872,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gcg",
+                        "type": "shield",
                         "m": "res-pois",
                         "p": 0,
                         "min": 12,
                         "max": 12
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/chipped_emerald"
         },
         "gfg": {
             "iq": 0,
@@ -30406,18 +34903,24 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gfg",
+                        "type": "weapon",
                         "m": "pois-min",
                         "p": 0,
                         "min": 51,
                         "max": 51
                     },
                     {
+                        "code": "gfg",
+                        "type": "weapon",
                         "m": "pois-max",
                         "p": 0,
                         "min": 51,
                         "max": 51
                     },
                     {
+                        "code": "gfg",
+                        "type": "weapon",
                         "m": "pois-len",
                         "p": 0,
                         "min": 100,
@@ -30426,6 +34929,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gfg",
+                        "type": "helm",
                         "m": "dex",
                         "p": 0,
                         "min": 4,
@@ -30434,13 +34939,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gfg",
+                        "type": "shield",
                         "m": "res-pois",
                         "p": 0,
                         "min": 16,
                         "max": 16
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/flawed_emerald"
         },
         "gsg": {
             "iq": 0,
@@ -30462,18 +34970,24 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gsg",
+                        "type": "weapon",
                         "m": "pois-min",
                         "p": 0,
                         "min": 82,
                         "max": 82
                     },
                     {
+                        "code": "gsg",
+                        "type": "weapon",
                         "m": "pois-max",
                         "p": 0,
                         "min": 82,
                         "max": 82
                     },
                     {
+                        "code": "gsg",
+                        "type": "weapon",
                         "m": "pois-len",
                         "p": 0,
                         "min": 125,
@@ -30482,6 +34996,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gsg",
+                        "type": "helm",
                         "m": "dex",
                         "p": 0,
                         "min": 6,
@@ -30490,13 +35006,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gsg",
+                        "type": "shield",
                         "m": "res-pois",
                         "p": 0,
                         "min": 22,
                         "max": 22
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/emerald"
         },
         "glg": {
             "iq": 0,
@@ -30518,18 +35037,24 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "glg",
+                        "type": "weapon",
                         "m": "pois-min",
                         "p": 0,
                         "min": 101,
                         "max": 101
                     },
                     {
+                        "code": "glg",
+                        "type": "weapon",
                         "m": "pois-max",
                         "p": 0,
                         "min": 101,
                         "max": 101
                     },
                     {
+                        "code": "glg",
+                        "type": "weapon",
                         "m": "pois-len",
                         "p": 0,
                         "min": 152,
@@ -30538,6 +35063,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "glg",
+                        "type": "helm",
                         "m": "dex",
                         "p": 0,
                         "min": 8,
@@ -30546,13 +35073,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "glg",
+                        "type": "shield",
                         "m": "res-pois",
                         "p": 0,
                         "min": 28,
                         "max": 28
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/flawless_emerald"
         },
         "gpg": {
             "iq": 0,
@@ -30574,18 +35104,24 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gpg",
+                        "type": "weapon",
                         "m": "pois-min",
                         "p": 0,
                         "min": 143,
                         "max": 143
                     },
                     {
+                        "code": "gpg",
+                        "type": "weapon",
                         "m": "pois-max",
                         "p": 0,
                         "min": 143,
                         "max": 143
                     },
                     {
+                        "code": "gpg",
+                        "type": "weapon",
                         "m": "pois-len",
                         "p": 0,
                         "min": 179,
@@ -30594,6 +35130,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gpg",
+                        "type": "helm",
                         "m": "dex",
                         "p": 0,
                         "min": 10,
@@ -30602,13 +35140,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gpg",
+                        "type": "shield",
                         "m": "res-pois",
                         "p": 0,
                         "min": 40,
                         "max": 40
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/perfect_emerald"
         },
         "gcr": {
             "iq": 0,
@@ -30630,12 +35171,16 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gcr",
+                        "type": "weapon",
                         "m": "fire-min",
                         "p": 0,
                         "min": 3,
                         "max": 3
                     },
                     {
+                        "code": "gcr",
+                        "type": "weapon",
                         "m": "fire-max",
                         "p": 0,
                         "min": 4,
@@ -30644,6 +35189,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gcr",
+                        "type": "helm",
                         "m": "hp",
                         "p": 0,
                         "min": 10,
@@ -30652,13 +35199,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gcr",
+                        "type": "shield",
                         "m": "res-fire",
                         "p": 0,
                         "min": 12,
                         "max": 12
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/chipped_ruby"
         },
         "gfr": {
             "iq": 0,
@@ -30680,12 +35230,16 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gfr",
+                        "type": "weapon",
                         "m": "fire-min",
                         "p": 0,
                         "min": 5,
                         "max": 5
                     },
                     {
+                        "code": "gfr",
+                        "type": "weapon",
                         "m": "fire-max",
                         "p": 0,
                         "min": 8,
@@ -30694,6 +35248,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gfr",
+                        "type": "helm",
                         "m": "hp",
                         "p": 0,
                         "min": 17,
@@ -30702,13 +35258,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gfr",
+                        "type": "shield",
                         "m": "res-fire",
                         "p": 0,
                         "min": 16,
                         "max": 16
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/flawed_ruby"
         },
         "gsr": {
             "iq": 0,
@@ -30730,12 +35289,16 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gsr",
+                        "type": "weapon",
                         "m": "fire-min",
                         "p": 0,
                         "min": 8,
                         "max": 8
                     },
                     {
+                        "code": "gsr",
+                        "type": "weapon",
                         "m": "fire-max",
                         "p": 0,
                         "min": 12,
@@ -30744,6 +35307,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gsr",
+                        "type": "helm",
                         "m": "hp",
                         "p": 0,
                         "min": 24,
@@ -30752,13 +35317,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gsr",
+                        "type": "shield",
                         "m": "res-fire",
                         "p": 0,
                         "min": 22,
                         "max": 22
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/ruby"
         },
         "glr": {
             "iq": 0,
@@ -30780,12 +35348,16 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "glr",
+                        "type": "weapon",
                         "m": "fire-min",
                         "p": 0,
                         "min": 10,
                         "max": 10
                     },
                     {
+                        "code": "glr",
+                        "type": "weapon",
                         "m": "fire-max",
                         "p": 0,
                         "min": 16,
@@ -30794,6 +35366,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "glr",
+                        "type": "helm",
                         "m": "hp",
                         "p": 0,
                         "min": 31,
@@ -30802,13 +35376,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "glr",
+                        "type": "shield",
                         "m": "res-fire",
                         "p": 0,
                         "min": 28,
                         "max": 28
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/flawless_ruby"
         },
         "gpr": {
             "iq": 0,
@@ -30830,12 +35407,16 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gpr",
+                        "type": "weapon",
                         "m": "fire-min",
                         "p": 0,
                         "min": 15,
                         "max": 15
                     },
                     {
+                        "code": "gpr",
+                        "type": "weapon",
                         "m": "fire-max",
                         "p": 0,
                         "min": 20,
@@ -30844,6 +35425,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gpr",
+                        "type": "helm",
                         "m": "hp",
                         "p": 0,
                         "min": 38,
@@ -30852,13 +35435,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gpr",
+                        "type": "shield",
                         "m": "res-fire",
                         "p": 0,
                         "min": 40,
                         "max": 40
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/perfect_ruby"
         },
         "gcw": {
             "iq": 0,
@@ -30880,6 +35466,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gcw",
+                        "type": "weapon",
                         "m": "dmg-undead",
                         "p": 0,
                         "min": 28,
@@ -30888,6 +35476,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gcw",
+                        "type": "helm",
                         "m": "att",
                         "p": 0,
                         "min": 20,
@@ -30896,13 +35486,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gcw",
+                        "type": "shield",
                         "m": "res-all",
                         "p": 0,
                         "min": 6,
                         "max": 6
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/chipped_diamond"
         },
         "gfw": {
             "iq": 0,
@@ -30924,6 +35517,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gfw",
+                        "type": "weapon",
                         "m": "dmg-undead",
                         "p": 0,
                         "min": 34,
@@ -30932,6 +35527,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gfw",
+                        "type": "helm",
                         "m": "att",
                         "p": 0,
                         "min": 40,
@@ -30940,13 +35537,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gfw",
+                        "type": "shield",
                         "m": "res-all",
                         "p": 0,
                         "min": 8,
                         "max": 8
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/flawed_diamond"
         },
         "gsw": {
             "iq": 0,
@@ -30968,6 +35568,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gsw",
+                        "type": "weapon",
                         "m": "dmg-undead",
                         "p": 0,
                         "min": 44,
@@ -30976,6 +35578,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gsw",
+                        "type": "helm",
                         "m": "att",
                         "p": 0,
                         "min": 60,
@@ -30984,13 +35588,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gsw",
+                        "type": "shield",
                         "m": "res-all",
                         "p": 0,
                         "min": 11,
                         "max": 11
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/diamond"
         },
         "glw": {
             "iq": 0,
@@ -31012,6 +35619,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "glw",
+                        "type": "weapon",
                         "m": "dmg-undead",
                         "p": 0,
                         "min": 54,
@@ -31020,6 +35629,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "glw",
+                        "type": "helm",
                         "m": "att",
                         "p": 0,
                         "min": 80,
@@ -31028,13 +35639,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "glw",
+                        "type": "shield",
                         "m": "res-all",
                         "p": 0,
                         "min": 14,
                         "max": 14
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/flawless_diamond"
         },
         "gpw": {
             "iq": 0,
@@ -31056,6 +35670,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "gpw",
+                        "type": "weapon",
                         "m": "dmg-undead",
                         "p": 0,
                         "min": 68,
@@ -31064,6 +35680,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gpw",
+                        "type": "helm",
                         "m": "att",
                         "p": 0,
                         "min": 100,
@@ -31072,13 +35690,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "gpw",
+                        "type": "shield",
                         "m": "res-all",
                         "p": 0,
                         "min": 19,
                         "max": 19
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/perfect_diamond"
         },
         "hp1": {
             "iq": 0,
@@ -31095,7 +35716,8 @@ export let vanilla_constants_99 = {
                 "Healing Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/lesser_healing_potion"
         },
         "hp2": {
             "iq": 0,
@@ -31112,7 +35734,8 @@ export let vanilla_constants_99 = {
                 "Healing Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/light_healing_potion"
         },
         "hp3": {
             "iq": 0,
@@ -31129,7 +35752,8 @@ export let vanilla_constants_99 = {
                 "Healing Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/healing_potion2"
         },
         "hp4": {
             "iq": 0,
@@ -31146,7 +35770,8 @@ export let vanilla_constants_99 = {
                 "Healing Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/strong_healing_potion"
         },
         "hp5": {
             "iq": 0,
@@ -31163,7 +35788,8 @@ export let vanilla_constants_99 = {
                 "Healing Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/greater_healing_potion"
         },
         "mp1": {
             "iq": 0,
@@ -31180,7 +35806,8 @@ export let vanilla_constants_99 = {
                 "Mana Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/lesser_mana_potion"
         },
         "mp2": {
             "iq": 0,
@@ -31197,7 +35824,8 @@ export let vanilla_constants_99 = {
                 "Mana Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/light_mana_potion"
         },
         "mp3": {
             "iq": 0,
@@ -31214,7 +35842,8 @@ export let vanilla_constants_99 = {
                 "Mana Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/mana_potion2"
         },
         "mp4": {
             "iq": 0,
@@ -31231,7 +35860,8 @@ export let vanilla_constants_99 = {
                 "Mana Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/strong_mana_potion"
         },
         "mp5": {
             "iq": 0,
@@ -31248,7 +35878,8 @@ export let vanilla_constants_99 = {
                 "Mana Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/greater_mana_potion"
         },
         "skc": {
             "iq": 0,
@@ -31270,12 +35901,16 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "skc",
+                        "type": "weapon",
                         "m": "manasteal",
                         "p": 0,
                         "min": 1,
                         "max": 1
                     },
                     {
+                        "code": "skc",
+                        "type": "weapon",
                         "m": "lifesteal",
                         "p": 0,
                         "min": 2,
@@ -31284,12 +35919,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "skc",
+                        "type": "helm",
                         "m": "regen",
                         "p": 0,
                         "min": 2,
                         "max": 2
                     },
                     {
+                        "code": "skc",
+                        "type": "helm",
                         "m": "regen-mana",
                         "p": 0,
                         "min": 8,
@@ -31298,13 +35937,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "skc",
+                        "type": "shield",
                         "m": "thorns",
                         "p": 0,
                         "min": 4,
                         "max": 4
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/chipped_skull"
         },
         "skf": {
             "iq": 0,
@@ -31326,12 +35968,16 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "skf",
+                        "type": "weapon",
                         "m": "manasteal",
                         "p": 0,
                         "min": 2,
                         "max": 2
                     },
                     {
+                        "code": "skf",
+                        "type": "weapon",
                         "m": "lifesteal",
                         "p": 0,
                         "min": 2,
@@ -31340,12 +35986,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "skf",
+                        "type": "helm",
                         "m": "regen",
                         "p": 0,
                         "min": 3,
                         "max": 3
                     },
                     {
+                        "code": "skf",
+                        "type": "helm",
                         "m": "regen-mana",
                         "p": 0,
                         "min": 8,
@@ -31354,13 +36004,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "skf",
+                        "type": "shield",
                         "m": "thorns",
                         "p": 0,
                         "min": 8,
                         "max": 8
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/flawed_skull"
         },
         "sku": {
             "iq": 0,
@@ -31382,12 +36035,16 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "sku",
+                        "type": "weapon",
                         "m": "manasteal",
                         "p": 0,
                         "min": 2,
                         "max": 2
                     },
                     {
+                        "code": "sku",
+                        "type": "weapon",
                         "m": "lifesteal",
                         "p": 0,
                         "min": 3,
@@ -31396,12 +36053,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "sku",
+                        "type": "helm",
                         "m": "regen",
                         "p": 0,
                         "min": 3,
                         "max": 3
                     },
                     {
+                        "code": "sku",
+                        "type": "helm",
                         "m": "regen-mana",
                         "p": 0,
                         "min": 12,
@@ -31410,13 +36071,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "sku",
+                        "type": "shield",
                         "m": "thorns",
                         "p": 0,
                         "min": 12,
                         "max": 12
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/skull"
         },
         "skl": {
             "iq": 0,
@@ -31438,12 +36102,16 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "skl",
+                        "type": "weapon",
                         "m": "manasteal",
                         "p": 0,
                         "min": 3,
                         "max": 3
                     },
                     {
+                        "code": "skl",
+                        "type": "weapon",
                         "m": "lifesteal",
                         "p": 0,
                         "min": 3,
@@ -31452,12 +36120,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "skl",
+                        "type": "helm",
                         "m": "regen",
                         "p": 0,
                         "min": 4,
                         "max": 4
                     },
                     {
+                        "code": "skl",
+                        "type": "helm",
                         "m": "regen-mana",
                         "p": 0,
                         "min": 12,
@@ -31466,13 +36138,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "skl",
+                        "type": "shield",
                         "m": "thorns",
                         "p": 0,
                         "min": 16,
                         "max": 16
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/flawless_skull"
         },
         "skz": {
             "iq": 0,
@@ -31494,12 +36169,16 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "skz",
+                        "type": "weapon",
                         "m": "manasteal",
                         "p": 0,
                         "min": 3,
                         "max": 3
                     },
                     {
+                        "code": "skz",
+                        "type": "weapon",
                         "m": "lifesteal",
                         "p": 0,
                         "min": 4,
@@ -31508,12 +36187,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "skz",
+                        "type": "helm",
                         "m": "regen",
                         "p": 0,
                         "min": 5,
                         "max": 5
                     },
                     {
+                        "code": "skz",
+                        "type": "helm",
                         "m": "regen-mana",
                         "p": 0,
                         "min": 19,
@@ -31522,13 +36205,16 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "skz",
+                        "type": "shield",
                         "m": "thorns",
                         "p": 0,
                         "min": 20,
                         "max": 20
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/gem/perfect_skull"
         },
         "hrb": {
             "iq": 0,
@@ -31544,7 +36230,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Herb",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/herb/herb"
         },
         "cm1": {
             "iq": 0,
@@ -31565,7 +36252,8 @@ export let vanilla_constants_99 = {
                 "Small Charm",
                 "Charm",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/charm/charm_small"
         },
         "cm2": {
             "iq": 0,
@@ -31586,7 +36274,8 @@ export let vanilla_constants_99 = {
                 "Medium Charm",
                 "Charm",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/charm/charm_medium"
         },
         "cm3": {
             "iq": 0,
@@ -31607,7 +36296,8 @@ export let vanilla_constants_99 = {
                 "Large Charm",
                 "Charm",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/charm/charm_large"
         },
         "rps": {
             "iq": 0,
@@ -31624,7 +36314,8 @@ export let vanilla_constants_99 = {
                 "Healing Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/healing_potion"
         },
         "rpl": {
             "iq": 0,
@@ -31641,7 +36332,8 @@ export let vanilla_constants_99 = {
                 "Healing Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/full_healing_potion"
         },
         "bps": {
             "iq": 0,
@@ -31658,7 +36350,8 @@ export let vanilla_constants_99 = {
                 "Mana Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/mana_potion"
         },
         "bpl": {
             "iq": 0,
@@ -31675,7 +36368,8 @@ export let vanilla_constants_99 = {
                 "Mana Potion",
                 "Potion",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/potion/full_mana_potion"
         },
         "r01": {
             "iq": 0,
@@ -31696,11 +36390,15 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r01",
+                        "type": "weapon",
                         "m": "light",
                         "min": 1,
                         "max": 1
                     },
                     {
+                        "code": "r01",
+                        "type": "weapon",
                         "m": "att",
                         "min": 50,
                         "max": 50
@@ -31708,11 +36406,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r01",
+                        "type": "helm",
                         "m": "light",
                         "min": 1,
                         "max": 1
                     },
                     {
+                        "code": "r01",
+                        "type": "helm",
                         "m": "ac",
                         "min": 15,
                         "max": 15
@@ -31720,17 +36422,22 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r01",
+                        "type": "shield",
                         "m": "light",
                         "min": 1,
                         "max": 1
                     },
                     {
+                        "code": "r01",
+                        "type": "shield",
                         "m": "ac",
                         "min": 15,
                         "max": 15
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/el_rune"
         },
         "r02": {
             "iq": 0,
@@ -31751,11 +36458,15 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r02",
+                        "type": "weapon",
                         "m": "att-undead",
                         "min": 50,
                         "max": 50
                     },
                     {
+                        "code": "r02",
+                        "type": "weapon",
                         "m": "dmg-undead",
                         "min": 75,
                         "max": 75
@@ -31763,6 +36474,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r02",
+                        "type": "helm",
                         "m": "stamdrain",
                         "min": 15,
                         "max": 15
@@ -31770,12 +36483,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r02",
+                        "type": "shield",
                         "m": "block",
                         "min": 7,
                         "max": 7
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/eld_rune"
         },
         "r03": {
             "iq": 0,
@@ -31796,6 +36512,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r03",
+                        "type": "weapon",
                         "m": "mana-kill",
                         "min": 2,
                         "max": 2
@@ -31803,6 +36521,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r03",
+                        "type": "helm",
                         "m": "mana-kill",
                         "min": 2,
                         "max": 2
@@ -31810,12 +36530,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r03",
+                        "type": "shield",
                         "m": "mana-kill",
                         "min": 2,
                         "max": 2
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/tir_rune"
         },
         "r04": {
             "iq": 0,
@@ -31836,6 +36559,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r04",
+                        "type": "weapon",
                         "m": "knock",
                         "min": 1,
                         "max": 1
@@ -31843,6 +36568,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r04",
+                        "type": "helm",
                         "m": "ac-miss",
                         "min": 30,
                         "max": 30
@@ -31850,12 +36577,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r04",
+                        "type": "shield",
                         "m": "ac-miss",
                         "min": 30,
                         "max": 30
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/nef_rune"
         },
         "r05": {
             "iq": 0,
@@ -31876,6 +36606,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r05",
+                        "type": "weapon",
                         "m": "reduce-ac",
                         "min": 25,
                         "max": 25
@@ -31883,6 +36615,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r05",
+                        "type": "helm",
                         "m": "regen-mana",
                         "min": 15,
                         "max": 15
@@ -31890,12 +36624,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r05",
+                        "type": "shield",
                         "m": "regen-mana",
                         "min": 15,
                         "max": 15
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/eth_rune"
         },
         "r06": {
             "iq": 0,
@@ -31916,6 +36653,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r06",
+                        "type": "weapon",
                         "m": "dmg-max",
                         "min": 9,
                         "max": 9
@@ -31923,6 +36662,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r06",
+                        "type": "helm",
                         "m": "dmg-to-mana",
                         "min": 15,
                         "max": 15
@@ -31930,12 +36671,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r06",
+                        "type": "shield",
                         "m": "dmg-to-mana",
                         "min": 15,
                         "max": 15
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/ith_rune"
         },
         "r07": {
             "iq": 0,
@@ -31956,6 +36700,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r07",
+                        "type": "weapon",
                         "m": "dmg-pois",
                         "p": 125,
                         "min": 154,
@@ -31964,6 +36710,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r07",
+                        "type": "helm",
                         "m": "res-pois",
                         "min": 30,
                         "max": 30
@@ -31971,12 +36719,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r07",
+                        "type": "shield",
                         "m": "res-pois",
                         "min": 35,
                         "max": 35
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/tal_rune"
         },
         "r08": {
             "iq": 0,
@@ -31997,6 +36748,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r08",
+                        "type": "weapon",
                         "m": "dmg-fire",
                         "min": 5,
                         "max": 30
@@ -32004,6 +36757,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r08",
+                        "type": "helm",
                         "m": "res-fire",
                         "min": 30,
                         "max": 30
@@ -32011,12 +36766,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r08",
+                        "type": "shield",
                         "m": "res-fire",
                         "min": 35,
                         "max": 35
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/ral_rune"
         },
         "r09": {
             "iq": 0,
@@ -32037,6 +36795,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r09",
+                        "type": "weapon",
                         "m": "dmg-ltng",
                         "min": 1,
                         "max": 50
@@ -32044,6 +36804,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r09",
+                        "type": "helm",
                         "m": "res-ltng",
                         "min": 30,
                         "max": 30
@@ -32051,12 +36813,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r09",
+                        "type": "shield",
                         "m": "res-ltng",
                         "min": 35,
                         "max": 35
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/ort_rune"
         },
         "r10": {
             "iq": 0,
@@ -32077,6 +36842,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r10",
+                        "type": "weapon",
                         "m": "dmg-cold",
                         "p": 75,
                         "min": 3,
@@ -32085,6 +36852,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r10",
+                        "type": "helm",
                         "m": "res-cold",
                         "min": 30,
                         "max": 30
@@ -32092,12 +36861,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r10",
+                        "type": "shield",
                         "m": "res-cold",
                         "min": 35,
                         "max": 35
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/thul_rune"
         },
         "r11": {
             "iq": 0,
@@ -32118,6 +36890,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r11",
+                        "type": "weapon",
                         "m": "lifesteal",
                         "min": 7,
                         "max": 7
@@ -32125,6 +36899,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r11",
+                        "type": "helm",
                         "m": "thorns",
                         "min": 14,
                         "max": 14
@@ -32132,12 +36908,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r11",
+                        "type": "shield",
                         "m": "thorns",
                         "min": 14,
                         "max": 14
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/amn_rune"
         },
         "r12": {
             "iq": 0,
@@ -32158,6 +36937,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r12",
+                        "type": "weapon",
                         "m": "dmg-min",
                         "min": 9,
                         "max": 9
@@ -32165,6 +36946,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r12",
+                        "type": "helm",
                         "m": "red-dmg",
                         "min": 7,
                         "max": 7
@@ -32172,12 +36955,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r12",
+                        "type": "shield",
                         "m": "red-dmg",
                         "min": 7,
                         "max": 7
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/sol_rune"
         },
         "r13": {
             "iq": 0,
@@ -32198,6 +36984,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r13",
+                        "type": "weapon",
                         "m": "swing2",
                         "min": 20,
                         "max": 20
@@ -32205,6 +36993,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r13",
+                        "type": "helm",
                         "m": "balance2",
                         "min": 20,
                         "max": 20
@@ -32212,12 +37002,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r13",
+                        "type": "shield",
                         "m": "block2",
                         "min": 20,
                         "max": 20
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/shael_rune"
         },
         "r14": {
             "iq": 0,
@@ -32238,6 +37031,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r14",
+                        "type": "weapon",
                         "m": "howl",
                         "min": 32,
                         "max": 32
@@ -32245,6 +37040,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r14",
+                        "type": "helm",
                         "m": "regen",
                         "min": 7,
                         "max": 7
@@ -32252,12 +37049,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r14",
+                        "type": "shield",
                         "m": "regen",
                         "min": 7,
                         "max": 7
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/dol_rune"
         },
         "r15": {
             "iq": 0,
@@ -32278,6 +37078,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r15",
+                        "type": "weapon",
                         "m": "ease",
                         "min": -20,
                         "max": -20
@@ -32285,6 +37087,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r15",
+                        "type": "helm",
                         "m": "ease",
                         "min": -15,
                         "max": -15
@@ -32292,12 +37096,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r15",
+                        "type": "shield",
                         "m": "ease",
                         "min": -15,
                         "max": -15
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/hel_rune"
         },
         "r16": {
             "iq": 0,
@@ -32318,6 +37125,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r16",
+                        "type": "weapon",
                         "m": "vit",
                         "min": 10,
                         "max": 10
@@ -32325,6 +37134,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r16",
+                        "type": "helm",
                         "m": "vit",
                         "min": 10,
                         "max": 10
@@ -32332,12 +37143,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r16",
+                        "type": "shield",
                         "m": "vit",
                         "min": 10,
                         "max": 10
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/io_rune"
         },
         "r17": {
             "iq": 0,
@@ -32358,6 +37172,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r17",
+                        "type": "weapon",
                         "m": "enr",
                         "min": 10,
                         "max": 10
@@ -32365,6 +37181,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r17",
+                        "type": "helm",
                         "m": "enr",
                         "min": 10,
                         "max": 10
@@ -32372,12 +37190,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r17",
+                        "type": "shield",
                         "m": "enr",
                         "min": 10,
                         "max": 10
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/lum_rune"
         },
         "r18": {
             "iq": 0,
@@ -32398,6 +37219,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r18",
+                        "type": "weapon",
                         "m": "dex",
                         "min": 10,
                         "max": 10
@@ -32405,6 +37228,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r18",
+                        "type": "helm",
                         "m": "dex",
                         "min": 10,
                         "max": 10
@@ -32412,12 +37237,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r18",
+                        "type": "shield",
                         "m": "dex",
                         "min": 10,
                         "max": 10
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/ko_rune"
         },
         "r19": {
             "iq": 0,
@@ -32438,6 +37266,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r19",
+                        "type": "weapon",
                         "m": "str",
                         "min": 10,
                         "max": 10
@@ -32445,6 +37275,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r19",
+                        "type": "helm",
                         "m": "str",
                         "min": 10,
                         "max": 10
@@ -32452,12 +37284,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r19",
+                        "type": "shield",
                         "m": "str",
                         "min": 10,
                         "max": 10
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/fal_rune"
         },
         "r20": {
             "iq": 0,
@@ -32478,6 +37313,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r20",
+                        "type": "weapon",
                         "m": "gold%",
                         "min": 75,
                         "max": 75
@@ -32485,6 +37322,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r20",
+                        "type": "helm",
                         "m": "gold%",
                         "min": 50,
                         "max": 50
@@ -32492,12 +37331,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r20",
+                        "type": "shield",
                         "m": "gold%",
                         "min": 50,
                         "max": 50
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/lem_rune"
         },
         "r21": {
             "iq": 0,
@@ -32518,11 +37360,15 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r21",
+                        "type": "weapon",
                         "m": "att-demon",
                         "min": 100,
                         "max": 100
                     },
                     {
+                        "code": "r21",
+                        "type": "weapon",
                         "m": "dmg-demon",
                         "min": 75,
                         "max": 75
@@ -32530,6 +37376,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r21",
+                        "type": "helm",
                         "m": "ac%",
                         "min": 30,
                         "max": 30
@@ -32537,12 +37385,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r21",
+                        "type": "shield",
                         "m": "ac%",
                         "min": 30,
                         "max": 30
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/pul_rune"
         },
         "r22": {
             "iq": 0,
@@ -32563,6 +37414,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r22",
+                        "type": "weapon",
                         "m": "openwounds",
                         "min": 25,
                         "max": 25
@@ -32570,6 +37423,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r22",
+                        "type": "helm",
                         "m": "res-all",
                         "min": 15,
                         "max": 15
@@ -32577,12 +37432,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r22",
+                        "type": "shield",
                         "m": "res-all",
                         "min": 22,
                         "max": 22
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/um_rune"
         },
         "r23": {
             "iq": 0,
@@ -32603,6 +37461,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r23",
+                        "type": "weapon",
                         "m": "noheal",
                         "min": 1,
                         "max": 1
@@ -32610,6 +37470,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r23",
+                        "type": "helm",
                         "m": "red-mag",
                         "min": 7,
                         "max": 7
@@ -32617,12 +37479,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r23",
+                        "type": "shield",
                         "m": "red-mag",
                         "min": 7,
                         "max": 7
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/mal_rune"
         },
         "r24": {
             "iq": 0,
@@ -32643,6 +37508,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r24",
+                        "type": "weapon",
                         "m": "mag%",
                         "min": 30,
                         "max": 30
@@ -32650,6 +37517,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r24",
+                        "type": "helm",
                         "m": "mag%",
                         "min": 25,
                         "max": 25
@@ -32657,12 +37526,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r24",
+                        "type": "shield",
                         "m": "mag%",
                         "min": 25,
                         "max": 25
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/ist_rune"
         },
         "r25": {
             "iq": 0,
@@ -32683,6 +37555,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r25",
+                        "type": "weapon",
                         "m": "att%",
                         "min": 20,
                         "max": 20
@@ -32690,6 +37564,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r25",
+                        "type": "helm",
                         "m": "res-pois-max",
                         "min": 5,
                         "max": 5
@@ -32697,12 +37573,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r25",
+                        "type": "shield",
                         "m": "res-pois-max",
                         "min": 5,
                         "max": 5
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/gul_rune"
         },
         "r26": {
             "iq": 0,
@@ -32723,6 +37602,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r26",
+                        "type": "weapon",
                         "m": "manasteal",
                         "min": 7,
                         "max": 7
@@ -32730,6 +37611,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r26",
+                        "type": "helm",
                         "m": "res-fire-max",
                         "min": 5,
                         "max": 5
@@ -32737,12 +37620,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r26",
+                        "type": "shield",
                         "m": "res-fire-max",
                         "min": 5,
                         "max": 5
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/vex_rune"
         },
         "r27": {
             "iq": 0,
@@ -32763,6 +37649,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r27",
+                        "type": "weapon",
                         "m": "dmg%",
                         "min": 50,
                         "max": 50
@@ -32770,6 +37658,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r27",
+                        "type": "helm",
                         "m": "res-cold-max",
                         "min": 5,
                         "max": 5
@@ -32777,12 +37667,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r27",
+                        "type": "shield",
                         "m": "res-cold-max",
                         "min": 5,
                         "max": 5
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/ohm_rune"
         },
         "r28": {
             "iq": 0,
@@ -32803,6 +37696,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r28",
+                        "type": "weapon",
                         "m": "deadly",
                         "min": 20,
                         "max": 20
@@ -32810,6 +37705,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r28",
+                        "type": "helm",
                         "m": "res-ltng-max",
                         "min": 5,
                         "max": 5
@@ -32817,12 +37714,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r28",
+                        "type": "shield",
                         "m": "res-ltng-max",
                         "min": 5,
                         "max": 5
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/lo_rune"
         },
         "r29": {
             "iq": 0,
@@ -32843,6 +37743,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r29",
+                        "type": "weapon",
                         "m": "stupidity",
                         "min": 1,
                         "max": 1
@@ -32850,6 +37752,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r29",
+                        "type": "helm",
                         "m": "mana%",
                         "min": 5,
                         "max": 5
@@ -32857,12 +37761,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r29",
+                        "type": "shield",
                         "m": "mana",
                         "min": 50,
                         "max": 50
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/sur_rune"
         },
         "r30": {
             "iq": 0,
@@ -32883,6 +37790,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r30",
+                        "type": "weapon",
                         "m": "crush",
                         "min": 20,
                         "max": 20
@@ -32890,6 +37799,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r30",
+                        "type": "helm",
                         "m": "red-dmg%",
                         "min": 8,
                         "max": 8
@@ -32897,12 +37808,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r30",
+                        "type": "shield",
                         "m": "red-dmg%",
                         "min": 8,
                         "max": 8
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/ber_rune"
         },
         "r31": {
             "iq": 0,
@@ -32923,6 +37837,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r31",
+                        "type": "weapon",
                         "m": "ignore-ac",
                         "min": 1,
                         "max": 1
@@ -32930,6 +37846,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r31",
+                        "type": "helm",
                         "m": "hp%",
                         "min": 5,
                         "max": 5
@@ -32937,12 +37855,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r31",
+                        "type": "shield",
                         "m": "hp",
                         "min": 50,
                         "max": 50
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/jah_rune"
         },
         "r32": {
             "iq": 0,
@@ -32963,6 +37884,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r32",
+                        "type": "weapon",
                         "m": "freeze",
                         "min": 3,
                         "max": 3
@@ -32970,6 +37893,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r32",
+                        "type": "helm",
                         "m": "nofreeze",
                         "min": 1,
                         "max": 1
@@ -32977,12 +37902,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r32",
+                        "type": "shield",
                         "m": "nofreeze",
                         "min": 1,
                         "max": 1
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/cham_rune"
         },
         "r33": {
             "iq": 0,
@@ -33003,6 +37931,8 @@ export let vanilla_constants_99 = {
             "m": [
                 [
                     {
+                        "code": "r33",
+                        "type": "weapon",
                         "m": "indestruct",
                         "min": 1,
                         "max": 1
@@ -33010,6 +37940,8 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r33",
+                        "type": "helm",
                         "m": "indestruct",
                         "min": 1,
                         "max": 1
@@ -33017,12 +37949,15 @@ export let vanilla_constants_99 = {
                 ],
                 [
                     {
+                        "code": "r33",
+                        "type": "shield",
                         "m": "indestruct",
                         "min": 1,
                         "max": 1
                     }
                 ]
-            ]
+            ],
+            "hdi": "misc/rune/zod_rune"
         },
         "jew": {
             "iq": 0,
@@ -33046,7 +37981,8 @@ export let vanilla_constants_99 = {
                 "Jewel",
                 "Socket Filler",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/gem/perfect_diamond"
         },
         "ice": {
             "iq": 0,
@@ -33060,7 +37996,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/quest/scroll_of_self_resurrect"
         },
         "0sc": {
             "iq": 0,
@@ -33076,7 +38013,8 @@ export let vanilla_constants_99 = {
             "c": [
                 "Scroll",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/scroll/identify_scroll"
         },
         "tr2": {
             "iq": 0,
@@ -33090,7 +38028,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/quest/bark_scroll"
         },
         "pk1": {
             "iq": 0,
@@ -33104,7 +38043,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/key/mephisto_key"
         },
         "pk2": {
             "iq": 0,
@@ -33118,7 +38058,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/key/mephisto_key"
         },
         "pk3": {
             "iq": 0,
@@ -33132,7 +38073,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/key/mephisto_key"
         },
         "dhn": {
             "iq": 0,
@@ -33146,7 +38088,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/body_part/fang"
         },
         "bey": {
             "iq": 0,
@@ -33160,7 +38103,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/body_part/eye"
         },
         "mbr": {
             "iq": 0,
@@ -33174,7 +38118,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/body_part/brain"
         },
         "toa": {
             "iq": 0,
@@ -33188,7 +38133,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/quest/token_of_absolution"
         },
         "tes": {
             "iq": 0,
@@ -33202,7 +38148,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/quest/twisted_essence_of_suffering"
         },
         "ceh": {
             "iq": 0,
@@ -33216,7 +38163,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/quest/charged_essense_of_hatred"
         },
         "bet": {
             "iq": 0,
@@ -33230,7 +38178,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/quest/burning_essence_of_terror"
         },
         "fed": {
             "iq": 0,
@@ -33244,7 +38193,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/quest/festering_essence_of_destruction"
         },
         "std": {
             "iq": 0,
@@ -33258,7 +38208,8 @@ export let vanilla_constants_99 = {
             "ig": [],
             "c": [
                 "Quest"
-            ]
+            ],
+            "hdi": "misc/body_part/flag"
         }
     },
     "version": "vanilla_constants_99"
