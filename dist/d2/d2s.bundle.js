@@ -426,7 +426,7 @@ function enhanceItem(item, mod, version, level, config, parent) {
     var constants = constants_1.getConstantData(mod, version);
     if (parent) {
         //socket item.
-        var pt = constants.armor_items[parent.type] || constants.weapon_items[parent.type] || constants.other_items[item.type];
+        var pt = constants.armor_items[parent.type] || constants.weapon_items[parent.type] || constants.other_items[parent.type];
         var t = constants.other_items[item.type];
         if (t.m) {
             item.magic_attributes = _compactAttributes(t.m[pt.gt], constants);
@@ -610,7 +610,28 @@ function _enhanceAttributeDescription(_magic_attributes, constants, level, confi
             property.op_value = v;
         }
         var descFunc = prop.dF;
-        var descString = v >= 0 ? prop.dP : prop.dN;
+        var descString = void 0;
+        if (v >= 0) {
+            if (prop.dP) {
+                descString = prop.dP;
+            }
+            else if (prop.dN) {
+                // Fallback
+                descString = prop.dN;
+            }
+        }
+        else if (v < 0) {
+            if (prop.dN) {
+                descString = prop.dN;
+            }
+            else if (prop.dP) {
+                // Fallback
+                descString = prop.dP;
+            }
+        }
+        else {
+            descString = "Missing description";
+        }
         //hack for d2r...?
         if (property.id == 39 || property.id == 41 || property.id == 43 || property.id == 45) {
             descString = prop.dP;
