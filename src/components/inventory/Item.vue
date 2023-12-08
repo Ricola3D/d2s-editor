@@ -158,7 +158,7 @@
           }
           name = `${name}\\n${personalizedName}${unique_name}`;
         }
-        if (item.quality == d2s.Quality.Runeword && item.runeword_id) {
+        if (item.quality <= 3 && item.given_runeword && item.runeword_id) {
           const runes = item.socketed_items.map(e => e.type_name.split(' ')[0]).join('');
           const runeword_name = constants.runewords[item.runeword_id] ? constants.runewords[item.runeword_id].n : null;
           if (!runeword_name) {
