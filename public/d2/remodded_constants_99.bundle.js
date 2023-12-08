@@ -9644,6 +9644,12 @@ export let remodded_constants_99 = {
                 "f": 17
             }
         ],
+        "levelreq": [
+            {
+                "s": "item_levelreq",
+                "f": 1
+            }
+        ],
         "ethereal": [
             {
                 "f": 23
@@ -10688,7 +10694,8 @@ export let remodded_constants_99 = {
             "sA": 25,
             "so": 999,
             "dF": 19,
-            "dP": "Req levels %+d (Enhances)"
+            "dP": "Req levels %+d (Enhances)",
+            "dN": "Req levels %d (Enhances)"
         },
         {
             "id": 93,
@@ -11158,8 +11165,8 @@ export let remodded_constants_99 = {
             "sA": 0,
             "so": 23,
             "dF": 19,
-            "dP": "%+d Fire Absorb",
-            "dN": "%+d Fire Absorb"
+            "dP": "Fire Absorb %d%%",
+            "dN": "Fire Absorb %d%%"
         },
         {
             "id": 143,
@@ -13752,17 +13759,15 @@ export let remodded_constants_99 = {
         },
         {
             "id": 377,
-            "s": "RW_Tracker",
+            "s": "Celestial_Aid",
             "sS": 1,
             "sB": 1,
-            "so": 999,
+            "so": 1,
             "dF": 19,
-            "dP": "One-use recipe consumed: %d"
+            "dP": "Celestial Aid: Attacks from the heavens greatly enhanced",
+            "dN": "Celestial Aid: Attacks from the heavens greatly enhanced"
         },
-        {
-            "id": 378,
-            "s": "Unused378"
-        },
+        null,
         {
             "id": 379,
             "s": "boneadded",
@@ -16143,7 +16148,6 @@ export let remodded_constants_99 = {
             "id": 153,
             "index": "Rathma's Fortress",
             "n": "Rathma's Fortress",
-            "i": "ddd",
             "c": "uea",
             "hdi": "custom/rathmas_fortress"
         },
@@ -16190,6 +16194,253 @@ export let remodded_constants_99 = {
             "c": "7b7",
             "tc": "cred",
             "hdi": "weapon/sword/bastard_sword"
+        },
+        {
+            "id": 160,
+            "index": "Ysenob's Blood",
+            "n": "Ysenob's Blood",
+            "c": "uhb",
+            "tc": "dred"
+        },
+        {
+            "id": 161,
+            "index": "Noertap's Pride",
+            "n": "Noertap's Pride",
+            "c": "uhc",
+            "tc": "dred"
+        },
+        {
+            "id": 162,
+            "index": "Olbaid's Deceipt",
+            "n": "Olbaid's Deceipt",
+            "c": "uhg",
+            "tc": "dred"
+        },
+        {
+            "id": 163,
+            "index": "Gale Strength",
+            "n": "Gale Strength",
+            "c": "7ts",
+            "hdi": "weapon/javelin/throwing_spear"
+        },
+        {
+            "id": 164,
+            "index": "Assault Prowess",
+            "n": "Assault Prowess",
+            "c": "7ts",
+            "hdi": "weapon/javelin/throwing_spear"
+        },
+        {
+            "id": 165,
+            "index": "Thirst for Blood",
+            "n": "Thirst for Blood",
+            "c": "umb"
+        },
+        {
+            "id": 166,
+            "index": "Rotting Reaper",
+            "n": "Rotting Reaper",
+            "c": "mpi",
+            "hdi": "weapon/axe/military_pick"
+        },
+        {
+            "id": 167,
+            "index": "Siphon String",
+            "n": "Siphon String",
+            "c": "uvc"
+        },
+        {
+            "id": 168,
+            "index": "Crown of Cold",
+            "n": "Crown of Cold",
+            "c": "ci3"
+        },
+        {
+            "id": 169,
+            "index": "Blazing Band",
+            "n": "Blazing Band",
+            "c": "rin"
+        },
+        {
+            "id": 170,
+            "index": "Lightning Locket",
+            "n": "Lightning Locket",
+            "c": "amu"
+        },
+        {
+            "id": 171,
+            "index": "Brewing Storm",
+            "n": "Brewing Storm",
+            "c": "uts"
+        },
+        {
+            "id": 172,
+            "index": "Charged Chaos",
+            "n": "Charged Chaos",
+            "c": "uld"
+        },
+        {
+            "id": 173,
+            "index": "Electron Emitter",
+            "n": "Electron Emitter",
+            "c": "urn"
+        },
+        {
+            "id": 174,
+            "index": "Achyls' Armament",
+            "n": "Achyls' Armament",
+            "c": "uhn"
+        },
+        {
+            "id": 175,
+            "index": "Pendant of Pestilence",
+            "n": "Pendant of Pestilence",
+            "c": "amu"
+        },
+        {
+            "id": 176,
+            "index": "Plague Protector",
+            "n": "Plague Protector",
+            "c": "ush"
+        },
+        {
+            "id": 177,
+            "index": "Meat Masher",
+            "n": "Meat Masher",
+            "c": "7gm",
+            "hdi": "weapon/hammer/great_maul"
+        },
+        {
+            "id": 178,
+            "index": "Supreme Strength",
+            "n": "Supreme Strength",
+            "c": "utg"
+        },
+        {
+            "id": 179,
+            "index": "Repeating Reaper",
+            "n": "Repeating Reaper",
+            "c": "6rx",
+            "hdi": "weapon/bow/repeating_crossbow"
+        },
+        {
+            "id": 180,
+            "index": "Fletcher's Friend",
+            "n": "Fletcher's Friend",
+            "c": "Ag6"
+        },
+        {
+            "id": 181,
+            "index": "Band of Brothers",
+            "n": "Band of Brothers",
+            "c": "rin"
+        },
+        {
+            "id": 182,
+            "index": "Grizzlepaw's Hide",
+            "n": "Grizzlepaw's Hide",
+            "c": "Gg3",
+            "tc": "blac",
+            "hdi": "custom/bear_armor"
+        },
+        {
+            "id": 183,
+            "index": "Animal Instinct",
+            "n": "Animal Instinct",
+            "c": "umc"
+        },
+        {
+            "id": 184,
+            "index": "Justitia's Anger",
+            "n": "Justitia's Anger",
+            "c": "7ws",
+            "hdi": "weapon/scepter/war_scepter"
+        },
+        {
+            "id": 185,
+            "index": "Justitia's Embrace",
+            "n": "Justitia's Embrace",
+            "c": "paf"
+        },
+        {
+            "id": 186,
+            "index": "Hand of Efreeti",
+            "n": "Hand of Efreeti",
+            "c": "ulg"
+        },
+        {
+            "id": 187,
+            "index": "Morning Frost",
+            "n": "Morning Frost",
+            "c": "uvb"
+        },
+        {
+            "id": 188,
+            "index": "Thunderlord's Vision",
+            "n": "Thunderlord's Vision",
+            "c": "usk"
+        },
+        {
+            "id": 189,
+            "index": "Coil of Heaven",
+            "n": "Coil of Heaven",
+            "c": "rin"
+        },
+        {
+            "id": 190,
+            "index": "Band of Divinity",
+            "n": "Band of Divinity",
+            "c": "rin"
+        },
+        {
+            "id": 191,
+            "index": "Godly Locket",
+            "n": "Godly Locket",
+            "c": "amu"
+        },
+        {
+            "id": 192,
+            "index": "Chains of Bondage",
+            "n": "Chains of Bondage",
+            "c": "ci3"
+        },
+        {
+            "id": 193,
+            "index": "Chains of Force",
+            "n": "Chains of Force",
+            "c": "utp"
+        },
+        {
+            "id": 194,
+            "index": "Night's Disguise",
+            "n": "Night's Disguise",
+            "c": "Ca3",
+            "hdi": "custom/cloak"
+        },
+        {
+            "id": 195,
+            "index": "Silent Stalkers",
+            "n": "Silent Stalkers",
+            "c": "Ab3",
+            "hdi": "custom/asn_boot"
+        },
+        {
+            "id": 196,
+            "index": "Toxic Grasp",
+            "n": "Toxic Grasp",
+            "c": "uvg"
+        },
+        {
+            "id": 197,
+            "index": "Blade Binding",
+            "n": "Blade Binding",
+            "c": "uvc"
+        },
+        {
+            "id": 198,
+            "index": "Murderous Intent",
+            "n": "Murderous Intent",
+            "c": "uap"
         }
     ],
     "unq_items": [
@@ -21109,6 +21360,29 @@ export let remodded_constants_99 = {
             "i": "D2R_Jank",
             "c": "utp",
             "hdi": "custom/spiritarmor3"
+        },
+        {
+            "id": 598,
+            "index": "Blackmaw's Brutality",
+            "n": "Blackmaw's Brutality",
+            "i": "D2R_Jank",
+            "c": "xld",
+            "tc": "blac"
+        },
+        {
+            "id": 599,
+            "index": "Spencer's Dispenser",
+            "n": "Spencer's Dispenser",
+            "i": "D2R_Jank",
+            "c": "oba",
+            "tc": "whit"
+        },
+        {
+            "id": 600,
+            "index": "Fletching of Frostbite",
+            "n": "Fletching of Frostbite",
+            "c": "aqv",
+            "tc": "cblu"
         }
     ],
     "stackables": {
@@ -37157,7 +37431,7 @@ export let remodded_constants_99 = {
             "elc": "7cr",
             "iq": 2,
             "n": "Phase Blade",
-            "durability": 0,
+            "durability": 100,
             "mind": 39,
             "maxd": 44,
             "rs": 25,
@@ -58006,6 +58280,1806 @@ export let remodded_constants_99 = {
                 ]
             ],
             "hdi": "misc/rune/ab_rune"
+        },
+        "L00": {
+            "nc": "L00",
+            "exc": "L00",
+            "elc": "L00",
+            "iq": 1,
+            "n": "Civerb's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L01": {
+            "nc": "L01",
+            "exc": "L01",
+            "elc": "L01",
+            "iq": 1,
+            "n": "Hsaru's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L02": {
+            "nc": "L02",
+            "exc": "L02",
+            "elc": "L02",
+            "iq": 1,
+            "n": "Cleglaw's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L03": {
+            "nc": "L03",
+            "exc": "L03",
+            "elc": "L03",
+            "iq": 1,
+            "n": "Iratha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L04": {
+            "nc": "L04",
+            "exc": "L04",
+            "elc": "L04",
+            "iq": 1,
+            "n": "Isenhart's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L05": {
+            "nc": "L05",
+            "exc": "L05",
+            "elc": "L05",
+            "iq": 1,
+            "n": "Vidala's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L06": {
+            "nc": "L06",
+            "exc": "L06",
+            "elc": "L06",
+            "iq": 1,
+            "n": "Milabrega's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L07": {
+            "nc": "L07",
+            "exc": "L07",
+            "elc": "L07",
+            "iq": 1,
+            "n": "Cathan's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L08": {
+            "nc": "L08",
+            "exc": "L08",
+            "elc": "L08",
+            "iq": 1,
+            "n": "Tancred's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L09": {
+            "nc": "L09",
+            "exc": "L09",
+            "elc": "L09",
+            "iq": 1,
+            "n": "Sigon's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L10": {
+            "nc": "L10",
+            "exc": "L10",
+            "elc": "L10",
+            "iq": 1,
+            "n": "Infernal Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L11": {
+            "nc": "L11",
+            "exc": "L11",
+            "elc": "L11",
+            "iq": 1,
+            "n": "Berserker's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L12": {
+            "nc": "L12",
+            "exc": "L12",
+            "elc": "L12",
+            "iq": 1,
+            "n": "Death's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L13": {
+            "nc": "L13",
+            "exc": "L13",
+            "elc": "L13",
+            "iq": 1,
+            "n": "Angelic Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L14": {
+            "nc": "L14",
+            "exc": "L14",
+            "elc": "L14",
+            "iq": 1,
+            "n": "Arctic Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L15": {
+            "nc": "L15",
+            "exc": "L15",
+            "elc": "L15",
+            "iq": 1,
+            "n": "Arcanna's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L16": {
+            "nc": "L16",
+            "exc": "L16",
+            "elc": "L16",
+            "iq": 1,
+            "n": "Natalya's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L17": {
+            "nc": "L17",
+            "exc": "L17",
+            "elc": "L17",
+            "iq": 1,
+            "n": "Aldur's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L18": {
+            "nc": "L18",
+            "exc": "L18",
+            "elc": "L18",
+            "iq": 1,
+            "n": "Immortal King's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L19": {
+            "nc": "L19",
+            "exc": "L19",
+            "elc": "L19",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L20": {
+            "nc": "L20",
+            "exc": "L20",
+            "elc": "L20",
+            "iq": 1,
+            "n": "Griswold's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L21": {
+            "nc": "L21",
+            "exc": "L21",
+            "elc": "L21",
+            "iq": 1,
+            "n": "Trang-Oul's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L22": {
+            "nc": "L22",
+            "exc": "L22",
+            "elc": "L22",
+            "iq": 1,
+            "n": "M'avina's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L23": {
+            "nc": "L23",
+            "exc": "L23",
+            "elc": "L23",
+            "iq": 1,
+            "n": "The Disciple's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L24": {
+            "nc": "L24",
+            "exc": "L24",
+            "elc": "L24",
+            "iq": 1,
+            "n": "Heaven's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L25": {
+            "nc": "L25",
+            "exc": "L25",
+            "elc": "L25",
+            "iq": 1,
+            "n": "Orphan's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L26": {
+            "nc": "L26",
+            "exc": "L26",
+            "elc": "L26",
+            "iq": 1,
+            "n": "Hwanin's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L27": {
+            "nc": "L27",
+            "exc": "L27",
+            "elc": "L27",
+            "iq": 1,
+            "n": "Sazabi's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L28": {
+            "nc": "L28",
+            "exc": "L28",
+            "elc": "L28",
+            "iq": 1,
+            "n": "Bul-Katho's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L29": {
+            "nc": "L29",
+            "exc": "L29",
+            "elc": "L29",
+            "iq": 1,
+            "n": "Cow King's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L30": {
+            "nc": "L30",
+            "exc": "L30",
+            "elc": "L30",
+            "iq": 1,
+            "n": "Naj's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L31": {
+            "nc": "L31",
+            "exc": "L31",
+            "elc": "L31",
+            "iq": 1,
+            "n": "McAuley's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L32": {
+            "nc": "L32",
+            "exc": "L32",
+            "elc": "L32",
+            "iq": 1,
+            "n": "Vessel's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L33": {
+            "nc": "L33",
+            "exc": "L33",
+            "elc": "L33",
+            "iq": 1,
+            "n": "Majestic Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L34": {
+            "nc": "L34",
+            "exc": "L34",
+            "elc": "L34",
+            "iq": 1,
+            "n": "Skovos's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L35": {
+            "nc": "L35",
+            "exc": "L35",
+            "elc": "L35",
+            "iq": 1,
+            "n": "Wonderous Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L36": {
+            "nc": "L36",
+            "exc": "L36",
+            "elc": "L36",
+            "iq": 1,
+            "n": "Vizjerei's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L37": {
+            "nc": "L37",
+            "exc": "L37",
+            "elc": "L37",
+            "iq": 1,
+            "n": "Battlemage's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L38": {
+            "nc": "L38",
+            "exc": "L38",
+            "elc": "L38",
+            "iq": 1,
+            "n": "Glacial Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L39": {
+            "nc": "L39",
+            "exc": "L39",
+            "elc": "L39",
+            "iq": 1,
+            "n": "Rathma's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L40": {
+            "nc": "L40",
+            "exc": "L40",
+            "elc": "L40",
+            "iq": 1,
+            "n": "Stacatomamba's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L41": {
+            "nc": "L41",
+            "exc": "L41",
+            "elc": "L41",
+            "iq": 1,
+            "n": "Kreigur's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L42": {
+            "nc": "L42",
+            "exc": "L42",
+            "elc": "L42",
+            "iq": 1,
+            "n": "Sukami's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L43": {
+            "nc": "L43",
+            "exc": "L43",
+            "elc": "L43",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L44": {
+            "nc": "L44",
+            "exc": "L44",
+            "elc": "L44",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L45": {
+            "nc": "L45",
+            "exc": "L45",
+            "elc": "L45",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L46": {
+            "nc": "L46",
+            "exc": "L46",
+            "elc": "L46",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L47": {
+            "nc": "L47",
+            "exc": "L47",
+            "elc": "L47",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L48": {
+            "nc": "L48",
+            "exc": "L48",
+            "elc": "L48",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L49": {
+            "nc": "L49",
+            "exc": "L49",
+            "elc": "L49",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L50": {
+            "nc": "L50",
+            "exc": "L50",
+            "elc": "L50",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L51": {
+            "nc": "L51",
+            "exc": "L51",
+            "elc": "L51",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L52": {
+            "nc": "L52",
+            "exc": "L52",
+            "elc": "L52",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L53": {
+            "nc": "L53",
+            "exc": "L53",
+            "elc": "L53",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L54": {
+            "nc": "L54",
+            "exc": "L54",
+            "elc": "L54",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L55": {
+            "nc": "L55",
+            "exc": "L55",
+            "elc": "L55",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L56": {
+            "nc": "L56",
+            "exc": "L56",
+            "elc": "L56",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L57": {
+            "nc": "L57",
+            "exc": "L57",
+            "elc": "L57",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L58": {
+            "nc": "L58",
+            "exc": "L58",
+            "elc": "L58",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L59": {
+            "nc": "L59",
+            "exc": "L59",
+            "elc": "L59",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L60": {
+            "nc": "L60",
+            "exc": "L60",
+            "elc": "L60",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L61": {
+            "nc": "L61",
+            "exc": "L61",
+            "elc": "L61",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L62": {
+            "nc": "L62",
+            "exc": "L62",
+            "elc": "L62",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L63": {
+            "nc": "L63",
+            "exc": "L63",
+            "elc": "L63",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L64": {
+            "nc": "L64",
+            "exc": "L64",
+            "elc": "L64",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L65": {
+            "nc": "L65",
+            "exc": "L65",
+            "elc": "L65",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L66": {
+            "nc": "L66",
+            "exc": "L66",
+            "elc": "L66",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L67": {
+            "nc": "L67",
+            "exc": "L67",
+            "elc": "L67",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L68": {
+            "nc": "L68",
+            "exc": "L68",
+            "elc": "L68",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L69": {
+            "nc": "L69",
+            "exc": "L69",
+            "elc": "L69",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L70": {
+            "nc": "L70",
+            "exc": "L70",
+            "elc": "L70",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L71": {
+            "nc": "L71",
+            "exc": "L71",
+            "elc": "L71",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L72": {
+            "nc": "L72",
+            "exc": "L72",
+            "elc": "L72",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L73": {
+            "nc": "L73",
+            "exc": "L73",
+            "elc": "L73",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L74": {
+            "nc": "L74",
+            "exc": "L74",
+            "elc": "L74",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L75": {
+            "nc": "L75",
+            "exc": "L75",
+            "elc": "L75",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L76": {
+            "nc": "L76",
+            "exc": "L76",
+            "elc": "L76",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L77": {
+            "nc": "L77",
+            "exc": "L77",
+            "elc": "L77",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L78": {
+            "nc": "L78",
+            "exc": "L78",
+            "elc": "L78",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L79": {
+            "nc": "L79",
+            "exc": "L79",
+            "elc": "L79",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L80": {
+            "nc": "L80",
+            "exc": "L80",
+            "elc": "L80",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L81": {
+            "nc": "L81",
+            "exc": "L81",
+            "elc": "L81",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L82": {
+            "nc": "L82",
+            "exc": "L82",
+            "elc": "L82",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L83": {
+            "nc": "L83",
+            "exc": "L83",
+            "elc": "L83",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L84": {
+            "nc": "L84",
+            "exc": "L84",
+            "elc": "L84",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L85": {
+            "nc": "L85",
+            "exc": "L85",
+            "elc": "L85",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L86": {
+            "nc": "L86",
+            "exc": "L86",
+            "elc": "L86",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L87": {
+            "nc": "L87",
+            "exc": "L87",
+            "elc": "L87",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L88": {
+            "nc": "L88",
+            "exc": "L88",
+            "elc": "L88",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L89": {
+            "nc": "L89",
+            "exc": "L89",
+            "elc": "L89",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L90": {
+            "nc": "L90",
+            "exc": "L90",
+            "elc": "L90",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L91": {
+            "nc": "L91",
+            "exc": "L91",
+            "elc": "L91",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L92": {
+            "nc": "L92",
+            "exc": "L92",
+            "elc": "L92",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L93": {
+            "nc": "L93",
+            "exc": "L93",
+            "elc": "L93",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L94": {
+            "nc": "L94",
+            "exc": "L94",
+            "elc": "L94",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L95": {
+            "nc": "L95",
+            "exc": "L95",
+            "elc": "L95",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L96": {
+            "nc": "L96",
+            "exc": "L96",
+            "elc": "L96",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L97": {
+            "nc": "L97",
+            "exc": "L97",
+            "elc": "L97",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L98": {
+            "nc": "L98",
+            "exc": "L98",
+            "elc": "L98",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
+        },
+        "L99": {
+            "nc": "L99",
+            "exc": "L99",
+            "elc": "L99",
+            "iq": 1,
+            "n": "Tal Rasha's Blood Pact",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "c": [
+                "Blood Contract"
+            ],
+            "hdi": "custom/Blood_Pact"
         }
     },
     "version": "vanilla_constants_99"
