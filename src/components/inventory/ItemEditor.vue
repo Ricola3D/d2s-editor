@@ -10,96 +10,110 @@
       </div>
     </div>
 
-    <div></div>
     <div class="form-row">
       <div>
         <Item :item.sync="item" clazz="item-edit"></Item>
       </div>
 
       <ul className="ItemOptions">
-        <span v-if="!item.simple_item">
-          <li>
-            <div class="settings">
-              <label>Quality:</label>
-              <select class="edit-box" v-model.number="item.quality" @change="onEvent('update')">
-                <option v-for="rarity in rarities" :value="rarity.key" :key="rarity.key">{{ rarity.value }}</option>
-              </select>
-            </div>
-          </li>
-          <li>
-            <div v-if="item.quality == 4">
-              <label>Prefix:</label>
-              <select class="edit-box" v-model.number="item.magic_prefix" @change="onEvent('update')">
-                <option value="0">None</option>
-                <option v-for="s in prefixes" :value="s.i" :key="s.i">{{ s.i }} - {{ s.v.n }}</option>
-              </select>
-              <label>Suffix:</label>
-              <select class="edit-box" v-model.number="item.magic_suffix" @change="onEvent('update')">
-                <option value="0">None</option>
-                <option v-for="s in suffixes" :value="s.i" :key="s.i">{{ s.i }} - {{ s.v.n }}</option>
-              </select>
-            </div>
-            <div v-if="item.quality == 6 || item.quality == 8">
-              <label>Prefix:</label>
-              <select class="edit-box"  v-model.number="item.rare_name_id" @change="onEvent('update')">
-                <option v-for="s in rare_names" :value="s.i" :key="s.i">{{ s.i }} - {{ s.v.n }}</option>
-              </select>
-              <label>Suffix:</label>
-              <select class="edit-box"  v-model.number="item.rare_name_id2" @change="onEvent('update')">
-                <option v-for="s in rare_names" :value="s.i" :key="s.i">{{ s.i }} - {{ s.v.n }}</option>
-              </select>
-            </div>
-          </li>
-          <li>
-            <div v-if="item.quality == 5">
-              <label>Set Name:</label>
-              <select class="edit-box" v-model.number="item.set_id" @change="onEvent('update')">
-                <option v-for="s in set_items" :value="s.i" :key="s.i">{{ s.v.n }}</option>
-              </select>
-            </div>
-          </li>
-          <li>
-            <label>Item Level:</label>
-            <input class="edit-box" type="number" v-model.number="item.level" @input="onEvent('update')" min="1" max="99">
-          </li>
-        </span>
-
-        <li>
-          <div class="settings">
-            <label>Base:</label>
-            <select class="edit-box" v-model="item.type" @change="onEvent('update')" v-select>
+        <div class="settings">
+          <!-- Base -->
+          <label>Base</label>
+          <div>
+            <select2 class="edit-box" v-model="item.type" @change="onEvent('update')">
               <option v-for="s in getBases(item.type)" :value="s[0]" :key="s[0]">{{ s[1].n }}</option>
-            </select>
+            </select2>
           </div>
-        </li>
 
-        <span v-if="!item.simple_item">
-          <li>
-            <div v-if="item.defense_rating">
-              <label>Defense:</label>
-              <input class="edit-box" type="number" v-model.number="item.defense_rating" @input="onEvent('update')" min="1" max="9999">
+          <!-- Defense -->
+          <template v-if="item.defense_rating">
+              <label>&#187;&#187; Defense</label>
+              <input class="edit-box" type="number" v-model.number="item.defense_rating" @input="onEvent('update')" min="1" max="1000" disabled>
+            </template>
+
+          <!-- iLevel -->
+          <label>Item Level</label>
+          <input class="edit-box" type="number" v-model.number="item.level" @input="onEvent('update')" min="1" max="99">
+
+          <!-- Skin -->
+          <template  v-if="item.gfx_count">
+            <label>Skin</label>
+            <div>
+              <select2 class="edit-box" v-model.number="item.picture_id" @change="onEvent('update')">
+                <option v-for="n in item.gfx_count" :value="n - 1" :key="n">{{ skin_names[item.type] ? skin_names[item.type][n-1] : `Skin ${n}` }}</option>
+              </select2>
             </div>
-          </li>
-          <li>
-            <div v-if="item.socketed">
-              <label>Sockets:</label>
-              <input class="edit-box" type="number" v-model.number="item.total_nr_of_sockets" @input="onEvent('update')" min="1" :max="maxSockets()">
+          </template >
+
+          <template v-if="!item.simple_item">
+            <!-- Quality -->
+            <label>Quality</label>
+            <div>
+              <select2 class="edit-box" v-model.number="item.quality" @change="onEvent('update')">
+                <option v-for="rarity in rarities" :value="rarity.key" :key="rarity.key">{{ rarity.value }}</option>
+              </select2>
             </div>
-          </li>
-          <li>
-            <div class="form-check form-check-inline">
-              <label class="form-check-label"><input class="form-check-input" type="checkbox"
-                  v-model.number="item.socketed" :true-value="1" :false-value="0">Socketed</label>
-            </div>
-          </li>
-          <li>
-            <div class="form-check form-check-inline">
-              <label class="form-check-label"><input class="form-check-input" type="checkbox"
-                v-model.number="item.ethereal" :true-value="1" :false-value="0" @change="onEvent('update')">Ethereal</label>
-            </div>
-          </li>
-        </span>
-        
+
+            <!-- Magic prefix & suffix -->
+            <template v-if="item.quality == 4">
+              <label>&#187;&#187; Prefix</label>
+              <div>
+                <select2 class="edit-box" v-model.number="item.magic_prefix" @change="onEvent('update')">
+                  <option value="0">None</option>
+                  <option v-for="s in prefixes" :value="s.i" :key="s.i">{{ s.i }} - {{ s.v.n }}</option>
+                </select2>
+              </div>
+              <label>&#187;&#187; Suffix</label>
+              <div>
+                <select2 class="edit-box" v-model.number="item.magic_suffix" @change="onEvent('update')">
+                  <option value="0">None</option>
+                  <option v-for="s in suffixes" :value="s.i" :key="s.i">{{ s.i }} - {{ s.v.n }}</option>
+                </select2>
+              </div>
+            </template>
+
+            <!-- Rare prefix & suffix -->
+            <template v-if="item.quality == 6 || item.quality == 8">
+              <label>&#187;&#187; Prefix</label>
+              <div>
+                <select2 class="edit-box"  v-model.number="item.rare_name_id" @change="onEvent('update')">
+                  <option v-for="s in rare_names" :value="s.i" :key="s.i">{{ s.i }} - {{ s.v.n }}</option>
+                </select2>
+              </div>
+              <label>&#187;&#187; Suffix</label>
+              <div>
+                <select2 class="edit-box"  v-model.number="item.rare_name_id2" @change="onEvent('update')">
+                  <option v-for="s in rare_names" :value="s.i" :key="s.i">{{ s.i }} - {{ s.v.n }}</option>
+                </select2>
+              </div>
+            </template>
+
+            <!-- Set name -->
+            <template v-if="item.quality == 5">
+              <label>&#187;&#187; Set item ID</label>
+              <select2 class="edit-box" v-model.number="item.set_id" @change="onEvent('update')">
+                <option v-for="s in set_items" :value="s.id" :key="s.id">{{ s.n }}</option>
+              </select2>
+            </template>
+
+            <!-- Unique name -->
+            <template v-if="item.quality == 7">
+              <label>&#187;&#187; Unique item ID</label>
+              <select2 class="edit-box" v-model.number="item.unique_id" @change="onEvent('update')">
+                <option v-for="s in unq_items" :value="s.id" :key="s.id">{{ s.n }} - {{ s.id }}</option>
+              </select2>
+            </template>
+            
+            <!-- Ethereal -->
+            <label>Ethereal</label>
+            <label class="form-check-label"><input class="form-check-input" type="checkbox"
+                v-model.number="item.ethereal" :true-value="1" :false-value="0" @change="onEvent('update')"></label>
+
+            <!-- Sockets -->
+            <label>Sockets</label>
+            <input class="edit-box" type="number" v-model.number="item.total_nr_of_sockets" @input="onEvent('update')" min="0" max="8">
+          </template>
+        </div>
       </ul>
     </div>
 
@@ -124,7 +138,7 @@
       </div>
       <div v-if="item.socketed_items">
         <div v-for="(socketed_item, index) in item.socketed_items">
-          <ItemEditor ref="itemEditor" :item.sync="socketed_item" :id="id + 'Socketed' + index" @item-event="onChildEvent"></ItemEditor>
+          <ItemEditor ref="itemEditor" :item.sync="socketed_item" :id="id + 'Socketed' + index" @item-event="onChildEvent" :location="{ location: 6 }"></ItemEditor>
         </div>
       </div>
     </span>
@@ -155,11 +169,19 @@ export default {
       prefixes: window[`${window.work_mod}_constants_${window.work_version}`].magic_prefixes.map((e,i)=> { return { i:i, v:e }}).filter(e => e.v != null && e.v.n != null),
       suffixes: window[`${window.work_mod}_constants_${window.work_version}`].magic_suffixes.map((e,i)=> { return { i:i, v:e }}).filter(e => e.v != null && e.v.n != null),
       rare_names: window[`${window.work_mod}_constants_${window.work_version}`].rare_names.map((e,i)=> { return { i:i, v:e }}).filter(e => e.v != null && e.v.n != null),
-      unq_items: window[`${window.work_mod}_constants_${window.work_version}`].unq_items.map((e,i)=> { return { i:i, v:e }}).filter(e => e.v != null && e.v.n != null),
-      set_items: window[`${window.work_mod}_constants_${window.work_version}`].set_items.map((e,i)=> { return { i:i, v:e }}).filter(e => e.v != null && e.v.n != null),
+      unq_items: window[`${window.work_mod}_constants_${window.work_version}`].unq_items.filter(item => item.n != null),
+      set_items: window[`${window.work_mod}_constants_${window.work_version}`].set_items.filter(item => item.n != null),
       armor_items: Object.entries(window[`${window.work_mod}_constants_${window.work_version}`].armor_items).filter(e => e[1].n != null),
       weapon_items: Object.entries(window[`${window.work_mod}_constants_${window.work_version}`].weapon_items).filter(e => e[1].n != null),
       other_items: Object.entries(window[`${window.work_mod}_constants_${window.work_version}`].other_items).filter(e => e[1].n != null),
+      skin_names: {
+        "amu": [ "Dot", "Sun", "Penta" ],
+        "rin": [ "Coral", "Small Blue", "Big Blue", "Orange", "Crown" ],
+        "cm1": [ "Brown", "Bear-foot", "M-skin" ],
+        "cm2": [ "Paw", "Horn", "Tower" ],
+        "cm3": [ "Eye", "Spaghetti/DNA", "Dragon/Monster" ],
+        "jew": [ "Pink", "Blue", "Orange", "Green", "Red", "White" ]
+      }
     };
   },
   methods: {
@@ -174,36 +196,36 @@ export default {
       this.$emit('item-event', { item: newItem, type: 'update' });
     },
     onEvent(type, variable, value) {
-        this.$emit('item-event', { item: this.item, type: type });
+      this.$emit('item-event', { item: this.item, type: type });
     },
     onChildEvent(e) {
       this.$emit('item-event', { item: e.item, type: e.type });
     },
-    onMove() {
-      this.$emit('item-event', { item: this.item, location: this.location, type: 'move' });
-    },
-    maxSockets() {
-      return this.item.inv_width * this.item.inv_height
-    },
+    // onMove() {
+    //   this.$emit('item-event', { item: this.item, location: this.location, type: 'move' });
+    // },
     findBasesInConstants(code, items) {
-      const base = items[code];
       let bases = [];
-      //NORMAL SET UNIQUE CRAFTED
-      if (this.item.quality == 5 || this.item.quality == 6 || this.item.quality == 7 || this.item.quality == 8) {
-        bases = [base.nc, base.exc, base.elc].filter(id => items[id]);
-        //items.filter(e => e[1].nc == code || e[1].exc == code || e[1].elc == code)
+      const base = items[code];
+      if (base) {
+        //NORMAL SET UNIQUE CRAFTED
+        if (this.item.quality == 5 || this.item.quality == 6 || this.item.quality == 7 || this.item.quality == 8) {
+          bases = [base.nc, base.exc, base.elc].filter(id => items[id]);
+          //items.filter(e => e[1].nc == code || e[1].exc == code || e[1].elc == code)
+        }
+        else {
+          bases = Object.keys(items).filter(id => {
+            const item = items[id];
+            if (this.item.given_runeword == 1 && item.gemsockets < this.item.total_nr_of_sockets) return false;
+            if (base.c.length > 2) 
+              return item.eq1n == base.eq1n 
+            else 
+              return item.type === base.type
+          }).sort((a, b) => items[a].level < items[b].level);
+        }
+        bases = Object.entries(items).filter(item => bases.includes(item[0]));
       }
-      else {
-        bases = Object.keys(items).filter(id => {
-          const item = items[id];
-          if (this.item.given_runeword == 1 && item.gemsockets < this.item.total_nr_of_sockets) return false;
-          if (base.c.length > 2) 
-            return item.eq1n == base.eq1n 
-          else 
-            return item.type === base.type
-        }).sort((a, b) => items[a].level < items[b].level);
-      }
-      return Object.entries(items).filter(item => bases.includes(item[0]));
+      return bases
     },
     getBases(code) {
       if (this.item.type_id == 3) {

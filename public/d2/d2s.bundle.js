@@ -420,6 +420,14 @@ function enhanceItems(items, mod, version, level, config, parent) {
     }
 }
 exports.enhanceItems = enhanceItems;
+function disableMultiplePictures(item) {
+    item.picture_id = 0;
+    item.gfx_count = 0;
+}
+// Bound values (inclusive min and max)
+function boundValue(v, min, max) {
+    return Math.min(max, Math.max(min, v));
+}
 function enhanceItem(item, mod, version, level, config, parent) {
     var _a, _b, _c, _d;
     if (level === void 0) { level = 1; }
@@ -432,6 +440,8 @@ function enhanceItem(item, mod, version, level, config, parent) {
             item.magic_attributes = _compactAttributes(t.m[pt.gt], constants);
         }
     }
+    // Enforce boundaries
+    item.level = boundValue(item.level, 1, 99);
     var details = null;
     if (constants.armor_items[item.type]) {
         details = constants.armor_items[item.type];
@@ -506,8 +516,30 @@ function enhanceItem(item, mod, version, level, config, parent) {
                 item.max_durability = details.durability - Math.ceil(details.durability / 2) + 1;
             }
         }
+        item.total_nr_of_sockets = boundValue(item.total_nr_of_sockets, 0, details.gs || 0);
+        // Enforce coherence between total_nr_of_sockets & socketed
+        if (item.total_nr_of_sockets > 0) {
+            item.socketed = 1;
+        }
+        else {
+            item.socketed = 0;
+        }
+        if (details.ig && !item.multiple_pictures) {
+            // Activate multiple pictures
+            item.multiple_pictures = 1;
+            item.picture_id = 0;
+        }
+        else if (!details.ig && item.multiple_pictures) {
+            item.multiple_pictures = 0; // Type changed to a not-multiple pictures one
+            disableMultiplePictures(item);
+        }
         if (item.multiple_pictures && details.ig && details.ig[item.picture_id]) {
             item.inv_file = details.ig[item.picture_id];
+            item.gfx_count = Math.max(item.gfx_count || 0, details.ig.length);
+        }
+        if (item.multiple_pictures && details.hdig && details.hdig[item.picture_id]) {
+            item.hd_inv_file = details.hdig[item.picture_id];
+            item.gfx_count = Math.max(item.gfx_count || 0, details.hdig.length);
         }
         if (item.magic_prefix || item.magic_suffix) {
             if (item.magic_prefix && ((_a = constants.magic_prefixes[item.magic_prefix]) === null || _a === void 0 ? void 0 : _a.tc)) {
@@ -534,23 +566,35 @@ function enhanceItem(item, mod, version, level, config, parent) {
         }
         else if (item.unique_id) {
             var unq = constants.unq_items[item.unique_id];
-            if (details.ui)
+            if (details.ui) {
                 item.inv_file = details.ui;
-            if (unq && unq.i)
+                disableMultiplePictures(item);
+            }
+            if (unq && unq.i) {
                 item.inv_file = unq.i;
-            if (unq && unq.hdi)
+                disableMultiplePictures(item);
+            }
+            if (unq && unq.hdi) {
                 item.hd_inv_file = unq.hdi;
+                disableMultiplePictures(item);
+            }
             if (unq && unq.tc)
                 item.transform_color = unq.tc;
         }
         else if (item.set_id) {
             var set = constants.set_items[item.set_id];
-            if (details.ui)
+            if (details.ui) {
                 item.inv_file = details.ui;
-            if (set && set.i)
+                disableMultiplePictures(item);
+            }
+            if (set && set.i) {
                 item.inv_file = set.i;
-            if (set && set.hdi)
+                disableMultiplePictures(item);
+            }
+            if (set && set.hdi) {
                 item.hd_inv_file = set.hdi;
+                disableMultiplePictures(item);
+            }
             if (set && set.tc)
                 item.transform_color = set.tc;
         }
@@ -2776,6 +2820,9 @@ function readItem(reader, mod, version, config) {
                         }
                         if (item.socketed === 1) {
                             item.total_nr_of_sockets = reader.ReadUInt8(4);
+                        }
+                        else {
+                            item.total_nr_of_sockets = 0;
                         }
                         plist_flag = 0;
                         if (item.quality === Quality.Set) {

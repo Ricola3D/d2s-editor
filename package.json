@@ -15,7 +15,8 @@
     "node-cache": "^5.1.2",
     "select2": "^4.1.0-rc.0",
     "tippy.js": "^6.3.7",
-    "vue": "^3.2.45"
+    "vue": "^3.2.45",
+    "vue3-select2-component": "^0.1.7"
   },
   "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",

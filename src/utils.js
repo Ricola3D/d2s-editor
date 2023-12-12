@@ -120,6 +120,8 @@ async function getFileWithCache(path) {
 }
 
 function b64PNGFromSprite(item, sprite) {
+  // Sprite image size is 98x98 per inventory case, lowend is 49x49 per inventory case
+
   // DXT Header
   // 0x00", header   # File header - always SpA1
   // 0x04", uintle16 # version maybe ? 31 is different than 61 (61 do not want to be parsed here)
@@ -268,9 +270,20 @@ function b64PNGFromSprite(item, sprite) {
 
   // put data to context at (0, 0)
   context.putImageData(imgData, 0, 0);
+
+  const scaleFactor = 32/49; // We use 32x32 in the hero editor
+  let finalCanvas = document.createElement('canvas'),
+    finalContext = finalCanvas.getContext('2d');
+  finalCanvas.height = Math.floor(scaleFactor * height );
+  finalCanvas.width = Math.floor(scaleFactor * width);
+  finalContext.scale(scaleFactor, scaleFactor)
+  finalContext.drawImage(context.canvas, 0, 0)
+
   // output image
   //var img = new Image();
-  let src = canvas.toDataURL('image/png');
+  //let src = canvas.toDataURL('image/png');
+  let src = finalCanvas.toDataURL('image/webp', 0.5);
+  finalCanvas.remove();
   canvas.remove();
 
   return src;
@@ -280,6 +293,7 @@ function b64PNGFromDC6(item, dc6) {
   // DC6 format:
   // - https://d2mods.info/forum/viewtopic.php?t=724#p148076
   // - https://gist.github.com/MarkKoz/874052801d7eddd1bb4a9b69cd1e9ac8
+  // DC6 image size is 28x28 per inventory case
   let idx = 32;
   const width = dc6[idx] | dc6[idx + 1] << 8 | dc6[idx + 2] << 16 | dc6[idx + 2] << 24;
   idx = 36;
@@ -331,9 +345,20 @@ function b64PNGFromDC6(item, dc6) {
   
   // put data to context at (0, 0)
   context.putImageData(imgData, 0, 0);
+
+  const scaleFactor = 32/28; // We use 32x32 in the hero editor
+  let finalCanvas = document.createElement('canvas'),
+    finalContext = finalCanvas.getContext('2d');
+  finalCanvas.height = Math.floor(scaleFactor * height );
+  finalCanvas.width = Math.floor(scaleFactor * width);
+  finalContext.scale(scaleFactor, scaleFactor)
+  finalContext.drawImage(context.canvas, 0, 0)
+
   // output image
   //var img = new Image();
-  let src = canvas.toDataURL('image/png');
+  //let src = canvas.toDataURL('image/png');
+  let src = finalCanvas.toDataURL('image/webp', 0.5);
+  finalCanvas.remove();
   canvas.remove();
 
   return src;

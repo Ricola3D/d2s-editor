@@ -6,9 +6,9 @@
           <div class="col-md-1"><button type="button" class="btn btn-link red" @click="removeStat(statIdx)">&times;</button>
           </div>
           <div class="col-md-11">
+            <!-- <Select2 :id="id + 'Stat' + statIdx" v-model.number="stat.id" :options="" @change="onItemModified"/> -->
             <select2 :id="id + 'Stat' + statIdx" v-model.number="stat.id" @change="onItemModified">
               <option v-for="it in stats_map" :value="it.i" :key="it.i">{{it.i.toString().padStart(3, '0')}}_{{ it.v.s }}</option>
-              <!-- <option v-for="it in stats_map" :value="it.i" :key="it.i">{{it.i}} - {{it.v.s}} - [{{it.v.dP}}]</option> -->
             </select2>
           </div>
         </div>
@@ -48,7 +48,6 @@ export default {
   },
   data() {
     return {
-      stats: window[`${window.work_mod}_constants_${window.work_version}`].magical_properties,
       stats_map: window[`${window.work_mod}_constants_${window.work_version}`].magical_properties.map((e, i) => { return { i: i, v: e } }).filter(e => e.v != null && e.v.s != null),
       skills: window[`${window.work_mod}_constants_${window.work_version}`].skills.map((e, i) => { return { i: i, v: e } }).filter(e => e.v != null && e.v.s != null).sort((a, b) => { return a.v.s.localeCompare(b.v.s) }),
       classes: window[`${window.work_mod}_constants_${window.work_version}`].classes,
@@ -65,13 +64,13 @@ export default {
       this.$emit('stat-change', this.itemStats);
     },
     getMaxValue(statId) {
-      let stat = this.stats[statId];
+      let stat = window[`${window.work_mod}_constants_${window.work_version}`].magical_properties[statId];
       let add = stat.sA ? stat.sA : 0;
       return utils.shift(1, stat.sB) - 1 - stat.sA;
     },
     getMinValue(statId) {
       //for the stat to be present need value > 0
-      let stat = this.stats[statId];
+      let stat = window[`${window.work_mod}_constants_${window.work_version}`].magical_properties[statId];
       let add = stat.sA ? stat.sA : 0;
       return -add;
     },
@@ -98,7 +97,7 @@ export default {
       this.onItemModified();
     },
     isClass(statId, valueIdx) {
-      let stat = this.stats[statId];
+      let stat = window[`${window.work_mod}_constants_${window.work_version}`].magical_properties[statId];
       if ((stat.dF == 14) && valueIdx == 2) {
         return true;
       }
@@ -108,14 +107,14 @@ export default {
       return false;
     },
     isClassSkill(statId, valueIdx) {
-      let stat = this.stats[statId];
+      let stat = window[`${window.work_mod}_constants_${window.work_version}`].magical_properties[statId];
       if ((stat.dF == 14) && valueIdx == 1) {
         return true;
       }
       return false;
     },
     isSkill(statId, valueIdx) {
-      let stat = this.stats[statId];
+      let stat = window[`${window.work_mod}_constants_${window.work_version}`].magical_properties[statId];
       if (stat.dF == 14) {
         return false;
       }
@@ -129,7 +128,7 @@ export default {
       return false;
     },
     numValues(id) {
-      let stat = this.stats[id];
+      let stat = window[`${window.work_mod}_constants_${window.work_version}`].magical_properties[id];
       if (stat.np) {
         return stat.np;
       }

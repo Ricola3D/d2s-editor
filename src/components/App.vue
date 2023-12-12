@@ -42,9 +42,10 @@
               <Item v-if="preview" :item="preview" clazz="item-edit"></Item>
             </div>
             <label for="Item">Item</label>
-            <select class="form-control" v-model="previewModel" @change="previewItem" v-select="'#LoadItem'">
+            <Select2/>
+            <!-- <select class="form-control" v-model="previewModel" @change="previewItem" v-select="'#LoadItem'">
               <option v-for="item in itempack" :value="item" :key="item.key">{{item.key}}</option>
-            </select>
+            </select> -->
           </div>
           <div class="modal-footer">
             <input style="display:none;" type="file" name="d2iFile" @change="onItemFileChange" id="d2iFile">
@@ -695,6 +696,7 @@
         this.save = null;
         this.selected = null;
         d2s.read(bytes, mod).then(response => {
+          console.log("Attributes: " + JSON.stringify(response.attributes))
           that.save = response;
           if(filename) {
             that.save.header.name = filename.split('.')[0];

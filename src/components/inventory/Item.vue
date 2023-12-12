@@ -1,13 +1,15 @@
 <template>
   <div>
     <div ref="itemRef" tabindex="0" :class="itemClass" v-on:dragstart="dragStart">
-      <img v-if="item.src" :src="item.src" :class="{ ethereal: item.ethereal}"/>
-      <img v-else src="/images/loading.gif" :style="{ opacity: 0.5 }">
-      <div v-if="item.total_nr_of_sockets && tooltipShown" class="sockets">
-        <div :style="socketStyle(idx)" class="socket"
-          :class="{ 'empty-socket': !item.socketed_items || !item.socketed_items[idx-1]}"
-          v-for="idx in item.total_nr_of_sockets" :key="idx">
-          <img v-if="item.socketed_items && item.socketed_items[idx-1]" :src="item.socketed_items[idx-1].src" />
+      <div :class="innerClass">
+        <img v-if="item.src" :src="item.src" :class="{ ethereal: item.ethereal}"/>
+        <img v-else src="/images/loading.gif" class="loading">
+        <div v-if="item.total_nr_of_sockets && tooltipShown" class="sockets">
+          <div :style="socketStyle(idx)" class="socket"
+            :class="{ 'empty-socket': !item.socketed_items || !item.socketed_items[idx-1]}"
+            v-for="idx in item.total_nr_of_sockets" :key="idx">
+            <img v-if="item.socketed_items && item.socketed_items[idx-1]" :src="item.socketed_items[idx-1].src" />
+          </div>
         </div>
       </div>
     </div>
@@ -67,6 +69,10 @@
           clazz += ` x-${this.item.position_x} y-${this.item.position_y}`;
         }
         return clazz;
+      },
+      innerClass() {
+        let clazz = `${this.clazz ? this.clazz : 'inner'} w-${this.item.inv_width} h-${this.item.inv_height}`;
+        return clazz;
       }
     },
     unmounted() {
@@ -98,11 +104,12 @@
           i = (idx - 1) % countX
           j = Math.floor((idx - 1) / countX)
 
-          // Special case for 3
-          if (countX > 1 && this.item.total_nr_of_sockets % 2) {
-            if (idx == this.item.total_nr_of_sockets ) {
-              // Center last socket
-              i = 0.5
+          // Special case when the last row is incomplete
+          if (countX > 1 && this.item.total_nr_of_sockets % countX) {
+            if (idx > countX * (countY - 1) ) {
+              // Center the last row
+              let lineCount = this.item.total_nr_of_sockets % countX
+              i += (countX - lineCount) / 2
             }
           }
         }
@@ -118,28 +125,28 @@
         if (item.quality === d2s.Quality.Magic && item.magic_prefix) {
           let magic_prefix_name = constants.magic_prefixes[item.magic_prefix] ? constants.magic_prefixes[item.magic_prefix].n : null;
           if (!magic_prefix_name) {
-            magic_prefix_name = `${item.magic_prefix}_unknown`;
+            magic_prefix_name = "unknown";
           }
-          name = `${magic_prefix_name}(${item.magic_prefix}) ${name}`;
+          name = `${name}\\n${magic_prefix_name}(${item.magic_prefix}) ${name}`;
         }
         if (item.quality === d2s.Quality.Magic && item.magic_suffix) {
           let magic_suffix_name = constants.magic_suffixes[item.magic_suffix] ? constants.magic_suffixes[item.magic_suffix].n : null;
           if (!magic_suffix_name) {
-            magic_suffix_name = `${item.magic_suffix}_unknown`;
+            magic_suffix_name = "of unknown";
           }
           name = `${name} ${magic_suffix_name}(${item.magic_suffix})`;
         }
         if (item.quality === d2s.Quality.Rare && item.rare_name_id) {
           let rare_name = constants.rare_names[item.rare_name_id] ? constants.rare_names[item.rare_name_id].n : null;
           if (!rare_name) {
-            rare_name = `${item.rare_name_id}_unknown`;
+            rare_name = "unknown";
           }
-          name = `${rare_name}(${item.rare_name_id}) ${name}`;
+          name = `${name}\\n${rare_name}(${item.rare_name_id})`;
         }
         if (item.quality === d2s.Quality.Rare && item.rare_name_id2) {
           let rare_name2 = constants.rare_names[item.rare_name_id2] ? constants.rare_names[item.rare_name_id2].n : null;
           if (!rare_name2) {
-            rare_name2 = `${item.rare_name_id2}_unknown`;
+            rare_name2 = "of unknown";
           }
           name = `${name} ${rare_name2}(${item.rare_name_id2})`;
         }
@@ -147,24 +154,24 @@
         if (item.quality === d2s.Quality.Set && item.set_id) {
           let set_name = constants.set_items[item.set_id] ? constants.set_items[item.set_id].n : null;
           if (!set_name) {
-            set_name = `${item.set_id}_unknown`;
+            set_name = "unknown";
           }
-          name = `${name}\\n${personalizedName}${set_name}`;
+          name = `${name}\\n${personalizedName}${set_name}(${item.set_id})`;
         }
         if (item.quality === d2s.Quality.Unique && item.unique_id) {
           let unique_name = constants.unq_items[item.unique_id] ? constants.unq_items[item.unique_id].n : null;
           if (!unique_name) {
-            unique_name = `${item.unique_id}_unknown`;
+            unique_name = "unknown";
           }
-          name = `${name}\\n${personalizedName}${unique_name}`;
+          name = `${name}\\n${personalizedName}${unique_name}(${item.unique_id})`;
         }
         if (item.quality <= 3 && item.given_runeword && item.runeword_id) {
           const runes = item.socketed_items.map(e => e.type_name.split(' ')[0]).join('');
           let runeword_name = constants.runewords[item.runeword_id] ? constants.runewords[item.runeword_id].n : null;
           if (!runeword_name) {
-            runeword_name = `${item.runeword_id}_unknown`;
+            runeword_name = "unknown";
           }
-          name = `\\gold;'${runes}'\\n${name}\\n\\gold;${personalizedName}${runeword_name}`;
+          name = `\\gold;'${runes}'\\n${name}\\n\\gold;${personalizedName}${runeword_name}(${item.runeword_id})`;
         }
         return name.split('\\n').map((d) => {
           const s = d.replace(/\\(.*?);/gi, (result, match) => `</div><div class="${match}">`);
