@@ -36,11 +36,11 @@
           <input class="edit-box" type="number" v-model.number="item.level" @input="onEvent('update')" min="1" max="99">
 
           <!-- Skin -->
-          <template  v-if="item.gfx_count">
+          <template  v-if="countSkinsChoices()">
             <label>Skin</label>
             <div>
               <select2 class="edit-box" v-model.number="item.picture_id" @change="onEvent('update')">
-                <option v-for="n in item.gfx_count" :value="n - 1" :key="n">{{ skin_names[item.type] ? skin_names[item.type][n-1] : `Skin ${n}` }}</option>
+                <option v-for="n in countSkinsChoices()" :value="n - 1" :key="n">{{ skin_names[item.type] ? skin_names[item.type][n-1] : `Skin ${n}` }}</option>
               </select2>
             </div>
           </template >
@@ -148,6 +148,7 @@
 <script>
 import Item from './Item.vue';
 import ItemStatsEditor from './ItemStatsEditor.vue';
+import utils from '../../utils.js';
 
 export default {
   name: 'ItemEditor',
@@ -204,6 +205,28 @@ export default {
     // onMove() {
     //   this.$emit('item-event', { item: this.item, location: this.location, type: 'move' });
     // },
+    countSkinsChoices() {
+      const constants = window[`${window.work_mod}_constants_${window.work_version}`]
+      const details = utils.getItemDetails(this.item);
+      if (this.item.unique_id) {
+        if (details.ui) return 0;
+        const unq = constants.unq_items[this.item.unique_id];
+        if (unq) {
+          if (unq.i) return 0;
+          if (unq.hdi) return 0;
+        }
+      }
+      if (this.item.set_id) {
+        if (details.si) return 0;
+        const set = constants.set_items[this.item.set_id];
+        if (set) {
+          if (set.i) return 0;
+          if (set.hdi) return 0;
+        }
+      }
+      const gfx_list = details.ig || details.hdig;
+      return gfx_list ? gfx_list.length : 0;
+    },
     findBasesInConstants(code, items) {
       let bases = [];
       const base = items[code];

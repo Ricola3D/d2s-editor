@@ -396,6 +396,14 @@ export default {
     }));
     return typedArray.buffer;
   },
+  getItemDetails(item) {
+    const constants = window[`${window.work_mod}_constants_${window.work_version}`]
+    return (
+      constants.armor_items[item.type]
+      || constants.weapon_items[item.type]
+      || constants.other_items[item.type]
+    )
+  },
   async getInventoryImageSrc(item) {
     if (item.hd_inv_file) {
       const spriteFilePath = `d2/game_data/${window.work_mod}/version_${window.work_version}/hd/global/ui/items/${item.hd_inv_file}.lowend.sprite`; // lowend is enough and lighter

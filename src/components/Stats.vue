@@ -39,37 +39,37 @@
       <div class="col-md-4">
         <label for="Life">Life</label>
         <div class="input-group">
-          <input class="form-control" type="number" id="Life" v-model.number="save.attributes.current_hp" :min="min(6)"
-            :max="max(6)" @input="change(6, save.attributes, 'current_hp')">
+          <input class="form-control" type="number" id="Life" v-model.number="save.attributes.hitpoints" :min="min(6)"
+            :max="max(6)" @input="change(6, save.attributes, 'hitpoints')">
           <div class="input-group-prepend input-group-append">
             <div class="input-group-text">/</div>
           </div>
-          <input class="form-control" type="number" id="MaxLife" v-model.number="save.attributes.max_hp" :min="min(7)"
-            :max="max(7)" @input="change(7, save.attributes, 'max_hp')">
+          <input class="form-control" type="number" id="MaxLife" v-model.number="save.attributes.maxhp" :min="min(7)"
+            :max="max(7)" @input="change(7, save.attributes, 'maxhp')">
         </div>
       </div>
       <div class="col-md-4">
         <label for="Mana">Mana</label>
         <div class="input-group">
-          <input class="form-control" type="number" id="Mana" v-model.number="save.attributes.current_mana" :min="min(8)"
-            :max="max(8)" @input="change(8, save.attributes, 'current_mana')">
+          <input class="form-control" type="number" id="Mana" v-model.number="save.attributes.mana" :min="min(8)"
+            :max="max(8)" @input="change(8, save.attributes, 'mana')">
           <div class="input-group-prepend input-group-append">
             <div class="input-group-text">/</div>
           </div>
-          <input class="form-control" type="number" id="MaxMana" v-model.number="save.attributes.max_mana" :min="min(9)"
-            :max="max(9)" @input="change(9, save.attributes, 'max_mana')">
+          <input class="form-control" type="number" id="MaxMana" v-model.number="save.attributes.maxmana" :min="min(9)"
+            :max="max(9)" @input="change(9, save.attributes, 'maxmana')">
         </div>
       </div>
       <div class="col-md-4">
         <label for="Stamina">Stamina</label>
         <div class="input-group">
-          <input class="form-control" type="number" id="Stamina" v-model.number="save.attributes.current_stamina" :min="min(6)"
-                :max="max(6)" @input="change(6, save.attributes, 'current_stamina')">
+          <input class="form-control" type="number" id="Stamina" v-model.number="save.attributes.stamina" :min="min(6)"
+                :max="max(6)" @input="change(6, save.attributes, 'stamina')">
           <div class="input-group-prepend input-group-append">
             <div class="input-group-text">/</div>
           </div>
-          <input class="form-control" type="number" id="MaxStamina" v-model.number="save.attributes.max_stamina" :min="min(7)"
-                :max="max(7)" @input="change(7, save.attributes, 'max_stamina')">
+          <input class="form-control" type="number" id="MaxStamina" v-model.number="save.attributes.maxstamina" :min="min(7)"
+                :max="max(7)" @input="change(7, save.attributes, 'maxstamina')">
         </div>
       </div>
     </div>
@@ -98,14 +98,14 @@
     <div class="form-row">
       <div class="col-md-2">
         <label for="UnusedStatPoints">Unused Stat Points</label>
-        <input type="number" class="form-control" id="UnusedStatPoints" v-model.number="save.attributes.unused_stats"
-          :min="min(4)" :max="max(4)" @input="change(4, save.attributes, 'unused_stats')">
+        <input type="number" class="form-control" id="UnusedStatPoints" v-model.number="save.attributes.statpts"
+          :min="min(4)" :max="max(4)" @input="change(4, save.attributes, 'statpts')">
       </div>
       <div class="col-md-2">
         <label for="UnusedSkillPoints">Unused Skill Points</label>
         <input type="number" class="form-control" id="UnusedSkillPoints"
-          v-model.number="save.attributes.unused_skill_points" :min="min(5)" :max="max(5)"
-          @input="change(5, save.attributes, 'unused_skill_points')">
+          v-model.number="save.attributes.newskills" :min="min(5)" :max="max(5)"
+          @input="change(5, save.attributes, 'newskills')">
       </div>
     </div>
     <div class="form-row">
@@ -116,8 +116,8 @@
       </div>
       <div class="col-md-2">
         <label for="StashedGold">Stashed Gold</label>
-        <input type="number" class="form-control" id="StashedGold" v-model.number="save.attributes.stashed_gold"
-          :min="min(15)" :max="max(15)" @input="change(15, save.attributes, 'stashed_gold')">
+        <input type="number" class="form-control" id="StashedGold" v-model.number="save.attributes.goldbank"
+          :min="min(15)" :max="max(15)" @input="change(15, save.attributes, 'goldbank')">
       </div>
     </div>
     <div class="form-row">
@@ -156,19 +156,19 @@
         this.save.attributes.experience = xp[level-1];
 
         const newLevel = level - s;
-        this.save.attributes.unused_stats = (this.save.attributes.unused_stats ?? 0) + (newLevel * 5);
-        this.save.attributes.unused_skill_points = (this.save.attributes.unused_skill_points ?? 0) + newLevel;
+        this.save.attributes.statpts = (this.save.attributes.statpts ?? 0) + (newLevel * 5);
+        this.save.attributes.newskills = (this.save.attributes.newskills ?? 0) + newLevel;
         for(const cCode in constants.classes) {
           const stat = constants.classes[cCode];
           if(stat.n === this.save.header.class) {
-            this.save.attributes.max_hp += newLevel * stat.s.lpl / 4;
-            this.save.attributes.current_hp += newLevel * stat.s.lpl / 4;
+            this.save.attributes.maxhp += newLevel * stat.s.lpl / 4;
+            this.save.attributes.hitpoints += newLevel * stat.s.lpl / 4;
 
-            this.save.attributes.max_stamina += newLevel * stat.s.spl / 4;
-            this.save.attributes.current_stamina += newLevel * stat.s.spl / 4;
+            this.save.attributes.maxstamina += newLevel * stat.s.spl / 4;
+            this.save.attributes.stamina += newLevel * stat.s.spl / 4;
 
-            this.save.attributes.max_mana += newLevel * stat.s.mpl / 4;
-            this.save.attributes.current_mana += newLevel * stat.s.mpl / 4;
+            this.save.attributes.maxmana += newLevel * stat.s.mpl / 4;
+            this.save.attributes.mana += newLevel * stat.s.mpl / 4;
             break;
           }
         }
@@ -179,11 +179,11 @@
         for (const cCode in constants.classes) {
           const stat = constants.classes[cCode];
           if (window.stat.n === this.save.header.class) {
-            this.save.attributes.max_hp += change * stat.s.lpv / 4;
-            this.save.attributes.current_hp += change * stat.s.lpv / 4;
+            this.save.attributes.maxhp += change * stat.s.lpv / 4;
+            this.save.attributes.hitpoints += change * stat.s.lpv / 4;
 
-            this.save.attributes.max_stamina += change * stat.s.spv / 4;
-            this.save.attributes.current_stamina += change * stat.s.spv / 4;
+            this.save.attributes.maxstamina += change * stat.s.spv / 4;
+            this.save.attributes.stamina += change * stat.s.spv / 4;
             break;
           }
         }
@@ -194,8 +194,8 @@
         for (const cCode in constants.classes) {
           const stat = constants.classes[cCode];
           if (window.stat.n === this.save.header.class) {
-            this.save.attributes.max_mana += change * stat.s.mpe / 4;
-            this.save.attributes.current_mana += change * stat.s.mpe / 4;
+            this.save.attributes.maxmana += change * stat.s.mpe / 4;
+            this.save.attributes.mana += change * stat.s.mpe / 4;
             break;
           }
         }

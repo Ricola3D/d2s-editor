@@ -9753,6 +9753,7 @@ export let remodded_constants_99 = {
         {
             "id": 0,
             "s": "strength",
+            "c": 1,
             "cB": 10,
             "cS": 0,
             "sB": 8,
@@ -9768,6 +9769,7 @@ export let remodded_constants_99 = {
         {
             "id": 1,
             "s": "energy",
+            "c": 1,
             "cB": 10,
             "cS": 0,
             "sB": 7,
@@ -9787,6 +9789,7 @@ export let remodded_constants_99 = {
         {
             "id": 2,
             "s": "dexterity",
+            "c": 1,
             "cB": 10,
             "cS": 0,
             "sB": 7,
@@ -9802,6 +9805,7 @@ export let remodded_constants_99 = {
         {
             "id": 3,
             "s": "vitality",
+            "c": 1,
             "cB": 10,
             "cS": 0,
             "sB": 7,
@@ -9822,28 +9826,32 @@ export let remodded_constants_99 = {
         {
             "id": 4,
             "s": "statpts",
+            "c": 1,
             "cB": 10,
             "cS": 0
         },
         {
             "id": 5,
             "s": "newskills",
+            "c": 1,
             "cB": 8,
             "cS": 0
         },
         {
             "id": 6,
             "s": "hitpoints",
+            "c": 1,
             "cB": 21,
             "cS": 0,
-            "vS": 8
+            "cVS": 8
         },
         {
             "id": 7,
             "s": "maxhp",
+            "c": 1,
             "cB": 21,
             "cS": 0,
-            "vS": 8,
+            "cVS": 8,
             "sB": 9,
             "sA": 32,
             "so": 59,
@@ -9854,16 +9862,18 @@ export let remodded_constants_99 = {
         {
             "id": 8,
             "s": "mana",
+            "c": 1,
             "cB": 21,
             "cS": 0,
-            "vS": 8
+            "cVS": 8
         },
         {
             "id": 9,
             "s": "maxmana",
+            "c": 1,
             "cB": 21,
             "cS": 0,
-            "vS": 8,
+            "cVS": 8,
             "sB": 8,
             "sA": 32,
             "so": 55,
@@ -9874,16 +9884,18 @@ export let remodded_constants_99 = {
         {
             "id": 10,
             "s": "stamina",
+            "c": 1,
             "cB": 21,
             "cS": 0,
-            "vS": 8
+            "cVS": 8
         },
         {
             "id": 11,
             "s": "maxstamina",
+            "c": 1,
             "cB": 21,
             "cS": 0,
-            "vS": 8,
+            "cVS": 8,
             "sB": 8,
             "sA": 32,
             "so": 51,
@@ -9894,24 +9906,28 @@ export let remodded_constants_99 = {
         {
             "id": 12,
             "s": "level",
+            "c": 1,
             "cB": 7,
             "cS": 0
         },
         {
             "id": 13,
             "s": "experience",
+            "c": 1,
             "cB": 32,
             "cS": 0
         },
         {
             "id": 14,
             "s": "gold",
+            "c": 1,
             "cB": 25,
             "cS": 0
         },
         {
             "id": 15,
             "s": "goldbank",
+            "c": 1,
             "cB": 25,
             "cS": 0
         },
@@ -11501,12 +11517,14 @@ export let remodded_constants_99 = {
         {
             "id": 183,
             "s": "killtrack",
+            "c": 1,
             "cB": 32,
             "cS": 0
         },
         {
             "id": 184,
             "s": "deathtrack",
+            "c": 1,
             "cB": 32,
             "cS": 0
         },
@@ -11763,7 +11781,7 @@ export let remodded_constants_99 = {
         {
             "id": 208,
             "s": "Item_Enhanced",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 11,
             "sA": 10,
             "so": 999,
@@ -11774,17 +11792,20 @@ export let remodded_constants_99 = {
         {
             "id": 209,
             "s": "pali_killtrack",
+            "c": 1,
             "cS": 0
         },
         {
             "id": 210,
             "s": "unused210",
+            "c": 1,
             "cB": 32,
             "cS": 0
         },
         {
             "id": 211,
             "s": "unused211",
+            "c": 1,
             "cB": 32,
             "cS": 0
         },
@@ -11841,7 +11862,7 @@ export let remodded_constants_99 = {
         {
             "id": 216,
             "s": "item_hp_perlevel",
-            "vS": 8,
+            "cVS": 8,
             "sS": 1,
             "sB": 6,
             "sA": 0,
@@ -11860,7 +11881,7 @@ export let remodded_constants_99 = {
         {
             "id": 217,
             "s": "item_mana_perlevel",
-            "vS": 8,
+            "cVS": 8,
             "sS": 1,
             "sB": 6,
             "sA": 0,
@@ -12717,6 +12738,7 @@ export let remodded_constants_99 = {
         {
             "id": 268,
             "s": "skill_freezesyn",
+            "c": 1,
             "cB": 7,
             "cS": 0,
             "sB": 8,
@@ -12729,6 +12751,7 @@ export let remodded_constants_99 = {
         {
             "id": 269,
             "s": "skill_chillsyn",
+            "c": 1,
             "cB": 7,
             "cS": 0,
             "sB": 8,
@@ -12807,6 +12830,7 @@ export let remodded_constants_99 = {
         {
             "id": 276,
             "s": "ex_missiles",
+            "c": 1,
             "cB": 7,
             "cS": 0,
             "sB": 8,
@@ -12832,6 +12856,7 @@ export let remodded_constants_99 = {
         {
             "id": 278,
             "s": "ex_attacks",
+            "c": 1,
             "cB": 7,
             "cS": 0,
             "sB": 8,
@@ -12845,6 +12870,7 @@ export let remodded_constants_99 = {
         {
             "id": 279,
             "s": "mod_essence",
+            "c": 1,
             "cB": 7,
             "cS": 0,
             "sB": 8,
@@ -12874,6 +12900,7 @@ export let remodded_constants_99 = {
         {
             "id": 281,
             "s": "sum_dmg_perc",
+            "c": 1,
             "cB": 10,
             "cS": 0,
             "sS": 1,
@@ -12890,6 +12917,7 @@ export let remodded_constants_99 = {
         {
             "id": 282,
             "s": "sum_speed",
+            "c": 1,
             "cB": 10,
             "cS": 0,
             "sS": 1,
@@ -12906,6 +12934,7 @@ export let remodded_constants_99 = {
         {
             "id": 283,
             "s": "sum_ex",
+            "c": 1,
             "cB": 7,
             "cS": 0,
             "sB": 9,
@@ -12919,6 +12948,7 @@ export let remodded_constants_99 = {
         {
             "id": 284,
             "s": "sum_hp_perc",
+            "c": 1,
             "cB": 10,
             "cS": 0,
             "sS": 1,
@@ -12935,6 +12965,7 @@ export let remodded_constants_99 = {
         {
             "id": 285,
             "s": "sum_cr",
+            "c": 1,
             "cB": 10,
             "cS": 0,
             "sS": 1,
@@ -12951,6 +12982,7 @@ export let remodded_constants_99 = {
         {
             "id": 286,
             "s": "item_cooldownreduction",
+            "c": 1,
             "cB": 10,
             "cS": 0,
             "sS": 1,
@@ -12982,6 +13014,7 @@ export let remodded_constants_99 = {
         {
             "id": 288,
             "s": "skill_bonesyn",
+            "c": 1,
             "cB": 7,
             "cS": 0,
             "sB": 8,
@@ -12994,6 +13027,7 @@ export let remodded_constants_99 = {
         {
             "id": 289,
             "s": "skill_rage",
+            "c": 1,
             "cB": 7,
             "cS": 0,
             "sB": 8,
@@ -13006,6 +13040,7 @@ export let remodded_constants_99 = {
         {
             "id": 290,
             "s": "skill_focus",
+            "c": 1,
             "cB": 7,
             "cS": 0,
             "sB": 8,
@@ -13018,7 +13053,7 @@ export let remodded_constants_99 = {
         {
             "id": 291,
             "s": "GB_Total",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 16,
             "sA": 1000,
             "so": 16,
@@ -13030,7 +13065,7 @@ export let remodded_constants_99 = {
         {
             "id": 292,
             "s": "RB_Low",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 32,
             "sA": 49152,
             "so": 15,
@@ -13042,7 +13077,7 @@ export let remodded_constants_99 = {
         {
             "id": 293,
             "s": "RB_Mid",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 32,
             "sA": 49152,
             "so": 14,
@@ -13054,7 +13089,7 @@ export let remodded_constants_99 = {
         {
             "id": 294,
             "s": "RB_High",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 32,
             "sA": 49152,
             "so": 13,
@@ -13066,7 +13101,7 @@ export let remodded_constants_99 = {
         {
             "id": 295,
             "s": "KB_Terror",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 16,
             "sA": 49152,
             "so": 12,
@@ -13078,7 +13113,7 @@ export let remodded_constants_99 = {
         {
             "id": 296,
             "s": "KB_Hate",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 16,
             "sA": 49152,
             "so": 11,
@@ -13090,7 +13125,7 @@ export let remodded_constants_99 = {
         {
             "id": 297,
             "s": "KB_Dest",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 16,
             "sA": 49152,
             "so": 10,
@@ -13102,7 +13137,7 @@ export let remodded_constants_99 = {
         {
             "id": 298,
             "s": "OB_Diablo",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 16,
             "sA": 49152,
             "so": 9,
@@ -13114,7 +13149,7 @@ export let remodded_constants_99 = {
         {
             "id": 299,
             "s": "OB_Baal",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 16,
             "sA": 49152,
             "so": 8,
@@ -13126,7 +13161,7 @@ export let remodded_constants_99 = {
         {
             "id": 300,
             "s": "OB_Meph",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 16,
             "sA": 49152,
             "so": 7,
@@ -13590,7 +13625,7 @@ export let remodded_constants_99 = {
         {
             "id": 361,
             "s": "CD_White",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 11,
             "sA": 10,
             "so": 997,
@@ -13602,7 +13637,7 @@ export let remodded_constants_99 = {
         {
             "id": 362,
             "s": "CD_Black",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 11,
             "sA": 10,
             "so": 997,
@@ -13614,7 +13649,7 @@ export let remodded_constants_99 = {
         {
             "id": 363,
             "s": "CD_Blue",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 11,
             "sA": 10,
             "so": 997,
@@ -13626,7 +13661,7 @@ export let remodded_constants_99 = {
         {
             "id": 364,
             "s": "CD_Red",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 11,
             "sA": 10,
             "so": 997,
@@ -13638,7 +13673,7 @@ export let remodded_constants_99 = {
         {
             "id": 365,
             "s": "CD_Green",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 11,
             "sA": 10,
             "so": 997,
@@ -13650,7 +13685,7 @@ export let remodded_constants_99 = {
         {
             "id": 366,
             "s": "CD_Yellow",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 11,
             "sA": 10,
             "so": 997,
@@ -13662,7 +13697,7 @@ export let remodded_constants_99 = {
         {
             "id": 367,
             "s": "CD_Purple",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 11,
             "sA": 10,
             "so": 997,
@@ -13674,14 +13709,14 @@ export let remodded_constants_99 = {
         {
             "id": 368,
             "s": "CD_Tracker",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 11,
             "sA": 10
         },
         {
             "id": 369,
             "s": "score_tracker",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 11,
             "sA": 30,
             "so": 5,
@@ -13693,7 +13728,7 @@ export let remodded_constants_99 = {
         {
             "id": 370,
             "s": "Soul_Ama",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 11,
             "sA": 10,
             "so": 999,
@@ -13703,7 +13738,7 @@ export let remodded_constants_99 = {
         {
             "id": 371,
             "s": "Soul_Sor",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 11,
             "sA": 10,
             "so": 999,
@@ -13713,7 +13748,7 @@ export let remodded_constants_99 = {
         {
             "id": 372,
             "s": "Soul_Nec",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 11,
             "sA": 10,
             "so": 999,
@@ -13723,7 +13758,7 @@ export let remodded_constants_99 = {
         {
             "id": 373,
             "s": "Soul_Pal",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 11,
             "sA": 10,
             "so": 999,
@@ -13733,7 +13768,7 @@ export let remodded_constants_99 = {
         {
             "id": 374,
             "s": "Soul_Bar",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 11,
             "sA": 10,
             "so": 999,
@@ -13743,7 +13778,7 @@ export let remodded_constants_99 = {
         {
             "id": 375,
             "s": "Soul_Dru",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 11,
             "sA": 10,
             "so": 999,
@@ -13753,7 +13788,7 @@ export let remodded_constants_99 = {
         {
             "id": 376,
             "s": "Soul_Ass",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 11,
             "sA": 10,
             "so": 999,
@@ -13774,7 +13809,7 @@ export let remodded_constants_99 = {
         {
             "id": 379,
             "s": "boneadded",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 20,
             "sA": 0,
             "so": 1,
@@ -13800,7 +13835,7 @@ export let remodded_constants_99 = {
         {
             "id": 381,
             "s": "hsbonus",
-            "vS": 1024,
+            "cVS": 1024,
             "sS": 1,
             "sB": 31,
             "sA": 0
@@ -13826,7 +13861,7 @@ export let remodded_constants_99 = {
         {
             "id": 383,
             "s": "chest_treasure",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 4,
             "sA": 0
         },
@@ -13851,7 +13886,7 @@ export let remodded_constants_99 = {
         {
             "id": 386,
             "s": "ucore_tracker",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 11,
             "sA": 30,
             "so": 6,
@@ -13971,7 +14006,7 @@ export let remodded_constants_99 = {
         {
             "id": 398,
             "s": "body_level",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 11,
             "sA": 10
         },
@@ -13982,7 +14017,7 @@ export let remodded_constants_99 = {
         {
             "id": 400,
             "s": "incant_duration",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 4,
             "sA": 0,
             "so": 1,
@@ -13992,7 +14027,7 @@ export let remodded_constants_99 = {
         {
             "id": 401,
             "s": "incant_radius",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 4,
             "sA": 0,
             "so": 1,
@@ -14008,7 +14043,7 @@ export let remodded_constants_99 = {
         {
             "id": 403,
             "s": "item_ravendamage",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 16,
             "sA": 0,
             "so": 1,
@@ -14018,7 +14053,7 @@ export let remodded_constants_99 = {
         {
             "id": 404,
             "s": "item_maulsteal",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 16,
             "sA": 0,
             "so": 1,
@@ -14028,7 +14063,7 @@ export let remodded_constants_99 = {
         {
             "id": 405,
             "s": "item_feralsteal",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 16,
             "sA": 0,
             "so": 1,
@@ -14038,7 +14073,7 @@ export let remodded_constants_99 = {
         {
             "id": 406,
             "s": "Soul_Tracker",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 11,
             "sA": 10,
             "so": 999,
@@ -14100,7 +14135,7 @@ export let remodded_constants_99 = {
         {
             "id": 412,
             "s": "Soul_Level",
-            "vS": 1024,
+            "cVS": 1024,
             "sB": 11,
             "sA": 10,
             "so": 999,
@@ -14128,7 +14163,7 @@ export let remodded_constants_99 = {
         {
             "id": 414,
             "s": "Weight_Tracker",
-            "vS": 1024,
+            "cVS": 1024,
             "sS": 1,
             "sB": 11,
             "sA": 10,
@@ -14140,7 +14175,7 @@ export let remodded_constants_99 = {
         {
             "id": 415,
             "s": "Weight_Capacity",
-            "vS": 1024,
+            "cVS": 1024,
             "sS": 1,
             "sB": 11,
             "sA": 10,
@@ -14152,7 +14187,7 @@ export let remodded_constants_99 = {
         {
             "id": 416,
             "s": "Weight_CapacityBase",
-            "vS": 1024,
+            "cVS": 1024,
             "sS": 1,
             "sB": 11,
             "sA": 10,
@@ -14179,7 +14214,7 @@ export let remodded_constants_99 = {
         {
             "id": 418,
             "s": "fireball_radius",
-            "vS": 1024,
+            "cVS": 1024,
             "sS": 1,
             "sB": 11,
             "sA": 10,
@@ -14192,7 +14227,7 @@ export let remodded_constants_99 = {
         {
             "id": 419,
             "s": "JB_Rare",
-            "vS": 1024,
+            "cVS": 1024,
             "sS": 1,
             "sB": 11,
             "sA": 10,
@@ -14204,7 +14239,7 @@ export let remodded_constants_99 = {
         {
             "id": 420,
             "s": "PB_Rejuv",
-            "vS": 1024,
+            "cVS": 1024,
             "sS": 1,
             "sB": 11,
             "sA": 10,
@@ -14301,7 +14336,7 @@ export let remodded_constants_99 = {
         {
             "id": 427,
             "s": "buff_length_modifier",
-            "vS": 1024,
+            "cVS": 1024,
             "sS": 1,
             "sB": 11,
             "sA": 10,
@@ -14314,7 +14349,7 @@ export let remodded_constants_99 = {
         {
             "id": 428,
             "s": "skel_commander",
-            "vS": 1024,
+            "cVS": 1024,
             "sS": 1,
             "sB": 5,
             "sA": 15,

@@ -713,18 +713,18 @@
       },
       maxGold() {
         this.save.attributes.gold = this.save.header.level * 10000;
-        this.save.attributes.stashed_gold = 2500000
+        this.save.attributes.goldbank = 2500000
       },
       unlockAllQuests() {
         for (const diff of ["quests_normal", "quests_nm", "quests_hell"]) {
-          this.completeQuest(diff, "act_i", "den_of_evil", ["unused_skill_points"], 1);
+          this.completeQuest(diff, "act_i", "den_of_evil", ["newskills"], 1);
           this.completeQuest(diff, "act_i", "sisters_burial_grounds");
           this.completeQuest(diff, "act_i", "the_search_for_cain");
           this.completeQuest(diff, "act_i", "the_forgotten_tower");
           this.completeQuest(diff, "act_i", "tools_of_the_trade");
           this.completeQuest(diff, "act_i", "sisters_to_the_slaughter");
 
-          this.completeQuest(diff, "act_ii", "radaments_lair", ["unused_skill_points"], 1);
+          this.completeQuest(diff, "act_ii", "radaments_lair", ["newskills"], 1);
           this.completeQuest(diff, "act_ii", "the_horadric_staff");
           this.completeQuest(diff, "act_ii", "tainted_sun");
           this.completeQuest(diff, "act_ii", "arcane_sanctuary");
@@ -732,14 +732,14 @@
           this.completeQuest(diff, "act_ii", "the_seven_tombs");
 
           
-          this.completeQuest(diff, "act_iii", "the_golden_bird", ["max_hp", "current_hp"], 20);
+          this.completeQuest(diff, "act_iii", "the_golden_bird", ["maxhp", "hitpoints"], 20);
           this.completeQuest(diff, "act_iii", "blade_of_the_old_religion");
           this.completeQuest(diff, "act_iii", "khalims_will");
-          this.completeQuest(diff, "act_iii", "lam_esens_tome", ["unused_stats"], 5);
+          this.completeQuest(diff, "act_iii", "lam_esens_tome", ["statpts"], 5);
           this.completeQuest(diff, "act_iii", "the_blackened_temple");
           this.completeQuest(diff, "act_iii", "the_guardian");
 
-          this.completeQuest(diff, "act_iv", "the_fallen_angel", ["unused_skill_points"], 2);
+          this.completeQuest(diff, "act_iv", "the_fallen_angel", ["newskills"], 2);
           this.completeQuest(diff, "act_iv", "hellforge");
           this.completeQuest(diff, "act_iv", "terrors_end");
 
@@ -767,11 +767,11 @@
       },
       unlockSkillStatQs() {
         for (const diff of ["quests_normal", "quests_nm", "quests_hell"]) {
-          this.completeQuest(diff, "act_i", "den_of_evil", ["unused_skill_points"], 1);
-          this.completeQuest(diff, "act_ii", "radaments_lair", ["unused_skill_points"], 1);
-          this.completeQuest(diff, "act_iii", "lam_esens_tome", ["unused_stats"], 5);
-          this.completeQuest(diff, "act_iii", "the_golden_bird", ["max_hp", "current_hp"], 20);
-          this.completeQuest(diff, "act_iv", "the_fallen_angel", ["unused_skill_points"], 2);
+          this.completeQuest(diff, "act_i", "den_of_evil", ["newskills"], 1);
+          this.completeQuest(diff, "act_ii", "radaments_lair", ["newskills"], 1);
+          this.completeQuest(diff, "act_iii", "lam_esens_tome", ["statpts"], 5);
+          this.completeQuest(diff, "act_iii", "the_golden_bird", ["maxhp", "hitpoints"], 20);
+          this.completeQuest(diff, "act_iv", "the_fallen_angel", ["newskills"], 2);
           this.completeQuest(diff, "act_v", "prison_of_ice", null, null);
         }
       },

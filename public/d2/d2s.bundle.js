@@ -420,10 +420,6 @@ function enhanceItems(items, mod, version, level, config, parent) {
     }
 }
 exports.enhanceItems = enhanceItems;
-function disableMultiplePictures(item) {
-    item.picture_id = 0;
-    item.gfx_count = 0;
-}
 // Bound values (inclusive min and max)
 function boundValue(v, min, max) {
     return Math.min(max, Math.max(min, v));
@@ -516,7 +512,7 @@ function enhanceItem(item, mod, version, level, config, parent) {
                 item.max_durability = details.durability - Math.ceil(details.durability / 2) + 1;
             }
         }
-        item.total_nr_of_sockets = boundValue(item.total_nr_of_sockets, 0, details.gs || 0);
+        item.total_nr_of_sockets = boundValue(item.total_nr_of_sockets, 0, details.gs || item.inv_width * item.inv_height);
         // Enforce coherence between total_nr_of_sockets & socketed
         if (item.total_nr_of_sockets > 0) {
             item.socketed = 1;
@@ -524,22 +520,20 @@ function enhanceItem(item, mod, version, level, config, parent) {
         else {
             item.socketed = 0;
         }
-        if (details.ig && !item.multiple_pictures) {
+        if (details.ig && details.ig.length && !item.multiple_pictures) {
             // Activate multiple pictures
             item.multiple_pictures = 1;
             item.picture_id = 0;
         }
         else if (!details.ig && item.multiple_pictures) {
             item.multiple_pictures = 0; // Type changed to a not-multiple pictures one
-            disableMultiplePictures(item);
+            item.picture_id = 0;
         }
-        if (item.multiple_pictures && details.ig && details.ig[item.picture_id]) {
+        if (item.multiple_pictures && details.ig && details.ig.length && details.ig[item.picture_id]) {
             item.inv_file = details.ig[item.picture_id];
-            item.gfx_count = Math.max(item.gfx_count || 0, details.ig.length);
         }
-        if (item.multiple_pictures && details.hdig && details.hdig[item.picture_id]) {
+        if (item.multiple_pictures && details.hdig && details.hdig.length && details.hdig[item.picture_id]) {
             item.hd_inv_file = details.hdig[item.picture_id];
-            item.gfx_count = Math.max(item.gfx_count || 0, details.hdig.length);
         }
         if (item.magic_prefix || item.magic_suffix) {
             if (item.magic_prefix && ((_a = constants.magic_prefixes[item.magic_prefix]) === null || _a === void 0 ? void 0 : _a.tc)) {
@@ -568,15 +562,12 @@ function enhanceItem(item, mod, version, level, config, parent) {
             var unq = constants.unq_items[item.unique_id];
             if (details.ui) {
                 item.inv_file = details.ui;
-                disableMultiplePictures(item);
             }
             if (unq && unq.i) {
                 item.inv_file = unq.i;
-                disableMultiplePictures(item);
             }
             if (unq && unq.hdi) {
                 item.hd_inv_file = unq.hdi;
-                disableMultiplePictures(item);
             }
             if (unq && unq.tc)
                 item.transform_color = unq.tc;
@@ -585,15 +576,12 @@ function enhanceItem(item, mod, version, level, config, parent) {
             var set = constants.set_items[item.set_id];
             if (details.ui) {
                 item.inv_file = details.ui;
-                disableMultiplePictures(item);
             }
             if (set && set.i) {
                 item.inv_file = set.i;
-                disableMultiplePictures(item);
             }
             if (set && set.hdi) {
                 item.hd_inv_file = set.hdi;
-                disableMultiplePictures(item);
             }
             if (set && set.tc)
                 item.transform_color = set.tc;
@@ -1138,18 +1126,14 @@ var constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts"
 //todo use constants.magical_properties and csvBits
 function readAttributes(char, reader, mod) {
     var constants = constants_1.getConstantData(mod, char.header.version);
-    char.attributes = {
-        // For optional values, set default
-        unused_stats: 0,
-        unused_skill_points: 0,
-        experience: 0,
-        gold: 0,
-        stashed_gold: 0,
-        killtrack: 0,
-        deathtrack: 0,
-        unused210: 0,
-        unused211: 0,
-    };
+    // Stats = magical_properties with "Saved" = 1.
+    // There are report that only stat ids 0 to 255 can be saved. It doesn't work for stats 256-510.
+    var attributes = constants.magical_properties.filter(function (val, idx) { return val && val.c && idx < 256; });
+    // Initial values
+    char.attributes = attributes.reduce(function (acc, curr) {
+        acc[curr.s] = 0; // Add the attribute with value 0
+        return acc;
+    }, {});
     var header = reader.ReadString(2); //0x0000 [attributes header = 0x67, 0x66 "gf"]
     if (header != "gf") {
         // header is not present in first save after char is created
@@ -1160,22 +1144,18 @@ function readAttributes(char, reader, mod) {
                 energy: +classData.int,
                 dexterity: +classData.dex,
                 vitality: +classData.vit,
-                unused_stats: 0,
-                unused_skill_points: 0,
-                current_hp: +classData.vit + +classData.hpadd,
-                max_hp: +classData.vit + +classData.hpadd,
-                current_mana: +classData.int,
-                max_mana: +classData.int,
-                current_stamina: +classData.stam,
-                max_stamina: +classData.stam,
+                statpts: 0,
+                newskills: 0,
+                hitpoints: +classData.vit + +classData.hpadd,
+                maxhp: +classData.vit + +classData.hpadd,
+                mana: +classData.int,
+                maxmana: +classData.int,
+                stamina: +classData.stam,
+                maxstamina: +classData.stam,
                 level: 1,
                 experience: 0,
                 gold: 0,
-                stashed_gold: 0,
-                killtrack: 0,
-                deathtrack: 0,
-                unused210: 0,
-                unused211: 0,
+                goldbank: 0,
             };
             return;
         }
@@ -1191,11 +1171,15 @@ function readAttributes(char, reader, mod) {
             throw new Error("Invalid attribute id: " + id);
         }
         var size = field.cB;
-        char.attributes[Attributes[field.s]] = reader.ReadUInt32(size);
-        //current_hp - max_stamina need to be bit shifted
-        if (id >= 6 && id <= 11) {
-            char.attributes[Attributes[field.s]] >>>= 8;
+        if (size === undefined) {
+            throw new Error("Missing CSV save bits for id: " + id);
         }
+        char.attributes[field.s] = reader.ReadUInt32(size);
+        if (field.cVS) {
+            //hitpoints - maxstamina need to be bit shifted
+            char.attributes[field.s] >>>= field.cVS;
+        }
+        // Next attribute
         bitoffset += size;
         id = reader.ReadUInt16(9);
     }
@@ -1204,58 +1188,34 @@ function readAttributes(char, reader, mod) {
 exports.readAttributes = readAttributes;
 function writeAttributes(char, constants) {
     return __awaiter(this, void 0, void 0, function () {
-        var writer, attributeIds, _i, attributeIds_1, i, property, value, size;
+        var writer, attributes, _i, attributes_1, property, value, size;
         return __generator(this, function (_a) {
             writer = new bitwriter_1.BitWriter();
             writer.WriteString("gf", 2); //0x0000 [attributes header = 0x67, 0x66 "gf"]
-            attributeIds = Array.from(Array(16).keys()).concat([210, 211]);
-            for (_i = 0, attributeIds_1 = attributeIds; _i < attributeIds_1.length; _i++) {
-                i = attributeIds_1[_i];
-                property = constants.magical_properties[i];
-                if (property === undefined) {
-                    throw new Error("Invalid attribute: " + property);
-                }
-                value = char.attributes[Attributes[property.s]];
+            attributes = constants.magical_properties.filter(function (val, idx) { return val && val.c && idx < 256; });
+            for (_i = 0, attributes_1 = attributes; _i < attributes_1.length; _i++) {
+                property = attributes_1[_i];
+                value = char.attributes[property.s];
                 if (!value) {
                     continue;
                 }
                 size = property.cB;
-                if (i >= 6 && i <= 11) {
-                    value <<= 8;
+                if (size === undefined) {
+                    throw new Error("Missing CSV save bits for attribute: " + property);
                 }
-                writer.WriteUInt16(i, 9);
+                if (property.cVS) {
+                    value <<= property.cVS;
+                }
+                writer.WriteUInt16(property.id, 9);
                 writer.WriteUInt32(value, size);
             }
-            writer.WriteUInt16(0x1ff, 9);
+            writer.WriteUInt16(0x1ff, 9); // Attribute 511 is reserved for end tag
             writer.Align();
             return [2 /*return*/, writer.ToArray()];
         });
     });
 }
 exports.writeAttributes = writeAttributes;
-//nokkas names
-var Attributes = {
-    strength: "strength",
-    energy: "energy",
-    dexterity: "dexterity",
-    vitality: "vitality",
-    statpts: "unused_stats",
-    newskills: "unused_skill_points",
-    hitpoints: "current_hp",
-    maxhp: "max_hp",
-    mana: "current_mana",
-    maxmana: "max_mana",
-    stamina: "current_stamina",
-    maxstamina: "max_stamina",
-    level: "level",
-    experience: "experience",
-    gold: "gold",
-    goldbank: "stashed_gold",
-    killtrack: "killtrack",
-    deathtrack: "deathtrack",
-    unused210: "unused210",
-    unused211: "unused211",
-};
 
 
 /***/ }),

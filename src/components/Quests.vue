@@ -141,13 +141,13 @@
       },
       questRewards(save, quest, applyOrReset) {
         if(["den_of_evil", "radaments_lair"].indexOf(quest.key) > -1) {
-            this.questReward(save, applyOrReset, ["unused_skill_points"], 1);
+            this.questReward(save, applyOrReset, ["newskills"], 1);
           } else if (quest.key === "the_fallen_angel") {
-            this.questReward(save, applyOrReset, ["unused_skill_points"], 2);
+            this.questReward(save, applyOrReset, ["newskills"], 2);
           } else if (quest.key === "lam_esens_tome") {
-            this.questReward(save, applyOrReset, ["unused_stats"], 5);
+            this.questReward(save, applyOrReset, ["statpts"], 5);
           } else if (quest.key === "the_golden_bird") {
-            this.questReward(save, applyOrReset, ["current_hp", "max_hp"], 20);
+            this.questReward(save, applyOrReset, ["hitpoints", "maxhp"], 20);
           }
       },
       updateQuest(difficulty, act, quest, state, value) {

@@ -10155,6 +10155,7 @@ export let vanilla_constants_99 = {
         {
             "id": 0,
             "s": "strength",
+            "c": 1,
             "cB": 10,
             "cS": 0,
             "sB": 8,
@@ -10170,6 +10171,7 @@ export let vanilla_constants_99 = {
         {
             "id": 1,
             "s": "energy",
+            "c": 1,
             "cB": 10,
             "cS": 0,
             "sB": 7,
@@ -10189,6 +10191,7 @@ export let vanilla_constants_99 = {
         {
             "id": 2,
             "s": "dexterity",
+            "c": 1,
             "cB": 10,
             "cS": 0,
             "sB": 7,
@@ -10204,6 +10207,7 @@ export let vanilla_constants_99 = {
         {
             "id": 3,
             "s": "vitality",
+            "c": 1,
             "cB": 10,
             "cS": 0,
             "sB": 7,
@@ -10224,18 +10228,21 @@ export let vanilla_constants_99 = {
         {
             "id": 4,
             "s": "statpts",
+            "c": 1,
             "cB": 10,
             "cS": 0
         },
         {
             "id": 5,
             "s": "newskills",
+            "c": 1,
             "cB": 8,
             "cS": 0
         },
         {
             "id": 6,
             "s": "hitpoints",
+            "c": 1,
             "cB": 21,
             "cS": 0,
             "vS": 8
@@ -10243,6 +10250,7 @@ export let vanilla_constants_99 = {
         {
             "id": 7,
             "s": "maxhp",
+            "c": 1,
             "cB": 21,
             "cS": 0,
             "vS": 8,
@@ -10256,6 +10264,7 @@ export let vanilla_constants_99 = {
         {
             "id": 8,
             "s": "mana",
+            "c": 1,
             "cB": 21,
             "cS": 0,
             "vS": 8
@@ -10263,6 +10272,7 @@ export let vanilla_constants_99 = {
         {
             "id": 9,
             "s": "maxmana",
+            "c": 1,
             "cB": 21,
             "cS": 0,
             "vS": 8,
@@ -10276,6 +10286,7 @@ export let vanilla_constants_99 = {
         {
             "id": 10,
             "s": "stamina",
+            "c": 1,
             "cB": 21,
             "cS": 0,
             "vS": 8
@@ -10283,6 +10294,7 @@ export let vanilla_constants_99 = {
         {
             "id": 11,
             "s": "maxstamina",
+            "c": 1,
             "cB": 21,
             "cS": 0,
             "vS": 8,
@@ -10296,24 +10308,28 @@ export let vanilla_constants_99 = {
         {
             "id": 12,
             "s": "level",
+            "c": 1,
             "cB": 7,
             "cS": 0
         },
         {
             "id": 13,
             "s": "experience",
+            "c": 1,
             "cB": 32,
             "cS": 0
         },
         {
             "id": 14,
             "s": "gold",
+            "c": 1,
             "cB": 25,
             "cS": 0
         },
         {
             "id": 15,
             "s": "goldbank",
+            "c": 1,
             "cB": 25,
             "cS": 0
         },
