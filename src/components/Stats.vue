@@ -127,6 +127,11 @@
           :max="max(14)" @input="change(14, save.attributes, 'unused210')">
       </div>
       <div class="col-md-2">
+        <label for="pali_killtrack">Paladin Aura Kills ?</label>
+        <input type="number" class="form-control" id="pali_killtrack" v-model.number="save.attributes.pali_killtrack" :min="min(14)"
+          :max="max(14)" @input="change(14, save.attributes, 'unused210')">
+      </div>
+      <div class="col-md-2">
         <label for="unused211">Deaths</label>
         <input type="number" class="form-control" id="unused211" v-model.number="save.attributes.unused211"
           :min="min(15)" :max="max(15)" @input="change(15, save.attributes, 'unused211')">
@@ -178,7 +183,7 @@
         const change = val-old;
         for (const cCode in constants.classes) {
           const stat = constants.classes[cCode];
-          if (window.stat.n === this.save.header.class) {
+          if (stat.n === this.save.header.class) {
             this.save.attributes.maxhp += change * stat.s.lpv / 4;
             this.save.attributes.hitpoints += change * stat.s.lpv / 4;
 
@@ -193,7 +198,7 @@
         const change = val-old;
         for (const cCode in constants.classes) {
           const stat = constants.classes[cCode];
-          if (window.stat.n === this.save.header.class) {
+          if (stat.n === this.save.header.class) {
             this.save.attributes.maxmana += change * stat.s.mpe / 4;
             this.save.attributes.mana += change * stat.s.mpe / 4;
             break;

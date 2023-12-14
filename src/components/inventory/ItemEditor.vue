@@ -27,9 +27,9 @@
 
           <!-- Defense -->
           <template v-if="item.defense_rating">
-              <label>&#187;&#187; Defense</label>
-              <input class="edit-box" type="number" v-model.number="item.defense_rating" @input="onEvent('update')" min="1" max="1000" disabled>
-            </template>
+            <label>&#187;&#187; Defense</label>
+            <input class="edit-box" type="number" v-model.number="item.defense_rating" @input="onEvent('update')" min="1" max="1000" disabled/>
+          </template>
 
           <!-- iLevel -->
           <label>Item Level</label>
@@ -102,6 +102,9 @@
               <select2 class="edit-box" v-model.number="item.unique_id" @change="onEvent('update')">
                 <option v-for="s in unq_items" :value="s.id" :key="s.id">{{ s.n }} - {{ s.id }}</option>
               </select2>
+
+              <!-- <label>Personalized Name</label>
+              <input class="edit-box" type="text" v-model="item.personalized_name" @change="onEvent('update')" pattern="^[A-Za-z]{0,15}$" maxlength="16"/> -->
             </template>
             
             <!-- Ethereal -->

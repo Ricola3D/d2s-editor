@@ -318,6 +318,19 @@ ul {
   border-style: none;
 }
 
+label {
+  margin-top: 0.5rem;
+  margin-bottom: 0.0rem;
+}
+
+label.custom-file-label {
+  margin-top: 0.0rem;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
 .select2-container .select2-search input {
   color: white;
   background: rgba(37, 37, 37, 0.98);

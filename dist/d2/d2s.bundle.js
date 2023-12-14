@@ -371,6 +371,7 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.enhanceItem = exports.enhanceItems = exports.enhancePlayerAttributes = exports.enhanceAttributes = void 0;
 var constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
+var utils_1 = __webpack_require__(/*! ./utils */ "./src/d2/utils.ts");
 var ItemType;
 (function (ItemType) {
     ItemType[ItemType["Armor"] = 1] = "Armor";
@@ -520,6 +521,21 @@ function enhanceItem(item, mod, version, level, config, parent) {
         else {
             item.socketed = 0;
         }
+        // Enforce personalization validity
+        if (item.personalized_name && item.personalized_name.length) {
+            // Check it is valid (0-16 letters)
+            var valid = utils_1.nameRegex.test(item.personalized_name);
+            if (!valid) {
+                item.personalized_name = "";
+                item.personalized = 0;
+            }
+            else {
+                item.personalized = 1;
+            }
+        }
+        else {
+            item.personalized = 0;
+        }
         if (details.ig && details.ig.length && !item.multiple_pictures) {
             // Activate multiple pictures
             item.multiple_pictures = 1;
@@ -535,6 +551,7 @@ function enhanceItem(item, mod, version, level, config, parent) {
         if (item.multiple_pictures && details.hdig && details.hdig.length && details.hdig[item.picture_id]) {
             item.hd_inv_file = details.hdig[item.picture_id];
         }
+        // Transform color and specific gfx
         if (item.magic_prefix || item.magic_suffix) {
             if (item.magic_prefix && ((_a = constants.magic_prefixes[item.magic_prefix]) === null || _a === void 0 ? void 0 : _a.tc)) {
                 item.transform_color = constants.magic_prefixes[item.magic_prefix].tc;
@@ -1727,6 +1744,7 @@ var items_1 = __webpack_require__(/*! ./items */ "./src/d2/items.ts");
 Object.defineProperty(exports, "ItemType", { enumerable: true, get: function () { return items_1.ItemType; } });
 Object.defineProperty(exports, "Quality", { enumerable: true, get: function () { return items_1.Quality; } });
 exports.types = __importStar(__webpack_require__(/*! ./types */ "./src/d2/types.ts"));
+__exportStar(__webpack_require__(/*! ./utils */ "./src/d2/utils.ts"), exports);
 
 
 /***/ }),
@@ -3401,6 +3419,23 @@ var EItemQuality;
     EItemQuality[EItemQuality["exceptional"] = 1] = "exceptional";
     EItemQuality[EItemQuality["elite"] = 2] = "elite";
 })(EItemQuality = exports.EItemQuality || (exports.EItemQuality = {}));
+
+
+/***/ }),
+
+/***/ "./src/d2/utils.ts":
+/*!*************************!*\
+  !*** ./src/d2/utils.ts ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.nameRegex = void 0;
+// Character name must be 2-15 characters, with at most once "-" or "_" character not placed at first or last.
+exports.nameRegex = /^[A-Za-z](?=.{0,14}$)[A-Za-z]*[A-Za-z\-_][A-Za-z]+$/;
 
 
 /***/ }),
