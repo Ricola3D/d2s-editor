@@ -20,9 +20,9 @@
           <!-- Base -->
           <label>Base</label>
           <div>
-            <select2 class="edit-box" v-model="item.type" @change="onEvent('update')">
+            <select class="edit-box" v-model="item.type" @change="onEvent('update')">
               <option v-for="s in getBases(item.type)" :value="s[0]" :key="s[0]">{{ s[1].n }}</option>
-            </select2>
+            </select>
           </div>
 
           <!-- Defense -->
@@ -39,9 +39,9 @@
           <template  v-if="countSkinsChoices()">
             <label>Skin</label>
             <div>
-              <select2 class="edit-box" v-model.number="item.picture_id" @change="onEvent('update')">
+              <select class="edit-box" v-model.number="item.picture_id" @change="onEvent('update')">
                 <option v-for="n in countSkinsChoices()" :value="n - 1" :key="n">{{ skin_names[item.type] ? skin_names[item.type][n-1] : `Skin ${n}` }}</option>
-              </select2>
+              </select>
             </div>
           </template >
 
@@ -49,26 +49,26 @@
             <!-- Quality -->
             <label>Quality</label>
             <div>
-              <select2 class="edit-box" v-model.number="item.quality" @change="onEvent('update')">
+              <select class="edit-box" v-model.number="item.quality" @change="onEvent('update')">
                 <option v-for="rarity in rarities" :value="rarity.key" :key="rarity.key">{{ rarity.value }}</option>
-              </select2>
+              </select>
             </div>
 
             <!-- Magic prefix & suffix -->
             <template v-if="item.quality == 4">
               <label>&#187;&#187; Prefix</label>
               <div>
-                <select2 class="edit-box" v-model.number="item.magic_prefix" @change="onEvent('update')">
+                <select class="edit-box" v-model.number="item.magic_prefix" @change="onEvent('update')">
                   <option value="0">None</option>
                   <option v-for="s in prefixes" :value="s.i" :key="s.i">{{ s.i }} - {{ s.v.n }}</option>
-                </select2>
+                </select>
               </div>
               <label>&#187;&#187; Suffix</label>
               <div>
-                <select2 class="edit-box" v-model.number="item.magic_suffix" @change="onEvent('update')">
+                <select class="edit-box" v-model.number="item.magic_suffix" @change="onEvent('update')">
                   <option value="0">None</option>
                   <option v-for="s in suffixes" :value="s.i" :key="s.i">{{ s.i }} - {{ s.v.n }}</option>
-                </select2>
+                </select>
               </div>
             </template>
 
@@ -76,32 +76,32 @@
             <template v-if="item.quality == 6 || item.quality == 8">
               <label>&#187;&#187; Prefix</label>
               <div>
-                <select2 class="edit-box"  v-model.number="item.rare_name_id" @change="onEvent('update')">
+                <select class="edit-box"  v-model.number="item.rare_name_id" @change="onEvent('update')">
                   <option v-for="s in rare_names" :value="s.i" :key="s.i">{{ s.i }} - {{ s.v.n }}</option>
-                </select2>
+                </select>
               </div>
               <label>&#187;&#187; Suffix</label>
               <div>
-                <select2 class="edit-box"  v-model.number="item.rare_name_id2" @change="onEvent('update')">
+                <select class="edit-box"  v-model.number="item.rare_name_id2" @change="onEvent('update')">
                   <option v-for="s in rare_names" :value="s.i" :key="s.i">{{ s.i }} - {{ s.v.n }}</option>
-                </select2>
+                </select>
               </div>
             </template>
 
             <!-- Set name -->
             <template v-if="item.quality == 5">
               <label>&#187;&#187; Set item ID</label>
-              <select2 class="edit-box" v-model.number="item.set_id" @change="onEvent('update')">
+              <select class="edit-box" v-model.number="item.set_id" @change="onEvent('update')">
                 <option v-for="s in set_items" :value="s.id" :key="s.id">{{ s.n }}</option>
-              </select2>
+              </select>
             </template>
 
             <!-- Unique name -->
             <template v-if="item.quality == 7">
               <label>&#187;&#187; Unique item ID</label>
-              <select2 class="edit-box" v-model.number="item.unique_id" @change="onEvent('update')">
+              <select class="edit-box" v-model.number="item.unique_id" @change="onEvent('update')">
                 <option v-for="s in unq_items" :value="s.id" :key="s.id">{{ s.n }} - {{ s.id }}</option>
-              </select2>
+              </select>
 
               <!-- <label>Personalized Name</label>
               <input class="edit-box" type="text" v-model="item.personalized_name" @change="onEvent('update')" pattern="^[A-Za-z]{0,15}$" maxlength="16"/> -->
