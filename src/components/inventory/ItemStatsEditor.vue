@@ -6,7 +6,6 @@
           <div class="col-md-1"><button type="button" class="btn btn-link red" @click="removeStat(statIdx)">&times;</button>
           </div>
           <div class="col-md-11">
-            <!-- <Select2 :id="id + 'Stat' + statIdx" v-model.number="stat.id" :options="" @change="onItemModified"/> -->
             <select2 :id="id + 'Stat' + statIdx" v-model.number="stat.id" @change="onItemModified">
               <option v-for="it in stats_map" :value="it.i" :key="it.i">{{it.i.toString().padStart(3, '0')}}_{{ it.v.s }}</option>
             </select2>
