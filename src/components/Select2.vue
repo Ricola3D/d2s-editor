@@ -17,8 +17,8 @@
         .trigger('change')
         // emit event on change.
         .on('change', function () {
-          vm.$emit('change', this.value)
           vm.$emit('update:modelValue', this.value)
+          vm.$emit('change', this.value)
         });
     },
     watch: {

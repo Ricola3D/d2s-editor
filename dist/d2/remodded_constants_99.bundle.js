@@ -1606,10 +1606,22 @@ export let remodded_constants_99 = {
         null,
         null,
         null,
-        null,
-        null,
-        null,
-        null, // 390
+        {
+            "id": 387,
+            "s": "Reduce Fire Resistance (item)"
+        },
+        {
+            "id": 388,
+            "s": "Reduce Cold Resistance (item)"
+        },
+        {
+            "id": 389,
+            "s": "Reduce Magic Resistance (item)"
+        },
+        {
+            "id": 390,
+            "s": "Reduce Lightning Resistance (item)"
+        },
         null,
         null,
         null,

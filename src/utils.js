@@ -96,12 +96,17 @@ async function getFileWithCache(path) {
     } catch (e) {
       return null;
     }
-    if (response.status !== 200) {
+    // Response OK or Unchanged
+    if (response.status !== 200 && response.status !== 304) {
       return null;
     }
 
-    if (response.headers.get("Content-Type").split(";")[0] != "") {
-      return null;
+    const responseContentType = response.headers.get("Content-Type"); // string of format "type ; encoding"
+    if (responseContentType) {
+      const mimeType = responseContentType.split(";")[0]
+      if (mimeType != "" && mimeType != "application/octet-stream") {
+        return null;
+      }
     }
 
     let arrayBuffer
@@ -413,7 +418,7 @@ export default {
       }
     }
 
-    if (item.inv_file) {
+    if (item.inv_file && item.inv_file != "D2R_Jank") {
       const dc6FilePath = `d2/game_data/${window.work_mod}/version_${window.work_version}/global/items/${item.inv_file}.dc6`;
       const dc6 = await getFileWithCache(dc6FilePath);
       if (dc6) {
