@@ -11,13 +11,15 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
+    "@vueform/multiselect": "^2.6.6",
     "core-js": "^3.34.0",
     "node-cache": "^5.1.2",
     "rollup-plugin-vue": "^6.0.0",
     "select2": "^4.1.0-rc.0",
     "tippy.js": "^6.3.7",
     "vue": "^3.3.11",
-    "vue3-select2-component": "^0.1.7"
+    "vue-multiselect": "^3.0.0-beta.3",
+    "vue-tippy": "^6.3.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.8",

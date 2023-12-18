@@ -18,12 +18,12 @@
       <ul className="ItemOptions">
         <div class="settings">
           <!-- Base -->
-          <label>Base</label>
-          <div>
-            <select class="edit-box" v-model="item.type" @change="onEvent('update')">
-              <option v-for="s in getBases(item.type)" :value="s[0]" :key="s[0]">{{ s[1].n }}</option>
-            </select>
-          </div>
+          <template v-if="!item.is_ear">
+            <label>Base</label>
+            <div>
+              <multiselect v-model="item.type" :options="getBasesOptions(item.type)" :searchable="true" :canDeselect="false" :canClear="false" :required="true" @update:model-value="onEvent('update')"/>
+            </div>
+          </template>
 
           <!-- Defense -->
           <template v-if="item.defense_rating">
@@ -39,9 +39,7 @@
           <template  v-if="countSkinsChoices()">
             <label>Skin</label>
             <div>
-              <select class="edit-box" v-model.number="item.picture_id" @change="onEvent('update')">
-                <option v-for="n in countSkinsChoices()" :value="n - 1" :key="n">{{ skin_names[item.type] ? skin_names[item.type][n-1] : `Skin ${n}` }}</option>
-              </select>
+              <multiselect v-model.number="item.picture_id" :options="Array.from(Array(countSkinsChoices()).keys()).map(n => ({value: n, label: `${n}- ${skin_names[item.type][n] || ''}`}))" :searchable="true" :canDeselect="false" :canClear="false" :required="true" @update:model-value="onEvent('update')"/>
             </div>
           </template >
 
@@ -49,59 +47,43 @@
             <!-- Quality -->
             <label>Quality</label>
             <div>
-              <select class="edit-box" v-model.number="item.quality" @change="onEvent('update')">
-                <option v-for="rarity in rarities" :value="rarity.key" :key="rarity.key">{{ rarity.value }}</option>
-              </select>
+              <multiselect v-model.number="item.quality" :options="rarities_options" :searchable="true" :canDeselect="false" :canClear="false" :required="true" @update:model-value="onEvent('update')"/>
             </div>
 
             <!-- Magic prefix & suffix -->
             <template v-if="item.quality == 4">
               <label>&#187;&#187; Prefix</label>
               <div>
-                <select class="edit-box" v-model.number="item.magic_prefix" @change="onEvent('update')">
-                  <option value="0">None</option>
-                  <option v-for="s in prefixes" :value="s.i" :key="s.i">{{ s.i }} - {{ s.v.n }}</option>
-                </select>
+                <multiselect v-model.number="item.magic_prefix" :options="magic_prefixes_options" :searchable="true" :canDeselect="false" :canClear="false" :required="true" @update:model-value="onEvent('update')"/>
               </div>
               <label>&#187;&#187; Suffix</label>
               <div>
-                <select class="edit-box" v-model.number="item.magic_suffix" @change="onEvent('update')">
-                  <option value="0">None</option>
-                  <option v-for="s in suffixes" :value="s.i" :key="s.i">{{ s.i }} - {{ s.v.n }}</option>
-                </select>
+                <multiselect v-model.number="item.magic_suffix" :options="magic_suffixes_options" :searchable="true" :canDeselect="false" :canClear="false" :required="true" @update:model-value="onEvent('update')"/>
               </div>
             </template>
 
             <!-- Rare prefix & suffix -->
             <template v-if="item.quality == 6 || item.quality == 8">
-              <label>&#187;&#187; Prefix</label>
+              <label>&#187;&#187; Name 1</label>
               <div>
-                <select class="edit-box"  v-model.number="item.rare_name_id" @change="onEvent('update')">
-                  <option v-for="s in rare_names" :value="s.i" :key="s.i">{{ s.i }} - {{ s.v.n }}</option>
-                </select>
+                <multiselect v-model.number="item.rare_name_id" :options="rare_names_options" :searchable="true" :canDeselect="false" :canClear="false" :required="true" @update:model-value="onEvent('update')"/>
               </div>
-              <label>&#187;&#187; Suffix</label>
+              <label>&#187;&#187; Name 2</label>
               <div>
-                <select class="edit-box"  v-model.number="item.rare_name_id2" @change="onEvent('update')">
-                  <option v-for="s in rare_names" :value="s.i" :key="s.i">{{ s.i }} - {{ s.v.n }}</option>
-                </select>
+                <multiselect v-model.number="item.rare_name_id2" :options="rare_names_options" :searchable="true" :canDeselect="false" :canClear="false" :required="true" @update:model-value="onEvent('update')"/>
               </div>
             </template>
 
             <!-- Set name -->
             <template v-if="item.quality == 5">
               <label>&#187;&#187; Set item ID</label>
-              <select class="edit-box" v-model.number="item.set_id" @change="onEvent('update')">
-                <option v-for="s in set_items" :value="s.id" :key="s.id">{{ s.n }}</option>
-              </select>
+              <multiselect v-model.number="item.set_id" :options="set_items_options" :searchable="true" :canDeselect="false" :canClear="false" :required="true" @update:model-value="onEvent('update')"/>
             </template>
 
             <!-- Unique name -->
             <template v-if="item.quality == 7">
               <label>&#187;&#187; Unique item ID</label>
-              <select class="edit-box" v-model.number="item.unique_id" @change="onEvent('update')">
-                <option v-for="s in unq_items" :value="s.id" :key="s.id">{{ s.n }} - {{ s.id }}</option>
-              </select>
+              <multiselect v-model.number="item.unique_id" :options="unq_items_options" :searchable="true" :canDeselect="false" :canClear="false" :required="true" @update:model-value="onEvent('update')"/>
 
               <!-- <label>Personalized Name</label>
               <input class="edit-box" type="text" v-model="item.personalized_name" @change="onEvent('update')" pattern="^[A-Za-z]{0,15}$" maxlength="16"/> -->
@@ -166,18 +148,15 @@ export default {
   },
   data() {
     return {
-      rarities: [{ key: 1, value: 'Low' }, { key: 2, value: 'Normal' }, { key: 3, value: 'Superior' }, { key: 4, value: 'Magic' }, { key: 5, value: 'Set' }, { key: 6, value: 'Rare' }, { key: 7, value: 'Unique' }, { key: 8, value: 'Crafted' }],
+      rarities_options: [{ value: 1, label: 'Low' }, { value: 2, label: 'Normal' }, { value: 3, label: 'Superior' }, { value: 4, label: 'Magic' }, { value: 5, label: 'Set' }, { value: 6, label: 'Rare' }, { value: 7, label: 'Unique' }, { value: 8, label: 'Crafted' }],
       locations: [{ key: 0, value: 'Stored' }, { key: 1, value: 'Equipped' }, { key: 4, value: 'Cursor' }],
       equipped_locations: [{ key: 1, value: 'Head' }, { key: 2, value: 'Neck' }, { key: 3, value: 'Torso' }, { key: 4, value: 'Right Hand' }, { key: 5, value: 'Left Hand' }, { key: 6, value: 'Right Finger' }, { key: 7, value: 'Left Finger' }, { key: 8, value: 'Waist' }, { key: 9, value: 'Boots' }, { key: 10, value: 'Gloves' }, { key: 11, value: 'Alternate Right Hand' }, { key: 12, value: 'Alternate Left Hand' }],
       storage_pages: [{ key: 1, value: 'Inventory' }, { key: 4, value: 'Cube' }, { key: 5, value: 'Stash' }],
-      prefixes: window[`${window.work_mod}_constants_${window.work_version}`].magic_prefixes.map((e,i)=> { return { i:i, v:e }}).filter(e => e.v != null && e.v.n != null),
-      suffixes: window[`${window.work_mod}_constants_${window.work_version}`].magic_suffixes.map((e,i)=> { return { i:i, v:e }}).filter(e => e.v != null && e.v.n != null),
-      rare_names: window[`${window.work_mod}_constants_${window.work_version}`].rare_names.map((e,i)=> { return { i:i, v:e }}).filter(e => e.v != null && e.v.n != null),
-      unq_items: window[`${window.work_mod}_constants_${window.work_version}`].unq_items.filter(item => item.n != null),
-      set_items: window[`${window.work_mod}_constants_${window.work_version}`].set_items.filter(item => item.n != null),
-      armor_items: Object.entries(window[`${window.work_mod}_constants_${window.work_version}`].armor_items).filter(e => e[1].n != null),
-      weapon_items: Object.entries(window[`${window.work_mod}_constants_${window.work_version}`].weapon_items).filter(e => e[1].n != null),
-      other_items: Object.entries(window[`${window.work_mod}_constants_${window.work_version}`].other_items).filter(e => e[1].n != null),
+      magic_prefixes_options: window[`${window.work_mod}_constants_${window.work_version}`].magic_prefixes.fill({id: 0, n: "None"}, 0, 1).filter(affix => affix && affix.n).map(affix => ({value: affix.id, label: `${affix.id.toString().padStart(3, '0')} - ${affix.n}`})),
+      magic_suffixes_options: window[`${window.work_mod}_constants_${window.work_version}`].magic_suffixes.fill({id: 0, n: "None"}, 0, 1).filter(affix => affix && affix.n).map(affix => ({value: affix.id, label: `${affix.id.toString().padStart(3, '0')} - ${affix.n}`})),
+      rare_names_options: window[`${window.work_mod}_constants_${window.work_version}`].rare_names.fill({id: 0, n: "None"}, 0, 1).filter(name => name && name.n).map(name => ({value: name.id, label: `${name.id.toString().padStart(3, '0')} - ${name.n}`})),
+      unq_items_options: window[`${window.work_mod}_constants_${window.work_version}`].unq_items.filter(item => item.n != null).map(item => ({value: item.id, label: `${item.id.toString().padStart(3, '0')} - ${item.n}`})),
+      set_items_options: window[`${window.work_mod}_constants_${window.work_version}`].set_items.filter(item => item.n != null).map(item => ({value: item.id, label: `${item.id.toString().padStart(3, '0')} - ${item.n}`})),
       skin_names: {
         "amu": [ "Dot", "Sun", "Penta" ],
         "rin": [ "Coral", "Small Blue", "Big Blue", "Orange", "Crown" ],
@@ -249,17 +228,18 @@ export default {
               return item.type === base.type
           }).sort((a, b) => items[a].level < items[b].level);
         }
-        bases = Object.entries(items).filter(item => bases.includes(item[0]));
+        bases = Object.entries(items).filter(entry => bases.includes(entry[0])).map(entry => ({value: entry[0], label: entry[1].n}));
       }
       return bases
     },
-    getBases(code) {
+    getBasesOptions(code) {
+      const constants = window[`${window.work_mod}_constants_${window.work_version}`];
       if (this.item.type_id == 3) {
-        return this.findBasesInConstants(code, window[`${window.work_mod}_constants_${window.work_version}`].weapon_items);
+        return this.findBasesInConstants(code, constants.weapon_items);
       } else if (this.item.type_id == 1) {
-        return this.findBasesInConstants(code, window[`${window.work_mod}_constants_${window.work_version}`].armor_items);
+        return this.findBasesInConstants(code, constants.armor_items);
       } else if (this.item.type_id == 4) {
-        return this.other_items
+        return Object.entries(constants.other_items).filter(entry => entry[1].n).map(entry => ({value: entry[0], label: entry[1].n}));
       } else {
         return []
       }

@@ -42,10 +42,7 @@
               <Item v-if="preview" :item="preview" clazz="item-edit"></Item>
             </div>
             <label for="Item">Item</label>
-            <Select2/>
-            <!-- <select class="form-control" v-model="previewModel" @change="previewItem" v-select="'#LoadItem'">
-              <option v-for="item in itempack" :value="item" :key="item.key">{{item.key}}</option>
-            </select> -->
+            <multiselect v-model="previewModel" :options="itempack" label="key" valueProp="value" :searchable="true" @update:model-value="previewItem"/>
           </div>
           <div class="modal-footer">
             <input style="display:none;" type="file" name="d2iFile" @change="onItemFileChange" id="d2iFile">
@@ -290,6 +287,7 @@
         activeTab: 1,
         selected: null,
         itempack: ItemPack,
+        item_options: [],
         previewModel: null,
         preview: null,
         clipboard: null,
@@ -542,8 +540,10 @@
       },
       // Callback to read the input-select value and fill the preview thumbnail
       async previewItem(e) {
-        let bytes = utils.b64StringToArrayBuffer(this.previewModel.value.base64);
-        this.readItem(bytes, this.previewModel.value.mod, this.previewModel.value.version);
+        if (this.previewModel) {
+          let bytes = utils.b64StringToArrayBuffer(this.previewModel.base64);
+          this.readItem(bytes, this.previewModel.mod, this.previewModel.version);
+        }
       },
       // Method to load an item from its a JSON {mod, version, base64 or hex} or simply a base64 string (mod & version will be set to vanilla 99 by default).
       async loadFromString() {
@@ -879,6 +879,8 @@
             }
           });
         }
+
+        this.item_options = this.itempack.map(item => ({id: item.key, text: item.key, value: item.value}));
       },
     },
   };

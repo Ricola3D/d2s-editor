@@ -1,102 +1,16 @@
-var d2s =
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/d2/index.ts");
-/******/ })
-/************************************************************************/
-/******/ ({
+var d2s;
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/binary/bitreader.ts":
 /*!*********************************!*\
   !*** ./src/binary/bitreader.ts ***!
   \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BitReader = void 0;
 var BitReader = /** @class */ (function () {
     function BitReader(arrBuffer) {
@@ -208,12 +122,10 @@ exports.BitReader = BitReader;
 /*!*********************************!*\
   !*** ./src/binary/bitwriter.ts ***!
   \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BitWriter = void 0;
 var BitWriter = /** @class */ (function () {
     function BitWriter(capacity) {
@@ -345,10 +257,8 @@ exports.BitWriter = BitWriter;
 /*!**************************************!*\
   !*** ./src/d2/attribute_enhancer.ts ***!
   \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-"use strict";
 
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
@@ -361,14 +271,16 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-var __spreadArrays = (this && this.__spreadArrays) || function () {
-    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
-    for (var r = Array(s), k = 0, i = 0; i < il; i++)
-        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
-            r[k] = a[j];
-    return r;
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.enhanceItem = exports.enhanceItems = exports.enhancePlayerAttributes = exports.enhanceAttributes = void 0;
 var constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
 var utils_1 = __webpack_require__(/*! ./utils */ "./src/d2/utils.ts");
@@ -393,7 +305,7 @@ function enhanceAttributes(char, mod, version, config) {
 }
 exports.enhanceAttributes = enhanceAttributes;
 function enhancePlayerAttributes(char, mod, version, config) {
-    var constants = constants_1.getConstantData(mod, version);
+    var constants = (0, constants_1.getConstantData)(mod, version);
     var items = char.items.filter(function (item) {
         return item.location_id === 1 && item.equipped_id !== 13 && item.equipped_id !== 14;
     });
@@ -428,7 +340,7 @@ function boundValue(v, min, max) {
 function enhanceItem(item, mod, version, level, config, parent) {
     var _a, _b, _c, _d;
     if (level === void 0) { level = 1; }
-    var constants = constants_1.getConstantData(mod, version);
+    var constants = (0, constants_1.getConstantData)(mod, version);
     if (parent) {
         //socket item.
         var pt = constants.armor_items[parent.type] || constants.weapon_items[parent.type] || constants.other_items[parent.type];
@@ -616,7 +528,7 @@ function _enhanceAttributeDescription(_magic_attributes, constants, level, confi
     if (level === void 0) { level = 1; }
     if (!_magic_attributes)
         return [];
-    var magic_attributes = __spreadArrays(_magic_attributes.map(function (attr) { return (__assign({}, attr)); }));
+    var magic_attributes = __spreadArray([], _magic_attributes.map(function (attr) { return (__assign({}, attr)); }), true);
     var dgrps = [0, 0, 0];
     var dgrpsVal = [0, 0, 0];
     for (var _i = 0, magic_attributes_1 = magic_attributes; _i < magic_attributes_1.length; _i++) {
@@ -635,7 +547,7 @@ function _enhanceAttributeDescription(_magic_attributes, constants, level, confi
     var _loop_1 = function (property) {
         var prop = constants.magical_properties[property.id];
         if (prop == null) {
-            throw new Error("Cannot find Magical Property for id: " + property.id);
+            throw new Error("Cannot find Magical Property for id: ".concat(property.id));
         }
         var v = property.values[property.values.length - 1];
         if (prop.ob === "level") {
@@ -710,7 +622,7 @@ function _enhanceAttributeDescription(_magic_attributes, constants, level, confi
                 descString = prop.dE;
                 //TODO. why???
                 if (prop.s === "item_maxdamage_percent") {
-                    descString = "+%d% " + descString.replace(/}/gi, "").replace(/%\+?d%%/gi, "");
+                    descString = "+%d% ".concat(descString.replace(/}/gi, "").replace(/%\+?d%%/gi, ""));
                 }
             }
             property.description = descString.replace(/%d/gi, function () {
@@ -799,28 +711,28 @@ function _descFunc(property, constants, v, descFunc, descVal, descString, desc2)
         // +[value] [string1] [string2]
         case 12: {
             // +[value] [string1]
-            value = "" + sign + v;
+            value = "".concat(sign).concat(v);
             break;
         }
         case 2:
         // [value]% [string1]
         case 7: {
             // [value]% [string1] [string2]
-            value = v + "%";
+            value = "".concat(v, "%");
             break;
         }
         case 3:
         // [value] [string1]
         case 9: {
             // [value] [string1] [string2]
-            value = "" + v;
+            value = "".concat(v);
             break;
         }
         case 4:
         // +[value]% [string1]
         case 8: {
             // +[value]% [string1] [string2]
-            value = "" + sign + v + "%";
+            value = "".concat(sign).concat(v, "%");
             break;
         }
         case 5:
@@ -828,7 +740,7 @@ function _descFunc(property, constants, v, descFunc, descVal, descString, desc2)
         case 10: {
             // [value*100/128]% [string1] [string2]
             if (descString.indexOf("%%") < 0) {
-                value = (v * 100) / 128 + "%";
+                value = "".concat((v * 100) / 128, "%");
             }
             else {
                 value = (v * 100) / 128;
@@ -843,7 +755,7 @@ function _descFunc(property, constants, v, descFunc, descVal, descString, desc2)
         case 13: {
             // +[value] to [class] Skill Levels
             var clazz = constants.classes[property.values[0]];
-            property.description = "" + sign + v + " " + clazz.as;
+            property.description = "".concat(sign).concat(v, " ").concat(clazz.as);
             break;
         }
         case 14: {
@@ -851,35 +763,35 @@ function _descFunc(property, constants, v, descFunc, descVal, descString, desc2)
             var clazz = constants.classes[property.values[1]];
             var skillTabStr = clazz.ts[property.values[0]];
             descString = _sprintf(skillTabStr, v);
-            property.description = descString + " " + clazz.co;
+            property.description = "".concat(descString, " ").concat(clazz.co);
             break;
         }
         case 15: {
             // [chance]% to case [slvl] [skill] on [event]
             var skillId = property.values[1];
             var skill = constants.skills[skillId];
-            var skillStr = skill ? skill.s : "Unknown_Skill_" + skillId;
+            var skillStr = skill ? skill.s : "Unknown_Skill_".concat(skillId);
             descString = _sprintf(descString, property.values[2], property.values[0], skillStr);
-            property.description = "" + descString;
+            property.description = "".concat(descString);
             break;
         }
         case 16: {
             // Level [sLvl] [skill] Aura When Equipped
             var skillId = property.values[0];
             var skill = constants.skills[skillId];
-            var skillStr = skill ? skill.s : "Unknown_Skill_" + skillId;
+            var skillStr = skill ? skill.s : "Unknown_Skill_".concat(skillId);
             property.description = descString.replace(/%d/, v.toString());
             property.description = property.description.replace(/%s/, skillStr);
             break;
         }
         case 17: {
             // [value] [string1] (Increases near [time])
-            property.description = v + " " + descString + " (Increases near [time])";
+            property.description = "".concat(v, " ").concat(descString, " (Increases near [time])");
             break;
         }
         case 18: {
             // [value]% [string1] (Increases near [time])
-            property.description = v + "% " + descString + " (Increases near [time])";
+            property.description = "".concat(v, "% ").concat(descString, " (Increases near [time])");
             break;
         }
         case 19: {
@@ -889,35 +801,35 @@ function _descFunc(property, constants, v, descFunc, descVal, descString, desc2)
         }
         case 20: {
             // [value * -1]% [string1]
-            value = v * -1 + "%";
+            value = "".concat(v * -1, "%");
             break;
         }
         case 21: {
             // [value * -1] [string1]
-            value = "" + v * -1;
+            value = "".concat(v * -1);
             break;
         }
         case 22: {
             // [value]% [string1] [montype] (warning: this is bugged in vanilla and doesn't work properly, see CE forum)
-            property.description = v + "% " + descString + " [montype]";
+            property.description = "".concat(v, "% ").concat(descString, " [montype]");
             break;
         }
         case 23: {
             // [value]% [string1] [monster]
-            property.description = v + "% " + descString + " [monster]]";
+            property.description = "".concat(v, "% ").concat(descString, " [monster]]");
             break;
         }
         case 24: {
             // Level [lvl] [skill] ([curr]/[max] charges)
             var skillId = property.values[1];
             var skill = constants.skills[skillId];
-            var skillStr = skill ? skill.s : "Unknown_Skill_" + skillId;
+            var skillStr = skill ? skill.s : "Unknown_Skill_".concat(skillId);
             if (descString.indexOf("(") == 0) {
                 var count_2 = 0;
                 descString = descString.replace(/%d/gi, function () {
                     return property.values[2 + count_2++].toString();
                 });
-                property.description = "Level " + property.values[0] + " " + skillStr + " " + descString;
+                property.description = "Level ".concat(property.values[0], " ").concat(skillStr, " ").concat(descString);
             }
             else {
                 property.description = _sprintf(descString, property.values[0], skillStr, property.values[2], property.values[3]);
@@ -928,14 +840,14 @@ function _descFunc(property, constants, v, descFunc, descVal, descString, desc2)
             // +[value] to [skill] ([class] Only)
             var skillId = property.values[0];
             var skill = constants.skills[skillId];
-            var skillStr = skill ? skill.s : "Unknown_Skill_" + skillId;
+            var skillStr = skill ? skill.s : "Unknown_Skill_".concat(skillId);
             var clazz = _classFromCode(skill.c, constants);
             var clazzStr = clazz ? clazz.co : "";
             if (descString) {
                 property.description = _sprintf(descString, v, skillStr, clazzStr);
             }
             else {
-                property.description = "" + sign + v + " to " + skillStr + " " + (clazz === null || clazz === void 0 ? void 0 : clazz.co);
+                property.description = "".concat(sign).concat(v, " to ").concat(skillStr, " ").concat(clazz === null || clazz === void 0 ? void 0 : clazz.co);
             }
             break;
         }
@@ -943,8 +855,8 @@ function _descFunc(property, constants, v, descFunc, descVal, descString, desc2)
             // +[value] to [skill]
             var skillId = property.values[0];
             var skill = constants.skills[skillId];
-            var skillStr = skill ? skill.s : "Unknown_Skill_" + skillId;
-            property.description = "" + sign + v + " to " + skillStr;
+            var skillStr = skill ? skill.s : "Unknown_Skill_".concat(skillId);
+            property.description = "".concat(sign).concat(v, " to ").concat(skillStr);
             break;
         }
         case 29: {
@@ -953,7 +865,7 @@ function _descFunc(property, constants, v, descFunc, descVal, descString, desc2)
             break;
         }
         default: {
-            throw new Error("No handler for descFunc: " + descFunc);
+            throw new Error("No handler for descFunc: ".concat(descFunc));
         }
     }
     if (value) {
@@ -964,20 +876,20 @@ function _descFunc(property, constants, v, descFunc, descVal, descString, desc2)
                 break;
             }
             case 1: {
-                property.description = value + " " + descString;
+                property.description = "".concat(value, " ").concat(descString);
                 break;
             }
             case 2: {
-                property.description = descString + " " + value;
+                property.description = "".concat(descString, " ").concat(value);
                 break;
             }
             default: {
-                throw new Error("No handler for descVal: " + descVal);
+                throw new Error("No handler for descVal: ".concat(descVal));
             }
         }
     }
     if (desc2Present) {
-        property.description += " " + desc2;
+        property.description += " ".concat(desc2);
     }
 }
 function _sprintf(str) {
@@ -1014,7 +926,7 @@ function _allAttributes(item, constants) {
     }
     var magic_attributes = item.magic_attributes || [];
     var runeword_attributes = item.runeword_attributes || [];
-    return __spreadArrays([], JSON.parse(JSON.stringify(magic_attributes)), JSON.parse(JSON.stringify(runeword_attributes)), JSON.parse(JSON.stringify(socketed_attributes))).filter(function (attribute) { return attribute != null; });
+    return __spreadArray(__spreadArray(__spreadArray(__spreadArray([], [], false), JSON.parse(JSON.stringify(magic_attributes)), true), JSON.parse(JSON.stringify(runeword_attributes)), true), JSON.parse(JSON.stringify(socketed_attributes)), true).filter(function (attribute) { return attribute != null; });
 }
 function _groupAttributes(all_attributes, constants) {
     var combined_magic_attributes = [];
@@ -1095,10 +1007,8 @@ function _groupAttributes(all_attributes, constants) {
 /*!******************************!*\
   !*** ./src/d2/attributes.ts ***!
   \******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-"use strict";
 
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -1115,7 +1025,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
@@ -1136,13 +1046,13 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.writeAttributes = exports.readAttributes = void 0;
 var bitwriter_1 = __webpack_require__(/*! ../binary/bitwriter */ "./src/binary/bitwriter.ts");
 var constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
 //todo use constants.magical_properties and csvBits
 function readAttributes(char, reader, mod) {
-    var constants = constants_1.getConstantData(mod, char.header.version);
+    var constants = (0, constants_1.getConstantData)(mod, char.header.version);
     // Stats = magical_properties with "Saved" = 1.
     // There are report that only stat ids 0 to 255 can be saved. It doesn't work for stats 256-510.
     var attributes = constants.magical_properties.filter(function (val, idx) { return val && val.c && idx < 256; });
@@ -1176,7 +1086,7 @@ function readAttributes(char, reader, mod) {
             };
             return;
         }
-        throw new Error("Attribute header 'gf' not found at position " + (reader.offset - 2 * 8));
+        throw new Error("Attribute header 'gf' not found at position ".concat(reader.offset - 2 * 8));
     }
     var bitoffset = 0;
     var id = reader.ReadUInt16(9);
@@ -1185,11 +1095,11 @@ function readAttributes(char, reader, mod) {
         bitoffset += 9;
         var field = constants.magical_properties[id];
         if (field === undefined) {
-            throw new Error("Invalid attribute id: " + id);
+            throw new Error("Invalid attribute id: ".concat(id));
         }
         var size = field.cB;
         if (size === undefined) {
-            throw new Error("Missing CSV save bits for id: " + id);
+            throw new Error("Missing CSV save bits for id: ".concat(id));
         }
         char.attributes[field.s] = reader.ReadUInt32(size);
         if (field.cVS) {
@@ -1218,7 +1128,7 @@ function writeAttributes(char, constants) {
                 }
                 size = property.cB;
                 if (size === undefined) {
-                    throw new Error("Missing CSV save bits for attribute: " + property);
+                    throw new Error("Missing CSV save bits for attribute: ".concat(property));
                 }
                 if (property.cVS) {
                     value <<= property.cVS;
@@ -1241,12 +1151,10 @@ exports.writeAttributes = writeAttributes;
 /*!*****************************!*\
   !*** ./src/d2/constants.ts ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.setConstantData = exports.getConstantData = void 0;
 var versionedConstants = {
     vanilla: {},
@@ -1254,10 +1162,10 @@ var versionedConstants = {
 };
 function getConstantData(mod, version) {
     if (!(mod in versionedConstants)) {
-        throw new Error("No constant data found for this mod " + mod + ". Supported mods are: " + Object.keys(versionedConstants).join(", "));
+        throw new Error("No constant data found for this mod ".concat(mod, ". Supported mods are: ").concat(Object.keys(versionedConstants).join(", ")));
     }
     if (!(version.toString() in versionedConstants[mod])) {
-        throw new Error("No constant data found for version " + version + " of mod " + mod + ". Supported versions are: " + Object.keys(versionedConstants[mod]).join(", "));
+        throw new Error("No constant data found for version ".concat(version, " of mod ").concat(mod, ". Supported versions are: ").concat(Object.keys(versionedConstants[mod]).join(", ")));
     }
     var constants = versionedConstants[mod][version.toString()];
     return constants;
@@ -1275,14 +1183,16 @@ exports.setConstantData = setConstantData;
 /*!***********************!*\
   !*** ./src/d2/d2s.ts ***!
   \***********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-"use strict";
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -1295,7 +1205,7 @@ var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (
 var __importStar = (this && this.__importStar) || function (mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
     __setModuleDefault(result, mod);
     return result;
 };
@@ -1314,7 +1224,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
@@ -1335,7 +1245,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.writeItem = exports.readItem = exports.write = exports.read = exports.writer = exports.reader = void 0;
 var header_1 = __webpack_require__(/*! ./header */ "./src/d2/header.ts");
 var attributes_1 = __webpack_require__(/*! ./attributes */ "./src/d2/attributes.ts");
@@ -1362,18 +1272,18 @@ function read(buffer, mod, userConfig) {
                     char = {};
                     reader = new bitreader_1.BitReader(buffer);
                     config = Object.assign(defaultConfig, userConfig);
-                    return [4 /*yield*/, header_1.readHeader(char, reader)];
+                    return [4 /*yield*/, (0, header_1.readHeader)(char, reader)];
                 case 1:
                     _a.sent();
                     //could load constants based on version here
-                    return [4 /*yield*/, header_1.readHeaderData(char, reader, mod)];
+                    return [4 /*yield*/, (0, header_1.readHeaderData)(char, reader, mod)];
                 case 2:
                     //could load constants based on version here
                     _a.sent();
-                    return [4 /*yield*/, attributes_1.readAttributes(char, reader, mod)];
+                    return [4 /*yield*/, (0, attributes_1.readAttributes)(char, reader, mod)];
                 case 3:
                     _a.sent();
-                    return [4 /*yield*/, skills_1.readSkills(char, reader, mod)];
+                    return [4 /*yield*/, (0, skills_1.readSkills)(char, reader, mod)];
                 case 4:
                     _a.sent();
                     return [4 /*yield*/, items.readCharItems(char, reader, mod, config)];
@@ -1390,7 +1300,7 @@ function read(buffer, mod, userConfig) {
                 case 8:
                     _a.sent();
                     _a.label = 9;
-                case 9: return [4 /*yield*/, attribute_enhancer_1.enhanceAttributes(char, mod, char.header.version, config)];
+                case 9: return [4 /*yield*/, (0, attribute_enhancer_1.enhanceAttributes)(char, mod, char.header.version, config)];
                 case 10:
                     _a.sent();
                     return [2 /*return*/, char];
@@ -1410,7 +1320,7 @@ function readItem(buffer, mod, version, userConfig) {
                     return [4 /*yield*/, items.readItem(reader, mod, version, config)];
                 case 1:
                     item = _a.sent();
-                    return [4 /*yield*/, attribute_enhancer_1.enhanceItems([item], mod, version)];
+                    return [4 /*yield*/, (0, attribute_enhancer_1.enhanceItems)([item], mod, version)];
                 case 2:
                     _a.sent();
                     return [2 /*return*/, item];
@@ -1433,20 +1343,20 @@ function write(data, mod, version, userConfig) {
                     writer = new bitwriter_1.BitWriter();
                     data.header.version = version;
                     _b = (_a = writer).WriteArray;
-                    return [4 /*yield*/, header_1.writeHeader(data)];
+                    return [4 /*yield*/, (0, header_1.writeHeader)(data)];
                 case 1:
                     _b.apply(_a, [_s.sent()]);
-                    constants = constants_1.getConstantData(mod, data.header.version);
+                    constants = (0, constants_1.getConstantData)(mod, data.header.version);
                     _d = (_c = writer).WriteArray;
-                    return [4 /*yield*/, header_1.writeHeaderData(data, constants)];
+                    return [4 /*yield*/, (0, header_1.writeHeaderData)(data, constants)];
                 case 2:
                     _d.apply(_c, [_s.sent()]);
                     _f = (_e = writer).WriteArray;
-                    return [4 /*yield*/, attributes_1.writeAttributes(data, constants)];
+                    return [4 /*yield*/, (0, attributes_1.writeAttributes)(data, constants)];
                 case 3:
                     _f.apply(_e, [_s.sent()]);
                     _h = (_g = writer).WriteArray;
-                    return [4 /*yield*/, skills_1.writeSkills(data)];
+                    return [4 /*yield*/, (0, skills_1.writeSkills)(data)];
                 case 4:
                     _h.apply(_g, [_s.sent()]);
                     _k = (_j = writer).WriteArray;
@@ -1467,7 +1377,7 @@ function write(data, mod, version, userConfig) {
                 case 8:
                     _r.apply(_q, [_s.sent()]);
                     _s.label = 9;
-                case 9: return [4 /*yield*/, header_1.fixHeader(writer)];
+                case 9: return [4 /*yield*/, (0, header_1.fixHeader)(writer)];
                 case 10:
                     _s.sent();
                     return [2 /*return*/, writer.ToArray()];
@@ -1502,14 +1412,16 @@ exports.writeItem = writeItem;
 /*!**************************!*\
   !*** ./src/d2/header.ts ***!
   \**************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-"use strict";
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -1522,7 +1434,7 @@ var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (
 var __importStar = (this && this.__importStar) || function (mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
     __setModuleDefault(result, mod);
     return result;
 };
@@ -1541,7 +1453,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
@@ -1562,7 +1474,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.fixHeader = exports.writeHeaderData = exports.writeHeader = exports.readHeaderData = exports.readHeader = void 0;
 var bitwriter_1 = __webpack_require__(/*! ../binary/bitwriter */ "./src/binary/bitwriter.ts");
 var constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
@@ -1573,7 +1485,7 @@ function readHeader(char, reader) {
             //0x0000
             char.header.identifier = reader.ReadUInt32().toString(16).padStart(8, "0");
             if (char.header.identifier != "aa55aa55") {
-                throw new Error("D2S identifier 'aa55aa55' not found at position " + (reader.offset - 4 * 8));
+                throw new Error("D2S identifier 'aa55aa55' not found at position ".concat(reader.offset - 4 * 8));
             }
             //0x0004
             char.header.version = reader.ReadUInt32();
@@ -1588,12 +1500,12 @@ function readHeaderData(char, reader, mod) {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    constants = constants_1.getConstantData(mod, char.header.version);
+                    constants = (0, constants_1.getConstantData)(mod, char.header.version);
                     return [4 /*yield*/, _versionSpecificHeader(char.header.version)];
                 case 1:
                     v = _a.sent();
                     if (v == null) {
-                        throw new Error("Cannot parse version: " + char.header.version);
+                        throw new Error("Cannot parse version: ".concat(char.header.version));
                     }
                     v.readHeader(char, reader, constants);
                     return [2 /*return*/];
@@ -1624,7 +1536,7 @@ function writeHeaderData(char, constants) {
                 case 1:
                     v = _a.sent();
                     if (v == null) {
-                        throw new Error("Cannot parse version: " + char.header.version);
+                        throw new Error("Cannot parse version: ".concat(char.header.version));
                     }
                     v.writeHeader(char, writer, constants);
                     return [2 /*return*/, writer.ToArray()];
@@ -1692,14 +1604,16 @@ function _versionSpecificHeader(version) {
 /*!*************************!*\
   !*** ./src/d2/index.ts ***!
   \*************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-"use strict";
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -1710,39 +1624,40 @@ var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (
     o["default"] = v;
 });
 var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) __createBinding(exports, m, p);
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 var __importStar = (this && this.__importStar) || function (mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
     __setModuleDefault(result, mod);
     return result;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.types = exports.Quality = exports.ItemType = exports.setConstantData = exports.getConstantData = exports.enhancePlayerAttributes = exports.enhanceItems = exports.enhanceAttributes = exports.writeSkills = exports.readSkills = exports.writeAttributes = exports.readAttributes = exports.fixHeader = exports.writeHeaderData = exports.writeHeader = exports.readHeaderData = exports.readHeader = void 0;
 __exportStar(__webpack_require__(/*! ./d2s */ "./src/d2/d2s.ts"), exports);
 var header_1 = __webpack_require__(/*! ./header */ "./src/d2/header.ts");
-Object.defineProperty(exports, "readHeader", { enumerable: true, get: function () { return header_1.readHeader; } });
-Object.defineProperty(exports, "readHeaderData", { enumerable: true, get: function () { return header_1.readHeaderData; } });
-Object.defineProperty(exports, "writeHeader", { enumerable: true, get: function () { return header_1.writeHeader; } });
-Object.defineProperty(exports, "writeHeaderData", { enumerable: true, get: function () { return header_1.writeHeaderData; } });
-Object.defineProperty(exports, "fixHeader", { enumerable: true, get: function () { return header_1.fixHeader; } });
+Object.defineProperty(exports, "readHeader", ({ enumerable: true, get: function () { return header_1.readHeader; } }));
+Object.defineProperty(exports, "readHeaderData", ({ enumerable: true, get: function () { return header_1.readHeaderData; } }));
+Object.defineProperty(exports, "writeHeader", ({ enumerable: true, get: function () { return header_1.writeHeader; } }));
+Object.defineProperty(exports, "writeHeaderData", ({ enumerable: true, get: function () { return header_1.writeHeaderData; } }));
+Object.defineProperty(exports, "fixHeader", ({ enumerable: true, get: function () { return header_1.fixHeader; } }));
 var attributes_1 = __webpack_require__(/*! ./attributes */ "./src/d2/attributes.ts");
-Object.defineProperty(exports, "readAttributes", { enumerable: true, get: function () { return attributes_1.readAttributes; } });
-Object.defineProperty(exports, "writeAttributes", { enumerable: true, get: function () { return attributes_1.writeAttributes; } });
+Object.defineProperty(exports, "readAttributes", ({ enumerable: true, get: function () { return attributes_1.readAttributes; } }));
+Object.defineProperty(exports, "writeAttributes", ({ enumerable: true, get: function () { return attributes_1.writeAttributes; } }));
 var skills_1 = __webpack_require__(/*! ./skills */ "./src/d2/skills.ts");
-Object.defineProperty(exports, "readSkills", { enumerable: true, get: function () { return skills_1.readSkills; } });
-Object.defineProperty(exports, "writeSkills", { enumerable: true, get: function () { return skills_1.writeSkills; } });
+Object.defineProperty(exports, "readSkills", ({ enumerable: true, get: function () { return skills_1.readSkills; } }));
+Object.defineProperty(exports, "writeSkills", ({ enumerable: true, get: function () { return skills_1.writeSkills; } }));
 var attribute_enhancer_1 = __webpack_require__(/*! ./attribute_enhancer */ "./src/d2/attribute_enhancer.ts");
-Object.defineProperty(exports, "enhanceAttributes", { enumerable: true, get: function () { return attribute_enhancer_1.enhanceAttributes; } });
-Object.defineProperty(exports, "enhanceItems", { enumerable: true, get: function () { return attribute_enhancer_1.enhanceItems; } });
-Object.defineProperty(exports, "enhancePlayerAttributes", { enumerable: true, get: function () { return attribute_enhancer_1.enhancePlayerAttributes; } });
+Object.defineProperty(exports, "enhanceAttributes", ({ enumerable: true, get: function () { return attribute_enhancer_1.enhanceAttributes; } }));
+Object.defineProperty(exports, "enhanceItems", ({ enumerable: true, get: function () { return attribute_enhancer_1.enhanceItems; } }));
+Object.defineProperty(exports, "enhancePlayerAttributes", ({ enumerable: true, get: function () { return attribute_enhancer_1.enhancePlayerAttributes; } }));
 var constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
-Object.defineProperty(exports, "getConstantData", { enumerable: true, get: function () { return constants_1.getConstantData; } });
-Object.defineProperty(exports, "setConstantData", { enumerable: true, get: function () { return constants_1.setConstantData; } });
+Object.defineProperty(exports, "getConstantData", ({ enumerable: true, get: function () { return constants_1.getConstantData; } }));
+Object.defineProperty(exports, "setConstantData", ({ enumerable: true, get: function () { return constants_1.setConstantData; } }));
 var items_1 = __webpack_require__(/*! ./items */ "./src/d2/items.ts");
-Object.defineProperty(exports, "ItemType", { enumerable: true, get: function () { return items_1.ItemType; } });
-Object.defineProperty(exports, "Quality", { enumerable: true, get: function () { return items_1.Quality; } });
+Object.defineProperty(exports, "ItemType", ({ enumerable: true, get: function () { return items_1.ItemType; } }));
+Object.defineProperty(exports, "Quality", ({ enumerable: true, get: function () { return items_1.Quality; } }));
 exports.types = __importStar(__webpack_require__(/*! ./types */ "./src/d2/types.ts"));
 __exportStar(__webpack_require__(/*! ./utils */ "./src/d2/utils.ts"), exports);
 
@@ -1753,10 +1668,8 @@ __exportStar(__webpack_require__(/*! ./utils */ "./src/d2/utils.ts"), exports);
 /*!*************************!*\
   !*** ./src/d2/items.ts ***!
   \*************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-"use strict";
 
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -1773,7 +1686,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
@@ -1794,7 +1707,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports._writeMagicProperties = exports._readMagicProperties = exports.writeItem = exports.readItem = exports.writeItems = exports.readItems = exports.writeCorpseItem = exports.readCorpseItems = exports.writeGolemItems = exports.readGolemItems = exports.writeMercItems = exports.readMercItems = exports.writeCharItems = exports.readCharItems = exports.Quality = exports.ItemType = void 0;
 var bitreader_1 = __webpack_require__(/*! ../binary/bitreader */ "./src/binary/bitreader.ts");
 var bitwriter_1 = __webpack_require__(/*! ../binary/bitwriter */ "./src/binary/bitwriter.ts");
@@ -1805,7 +1718,7 @@ var ItemType;
     ItemType[ItemType["Shield"] = 2] = "Shield";
     ItemType[ItemType["Weapon"] = 3] = "Weapon";
     ItemType[ItemType["Other"] = 4] = "Other";
-})(ItemType = exports.ItemType || (exports.ItemType = {}));
+})(ItemType || (exports.ItemType = ItemType = {}));
 var Quality;
 (function (Quality) {
     Quality[Quality["Low"] = 1] = "Low";
@@ -1816,7 +1729,7 @@ var Quality;
     Quality[Quality["Rare"] = 6] = "Rare";
     Quality[Quality["Unique"] = 7] = "Unique";
     Quality[Quality["Crafted"] = 8] = "Crafted";
-})(Quality = exports.Quality || (exports.Quality = {}));
+})(Quality || (exports.Quality = Quality = {}));
 // Right now I'm missing characters (case sensitive) E, F, I, J, L, M, Q, U, X.
 // prettier-ignore
 //huffman tree
@@ -2365,68 +2278,68 @@ var HUFFMAN = [
 ];
 // prettier-ignore
 var HUFFMAN_LOOKUP = {
-    "0": { "v": 223, "l": 8 },
-    "1": { "v": 31, "l": 7 },
-    "2": { "v": 12, "l": 6 },
-    "3": { "v": 91, "l": 7 },
-    "4": { "v": 95, "l": 8 },
-    "5": { "v": 104, "l": 8 },
-    "6": { "v": 123, "l": 7 },
-    "7": { "v": 30, "l": 5 },
-    "8": { "v": 8, "l": 6 },
-    "9": { "v": 14, "l": 5 },
-    " ": { "v": 1, "l": 2 },
-    "a": { "v": 15, "l": 5 },
-    "b": { "v": 10, "l": 4 },
-    "c": { "v": 2, "l": 5 },
-    "d": { "v": 35, "l": 6 },
-    "e": { "v": 3, "l": 6 },
-    "f": { "v": 50, "l": 6 },
-    "g": { "v": 11, "l": 5 },
-    "h": { "v": 24, "l": 5 },
-    "i": { "v": 63, "l": 7 },
-    "j": { "v": 232, "l": 9 },
-    "k": { "v": 18, "l": 6 },
-    "l": { "v": 23, "l": 5 },
-    "m": { "v": 22, "l": 5 },
-    "n": { "v": 44, "l": 6 },
-    "o": { "v": 127, "l": 7 },
-    "p": { "v": 19, "l": 5 },
-    "q": { "v": 155, "l": 8 },
-    "r": { "v": 7, "l": 5 },
-    "s": { "v": 4, "l": 4 },
-    "t": { "v": 6, "l": 5 },
-    "u": { "v": 16, "l": 5 },
-    "v": { "v": 59, "l": 7 },
-    "w": { "v": 0, "l": 5 },
-    "x": { "v": 28, "l": 5 },
-    "y": { "v": 40, "l": 7 },
-    "z": { "v": 27, "l": 8 },
-    "A": { "v": 30184, "l": 17 },
-    "B": { "v": 59368, "l": 17 },
-    "C": { "v": 79848, "l": 17 },
-    "D": { "v": 127976, "l": 17 },
+    "0": { "v": 223, "l": 8 }, /*11011111*/
+    "1": { "v": 31, "l": 7 }, /*0011111*/
+    "2": { "v": 12, "l": 6 }, /*001100*/
+    "3": { "v": 91, "l": 7 }, /*1011011*/
+    "4": { "v": 95, "l": 8 }, /*01011111*/
+    "5": { "v": 104, "l": 8 }, /*01101000*/
+    "6": { "v": 123, "l": 7 }, /*1111011*/
+    "7": { "v": 30, "l": 5 }, /*11110*/
+    "8": { "v": 8, "l": 6 }, /*001000*/
+    "9": { "v": 14, "l": 5 }, /*01110*/
+    " ": { "v": 1, "l": 2 }, /*01*/
+    "a": { "v": 15, "l": 5 }, /*01111*/
+    "b": { "v": 10, "l": 4 }, /*1010*/
+    "c": { "v": 2, "l": 5 }, /*00010*/
+    "d": { "v": 35, "l": 6 }, /*100011*/
+    "e": { "v": 3, "l": 6 }, /*000011*/
+    "f": { "v": 50, "l": 6 }, /*110010*/
+    "g": { "v": 11, "l": 5 }, /*01011*/
+    "h": { "v": 24, "l": 5 }, /*11000*/
+    "i": { "v": 63, "l": 7 }, /*0111111*/
+    "j": { "v": 232, "l": 9 }, /*011101000*/
+    "k": { "v": 18, "l": 6 }, /*010010*/
+    "l": { "v": 23, "l": 5 }, /*10111*/
+    "m": { "v": 22, "l": 5 }, /*10110*/
+    "n": { "v": 44, "l": 6 }, /*101100*/
+    "o": { "v": 127, "l": 7 }, /*1111111*/
+    "p": { "v": 19, "l": 5 }, /*10011*/
+    "q": { "v": 155, "l": 8 }, /*10011011*/
+    "r": { "v": 7, "l": 5 }, /*00111*/
+    "s": { "v": 4, "l": 4 }, /*0100*/
+    "t": { "v": 6, "l": 5 }, /*00110*/
+    "u": { "v": 16, "l": 5 }, /*10000*/
+    "v": { "v": 59, "l": 7 }, /*0111011*/
+    "w": { "v": 0, "l": 5 }, /*00000*/
+    "x": { "v": 28, "l": 5 }, /*11100*/
+    "y": { "v": 40, "l": 7 }, /*0101000*/
+    "z": { "v": 27, "l": 8 }, /*00011011*/
+    "A": { "v": 30184, "l": 17 }, /*00111010111101000*/
+    "B": { "v": 59368, "l": 17 }, /*01110011111101000*/
+    "C": { "v": 79848, "l": 17 }, /*10011011111101000*/
+    "D": { "v": 127976, "l": 17 }, /*11111001111101000*/
     //"E": { "v": 0, "l": 0 }, /**/
     //"F": { "v": 0, "l": 0 }, /**/
-    "G": { "v": 109544, "l": 17 },
-    "H": { "v": 80872, "l": 17 },
+    "G": { "v": 109544, "l": 17 }, /*11010101111101000*/
+    "H": { "v": 80872, "l": 17 }, /**/
     //"I": { "v": 0, "l": 0 }, /**/
     //"J": { "v": 0, "l": 0 }, /**/
-    "K": { "v": 19432, "l": 17 },
+    "K": { "v": 19432, "l": 17 }, /*00100101111101000*/
     //"L": { "v": 0, "l": 0 }, /**/
     //"M": { "v": 0, "l": 0 }, /**/
-    "N": { "v": 16872, "l": 16 },
-    "O": { "v": 110568, "l": 17 },
-    "P": { "v": 117736, "l": 17 },
+    "N": { "v": 16872, "l": 16 }, /*0100000111101000*/
+    "O": { "v": 110568, "l": 17 }, /*11010111111101000*/
+    "P": { "v": 117736, "l": 17 }, /*11100101111101000*/
     //"Q": { "v": 0, "l": 0 }, /**/
-    "R": { "v": 118760, "l": 17 },
-    "S": { "v": 44520, "l": 17 },
-    "T": { "v": 41960, "l": 17 },
+    "R": { "v": 118760, "l": 17 }, /*11100111111101000*/
+    "S": { "v": 44520, "l": 17 }, /*01010110111101000*/
+    "T": { "v": 41960, "l": 17 }, /*01010001111101000*/
     //"U": { "v": 0, "l": 0 }, /**/
-    "V": { "v": 70632, "l": 17 },
-    "W": { "v": 61416, "l": 17 },
+    "V": { "v": 70632, "l": 17 }, /*10001001111101000*/
+    "W": { "v": 61416, "l": 17 }, /*01110111111101000*/
     //"X": { "v": 0, "l": 0 }, /**/
-    "Y": { "v": 98280, "l": 17 },
+    "Y": { "v": 98280, "l": 17 }, /*10111111111101000*/
     "Z": { "v": 17384, "l": 17 } /*00100001111101000*/
 };
 function readCharItems(char, reader, mod, config) {
@@ -2475,7 +2388,7 @@ function readMercItems(char, reader, mod, config) {
                         if ((char === null || char === void 0 ? void 0 : char.header.level) === 1) {
                             return [2 /*return*/];
                         }
-                        throw new Error("Mercenary header 'jf' not found at position " + (reader.offset - 2 * 8));
+                        throw new Error("Mercenary header 'jf' not found at position ".concat(reader.offset - 2 * 8));
                     }
                     if (!(char.header.merc_id && parseInt(char.header.merc_id, 16) !== 0)) return [3 /*break*/, 2];
                     _a = char;
@@ -2522,7 +2435,7 @@ function readGolemItems(char, reader, mod, config) {
                         if ((char === null || char === void 0 ? void 0 : char.header.level) === 1) {
                             return [2 /*return*/];
                         }
-                        throw new Error("Golem header 'kf' not found at position " + (reader.offset - 2 * 8));
+                        throw new Error("Golem header 'kf' not found at position ".concat(reader.offset - 2 * 8));
                     }
                     has_golem = reader.ReadUInt8();
                     if (!(has_golem === 1)) return [3 /*break*/, 2];
@@ -2575,7 +2488,7 @@ function readCorpseItems(char, reader, mod, config) {
                             char.is_dead = 0;
                             return [2 /*return*/];
                         }
-                        throw new Error("Corpse header 'JM' not found at position " + (reader.offset - 2 * 8));
+                        throw new Error("Corpse header 'JM' not found at position ".concat(reader.offset - 2 * 8));
                     }
                     char.is_dead = reader.ReadUInt16(); //0x0002 [corpse count]
                     i = 0;
@@ -2634,7 +2547,7 @@ function readItems(reader, mod, version, config, char) {
                         if ((char === null || char === void 0 ? void 0 : char.header.level) === 1) {
                             return [2 /*return*/, []]; // TODO: return starter items based on class
                         }
-                        throw new Error("Item list header 'JM' not found at position " + (reader.offset - 2 * 8));
+                        throw new Error("Item list header 'JM' not found at position ".concat(reader.offset - 2 * 8));
                     }
                     count = reader.ReadUInt16();
                     i = 0;
@@ -2691,11 +2604,95 @@ function readItem(reader, mod, version, config) {
                     if (version <= 0x60) {
                         header = reader.ReadString(2);
                         if (header !== "JM") {
-                            throw new Error("Item header 'JM' not found at position " + (reader.offset - 2 * 8));
+                            throw new Error("Item header 'JM' not found at position ".concat(reader.offset - 2 * 8));
                         }
                     }
-                    constants = constants_1.getConstantData(mod, version);
-                    item = {};
+                    constants = (0, constants_1.getConstantData)(mod, version);
+                    item = {
+                        // Default values
+                        identified: 0,
+                        socketed: 0,
+                        new: 0,
+                        is_ear: 0,
+                        starter_item: 0,
+                        simple_item: 0,
+                        ethereal: 0,
+                        personalized: 0,
+                        personalized_name: "",
+                        given_runeword: 0,
+                        version: "",
+                        location_id: 0,
+                        equipped_id: 0,
+                        position_x: 0,
+                        position_y: 0,
+                        alt_position_id: 0,
+                        type: "",
+                        type_id: 0,
+                        type_name: "",
+                        quest_difficulty: 0,
+                        nr_of_items_in_sockets: 0,
+                        id: 0,
+                        level: 0,
+                        quality: 0,
+                        multiple_pictures: 0,
+                        picture_id: 0,
+                        class_specific: 0,
+                        low_quality_id: 0,
+                        timestamp: 0,
+                        ear_attributes: {
+                            class: 0,
+                            level: 0,
+                            name: "",
+                        },
+                        defense_rating: 0,
+                        max_durability: 0,
+                        current_durability: 0,
+                        total_nr_of_sockets: 0,
+                        quantity: 0,
+                        magic_prefix: 0,
+                        magic_suffix: 0,
+                        runeword_id: 0,
+                        runeword_name: "",
+                        runeword_attributes: [],
+                        set_id: 0,
+                        set_name: "",
+                        set_list_count: 0,
+                        set_attributes: [],
+                        set_attributes_num_req: 0,
+                        set_attributes_ids_req: 0,
+                        rare_name: "",
+                        rare_name2: "",
+                        magical_name_ids: [],
+                        unique_id: 0,
+                        unique_name: "",
+                        magic_attributes: [],
+                        combined_magic_attributes: [],
+                        socketed_items: [],
+                        base_damage: {
+                            mindam: 0,
+                            maxdam: 0,
+                            twohandmindam: 0,
+                            twohandmaxdam: 0,
+                        },
+                        reqstr: 0,
+                        reqdex: 0,
+                        inv_width: 0,
+                        inv_height: 0,
+                        inv_file: "",
+                        hd_inv_file: "",
+                        inv_transform: 0,
+                        transform_color: "",
+                        item_quality: 0,
+                        categories: [],
+                        file_index: 0,
+                        auto_affix_id: 0,
+                        _unknown_data: {},
+                        rare_name_id: 0,
+                        rare_name_id2: 0,
+                        displayed_magic_attributes: [],
+                        displayed_runeword_attributes: [],
+                        displayed_combined_magic_attributes: [],
+                    };
                     _readSimpleBits(item, reader, version, constants, config);
                     if (!item.simple_item) {
                         item.id = reader.ReadUInt32(32);
@@ -2860,7 +2857,7 @@ function writeItem(item, mod, version, config) {
         return __generator(this, function (_d) {
             switch (_d.label) {
                 case 0:
-                    constants = constants_1.getConstantData(mod, version);
+                    constants = (0, constants_1.getConstantData)(mod, version);
                     if (item._unknown_data === undefined) {
                         item._unknown_data = {};
                     }
@@ -3100,7 +3097,7 @@ function _lookupRareId(name, constants) {
 }
 function _writeSimpleBits(writer, mod, version, item) {
     var _a;
-    var constants = constants_1.getConstantData(mod, version);
+    var constants = (0, constants_1.getConstantData)(mod, version);
     writer.WriteBits(item._unknown_data.b0_3 || new Uint8Array(4), 4);
     writer.WriteBit(item.identified);
     writer.WriteBits(item._unknown_data.b5_10 || new Uint8Array(6), 6);
@@ -3167,13 +3164,13 @@ function _readMagicProperties(reader, constants) {
     while (id != 0x1ff) {
         var values = [];
         if (!constants.magical_properties[id]) {
-            throw new Error("Invalid magic property Id: " + id + " at position " + (reader.offset - 9));
+            throw new Error("Invalid magic property Id: ".concat(id, " at position ").concat(reader.offset - 9));
         }
         var num_of_properties = constants.magical_properties[id].np || 1;
         for (var i = 0; i < num_of_properties; i++) {
             var prop = constants.magical_properties[id + i];
             if (prop == null) {
-                throw new Error("Cannot find Magical Property for id: " + id + " at position " + reader.offset);
+                throw new Error("Cannot find Magical Property for id: ".concat(id, " at position ").concat(reader.offset));
             }
             if (prop.sP) {
                 var param = reader.ReadUInt32(prop.sP);
@@ -3190,7 +3187,7 @@ function _readMagicProperties(reader, constants) {
                     case 1:
                         //throw new Error(`Unimplemented encoding: ${prop.encode}`);
                         break;
-                    case 2: //chance to cast
+                    case 2: //chance to cast: 10bits skill id - 6bits skill level
                     case 3: //charges
                         values.push(param & 0x3f); //skill level
                         param = (param >> 6) & 0x3ff; //skll id
@@ -3201,7 +3198,7 @@ function _readMagicProperties(reader, constants) {
                 values.push(param);
             }
             if (!prop.sB) {
-                throw new Error("Save Bits is undefined for stat: " + id + ":" + prop.s + " at position " + reader.offset);
+                throw new Error("Save Bits is undefined for stat: ".concat(id, ":").concat(prop.s, " at position ").concat(reader.offset));
             }
             var v = reader.ReadUInt32(prop.sB);
             if (prop.sA) {
@@ -3237,7 +3234,7 @@ function _writeMagicProperties(writer, properties, constants) {
             for (var j = 0; j < num_of_properties; j++) {
                 var prop = constants.magical_properties[property.id + j];
                 if (prop == null) {
-                    throw new Error("Cannot find Magical Property for id: " + property.id);
+                    throw new Error("Cannot find Magical Property for id: ".concat(property.id));
                 }
                 if (prop.sP) {
                     var param = property.values[valueIdx++];
@@ -3274,7 +3271,7 @@ function _writeMagicProperties(writer, properties, constants) {
                         break;
                 }
                 if (!prop.sB) {
-                    throw new Error("Save Bits is undefined for stat: " + property.id + ":" + prop.s);
+                    throw new Error("Save Bits is undefined for stat: ".concat(property.id, ":").concat(prop.s));
                 }
                 writer.WriteUInt32(v, prop.sB);
             }
@@ -3302,10 +3299,8 @@ function _GetItemTXT(item, constants) {
 /*!**************************!*\
   !*** ./src/d2/skills.ts ***!
   \**************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-"use strict";
 
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -3322,7 +3317,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
@@ -3343,12 +3338,12 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.writeSkills = exports.readSkills = void 0;
 var bitwriter_1 = __webpack_require__(/*! ../binary/bitwriter */ "./src/binary/bitwriter.ts");
 var constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
 function readSkills(char, reader, mod) {
-    var constants = constants_1.getConstantData(mod, char.header.version);
+    var constants = (0, constants_1.getConstantData)(mod, char.header.version);
     char.skills = [];
     var offset = SkillOffset[char.header.class];
     var header = reader.ReadString(2); //0x0000 [skills header = 0x69, 0x66 "if"]
@@ -3357,7 +3352,7 @@ function readSkills(char, reader, mod) {
         if (char.header.level === 1) {
             return; // TODO: return starter skills based on class
         }
-        throw new Error("Skills header 'if' not found at position " + (reader.offset - 2 * 8));
+        throw new Error("Skills header 'if' not found at position ".concat(reader.offset - 2 * 8));
     }
     for (var i = 0; i < 30; i++) {
         var id = offset + i;
@@ -3401,24 +3396,22 @@ var SkillOffset = {
 /*!*************************!*\
   !*** ./src/d2/types.ts ***!
   \*************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.EItemQuality = exports.EStashType = void 0;
 var EStashType;
 (function (EStashType) {
     EStashType[EStashType["shared"] = 0] = "shared";
     EStashType[EStashType["private"] = 1] = "private";
-})(EStashType = exports.EStashType || (exports.EStashType = {}));
+})(EStashType || (exports.EStashType = EStashType = {}));
 var EItemQuality;
 (function (EItemQuality) {
     EItemQuality[EItemQuality["normal"] = 0] = "normal";
     EItemQuality[EItemQuality["exceptional"] = 1] = "exceptional";
     EItemQuality[EItemQuality["elite"] = 2] = "elite";
-})(EItemQuality = exports.EItemQuality || (exports.EItemQuality = {}));
+})(EItemQuality || (exports.EItemQuality = EItemQuality = {}));
 
 
 /***/ }),
@@ -3427,12 +3420,10 @@ var EItemQuality;
 /*!*************************!*\
   !*** ./src/d2/utils.ts ***!
   \*************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.nameRegex = void 0;
 // Character name must be 2-15 characters, with at most once "-" or "_" character not placed at first or last.
 exports.nameRegex = /^[A-Za-z](?=.{0,14}$)[A-Za-z]*[A-Za-z\-_][A-Za-z]+$/;
@@ -3444,12 +3435,10 @@ exports.nameRegex = /^[A-Za-z](?=.{0,14}$)[A-Za-z]*[A-Za-z\-_][A-Za-z]+$/;
 /*!*******************************************!*\
   !*** ./src/d2/versions/default_header.ts ***!
   \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.writeHeader = exports.readHeader = void 0;
 var bitreader_1 = __webpack_require__(/*! ../../binary/bitreader */ "./src/binary/bitreader.ts");
 var bitwriter_1 = __webpack_require__(/*! ../../binary/bitwriter */ "./src/binary/bitwriter.ts");
@@ -4174,5 +4163,40 @@ function _writeNPCData(npcs) {
 
 /***/ })
 
-/******/ });
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/d2/index.ts");
+/******/ 	d2s = __webpack_exports__;
+/******/ 	
+/******/ })()
+;
 //# sourceMappingURL=d2s.bundle.js.map

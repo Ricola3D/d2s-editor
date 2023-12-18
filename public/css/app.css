@@ -1,5 +1,43 @@
 :root {
   --grid-size: 32px;
+
+  --ms-font-size: 1rem;
+  --ms-line-height: 1.15;
+  --ms-bg: rgba(37, 37, 37, 0.98);
+  --ms-bg-disabled: rgba(55, 55, 55, 0.98);
+  --ms-border-color: rgba(80, 80, 80, 0.98);
+  --ms-border-width: 0px;
+  --ms-border-color-active: rgba(80, 80, 80, 0.98);
+  --ms-py: 0.2rem;
+  --ms-px: 0.3rem;
+  --ms-ring-width: 0px;
+  --ms-ring-color: #0d3e6d;
+  --ms-placeholder-color: #9CA3AF;
+  --ms-spinner-color: #1067b9;
+  --ms-caret-color: #444444;
+  --ms-clear-color: #444444;
+  --ms-clear-color-hover: #FFF;
+  --ms-dropdown-bg: rgba(37, 37, 37, 0.98);
+  --ms-dropdown-border-color: rgba(80, 80, 80, 0.98);
+  --ms-option-font-size: 1rem;
+  --ms-option-line-height: 1.15;
+  --ms-option-bg-pointed: #0d3e6d;
+  --ms-option-color-pointed: #FFF;
+  --ms-option-bg-selected: #1067b9;
+  --ms-option-color-selected: FFF;
+  --ms-option-bg-disabled: rgba(55, 55, 55, 0.98);
+  --ms-option-color-disabled: FFF;
+  --ms-option-bg-selected-pointed: #177fe0;
+  --ms-option-color-selected-pointed: FFF;
+  --ms-option-bg-selected-disabled: #051c31;
+  --ms-option-color-selected-disabled: FFF;
+  --ms-option-py: 0.3rem;
+  --ms-option-px: 0.3rem;
+  --ms-empty-color: rgba(80, 80, 80, 0.98);
+}
+
+.multiselect-search {
+  color: #FFF;
 }
 
 * {
@@ -292,6 +330,7 @@ ul {
   border-style: none;
   width: 100%; /* fit-content doesn't work well with input numbers */
 }
+
 .select2 {
   width: 100% !important;
 }
@@ -318,13 +357,12 @@ ul {
   border-style: none;
 }
 
-label {
+#skills-content label {
   margin-top: 0.5rem;
-  margin-bottom: 0.0rem;
 }
 
-label.custom-file-label {
-  margin-top: 0.0rem;
+label {
+  margin-bottom: 0.0rem;
 }
 
 input:invalid {

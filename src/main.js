@@ -1,15 +1,31 @@
 import { createApp } from 'vue'
 import App from './components/App.vue';
 
-import select2 from './components/Select2.vue'
-import Select2Directive from './Select2.js';
-import Select2 from 'vue3-select2-component';
+import VueTippy from 'vue-tippy'
+
+// import Multiselect from 'vue-multiselect';
+// import 'vue-multiselect/dist/vue-multiselect.min.css';
+
+import Multiselect from '@vueform/multiselect';
+import '@vueform/multiselect/themes/default.css';
+
 import utils from './utils.js';
 
 window.uuid = utils.uuidv4();
 
 createApp(App)
-.component('Select2', Select2)
-.component('select2', select2)
-.directive('select', Select2Directive)
+.component('multiselect', Multiselect)
+.use(
+  VueTippy,
+  // optional
+  {
+    directive: 'tippy', // => v-tippy
+    component: 'tippy', // => <tippy/>
+    componentSingleton: 'tippy-singleton', // => <tippy-singleton/>,
+    defaultProps: {
+      placement: 'auto-end',
+      allowHTML: true,
+    }, // => Global default options * see all props
+  }
+)
 .mount('#app');

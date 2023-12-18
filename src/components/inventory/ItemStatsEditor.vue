@@ -6,28 +6,23 @@
           <div class="col-md-1"><button type="button" class="btn btn-link red" @click="removeStat(statIdx)">&times;</button>
           </div>
           <div class="col-md-11">
-            <select2 :id="id + 'Stat' + statIdx" v-model.number="stat.id" @change="onItemModified">
-              <option v-for="it in stats_map" :value="it.i" :key="it.i">{{it.i.toString().padStart(3, '0')}}_{{ it.v.s }}</option>
-            </select2>
+            <multiselect v-model.number="stat.id" :options="stats_options" :searchable="true" :canDeselect="false" :canClear="false" :required="true" @update:model-value="onItemModified"/>
           </div>
         </div>
       </div>
 
-      <div class="col-md-2" v-for="idx in numValues(stat.id)">
-        <select2 class="edit-box" :id="id + 'Stat' + statIdx + 'Index'+ idx" v-model.number="stat.values[idx-1]"
-          v-if="isClass(stat.id, idx)" @change="onItemModified">
-          <option v-for="(it, i) in classes" :value="i" :key="i">{{it.co}}</option>
-        </select2>
-        <select2 class="edit-box" :id="id + 'Stat' + statIdx + 'Index'+ idx" v-model.number="stat.values[idx-1]"
-          v-else-if="isClassSkill(stat.id, idx)" @change="onItemModified">
-          <option v-for="(it, i) in classes[stat.values[idx]].ts" :value="i" :key="i">{{it}}</option>
-        </select2>
-        <select2 class="edit-box" :id="id + 'Stat' + statIdx + 'Index'+ idx" v-model.number="stat.values[idx-1]"
-          v-else-if="isSkill(stat.id, idx)" @change="onItemModified">
-          <option v-for="it in skills" :value="it.i" :key="it.i">{{it.v.s}}</option>
-        </select2>
-        <input type="number" class= "edit-box" :min="getMinValue(stat.id)" :max="getMaxValue(stat.id)" @input="changeStatValue(stat.id, stat.values, idx-1)"
-          :id="id + 'Stat' + statIdx + 'Index'+ idx" v-model.number="stat.values[idx-1]" v-else>
+      <div class="col-md-2" v-for="valIdx in numValues(stat.id)">
+        <template v-if="isClass(stat.id, valIdx)">
+          <multiselect v-model.number="stat.values[valIdx-1]" :options="classes.map(charClass => ({value: charClass.id, label: charClass.co}))" :searchable="true" :canDeselect="false" :canClear="false" @update:model-value="onItemModified"/>
+        </template>
+        <template v-else-if="isClassSkill(stat.id, valIdx)">
+          <multiselect v-model.number="stat.values[valIdx-1]" :options="[0, 1, 2].map(idx2 => ({value: idx2, label: classes[stat.values[valIdx]].ts[idx2]}))" :searchable="true" :canDeselect="false" :canClear="false" @update:model-value="onItemModified"/>
+        </template>
+        <template v-else-if="isSkill(stat.id, valIdx)">
+          <multiselect v-model.number="stat.values[valIdx-1]" :options="skills_options" :searchable="true" :canDeselect="false" :canClear="false" @update:model-value="onItemModified"/>
+        </template>
+        <input type="number" class= "edit-box" :min="getMinValue(stat.id)" :max="getMaxValue(stat.id)" @input="changeStatValue(stat.id, stat.values, valIdx-1)"
+          :id="id + 'Stat' + statIdx + 'Index'+ valIdx" v-model.number="stat.values[valIdx-1]" v-else>
       </div>
     </div>
     
@@ -39,6 +34,12 @@
 
 <script>
 import utils from '../../utils.js';
+import tippy from 'tippy.js';
+
+$(document)
+  .on('mouseenter', '#select2-select-tooltip-results .select2-results__option', function(){
+    console.log("id: " + id);
+  });
 
 export default {
   props: {
@@ -47,8 +48,10 @@ export default {
   },
   data() {
     return {
-      stats_map: window[`${window.work_mod}_constants_${window.work_version}`].magical_properties.map((e, i) => { return { i: i, v: e } }).filter(e => e.v != null && e.v.s != null),
-      skills: window[`${window.work_mod}_constants_${window.work_version}`].skills.map((e, i) => { return { i: i, v: e } }).filter(e => e.v != null && e.v.s != null).sort((a, b) => { return a.v.s.localeCompare(b.v.s) }),
+      stats_options: window[`${window.work_mod}_constants_${window.work_version}`].magical_properties
+        .filter(stat => stat && stat.s)
+        .map(stat => ({value: stat.id, label: `${stat.id.toString().padStart(3, '0')}_${stat.s}`, desc: stat.dP || ""})),
+      skills_options: window[`${window.work_mod}_constants_${window.work_version}`].skills.filter(skill => skill && skill.s).map(skill => ({value: skill.id, label: skill.s})).sort((a, b) => { return a.label.localeCompare(b.label) }),
       classes: window[`${window.work_mod}_constants_${window.work_version}`].classes,
     }
   },
@@ -141,6 +144,15 @@ export default {
         return 2;
       }
       return 1;
+    },
+    formatStateOption(state) {
+      if (!state.id) {
+        return state.text;
+      }
+      const stat = window[`${window.work_mod}_constants_${window.work_version}`].magical_properties[state.id];
+      let tooltip = stat.dP || stat.dN;
+      const $state = $(`<span title="${tooltip}">${state.text}</span>`);
+      return $state;
     }
   }
 };  
