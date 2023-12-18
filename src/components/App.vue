@@ -896,31 +896,8 @@ export default {
         d2s.setConstantData('vanilla', 0x63, window.vanilla_constants_99) //2.5+ (D2R)
         d2s.setConstantData('remodded', 0x63, window.remodded_constants_99) //2.5+ (D2R)
 
-        if (window.palettes == undefined) {
-            window.palettes = {}
-            window.palettes['ACT1'] = []
-            let response = await fetch(
-                `d2/game_data/${window.work_mod}/version_${window.work_version}/global/palette/ACT1/pal.dat`
-            )
-            let buffer = new Uint8Array(await response.arrayBuffer())
-            for (let i = 0; i < 256; i += 1) {
-                window.palettes['ACT1'].push([
-                    buffer[i * 3 + 2],
-                    buffer[i * 3 + 1],
-                    buffer[i * 3],
-                ])
-            }
-            for (const [k, v] of Object.entries(utils.colormaps)) {
-                response = await fetch(v)
-                buffer = new Uint8Array(await response.arrayBuffer())
-                window.palettes[k] = []
-                for (let i = 0; i < Object.keys(utils.colors).length; i += 1) {
-                    window.palettes[k].push(
-                        buffer.slice(0 + i * 256, 256 + i * 256)
-                    )
-                }
-            }
-        }
+        await this.getPaletteData();
+
         if (localStorage.grid) {
             this.grid = JSON.parse(localStorage.getItem('grid'))
         }
