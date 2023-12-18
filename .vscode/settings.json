@@ -9,7 +9,7 @@
     "**/*.bundle.min.js": true,
     "**/*_constants_*.bundle.js": true,
     "**/*.bundle.js.map": true,
-    "**/d2s.bundle.js": false,
+    "**/d2s.bundle.js": false
   },
   "files.eol": "\n",
   "files.exclude": {
@@ -35,7 +35,5 @@
     "titleBar.inactiveForeground": "#e7e7e799"
   },
   "peacock.color": "#215732",
-  "cSpell.words": [
-    "runeword"
-  ]
+  "cSpell.words": ["runeword"]
 }

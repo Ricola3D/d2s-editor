@@ -17,22 +17,26 @@
     "rollup-plugin-vue": "^6.0.0",
     "select2": "^4.1.0-rc.0",
     "tippy.js": "^6.3.7",
-    "vue": "^3.3.11",
+    "vue": "^3.3.12",
     "vue-multiselect": "^3.0.0-beta.3",
     "vue-tippy": "^6.3.1"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.23.3",
     "@vue/cli-plugin-babel": "~5.0.8",
     "@vue/cli-plugin-eslint": "~5.0.8",
     "@vue/cli-plugin-pwa": "^5.0.8",
     "@vue/cli-service": "~5.0.8",
-    "@vue/compiler-sfc": "^3.3.11",
+    "@vue/compiler-sfc": "^3.3.12",
     "@web/rollup-plugin-copy": "^0.5.1",
     "@web/rollup-plugin-html": "^2.1.2",
-    "babel-eslint": "^10.1.0",
     "dotenv-webpack": "^8.0.1",
-    "eslint": "^8.55.0",
-    "eslint-plugin-vue": "^9.19.2"
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-vue": "^9.19.2",
+    "prettier": "^3.1.1"
   },
   "eslintConfig": {
     "root": true,
