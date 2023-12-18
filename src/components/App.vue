@@ -903,8 +903,23 @@ export default {
         }
 
         // Add all the base weapons & armors to the insertable items list
-        this.addItemsPackBases('weapon_items', 'Weapons')
-        this.addItemsPackBases('armor_items', 'Armors')
+        if (sessionStorage.itempack) {
+          const json = sessionStorage.getItem("itempack");
+          console.log(json);
+          this.itempack = JSON.parse(json);
+          console.log(this.itempack);
+        } else {
+          await this.addItemsPackBases('weapon_items', 'Weapons')
+          await this.addItemsPackBases('armor_items', 'Armors')
+          sessionStorage.setItem("itempack", JSON.stringify(this.itempack));
+        }
+
+        this.item_options = this.itempack.map((item) => ({
+            id: item.key,
+            text: item.key,
+            value: item.value,
+        }))
+        console.log(this.item_options);
     },
     methods: {
         setTheme(theme) {
@@ -1622,12 +1637,6 @@ export default {
                     },
                 })
             }
-
-            this.item_options = this.itempack.map((item) => ({
-                id: item.key,
-                text: item.key,
-                value: item.value,
-            }))
         },
     },
 }
