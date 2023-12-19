@@ -5,7 +5,6 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="octicon octicon-clippy navbar-brand">
-                <i class="fa fa-fw fa-github" />
                 <a href="https://github.com/ricola3d">Ricola3D</a> /
                 <a
                     class="font-weight-bold"

@@ -96,14 +96,6 @@
 import utils from '../../utils.js'
 import tippy from 'tippy.js'
 
-$(document).on(
-    'mouseenter',
-    '#select2-select-tooltip-results .select2-results__option',
-    function () {
-        console.log('id: ' + id)
-    }
-)
-
 export default {
     props: {
         id: String,
