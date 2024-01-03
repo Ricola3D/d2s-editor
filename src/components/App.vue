@@ -904,7 +904,6 @@ export default {
         // Add all the base weapons & armors to the insertable items list
         if (sessionStorage.itempack) {
           const json = sessionStorage.getItem("itempack");
-          console.log(json);
           this.itempack = JSON.parse(json);
           console.log(this.itempack);
         } else {
