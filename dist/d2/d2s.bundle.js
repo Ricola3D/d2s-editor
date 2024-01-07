@@ -284,6 +284,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.enhanceItem = exports.enhanceItems = exports.enhancePlayerAttributes = exports.enhanceAttributes = void 0;
 var constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
 var utils_1 = __webpack_require__(/*! ./utils */ "./src/d2/utils.ts");
+var types_1 = __webpack_require__(/*! ./types */ "./src/d2/types.ts");
 var ItemType;
 (function (ItemType) {
     ItemType[ItemType["Armor"] = 1] = "Armor";
@@ -472,7 +473,7 @@ function enhanceItem(item, mod, version, level, config, parent) {
                 item.transform_color = constants.magic_suffixes[item.magic_suffix].tc;
             }
         }
-        else if (item.magical_name_ids && item.magical_name_ids.length === 6) {
+        else if (item.quality == types_1.Quality.Rare && item.magical_name_ids) {
             for (var i = 0; i < 6; i++) {
                 var id = item.magical_name_ids[i];
                 if (id) {
@@ -1634,7 +1635,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.types = exports.Quality = exports.ItemType = exports.setConstantData = exports.getConstantData = exports.enhancePlayerAttributes = exports.enhanceItems = exports.enhanceAttributes = exports.writeSkills = exports.readSkills = exports.writeAttributes = exports.readAttributes = exports.fixHeader = exports.writeHeaderData = exports.writeHeader = exports.readHeaderData = exports.readHeader = void 0;
+exports.types = exports.setConstantData = exports.getConstantData = exports.enhancePlayerAttributes = exports.enhanceItems = exports.enhanceAttributes = exports.writeSkills = exports.readSkills = exports.writeAttributes = exports.readAttributes = exports.fixHeader = exports.writeHeaderData = exports.writeHeader = exports.readHeaderData = exports.readHeader = void 0;
 __exportStar(__webpack_require__(/*! ./d2s */ "./src/d2/d2s.ts"), exports);
 var header_1 = __webpack_require__(/*! ./header */ "./src/d2/header.ts");
 Object.defineProperty(exports, "readHeader", ({ enumerable: true, get: function () { return header_1.readHeader; } }));
@@ -1655,9 +1656,6 @@ Object.defineProperty(exports, "enhancePlayerAttributes", ({ enumerable: true, g
 var constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
 Object.defineProperty(exports, "getConstantData", ({ enumerable: true, get: function () { return constants_1.getConstantData; } }));
 Object.defineProperty(exports, "setConstantData", ({ enumerable: true, get: function () { return constants_1.setConstantData; } }));
-var items_1 = __webpack_require__(/*! ./items */ "./src/d2/items.ts");
-Object.defineProperty(exports, "ItemType", ({ enumerable: true, get: function () { return items_1.ItemType; } }));
-Object.defineProperty(exports, "Quality", ({ enumerable: true, get: function () { return items_1.Quality; } }));
 exports.types = __importStar(__webpack_require__(/*! ./types */ "./src/d2/types.ts"));
 __exportStar(__webpack_require__(/*! ./utils */ "./src/d2/utils.ts"), exports);
 
@@ -1708,28 +1706,11 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports._writeMagicProperties = exports._readMagicProperties = exports.writeItem = exports.readItem = exports.writeItems = exports.readItems = exports.writeCorpseItem = exports.readCorpseItems = exports.writeGolemItems = exports.readGolemItems = exports.writeMercItems = exports.readMercItems = exports.writeCharItems = exports.readCharItems = exports.Quality = exports.ItemType = void 0;
+exports._writeMagicProperties = exports._readMagicProperties = exports.writeItem = exports.readItem = exports.writeItems = exports.readItems = exports.writeCorpseItem = exports.readCorpseItems = exports.writeGolemItems = exports.readGolemItems = exports.writeMercItems = exports.readMercItems = exports.writeCharItems = exports.readCharItems = void 0;
 var bitreader_1 = __webpack_require__(/*! ../binary/bitreader */ "./src/binary/bitreader.ts");
 var bitwriter_1 = __webpack_require__(/*! ../binary/bitwriter */ "./src/binary/bitwriter.ts");
 var constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
-var ItemType;
-(function (ItemType) {
-    ItemType[ItemType["Armor"] = 1] = "Armor";
-    ItemType[ItemType["Shield"] = 2] = "Shield";
-    ItemType[ItemType["Weapon"] = 3] = "Weapon";
-    ItemType[ItemType["Other"] = 4] = "Other";
-})(ItemType || (exports.ItemType = ItemType = {}));
-var Quality;
-(function (Quality) {
-    Quality[Quality["Low"] = 1] = "Low";
-    Quality[Quality["Normal"] = 2] = "Normal";
-    Quality[Quality["Superior"] = 3] = "Superior";
-    Quality[Quality["Magic"] = 4] = "Magic";
-    Quality[Quality["Set"] = 5] = "Set";
-    Quality[Quality["Rare"] = 6] = "Rare";
-    Quality[Quality["Unique"] = 7] = "Unique";
-    Quality[Quality["Crafted"] = 8] = "Crafted";
-})(Quality || (exports.Quality = Quality = {}));
+var types_1 = __webpack_require__(/*! ./types */ "./src/d2/types.ts");
 // Right now I'm missing characters (case sensitive) E, F, I, J, L, M, Q, U, X.
 // prettier-ignore
 //huffman tree
@@ -2665,7 +2646,7 @@ function readItem(reader, mod, version, config) {
                         set_attributes_ids_req: 0,
                         rare_name: "",
                         rare_name2: "",
-                        magical_name_ids: [],
+                        magical_name_ids: [0, 0, 0, 0, 0, 0],
                         unique_id: 0,
                         unique_name: "",
                         magic_attributes: [],
@@ -2710,42 +2691,41 @@ function readItem(reader, mod, version, config) {
                             item.auto_affix_id = reader.ReadUInt16(11);
                         }
                         switch (item.quality) {
-                            case Quality.Low:
+                            case types_1.Quality.Low:
                                 item.low_quality_id = reader.ReadUInt8(3);
                                 break;
-                            case Quality.Normal:
+                            case types_1.Quality.Normal:
                                 break;
-                            case Quality.Superior:
+                            case types_1.Quality.Superior:
                                 item.file_index = reader.ReadUInt8(3);
                                 break;
-                            case Quality.Magic:
+                            case types_1.Quality.Magic:
                                 item.magic_prefix = reader.ReadUInt16(11);
                                 item.magic_suffix = reader.ReadUInt16(11);
                                 break;
-                            case Quality.Set:
+                            case types_1.Quality.Set:
                                 item.set_id = reader.ReadUInt16(12);
                                 item.set_name = constants.set_items[item.set_id] ? constants.set_items[item.set_id].n : null;
                                 break;
-                            case Quality.Unique:
+                            case types_1.Quality.Unique:
                                 item.unique_id = reader.ReadUInt16(12);
                                 item.unique_name = constants.unq_items[item.unique_id] ? constants.unq_items[item.unique_id].n : null;
                                 break;
-                            case Quality.Rare:
-                            case Quality.Crafted:
+                            case types_1.Quality.Rare:
+                            case types_1.Quality.Crafted:
                                 item.rare_name_id = reader.ReadUInt8(8);
                                 if (item.rare_name_id)
                                     item.rare_name = constants.rare_names[item.rare_name_id] ? constants.rare_names[item.rare_name_id].n : null;
                                 item.rare_name_id2 = reader.ReadUInt8(8);
                                 if (item.rare_name_id2)
                                     item.rare_name2 = constants.rare_names[item.rare_name_id2] ? constants.rare_names[item.rare_name_id2].n : null;
-                                item.magical_name_ids = [];
                                 for (i = 0; i < 6; i++) {
                                     prefix = reader.ReadBit();
                                     if (prefix === 1) {
                                         item.magical_name_ids[i] = reader.ReadUInt16(11);
                                     }
                                     else {
-                                        item.magical_name_ids[i] = null;
+                                        item.magical_name_ids[i] = 0;
                                     }
                                 }
                                 break;
@@ -2784,10 +2764,10 @@ function readItem(reader, mod, version, config) {
                         }
                         //realm data
                         item.timestamp = reader.ReadUInt8(1);
-                        if (item.type_id === ItemType.Armor) {
+                        if (item.type_id === types_1.ItemType.Armor) {
                             item.defense_rating = reader.ReadUInt16(constants.magical_properties[31].sB) - constants.magical_properties[31].sA;
                         }
-                        if (item.type_id === ItemType.Armor || item.type_id === ItemType.Weapon) {
+                        if (item.type_id === types_1.ItemType.Armor || item.type_id === types_1.ItemType.Weapon) {
                             item.max_durability = reader.ReadUInt16(constants.magical_properties[73].sB) - constants.magical_properties[73].sA;
                             if (item.max_durability > 0) {
                                 item.current_durability = reader.ReadUInt16(constants.magical_properties[72].sB) - constants.magical_properties[72].sA;
@@ -2803,7 +2783,7 @@ function readItem(reader, mod, version, config) {
                             item.total_nr_of_sockets = 0;
                         }
                         plist_flag = 0;
-                        if (item.quality === Quality.Set) {
+                        if (item.quality === types_1.Quality.Set) {
                             plist_flag = reader.ReadUInt8(5);
                             item.set_list_count = 0;
                             item._unknown_data.plist_flag = plist_flag;
@@ -2885,30 +2865,30 @@ function writeItem(item, mod, version, config) {
                             writer.WriteUInt16(item.auto_affix_id || 0, 11);
                         }
                         switch (item.quality) {
-                            case Quality.Low:
+                            case types_1.Quality.Low:
                                 writer.WriteUInt8(item.low_quality_id, 3);
                                 break;
-                            case Quality.Normal:
+                            case types_1.Quality.Normal:
                                 break;
-                            case Quality.Superior:
+                            case types_1.Quality.Superior:
                                 writer.WriteUInt8(item.file_index || 0, 3);
                                 break;
-                            case Quality.Magic:
+                            case types_1.Quality.Magic:
                                 writer.WriteUInt16(item.magic_prefix, 11);
                                 writer.WriteUInt16(item.magic_suffix, 11);
                                 break;
-                            case Quality.Set:
+                            case types_1.Quality.Set:
                                 writer.WriteUInt16(item.set_id, 12);
                                 break;
-                            case Quality.Unique:
+                            case types_1.Quality.Unique:
                                 writer.WriteUInt16(item.unique_id, 12);
                                 break;
-                            case Quality.Rare:
-                            case Quality.Crafted:
+                            case types_1.Quality.Rare:
+                            case types_1.Quality.Crafted:
                                 writer.WriteUInt8(item.rare_name_id !== undefined ? item.rare_name_id : _lookupRareId(item.rare_name, constants), 8);
                                 writer.WriteUInt8(item.rare_name_id2 !== undefined ? item.rare_name_id2 : _lookupRareId(item.rare_name2, constants), 8);
                                 for (i = 0; i < 6; i++) {
-                                    magical_name_id = item.magical_name_ids !== undefined ? item.magical_name_ids[i] : undefined;
+                                    magical_name_id = item.magical_name_ids !== undefined ? item.magical_name_ids[i] : 0;
                                     if (magical_name_id) {
                                         writer.WriteBit(1);
                                         writer.WriteUInt16(magical_name_id, 11);
@@ -2948,10 +2928,10 @@ function writeItem(item, mod, version, config) {
                             writer.WriteUInt8(1, 5);
                         }
                         writer.WriteUInt8(item.timestamp, 1);
-                        if (item.type_id === ItemType.Armor || item.type_id === ItemType.Shield) {
+                        if (item.type_id === types_1.ItemType.Armor || item.type_id === types_1.ItemType.Shield) {
                             writer.WriteUInt16(item.defense_rating + constants.magical_properties[31].sA, constants.magical_properties[31].sB);
                         }
-                        if (item.type_id === ItemType.Armor || item.type_id === ItemType.Shield || item.type_id === ItemType.Weapon) {
+                        if (item.type_id === types_1.ItemType.Armor || item.type_id === types_1.ItemType.Shield || item.type_id === types_1.ItemType.Weapon) {
                             writer.WriteUInt16(item.max_durability || 0, constants.magical_properties[73].sB);
                             if (item.max_durability > 0) {
                                 writer.WriteUInt16(item.current_durability, constants.magical_properties[72].sB);
@@ -2963,7 +2943,7 @@ function writeItem(item, mod, version, config) {
                         if (item.socketed === 1) {
                             writer.WriteUInt8(item.total_nr_of_sockets, 4);
                         }
-                        if (item.quality === Quality.Set) {
+                        if (item.quality === types_1.Quality.Set) {
                             set_attribute_count = item.set_attributes != null ? item.set_attributes.length : 0;
                             plist_flag = (1 << set_attribute_count) - 1;
                             writer.WriteUInt8(item._unknown_data.plist_flag || plist_flag, 5);
@@ -3077,14 +3057,14 @@ function _readSimpleBits(item, reader, version, constants, config) {
         var details = _GetItemTXT(item, constants);
         item.categories = details === null || details === void 0 ? void 0 : details.c;
         if (item === null || item === void 0 ? void 0 : item.categories.includes("Any Armor")) {
-            item.type_id = ItemType.Armor;
+            item.type_id = types_1.ItemType.Armor;
         }
         else if (item === null || item === void 0 ? void 0 : item.categories.includes("Weapon")) {
-            item.type_id = ItemType.Weapon;
+            item.type_id = types_1.ItemType.Weapon;
             details = constants.weapon_items[item.type];
         }
         else {
-            item.type_id = ItemType.Other;
+            item.type_id = types_1.ItemType.Other;
         }
         var bits = item.simple_item ? 1 : 3;
         if ((_a = item.categories) === null || _a === void 0 ? void 0 : _a.includes("Quest")) {
@@ -3403,7 +3383,7 @@ var SkillOffset = {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.EItemQuality = exports.EStashType = void 0;
+exports.Quality = exports.ItemType = exports.EItemQuality = exports.EStashType = void 0;
 var EStashType;
 (function (EStashType) {
     EStashType[EStashType["shared"] = 0] = "shared";
@@ -3415,6 +3395,24 @@ var EItemQuality;
     EItemQuality[EItemQuality["exceptional"] = 1] = "exceptional";
     EItemQuality[EItemQuality["elite"] = 2] = "elite";
 })(EItemQuality || (exports.EItemQuality = EItemQuality = {}));
+var ItemType;
+(function (ItemType) {
+    ItemType[ItemType["Armor"] = 1] = "Armor";
+    ItemType[ItemType["Shield"] = 2] = "Shield";
+    ItemType[ItemType["Weapon"] = 3] = "Weapon";
+    ItemType[ItemType["Other"] = 4] = "Other";
+})(ItemType || (exports.ItemType = ItemType = {}));
+var Quality;
+(function (Quality) {
+    Quality[Quality["Low"] = 1] = "Low";
+    Quality[Quality["Normal"] = 2] = "Normal";
+    Quality[Quality["Superior"] = 3] = "Superior";
+    Quality[Quality["Magic"] = 4] = "Magic";
+    Quality[Quality["Set"] = 5] = "Set";
+    Quality[Quality["Rare"] = 6] = "Rare";
+    Quality[Quality["Unique"] = 7] = "Unique";
+    Quality[Quality["Crafted"] = 8] = "Crafted";
+})(Quality || (exports.Quality = Quality = {}));
 
 
 /***/ }),

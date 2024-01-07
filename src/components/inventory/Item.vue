@@ -159,7 +159,7 @@ export default {
       let name = item.type_name
       const constants =
         window[`${window.work_mod}_constants_${window.work_version}`]
-      if (item.quality === d2s.Quality.Magic && item.magic_prefix) {
+      if (item.quality === d2s.types.Quality.Magic && item.magic_prefix) {
         let magic_prefix_name = constants.magic_prefixes[item.magic_prefix]
           ? constants.magic_prefixes[item.magic_prefix].n
           : null
@@ -168,7 +168,7 @@ export default {
         }
         name = `${name}\\n${magic_prefix_name}(${item.magic_prefix}) ${name}`
       }
-      if (item.quality === d2s.Quality.Magic && item.magic_suffix) {
+      if (item.quality === d2s.types.Quality.Magic && item.magic_suffix) {
         let magic_suffix_name = constants.magic_suffixes[item.magic_suffix]
           ? constants.magic_suffixes[item.magic_suffix].n
           : null
@@ -177,7 +177,7 @@ export default {
         }
         name = `${name} ${magic_suffix_name}(${item.magic_suffix})`
       }
-      if (item.quality === d2s.Quality.Rare && item.rare_name_id) {
+      if (item.quality === d2s.types.Quality.Rare && item.rare_name_id) {
         let rare_name = constants.rare_names[item.rare_name_id]
           ? constants.rare_names[item.rare_name_id].n
           : null
@@ -186,7 +186,7 @@ export default {
         }
         name = `${name}\\n${rare_name}(${item.rare_name_id})`
       }
-      if (item.quality === d2s.Quality.Rare && item.rare_name_id2) {
+      if (item.quality === d2s.types.Quality.Rare && item.rare_name_id2) {
         let rare_name2 = constants.rare_names[item.rare_name_id2]
           ? constants.rare_names[item.rare_name_id2].n
           : null
@@ -198,7 +198,7 @@ export default {
       const personalizedName = item.personalized_name
         ? `${item.personalized_name}'s `
         : ''
-      if (item.quality === d2s.Quality.Set && item.set_id) {
+      if (item.quality === d2s.types.Quality.Set && item.set_id) {
         let set_name = constants.set_items[item.set_id]
           ? constants.set_items[item.set_id].n
           : null
@@ -207,7 +207,7 @@ export default {
         }
         name = `${name}\\n${personalizedName}${set_name}(${item.set_id})`
       }
-      if (item.quality === d2s.Quality.Unique && item.unique_id) {
+      if (item.quality === d2s.types.Quality.Unique && item.unique_id) {
         let unique_name = constants.unq_items[item.unique_id]
           ? constants.unq_items[item.unique_id].n
           : null
