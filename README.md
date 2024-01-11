@@ -19,7 +19,7 @@ This is a basic Diablo 2 save editor for D2 and D2R. The parser uses the TXT dat
 4. On first install or version updates, in the command prompt, run the following commands to install the editor:
 
 ```
-npm install
+npm install --legacy-peer-deps
 npm run build
 ```
 
