@@ -4,13 +4,15 @@
       <div class="col-md-4">
         <div class="form-row">
           <div class="col-md-1">
-            <button
-              type="button"
-              class="btn btn-link red"
-              @click="removeStat(statIdx)"
-            >
-              &times;
-            </button>
+            <template v-if="!disabled">
+              <button
+                type="button"
+                class="btn btn-link red"
+                @click="removeStat(statIdx)"
+              >
+                &times;
+              </button>
+            </template>
           </div>
           <div class="col-md-11">
             <multiselect
@@ -96,6 +98,7 @@ export default {
   props: {
     id: String,
     itemStats: Array,
+    disabled: Boolean,
   },
   data() {
     return {
@@ -112,7 +115,7 @@ export default {
         `${window.work_mod}_constants_${window.work_version}`
       ].skills
         .filter((skill) => skill && skill.s)
-        .map((skill) => ({ value: skill.id, label: skill.s }))
+        .map((skill) => ({ value: skill.id, label: `${skill.s}${skill.id > 5 && !skill.c ? " (item)" : ""}` }))
         .sort((a, b) => {
           return a.label.localeCompare(b.label)
         }),
@@ -135,7 +138,7 @@ export default {
         window[`${window.work_mod}_constants_${window.work_version}`]
           .magical_properties[statId]
       let add = stat.sA ? stat.sA : 0
-      return utils.shift(1, stat.sB) - 1 - stat.sA
+      return utils.shift(1, stat.sB) - 1 - add
     },
     getMinValue(statId) {
       //for the stat to be present need value > 0

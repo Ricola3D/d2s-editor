@@ -7,7 +7,6 @@
     "**/dist": true,
     "package-lock.json": true,
     "**/*.bundle.min.js": true,
-    "**/*_constants_*.bundle.js": true,
     "**/*.bundle.js.map": true,
     "**/d2s.bundle.js": false
   },

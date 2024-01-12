@@ -527,11 +527,10 @@
                           @item-selected="onSelect"
                         />
                         <ItemEditor
-                          v-if="selected"
+                          v-if="selectedItem"
                           :id="'Selected'"
                           ref="editor"
-                          v-model:item="selected"
-                          :location="location"
+                          v-model:item="selectedItem"
                           @item-event="onEvent"
                         />
                       </div>
@@ -664,7 +663,6 @@ export default {
     return {
       save: null,
       activeTab: 1,
-      selected: null,
       itempack: ItemPack,
       item_options: [],
       previewModel: null,
@@ -677,7 +675,7 @@ export default {
         stash: { w: 16, h: 13 },
         cube: { w: 16, h: 13 },
       },
-      location: {},
+      selectedItem: null,
       theme: localStorage.getItem('theme'),
     }
   },
@@ -815,18 +813,8 @@ export default {
     changeTab(i) {
       this.activeTab = i
     },
-    updateLocation(val) {
-      this.location = {
-        location: val.location_id,
-        equipped_location: val.equipped_id,
-        x: val.position_x,
-        y: val.position_y,
-        storage_page: val.alt_position_id,
-      }
-    },
     onSelect(e) {
-      this.selected = e
-      this.updateLocation(this.selected)
+      this.selectedItem = e
     },
     findIndex(list, i) {
       return list.findIndex(
@@ -840,8 +828,7 @@ export default {
     },
     deleteItem(list, idx) {
       list.splice(idx, 1)
-      this.selected = null
-      this.location = null
+      this.selectedItem = null
     },
     // Method to share an item (through clipboard). By default we share as a vanilla 99 item.
     async shareItem(item) {
@@ -918,7 +905,6 @@ export default {
         element.style.width = ''
         element.style.height = ''
       } else if (e.type === 'pasteAt') {
-        const location_id = this.activeTab === 1 ? 1 : 0 // Equipped
         const storage_page =
           this.activeTab === 1
             ? 1 // Equipped
@@ -927,10 +913,11 @@ export default {
               : this.activeTab === 4
                 ? 4 // Cube
                 : 1 // Inventory
+        // For now, paste can only be made in the grid
         if (this.canPlaceItem(e.item, storage_page, e.grid[0], e.grid[1])) {
           this.paste(e.item, [
-            location_id,
-            this.location?.equipped_location,
+            0, // location_id: 0 (Stored)
+            0, // equipped_id: 0 (Stored)
             e.grid[0],
             e.grid[1],
             storage_page,
@@ -1041,8 +1028,7 @@ export default {
         })
       }
       this.save.items.push(copy)
-      this.selected = copy
-      this.updateLocation(this.selected)
+      this.selectedItem = copy
     },
     findSafeLocation(item) {
       //inv = 1, cube = 4, stash = 5
@@ -1124,20 +1110,12 @@ export default {
       if (!item) {
         return
       }
-      if (!item.magic_attributes) item.magic_attributes = []
       item.src = await utils.getInventoryImageSrc(item)
-      if (!item.socketed_items) {
-        return
-      }
-      item.socketed_attributes = []
+
       for (let i = 0; i < item.socketed_items.length; i++) {
         item.socketed_items[i].src = await utils.getInventoryImageSrc(
           item.socketed_items[i]
         )
-        item.socketed_items[i].magic_attributes.forEach((it, idx) => {
-          if (item.socketed_attributes.findIndex((x) => x.id == it.id) == -1)
-            item.socketed_attributes.push(it)
-        })
       }
     },
     newChar(index) {
@@ -1157,7 +1135,7 @@ export default {
     readBuffer(bytes, mod, filename) {
       let that = this
       this.save = null
-      this.selected = null
+      this.selectedItem = null
       d2s.read(bytes, mod).then((response) => {
         console.log('Attributes: ' + JSON.stringify(response.attributes))
         that.save = response

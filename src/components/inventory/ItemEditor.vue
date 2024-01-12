@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="form-row">
+  <div class="item-editor">
+    <div class="form-row item-action-bar">
       <div class="col-md-12">
         <button type="button" class="btn btn-primary" @click="onEvent('share')">
           Share
@@ -20,7 +20,7 @@
       </div>
     </div>
 
-    <div class="form-row">
+    <div class="form-row item-definition">
       <div>
         <!-- <Item v-model:item="item" clazz="item-edit" /> -->
         <Item :item="item" clazz="item-edit" @update:item="item = $event" />
@@ -78,7 +78,9 @@
                 :options="
                   Array.from(Array(countSkinsChoices()).keys()).map((n) => ({
                     value: n,
-                    label: `${n}- ${skin_names[item.type][n] || ''}`,
+                    label: skin_names[item.type][n]
+                      ? skin_names[item.type][n]
+                      : `${n}`,
                   }))
                 "
                 :searchable="true"
@@ -104,6 +106,22 @@
                 @update:model-value="onEvent('update')"
               />
             </div>
+
+            <!-- Inferior, Normal, Superior -->
+            <template v-if="item.quality <= 3">
+              <label>Runeword</label>
+              <div>
+                <multiselect
+                  v-model.number="item.runeword_id"
+                  :options="runewords_options"
+                  :searchable="true"
+                  :can-deselect="false"
+                  :can-clear="false"
+                  :required="true"
+                  @update:model-value="onEvent('update')"
+                />
+              </div>
+            </template>
 
             <!-- Magic prefix & suffix -->
             <template v-if="item.quality == 4">
@@ -133,7 +151,7 @@
               </div>
             </template>
 
-            <!-- Rare prefix & suffix -->
+            <!-- Rare or crafted -->
             <template v-if="item.quality == 6 || item.quality == 8">
               <label>&#187;&#187; Name 1</label>
               <div>
@@ -159,6 +177,78 @@
                   @update:model-value="onEvent('update')"
                 />
               </div>
+              <!-- <label>&#187;&#187; Prefix 1</label>
+              <div>
+                <multiselect
+                  v-model.number="item.magical_name_ids[0]"
+                  :options="magic_prefixes_options"
+                  :searchable="true"
+                  :can-deselect="false"
+                  :can-clear="false"
+                  :required="true"
+                  @update:model-value="onEvent('update')"
+                />
+              </div>
+              <label>&#187;&#187; Suffix 1</label>
+              <div>
+                <multiselect
+                  v-model.number="item.magical_name_ids[1]"
+                  :options="magic_suffixes_options"
+                  :searchable="true"
+                  :can-deselect="false"
+                  :can-clear="false"
+                  :required="true"
+                  @update:model-value="onEvent('update')"
+                />
+              </div>
+              <label>&#187;&#187; Prefix 2</label>
+              <div>
+                <multiselect
+                  v-model.number="item.magical_name_ids[2]"
+                  :options="magic_prefixes_options"
+                  :searchable="true"
+                  :can-deselect="false"
+                  :can-clear="false"
+                  :required="true"
+                  @update:model-value="onEvent('update')"
+                />
+              </div>
+              <label>&#187;&#187; Suffix 2</label>
+              <div>
+                <multiselect
+                  v-model.number="item.magical_name_ids[3]"
+                  :options="magic_suffixes_options"
+                  :searchable="true"
+                  :can-deselect="false"
+                  :can-clear="false"
+                  :required="true"
+                  @update:model-value="onEvent('update')"
+                />
+              </div>
+              <label>&#187;&#187; Prefix 3</label>
+              <div>
+                <multiselect
+                  v-model.number="item.magical_name_ids[4]"
+                  :options="magic_prefixes_options"
+                  :searchable="true"
+                  :can-deselect="false"
+                  :can-clear="false"
+                  :required="true"
+                  @update:model-value="onEvent('update')"
+                />
+              </div>
+              <label>&#187;&#187; Suffix 3</label>
+              <div>
+                <multiselect
+                  v-model.number="item.magical_name_ids[5]"
+                  :options="magic_suffixes_options"
+                  :searchable="true"
+                  :can-deselect="false"
+                  :can-clear="false"
+                  :required="true"
+                  @update:model-value="onEvent('update')"
+                />
+              </div> -->
             </template>
 
             <!-- Set name -->
@@ -219,8 +309,8 @@
       </ul>
     </div>
 
-    <span v-if="!item.simple_item">
-      <div v-if="item.magic_attributes">
+    <div v-if="!item.simple_item" class="item-stats">
+      <div v-if="item.magic_attributes" class="item-magic-stats">
         <div>Item Stats</div>
         <ItemStatsEditor
           :id="id + 'Magic'"
@@ -228,7 +318,7 @@
           @stat-change="onEvent('update')"
         />
       </div>
-      <div v-if="item.runeword_attributes">
+      <div v-if="item.given_runeword" class="item-runeword-stats">
         <div>Runeword Stats</div>
         <ItemStatsEditor
           :id="id + 'Runeword'"
@@ -236,7 +326,7 @@
           @stat-change="onEvent('update')"
         />
       </div>
-      <div v-if="item.set_attributes">
+      <div v-if="item.quality == 5" class="item-set-stats">
         <div v-for="(set_attribute, idx) in item.set_attributes">
           <div>Set Stats {{ idx }}</div>
           <ItemStatsEditor
@@ -246,15 +336,18 @@
           />
         </div>
       </div>
-      <div v-if="item.socketed_items">
+      <div v-if="item.socketed_items" class="item-socketed-stats">
         <div>Sockets Stats</div>
-        <ItemStatsEditor
-          :id="id + 'Socketed stats'"
-          v-model:item-stats="item.socketed_attributes"
-          @stat-change="onEvent('update')"
-        />
+        <div>
+          <div
+            v-for="(stat, idx) in item.displayed_socketed_attributes"
+            :key="idx"
+            class="blue"
+            v-html="statDescription(stat)"
+          />
+        </div>
       </div>
-      <div v-if="item.socketed_items">
+      <div v-if="item.socketed_items" class="item-socketed-items">
         <div v-for="(socketed_item, idx) in item.socketed_items">
           <ItemEditor
             :id="id + 'Socketed' + idx"
@@ -265,7 +358,7 @@
           />
         </div>
       </div>
-    </span>
+    </div>
   </div>
 </template>
 
@@ -283,7 +376,7 @@ export default {
   props: {
     id: String,
     item: Object,
-    location: Object,
+    // location: Object,
   },
   data() {
     return {
@@ -321,48 +414,61 @@ export default {
         { key: 4, value: 'Cube' },
         { key: 5, value: 'Stash' },
       ],
+      runewords_options: window[
+        `${window.work_mod}_constants_${window.work_version}`
+      ].runewords
+        .fill({ id: 0, n: 'None' }, 0, 1)
+        .filter((runeword) => runeword && runeword.n)
+        .map((runeword) => ({
+          value: runeword.id,
+          label: `${runeword.id.toString().padStart(3, '0')} - ${runeword.n}`,
+        })),
       magic_prefixes_options: window[
         `${window.work_mod}_constants_${window.work_version}`
       ].magic_prefixes
         .fill({ id: 0, n: 'None' }, 0, 1)
-        .filter((affix) => affix && affix.n)
+        //.filter((affix) => affix && affix.n) // In case some names are missing in the constants data
         .map((affix) => ({
           value: affix.id,
-          label: `${affix.id.toString().padStart(3, '0')} - ${affix.n}`,
+          label: `${affix.id.toString().padStart(3, '0')} - ${
+            affix.n || '???'
+          }`,
         })),
       magic_suffixes_options: window[
         `${window.work_mod}_constants_${window.work_version}`
       ].magic_suffixes
         .fill({ id: 0, n: 'None' }, 0, 1)
-        .filter((affix) => affix && affix.n)
+        //.filter((affix) => affix && affix.n) // In case some names are missing in the constants data
         .map((affix) => ({
           value: affix.id,
-          label: `${affix.id.toString().padStart(3, '0')} - ${affix.n}`,
+          label: `${affix.id.toString().padStart(3, '0')} - ${
+            affix.n || '???'
+          }`,
         })),
       rare_names_options: window[
         `${window.work_mod}_constants_${window.work_version}`
       ].rare_names
         .fill({ id: 0, n: 'None' }, 0, 1)
-        .filter((name) => name && name.n)
+        //.filter((name) => name && name.n) // In case some names are missing in the constants data
         .map((name) => ({
           value: name.id,
-          label: `${name.id.toString().padStart(3, '0')} - ${name.n}`,
+          label: `${name.id.toString().padStart(3, '0')} - ${name.n || '???'}`,
         })),
       unq_items_options: window[
         `${window.work_mod}_constants_${window.work_version}`
       ].unq_items
-        .filter((item) => item.n != null)
+        //.filter((item) => item.n) // In case some names are missing in the constants data
         .map((item) => ({
           value: item.id,
-          label: `${item.id.toString().padStart(3, '0')} - ${item.n}`,
+          label: `${item.id.toString().padStart(3, '0')} - ${item.n || '???'}`,
         })),
       set_items_options: window[
         `${window.work_mod}_constants_${window.work_version}`
       ].set_items
-        .filter((item) => item.n != null)
+        //.filter((item) => item.n) // In case some names are missing in the constants data
         .map((item) => ({
           value: item.id,
-          label: `${item.id.toString().padStart(3, '0')} - ${item.n}`,
+          label: `${item.id.toString().padStart(3, '0')} - ${item.n || '???'}`,
         })),
       skin_names: {
         amu: ['Dot', 'Sun', 'Penta'],
@@ -375,6 +481,22 @@ export default {
     }
   },
   methods: {
+    statDescription(stat) {
+      if (!stat.description || stat.visible === false) {
+        return null
+      }
+      const ds = stat.description.split('\\n')
+      return ds
+        .map((d) => {
+          const s = d.replace(
+            /\\(.*?);/gi,
+            (result, match) => `</div><div class="${match}">`
+          )
+          return `<div>${s}</div>`
+        })
+        .reverse()
+        .join('')
+    },
     onUpdate(variable, value) {
       const path = variable.split('.')
       path.shift() // Should be "item"

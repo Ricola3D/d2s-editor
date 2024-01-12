@@ -40,6 +40,15 @@
   border-radius: 0 !important;
 }
 
+.item-stats .btn.red {
+  padding: 0px;
+  margin-right: -5px; /* To reduce the space between the button and the rest of the line */
+}
+
+.item-stats .form-row {
+  padding: 1px;
+}
+
 .multiselect-search {
   color: #FFF;
 }
