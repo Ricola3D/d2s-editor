@@ -17517,7 +17517,7 @@ function enhanceAttributes(char, mod, version, config) {
     enhanceItems([char.golem_item], mod, version, char.attributes.level, config);
     enhanceItems(char.merc_items, mod, version, char.attributes.level, config);
     enhanceItems(char.corpse_items, mod, version, char.attributes.level, config);
-    enhancePlayerAttributes(char, mod, version, config);
+    //enhancePlayerAttributes(char, mod, version, config);
 }
 exports.enhanceAttributes = enhanceAttributes;
 function enhancePlayerAttributes(char, mod, version, config) {
@@ -17529,7 +17529,7 @@ function enhancePlayerAttributes(char, mod, version, config) {
         .apply([], items.map(function (item) { return _allAttributes(item, constants); }))
         .filter(function (attribute) { return attribute != null; });
     char.item_bonuses = _groupAttributes(char.item_bonuses, constants);
-    _enhanceAttributeDescription(char.item_bonuses, constants, char.attributes.level, config);
+    char.displayed_item_bonuses = _enhanceAttributeDescription(char.item_bonuses, constants, char.attributes.level, config);
 }
 exports.enhancePlayerAttributes = enhancePlayerAttributes;
 function enhanceItems(items, mod, version, level, config, parent) {
@@ -17565,9 +17565,57 @@ function enhanceItem(item, mod, version, level, config, parent) {
             item.magic_attributes = _compactAttributes(t.m[pt.gt], constants);
         }
     }
-    // Enforce boundaries
+    // Enforce level is between 1 and 99
     item.level = boundValue(item.level, 1, 99);
+    // Ensure coherence of other attributes with quality
+    if (item.given_runeword) {
+        item.runeword_name = constants.runewords[item.runeword_id] ? constants.runewords[item.runeword_id].n : "";
+        if (item.quality > types_1.Quality.Superior) {
+            // Cannot be a runeword
+            item.given_runeword = 0;
+            item.runeword_id = 0;
+            item.runeword_name = "";
+            item.runeword_attributes = [];
+        }
+    }
+    if (item.quality !== types_1.Quality.Magic) {
+        item.magic_prefix = 0;
+        item.magic_suffix = 0;
+    }
+    if (item.quality === types_1.Quality.Rare || item.quality === types_1.Quality.Crafted) {
+        item.rare_name = constants.rare_names[item.rare_name_id] ? constants.rare_names[item.rare_name_id].n : "";
+        item.rare_name2 = constants.rare_names[item.rare_name_id2] ? constants.rare_names[item.rare_name_id2].n : "";
+    }
+    else {
+        item.rare_name_id = 0;
+        item.rare_name = "";
+        item.rare_name_id2 = 0;
+        item.rare_name2 = "";
+        item.magical_name_ids = [0, 0, 0, 0, 0, 0];
+    }
+    if (item.quality === types_1.Quality.Set) {
+        item.set_name = constants.set_items[item.set_id] ? constants.set_items[item.set_id].n : "";
+    }
+    else {
+        item.set_id = 0;
+        item.set_name = "";
+        item.set_attributes = [];
+    }
+    if (item.quality === types_1.Quality.Unique) {
+        item.unique_name = constants.unq_items[item.unique_id] ? constants.unq_items[item.unique_id].n : "";
+    }
+    else {
+        item.unique_id = 0;
+        item.unique_name = "";
+    }
+    if (item.quality !== types_1.Quality.Magic && item.quality !== types_1.Quality.Unique) {
+        item.personalized = 0;
+        item.personalized_name = "";
+    }
     var details = null;
+    // Set type_id
+    // Also for armors: set defense_rating to the max
+    // Also for weapons: set base_damage
     if (constants.armor_items[item.type]) {
         details = constants.armor_items[item.type];
         item.type_id = ItemType.Armor;
@@ -17641,6 +17689,7 @@ function enhanceItem(item, mod, version, level, config, parent) {
                 item.max_durability = details.durability - Math.ceil(details.durability / 2) + 1;
             }
         }
+        // Enforce total_nr_of_sockets between 0 and max for this item type
         item.total_nr_of_sockets = boundValue(item.total_nr_of_sockets, 0, details.gs || item.inv_width * item.inv_height);
         // Enforce coherence between total_nr_of_sockets & socketed
         if (item.total_nr_of_sockets > 0) {
@@ -17649,7 +17698,10 @@ function enhanceItem(item, mod, version, level, config, parent) {
         else {
             item.socketed = 0;
         }
-        // Enforce personalization validity
+        // Enforce nr_of_items_in_sockets & socketed_items inferior or equal to total_nr_of_sockets
+        item.nr_of_items_in_sockets = boundValue(item.nr_of_items_in_sockets, 0, item.total_nr_of_sockets);
+        item.socketed_items = (item.socketed_items || []).slice(0, item.nr_of_items_in_sockets);
+        // Enforce personalization validity, and coherence between personalized_name & personalized
         if (item.personalized_name && item.personalized_name.length) {
             // Check it is valid (0-16 letters)
             var valid = utils_1.nameRegex.test(item.personalized_name);
@@ -17664,6 +17716,7 @@ function enhanceItem(item, mod, version, level, config, parent) {
         else {
             item.personalized = 0;
         }
+        // Multiple_pictures: ensure coherence with base item type
         if (details.ig && details.ig.length && !item.multiple_pictures) {
             // Activate multiple pictures
             item.multiple_pictures = 1;
@@ -17673,13 +17726,13 @@ function enhanceItem(item, mod, version, level, config, parent) {
             item.multiple_pictures = 0; // Type changed to a not-multiple pictures one
             item.picture_id = 0;
         }
+        // Set inv_file, hd_inv_file & transform_color
         if (item.multiple_pictures && details.ig && details.ig.length && details.ig[item.picture_id]) {
             item.inv_file = details.ig[item.picture_id];
         }
         if (item.multiple_pictures && details.hdig && details.hdig.length && details.hdig[item.picture_id]) {
             item.hd_inv_file = details.hdig[item.picture_id];
         }
-        // Transform color and specific gfx
         if (item.magic_prefix || item.magic_suffix) {
             if (item.magic_prefix && ((_a = constants.magic_prefixes[item.magic_prefix]) === null || _a === void 0 ? void 0 : _a.tc)) {
                 item.transform_color = constants.magic_prefixes[item.magic_prefix].tc;
@@ -17732,6 +17785,7 @@ function enhanceItem(item, mod, version, level, config, parent) {
                 item.transform_color = set.tc;
         }
     }
+    // Set read-only attributes useful for display in hero editors
     if (item.magic_attributes || item.runeword_attributes || item.socketed_items) {
         // Just the intrinsec attributes
         item.displayed_magic_attributes = _enhanceAttributeDescription(item.magic_attributes, constants, level, config);
@@ -17925,7 +17979,6 @@ function _descFunc(attribute, constants, v, descFunc, descVal, descString, desc2
     }
     var sign = v >= 0 ? "+" : "";
     var value = null;
-    var desc2Present = descFunc >= 6 && descFunc <= 10;
     switch (descFunc) {
         case 1:
         // +[value] [string1]
@@ -18151,7 +18204,7 @@ function _descFunc(attribute, constants, v, descFunc, descVal, descString, desc2
             }
         }
     }
-    if (desc2Present) {
+    if (desc2) {
         attribute.description += " ".concat(desc2);
     }
 }
@@ -18192,6 +18245,7 @@ function _socketedAttributes(item, constants) {
 function _allAttributes(item, constants) {
     var socketed_attributes = _socketedAttributes(item, constants);
     var magic_attributes = item.magic_attributes || [];
+    //const set_attributes = item.set_attributes || [];
     var runeword_attributes = item.runeword_attributes || [];
     return __spreadArray(__spreadArray(__spreadArray(__spreadArray([], [], false), JSON.parse(JSON.stringify(magic_attributes)), true), JSON.parse(JSON.stringify(runeword_attributes)), true), JSON.parse(JSON.stringify(socketed_attributes)), true).filter(function (attribute) { return attribute != null; });
 }
@@ -18935,7 +18989,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.types = exports.setConstantData = exports.getConstantData = exports.enhancePlayerAttributes = exports.enhanceItems = exports.enhanceAttributes = exports.writeSkills = exports.readSkills = exports.writeAttributes = exports.readAttributes = exports.fixHeader = exports.writeHeaderData = exports.writeHeader = exports.readHeaderData = exports.readHeader = void 0;
+exports.types = exports.setConstantData = exports.getConstantData = exports.enhancePlayerAttributes = exports.enhanceItems = exports.enhanceAttributes = exports.writeSkills = exports.readSkills = exports.writeAttributes = exports.readAttributes = exports.newItem = exports.fixHeader = exports.writeHeaderData = exports.writeHeader = exports.readHeaderData = exports.readHeader = void 0;
 __exportStar(__webpack_require__(/*! ./d2s */ "./src/d2/d2s.ts"), exports);
 var header_1 = __webpack_require__(/*! ./header */ "./src/d2/header.ts");
 Object.defineProperty(exports, "readHeader", ({ enumerable: true, get: function () { return header_1.readHeader; } }));
@@ -18943,6 +18997,8 @@ Object.defineProperty(exports, "readHeaderData", ({ enumerable: true, get: funct
 Object.defineProperty(exports, "writeHeader", ({ enumerable: true, get: function () { return header_1.writeHeader; } }));
 Object.defineProperty(exports, "writeHeaderData", ({ enumerable: true, get: function () { return header_1.writeHeaderData; } }));
 Object.defineProperty(exports, "fixHeader", ({ enumerable: true, get: function () { return header_1.fixHeader; } }));
+var items_1 = __webpack_require__(/*! ./items */ "./src/d2/items.ts");
+Object.defineProperty(exports, "newItem", ({ enumerable: true, get: function () { return items_1.newItem; } }));
 var attributes_1 = __webpack_require__(/*! ./attributes */ "./src/d2/attributes.ts");
 Object.defineProperty(exports, "readAttributes", ({ enumerable: true, get: function () { return attributes_1.readAttributes; } }));
 Object.defineProperty(exports, "writeAttributes", ({ enumerable: true, get: function () { return attributes_1.writeAttributes; } }));
@@ -19007,7 +19063,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports._writeMagicAttributes = exports._readMagicAttributes = exports.writeItem = exports.readItem = exports.writeItems = exports.readItems = exports.writeCorpseItem = exports.readCorpseItems = exports.writeGolemItems = exports.readGolemItems = exports.writeMercItems = exports.readMercItems = exports.writeCharItems = exports.readCharItems = void 0;
+exports._writeMagicAttributes = exports._readMagicAttributes = exports.writeItem = exports.readItem = exports.writeItems = exports.readItems = exports.writeCorpseItem = exports.readCorpseItems = exports.writeGolemItems = exports.readGolemItems = exports.writeMercItems = exports.readMercItems = exports.writeCharItems = exports.readCharItems = exports.newItem = void 0;
 var bitreader_1 = __webpack_require__(/*! ../binary/bitreader */ "./src/binary/bitreader.ts");
 var bitwriter_1 = __webpack_require__(/*! ../binary/bitwriter */ "./src/binary/bitwriter.ts");
 var constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
@@ -19627,6 +19683,96 @@ var HUFFMAN_LOOKUP = {
     "Y": { "v": 98280, "l": 17 }, /*10111111111101000*/
     "Z": { "v": 17384, "l": 17 } /*00100001111101000*/
 };
+function newItem() {
+    return {
+        // Default values
+        identified: 0,
+        socketed: 0,
+        new: 0,
+        is_ear: 0,
+        starter_item: 0,
+        simple_item: 0,
+        ethereal: 0,
+        personalized: 0,
+        personalized_name: "",
+        given_runeword: 0,
+        version: "",
+        location_id: 0,
+        equipped_id: 0,
+        position_x: 0,
+        position_y: 0,
+        alt_position_id: 0,
+        type: "",
+        type_id: 0,
+        type_name: "",
+        quest_difficulty: 0,
+        nr_of_items_in_sockets: 0,
+        id: 0,
+        level: 0,
+        quality: 0,
+        multiple_pictures: 0,
+        picture_id: 0,
+        class_specific: 0,
+        low_quality_id: 0,
+        timestamp: 0,
+        ear_attributes: {
+            class: 0,
+            level: 0,
+            name: "",
+        },
+        defense_rating: 0,
+        max_durability: 0,
+        current_durability: 0,
+        total_nr_of_sockets: 0,
+        quantity: 0,
+        magic_prefix: 0,
+        magic_suffix: 0,
+        runeword_id: 0,
+        runeword_name: "",
+        runeword_attributes: [],
+        set_id: 0,
+        set_name: "",
+        set_list_count: 0,
+        set_attributes: [],
+        set_attributes_num_req: 0,
+        set_attributes_ids_req: 0,
+        rare_name: "",
+        rare_name2: "",
+        magical_name_ids: [0, 0, 0, 0, 0, 0],
+        unique_id: 0,
+        unique_name: "",
+        magic_attributes: [],
+        combined_magic_attributes: [],
+        socketed_items: [],
+        socketed_attributes: [], // read-only
+        base_damage: {
+            mindam: 0,
+            maxdam: 0,
+            twohandmindam: 0,
+            twohandmaxdam: 0,
+        },
+        reqstr: 0,
+        reqdex: 0,
+        inv_width: 0,
+        inv_height: 0,
+        inv_file: "",
+        hd_inv_file: "",
+        inv_transform: 0,
+        transform_color: "",
+        item_quality: 0,
+        categories: [],
+        file_index: 0,
+        auto_affix_id: 0,
+        _unknown_data: {},
+        rare_name_id: 0,
+        rare_name_id2: 0,
+        displayed_magic_attributes: [], // Read-only
+        displayed_runeword_attributes: [], // Read-only
+        displayed_socketed_attributes: [], // Read-only
+        displayed_combined_magic_attributes: [], // Read-only
+    };
+}
+exports.newItem = newItem;
 function readCharItems(char, reader, mod, config) {
     return __awaiter(this, void 0, void 0, function () {
         var _a;
@@ -19893,93 +20039,7 @@ function readItem(reader, mod, version, config) {
                         }
                     }
                     constants = (0, constants_1.getConstantData)(mod, version);
-                    item = {
-                        // Default values
-                        identified: 0,
-                        socketed: 0,
-                        new: 0,
-                        is_ear: 0,
-                        starter_item: 0,
-                        simple_item: 0,
-                        ethereal: 0,
-                        personalized: 0,
-                        personalized_name: "",
-                        given_runeword: 0,
-                        version: "",
-                        location_id: 0,
-                        equipped_id: 0,
-                        position_x: 0,
-                        position_y: 0,
-                        alt_position_id: 0,
-                        type: "",
-                        type_id: 0,
-                        type_name: "",
-                        quest_difficulty: 0,
-                        nr_of_items_in_sockets: 0,
-                        id: 0,
-                        level: 0,
-                        quality: 0,
-                        multiple_pictures: 0,
-                        picture_id: 0,
-                        class_specific: 0,
-                        low_quality_id: 0,
-                        timestamp: 0,
-                        ear_attributes: {
-                            class: 0,
-                            level: 0,
-                            name: "",
-                        },
-                        defense_rating: 0,
-                        max_durability: 0,
-                        current_durability: 0,
-                        total_nr_of_sockets: 0,
-                        quantity: 0,
-                        magic_prefix: 0,
-                        magic_suffix: 0,
-                        runeword_id: 0,
-                        runeword_name: "",
-                        runeword_attributes: [],
-                        set_id: 0,
-                        set_name: "",
-                        set_list_count: 0,
-                        set_attributes: [],
-                        set_attributes_num_req: 0,
-                        set_attributes_ids_req: 0,
-                        rare_name: "",
-                        rare_name2: "",
-                        magical_name_ids: [0, 0, 0, 0, 0, 0],
-                        unique_id: 0,
-                        unique_name: "",
-                        magic_attributes: [],
-                        combined_magic_attributes: [],
-                        socketed_items: [],
-                        socketed_attributes: [], // read-only
-                        base_damage: {
-                            mindam: 0,
-                            maxdam: 0,
-                            twohandmindam: 0,
-                            twohandmaxdam: 0,
-                        },
-                        reqstr: 0,
-                        reqdex: 0,
-                        inv_width: 0,
-                        inv_height: 0,
-                        inv_file: "",
-                        hd_inv_file: "",
-                        inv_transform: 0,
-                        transform_color: "",
-                        item_quality: 0,
-                        categories: [],
-                        file_index: 0,
-                        auto_affix_id: 0,
-                        _unknown_data: {},
-                        rare_name_id: 0,
-                        rare_name_id2: 0,
-                        displayed_magic_attributes: [], // Read-only
-                        displayed_runeword_attributes: [], // Read-only
-                        displayed_socketed_attributes: [], // Read-only
-                        displayed_combined_magic_attributes: [], // Read-only
-                    };
+                    item = newItem();
                     _readSimpleBits(item, reader, version, constants, config);
                     if (!item.simple_item) {
                         item.id = reader.ReadUInt32(32);
@@ -20008,20 +20068,20 @@ function readItem(reader, mod, version, config) {
                                 break;
                             case types_1.Quality.Set:
                                 item.set_id = reader.ReadUInt16(12);
-                                item.set_name = constants.set_items[item.set_id] ? constants.set_items[item.set_id].n : null;
+                                item.set_name = constants.set_items[item.set_id] ? constants.set_items[item.set_id].n : "";
                                 break;
                             case types_1.Quality.Unique:
                                 item.unique_id = reader.ReadUInt16(12);
-                                item.unique_name = constants.unq_items[item.unique_id] ? constants.unq_items[item.unique_id].n : null;
+                                item.unique_name = constants.unq_items[item.unique_id] ? constants.unq_items[item.unique_id].n : "";
                                 break;
                             case types_1.Quality.Rare:
                             case types_1.Quality.Crafted:
                                 item.rare_name_id = reader.ReadUInt8(8);
                                 if (item.rare_name_id)
-                                    item.rare_name = constants.rare_names[item.rare_name_id] ? constants.rare_names[item.rare_name_id].n : null;
+                                    item.rare_name = constants.rare_names[item.rare_name_id] ? constants.rare_names[item.rare_name_id].n : "";
                                 item.rare_name_id2 = reader.ReadUInt8(8);
                                 if (item.rare_name_id2)
-                                    item.rare_name2 = constants.rare_names[item.rare_name_id2] ? constants.rare_names[item.rare_name_id2].n : null;
+                                    item.rare_name2 = constants.rare_names[item.rare_name_id2] ? constants.rare_names[item.rare_name_id2].n : "";
                                 for (i = 0; i < 6; i++) {
                                     prefix = reader.ReadBit();
                                     if (prefix === 1) {
@@ -20037,9 +20097,13 @@ function readItem(reader, mod, version, config) {
                         }
                         if (item.given_runeword) {
                             item.runeword_id = reader.ReadUInt16(12);
-                            //fix delerium on d2gs??? why is this a thing?
+                            // Delirium - temp fix
                             if (item.runeword_id == 2718) {
                                 item.runeword_id = 48;
+                            }
+                            // Lord of Terror - temp fix
+                            if (item.runeword_id == 2652) {
+                                item.runeword_id = 196;
                             }
                             if (constants.runewords[item.runeword_id]) {
                                 item.runeword_name = constants.runewords[item.runeword_id].n;
@@ -20115,7 +20179,6 @@ function readItem(reader, mod, version, config) {
                     }
                     reader.Align();
                     if (!(item.nr_of_items_in_sockets > 0 && item.simple_item === 0)) return [3 /*break*/, 4];
-                    item.socketed_items = [];
                     i = 0;
                     _c.label = 1;
                 case 1:
@@ -20206,8 +20269,13 @@ function writeItem(item, mod, version, config) {
                         }
                         if (item.given_runeword) {
                             runeword_id = item.runeword_id;
-                            if (runeword_id == 2718) {
-                                runeword_id = 48;
+                            // Delirium - temp fix
+                            if (item.runeword_id == 48) {
+                                runeword_id = 2718;
+                            }
+                            // Lord of Terror - temp fix
+                            if (item.runeword_id == 196) {
+                                runeword_id = 2652;
                             }
                             writer.WriteUInt16(runeword_id, 12);
                             writer.WriteUInt8(5, 4); //always 5?

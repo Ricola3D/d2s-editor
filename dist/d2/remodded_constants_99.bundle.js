@@ -14789,7 +14789,10 @@ export let remodded_constants_99 = {
             "id": 104,
             "n": "Madness"
         },
-        null,
+        {
+            "id": 105,
+            "n": "Madness" // ???
+        },
         {
             "id": 106,
             "n": "Malice"

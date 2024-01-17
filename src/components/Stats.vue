@@ -6,8 +6,10 @@
         id="name"
         v-model="save.header.name"
         type="text"
+        @change="rename()"
         class="form-control"
-        placeholder="Character Name"
+        placeholder="Character Name (3 to 14 letters, allows one - or _ except at start & end)"
+        pattern="^[A-Za-z](?=.{0,14}$)[A-Za-z]*[A-Za-z\-_][A-Za-z]+$"
         required
       />
     </div>
@@ -408,6 +410,12 @@ export default {
       if (id == 12) {
         this.save.header.level = values[idx]
         this.save.attributes.experience = xp[values[idx] - 1]
+      }
+    },
+    rename() {
+      const valid = d2s.nameRegex.test(this.save.header.name);
+      if (!valid) {
+        this.save.header.name = "InvalidName";
       }
     },
   },

@@ -115,7 +115,7 @@
               <div class="alert alert-primary" role="alert">
                 This editor is still a work in progress. Some things may not
                 work. Found a bug?
-                <a href="https://github.com/dschu012/d2s-editor/issues/new"
+                <a href="https://github.com/ricola3d/d2s-editor/issues/new"
                   >Report it.</a
                 >
               </div>
@@ -591,6 +591,34 @@
                     Set All Skills 20
                   </button>
                   <br /><br />
+                  <!-- <template v-if="work_mod === 'vanilla'">
+                    <button
+                      id="d2"
+                      type="button"
+                      class="btn btn-primary"
+                      @click="saveFile(work_mod, 0x60)"
+                    >
+                      Save D2
+                    </button>
+                    <button
+                      id="d2r"
+                      type="button"
+                      class="btn btn-primary"
+                      @click="saveFile(work_mod, 0x63)"
+                    >
+                      Save D2R
+                    </button>
+                  </template>
+                  <template v-else>
+                    <button
+                      id="d2r"
+                      type="button"
+                      class="btn btn-primary"
+                      @click="saveFile(work_mod, 0x63)"
+                    >
+                      Save
+                    </button>
+                  </template> -->
                   <button
                     id="d2"
                     type="button"
@@ -1293,7 +1321,7 @@ export default {
         window[`${window.work_mod}_constants_${window.work_version}`]
       for (const item of Object.entries(constants[categoryKey])) {
         if (item[1].n) {
-          const newItem = Object()
+          const newItem = d2s.newItem()
           const value = item[1]
           newItem.type = item[0]
           newItem.quality = 2

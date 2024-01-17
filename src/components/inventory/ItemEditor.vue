@@ -277,9 +277,18 @@
                 :required="true"
                 @update:model-value="onEvent('update')"
               />
+            </template>
 
-              <!-- <label>Personalized Name</label>
-              <input class="edit-box" type="text" v-model="item.personalized_name" @change="onEvent('update')" pattern="^[A-Za-z]{0,15}$" maxlength="16"/> -->
+            <!-- Magic or unique: personalized name -->
+            <template v-if="item.quality == 4 || item.quality == 7">
+              <label>&#187;&#187; Personalized Name</label>
+              <input
+                class="edit-box"
+                type="text"
+                v-model="item.personalized_name"
+                @change="onEvent('update')"
+                pattern="^[A-Za-z](?=.{0,14}$)[A-Za-z]*[A-Za-z\-_][A-Za-z]+$"
+              />
             </template>
 
             <!-- Ethereal -->

@@ -40,6 +40,10 @@
   border-radius: 0 !important;
 }
 
+.form-control:invalid {
+  border: 1px solid red;
+}
+
 .item-stats .btn.red {
   padding: 0px;
   margin-right: -5px; /* To reduce the space between the button and the rest of the line */
