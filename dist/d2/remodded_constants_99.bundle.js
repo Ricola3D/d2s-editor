@@ -14447,6 +14447,17 @@ export let remodded_constants_99 = {
             "dV": 0,
             "dP": "Raises %d Leoric's Chosen (Sacrifices 10 skeletons each Leoric)",
             "dN": "Raises %d Leoric's Chosen (Sacrifices 10 skeletons each Leoric)"
+        },
+        null,
+        {
+            "id": 430,
+            "s": "weight_used_display",
+            "sB": 1,
+            "so": 181,
+            "dF": 3,
+            "dV": 2,
+            "dP": "Weight Used:",
+            "dN": "Weight Used:"
         }
     ],
     "runewords": [
@@ -14791,7 +14802,7 @@ export let remodded_constants_99 = {
         },
         {
             "id": 105,
-            "n": "Madness" // ???
+            "n": "Madness"
         },
         {
             "id": 106,
