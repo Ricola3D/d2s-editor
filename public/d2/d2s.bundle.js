@@ -17502,10 +17502,10 @@ var ItemType;
 //lookup socketed compact items (runes/gems) properties for the slot they are in
 //compute attributes like str/resists/etc..
 function enhanceAttributes(char, mod, version, config) {
-    enhanceItems(char.items, mod, version, char.attributes.level, config);
-    enhanceItems([char.golem_item], mod, version, char.attributes.level, config);
-    enhanceItems(char.merc_items, mod, version, char.attributes.level, config);
-    enhanceItems(char.corpse_items, mod, version, char.attributes.level, config);
+    enhanceItems(char.items, mod, version, char.attributes, config);
+    enhanceItems([char.golem_item], mod, version, char.attributes, config);
+    enhanceItems(char.merc_items, mod, version, char.attributes, config);
+    enhanceItems(char.corpse_items, mod, version, char.attributes, config);
     //enhancePlayerAttributes(char, mod, version, config);
 }
 exports.enhanceAttributes = enhanceAttributes;
@@ -17518,11 +17518,17 @@ function enhancePlayerAttributes(char, mod, version, config) {
         .apply([], items.map(function (item) { return _allAttributes(item, constants); }))
         .filter(function (attribute) { return attribute != null; });
     char.item_bonuses = _groupAttributes(char.item_bonuses, constants);
-    char.displayed_item_bonuses = _enhanceAttributeDescription(char.item_bonuses, constants, char.attributes.level, config);
+    char.displayed_item_bonuses = _enhanceAttributeDescription(char.item_bonuses, constants, char.attributes, config);
 }
 exports.enhancePlayerAttributes = enhancePlayerAttributes;
-function enhanceItems(items, mod, version, level, config, parent) {
-    if (level === void 0) { level = 1; }
+function enhanceItems(items, mod, version, attributes, config, parent) {
+    if (attributes === void 0) { attributes = {
+        level: 1,
+        strength: 0,
+        dexterity: 0,
+        vitality: 0,
+        energy: 0,
+    }; }
     if (!items) {
         return;
     }
@@ -17532,9 +17538,9 @@ function enhanceItems(items, mod, version, level, config, parent) {
             continue;
         }
         if (item.socketed_items && item.socketed_items.length) {
-            enhanceItems(item.socketed_items, mod, version, level, config, item);
+            enhanceItems(item.socketed_items, mod, version, attributes, config, item);
         }
-        enhanceItem(item, mod, version, level, config, parent);
+        enhanceItem(item, mod, version, attributes, config, parent);
     }
 }
 exports.enhanceItems = enhanceItems;
@@ -17542,9 +17548,15 @@ exports.enhanceItems = enhanceItems;
 function boundValue(v, min, max) {
     return Math.min(max, Math.max(min, v));
 }
-function enhanceItem(item, mod, version, level, config, parent) {
+function enhanceItem(item, mod, version, attributes, config, parent) {
     var _a, _b, _c, _d;
-    if (level === void 0) { level = 1; }
+    if (attributes === void 0) { attributes = {
+        level: 1,
+        strength: 0,
+        dexterity: 0,
+        vitality: 0,
+        energy: 0,
+    }; }
     var constants = (0, constants_1.getConstantData)(mod, version);
     if (parent) {
         //socket item.
@@ -17777,56 +17789,70 @@ function enhanceItem(item, mod, version, level, config, parent) {
     // Set read-only attributes useful for display in hero editors
     if (item.magic_attributes || item.runeword_attributes || item.socketed_items) {
         // Just the intrinsec attributes
-        item.displayed_magic_attributes = _enhanceAttributeDescription(item.magic_attributes, constants, level, config);
+        item.displayed_magic_attributes = _enhanceAttributeDescription(item.magic_attributes, constants, attributes, config);
         // Just the runeword attributes
-        item.displayed_runeword_attributes = _enhanceAttributeDescription(item.runeword_attributes, constants, level, config);
+        item.displayed_runeword_attributes = _enhanceAttributeDescription(item.runeword_attributes, constants, attributes, config);
         // Just the socketed attributes
         item.socketed_attributes = _groupAttributes(_socketedAttributes(item, constants), constants);
-        item.displayed_socketed_attributes = _enhanceAttributeDescription(item.socketed_attributes, constants, level, config);
+        item.displayed_socketed_attributes = _enhanceAttributeDescription(item.socketed_attributes, constants, attributes, config);
         // All attributes together
         item.combined_magic_attributes = _groupAttributes(_allAttributes(item, constants), constants);
-        item.displayed_combined_magic_attributes = _enhanceAttributeDescription(item.combined_magic_attributes, constants, level, config);
+        item.displayed_combined_magic_attributes = _enhanceAttributeDescription(item.combined_magic_attributes, constants, attributes, config);
     }
 }
 exports.enhanceItem = enhanceItem;
-function _enhanceAttributeDescription(_magic_attributes, constants, level, config) {
-    if (level === void 0) { level = 1; }
+function _enhanceAttributeDescription(_magic_attributes, constants, attributes, config) {
+    if (attributes === void 0) { attributes = {
+        level: 1,
+        strength: 0,
+        dexterity: 0,
+        vitality: 0,
+        energy: 0,
+    }; }
     if (!_magic_attributes)
         return [];
     // const magic_attributes: types.IMagicProperty[] = [..._magic_attributes.map((attr) => ({ ...attr }))];
     var magic_attributes = (0, lodash_1.cloneDeep)(_magic_attributes);
-    var dgrps = [0, 0, 0];
-    var dgrpsVal = [0, 0, 0];
-    for (var _i = 0, magic_attributes_1 = magic_attributes; _i < magic_attributes_1.length; _i++) {
-        var magical_attribute = magic_attributes_1[_i];
+    var groupsCount = [];
+    var groupsSize = [];
+    var groupsVal = [];
+    var _loop_1 = function (magical_attribute) {
         var itemStatDef = constants.magical_properties[magical_attribute.id];
         var v = magical_attribute.values[magical_attribute.values.length - 1];
         if (itemStatDef.dg) {
-            if (dgrpsVal[itemStatDef.dg - 1] === 0) {
-                dgrpsVal[itemStatDef.dg - 1] = v;
+            // Save the value of the 1st occurence (to compare with others)
+            if (!groupsVal[itemStatDef.dg]) {
+                groupsVal[itemStatDef.dg] = v;
+                groupsCount[itemStatDef.dg] = 1;
+                groupsSize[itemStatDef.dg] = constants.magical_properties.filter(function (prop) { return prop && prop.dg && prop.dg == itemStatDef.dg; }).length; // Compute group size
             }
-            if (dgrpsVal[itemStatDef.dg - 1] - v === 0) {
-                dgrps[itemStatDef.dg - 1]++;
+            else if (groupsVal[itemStatDef.dg] === v) {
+                // Increment count only if values are identical
+                groupsCount[itemStatDef.dg]++;
             }
         }
+    };
+    for (var _i = 0, magic_attributes_1 = magic_attributes; _i < magic_attributes_1.length; _i++) {
+        var magical_attribute = magic_attributes_1[_i];
+        _loop_1(magical_attribute);
     }
-    var _loop_1 = function (magical_attribute) {
+    var _loop_2 = function (magical_attribute) {
         var itemStatDef = constants.magical_properties[magical_attribute.id];
         if (itemStatDef == null) {
             throw new Error("Cannot find Magical Property for id: ".concat(magical_attribute.id));
         }
         var v = magical_attribute.values[magical_attribute.values.length - 1];
-        if (itemStatDef.ob === "level") {
+        if (itemStatDef.ob && itemStatDef.ob in attributes) {
             switch (itemStatDef.o) {
                 case 1: {
-                    v = Math.floor((level * v) / 100);
+                    v = Math.floor((attributes[itemStatDef.ob] * v) / 100);
                     break;
                 }
                 case 2:
                 case 3:
                 case 4:
                 case 5: {
-                    v = Math.floor((level * v) / Math.pow(2, itemStatDef.op));
+                    v = Math.floor((attributes[itemStatDef.ob] * v) / Math.pow(2, itemStatDef.op));
                     break;
                 }
                 default: {
@@ -17865,8 +17891,8 @@ function _enhanceAttributeDescription(_magic_attributes, constants, level, confi
         }
         var descVal = itemStatDef.dV;
         var desc2 = itemStatDef.d2;
-        if (itemStatDef.dg && dgrps[itemStatDef.dg - 1] === 4) {
-            v = dgrpsVal[itemStatDef.dg - 1];
+        if (itemStatDef.dg && groupsCount[itemStatDef.dg] == groupsSize[itemStatDef.dg]) {
+            v = groupsVal[itemStatDef.dg];
             descString = v >= 0 ? itemStatDef.dgP : itemStatDef.dgN ? itemStatDef.dgN : itemStatDef.dgP;
             descVal = itemStatDef.dgV;
             descFunc = itemStatDef.dgF;
@@ -17906,7 +17932,7 @@ function _enhanceAttributeDescription(_magic_attributes, constants, level, confi
     };
     for (var _a = 0, magic_attributes_2 = magic_attributes; _a < magic_attributes_2.length; _a++) {
         var magical_attribute = magic_attributes_2[_a];
-        _loop_1(magical_attribute);
+        _loop_2(magical_attribute);
     }
     if (config === null || config === void 0 ? void 0 : config.sortProperties) {
         //sort using sort order from game.
@@ -18239,7 +18265,7 @@ function _allAttributes(item, constants) {
 }
 function _groupAttributes(all_magical_attributes, constants) {
     var combined_magical_attributes = [];
-    var _loop_2 = function (magical_attribute) {
+    var _loop_3 = function (magical_attribute) {
         var itemStatDef = constants.magical_properties[magical_attribute.id];
         var combined_magical_attribute = combined_magical_attributes.find(function (attr) {
             // Id must be the same
@@ -18333,7 +18359,7 @@ function _groupAttributes(all_magical_attributes, constants) {
     };
     for (var _i = 0, all_magical_attributes_1 = all_magical_attributes; _i < all_magical_attributes_1.length; _i++) {
         var magical_attribute = all_magical_attributes_1[_i];
-        _loop_2(magical_attribute);
+        _loop_3(magical_attribute);
     }
     return combined_magical_attributes;
 }
@@ -20415,6 +20441,8 @@ function _readSimpleBits(item, reader, version, constants, config) {
         item.type = item.type.trim().replace(/\0/g, "");
         var details = _GetItemTXT(item, constants);
         item.categories = details === null || details === void 0 ? void 0 : details.c;
+        if (!item.categories)
+            throw new Error("Item category ".concat(details === null || details === void 0 ? void 0 : details.c, " does not exist"));
         if (item === null || item === void 0 ? void 0 : item.categories.includes("Any Armor")) {
             item.type_id = types_1.ItemType.Armor;
         }

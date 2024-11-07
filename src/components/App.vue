@@ -1409,7 +1409,7 @@ export default {
           newItems.push(newItem)
         }
       }
-      d2s.enhanceItems(newItems, window.work_mod, window.work_version)
+      d2s.enhanceItems(newItems, window.work_mod, window.work_version, this.save.attributes)
       for (const item of newItems) {
         let bytes = await d2s.writeItem(
           item,
