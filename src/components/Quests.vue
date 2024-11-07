@@ -8,9 +8,17 @@
               v-model="difficulty.all"
               class="form-check-input"
               type="checkbox"
-              @input="updateDiff(difficulty, $event.target.checked)"
+              @input="updateDifficulty(difficulty, $event.target.checked)"
             />{{ difficulty.label }}</label
           >
+          <button
+            type="button"
+            class="btn btn-link btn-sm"
+            title="Reset all flags for this Difficulty"
+            @click="updateDifficulty(difficulty, false, false)"
+          >
+            <i class="fa fa-undo"></i>
+          </button>
         </li>
         <ul v-for="(act, j) in difficulty.acts" :key="j">
           <li>
@@ -22,30 +30,46 @@
                 @input="updateAct(difficulty, act, $event.target.checked)"
               />{{ act.label }}</label
             >
+            <button
+              type="button"
+              class="btn btn-link btn-sm"
+              title="Reset all flags for this Act"
+              @click="updateAct(difficulty, act, false, false)"
+            >
+              <i class="fa fa-undo"></i>
+            </button>
           </li>
           <ul v-for="(quest, k) in act.quests" :key="k">
             <li>
               <label>{{ quest.label }}</label>
+              <button
+                type="button"
+                class="btn btn-link"
+                title="Reset all flags for this Quest"
+                @click="updateQuest(difficulty, act, quest, false, false)"
+              >
+                <i class="fa fa-undo"></i>
+              </button>
             </li>
             <ul>
-              <li v-for="(state, l) in quest.values" :key="l">
+              <li v-for="(flag, l) in quest.flags" :key="l">
                 <label class="figure-caption"
                   ><input
                     class="form-check-input"
                     type="checkbox"
                     :checked="
-                      save.header[difficulty.key][act.key][quest.key][state.key]
+                      save.header[difficulty.key][act.key][quest.key][flag.key]
                     "
                     @click="
-                      updateQuest(
+                      updateFlag(
                         difficulty,
                         act,
                         quest,
-                        state,
+                        flag,
                         $event.target.checked
                       )
                     "
-                  />{{ state.label }}</label
+                  />{{ flag.label }}</label
                 >
               </li>
             </ul>
@@ -57,12 +81,14 @@
 </template>
 
 <script>
-const flags = [
+import { cloneDeep } from 'lodash'
+
+const flagsDef = [
   'b0_is_completed',
   'b1_is_requirement_completed',
-  'b2_is_received',
-  'b3_left_town',
-  'b4_entered_area',
+  'b2_is_received', // I received quest from PNJ
+  'b3_left_town', // I left town with quest activated
+  'b4_entered_area', // I enter quest area
   'b5_custom1',
   'b6_custom2',
   'b7_custom3', // For ex for "Prison of Ice" it is consumed scroll or not
@@ -70,11 +96,11 @@ const flags = [
   'b9_custom5',
   'b10_custom6',
   'b11_custom7',
-  'b12_closed',
-  'b13_done_recently',
-  'b14_completed_now',
-  'b15_completed_before',
-]
+  'b12_closed', // Box in the quest menu is greyed
+  'b13_done_recently', // Cleared by this party in this game
+  'b14_completed_now', // Another party completed the requirements in this game. if not 13, I cannot complete this quest in this game. If 13 (ex: Forgotten tower completed by a teamate), ignore
+  'b15_completed_before', // I completed the quest requirements in a previous game & there was a reward & reward had not been used in the same game but later or not yet.
+].map((str) => ({ key: str }))
 
 const questsDefinition = [
   {
@@ -85,17 +111,17 @@ const questsDefinition = [
       {
         key: 'den_of_evil',
         label: 'Den Of Evil',
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
       {
         key: 'sisters_burial_grounds',
         label: "Sisters' Burial Grounds",
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
       {
         key: 'the_search_for_cain',
         label: 'Search for Cain',
-        values: [
+        flags: [
           { key: 'b10_custom6', label: 'Cow King Killed' },
           { key: 'b0_is_completed', label: 'Completed' },
         ],
@@ -103,17 +129,17 @@ const questsDefinition = [
       {
         key: 'the_forgotten_tower',
         label: 'The Forgotten Tower',
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
       {
         key: 'tools_of_the_trade',
         label: 'Tools of the Trade',
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
       {
         key: 'sisters_to_the_slaughter',
         label: 'Sisters to the Slaughter',
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
     ],
   },
@@ -125,32 +151,32 @@ const questsDefinition = [
       {
         key: 'radaments_lair',
         label: "Radament's Lair",
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
       {
         key: 'the_horadric_staff',
         label: 'The Horadric Staff',
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
       {
         key: 'tainted_sun',
         label: 'Tainted Sun',
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
       {
         key: 'arcane_sanctuary',
         label: 'Arcane Sanctuary',
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
       {
         key: 'the_summoner',
         label: 'The Summoner',
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
       {
         key: 'the_seven_tombs',
         label: 'The Seven Tombs',
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
     ],
   },
@@ -162,32 +188,32 @@ const questsDefinition = [
       {
         key: 'the_golden_bird',
         label: 'The Golden Bird',
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
       {
         key: 'blade_of_the_old_religion',
         label: 'Blade of the Old Religion',
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
       {
         key: 'khalims_will',
         label: "Khalim's Will",
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
       {
         key: 'lam_esens_tome',
         label: "Lam Esen's Tome",
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
       {
         key: 'the_blackened_temple',
         label: 'The Blackened Temple',
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
       {
         key: 'the_guardian',
         label: 'The Guardian',
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
     ],
   },
@@ -199,17 +225,17 @@ const questsDefinition = [
       {
         key: 'the_fallen_angel',
         label: 'Fallen Angel',
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
       {
         key: 'hellforge',
         label: "Hell's Forge",
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
       {
         key: 'terrors_end',
         label: "Terror's End",
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
     ],
   },
@@ -221,17 +247,17 @@ const questsDefinition = [
       {
         key: 'siege_on_harrogath',
         label: 'Siege on Harrogath',
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
       {
         key: 'rescue_on_mount_arreat',
         label: 'Rescue on Mount Arreat',
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
       {
         key: 'prison_of_ice',
         label: 'Prison of Ice',
-        values: [
+        flags: [
           { key: 'b7_custom3 ', label: 'Consumed Scroll' },
           { key: 'b0_is_completed', label: 'Completed' },
         ],
@@ -239,17 +265,17 @@ const questsDefinition = [
       {
         key: 'betrayal_of_harrogath',
         label: 'Betrayal of Harrogath',
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
       {
         key: 'rite_of_passage',
         label: 'Rite of Passage',
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
       {
         key: 'eve_of_destruction',
         label: 'Eve of Destruction',
-        values: [{ key: 'b0_is_completed', label: 'Completed' }],
+        flags: [{ key: 'b0_is_completed', label: 'Completed' }],
       },
     ],
   },
@@ -266,26 +292,26 @@ export default {
           key: 'quests_normal',
           all: false,
           label: 'Normal',
-          acts: JSON.parse(JSON.stringify(questsDefinition)),
+          acts: cloneDeep(questsDefinition),
         },
         {
           key: 'quests_nm',
           all: false,
           label: 'Nightmare',
-          acts: JSON.parse(JSON.stringify(questsDefinition)),
+          acts: cloneDeep(questsDefinition),
         },
         {
           key: 'quests_hell',
           all: false,
           label: 'Hell',
-          acts: JSON.parse(JSON.stringify(questsDefinition)),
+          acts: cloneDeep(questsDefinition),
         },
       ],
     }
   },
   watch: {
     save: {
-      handler: function (newSave, oldSave) {
+      handler: function (newSave /*, oldSave*/) {
         // Update difficulty all & act all checkboxes
         for (const [i, difficulty] of this.difficulties.entries()) {
           let isDifficultyAll = true
@@ -309,7 +335,7 @@ export default {
     },
   },
   methods: {
-    questReward(save, applyOrReset, attributes, amount) {
+    changeAttributes(save, applyOrReset, attributes, amount) {
       if (!applyOrReset) {
         amount *= -1
       }
@@ -320,19 +346,19 @@ export default {
             : save.attributes[attribute]) + amount
       }
     },
-    questRewards(save, quest, applyOrReset) {
+    checkRewards(save, quest, applyOrReset) {
       if (['den_of_evil', 'radaments_lair'].indexOf(quest.key) > -1) {
-        this.questReward(save, applyOrReset, ['newskills'], 1)
+        this.changeAttributes(save, applyOrReset, ['newskills'], 1)
       } else if (quest.key === 'the_fallen_angel') {
-        this.questReward(save, applyOrReset, ['newskills'], 2)
+        this.changeAttributes(save, applyOrReset, ['newskills'], 2)
       } else if (quest.key === 'lam_esens_tome') {
-        this.questReward(save, applyOrReset, ['statpts'], 5)
+        this.changeAttributes(save, applyOrReset, ['statpts'], 5)
       } else if (quest.key === 'the_golden_bird') {
-        this.questReward(save, applyOrReset, ['hitpoints', 'maxhp'], 20)
+        this.changeAttributes(save, applyOrReset, ['hitpoints', 'maxhp'], 20)
       }
     },
-    updateQuest(difficulty, act, quest, state, value) {
-      const newSave = JSON.parse(JSON.stringify(this.save))
+    updateFlag(difficulty, act, quest, flag, value) {
+      const newSave = cloneDeep(this.save)
 
       // Uncheck Act checkbox if needed
       if (act.all !== value && act.all) {
@@ -343,58 +369,86 @@ export default {
         difficulty.all = false
       }
 
-      // If state changes, apply or remove the quest rewards. Works because those quests have a single state.
+      // If "completed" state changes, apply or remove the quest rewards.
       if (
-        value !== newSave.header[difficulty.key][act.key][quest.key][state.key]
+        flag.key === 'b0_is_completed' &&
+        value !== newSave.header[difficulty.key][act.key][quest.key][flag.key]
       ) {
-        this.questRewards(newSave, quest, value)
+        this.checkRewards(newSave, quest, value)
       }
 
-      newSave.header[difficulty.key][act.key][quest.key][state.key] = value
+      newSave.header[difficulty.key][act.key][quest.key][flag.key] = value
 
       // Emit the modification
       this.$emit('update:save', newSave)
     },
-    updateDiff(difficulty, value) {
-      const newSave = JSON.parse(JSON.stringify(this.save))
+    updateQuest(difficulty, act, quest, value, onlyVisible = true) {
+      const newSave = cloneDeep(this.save)
 
-      for (const act of difficulty.acts) {
-        // Update act checkbox
-        act.all = value
+      // Uncheck Act checkbox if needed
+      if (act.all !== value && act.all) {
+        act.all = false
+      }
+      // Uncheck difficulty checkbox if needed
+      if (difficulty.all !== value && difficulty.all) {
+        difficulty.all = false
+      }
 
-        for (const quest of act.quests) {
-          for (const state of quest.values) {
-            // If state changes, apply or remove the quest rewards. Works because those quests have a single state.
-            if (
-              value !==
-              newSave.header[difficulty.key][act.key][quest.key][state.key]
-            ) {
-              this.questRewards(newSave, quest, value)
-            }
+      // If "completed" state changes, apply or remove the quest rewards.
+      if (
+        value !==
+        newSave.header[difficulty.key][act.key][quest.key].b0_is_completed
+      ) {
+        this.checkRewards(newSave, quest, value)
+      }
 
-            newSave.header[difficulty.key][act.key][quest.key][state.key] =
-              value
-          }
+      const toUpdateFlags = onlyVisible ? quest.flags : flagsDef
+      for (const flag of toUpdateFlags) {
+        newSave.header[difficulty.key][act.key][quest.key][flag.key] = value
+      }
+
+      // Emit the modification
+      this.$emit('update:save', newSave)
+    },
+    updateAct(difficulty, act, value, onlyVisible = true) {
+      const newSave = cloneDeep(this.save)
+
+      for (const quest of act.quests) {
+        // If "completed" state changes, apply or remove the quest rewards.
+        if (
+          value !==
+          newSave.header[difficulty.key][act.key][quest.key].b0_is_completed
+        ) {
+          this.checkRewards(newSave, quest, value)
+        }
+        const toUpdateFlags = onlyVisible ? quest.flags : flagsDef
+        for (const flag of toUpdateFlags) {
+          newSave.header[difficulty.key][act.key][quest.key][flag.key] = value
         }
       }
 
       // Emit the modification
       this.$emit('update:save', newSave)
     },
-    updateAct(difficulty, act, value) {
-      const newSave = JSON.parse(JSON.stringify(this.save))
+    updateDifficulty(difficulty, value, onlyVisible = true) {
+      const newSave = cloneDeep(this.save)
 
-      for (const quest of act.quests) {
-        for (const state of quest.values) {
-          // If state changes, apply or remove the quest rewards. Works because those quests have a single state.
+      for (const act of difficulty.acts) {
+        // Update act checkbox
+        act.all = value
+
+        for (const quest of act.quests) {
+          // If "completed" state changes, apply or remove the quest rewards.
           if (
             value !==
-            newSave.header[difficulty.key][act.key][quest.key][state.key]
+            newSave.header[difficulty.key][act.key][quest.key].b0_is_completed
           ) {
-            this.questRewards(newSave, quest, value)
+            this.checkRewards(newSave, quest, value)
           }
-
-          newSave.header[difficulty.key][act.key][quest.key][state.key] = value
+          const toUpdateFlags = onlyVisible ? quest.flags : flagsDef
+          for (const flag of toUpdateFlags) {
+            newSave.header[difficulty.key][act.key][quest.key][flag.key] = value
+          }
         }
       }
 

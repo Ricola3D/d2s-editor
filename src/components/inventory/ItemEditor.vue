@@ -177,7 +177,7 @@
                   @update:model-value="onEvent('update')"
                 />
               </div>
-              <!-- <label>&#187;&#187; Prefix 1</label>
+              <label>&#187;&#187; Prefix 1</label>
               <div>
                 <multiselect
                   v-model.number="item.magical_name_ids[0]"
@@ -248,7 +248,7 @@
                   :required="true"
                   @update:model-value="onEvent('update')"
                 />
-              </div> -->
+              </div>
             </template>
 
             <!-- Set name -->

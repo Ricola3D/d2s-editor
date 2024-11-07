@@ -19,10 +19,15 @@
                 !item.socketed_items || !item.socketed_items[idx - 1],
             }"
           >
-            <img
+            <template
               v-if="item.socketed_items && item.socketed_items[idx - 1]"
-              :src="item.socketed_items[idx - 1].src"
-            />
+            >
+              <img
+                v-if="item.socketed_items[idx - 1].src"
+                :src="item.socketed_items[idx - 1].src"
+              />
+              <img v-else src="/img/loading.gif" class="loading" />
+            </template>
           </div>
         </div>
       </div>
@@ -80,8 +85,6 @@ export default {
     return {
       tooltipShown: false,
       tooltip: null,
-      edit: false,
-      contextMenuShown: false,
     }
   },
   computed: {
@@ -110,6 +113,7 @@ export default {
     }
   },
   methods: {
+    getInventoryImage() {},
     socketStyle(idx) {
       const cellSize = 32
       const countX = Math.max(

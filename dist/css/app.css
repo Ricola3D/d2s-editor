@@ -40,6 +40,13 @@
   border-radius: 0 !important;
 }
 
+/* Inline buttons */
+li .btn {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  vertical-align: baseline;
+}
+
 .form-control:invalid {
   border: 1px solid red;
 }

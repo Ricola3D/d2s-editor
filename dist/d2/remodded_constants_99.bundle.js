@@ -260,7 +260,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 13,
-            "s": "Dodge",
+            "s": "Huntress Haste",
+            // "s": "Dodge",
             "c": "ama"
         },
         {
@@ -270,7 +271,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 15,
-            "s": "Poison Javelin",
+            "s": "Poison Point",
+            // "s": "Poison Javelin",
             "c": "ama"
         },
         {
@@ -301,7 +303,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 21,
-            "s": "Ice Arrow",
+            "s": "Hail of Arrows",
+            // "s": "Ice Arrow",
             "c": "ama"
         },
         {
@@ -331,7 +334,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 27,
-            "s": "Immolation Arrow",
+            "s": "Curtain of Fire",
+            // "s": "Immolation Arrow",
             "c": "ama"
         },
         {
@@ -589,7 +593,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 78,
-            "s": "Bone Wall",
+            "s": "Drain Essence",
+            // "s": "Bone Wall",
             "c": "nec"
         },
         {
@@ -629,7 +634,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 86,
-            "s": "Attract",
+            "s": "Unobstructed",
+            // "s": "Attract",
             "c": "nec"
         },
         {
@@ -841,7 +847,7 @@ export let remodded_constants_99 = {
         },
         {
             "id": 127,
-            "s": "Master of Arms",
+            "s": "Master at Arms",
             // "s": "Blade Mastery",
             "c": "bar"
         },
@@ -926,7 +932,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 142,
-            "s": "Find Item",
+            "s": "Focus",
+            // "s": "Find Item",
             "c": "bar"
         },
         {
@@ -992,7 +999,7 @@ export let remodded_constants_99 = {
         },
         {
             "id": 155,
-            "s": "Moutain Storm",
+            "s": "Mountain Storm",
             // "s": "Battle Command",
             "c": "bar"
         },
@@ -1073,7 +1080,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 176,
-            "s":"Devotion Rewarded"
+            "s":"Devotion Rewarded",
+            "c": "pal"
         },
         {
             "id": 177,
@@ -1085,7 +1093,7 @@ export let remodded_constants_99 = {
             "s": "Bone Spikes"
         },
         {
-            "id": 178,
+            "id": 179,
             "s": "Calcified Carve"
         },
         {
@@ -1173,22 +1181,26 @@ export let remodded_constants_99 = {
         },
         {
             "id": 224,
-            "s": "Lycanthropy",
+            "s": "Roar",
+            // "s": "Lycanthropy",
             "c": "dru"
         },
         {
             "id": 225,
-            "s": "Firestorm",
+            "s": "Thunder Storm",
+            // "s": "Firestorm",
             "c": "dru"
         },
         {
             "id": 226,
-            "s": "Oak Sage",
+            "s": "Ingrain",
+            // "s": "Oak Sage",
             "c": "dru"
         },
         {
             "id": 227,
-            "s": "Summon Spirit Wolf",
+            "s": "Howl",
+            // "s": "Summon Spirit Wolf",
             "c": "dru"
         },
         {
@@ -1199,6 +1211,7 @@ export let remodded_constants_99 = {
         {
             "id": 229,
             "s": "Raise Hell",
+            // "s": "Molten Boulder",
             "c": "dru"
         },
         {
@@ -1235,7 +1248,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 236,
-            "s": "Heart of Wolverine",
+            "s": "Shrub Soldier",
+            // "s": "Heart of Wolverine",
             "c": "dru"
         },
         {
@@ -1246,7 +1260,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 238,
-            "s": "Rabies",
+            "s": "Hypothermia",
+            // "s": "Rabies",
             "c": "dru"
         },
         {
@@ -1256,7 +1271,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 240,
-            "s": "Twister",
+            "s": "Frost Wave",
+            // "s": "Twister",
             "c": "dru"
         },
         {
@@ -1267,12 +1283,14 @@ export let remodded_constants_99 = {
         },
         {
             "id": 242,
-            "s": "Hunger",
+            "s": "Frost Bite",
+            // "s": "Hunger",
             "c": "dru"
         },
         {
             "id": 243,
-            "s": "Shock Wave",
+            "s": "Avalanche",
+            // "s": "Shock Wave",
             "c": "dru"
         },
         {
@@ -1282,7 +1300,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 245,
-            "s": "Tornado",
+            "s": "Tempest Wind",
+            // "s": "Tornado",
             "c": "dru"
         },
         {
@@ -1293,7 +1312,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 247,
-            "s": "Summon Grizzly",
+            "s": "Grizzly",
+            // "s": "Summon Grizzly",
             "c": "dru"
         },
         {
@@ -1320,11 +1340,13 @@ export let remodded_constants_99 = {
         {
             "id": 252,
             "s": "Executioner's Stance",
+            // "s": "Claw Mastery",
             "c": "ass"
         },
         {
             "id": 253,
             "s": "Glacial Sentry",
+            // "s": "Psychic Hammer",
             "c": "ass"
         },
         {
@@ -1400,6 +1422,7 @@ export let remodded_constants_99 = {
         {
             "id": 268,
             "s": "Frozen Shredder",
+            // "s": "Shadow Warrior",
             "c": "ass"
         },
         {
@@ -1409,7 +1432,8 @@ export let remodded_constants_99 = {
         },
         {
             "id": 270,
-            "s": "Frost Bomb",
+            "s": "Frozen Bomb",
+            // "s": "Dragon Tail",
             "c": "ass"
         },
         {
@@ -1609,7 +1633,7 @@ export let remodded_constants_99 = {
         null,
         {
             "id": 386,
-            "s": "Ignite"
+            "s": "Unholy barrage"
         },
         {
             "id": 387,
@@ -1675,7 +1699,10 @@ export let remodded_constants_99 = {
             "id": 417,
             "s": "Molten Boulder"
         },
-        null,
+        {
+            "id": 418,
+            "s": "Ice Bolt"
+        },
         null,
         {
             "id": 420,
@@ -1805,7 +1832,10 @@ export let remodded_constants_99 = {
             "id": 466,
             "s": "Enchant"
         },
-        null,
+        {
+            "id": 467,
+            "s": "Fade"
+        },
         {
             "id": 468,
             "s": "Life Tap"
@@ -1820,7 +1850,10 @@ export let remodded_constants_99 = {
             "s": "Earthquake"
         },
         null,
-        null,
+        {
+            "id": 473,
+            "s": "Bolt Nova"
+        },
         null,
         null,
         null,
@@ -1848,7 +1881,10 @@ export let remodded_constants_99 = {
         },
         null, // 490
         null,
-        null,
+        {
+            "id": 492,
+            "s": "Flare Armor"
+        },
         null,
         null,
         null,
@@ -2219,7 +2255,10 @@ export let remodded_constants_99 = {
         null,
         null,
         null,
-        null,
+        {
+            "id": 635,
+            "s": "Mass Enchant"
+        },
         null,
         null,
         null,
@@ -35381,7 +35420,7 @@ export let remodded_constants_99 = {
             "rs": 25,
             "rd": 106,
             "hi": 1,
-            "gs": 4,
+            "gs": 5,
             "gt": 0,
             "i": "invbal",
             "iw": 2,
@@ -38797,7 +38836,7 @@ export let remodded_constants_99 = {
             "rs": 96,
             "rd": 122,
             "hi": 1,
-            "gs": 4,
+            "gs": 6,
             "gt": 0,
             "i": "invbal",
             "iw": 2,

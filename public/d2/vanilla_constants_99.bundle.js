@@ -1477,1001 +1477,800 @@ export let vanilla_constants_99 = {
         null,
         {
             "id": 1,
-            "index": 0,
             "n": "Bite"
         },
         {
             "id": 2,
-            "index": 1,
             "n": "Scratch"
         },
         {
             "id": 3,
-            "index": 2,
             "n": "Scalpel"
         },
         {
             "id": 4,
-            "index": 3,
             "n": "Fang"
         },
         {
             "id": 5,
-            "index": 4,
             "n": "Gutter"
         },
         {
             "id": 6,
-            "index": 5,
             "n": "Thirst"
         },
         {
             "id": 7,
-            "index": 6,
             "n": "Razor"
         },
         {
             "id": 8,
-            "index": 7,
             "n": "Scythe"
         },
         {
             "id": 9,
-            "index": 8,
             "n": "Edge"
         },
         {
             "id": 10,
-            "index": 9,
             "n": "Saw"
         },
         {
             "id": 11,
-            "index": 10,
             "n": "Splitter"
         },
         {
             "id": 12,
-            "index": 11,
             "n": "Cleaver"
         },
         {
             "id": 13,
-            "index": 12,
             "n": "Sever"
         },
         {
             "id": 14,
-            "index": 13,
             "n": "Sunder"
         },
         {
             "id": 15,
-            "index": 14,
             "n": "Rend"
         },
         {
             "id": 16,
-            "index": 15,
             "n": "Mangler"
         },
         {
             "id": 17,
-            "index": 16,
             "n": "Slayer"
         },
         {
             "id": 18,
-            "index": 17,
             "n": "Reaver"
         },
         {
             "id": 19,
-            "index": 18,
             "n": "Spawn"
         },
         {
             "id": 20,
-            "index": 19,
             "n": "Gnash"
         },
         {
             "id": 21,
-            "index": 20,
             "n": "Star"
         },
         {
             "id": 22,
-            "index": 21,
             "n": "Blow"
         },
         {
             "id": 23,
-            "index": 22,
             "n": "Smasher"
         },
         {
             "id": 24,
-            "index": 23,
             "n": "Bane"
         },
         {
-            "id": 25,
-            "index": 24
+            "id": 25
         },
         {
             "id": 26,
-            "index": 25,
             "n": "Breaker"
         },
         {
             "id": 27,
-            "index": 26,
             "n": "Grinder"
         },
         {
             "id": 28,
-            "index": 27,
             "n": "Crack"
         },
         {
             "id": 29,
-            "index": 28,
             "n": "Mallet"
         },
         {
             "id": 30,
-            "index": 29,
             "n": "Knell"
         },
         {
             "id": 31,
-            "index": 30,
             "n": "Lance"
         },
         {
             "id": 32,
-            "index": 31,
             "n": "Spike"
         },
         {
             "id": 33,
-            "index": 32,
             "n": "Impaler"
         },
         {
             "id": 34,
-            "index": 33,
             "n": "Skewer"
         },
         {
             "id": 35,
-            "index": 34,
             "n": "Prod"
         },
         {
             "id": 36,
-            "index": 35,
             "n": "Scourge"
         },
         {
             "id": 37,
-            "index": 36,
             "n": "Wand"
         },
         {
             "id": 38,
-            "index": 37,
             "n": "Wrack"
         },
         {
             "id": 39,
-            "index": 38,
             "n": "Barb"
         },
         {
             "id": 40,
-            "index": 39,
             "n": "Needle"
         },
         {
             "id": 41,
-            "index": 40,
             "n": "Dart"
         },
         {
             "id": 42,
-            "index": 41,
             "n": "Bolt"
         },
         {
             "id": 43,
-            "index": 42,
             "n": "Quarrel"
         },
         {
             "id": 44,
-            "index": 43,
             "n": "Fletch"
         },
         {
             "id": 45,
-            "index": 44,
             "n": "Flight"
         },
         {
             "id": 46,
-            "index": 45,
             "n": "Nock"
         },
         {
             "id": 47,
-            "index": 46,
             "n": "Horn"
         },
         {
             "id": 48,
-            "index": 47,
             "n": "Stinger"
         },
         {
             "id": 49,
-            "index": 48,
             "n": "Quill"
         },
         {
             "id": 50,
-            "index": 49,
             "n": "Goad"
         },
         {
             "id": 51,
-            "index": 50,
             "n": "Branch"
         },
         {
             "id": 52,
-            "index": 51,
             "n": "Spire"
         },
         {
             "id": 53,
-            "index": 52,
             "n": "Song"
         },
         {
             "id": 54,
-            "index": 53,
             "n": "Call"
         },
         {
             "id": 55,
-            "index": 54,
             "n": "Cry"
         },
         {
             "id": 56,
-            "index": 55,
             "n": "Spell"
         },
         {
             "id": 57,
-            "index": 56,
             "n": "Chant"
         },
         {
             "id": 58,
-            "index": 57,
             "n": "Weaver"
         },
         {
             "id": 59,
-            "index": 58,
             "n": "Gnarl"
         },
         {
             "id": 60,
-            "index": 59,
             "n": "Visage"
         },
         {
             "id": 61,
-            "index": 60,
             "n": "Crest"
         },
         {
             "id": 62,
-            "index": 61,
             "n": "Circlet"
         },
         {
             "id": 63,
-            "index": 62,
             "n": "Veil"
         },
         {
             "id": 64,
-            "index": 63,
             "n": "Hood"
         },
         {
             "id": 65,
-            "index": 64,
             "n": "Mask"
         },
         {
             "id": 66,
-            "index": 65,
             "n": "Brow"
         },
         {
             "id": 67,
-            "index": 66,
             "n": "Casque"
         },
         {
             "id": 68,
-            "index": 67,
             "n": "Visor"
         },
         {
             "id": 69,
-            "index": 68,
             "n": "Cowl"
         },
         {
             "id": 70,
-            "index": 69,
             "n": "Hide"
         },
         {
             "id": 71,
-            "index": 70,
             "n": "Pelt"
         },
         {
             "id": 72,
-            "index": 71,
             "n": "Carapace"
         },
         {
             "id": 73,
-            "index": 72,
             "n": "Coat"
         },
         {
             "id": 74,
-            "index": 73,
             "n": "Wrap"
         },
         {
             "id": 75,
-            "index": 74,
             "n": "Suit"
         },
         {
             "id": 76,
-            "index": 75,
             "n": "Cloak"
         },
         {
             "id": 77,
-            "index": 76,
             "n": "Shroud"
         },
         {
             "id": 78,
-            "index": 77,
             "n": "Jack"
         },
         {
             "id": 79,
-            "index": 78,
             "n": "Mantle"
         },
         {
             "id": 80,
-            "index": 79,
             "n": "Guard"
         },
         {
             "id": 81,
-            "index": 80,
             "n": "Badge"
         },
         {
             "id": 82,
-            "index": 81,
             "n": "Rock"
         },
         {
             "id": 83,
-            "index": 82,
             "n": "Aegis"
         },
         {
             "id": 84,
-            "index": 83,
             "n": "Ward"
         },
         {
             "id": 85,
-            "index": 84,
             "n": "Tower"
         },
         {
             "id": 86,
-            "index": 85,
             "n": "Shield"
         },
         {
             "id": 87,
-            "index": 86,
             "n": "Wing"
         },
         {
             "id": 88,
-            "index": 87,
             "n": "Mark"
         },
         {
             "id": 89,
-            "index": 88,
             "n": "Emblem"
         },
         {
             "id": 90,
-            "index": 89,
             "n": "Hand"
         },
         {
             "id": 91,
-            "index": 90,
             "n": "Fist"
         },
         {
             "id": 92,
-            "index": 91,
             "n": "Claw"
         },
         {
             "id": 93,
-            "index": 92,
             "n": "Clutches"
         },
         {
             "id": 94,
-            "index": 93,
             "n": "Grip"
         },
         {
             "id": 95,
-            "index": 94,
             "n": "Grasp"
         },
         {
             "id": 96,
-            "index": 95,
             "n": "Hold"
         },
         {
             "id": 97,
-            "index": 96,
             "n": "Touch"
         },
         {
             "id": 98,
-            "index": 97,
             "n": "Finger"
         },
         {
             "id": 99,
-            "index": 98,
             "n": "Knuckle"
         },
         {
             "id": 100,
-            "index": 99,
             "n": "Shank"
         },
         {
             "id": 101,
-            "index": 100,
             "n": "Spur"
         },
         {
             "id": 102,
-            "index": 101,
             "n": "Tread"
         },
         {
             "id": 103,
-            "index": 102,
             "n": "Stalker"
         },
         {
             "id": 104,
-            "index": 103,
             "n": "Greaves"
         },
         {
             "id": 105,
-            "index": 104,
             "n": "Blazer"
         },
         {
             "id": 106,
-            "index": 105,
             "n": "Nails"
         },
         {
             "id": 107,
-            "index": 106,
             "n": "Trample"
         },
         {
             "id": 108,
-            "index": 107,
             "n": "Brogues"
         },
         {
             "id": 109,
-            "index": 108,
             "n": "Track"
         },
         {
             "id": 110,
-            "index": 109,
             "n": "Slippers"
         },
         {
             "id": 111,
-            "index": 110,
             "n": "Clasp"
         },
         {
             "id": 112,
-            "index": 111,
             "n": "Buckle"
         },
         {
             "id": 113,
-            "index": 112,
             "n": "Harness"
         },
         {
             "id": 114,
-            "index": 113,
             "n": "Lock"
         },
         {
             "id": 115,
-            "index": 114,
             "n": "Fringe"
         },
         {
             "id": 116,
-            "index": 115,
             "n": "Winding"
         },
         {
             "id": 117,
-            "index": 116,
             "n": "Chain"
         },
         {
-            "id": 118,
-            "index": 117
+            "id": 118
         },
         {
             "id": 119,
-            "index": 118,
             "n": "Lash"
         },
         {
             "id": 120,
-            "index": 119,
             "n": "Cord"
         },
         {
             "id": 121,
-            "index": 120,
             "n": "Knot"
         },
         {
             "id": 122,
-            "index": 121,
             "n": "Circle"
         },
         {
             "id": 123,
-            "index": 122,
             "n": "Loop"
         },
         {
             "id": 124,
-            "index": 123,
             "n": "Eye"
         },
         {
             "id": 125,
-            "index": 124,
             "n": "Turn"
         },
         {
             "id": 126,
-            "index": 125,
             "n": "Spiral"
         },
         {
             "id": 127,
-            "index": 126,
             "n": "Coil"
         },
         {
             "id": 128,
-            "index": 127,
             "n": "Gyre"
         },
         {
             "id": 129,
-            "index": 128,
             "n": "Band"
         },
         {
             "id": 130,
-            "index": 129,
             "n": "Whorl"
         },
         {
             "id": 131,
-            "index": 130,
             "n": "Talisman"
         },
         {
             "id": 132,
-            "index": 131,
             "n": "Heart"
         },
         {
             "id": 133,
-            "index": 132,
             "n": "Noose"
         },
         {
             "id": 134,
-            "index": 133,
             "n": "Necklace"
         },
         {
             "id": 135,
-            "index": 134,
             "n": "Collar"
         },
         {
             "id": 136,
-            "index": 135,
             "n": "Beads"
         },
         {
             "id": 137,
-            "index": 136,
             "n": "Torc"
         },
         {
             "id": 138,
-            "index": 137,
             "n": "Gorget"
         },
         {
-            "id": 139,
-            "index": 138
+            "id": 139
         },
         {
             "id": 140,
-            "index": 139,
             "n": "Wood"
         },
         {
             "id": 141,
-            "index": 140,
             "n": "Brand"
         },
         {
             "id": 142,
-            "index": 141,
             "n": "Bludgeon"
         },
         {
             "id": 143,
-            "index": 142,
             "n": "Cudgel"
         },
         {
             "id": 144,
-            "index": 143,
             "n": "Loom"
         },
         {
             "id": 145,
-            "index": 144,
             "n": "Harp"
         },
         {
             "id": 146,
-            "index": 145,
             "n": "Master"
         },
         {
             "id": 147,
-            "index": 146,
             "n": "Bar"
         },
         {
             "id": 148,
-            "index": 147,
             "n": "Hew"
         },
         {
             "id": 149,
-            "index": 148,
             "n": "Crook"
         },
         {
             "id": 150,
-            "index": 149,
             "n": "Mar"
         },
         {
             "id": 151,
-            "index": 150,
             "n": "Shell"
         },
         {
             "id": 152,
-            "index": 151,
             "n": "Stake"
         },
         {
             "id": 153,
-            "index": 152,
             "n": "Picket"
         },
         {
             "id": 154,
-            "index": 153,
             "n": "Pale"
         },
         {
             "id": 155,
-            "index": 154,
             "n": "Flange"
         },
         {
             "id": 156,
-            "index": 0,
             "n": "Beast"
         },
         {
             "id": 157,
-            "index": 1,
             "n": "Eagle"
         },
         {
             "id": 158,
-            "index": 2,
             "n": "Raven"
         },
         {
             "id": 159,
-            "index": 3,
             "n": "Viper"
         },
         {
-            "id": 160,
-            "index": 4
+            "id": 160
         },
         {
             "id": 161,
-            "index": 5,
             "n": "Skull"
         },
         {
             "id": 162,
-            "index": 6,
             "n": "Blood"
         },
         {
             "id": 163,
-            "index": 7,
             "n": "Dread"
         },
         {
             "id": 164,
-            "index": 8,
             "n": "Doom"
         },
         {
             "id": 165,
-            "index": 9,
             "n": "Grim"
         },
         {
             "id": 166,
-            "index": 10,
             "n": "Bone"
         },
         {
             "id": 167,
-            "index": 11,
             "n": "Death"
         },
         {
             "id": 168,
-            "index": 12,
             "n": "Shadow"
         },
         {
             "id": 169,
-            "index": 13,
             "n": "Storm"
         },
         {
             "id": 170,
-            "index": 14,
             "n": "Rune"
         },
         {
             "id": 171,
-            "index": 15,
             "n": "Plague"
         },
         {
             "id": 172,
-            "index": 16,
             "n": "Stone"
         },
         {
-            "id": 173,
-            "index": 17
+            "id": 173
         },
         {
             "id": 174,
-            "index": 18,
             "n": "Spirit"
         },
         {
             "id": 175,
-            "index": 19,
             "n": "Storm"
         },
         {
             "id": 176,
-            "index": 20,
             "n": "Demon"
         },
         {
             "id": 177,
-            "index": 21,
             "n": "Cruel"
         },
         {
             "id": 178,
-            "index": 22,
             "n": "Empyrian"
         },
         {
             "id": 179,
-            "index": 23,
             "n": "Bramble"
         },
         {
             "id": 180,
-            "index": 24,
             "n": "Pain"
         },
         {
             "id": 181,
-            "index": 25,
             "n": "Loath"
         },
         {
             "id": 182,
-            "index": 26,
             "n": "Glyph"
         },
         {
             "id": 183,
-            "index": 27,
             "n": "Imp"
         },
         {
-            "id": 184,
-            "index": 28
+            "id": 184
         },
         {
             "id": 185,
-            "index": 29,
             "n": "Hailstone"
         },
         {
             "id": 186,
-            "index": 30,
             "n": "Gale"
         },
         {
             "id": 187,
-            "index": 31,
             "n": "Dire"
         },
         {
             "id": 188,
-            "index": 32,
             "n": "Soul"
         },
         {
             "id": 189,
-            "index": 33,
             "n": "Brimstone"
         },
         {
             "id": 190,
-            "index": 34,
             "n": "Corpse"
         },
         {
             "id": 191,
-            "index": 35,
             "n": "Carrion"
         },
         {
             "id": 192,
-            "index": 36,
             "n": "Armageddon"
         },
         {
             "id": 193,
-            "index": 37,
             "n": "Havoc"
         },
         {
             "id": 194,
-            "index": 38,
             "n": "Bitter"
         },
         {
             "id": 195,
-            "index": 39,
             "n": "Entropy"
         },
         {
             "id": 196,
-            "index": 40,
             "n": "Chaos"
         },
         {
             "id": 197,
-            "index": 41,
             "n": "Order"
         },
         {
             "id": 198,
-            "index": 42,
             "n": "Rule"
         },
         {
             "id": 199,
-            "index": 43,
             "n": "Warp"
         },
         {
             "id": 200,
-            "index": 44,
             "n": "Rift"
         },
         {
             "id": 201,
-            "index": 45,
             "n": "Corruption"
         }
     ],
@@ -13878,740 +13677,895 @@ export let vanilla_constants_99 = {
     ],
     "runewords": [
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         {
-            "id": 27,
-            "n": "Ancients' Pledge"
+            "index": 1,
+            "n": "Ancients' Pledge",
+            "id": 1
         },
         {
-            "id": 28,
-            "n": "Armageddon"
+            "index": 2,
+            "n": "Armageddon",
+            "id": 2
         },
         {
-            "id": 29,
-            "n": "Authority"
+            "index": 3,
+            "n": "Authority",
+            "id": 3
         },
         {
-            "id": 30,
-            "n": "Beast"
+            "index": 4,
+            "n": "Beast",
+            "id": 4
         },
         {
-            "id": 31,
-            "n": "Beauty"
+            "index": 5,
+            "n": "Beauty",
+            "id": 5
         },
         {
-            "id": 32,
-            "n": "Black"
+            "index": 6,
+            "n": "Black",
+            "id": 6
         },
         {
-            "id": 33,
-            "n": "Blood"
+            "index": 7,
+            "n": "Blood",
+            "id": 7
         },
         {
-            "id": 34,
-            "n": "Bone"
+            "index": 8,
+            "n": "Bone",
+            "id": 8
         },
         {
-            "id": 35,
-            "n": "Bramble"
+            "index": 9,
+            "n": "Bramble",
+            "id": 9
         },
         {
-            "id": 36,
-            "n": "Brand"
+            "index": 10,
+            "n": "Brand",
+            "id": 10
         },
         {
-            "id": 37,
-            "n": "Breath of the Dying"
+            "index": 11,
+            "n": "Breath of the Dying",
+            "id": 11
         },
         {
-            "id": 38,
-            "n": "Broken Promise"
+            "index": 12,
+            "n": "Broken Promise",
+            "id": 12
         },
         {
-            "id": 39,
-            "n": "Call to Arms"
+            "index": 13,
+            "n": "Call to Arms",
+            "id": 13
         },
         {
-            "id": 40,
-            "n": "Chains of Honor"
+            "index": 14,
+            "n": "Chains of Honor",
+            "id": 14
         },
         {
-            "id": 41,
-            "n": "Chance"
+            "index": 15,
+            "n": "Chance",
+            "id": 15
         },
         {
-            "id": 42,
-            "n": "Chaos"
+            "index": 16,
+            "n": "Chaos",
+            "id": 16
         },
         {
-            "id": 43,
-            "n": "Crescent Moon"
+            "index": 17,
+            "n": "Crescent Moon",
+            "id": 17
         },
         {
-            "id": 44,
-            "n": "Darkness"
+            "index": 18,
+            "n": "Darkness",
+            "id": 18
         },
         {
-            "id": 45,
-            "n": "Daylight"
+            "index": 19,
+            "n": "Daylight",
+            "id": 19
         },
         {
-            "id": 46,
-            "n": "Death"
+            "index": 20,
+            "n": "Death",
+            "id": 20
         },
         {
-            "id": 47,
-            "n": "Deception"
+            "index": 21,
+            "n": "Deception",
+            "id": 21
         },
         {
-            "id": 48,
-            "n": "Delirium"
+            "index": 22,
+            "n": "Delirium",
+            "id": 22
         },
         {
-            "id": 49,
-            "n": "Desire"
+            "index": 23,
+            "n": "Desire",
+            "id": 23
         },
         {
-            "id": 50,
-            "n": "Despair"
+            "index": 24,
+            "n": "Despair",
+            "id": 24
         },
         {
-            "id": 51,
-            "n": "Destruction"
+            "index": 25,
+            "n": "Destruction",
+            "id": 25
         },
         {
-            "id": 52,
-            "n": "Doom"
+            "index": 26,
+            "n": "Doom",
+            "id": 26
         },
         {
-            "id": 53,
-            "n": "Dragon"
+            "index": 27,
+            "n": "Dragon",
+            "id": 27
         },
         {
-            "id": 54,
-            "n": "Dread"
+            "index": 28,
+            "n": "Dread",
+            "id": 28
         },
         {
-            "id": 55,
-            "n": "Dream"
+            "index": 29,
+            "n": "Dream",
+            "id": 29
         },
         {
-            "id": 56,
-            "n": "Duress"
+            "index": 30,
+            "n": "Duress",
+            "id": 30
         },
         {
-            "id": 57,
-            "n": "Edge"
+            "index": 31,
+            "n": "Edge",
+            "id": 31
         },
         {
-            "id": 58,
-            "n": "Elation"
+            "index": 32,
+            "n": "Elation",
+            "id": 32
         },
         {
-            "id": 59,
-            "n": "Enigma"
+            "index": 33,
+            "n": "Enigma",
+            "id": 33
         },
         {
-            "id": 60,
-            "n": "Enlightenment"
+            "index": 34,
+            "n": "Enlightenment",
+            "id": 34
         },
         {
-            "id": 61,
-            "n": "Envy"
+            "index": 35,
+            "n": "Envy",
+            "id": 35
         },
         {
-            "id": 62,
-            "n": "Eternity"
+            "index": 36,
+            "n": "Eternity",
+            "id": 36
         },
         {
-            "id": 63,
-            "n": "Exile"
+            "index": 37,
+            "n": "Exile",
+            "id": 37
         },
         {
-            "id": 64,
-            "n": "Faith"
+            "index": 38,
+            "n": "Faith",
+            "id": 38
         },
         {
-            "id": 65,
-            "n": "Famine"
+            "index": 39,
+            "n": "Famine",
+            "id": 39
         },
         {
-            "id": 66,
-            "n": "Flickering Flame"
+            "index": 40,
+            "n": "Flickering Flame",
+            "id": 40
         },
         {
-            "id": 67,
-            "n": "Fortitude"
+            "index": 41,
+            "n": "Fortitude",
+            "id": 41
         },
         {
-            "id": 68,
-            "n": "Fortune"
+            "index": 42,
+            "n": "Fortune",
+            "id": 42
         },
         {
-            "id": 69,
-            "n": "Friendship"
+            "index": 43,
+            "n": "Friendship",
+            "id": 43
         },
         {
-            "id": 70,
-            "n": "Fury"
+            "index": 44,
+            "n": "Fury",
+            "id": 44
         },
         {
-            "id": 71,
-            "n": "Gloom"
+            "index": 45,
+            "n": "Gloom",
+            "id": 45
         },
         {
-            "id": 72,
-            "n": "Glory"
+            "index": 46,
+            "n": "Glory",
+            "id": 46
         },
         {
-            "id": 73,
-            "n": "Grief"
+            "index": 47,
+            "n": "Grief",
+            "id": 47
         },
         {
-            "id": 74,
-            "n": "Hand of Justice"
+            "index": 48,
+            "n": "Hand of Justice",
+            "id": 48
         },
         {
-            "id": 75,
-            "n": "Harmony"
+            "index": 49,
+            "n": "Harmony",
+            "id": 49
         },
         {
-            "id": 76,
-            "n": "Hatred"
+            "index": 50,
+            "n": "Hatred",
+            "id": 50
         },
         {
-            "id": 77,
-            "n": "Heart of the Oak"
+            "index": 51,
+            "n": "Heart of the Oak",
+            "id": 51
         },
         {
-            "id": 78,
-            "n": "Heaven's Will"
+            "index": 52,
+            "n": "Heaven's Will",
+            "id": 52
         },
         {
-            "id": 79,
-            "n": "Holy Tears"
+            "index": 53,
+            "n": "Holy Tears",
+            "id": 53
         },
         {
-            "id": 80,
-            "n": "Holy Thunder"
+            "index": 54,
+            "n": "Holy Thunder",
+            "id": 54
         },
         {
-            "id": 81,
-            "n": "Honor"
+            "index": 55,
+            "n": "Honor",
+            "id": 55
         },
         {
-            "id": 82,
-            "n": "Revenge"
+            "index": 56,
+            "n": "Revenge",
+            "id": 56
         },
         {
-            "id": 83,
-            "n": "Humility"
+            "index": 57,
+            "n": "Humility",
+            "id": 57
         },
         {
-            "id": 84,
-            "n": "Hunger"
+            "index": 58,
+            "n": "Hunger",
+            "id": 58
         },
         {
-            "id": 85,
-            "n": "Ice"
+            "index": 59,
+            "n": "Ice",
+            "id": 59
         },
         {
-            "id": 86,
-            "n": "Infinity"
+            "index": 60,
+            "n": "Infinity",
+            "id": 60
         },
         {
-            "id": 87,
-            "n": "Innocence"
+            "index": 61,
+            "n": "Innocence",
+            "id": 61
         },
         {
-            "id": 88,
-            "n": "Insight"
+            "index": 62,
+            "n": "Insight",
+            "id": 62
         },
         {
-            "id": 89,
-            "n": "Jealousy"
+            "index": 63,
+            "n": "Jealousy",
+            "id": 63
         },
         {
-            "id": 90,
-            "n": "Judgement"
+            "index": 64,
+            "n": "Judgement",
+            "id": 64
         },
         {
-            "id": 91,
-            "n": "King's Grace"
+            "index": 65,
+            "n": "King's Grace",
+            "id": 65
         },
         {
-            "id": 92,
-            "n": "Kingslayer"
+            "index": 66,
+            "n": "Kingslayer",
+            "id": 66
         },
         {
-            "id": 93,
-            "n": "Knight's Vigil"
+            "index": 67,
+            "n": "Knight's Vigil",
+            "id": 67
         },
         {
-            "id": 94,
-            "n": "Knowledge"
+            "index": 68,
+            "n": "Knowledge",
+            "id": 68
         },
         {
-            "id": 95,
-            "n": "Last Wish"
+            "index": 69,
+            "n": "Last Wish",
+            "id": 69
         },
         {
-            "id": 96,
-            "n": "Law"
+            "index": 70,
+            "n": "Law",
+            "id": 70
         },
         {
-            "id": 97,
-            "n": "Lawbringer"
+            "index": 71,
+            "n": "Lawbringer",
+            "id": 71
         },
         {
-            "id": 98,
-            "n": "Leaf"
+            "index": 72,
+            "n": "Leaf",
+            "id": 72
         },
         {
-            "id": 99,
-            "n": "Lightning"
+            "index": 73,
+            "n": "Lightning",
+            "id": 73
         },
         {
-            "id": 100,
-            "n": "Lionheart"
+            "index": 74,
+            "n": "Lionheart",
+            "id": 74
         },
         {
-            "id": 101,
-            "n": "Love"
+            "index": 75,
+            "n": "Lore",
+            "id": 75
         },
         {
-            "id": 102,
-            "n": "Loyalty"
+            "index": 76,
+            "n": "Love",
+            "id": 76
         },
         {
-            "id": 103,
-            "n": "Lust"
+            "index": 77,
+            "n": "Loyalty",
+            "id": 77
         },
         {
-            "id": 104,
-            "n": "Madness"
+            "index": 78,
+            "n": "Lust",
+            "id": 78
         },
-        null,
         {
-            "id": 106,
-            "n": "Malice"
+            "index": 79,
+            "n": "Madness",
+            "id": 79
         },
         {
-            "id": 107,
-            "n": "Melody"
+            "index": 81,
+            "n": "Malice",
+            "id": 80
         },
         {
-            "id": 108,
-            "n": "Memory"
+            "index": 82,
+            "n": "Melody",
+            "id": 81
         },
         {
-            "id": 109,
-            "n": "Mist"
+            "index": 83,
+            "n": "Memory",
+            "id": 82
         },
         {
-            "id": 110,
-            "n": "Morning"
+            "index": 84,
+            "n": "Mist",
+            "id": 83
         },
         {
-            "id": 111,
-            "n": "Mystery"
+            "index": 85,
+            "n": "Morning",
+            "id": 84
         },
         {
-            "id": 112,
-            "n": "Myth"
+            "index": 86,
+            "n": "Mystery",
+            "id": 85
         },
         {
-            "id": 113,
-            "n": "Nadir"
+            "index": 87,
+            "n": "Myth",
+            "id": 86
         },
         {
-            "id": 114,
-            "n": "Nature's Kingdom"
+            "index": 88,
+            "n": "Nadir",
+            "id": 87
         },
         {
-            "id": 115,
-            "n": "Night"
+            "index": 89,
+            "n": "Nature's Kingdom",
+            "id": 88
         },
         {
-            "id": 116,
-            "n": "Oath"
+            "index": 90,
+            "n": "Night",
+            "id": 89
         },
         {
-            "id": 117,
-            "n": "Obedience"
+            "index": 91,
+            "n": "Oath",
+            "id": 90
         },
         {
-            "id": 118,
-            "n": "Oblivion"
+            "index": 92,
+            "n": "Obedience",
+            "id": 91
         },
         {
-            "id": 119,
-            "n": "Obsession"
+            "index": 93,
+            "n": "Oblivion",
+            "id": 92
         },
         {
-            "id": 120,
-            "n": "Passion"
+            "index": 94,
+            "n": "Obsession",
+            "id": 93
         },
         {
-            "id": 121,
-            "n": "Patience"
+            "index": 95,
+            "n": "Passion",
+            "id": 94
         },
         {
-            "id": 122,
-            "n": "Pattern"
+            "index": 96,
+            "n": "Patience",
+            "id": 95
         },
         {
-            "id": 123,
-            "n": "Peace"
+            "index": 97,
+            "n": "Pattern",
+            "id": 96
         },
         {
-            "id": 124,
-            "n": "Voice of Reason"
+            "index": 98,
+            "n": "Peace",
+            "id": 97
         },
         {
-            "id": 125,
-            "n": "Penitence"
+            "index": 99,
+            "n": "Voice of Reason",
+            "id": 98
         },
         {
-            "id": 126,
-            "n": "Peril"
+            "index": 100,
+            "n": "Penitence",
+            "id": 99
         },
         {
-            "id": 127,
-            "n": "Pestilence"
+            "index": 101,
+            "n": "Peril",
+            "id": 100
         },
         {
-            "id": 128,
-            "n": "Phoenix"
+            "index": 102,
+            "n": "Pestilence",
+            "id": 101
         },
         {
-            "id": 129,
-            "n": "Piety"
+            "index": 103,
+            "n": "Phoenix",
+            "id": 102
         },
         {
-            "id": 130,
-            "n": "Pillar of Faith"
+            "index": 104,
+            "n": "Piety",
+            "id": 103
         },
         {
-            "id": 131,
-            "n": "Plague"
+            "index": 105,
+            "n": "Pillar of Faith",
+            "id": 104
         },
         {
-            "id": 132,
-            "n": "Praise"
+            "index": 106,
+            "n": "Plague",
+            "id": 105
         },
         {
-            "id": 133,
-            "n": "Prayer"
+            "index": 107,
+            "n": "Praise",
+            "id": 106
         },
         {
-            "id": 134,
-            "n": "Pride"
+            "index": 108,
+            "n": "Prayer",
+            "id": 107
         },
         {
-            "id": 135,
-            "n": "Principle"
+            "index": 109,
+            "n": "Pride",
+            "id": 108
         },
         {
-            "id": 136,
-            "n": "Prowess in Battle"
+            "index": 110,
+            "n": "Principle",
+            "id": 109
         },
         {
-            "id": 137,
-            "n": "Prudence"
+            "index": 111,
+            "n": "Prowess in Battle",
+            "id": 110
         },
         {
-            "id": 138,
-            "n": "Punishment"
+            "index": 112,
+            "n": "Prudence",
+            "id": 111
         },
         {
-            "id": 139,
-            "n": "Purity"
+            "index": 113,
+            "n": "Punishment",
+            "id": 112
         },
         {
-            "id": 140,
-            "n": "Question"
+            "index": 114,
+            "n": "Purity",
+            "id": 113
         },
         {
-            "id": 141,
-            "n": "Radiance"
+            "index": 115,
+            "n": "Question",
+            "id": 114
         },
         {
-            "id": 142,
-            "n": "Rain"
+            "index": 116,
+            "n": "Radiance",
+            "id": 115
         },
         {
-            "id": 143,
-            "n": "Reason"
+            "index": 117,
+            "n": "Rain",
+            "id": 116
         },
         {
-            "id": 144,
-            "n": "Red"
+            "index": 118,
+            "n": "Reason",
+            "id": 117
         },
         {
-            "id": 145,
-            "n": "Rhyme"
+            "index": 119,
+            "n": "Red",
+            "id": 118
         },
         {
-            "id": 146,
-            "n": "Rift"
+            "index": 120,
+            "n": "Rhyme",
+            "id": 119
         },
         {
-            "id": 147,
-            "n": "Sanctuary"
+            "index": 121,
+            "n": "Rift",
+            "id": 120
         },
         {
-            "id": 148,
-            "n": "Serendipity"
+            "index": 122,
+            "n": "Sanctuary",
+            "id": 121
         },
         {
-            "id": 149,
-            "n": "Shadow"
+            "index": 123,
+            "n": "Serendipity",
+            "id": 122
         },
         {
-            "id": 150,
-            "n": "Shadow of Doubt"
+            "index": 124,
+            "n": "Shadow",
+            "id": 123
         },
         {
-            "id": 151,
-            "n": "Silence"
+            "index": 125,
+            "n": "Shadow of Doubt",
+            "id": 124
         },
         {
-            "id": 152,
-            "n": "Siren's Song"
+            "index": 126,
+            "n": "Silence",
+            "id": 125
         },
         {
-            "id": 153,
-            "n": "Smoke"
+            "index": 127,
+            "n": "Siren's Song",
+            "id": 126
         },
         {
-            "id": 154,
-            "n": "Sorrow"
+            "index": 128,
+            "n": "Smoke",
+            "id": 127
         },
         {
-            "id": 155,
-            "n": "Spirit"
+            "index": 129,
+            "n": "Sorrow",
+            "id": 128
         },
         {
-            "id": 156,
-            "n": "Splendor"
+            "index": 130,
+            "n": "Spirit",
+            "id": 129
         },
         {
-            "id": 157,
-            "n": "Starlight"
+            "index": 131,
+            "n": "Splendor",
+            "id": 130
         },
         {
-            "id": 158,
-            "n": "Stealth"
+            "index": 132,
+            "n": "Starlight",
+            "id": 131
         },
         {
-            "id": 159,
-            "n": "Steel"
+            "index": 133,
+            "n": "Stealth",
+            "id": 132
         },
         {
-            "id": 160,
-            "n": "Still Water"
+            "index": 134,
+            "n": "Steel",
+            "id": 133
         },
         {
-            "id": 161,
-            "n": "Sting"
+            "index": 135,
+            "n": "Still Water",
+            "id": 134
         },
         {
-            "id": 162,
-            "n": "Stone"
+            "index": 136,
+            "n": "Sting",
+            "id": 135
         },
         {
-            "id": 163,
-            "n": "Storm"
+            "index": 137,
+            "n": "Stone",
+            "id": 136
         },
         {
-            "id": 164,
-            "n": "Strength"
+            "index": 138,
+            "n": "Storm",
+            "id": 137
         },
         {
-            "id": 165,
-            "n": "Tempest"
+            "index": 139,
+            "n": "Strength",
+            "id": 138
         },
         {
-            "id": 166,
-            "n": "Temptation"
+            "index": 140,
+            "n": "Tempest",
+            "id": 139
         },
         {
-            "id": 167,
-            "n": "Terror"
+            "index": 141,
+            "n": "Temptation",
+            "id": 140
         },
         {
-            "id": 168,
-            "n": "Thirst"
+            "index": 142,
+            "n": "Terror",
+            "id": 141
         },
         {
-            "id": 169,
-            "n": "Thought"
+            "index": 143,
+            "n": "Thirst",
+            "id": 142
         },
         {
-            "id": 170,
-            "n": "Thunder"
+            "index": 144,
+            "n": "Thought",
+            "id": 143
         },
         {
-            "id": 171,
-            "n": "Time"
+            "index": 145,
+            "n": "Thunder",
+            "id": 144
         },
         {
-            "id": 172,
-            "n": "Tradition"
+            "index": 146,
+            "n": "Time",
+            "id": 145
         },
         {
-            "id": 173,
-            "n": "Treachery"
+            "index": 147,
+            "n": "Tradition",
+            "id": 146
         },
         {
-            "id": 174,
-            "n": "Trust"
+            "index": 148,
+            "n": "Treachery",
+            "id": 147
         },
         {
-            "id": 175,
-            "n": "Truth"
+            "index": 149,
+            "n": "Trust",
+            "id": 148
         },
         {
-            "id": 176,
-            "n": "Unbending Will"
+            "index": 150,
+            "n": "Truth",
+            "id": 149
         },
         {
-            "id": 177,
-            "n": "Valor"
+            "index": 151,
+            "n": "Unbending Will",
+            "id": 150
         },
         {
-            "id": 178,
-            "n": "Vengeance"
+            "index": 152,
+            "n": "Valor",
+            "id": 151
         },
         {
-            "id": 179,
-            "n": "Venom"
+            "index": 153,
+            "n": "Vengeance",
+            "id": 152
         },
         {
-            "id": 180,
-            "n": "Victory"
+            "index": 154,
+            "n": "Venom",
+            "id": 153
         },
         {
-            "id": 181,
-            "n": "Voice"
+            "index": 155,
+            "n": "Victory",
+            "id": 154
         },
         {
-            "id": 182,
-            "n": "Void"
+            "index": 156,
+            "n": "Voice",
+            "id": 155
         },
         {
-            "id": 183,
-            "n": "War"
+            "index": 157,
+            "n": "Void",
+            "id": 156
         },
         {
-            "id": 184,
-            "n": "Water"
+            "index": 158,
+            "n": "War",
+            "id": 157
         },
         {
-            "id": 185,
-            "n": "Wealth"
+            "index": 159,
+            "n": "Water",
+            "id": 158
         },
         {
-            "id": 186,
-            "n": "Whisper"
+            "index": 160,
+            "n": "Wealth",
+            "id": 159
         },
         {
-            "id": 187,
-            "n": "White"
+            "index": 161,
+            "n": "Whisper",
+            "id": 160
         },
         {
-            "id": 188,
-            "n": "Wind"
+            "index": 162,
+            "n": "White",
+            "id": 161
         },
         {
-            "id": 189,
-            "n": "Wings of Hope"
+            "index": 163,
+            "n": "Wind",
+            "id": 162
         },
         {
-            "id": 190,
-            "n": "Wisdom"
+            "index": 164,
+            "n": "Wings of Hope",
+            "id": 163
         },
         {
-            "id": 191,
-            "n": "Woe"
+            "index": 165,
+            "n": "Wisdom",
+            "id": 164
         },
         {
-            "id": 192,
-            "n": "Wonder"
+            "index": 166,
+            "n": "Woe",
+            "id": 165
         },
         {
-            "id": 193,
-            "n": "Wrath"
+            "index": 167,
+            "n": "Wonder",
+            "id": 166
         },
         {
-            "id": 194,
-            "n": "Youth"
+            "index": 168,
+            "n": "Wrath",
+            "id": 167
         },
         {
-            "id": 195,
-            "n": "Zephyr"
+            "index": 169,
+            "n": "Youth",
+            "id": 168
         },
         {
-            "id": 196,
-            "n": "Hustle"
+            "index": 170,
+            "n": "Zephyr",
+            "id": 169
         },
         {
-            "id": 197,
-            "n": "Hustle"
+            "index": 171,
+            "n": "Hustle",
+            "id": 170
         },
         {
-            "id": 198,
-            "n": "Mosaic"
+            "index": 172,
+            "n": "Hustle",
+            "id": 171
         },
         {
-            "id": 199,
-            "n": "Metamorphosis"
+            "index": 173,
+            "n": "Mosaic",
+            "id": 172
         },
         {
-            "id": 200,
-            "n": "Ground"
+            "index": 174,
+            "n": "Metamorphosis",
+            "id": 173
         },
         {
-            "id": 201,
-            "n": "Temper"
+            "index": 175,
+            "n": "Ground",
+            "id": 174
         },
         {
-            "id": 202,
-            "n": "Hearth"
+            "index": 176,
+            "n": "Temper",
+            "id": 175
         },
         {
-            "id": 203,
-            "n": "Cure"
+            "index": 177,
+            "n": "Hearth",
+            "id": 176
         },
         {
-            "id": 204,
-            "n": "Bulwark"
+            "index": 178,
+            "n": "Cure",
+            "id": 177
+        },
+        {
+            "index": 179,
+            "n": "Bulwark",
+            "id": 178
         }
     ],
     "set_items": [

@@ -40,6 +40,13 @@
   border-radius: 0 !important;
 }
 
+/* Inline buttons */
+li .btn {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  vertical-align: baseline;
+}
+
 .form-control:invalid {
   border: 1px solid red;
 }
@@ -358,7 +365,7 @@ input:invalid {
 
 div.settings {
   display: grid;
-  grid-template-columns: max-content max-content;
+  grid-template-columns: max-content minmax(200px, max-content);
   grid-gap: 5px;
 }
 

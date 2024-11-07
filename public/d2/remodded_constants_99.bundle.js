@@ -1093,7 +1093,7 @@ export let remodded_constants_99 = {
             "s": "Bone Spikes"
         },
         {
-            "id": 178,
+            "id": 179,
             "s": "Calcified Carve"
         },
         {
@@ -1633,7 +1633,7 @@ export let remodded_constants_99 = {
         null,
         {
             "id": 386,
-            "s": "Ignite"
+            "s": "Unholy barrage"
         },
         {
             "id": 387,
@@ -1652,7 +1652,10 @@ export let remodded_constants_99 = {
             "s": "Reduce Lightning Resistance"
         },
         null,
-        null,
+        {
+            "id": 392,
+            "s": "Hidden Death/Kill Detection ?"
+        },
         null,
         null,
         null,
@@ -1699,7 +1702,10 @@ export let remodded_constants_99 = {
             "id": 417,
             "s": "Molten Boulder"
         },
-        null,
+        {
+            "id": 418,
+            "s": "Ice Bolt"
+        },
         null,
         {
             "id": 420,
@@ -1829,7 +1835,10 @@ export let remodded_constants_99 = {
             "id": 466,
             "s": "Enchant"
         },
-        null,
+        {
+            "id": 467,
+            "s": "Fade"
+        },
         {
             "id": 468,
             "s": "Life Tap"
@@ -1846,10 +1855,14 @@ export let remodded_constants_99 = {
         null,
         {
             "id": 473,
-            "s": "Bolt Nova"
+            // "s": "Bolt Nova"
+            "s": "Activate Weight System"
         },
         null,
-        null,
+        {
+            "id": 475,
+            "s": "Area Effect (hidden)"
+        },
         null,
         null,
         null,
@@ -1875,7 +1888,10 @@ export let remodded_constants_99 = {
         },
         null, // 490
         null,
-        null,
+        {
+            "id": 492,
+            "s": "Flare Armor"
+        },
         null,
         null,
         null,
@@ -2246,7 +2262,10 @@ export let remodded_constants_99 = {
         null,
         null,
         null,
-        null,
+        {
+            "id": 635,
+            "s": "Mass Enchant"
+        },
         null,
         null,
         null,
@@ -2272,7 +2291,8 @@ export let remodded_constants_99 = {
         null,
         {
             "id": 653,
-            "s": "Activate Weight System"
+            // "s": "Activate Weight System"
+            "s": "Bolt Nova"
         },
         {
             "id": 654,
@@ -2329,1006 +2349,816 @@ export let remodded_constants_99 = {
         null,
         null,
         null, // 690
+        null,
+        null,
+        null,
+        {
+            "id": 694,
+            "s": "Unknown Weapon Skill 694"
+        },
+        {
+            "id": 695,
+            "s": "Unknown Weapon Skill 695"
+        }
     ],
     "rare_names": [
         null,
         {
             "id": 1,
-            "index": 0,
             "n": "Bite"
         },
         {
             "id": 2,
-            "index": 1,
             "n": "Scratch"
         },
         {
             "id": 3,
-            "index": 2,
             "n": "Scalpel"
         },
         {
             "id": 4,
-            "index": 3,
             "n": "Fang"
         },
         {
             "id": 5,
-            "index": 4,
             "n": "Gutter"
         },
         {
             "id": 6,
-            "index": 5,
             "n": "Thirst"
         },
         {
             "id": 7,
-            "index": 6,
             "n": "Razor"
         },
         {
             "id": 8,
-            "index": 7,
             "n": "Scythe"
         },
         {
             "id": 9,
-            "index": 8,
             "n": "Edge"
         },
         {
             "id": 10,
-            "index": 9,
             "n": "Saw"
         },
         {
             "id": 11,
-            "index": 10,
             "n": "Splitter"
         },
         {
             "id": 12,
-            "index": 11,
             "n": "Cleaver"
         },
         {
             "id": 13,
-            "index": 12,
             "n": "Sever"
         },
         {
             "id": 14,
-            "index": 13,
             "n": "Sunder"
         },
         {
             "id": 15,
-            "index": 14,
             "n": "Rend"
         },
         {
             "id": 16,
-            "index": 15,
             "n": "Mangler"
         },
         {
             "id": 17,
-            "index": 16,
             "n": "Slayer"
         },
         {
             "id": 18,
-            "index": 17,
             "n": "Reaver"
         },
         {
             "id": 19,
-            "index": 18,
             "n": "Spawn"
         },
         {
             "id": 20,
-            "index": 19,
             "n": "Gnash"
         },
         {
             "id": 21,
-            "index": 20,
             "n": "Star"
         },
         {
             "id": 22,
-            "index": 21,
             "n": "Blow"
         },
         {
             "id": 23,
-            "index": 22,
             "n": "Smasher"
         },
         {
             "id": 24,
-            "index": 23,
             "n": "Bane"
         },
         {
-            "id": 25,
-            "index": 24
+            "id": 25
         },
         {
             "id": 26,
-            "index": 25,
             "n": "Breaker"
         },
         {
             "id": 27,
-            "index": 26,
             "n": "Grinder"
         },
         {
             "id": 28,
-            "index": 27,
             "n": "Crack"
         },
         {
             "id": 29,
-            "index": 28,
             "n": "Mallet"
         },
         {
             "id": 30,
-            "index": 29,
             "n": "Knell"
         },
         {
             "id": 31,
-            "index": 30,
             "n": "Lance"
         },
         {
             "id": 32,
-            "index": 31,
             "n": "Spike"
         },
         {
             "id": 33,
-            "index": 32,
             "n": "Impaler"
         },
         {
             "id": 34,
-            "index": 33,
             "n": "Skewer"
         },
         {
             "id": 35,
-            "index": 34,
             "n": "Prod"
         },
         {
             "id": 36,
-            "index": 35,
             "n": "Scourge"
         },
         {
             "id": 37,
-            "index": 36,
             "n": "Wand"
         },
         {
             "id": 38,
-            "index": 37,
             "n": "Wrack"
         },
         {
             "id": 39,
-            "index": 38,
             "n": "Barb"
         },
         {
             "id": 40,
-            "index": 39,
             "n": "Needle"
         },
         {
             "id": 41,
-            "index": 40,
             "n": "Dart"
         },
         {
             "id": 42,
-            "index": 41,
             "n": "Bolt"
         },
         {
             "id": 43,
-            "index": 42,
             "n": "Quarrel"
         },
         {
             "id": 44,
-            "index": 43,
             "n": "Fletch"
         },
         {
             "id": 45,
-            "index": 44,
             "n": "Flight"
         },
         {
             "id": 46,
-            "index": 45,
             "n": "Nock"
         },
         {
             "id": 47,
-            "index": 46,
             "n": "Horn"
         },
         {
             "id": 48,
-            "index": 47,
             "n": "Stinger"
         },
         {
             "id": 49,
-            "index": 48,
             "n": "Quill"
         },
         {
             "id": 50,
-            "index": 49,
             "n": "Goad"
         },
         {
             "id": 51,
-            "index": 50,
             "n": "Branch"
         },
         {
             "id": 52,
-            "index": 51,
             "n": "Spire"
         },
         {
             "id": 53,
-            "index": 52,
             "n": "Song"
         },
         {
             "id": 54,
-            "index": 53,
             "n": "Call"
         },
         {
             "id": 55,
-            "index": 54,
             "n": "Cry"
         },
         {
             "id": 56,
-            "index": 55,
             "n": "Spell"
         },
         {
             "id": 57,
-            "index": 56,
             "n": "Chant"
         },
         {
             "id": 58,
-            "index": 57,
             "n": "Weaver"
         },
         {
             "id": 59,
-            "index": 58,
             "n": "Gnarl"
         },
         {
             "id": 60,
-            "index": 59,
             "n": "Visage"
         },
         {
             "id": 61,
-            "index": 60,
             "n": "Crest"
         },
         {
             "id": 62,
-            "index": 61,
             "n": "Circlet"
         },
         {
             "id": 63,
-            "index": 62,
             "n": "Veil"
         },
         {
             "id": 64,
-            "index": 63,
             "n": "Hood"
         },
         {
             "id": 65,
-            "index": 64,
             "n": "Mask"
         },
         {
             "id": 66,
-            "index": 65,
             "n": "Brow"
         },
         {
             "id": 67,
-            "index": 66,
             "n": "Casque"
         },
         {
             "id": 68,
-            "index": 67,
             "n": "Visor"
         },
         {
             "id": 69,
-            "index": 68,
             "n": "Cowl"
         },
         {
             "id": 70,
-            "index": 69,
             "n": "Hide"
         },
         {
             "id": 71,
-            "index": 70,
             "n": "Pelt"
         },
         {
             "id": 72,
-            "index": 71,
             "n": "Carapace"
         },
         {
             "id": 73,
-            "index": 72,
             "n": "Coat"
         },
         {
             "id": 74,
-            "index": 73,
             "n": "Wrap"
         },
         {
             "id": 75,
-            "index": 74,
             "n": "Suit"
         },
         {
             "id": 76,
-            "index": 75,
             "n": "Cloak"
         },
         {
             "id": 77,
-            "index": 76,
             "n": "Shroud"
         },
         {
             "id": 78,
-            "index": 77,
             "n": "Jack"
         },
         {
             "id": 79,
-            "index": 78,
             "n": "Mantle"
         },
         {
             "id": 80,
-            "index": 79,
             "n": "Guard"
         },
         {
             "id": 81,
-            "index": 80,
             "n": "Badge"
         },
         {
             "id": 82,
-            "index": 81,
             "n": "Rock"
         },
         {
             "id": 83,
-            "index": 82,
             "n": "Aegis"
         },
         {
             "id": 84,
-            "index": 83,
             "n": "Ward"
         },
         {
             "id": 85,
-            "index": 84,
             "n": "Tower"
         },
         {
             "id": 86,
-            "index": 85,
             "n": "Shield"
         },
         {
             "id": 87,
-            "index": 86,
             "n": "Wing"
         },
         {
             "id": 88,
-            "index": 87,
             "n": "Mark"
         },
         {
             "id": 89,
-            "index": 88,
             "n": "Emblem"
         },
         {
             "id": 90,
-            "index": 89,
             "n": "Hand"
         },
         {
             "id": 91,
-            "index": 90,
             "n": "Fist"
         },
         {
             "id": 92,
-            "index": 91,
             "n": "Claw"
         },
         {
             "id": 93,
-            "index": 92,
             "n": "Clutches"
         },
         {
             "id": 94,
-            "index": 93,
             "n": "Grip"
         },
         {
             "id": 95,
-            "index": 94,
             "n": "Grasp"
         },
         {
             "id": 96,
-            "index": 95,
             "n": "Hold"
         },
         {
             "id": 97,
-            "index": 96,
             "n": "Touch"
         },
         {
             "id": 98,
-            "index": 97,
             "n": "Finger"
         },
         {
             "id": 99,
-            "index": 98,
             "n": "Knuckle"
         },
         {
             "id": 100,
-            "index": 99,
             "n": "Shank"
         },
         {
             "id": 101,
-            "index": 100,
             "n": "Spur"
         },
         {
             "id": 102,
-            "index": 101,
             "n": "Tread"
         },
         {
             "id": 103,
-            "index": 102,
             "n": "Stalker"
         },
         {
             "id": 104,
-            "index": 103,
             "n": "Greaves"
         },
         {
             "id": 105,
-            "index": 104,
             "n": "Blazer"
         },
         {
             "id": 106,
-            "index": 105,
             "n": "Nails"
         },
         {
             "id": 107,
-            "index": 106,
             "n": "Trample"
         },
         {
             "id": 108,
-            "index": 107,
             "n": "Brogues"
         },
         {
             "id": 109,
-            "index": 108,
             "n": "Track"
         },
         {
             "id": 110,
-            "index": 109,
             "n": "Slippers"
         },
         {
             "id": 111,
-            "index": 110,
             "n": "Clasp"
         },
         {
             "id": 112,
-            "index": 111,
             "n": "Buckle"
         },
         {
             "id": 113,
-            "index": 112,
             "n": "Harness"
         },
         {
             "id": 114,
-            "index": 113,
             "n": "Lock"
         },
         {
             "id": 115,
-            "index": 114,
             "n": "Fringe"
         },
         {
             "id": 116,
-            "index": 115,
             "n": "Winding"
         },
         {
             "id": 117,
-            "index": 116,
             "n": "Chain"
         },
         {
-            "id": 118,
-            "index": 117
+            "id": 118
         },
         {
             "id": 119,
-            "index": 118,
             "n": "Lash"
         },
         {
             "id": 120,
-            "index": 119,
             "n": "Cord"
         },
         {
             "id": 121,
-            "index": 120,
             "n": "Knot"
         },
         {
             "id": 122,
-            "index": 121,
             "n": "Circle"
         },
         {
             "id": 123,
-            "index": 122,
             "n": "Loop"
         },
         {
             "id": 124,
-            "index": 123,
             "n": "Eye"
         },
         {
             "id": 125,
-            "index": 124,
             "n": "Turn"
         },
         {
             "id": 126,
-            "index": 125,
             "n": "Spiral"
         },
         {
             "id": 127,
-            "index": 126,
             "n": "Coil"
         },
         {
             "id": 128,
-            "index": 127,
             "n": "Gyre"
         },
         {
             "id": 129,
-            "index": 128,
             "n": "Band"
         },
         {
             "id": 130,
-            "index": 129,
             "n": "Whorl"
         },
         {
             "id": 131,
-            "index": 130,
             "n": "Talisman"
         },
         {
             "id": 132,
-            "index": 131,
             "n": "Heart"
         },
         {
             "id": 133,
-            "index": 132,
             "n": "Noose"
         },
         {
             "id": 134,
-            "index": 133,
             "n": "Necklace"
         },
         {
             "id": 135,
-            "index": 134,
             "n": "Collar"
         },
         {
             "id": 136,
-            "index": 135,
             "n": "Beads"
         },
         {
             "id": 137,
-            "index": 136,
             "n": "Torc"
         },
         {
             "id": 138,
-            "index": 137,
             "n": "Gorget"
         },
         {
-            "id": 139,
-            "index": 138
+            "id": 139
         },
         {
             "id": 140,
-            "index": 139,
             "n": "Wood"
         },
         {
             "id": 141,
-            "index": 140,
             "n": "Brand"
         },
         {
             "id": 142,
-            "index": 141,
             "n": "Bludgeon"
         },
         {
             "id": 143,
-            "index": 142,
             "n": "Cudgel"
         },
         {
             "id": 144,
-            "index": 143,
             "n": "Loom"
         },
         {
             "id": 145,
-            "index": 144,
             "n": "Harp"
         },
         {
             "id": 146,
-            "index": 145,
             "n": "Master"
         },
         {
             "id": 147,
-            "index": 146,
             "n": "Bar"
         },
         {
             "id": 148,
-            "index": 147,
             "n": "Hew"
         },
         {
             "id": 149,
-            "index": 148,
             "n": "Crook"
         },
         {
             "id": 150,
-            "index": 149,
             "n": "Mar"
         },
         {
             "id": 151,
-            "index": 150,
             "n": "Shell"
         },
         {
             "id": 152,
-            "index": 151,
             "n": "Stake"
         },
         {
             "id": 153,
-            "index": 152,
             "n": "Picket"
         },
         {
             "id": 154,
-            "index": 153,
             "n": "Pale"
         },
         {
             "id": 155,
-            "index": 154,
             "n": "Flange"
         },
         {
             "id": 156,
-            "index": 0,
             "n": "Beast"
         },
         {
             "id": 157,
-            "index": 1,
             "n": "Eagle"
         },
         {
             "id": 158,
-            "index": 2,
             "n": "Raven"
         },
         {
             "id": 159,
-            "index": 3,
             "n": "Viper"
         },
         {
-            "id": 160,
-            "index": 4
+            "id": 160
         },
         {
             "id": 161,
-            "index": 5,
             "n": "Skull"
         },
         {
             "id": 162,
-            "index": 6,
             "n": "Blood"
         },
         {
             "id": 163,
-            "index": 7,
             "n": "Dread"
         },
         {
             "id": 164,
-            "index": 8,
             "n": "Doom"
         },
         {
             "id": 165,
-            "index": 9,
             "n": "Grim"
         },
         {
             "id": 166,
-            "index": 10,
             "n": "Bone"
         },
         {
             "id": 167,
-            "index": 11,
             "n": "Death"
         },
         {
             "id": 168,
-            "index": 12,
             "n": "Shadow"
         },
         {
             "id": 169,
-            "index": 13,
             "n": "Storm"
         },
         {
             "id": 170,
-            "index": 14,
             "n": "Rune"
         },
         {
             "id": 171,
-            "index": 15,
             "n": "Plague"
         },
         {
             "id": 172,
-            "index": 16,
             "n": "Stone"
         },
         {
-            "id": 173,
-            "index": 17
+            "id": 173
         },
         {
             "id": 174,
-            "index": 18,
             "n": "Spirit"
         },
         {
             "id": 175,
-            "index": 19,
             "n": "Storm"
         },
         {
             "id": 176,
-            "index": 20,
             "n": "Demon"
         },
         {
             "id": 177,
-            "index": 21,
             "n": "Cruel"
         },
         {
             "id": 178,
-            "index": 22,
             "n": "Empyrion"
         },
         {
             "id": 179,
-            "index": 23,
             "n": "Bramble"
         },
         {
             "id": 180,
-            "index": 24,
             "n": "Pain"
         },
         {
             "id": 181,
-            "index": 25,
             "n": "Loath"
         },
         {
             "id": 182,
-            "index": 26,
             "n": "Glyph"
         },
         {
             "id": 183,
-            "index": 27,
             "n": "Imp"
         },
         {
-            "id": 184,
-            "index": 28
+            "id": 184
         },
         {
             "id": 185,
-            "index": 29,
             "n": "Hailstone"
         },
         {
             "id": 186,
-            "index": 30,
             "n": "Gale"
         },
         {
             "id": 187,
-            "index": 31,
             "n": "Dire"
         },
         {
             "id": 188,
-            "index": 32,
             "n": "Soul"
         },
         {
             "id": 189,
-            "index": 33,
             "n": "Brimstone"
         },
         {
             "id": 190,
-            "index": 34,
             "n": "Corpse"
         },
         {
             "id": 191,
-            "index": 35,
             "n": "Carrion"
         },
         {
             "id": 192,
-            "index": 36,
             "n": "Armageddon"
         },
         {
             "id": 193,
-            "index": 37,
             "n": "Havoc"
         },
         {
             "id": 194,
-            "index": 38,
             "n": "Bitter"
         },
         {
             "id": 195,
-            "index": 39,
             "n": "Entropy"
         },
         {
             "id": 196,
-            "index": 40,
             "n": "Chaos"
         },
         {
             "id": 197,
-            "index": 41,
             "n": "Order"
         },
         {
             "id": 198,
-            "index": 42,
             "n": "Rule"
         },
         {
             "id": 199,
-            "index": 43,
             "n": "Warp"
         },
         {
             "id": 200,
-            "index": 44,
             "n": "Rift"
         },
         {
             "id": 201,
-            "index": 45,
             "n": "Corruption"
         }
     ],
@@ -10170,7 +10000,9 @@ export let remodded_constants_99 = {
             "s": "damagepercent",
             "sS": 1,
             "sB": 8,
-            "sA": 0
+            "sA": 0,
+            "so": 129,
+            "dF": 19
         },
         {
             "id": 26,
@@ -10484,11 +10316,11 @@ export let remodded_constants_99 = {
             "sA": 4,
             "so": 96,
             "dF": 19,
-            "dP": "%+d to Minimum Cold Damage",
-            "dN": "%+d to Minimum Cold Damage",
+            "dP": "%+d to Minimum Cold Damage (lasts %d seconds)",
+            "dN": "%+d to Minimum Cold Damage (lasts %d seconds)",
             "np": 3,
-            "dR": "Adds %d-%d cold damage",
-            "dE": "%+d cold damage"
+            "dR": "Adds %d-%d cold damage (lasts %d seconds)",
+            "dE": "%+d cold damage (lasts %d seconds)"
         },
         {
             "id": 55,
@@ -10591,14 +10423,17 @@ export let remodded_constants_99 = {
             "s": "velocitypercent",
             "sS": 1,
             "sB": 8,
-            "sA": 60
+            "so": 148,
+            "dF": 19
         },
         {
             "id": 68,
             "s": "attackrate",
             "sS": 1,
             "sB": 8,
-            "sA": 60
+            "sA": 60,
+            "so": 145,
+            "dF": 19
         },
         {
             "id": 69,
@@ -10664,7 +10499,7 @@ export let remodded_constants_99 = {
             "sB": 10,
             "sA": 99,
             "so": 58,
-            "dF": 19,
+            "dF": 29,
             "dP": "Increase Maximum Life %d%%",
             "dN": "Increase Maximum Life %d%%",
             "o": 11,
@@ -10679,7 +10514,7 @@ export let remodded_constants_99 = {
             "sB": 10,
             "sA": 50,
             "so": 54,
-            "dF": 19,
+            "dF": 29,
             "dP": "Increase Maximum Mana %d%%",
             "dN": "Increase Maximum Mana %d%%",
             "o": 11,
@@ -10817,7 +10652,7 @@ export let remodded_constants_99 = {
             "sS": 1,
             "sB": 8,
             "sA": 100,
-            "so": 0,
+            "so": 1,
             "dF": 19,
             "dP": "Requirements %+d%%",
             "dN": "Requirements %+d%%"
@@ -11393,7 +11228,7 @@ export let remodded_constants_99 = {
         },
         {
             "id": 151,
-            "s": "item_aura",
+            "s": "aura_display",
             "sS": 1,
             "sB": 5,
             "sA": 0,
@@ -11743,22 +11578,18 @@ export let remodded_constants_99 = {
             "dF": 19,
             "dV": 2,
             "dP": "Enemy magic immunity reduced by %d%%",
-            "dN": "All enemy immunities reduced by %d%%",
-            "dg": 12,
-            "dgF": 19,
-            "dgP": "All enemy immunities reduced by %d%%"
+            "dN": "Enemy magic immunity reduced by %d%%"
         },
         {
             "id": 194,
-            "s": "item_numsockets",
+            "s": "item_numsockets_percent",
             "sS": 1,
-            "sB": 4,
-            "sA": 0,
-            "so": 999,
-            "dF": 3,
-            "dV": 2,
-            "dP": "H-Keys:",
-            "dN": "H-Keys:"
+            "sB": 11,
+            "sA": 200,
+            "o": 1,
+            "os": [
+                "item_numsockets"
+            ]
         },
         {
             "id": 195,
@@ -12826,6 +12657,7 @@ export let remodded_constants_99 = {
             ]
         },
         {
+            // Behaves like 100% chance to cast lv1 "475 - Area Effect (hidden)" skill
             "id": 266,
             "s": "item_splash",
             "e": 2,
@@ -12985,16 +12817,12 @@ export let remodded_constants_99 = {
         },
         {
             "id": 279,
-            "s": "mod_essence",
+            "s": "map_quality",
             "c": 1,
             "cB": 7,
             "cS": 0,
             "sB": 8,
-            "sA": 16,
-            "so": 67,
-            "dF": 19,
-            "dP": "Essences Trapped: %d",
-            "dN": "Essences Trapped: %d"
+            "sA": 16
         },
         {
             "id": 280,
@@ -13026,7 +12854,7 @@ export let remodded_constants_99 = {
             "dF": 19,
             "dP": "Summon Damage: %+d%%",
             "dN": "%+d%% to All Summon Bonuses",
-            "dg": 7,
+            "dg": 13,
             "dgF": 19,
             "dgP": "%+d%% to All Summon Bonuses"
         },
@@ -13043,7 +12871,7 @@ export let remodded_constants_99 = {
             "dF": 19,
             "dP": "Summon Speed: %+d%%",
             "dN": "%+d%% to All Summon Bonuses",
-            "dg": 7,
+            "dg": 13,
             "dgF": 19,
             "dgP": "%+d%% to All Summon Bonuses"
         },
@@ -13074,7 +12902,7 @@ export let remodded_constants_99 = {
             "dF": 19,
             "dP": "Summon Max HP: %+d%%",
             "dN": "%+d%% to All Summon Bonuses",
-            "dg": 7,
+            "dg": 13,
             "dgF": 19,
             "dgP": "%+d%% to All Summon Bonuses"
         },
@@ -13091,7 +12919,7 @@ export let remodded_constants_99 = {
             "dF": 19,
             "dP": "Summon Combat Rating: %+d%%",
             "dN": "%+d%% to All Summon Bonuses",
-            "dg": 7,
+            "dg": 13,
             "dgF": 19,
             "dgP": "%+d%% to All Summon Bonuses"
         },
@@ -13295,15 +13123,36 @@ export let remodded_constants_99 = {
         },
         {
             "id": 302,
-            "s": "Unused302"
+            "s": "relic_tracker",
+            "cVS": 1024,
+            "sB": 11,
+            "sA": 30
         },
         {
             "id": 303,
-            "s": "Unused303"
+            "s": "oskill_display",
+            "e": 1,
+            "sS": 1,
+            "sB": 6,
+            "sA": 0,
+            "sP": 10,
+            "so": 157,
+            "dF": 28,
+            "dP": "%+d to %s",
+            "dN": "%+d to %s"
         },
         {
             "id": 304,
-            "s": "Unused304"
+            "s": "item_aura",
+            "sS": 1,
+            "sB": 5,
+            "sA": 0,
+            "sP": 9,
+            "so": 159,
+            "dF": 16,
+            "dV": 0,
+            "dP": "(Level %d %s Aura)",
+            "dP": "(Level %d %s Aura)",
         },
         {
             "id": 305,
@@ -13913,15 +13762,20 @@ export let remodded_constants_99 = {
         },
         {
             "id": 377,
+            "s": "RW_Tracker",
+            "sS": 1,
+            "sB": 1
+        },
+        {
+            "id": 378,
             "s": "Celestial_Aid",
             "sS": 1,
             "sB": 1,
             "so": 1,
-            "dF": 19,
+            "dF": 3,
             "dP": "Celestial Aid: Attacks from the heavens greatly enhanced",
             "dN": "Celestial Aid: Attacks from the heavens greatly enhanced"
         },
-        null,
         {
             "id": 379,
             "s": "boneadded",
@@ -14013,13 +13867,13 @@ export let remodded_constants_99 = {
         },
         {
             "id": 387,
-            "s": "reckoning_slot",
+            "s": "portals_unlock",
             "sB": 2,
             "sA": 0,
             "so": 1,
             "dF": 19,
             "dV": 0,
-            "dP": "Reckoning Slots: %d"
+            "dP": "(Portals unlocked)"
         },
         {
             "id": 388,
@@ -14283,7 +14137,7 @@ export let remodded_constants_99 = {
             "sS": 1,
             "sB": 11,
             "sA": 10,
-            "so": 2,
+            "so": 0,
             "dF": 19,
             "dV": 0,
             "dP": "Charm Weight: %d"
@@ -14295,7 +14149,7 @@ export let remodded_constants_99 = {
             "sS": 1,
             "sB": 11,
             "sA": 10,
-            "so": 2,
+            "so": 0,
             "dF": 19,
             "dV": 0,
             "dP": "Increase charm max weight by %d"
@@ -14307,7 +14161,7 @@ export let remodded_constants_99 = {
             "sS": 1,
             "sB": 11,
             "sA": 10,
-            "so": 1,
+            "so": 0,
             "dF": 19,
             "dV": 0,
             "dP": "HP reduced to 1 if weight exceeds %d"
@@ -14324,7 +14178,7 @@ export let remodded_constants_99 = {
             "dN": "(Mercenary Only)",
             "o": 11,
             "os": [
-                "hitpoints"
+                "mana"
             ]
         },
         {
@@ -14385,7 +14239,8 @@ export let remodded_constants_99 = {
             "s": "KillBonus_Display",
             "sB": 1,
             "so": 0,
-            "dF": 19,
+            "dF": 4,
+            "dV": 1,
             "dP": "+%d%% Max HP (+1%% per 10,000 kills)",
             "dN": "+%d%% Max HP (+1%% per 10,000 kills)",
             "o": 2,
@@ -14475,749 +14330,1312 @@ export let remodded_constants_99 = {
             "dP": "Raises %d Leoric's Chosen (Sacrifices 10 skeletons each Leoric)",
             "dN": "Raises %d Leoric's Chosen (Sacrifices 10 skeletons each Leoric)"
         },
-        null,
+        {
+            "id": 429,
+            "s": "Weight_Dummy"
+        },
         {
             "id": 430,
-            "s": "weight_used_display",
+            "s": "Weight_Display",
             "sB": 1,
-            "so": 181,
-            "dF": 3,
+            "so": 2,
+            "dF": 19,
             "dV": 2,
             "dP": "Weight Used:",
-            "dN": "Weight Used:"
+            "dN": "Weight Used:",
+            "o": 2,
+            "op": 0,
+            "ob": "Weight_Tracker",
+            "os": [
+                "Weight_Dummy"
+            ]
+        },
+        {
+            "id": 431,
+            "s": "Freeze_HalfToFull",
+            "sB": 1,
+            "o": 2,
+            "op": 2,
+            "ob": "item_halffreezeduration",
+            "os": [
+                "item_cannotbefrozen"
+            ]
+        },
+        {
+            "id": 432,
+            "s": "map_e_defper",
+            "sS": 1,
+            "sB": 9,
+            "sA": 0,
+            "so": 74,
+            "dF": 29
+        },
+        {
+            "id": 433,
+            "s": "map_e_hpper",
+            "sS": 1,
+            "sB": 10,
+            "sA": 99,
+            "so": 58,
+            "dF": 29
+        },
+        {
+            "id": 434,
+            "s": "map_e_level",
+            "c": 1,
+            "cB": 7,
+            "cS": 0,
+            "sB": 5,
+            "sA": 10,
+            "so": 58,
+            "dF": 29
+        },
+        {
+            "id": 435,
+            "s": "map_e_dmgres",
+            "sS": 1,
+            "sB": 9,
+            "sA": 200,
+            "so": 22,
+            "dF": 29
+        },
+        {
+            "id": 436,
+            "s": "map_e_magres",
+            "sS": 1,
+            "sB": 9,
+            "sA": 200,
+            "so": 41,
+            "dF": 29
+        },
+        {
+            "id": 437,
+            "s": "map_e_fireres",
+            "sS": 1,
+            "sB": 9,
+            "sA": 200,
+            "so": 36,
+            "dF": 29
+        },
+        {
+            "id": 438,
+            "s": "map_e_lightres",
+            "sS": 1,
+            "sB": 9,
+            "sA": 200,
+            "so": 38,
+            "dF": 29
+        },
+        {
+            "id": 439,
+            "s": "map_e_coldres",
+            "sS": 1,
+            "sB": 9,
+            "sA": 200,
+            "so": 40,
+            "dF": 29
+        },
+        {
+            "id": 440,
+            "s": "map_e_psnres",
+            "sS": 1,
+            "sB": 9,
+            "sA": 200,
+            "so": 34,
+            "dF": 29
+        },
+        {
+            "id": 441,
+            "s": "map_e_speeda",
+            "sS": 1,
+            "sB": 8,
+            "sA": 60,
+            "so": 145,
+            "dF": 29
+        },
+        {
+            "id": 442,
+            "s": "map_e_speedm",
+            "sS": 1,
+            "sB": 8,
+            "sA": 60,
+            "so": 148,
+            "dF": 29
+        },
+        {
+            "id": 443,
+            "s": "map_e_cnbf",
+            "sS": 1,
+            "sB": 1,
+            "so": 20,
+            "dF": 29
+        },
+        {
+            "id": 444,
+            "s": "map_e_allskills",
+            "sS": 1,
+            "sB": 7,
+            "sA": 5,
+            "so": 158,
+            "dF": 29
+        },
+        {
+            "id": 445,
+            "s": "map_e_crush",
+            "sS": 1,
+            "sB": 7,
+            "sA": 5,
+            "so": 87,
+            "dF": 29
+        },
+        {
+            "id": 446,
+            "s": "map_p_defper",
+            "sS": 1,
+            "sB": 9,
+            "sA": 0,
+            "so": 997,
+            "dF": 29
+        },
+        {
+            "id": 447,
+            "s": "map_p_hpper",
+            "sS": 1,
+            "sB": 10,
+            "sA": 99,
+            "so": 998,
+            "dF": 29
+        },
+        {
+            "id": 448,
+            "s": "map_p_dmgres",
+            "sS": 1,
+            "sB": 9,
+            "sA": 200,
+            "so": 985,
+            "dF": 29
+        },
+        {
+            "id": 449,
+            "s": "map_p_magres",
+            "sS": 1,
+            "sB": 9,
+            "sA": 200,
+            "so": 984,
+            "dF": 29
+        },
+        {
+            "id": 450,
+            "s": "map_p_fireres",
+            "sS": 1,
+            "sB": 9,
+            "sA": 200,
+            "so": 983,
+            "dF": 29
+        },
+        {
+            "id": 451,
+            "s": "map_p_lightres",
+            "sS": 1,
+            "sB": 9,
+            "sA": 200,
+            "so": 982,
+            "dF": 29
+        },
+        {
+            "id": 452,
+            "s": "map_p_coldres",
+            "sS": 1,
+            "sB": 9,
+            "sA": 200,
+            "so": 981,
+            "dF": 29
+        },
+        {
+            "id": 453,
+            "s": "map_p_psnres",
+            "sS": 1,
+            "sB": 9,
+            "sA": 200,
+            "so": 980,
+            "dF": 29
+        },
+        {
+            "id": 454,
+            "s": "map_p_speedm",
+            "sS": 1,
+            "sB": 8,
+            "sA": 60,
+            "so": 986,
+            "dF": 29
+        },
+        {
+            "id": 455,
+            "s": "map_p_speeda",
+            "sS": 1,
+            "sB": 8,
+            "sA": 60,
+            "so": 987,
+            "dF": 29
+        },
+        {
+            "id": 456,
+            "s": "map_p_speedc",
+            "sS": 1,
+            "sB": 8,
+            "sA": 60,
+            "so": 988,
+            "dF": 29
+        },
+        {
+            "id": 457,
+            "s": "map_p_cnbf",
+            "sS": 1,
+            "sB": 1,
+            "so": 979,
+            "dF": 29
+        },
+        {
+            "id": 458,
+            "s": "map_p_demon",
+            "sS": 1,
+            "sB": 9,
+            "sA": 20,
+            "so": 989,
+            "dF": 29
+        },
+        {
+            "id": 459,
+            "s": "map_p_undead",
+            "sS": 1,
+            "sB": 9,
+            "sA": 20,
+            "so": 990,
+            "dF": 29
+        },
+        {
+            "id": 460,
+            "s": "map_p_maek",
+            "sS": 1,
+            "sB": 7,
+            "sA": 0,
+            "so": 991,
+            "dF": 29
+        },
+        {
+            "id": 461,
+            "s": "map_p_haek",
+            "sS": 1,
+            "sB": 7,
+            "sA": 0,
+            "so": 992,
+            "dF": 29
+        },
+        {
+            "id": 462,
+            "s": "map_p_gold",
+            "sS": 1,
+            "sB": 9,
+            "sA": 100,
+            "so": 993,
+            "dF": 29
+        },
+        {
+            "id": 463,
+            "s": "map_p_magic",
+            "sS": 1,
+            "sB": 8,
+            "sA": 100,
+            "so": 994,
+            "dF": 29
+        },
+        {
+            "id": 464,
+            "s": "map_p_exp",
+            "sS": 1,
+            "sB": 9,
+            "sA": 50,
+            "so": 995,
+            "dF": 29
+        },
+        {
+            "id": 465,
+            "s": "map_p_itd",
+            "sS": 1,
+            "sB": 1,
+            "sA": 0,
+            "so": 997,
+            "dF": 29
+        },
+        {
+            "id": 466,
+            "s": "map_p_cdr",
+            "c": 1,
+            "cB": 10,
+            "cS": 0,
+            "sS": 1,
+            "sB": 9,
+            "sA": 32,
+            "so": 998,
+            "dF": 19
+        },
+        {
+            "id": 467,
+            "s": "map_p_crush",
+            "sS": 1,
+            "sB": 7,
+            "sA": 5,
+            "so": 996,
+            "dF": 29
+        },
+        {
+            "id": 468,
+            "s": "item_reanimate_display",
+            "sB": 7,
+            "sA": 1,
+            "sP": 10,
+            "so": 999,
+            "dF": 23
+        },
+        {
+            "id": 469,
+            "s": "item_skillonhit_noctc",
+            "e": 2,
+            "sS": 1,
+            "sB": 7,
+            "sA": 0,
+            "sP": 16,
+            "so": 160,
+            "dF": 15,
+            "dP": "%d%% Chance to cast level %d %s on striking",
+            "dN": "%d%% Chance to cast level %d %s on striking"
+        },
+        {
+            "id": 470,
+            "s": "item_skillonhit_hidden",
+            "e": 2,
+            "sS": 1,
+            "sB": 7,
+            "sA": 0,
+            "sP": 16
+        },
+        {
+            "id": 471,
+            "s": "item_skillongethit_hidden",
+            "e": 2,
+            "sS": 1,
+            "sB": 7,
+            "sA": 0,
+            "sP": 16
+        },
+        null,
+        null,
+        {
+            "id": 474,
+            "s": "item_runic_forge_id", // Matches runeword_id
+            "sB": 13, // Runeword index (equalt to runeword_id - 26, ex: 1 for pact of the ancients) + 1000 * (tier-1)
+            "sA": 4096,
+            "so": 160,
+            "dF": 3,
+            "dV": 2,
+            "dP": "Runic Forge Id:",
+            "dN": "Runic Forge Id:"
+        },
+        {
+            "id": 475,
+            "s": "item_runic_forge_tier",
+            "sB": 4,
+            "sA": 7,
+            "so": 160,
+            "dF": 3,
+            "dV": 2,
+            "dP": "Runic Forge Tier:",
+            "dN": "Runic Forge Tier:"
         }
     ],
     "runewords": [
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         {
-            "id": 27,
-            "n": "Ancients' Pledge"
+            "index": 1,
+            "n": "Ancients' Pledge",
+            "id": 1
         },
         {
-            "id": 28,
-            "n": "Armageddon"
+            "index": 2,
+            "n": "Armageddon",
+            "id": 2
         },
         {
-            "id": 29,
-            "n": "Authority"
+            "index": 3,
+            "n": "Authority",
+            "id": 3
         },
         {
-            "id": 30,
-            "n": "Beast"
+            "index": 4,
+            "n": "Beast",
+            "id": 4
         },
         {
-            "id": 31,
-            "n": "Beauty"
+            "index": 5,
+            "n": "Beauty",
+            "id": 5
         },
         {
-            "id": 32,
-            "n": "Black"
+            "index": 6,
+            "n": "Black",
+            "id": 6
         },
         {
-            "id": 33,
-            "n": "Blood"
+            "index": 7,
+            "n": "Blood",
+            "id": 7
         },
         {
-            "id": 34,
-            "n": "Bone"
+            "index": 8,
+            "n": "Bone",
+            "id": 8
         },
         {
-            "id": 35,
-            "n": "Bramble"
+            "index": 9,
+            "n": "Bramble",
+            "id": 9
         },
         {
-            "id": 36,
-            "n": "Brand"
+            "index": 10,
+            "n": "Brand",
+            "id": 10
         },
         {
-            "id": 37,
-            "n": "Breath of the Dying"
+            "index": 11,
+            "n": "Breath of the Dying",
+            "id": 11
         },
         {
-            "id": 38,
-            "n": "Broken Promise"
+            "index": 12,
+            "n": "Broken Promise",
+            "id": 12
         },
         {
-            "id": 39,
-            "n": "Call to Arms"
+            "index": 13,
+            "n": "Call to Arms",
+            "id": 13
         },
         {
-            "id": 40,
-            "n": "Chains of Honor"
+            "index": 14,
+            "n": "Chains of Honor",
+            "id": 14
         },
         {
-            "id": 41,
-            "n": "Chance"
+            "index": 15,
+            "n": "Chance",
+            "id": 15
         },
         {
-            "id": 42,
-            "n": "Chaos"
+            "index": 16,
+            "n": "Chaos",
+            "id": 16
         },
         {
-            "id": 43,
-            "n": "Crescent Moon"
+            "index": 17,
+            "n": "Crescent Moon",
+            "id": 17
         },
         {
-            "id": 44,
-            "n": "Darkness"
+            "index": 18,
+            "n": "Darkness",
+            "id": 18
         },
         {
-            "id": 45,
-            "n": "Daylight"
+            "index": 19,
+            "n": "Daylight",
+            "id": 19
         },
         {
-            "id": 46,
-            "n": "Death"
+            "index": 20,
+            "n": "Death",
+            "id": 20
         },
         {
-            "id": 47,
-            "n": "Deception"
+            "index": 21,
+            "n": "Deception",
+            "id": 21
         },
         {
-            "id": 48,
-            "n": "Delirium"
+            "index": 22,
+            "n": "Delirium",
+            "id": 22
         },
         {
-            "id": 49,
-            "n": "Desire"
+            "index": 23,
+            "n": "Desire",
+            "id": 23
         },
         {
-            "id": 50,
-            "n": "Despair"
+            "index": 24,
+            "n": "Despair",
+            "id": 24
         },
         {
-            "id": 51,
-            "n": "Destruction"
+            "index": 25,
+            "n": "Destruction",
+            "id": 25
         },
         {
-            "id": 52,
-            "n": "Doom"
+            "index": 26,
+            "n": "Doom",
+            "id": 26
         },
         {
-            "id": 53,
-            "n": "Dragon"
+            "index": 27,
+            "n": "Dragon",
+            "id": 27
         },
         {
-            "id": 54,
-            "n": "Dread"
+            "index": 28,
+            "n": "Dread",
+            "id": 28
         },
         {
-            "id": 55,
-            "n": "Dream"
+            "index": 29,
+            "n": "Dream",
+            "id": 29
         },
         {
-            "id": 56,
-            "n": "Duress"
+            "index": 30,
+            "n": "Duress",
+            "id": 30
         },
         {
-            "id": 57,
-            "n": "Edge"
+            "index": 31,
+            "n": "Edge",
+            "id": 31
         },
         {
-            "id": 58,
-            "n": "Elation"
+            "index": 32,
+            "n": "Elation",
+            "id": 32
         },
         {
-            "id": 59,
-            "n": "Enigma"
+            "index": 33,
+            "n": "Enigma",
+            "id": 33
         },
         {
-            "id": 60,
-            "n": "Enlightenment"
+            "index": 34,
+            "n": "Enlightenment",
+            "id": 34
         },
         {
-            "id": 61,
-            "n": "Envy"
+            "index": 35,
+            "n": "Envy",
+            "id": 35
         },
         {
-            "id": 62,
-            "n": "Eternity"
+            "index": 36,
+            "n": "Eternity",
+            "id": 36
         },
         {
-            "id": 63,
-            "n": "Exile"
+            "index": 37,
+            "n": "Exile",
+            "id": 37
         },
         {
-            "id": 64,
-            "n": "Faith"
+            "index": 38,
+            "n": "Faith",
+            "id": 38
         },
         {
-            "id": 65,
-            "n": "Famine"
+            "index": 39,
+            "n": "Famine",
+            "id": 39
         },
         {
-            "id": 66,
-            "n": "Flickering Flame"
+            "index": 40,
+            "n": "Flickering Flame",
+            "id": 40
         },
         {
-            "id": 67,
-            "n": "Fortitude"
+            "index": 41,
+            "n": "Fortitude",
+            "id": 41
         },
         {
-            "id": 68,
-            "n": "Fortune"
+            "index": 42,
+            "n": "Fortune",
+            "id": 42
         },
         {
-            "id": 69,
-            "n": "Amity"
+            "index": 43,
+            "n": "Amity",
+            "id": 43
         },
         {
-            "id": 70,
-            "n": "Fury"
+            "index": 44,
+            "n": "Fury",
+            "id": 44
         },
         {
-            "id": 71,
-            "n": "Gloom"
+            "index": 45,
+            "n": "Gloom",
+            "id": 45
         },
         {
-            "id": 72,
-            "n": "Glory"
+            "index": 46,
+            "n": "Glory",
+            "id": 46
         },
         {
-            "id": 73,
-            "n": "Grief"
+            "index": 47,
+            "n": "Grief",
+            "id": 47
         },
         {
-            "id": 74,
-            "n": "Hand of Justice"
+            "index": 48,
+            "n": "Hand of Justice",
+            "id": 48
         },
         {
-            "id": 75,
-            "n": "Harmony"
+            "index": 49,
+            "n": "Harmony",
+            "id": 49
         },
         {
-            "id": 76,
-            "n": "Hatred"
+            "index": 50,
+            "n": "Hatred",
+            "id": 50
         },
         {
-            "id": 77,
-            "n": "Heart of the Oak"
+            "index": 51,
+            "n": "Heart of the Oak",
+            "id": 51
         },
         {
-            "id": 78,
-            "n": "Heaven's Will"
+            "index": 52,
+            "n": "Heaven's Will",
+            "id": 52
         },
         {
-            "id": 79,
-            "n": "Holy Tears"
+            "index": 53,
+            "n": "Holy Tears",
+            "id": 53
         },
         {
-            "id": 80,
-            "n": "Holy Thunder"
+            "index": 54,
+            "n": "Holy Thunder",
+            "id": 54
         },
         {
-            "id": 81,
-            "n": "Honor"
+            "index": 55,
+            "n": "Honor",
+            "id": 55
         },
         {
-            "id": 82,
-            "n": "Revenge"
+            "index": 56,
+            "n": "Revenge",
+            "id": 56
         },
         {
-            "id": 83,
-            "n": "Humility"
+            "index": 57,
+            "n": "Humility",
+            "id": 57
         },
         {
-            "id": 84,
-            "n": "Hunger"
+            "index": 58,
+            "n": "Hunger",
+            "id": 58
         },
         {
-            "id": 85,
-            "n": "Ice"
+            "index": 59,
+            "n": "Ice",
+            "id": 59
         },
         {
-            "id": 86,
-            "n": "Infinity"
+            "index": 60,
+            "n": "Infinity",
+            "id": 60
         },
         {
-            "id": 87,
-            "n": "Innocence"
+            "index": 61,
+            "n": "Innocence",
+            "id": 61
         },
         {
-            "id": 88,
-            "n": "Insight"
+            "index": 62,
+            "n": "Insight",
+            "id": 62
         },
         {
-            "id": 89,
-            "n": "Jealousy"
+            "index": 63,
+            "n": "Jealousy",
+            "id": 63
         },
         {
-            "id": 90,
-            "n": "Judgement"
+            "index": 64,
+            "n": "Judgement",
+            "id": 64
         },
         {
-            "id": 91,
-            "n": "King's Grace"
+            "index": 65,
+            "n": "King's Grace",
+            "id": 65
         },
         {
-            "id": 92,
-            "n": "Kingslayer"
+            "index": 66,
+            "n": "Kingslayer",
+            "id": 66
         },
         {
-            "id": 93,
-            "n": "Knight's Vigil"
+            "index": 67,
+            "n": "Knight's Vigil",
+            "id": 67
         },
         {
-            "id": 94,
-            "n": "Knowledge"
+            "index": 68,
+            "n": "Knowledge",
+            "id": 68
         },
         {
-            "id": 95,
-            "n": "Last Wish"
+            "index": 69,
+            "n": "Last Wish",
+            "id": 69
         },
         {
-            "id": 96,
-            "n": "Law"
+            "index": 70,
+            "n": "Law",
+            "id": 70
         },
         {
-            "id": 97,
-            "n": "Lawbringer"
+            "index": 71,
+            "n": "Lawbringer",
+            "id": 71
         },
         {
-            "id": 98,
-            "n": "Leaf"
+            "index": 72,
+            "n": "Leaf",
+            "id": 72
         },
         {
-            "id": 99,
-            "n": "Lightning"
+            "index": 73,
+            "n": "Lightning",
+            "id": 73
         },
         {
-            "id": 100,
-            "n": "Lionheart"
+            "index": 74,
+            "n": "Lionheart",
+            "id": 74
         },
         {
-            "id": 101,
-            "n": "Love"
+            "index": 75,
+            "n": "Lore",
+            "id": 75
         },
         {
-            "id": 102,
-            "n": "Loyalty"
+            "index": 76,
+            "n": "Love",
+            "id": 76
         },
         {
-            "id": 103,
-            "n": "Lust"
+            "index": 77,
+            "n": "Loyalty",
+            "id": 77
         },
         {
-            "id": 104,
-            "n": "Madness"
+            "index": 78,
+            "n": "Lust",
+            "id": 78
         },
         {
-            "id": 105,
-            "n": "Madness"
+            "index": 79,
+            "n": "Madness",
+            "id": 79
         },
         {
-            "id": 106,
-            "n": "Malice"
+            "index": 81,
+            "n": "Malice",
+            "id": 80
         },
         {
-            "id": 107,
-            "n": "Melody"
+            "index": 82,
+            "n": "Melody",
+            "id": 81
         },
         {
-            "id": 108,
-            "n": "Memory"
+            "index": 83,
+            "n": "Memory",
+            "id": 82
         },
         {
-            "id": 109,
-            "n": "Mist"
+            "index": 84,
+            "n": "Mist",
+            "id": 83
         },
         {
-            "id": 110,
-            "n": "Morning"
+            "index": 85,
+            "n": "Morning",
+            "id": 84
         },
         {
-            "id": 111,
-            "n": "Mystery"
+            "index": 86,
+            "n": "Mystery",
+            "id": 85
         },
         {
-            "id": 112,
-            "n": "Myth"
+            "index": 87,
+            "n": "Myth",
+            "id": 86
         },
         {
-            "id": 113,
-            "n": "Nadir"
+            "index": 88,
+            "n": "Nadir",
+            "id": 87
         },
         {
-            "id": 114,
-            "n": "Nature's Kingdom"
+            "index": 89,
+            "n": "Nature's Kingdom",
+            "id": 88
         },
         {
-            "id": 115,
-            "n": "Night"
+            "index": 90,
+            "n": "Night",
+            "id": 89
         },
         {
-            "id": 116,
-            "n": "Oath"
+            "index": 91,
+            "n": "Oath",
+            "id": 90
         },
         {
-            "id": 117,
-            "n": "Obedience"
+            "index": 92,
+            "n": "Obedience",
+            "id": 91
         },
         {
-            "id": 118,
-            "n": "Oblivion"
+            "index": 93,
+            "n": "Oblivion",
+            "id": 92
         },
         {
-            "id": 119,
-            "n": "Obsession"
+            "index": 94,
+            "n": "Obsession",
+            "id": 93
         },
         {
-            "id": 120,
-            "n": "Passion"
+            "index": 95,
+            "n": "Passion",
+            "id": 94
         },
         {
-            "id": 121,
-            "n": "Patience"
+            "index": 96,
+            "n": "Patience",
+            "id": 95
         },
         {
-            "id": 122,
-            "n": "Pattern"
+            "index": 97,
+            "n": "Pattern",
+            "id": 96
         },
         {
-            "id": 123,
-            "n": "Peace"
+            "index": 98,
+            "n": "Peace",
+            "id": 97
         },
         {
-            "id": 124,
-            "n": "Voice of Reason"
+            "index": 99,
+            "n": "Voice of Reason",
+            "id": 98
         },
         {
-            "id": 125,
-            "n": "Penitence"
+            "index": 100,
+            "n": "Penitence",
+            "id": 99
         },
         {
-            "id": 126,
-            "n": "Peril"
+            "index": 101,
+            "n": "Peril",
+            "id": 100
         },
         {
-            "id": 127,
-            "n": "Pestilence"
+            "index": 102,
+            "n": "Pestilence",
+            "id": 101
         },
         {
-            "id": 128,
-            "n": "Phoenix"
+            "index": 103,
+            "n": "Phoenix",
+            "id": 102
         },
         {
-            "id": 129,
-            "n": "Piety"
+            "index": 104,
+            "n": "Piety",
+            "id": 103
         },
         {
-            "id": 130,
-            "n": "Pillar of Faith"
+            "index": 105,
+            "n": "Pillar of Faith",
+            "id": 104
         },
         {
-            "id": 131,
-            "n": "Plague"
+            "index": 106,
+            "n": "Plague",
+            "id": 105
         },
         {
-            "id": 132,
-            "n": "Praise"
+            "index": 107,
+            "n": "Praise",
+            "id": 106
         },
         {
-            "id": 133,
-            "n": "Prayer"
+            "index": 108,
+            "n": "Prayer",
+            "id": 107
         },
         {
-            "id": 134,
-            "n": "Pride"
+            "index": 109,
+            "n": "Pride",
+            "id": 108
         },
         {
-            "id": 135,
-            "n": "Principle"
+            "index": 110,
+            "n": "Principle",
+            "id": 109
         },
         {
-            "id": 136,
-            "n": "Prowess in Battle"
+            "index": 111,
+            "n": "Prowess in Battle",
+            "id": 110
         },
         {
-            "id": 137,
-            "n": "Prudence"
+            "index": 112,
+            "n": "Prudence",
+            "id": 111
         },
         {
-            "id": 138,
-            "n": "Punishment"
+            "index": 113,
+            "n": "Punishment",
+            "id": 112
         },
         {
-            "id": 139,
-            "n": "Purity"
+            "index": 114,
+            "n": "Purity",
+            "id": 113
         },
         {
-            "id": 140,
-            "n": "Question"
+            "index": 115,
+            "n": "Question",
+            "id": 114
         },
         {
-            "id": 141,
-            "n": "Radiance"
+            "index": 116,
+            "n": "Radiance",
+            "id": 115
         },
         {
-            "id": 142,
-            "n": "Rain"
+            "index": 117,
+            "n": "Rain",
+            "id": 116
         },
         {
-            "id": 143,
-            "n": "Reason"
+            "index": 118,
+            "n": "Reason",
+            "id": 117
         },
         {
-            "id": 144,
-            "n": "Red"
+            "index": 119,
+            "n": "Red",
+            "id": 118
         },
         {
-            "id": 145,
-            "n": "Rhyme"
+            "index": 120,
+            "n": "Rhyme",
+            "id": 119
         },
         {
-            "id": 146,
-            "n": "Rift"
+            "index": 121,
+            "n": "Rift",
+            "id": 120
         },
         {
-            "id": 147,
-            "n": "Sanctuary"
+            "index": 122,
+            "n": "Sanctuary",
+            "id": 121
         },
         {
-            "id": 148,
-            "n": "Serendipity"
+            "index": 123,
+            "n": "Serendipity",
+            "id": 122
         },
         {
-            "id": 149,
-            "n": "Shadow"
+            "index": 124,
+            "n": "Shadow",
+            "id": 123
         },
         {
-            "id": 150,
-            "n": "Shadow of Doubt"
+            "index": 125,
+            "n": "Shadow of Doubt",
+            "id": 124
         },
         {
-            "id": 151,
-            "n": "Silence"
+            "index": 126,
+            "n": "Silence",
+            "id": 125
         },
         {
-            "id": 152,
-            "n": "Siren's Song"
+            "index": 127,
+            "n": "Siren's Song",
+            "id": 126
         },
         {
-            "id": 153,
-            "n": "Smoke"
+            "index": 128,
+            "n": "Smoke",
+            "id": 127
         },
         {
-            "id": 154,
-            "n": "Sorrow"
+            "index": 129,
+            "n": "Sorrow",
+            "id": 128
         },
         {
-            "id": 155,
-            "n": "Spirit"
+            "index": 130,
+            "n": "Spirit",
+            "id": 129
         },
         {
-            "id": 156,
-            "n": "Splendor"
+            "index": 131,
+            "n": "Splendor",
+            "id": 130
         },
         {
-            "id": 157,
-            "n": "Starlight"
+            "index": 132,
+            "n": "Starlight",
+            "id": 131
         },
         {
-            "id": 158,
-            "n": "Stealth"
+            "index": 133,
+            "n": "Stealth",
+            "id": 132
         },
         {
-            "id": 159,
-            "n": "Steel"
+            "index": 134,
+            "n": "Steel",
+            "id": 133
         },
         {
-            "id": 160,
-            "n": "Still Water"
+            "index": 135,
+            "n": "Still Water",
+            "id": 134
         },
         {
-            "id": 161,
-            "n": "Sting"
+            "index": 136,
+            "n": "Sting",
+            "id": 135
         },
         {
-            "id": 162,
-            "n": "Stone"
+            "index": 137,
+            "n": "Stone",
+            "id": 136
         },
         {
-            "id": 163,
-            "n": "Storm"
+            "index": 138,
+            "n": "Storm",
+            "id": 137
         },
         {
-            "id": 164,
-            "n": "Strength"
+            "index": 139,
+            "n": "Strength",
+            "id": 138
         },
         {
-            "id": 165,
-            "n": "Tempest"
+            "index": 140,
+            "n": "Tempest",
+            "id": 139
         },
         {
-            "id": 166,
-            "n": "Temptation"
+            "index": 141,
+            "n": "Temptation",
+            "id": 140
         },
         {
-            "id": 167,
-            "n": "Terror"
+            "index": 142,
+            "n": "Terror",
+            "id": 141
         },
         {
-            "id": 168,
-            "n": "Thirst"
+            "index": 143,
+            "n": "Thirst",
+            "id": 142
         },
         {
-            "id": 169,
-            "n": "Thought"
+            "index": 144,
+            "n": "Thought",
+            "id": 143
         },
         {
-            "id": 170,
-            "n": "Thunder"
+            "index": 145,
+            "n": "Thunder",
+            "id": 144
         },
         {
-            "id": 171,
-            "n": "Time"
+            "index": 146,
+            "n": "Time",
+            "id": 145
         },
         {
-            "id": 172,
-            "n": "Tradition"
+            "index": 147,
+            "n": "Tradition",
+            "id": 146
         },
         {
-            "id": 173,
-            "n": "Treachery"
+            "index": 148,
+            "n": "Treachery",
+            "id": 147
         },
         {
-            "id": 174,
-            "n": "Trust"
+            "index": 149,
+            "n": "Trust",
+            "id": 148
         },
         {
-            "id": 175,
-            "n": "Truth"
+            "index": 150,
+            "n": "Truth",
+            "id": 149
         },
         {
-            "id": 176,
-            "n": "Unbending Will"
+            "index": 151,
+            "n": "Unbending Will",
+            "id": 150
         },
         {
-            "id": 177,
-            "n": "Valor"
+            "index": 152,
+            "n": "Valor",
+            "id": 151
         },
         {
-            "id": 178,
-            "n": "Vengeance"
+            "index": 153,
+            "n": "Vengeance",
+            "id": 152
         },
         {
-            "id": 179,
-            "n": "Venom"
+            "index": 154,
+            "n": "Venom",
+            "id": 153
         },
         {
-            "id": 180,
-            "n": "Victory"
+            "index": 155,
+            "n": "Victory",
+            "id": 154
         },
         {
-            "id": 181,
-            "n": "Voice"
+            "index": 156,
+            "n": "Voice",
+            "id": 155
         },
         {
-            "id": 182,
-            "n": "Void"
+            "index": 157,
+            "n": "Void",
+            "id": 156
         },
         {
-            "id": 183,
-            "n": "War"
+            "index": 158,
+            "n": "War",
+            "id": 157
         },
         {
-            "id": 184,
-            "n": "Water"
+            "index": 159,
+            "n": "Water",
+            "id": 158
         },
         {
-            "id": 185,
-            "n": "Wealth"
+            "index": 160,
+            "n": "Wealth",
+            "id": 159
         },
         {
-            "id": 186,
-            "n": "Whisper"
+            "index": 161,
+            "n": "Whisper",
+            "id": 160
         },
         {
-            "id": 187,
-            "n": "White"
+            "index": 162,
+            "n": "White",
+            "id": 161
         },
         {
-            "id": 188,
-            "n": "Wind"
+            "index": 163,
+            "n": "Wind",
+            "id": 162
         },
         {
-            "id": 189,
-            "n": "Wings of Hope"
+            "index": 164,
+            "n": "Wings of Hope",
+            "id": 163
         },
         {
-            "id": 190,
-            "n": "Wisdom"
+            "index": 165,
+            "n": "Wisdom",
+            "id": 164
         },
         {
-            "id": 191,
-            "n": "Woe"
+            "index": 166,
+            "n": "Woe",
+            "id": 165
         },
         {
-            "id": 192,
-            "n": "Wonder"
+            "index": 167,
+            "n": "Wonder",
+            "id": 166
         },
         {
-            "id": 193,
-            "n": "Wrath"
+            "index": 168,
+            "n": "Wrath",
+            "id": 167
         },
         {
-            "id": 194,
-            "n": "Youth"
+            "index": 169,
+            "n": "Youth",
+            "id": 168
         },
         {
-            "id": 195,
-            "n": "Zephyr"
+            "index": 170,
+            "n": "Zephyr",
+            "id": 169
         },
         {
-            "id": 196,
-            "n": "Lord of Terror"
+            "index": 171,
+            "n": "Lord of Terror",
+            "id": 170
         },
         {
-            "id": 197
+            "index": 172,
+            "id": 171
         },
         {
-            "id": 198
+            "index": 173,
+            "id": 172
         },
         {
-            "id": 199
+            "index": 174,
+            "id": 173
         },
         {
-            "id": 200
+            "index": 175,
+            "id": 174
         },
         {
-            "id": 201
+            "index": 176,
+            "id": 175
         },
         {
-            "id": 202
+            "index": 177,
+            "id": 176
         },
         {
-            "id": 203
+            "index": 178,
+            "id": 177
         },
         {
-            "id": 204
+            "index": 179,
+            "id": 178
         }
     ],
     "set_items": [
@@ -16432,6 +16850,7 @@ export let remodded_constants_99 = {
             "id": 153,
             "index": "Rathma's Fortress",
             "n": "Rathma's Fortress",
+            "i": "1",
             "c": "uea",
             "hdi": "custom/rathmas_fortress"
         },
@@ -21074,11 +21493,9 @@ export let remodded_constants_99 = {
         },
         {
             "id": 516,
-            "index": "Oa3",
-            "n": "Oaken Armor",
+            "index": "Nature's Nurture",
             "i": "D2R_Jank",
-            "c": "Oa3",
-            "hdi": "custom/storagebag"
+            "c": "Oa3"
         },
         {
             "id": 517,
@@ -21327,62 +21744,52 @@ export let remodded_constants_99 = {
         },
         {
             "id": 546,
-            "index": "Rainbow Facet",
-            "n": "Rainbow Facet",
+            "index": "Rainbow Facet1",
             "c": "jew"
         },
         {
             "id": 547,
-            "index": "Rainbow Facet",
-            "n": "Rainbow Facet",
+            "index": "Rainbow Facet2",
             "c": "jew"
         },
         {
             "id": 548,
-            "index": "Rainbow Facet",
-            "n": "Rainbow Facet",
+            "index": "Rainbow Facet3",
             "c": "jew"
         },
         {
             "id": 549,
-            "index": "Rainbow Facet",
-            "n": "Rainbow Facet",
+            "index": "Rainbow Facet4",
             "c": "jew"
         },
         {
             "id": 550,
-            "index": "Rainbow Facet",
-            "n": "Rainbow Facet",
+            "index": "Rainbow Facet1",
             "c": "jew"
         },
         {
             "id": 551,
-            "index": "Rainbow Facet",
-            "n": "Rainbow Facet",
+            "index": "Rainbow Facet2",
             "c": "jew"
         },
         {
             "id": 552,
-            "index": "Rainbow Facet",
-            "n": "Rainbow Facet",
+            "index": "Rainbow Facet3",
             "c": "jew"
         },
         {
             "id": 553,
-            "index": "Rainbow Facet",
-            "n": "Rainbow Facet",
+            "index": "Rainbow Facet4",
             "c": "jew"
         },
         {
             "id": 554,
-            "index": "Rainbow Facet",
-            "n": "Rainbow Facet",
+            "index": "Rainbow Facet5",
             "c": "jew"
         },
         {
             "id": 555,
-            "index": "Rainbow Facet",
-            "n": "Rainbow Facet",
+            "index": "Rainbow Facet5",
             "c": "jew"
         },
         {
@@ -21702,6 +22109,93 @@ export let remodded_constants_99 = {
             "n": "Fletching of Frostbite",
             "c": "aqv",
             "tc": "cblu"
+        },
+        {
+            "id": 601,
+            "index": "Healthy Breakfast",
+            "i": "D2R_Jank",
+            "c": "m35",
+            "hdi": "custom/Hbreakfast"
+        },
+        {
+            "id": 602,
+            "index": "MythosLogAmazon",
+            "c": "y01",
+            "hdi": "custom/mythos_log"
+        },
+        {
+            "id": 603,
+            "index": "MythosLogAssassin",
+            "c": "y02",
+            "hdi": "custom/mythos_log"
+        },
+        {
+            "id": 604,
+            "index": "MythosLogBarbarian",
+            "c": "y03",
+            "hdi": "custom/mythos_log"
+        },
+        {
+            "id": 605,
+            "index": "MythosLogDruid",
+            "c": "y04",
+            "hdi": "custom/mythos_log"
+        },
+        {
+            "id": 606,
+            "index": "MythosLogNecromancer",
+            "c": "y05",
+            "hdi": "custom/mythos_log"
+        },
+        {
+            "id": 607,
+            "index": "MythosLogPaladin",
+            "c": "y06",
+            "hdi": "custom/mythos_log"
+        },
+        {
+            "id": 608,
+            "index": "MythosLogSorceress",
+            "c": "y07",
+            "hdi": "custom/mythos_log"
+        },
+        {
+            "id": 609,
+            "index": "Cola Cube",
+            "i": "D2R_Jank",
+            "c": "m32",
+            "hdi": "custom/cola_cube"
+        },
+        {
+            "id": 610,
+            "index": "Soul Stompers",
+            "c": "umb",
+            "tc": "blac"
+        },
+        {
+            "id": 611,
+            "index": "MapReceipt01",
+            "c": "m27",
+            "hdi": "custom/AdventureMap"
+        },
+        {
+            "id": 612,
+            "index": "Kingdom's Heart",
+            "c": "uar",
+            "tc": "lgld"
+        },
+        {
+            "id": 613,
+            "index": "Prismatic Facet",
+            "c": "j00",
+            "hdi": "custom/PrismaticFacet"
+        },
+        {
+            "id": 614,
+            "index": "Null Charm",
+            "i": "D2R_Jank",
+            "c": "m34",
+            "hdi": "custom/Null_Charm"
         }
     ],
     "stackables": {
@@ -31097,6 +31591,8 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Large Axe",
             "durability": 76,
+            "mind": 4,
+            "maxd": 9,
             "min2d": 8,
             "max2d": 17,
             "rs": 35,
@@ -31127,6 +31623,8 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Broad Axe",
             "durability": 88,
+            "mind": 7,
+            "maxd": 12,
             "min2d": 13,
             "max2d": 23,
             "rs": 48,
@@ -31157,6 +31655,8 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Battle Axe",
             "durability": 100,
+            "mind": 8,
+            "maxd": 20,
             "min2d": 15,
             "max2d": 40,
             "rs": 54,
@@ -31189,6 +31689,8 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Great Axe",
             "durability": 126,
+            "mind": 10,
+            "maxd": 22,
             "min2d": 19,
             "max2d": 44,
             "rs": 70,
@@ -31221,6 +31723,8 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Giant Axe",
             "durability": 126,
+            "mind": 16,
+            "maxd": 32,
             "min2d": 32,
             "max2d": 63,
             "rs": 75,
@@ -33181,8 +33685,8 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Short Bow",
             "durability": 50,
-            "min2d": 2,
-            "max2d": 5,
+            "min2d": 3,
+            "max2d": 8,
             "rd": 15,
             "hi": 1,
             "gs": 3,
@@ -33209,8 +33713,8 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Hunter's Bow",
             "durability": 80,
-            "min2d": 3,
-            "max2d": 8,
+            "min2d": 5,
+            "max2d": 12,
             "rd": 28,
             "hi": 1,
             "gs": 4,
@@ -33237,8 +33741,8 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Long Bow",
             "durability": 70,
-            "min2d": 4,
-            "max2d": 13,
+            "min2d": 6,
+            "max2d": 20,
             "rs": 22,
             "rd": 19,
             "hi": 1,
@@ -33266,8 +33770,8 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Composite Bow",
             "durability": 90,
-            "min2d": 5,
-            "max2d": 10,
+            "min2d": 8,
+            "max2d": 15,
             "rs": 25,
             "rd": 35,
             "hi": 1,
@@ -33297,8 +33801,8 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Short Battle Bow",
             "durability": 100,
-            "min2d": 7,
-            "max2d": 14,
+            "min2d": 11,
+            "max2d": 21,
             "rs": 30,
             "rd": 40,
             "hi": 1,
@@ -33328,8 +33832,8 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Long Battle Bow",
             "durability": 110,
-            "min2d": 4,
-            "max2d": 23,
+            "min2d": 6,
+            "max2d": 35,
             "rs": 40,
             "rd": 50,
             "hi": 1,
@@ -33357,8 +33861,8 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Short War Bow",
             "durability": 120,
-            "min2d": 8,
-            "max2d": 18,
+            "min2d": 12,
+            "max2d": 27,
             "rs": 35,
             "rd": 55,
             "hi": 1,
@@ -33388,8 +33892,8 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Long War Bow",
             "durability": 138,
-            "min2d": 4,
-            "max2d": 29,
+            "min2d": 6,
+            "max2d": 44,
             "rs": 50,
             "rd": 65,
             "hi": 1,
@@ -33417,8 +33921,8 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Light Crossbow",
             "durability": 76,
-            "min2d": 8,
-            "max2d": 12,
+            "min2d": 12,
+            "max2d": 18,
             "rs": 21,
             "rd": 27,
             "hi": 1,
@@ -33448,8 +33952,8 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Crossbow",
             "durability": 100,
-            "min2d": 12,
-            "max2d": 20,
+            "min2d": 18,
+            "max2d": 30,
             "rs": 40,
             "rd": 33,
             "hi": 1,
@@ -33479,8 +33983,8 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Heavy Crossbow",
             "durability": 126,
-            "min2d": 18,
-            "max2d": 33,
+            "min2d": 27,
+            "max2d": 50,
             "rs": 60,
             "rd": 40,
             "hi": 1,
@@ -33510,8 +34014,8 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Repeating Crossbow",
             "durability": 100,
-            "min2d": 8,
-            "max2d": 15,
+            "min2d": 12,
+            "max2d": 23,
             "rs": 40,
             "rd": 50,
             "hi": 1,
@@ -34040,6 +34544,8 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Military Axe",
             "durability": 76,
+            "mind": 9,
+            "maxd": 22,
             "min2d": 18,
             "max2d": 43,
             "rs": 73,
@@ -34070,6 +34576,8 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Bearded Axe",
             "durability": 88,
+            "mind": 14,
+            "maxd": 31,
             "min2d": 27,
             "max2d": 62,
             "rs": 92,
@@ -34100,6 +34608,8 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Tabar",
             "durability": 100,
+            "mind": 15,
+            "maxd": 49,
             "min2d": 30,
             "max2d": 97,
             "rs": 101,
@@ -34132,6 +34642,8 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Gothic Axe",
             "durability": 126,
+            "mind": 22,
+            "maxd": 50,
             "min2d": 44,
             "max2d": 100,
             "rs": 125,
@@ -34164,6 +34676,8 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Ancient Axe",
             "durability": 126,
+            "mind": 32,
+            "maxd": 57,
             "min2d": 63,
             "max2d": 113,
             "rs": 150,
@@ -36150,8 +36664,8 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Edge Bow",
             "durability": 50,
-            "min2d": 8,
-            "max2d": 24,
+            "min2d": 12,
+            "max2d": 36,
             "rs": 25,
             "rd": 43,
             "hi": 1,
@@ -36179,8 +36693,8 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Razor Bow",
             "durability": 80,
-            "min2d": 10,
-            "max2d": 28,
+            "min2d": 15,
+            "max2d": 42,
             "rs": 25,
             "rd": 62,
             "hi": 1,
@@ -36208,8 +36722,8 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Cedar Bow",
             "durability": 70,
-            "min2d": 13,
-            "max2d": 37,
+            "min2d": 20,
+            "max2d": 56,
             "rs": 53,
             "rd": 49,
             "hi": 1,
@@ -36239,8 +36753,8 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Double Bow",
             "durability": 90,
-            "min2d": 14,
-            "max2d": 33,
+            "min2d": 21,
+            "max2d": 50,
             "rs": 58,
             "rd": 73,
             "hi": 1,
@@ -36270,8 +36784,8 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Short Siege Bow",
             "durability": 100,
-            "min2d": 17,
-            "max2d": 38,
+            "min2d": 26,
+            "max2d": 57,
             "rs": 65,
             "rd": 80,
             "hi": 1,
@@ -36301,8 +36815,8 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Large Siege Bow",
             "durability": 110,
-            "min2d": 13,
-            "max2d": 53,
+            "min2d": 20,
+            "max2d": 80,
             "rs": 80,
             "rd": 95,
             "hi": 1,
@@ -36330,8 +36844,8 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Rune Bow",
             "durability": 120,
-            "min2d": 18,
-            "max2d": 44,
+            "min2d": 27,
+            "max2d": 66,
             "rs": 73,
             "rd": 103,
             "hi": 1,
@@ -36361,8 +36875,8 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Gothic Bow",
             "durability": 138,
-            "min2d": 13,
-            "max2d": 63,
+            "min2d": 20,
+            "max2d": 95,
             "rs": 95,
             "rd": 118,
             "hi": 1,
@@ -36390,8 +36904,8 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Arbalest",
             "durability": 76,
-            "min2d": 18,
-            "max2d": 34,
+            "min2d": 27,
+            "max2d": 51,
             "rs": 52,
             "rd": 61,
             "hi": 1,
@@ -36421,8 +36935,8 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Siege Crossbow",
             "durability": 100,
-            "min2d": 25,
-            "max2d": 53,
+            "min2d": 38,
+            "max2d": 80,
             "rs": 80,
             "rd": 70,
             "hi": 1,
@@ -36452,8 +36966,8 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Ballista",
             "durability": 126,
-            "min2d": 42,
-            "max2d": 69,
+            "min2d": 63,
+            "max2d": 104,
             "rs": 110,
             "rd": 80,
             "hi": 1,
@@ -36483,8 +36997,8 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Chu-Ko-Nu",
             "durability": 100,
-            "min2d": 18,
-            "max2d": 40,
+            "min2d": 27,
+            "max2d": 60,
             "rs": 80,
             "rd": 95,
             "hi": 1,
@@ -37454,6 +37968,8 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Feral Axe",
             "durability": 76,
+            "mind": 16,
+            "maxd": 77,
             "min2d": 32,
             "max2d": 154,
             "rs": 196,
@@ -37484,6 +38000,8 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Silver-edged Axe",
             "durability": 88,
+            "mind": 39,
+            "maxd": 69,
             "min2d": 78,
             "max2d": 138,
             "rs": 166,
@@ -37515,6 +38033,8 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Decapitator",
             "durability": 100,
+            "mind": 31,
+            "maxd": 86,
             "min2d": 62,
             "max2d": 172,
             "rs": 189,
@@ -37548,6 +38068,8 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Champion Axe",
             "durability": 126,
+            "mind": 44,
+            "maxd": 88,
             "min2d": 88,
             "max2d": 175,
             "rs": 200,
@@ -37580,6 +38102,8 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Glorious Axe",
             "durability": 126,
+            "mind": 38,
+            "maxd": 104,
             "min2d": 75,
             "max2d": 207,
             "rs": 225,
@@ -39561,8 +40085,8 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Spider Bow",
             "durability": 50,
-            "min2d": 29,
-            "max2d": 63,
+            "min2d": 44,
+            "max2d": 95,
             "rs": 64,
             "rd": 143,
             "hi": 1,
@@ -39590,8 +40114,8 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Blade Bow",
             "durability": 80,
-            "min2d": 27,
-            "max2d": 52,
+            "min2d": 41,
+            "max2d": 78,
             "rs": 76,
             "rd": 119,
             "hi": 1,
@@ -39619,8 +40143,8 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Shadow Bow",
             "durability": 70,
-            "min2d": 19,
-            "max2d": 74,
+            "min2d": 29,
+            "max2d": 111,
             "rs": 52,
             "rd": 188,
             "hi": 1,
@@ -39648,8 +40172,8 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Great Bow",
             "durability": 90,
-            "min2d": 15,
-            "max2d": 65,
+            "min2d": 23,
+            "max2d": 98,
             "rs": 121,
             "rd": 107,
             "hi": 1,
@@ -39679,8 +40203,8 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Diamond Bow",
             "durability": 100,
-            "min2d": 42,
-            "max2d": 50,
+            "min2d": 63,
+            "max2d": 75,
             "rs": 89,
             "rd": 132,
             "hi": 1,
@@ -39710,8 +40234,8 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Crusader Bow",
             "durability": 110,
-            "min2d": 19,
-            "max2d": 79,
+            "min2d": 29,
+            "max2d": 119,
             "rs": 97,
             "rd": 121,
             "hi": 1,
@@ -39739,8 +40263,8 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Ward Bow",
             "durability": 120,
-            "min2d": 25,
-            "max2d": 67,
+            "min2d": 38,
+            "max2d": 101,
             "rs": 72,
             "rd": 146,
             "hi": 1,
@@ -39770,8 +40294,8 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Hydra Bow",
             "durability": 138,
-            "min2d": 13,
-            "max2d": 85,
+            "min2d": 20,
+            "max2d": 128,
             "rs": 134,
             "rd": 167,
             "hi": 1,
@@ -39799,8 +40323,8 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Pellet Bow",
             "durability": 76,
-            "min2d": 35,
-            "max2d": 92,
+            "min2d": 53,
+            "max2d": 138,
             "rs": 83,
             "rd": 155,
             "hi": 1,
@@ -39830,8 +40354,8 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Gorgon Crossbow",
             "durability": 100,
-            "min2d": 32,
-            "max2d": 109,
+            "min2d": 48,
+            "max2d": 164,
             "rs": 117,
             "rd": 105,
             "hi": 1,
@@ -39861,8 +40385,8 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Colossus Crossbow",
             "durability": 126,
-            "min2d": 40,
-            "max2d": 114,
+            "min2d": 60,
+            "max2d": 171,
             "rs": 163,
             "rd": 77,
             "hi": 1,
@@ -39892,8 +40416,8 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Demon Crossbow",
             "durability": 100,
-            "min2d": 33,
-            "max2d": 50,
+            "min2d": 50,
+            "max2d": 75,
             "rs": 141,
             "rd": 98,
             "hi": 1,
@@ -40083,8 +40607,8 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Stag Bow",
             "durability": 120,
-            "min2d": 9,
-            "max2d": 15,
+            "min2d": 14,
+            "max2d": 23,
             "rs": 30,
             "rd": 45,
             "hi": 1,
@@ -40118,8 +40642,8 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Reflex Bow",
             "durability": 138,
-            "min2d": 12,
-            "max2d": 24,
+            "min2d": 18,
+            "max2d": 36,
             "rs": 35,
             "rd": 60,
             "hi": 1,
@@ -40423,8 +40947,8 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Ashwood Bow",
             "durability": 120,
-            "min2d": 20,
-            "max2d": 37,
+            "min2d": 30,
+            "max2d": 56,
             "rs": 56,
             "rd": 77,
             "hi": 1,
@@ -40458,8 +40982,8 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Ceremonial Bow",
             "durability": 138,
-            "min2d": 24,
-            "max2d": 52,
+            "min2d": 36,
+            "max2d": 78,
             "rs": 73,
             "rd": 110,
             "hi": 1,
@@ -40763,8 +41287,8 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Matriarchal Bow",
             "durability": 120,
-            "min2d": 25,
-            "max2d": 59,
+            "min2d": 38,
+            "max2d": 89,
             "rs": 87,
             "rd": 187,
             "hi": 1,
@@ -40798,8 +41322,8 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Grand Matron Bow",
             "durability": 138,
-            "min2d": 18,
-            "max2d": 90,
+            "min2d": 27,
+            "max2d": 135,
             "rs": 108,
             "rd": 152,
             "hi": 1,
@@ -41036,7 +41560,7 @@ export let remodded_constants_99 = {
             "rs": 175,
             "rd": 100,
             "hi": 1,
-            "gs": 3,
+            "gs": 4,
             "gt": 0,
             "i": "inv2hs",
             "ui": "inv2hsu",
@@ -41371,6 +41895,8 @@ export let remodded_constants_99 = {
             "iq": 0,
             "n": "Mighty Axe",
             "durability": 126,
+            "mind": 16,
+            "maxd": 32,
             "min2d": 32,
             "max2d": 63,
             "rs": 75,
@@ -41404,6 +41930,8 @@ export let remodded_constants_99 = {
             "iq": 1,
             "n": "Bonebreaking Axe",
             "durability": 126,
+            "mind": 32,
+            "maxd": 57,
             "min2d": 63,
             "max2d": 113,
             "rs": 150,
@@ -41439,6 +41967,8 @@ export let remodded_constants_99 = {
             "iq": 2,
             "n": "Decapitating Axe",
             "durability": 126,
+            "mind": 38,
+            "maxd": 104,
             "min2d": 75,
             "max2d": 207,
             "rs": 225,
@@ -41884,6 +42414,37 @@ export let remodded_constants_99 = {
                 "Class Specific"
             ],
             "hdi": "weapon/sword/broad_sword"
+        },
+        "D00": {
+            "nc": "D00",
+            "exc": "D00",
+            "elc": "D00",
+            "iq": 1,
+            "durability": 126,
+            "mind": 33,
+            "maxd": 88,
+            "min2d": 77,
+            "max2d": 152,
+            "rs": 182,
+            "rd": 95,
+            "hi": 1,
+            "gs": 6,
+            "gt": 0,
+            "i": "invflb",
+            "iw": 2,
+            "ih": 4,
+            "it": 2,
+            "ig": [],
+            "eq1n": "Melee Weapon",
+            "eq2n": "Merc 5 Weapon",
+            "c": [
+                "Sword",
+                "Melee Weapon",
+                "Weapon",
+                "Gold",
+                "Miscellaneous",
+                "Merc 5 Weapon"
+            ]
         }
     },
     "other_items": {
@@ -45610,7 +46171,7 @@ export let remodded_constants_99 = {
             "i": "invsst",
             "iw": 1,
             "ih": 3,
-            "it": 0,
+            "it": 8,
             "ig": [
                 "invch3",
                 "invch6",
@@ -52883,17 +53444,18 @@ export let remodded_constants_99 = {
             "exc": "y67",
             "elc": "y67",
             "iq": 1,
-            "n": "(Cube alone to receive rewards)<br><br>-Endless Keyring<br>-Book of Insight<br>-Book of Safe Return<br>Contains:<br><br>Starter's Cube of Endless Convenience",
             "hi": 0,
             "gs": 0,
             "gt": 0,
             "i": "invchm",
-            "iw": 1,
-            "ih": 1,
+            "iw": 2,
+            "ih": 2,
             "it": 0,
             "ig": [],
+            "eq1n": "Miscellaneous",
             "c": [
-                "Reroller"
+                "Ingredient",
+                "Miscellaneous"
             ],
             "hdi": "custom/reroller"
         },
@@ -61864,6 +62426,2499 @@ export let remodded_constants_99 = {
                 "Blood Contract"
             ],
             "hdi": "custom/Blood_Pact"
+        },
+        "C00": {
+            "nc": "C00",
+            "exc": "C00",
+            "elc": "C00",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invjaw",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C01": {
+            "nc": "C01",
+            "exc": "C01",
+            "elc": "C01",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invhorn",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C02": {
+            "nc": "C02",
+            "exc": "C02",
+            "elc": "C02",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invtail",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C03": {
+            "nc": "C03",
+            "exc": "C03",
+            "elc": "C03",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invflag",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C04": {
+            "nc": "C04",
+            "exc": "C04",
+            "elc": "C04",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invfang",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C05": {
+            "nc": "C05",
+            "exc": "C05",
+            "elc": "C05",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invsple",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C06": {
+            "nc": "C06",
+            "exc": "C06",
+            "elc": "C06",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invjaw",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C07": {
+            "nc": "C07",
+            "exc": "C07",
+            "elc": "C07",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invhorn",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C08": {
+            "nc": "C08",
+            "exc": "C08",
+            "elc": "C08",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invtail",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C09": {
+            "nc": "C09",
+            "exc": "C09",
+            "elc": "C09",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invflag",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C10": {
+            "nc": "C10",
+            "exc": "C10",
+            "elc": "C10",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invfang",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C11": {
+            "nc": "C11",
+            "exc": "C11",
+            "elc": "C11",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invsple",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C12": {
+            "nc": "C12",
+            "exc": "C12",
+            "elc": "C12",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invjaw",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C13": {
+            "nc": "C13",
+            "exc": "C13",
+            "elc": "C13",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invhorn",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C14": {
+            "nc": "C14",
+            "exc": "C14",
+            "elc": "C14",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invtail",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C15": {
+            "nc": "C15",
+            "exc": "C15",
+            "elc": "C15",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invflag",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C16": {
+            "nc": "C16",
+            "exc": "C16",
+            "elc": "C16",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invfang",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C17": {
+            "nc": "C17",
+            "exc": "C17",
+            "elc": "C17",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invsple",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C18": {
+            "nc": "C18",
+            "exc": "C18",
+            "elc": "C18",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invjaw",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C19": {
+            "nc": "C19",
+            "exc": "C19",
+            "elc": "C19",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invhorn",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C20": {
+            "nc": "C20",
+            "exc": "C20",
+            "elc": "C20",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invtail",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C21": {
+            "nc": "C21",
+            "exc": "C21",
+            "elc": "C21",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invflag",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C22": {
+            "nc": "C22",
+            "exc": "C22",
+            "elc": "C22",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invfang",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C23": {
+            "nc": "C23",
+            "exc": "C23",
+            "elc": "C23",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invsple",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C24": {
+            "nc": "C24",
+            "exc": "C24",
+            "elc": "C24",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invjaw",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C25": {
+            "nc": "C25",
+            "exc": "C25",
+            "elc": "C25",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invhorn",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C26": {
+            "nc": "C26",
+            "exc": "C26",
+            "elc": "C26",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invtail",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C27": {
+            "nc": "C27",
+            "exc": "C27",
+            "elc": "C27",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invflag",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C28": {
+            "nc": "C28",
+            "exc": "C28",
+            "elc": "C28",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invfang",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C29": {
+            "nc": "C29",
+            "exc": "C29",
+            "elc": "C29",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invsple",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C30": {
+            "nc": "C30",
+            "exc": "C30",
+            "elc": "C30",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invjaw",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C31": {
+            "nc": "C31",
+            "exc": "C31",
+            "elc": "C31",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invhorn",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C32": {
+            "nc": "C32",
+            "exc": "C32",
+            "elc": "C32",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invtail",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C33": {
+            "nc": "C33",
+            "exc": "C33",
+            "elc": "C33",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invflag",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C34": {
+            "nc": "C34",
+            "exc": "C34",
+            "elc": "C34",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invfang",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C35": {
+            "nc": "C35",
+            "exc": "C35",
+            "elc": "C35",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invsple",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C36": {
+            "nc": "C36",
+            "exc": "C36",
+            "elc": "C36",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invjaw",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C37": {
+            "nc": "C37",
+            "exc": "C37",
+            "elc": "C37",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invhorn",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C38": {
+            "nc": "C38",
+            "exc": "C38",
+            "elc": "C38",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invtail",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C39": {
+            "nc": "C39",
+            "exc": "C39",
+            "elc": "C39",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invflag",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C40": {
+            "nc": "C40",
+            "exc": "C40",
+            "elc": "C40",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invfang",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C41": {
+            "nc": "C41",
+            "exc": "C41",
+            "elc": "C41",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invsple",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C42": {
+            "nc": "C42",
+            "exc": "C42",
+            "elc": "C42",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invjaw",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C43": {
+            "nc": "C43",
+            "exc": "C43",
+            "elc": "C43",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invhorn",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C44": {
+            "nc": "C44",
+            "exc": "C44",
+            "elc": "C44",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invtail",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C45": {
+            "nc": "C45",
+            "exc": "C45",
+            "elc": "C45",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invflag",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C46": {
+            "nc": "C46",
+            "exc": "C46",
+            "elc": "C46",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invfang",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C47": {
+            "nc": "C47",
+            "exc": "C47",
+            "elc": "C47",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invsple",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C48": {
+            "nc": "C48",
+            "exc": "C48",
+            "elc": "C48",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invjaw",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C49": {
+            "nc": "C49",
+            "exc": "C49",
+            "elc": "C49",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invhorn",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C50": {
+            "nc": "C50",
+            "exc": "C50",
+            "elc": "C50",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invtail",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C51": {
+            "nc": "C51",
+            "exc": "C51",
+            "elc": "C51",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invflag",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C52": {
+            "nc": "C52",
+            "exc": "C52",
+            "elc": "C52",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invfang",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C53": {
+            "nc": "C53",
+            "exc": "C53",
+            "elc": "C53",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invsple",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C54": {
+            "nc": "C54",
+            "exc": "C54",
+            "elc": "C54",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invjaw",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C55": {
+            "nc": "C55",
+            "exc": "C55",
+            "elc": "C55",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invhorn",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C56": {
+            "nc": "C56",
+            "exc": "C56",
+            "elc": "C56",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invtail",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C57": {
+            "nc": "C57",
+            "exc": "C57",
+            "elc": "C57",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invflag",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C58": {
+            "nc": "C58",
+            "exc": "C58",
+            "elc": "C58",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invfang",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "C59": {
+            "nc": "C59",
+            "exc": "C59",
+            "elc": "C59",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invsple",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "y01": {
+            "nc": "y01",
+            "exc": "y01",
+            "elc": "y01",
+            "iq": 1,
+            "n": "Soul Tracker",
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invwnd",
+            "ui": "D2R_Jank",
+            "iw": 1,
+            "ih": 2,
+            "it": 0,
+            "ig": [
+                "invch2",
+                "invch5",
+                "invch8"
+            ],
+            "eq1n": "Charm",
+            "c": [
+                "Amazon M Charm",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/mythos_log"
+        },
+        "y02": {
+            "nc": "y02",
+            "exc": "y02",
+            "elc": "y02",
+            "iq": 1,
+            "n": "Soul Tracker",
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invwnd",
+            "ui": "D2R_Jank",
+            "iw": 1,
+            "ih": 2,
+            "it": 0,
+            "ig": [
+                "invch2",
+                "invch5",
+                "invch8"
+            ],
+            "eq1n": "Charm",
+            "c": [
+                "Assassin M Charm",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/mythos_log"
+        },
+        "y03": {
+            "nc": "y03",
+            "exc": "y03",
+            "elc": "y03",
+            "iq": 1,
+            "n": "Soul Tracker",
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invwnd",
+            "ui": "D2R_Jank",
+            "iw": 1,
+            "ih": 2,
+            "it": 0,
+            "ig": [
+                "invch2",
+                "invch5",
+                "invch8"
+            ],
+            "eq1n": "Charm",
+            "c": [
+                "Barbarian M Charm",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/mythos_log"
+        },
+        "y04": {
+            "nc": "y04",
+            "exc": "y04",
+            "elc": "y04",
+            "iq": 1,
+            "n": "Soul Tracker",
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invwnd",
+            "ui": "D2R_Jank",
+            "iw": 1,
+            "ih": 2,
+            "it": 0,
+            "ig": [
+                "invch2",
+                "invch5",
+                "invch8"
+            ],
+            "eq1n": "Charm",
+            "c": [
+                "Druid M Charm",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/mythos_log"
+        },
+        "y05": {
+            "nc": "y05",
+            "exc": "y05",
+            "elc": "y05",
+            "iq": 1,
+            "n": "Soul Tracker",
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invwnd",
+            "ui": "D2R_Jank",
+            "iw": 1,
+            "ih": 2,
+            "it": 0,
+            "ig": [
+                "invch2",
+                "invch5",
+                "invch8"
+            ],
+            "eq1n": "Charm",
+            "c": [
+                "Necromancer M Charm",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/mythos_log"
+        },
+        "y06": {
+            "nc": "y06",
+            "exc": "y06",
+            "elc": "y06",
+            "iq": 1,
+            "n": "Soul Tracker",
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invwnd",
+            "ui": "D2R_Jank",
+            "iw": 1,
+            "ih": 2,
+            "it": 0,
+            "ig": [
+                "invch2",
+                "invch5",
+                "invch8"
+            ],
+            "eq1n": "Charm",
+            "c": [
+                "Paladin M Charm",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/mythos_log"
+        },
+        "y07": {
+            "nc": "y07",
+            "exc": "y07",
+            "elc": "y07",
+            "iq": 1,
+            "n": "Soul Tracker",
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invwnd",
+            "ui": "D2R_Jank",
+            "iw": 1,
+            "ih": 2,
+            "it": 0,
+            "ig": [
+                "invch2",
+                "invch5",
+                "invch8"
+            ],
+            "eq1n": "Charm",
+            "c": [
+                "Sorceress M Charm",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/mythos_log"
+        },
+        "Ev1": {
+            "nc": "Ev1",
+            "exc": "Ev1",
+            "elc": "Ev1",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invpot",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "Ev2": {
+            "nc": "Ev2",
+            "exc": "Ev2",
+            "elc": "Ev2",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invpot",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "Ev3": {
+            "nc": "Ev3",
+            "exc": "Ev3",
+            "elc": "Ev3",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invpot",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "Ev4": {
+            "nc": "Ev4",
+            "exc": "Ev4",
+            "elc": "Ev4",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invpot",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "Ev5": {
+            "nc": "Ev5",
+            "exc": "Ev5",
+            "elc": "Ev5",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invpot",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "Ev6": {
+            "nc": "Ev6",
+            "exc": "Ev6",
+            "elc": "Ev6",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invpot",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "Ev7": {
+            "nc": "Ev7",
+            "exc": "Ev7",
+            "elc": "Ev7",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invpot",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "Ev8": {
+            "nc": "Ev8",
+            "exc": "Ev8",
+            "elc": "Ev8",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invpot",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ]
+        },
+        "m00": {
+            "nc": "m00",
+            "exc": "m00",
+            "elc": "m00",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m01": {
+            "nc": "m01",
+            "exc": "m01",
+            "elc": "m01",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m02": {
+            "nc": "m02",
+            "exc": "m02",
+            "elc": "m02",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m03": {
+            "nc": "m03",
+            "exc": "m03",
+            "elc": "m03",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m04": {
+            "nc": "m04",
+            "exc": "m04",
+            "elc": "m04",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m05": {
+            "nc": "m05",
+            "exc": "m05",
+            "elc": "m05",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m06": {
+            "nc": "m06",
+            "exc": "m06",
+            "elc": "m06",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m07": {
+            "nc": "m07",
+            "exc": "m07",
+            "elc": "m07",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m08": {
+            "nc": "m08",
+            "exc": "m08",
+            "elc": "m08",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m09": {
+            "nc": "m09",
+            "exc": "m09",
+            "elc": "m09",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m10": {
+            "nc": "m10",
+            "exc": "m10",
+            "elc": "m10",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m11": {
+            "nc": "m11",
+            "exc": "m11",
+            "elc": "m11",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m12": {
+            "nc": "m12",
+            "exc": "m12",
+            "elc": "m12",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m13": {
+            "nc": "m13",
+            "exc": "m13",
+            "elc": "m13",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m14": {
+            "nc": "m14",
+            "exc": "m14",
+            "elc": "m14",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m15": {
+            "nc": "m15",
+            "exc": "m15",
+            "elc": "m15",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m16": {
+            "nc": "m16",
+            "exc": "m16",
+            "elc": "m16",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m17": {
+            "nc": "m17",
+            "exc": "m17",
+            "elc": "m17",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m18": {
+            "nc": "m18",
+            "exc": "m18",
+            "elc": "m18",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m19": {
+            "nc": "m19",
+            "exc": "m19",
+            "elc": "m19",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m20": {
+            "nc": "m20",
+            "exc": "m20",
+            "elc": "m20",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m21": {
+            "nc": "m21",
+            "exc": "m21",
+            "elc": "m21",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m22": {
+            "nc": "m22",
+            "exc": "m22",
+            "elc": "m22",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m23": {
+            "nc": "m23",
+            "exc": "m23",
+            "elc": "m23",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m24": {
+            "nc": "m24",
+            "exc": "m24",
+            "elc": "m24",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m25": {
+            "nc": "m25",
+            "exc": "m25",
+            "elc": "m25",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m26": {
+            "nc": "m26",
+            "exc": "m26",
+            "elc": "m26",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "eq2n": "Maps",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous",
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m27": {
+            "nc": "m27",
+            "exc": "m27",
+            "elc": "m27",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Charm",
+            "c": [
+                "Maps",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m28": {
+            "nc": "m28",
+            "exc": "m28",
+            "elc": "m28",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m29": {
+            "nc": "m29",
+            "exc": "m29",
+            "elc": "m29",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 2,
+            "ih": 2,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Parchment",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m30": {
+            "nc": "m30",
+            "exc": "m30",
+            "elc": "m30",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m31": {
+            "nc": "m31",
+            "exc": "m31",
+            "elc": "m31",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ingredient",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m32": {
+            "nc": "m32",
+            "exc": "m32",
+            "elc": "m32",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [
+                "invch1",
+                "invch4",
+                "invch7"
+            ],
+            "eq1n": "Charm",
+            "c": [
+                "Small Charm",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m33": {
+            "nc": "m33",
+            "exc": "m33",
+            "elc": "m33",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 1,
+            "ih": 2,
+            "it": 0,
+            "ig": [
+                "invch2",
+                "invch5",
+                "invch8"
+            ],
+            "eq1n": "Charm",
+            "c": [
+                "Medium Charm",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "m34": {
+            "nc": "m34",
+            "exc": "m34",
+            "elc": "m34",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 1,
+            "ih": 3,
+            "it": 0,
+            "ig": [
+                "invch3",
+                "invch6",
+                "invch9"
+            ],
+            "eq1n": "Charm",
+            "c": [
+                "Large Charm",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/AdventureMapl"
+        },
+        "j00": {
+            "nc": "j00",
+            "exc": "j00",
+            "elc": "j00",
+            "iq": 1,
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invgswe",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [
+                "invjw1",
+                "invjw2",
+                "invjw3",
+                "invjw4",
+                "invjw5",
+                "invjw6"
+            ],
+            "eq1n": "Socket Filler",
+            "eq2n": "Potion",
+            "c": [
+                "Jewel",
+                "Socket Filler",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "custom/PrimsaticFacet"
         }
     },
     "version": "vanilla_constants_99"

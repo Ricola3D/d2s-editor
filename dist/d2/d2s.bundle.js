@@ -17568,15 +17568,15 @@ function enhanceItem(item, mod, version, level, config, parent) {
     // Enforce level is between 1 and 99
     item.level = boundValue(item.level, 1, 99);
     // Ensure coherence of other attributes with quality
+    item.given_runeword = item.quality <= types_1.Quality.Superior && item.runeword_id ? 1 : 0;
     if (item.given_runeword) {
         item.runeword_name = constants.runewords[item.runeword_id] ? constants.runewords[item.runeword_id].n : "";
-        if (item.quality > types_1.Quality.Superior) {
-            // Cannot be a runeword
-            item.given_runeword = 0;
-            item.runeword_id = 0;
-            item.runeword_name = "";
-            item.runeword_attributes = [];
-        }
+    }
+    else {
+        item.given_runeword = 0;
+        item.runeword_id = 0;
+        item.runeword_name = "";
+        item.runeword_attributes = [];
     }
     if (item.quality !== types_1.Quality.Magic) {
         item.magic_prefix = 0;
@@ -17703,7 +17703,7 @@ function enhanceItem(item, mod, version, level, config, parent) {
         item.socketed_items = (item.socketed_items || []).slice(0, item.nr_of_items_in_sockets);
         // Enforce personalization validity, and coherence between personalized_name & personalized
         if (item.personalized_name && item.personalized_name.length) {
-            // Check it is valid (0-16 letters)
+            // Check it is valid
             var valid = utils_1.nameRegex.test(item.personalized_name);
             if (!valid) {
                 item.personalized_name = "";
@@ -18042,8 +18042,8 @@ function _descFunc(attribute, constants, v, descFunc, descVal, descString, desc2
             break;
         }
         case 15: {
-            // [chance]% to case [slvl] [skill] on [event]
-            var skillId = attribute.values[1];
+            // [chance]% to cast [slvl] [skill] on [event]
+            var skillId = attribute.values[1] /* || -1*/;
             var skill = constants.skills[skillId];
             var skillStr = "";
             if (skill) {
@@ -18060,7 +18060,7 @@ function _descFunc(attribute, constants, v, descFunc, descVal, descString, desc2
         }
         case 16: {
             // Level [sLvl] [skill] Aura When Equipped
-            var skillId = attribute.values[0];
+            var skillId = attribute.values[0] /* || -1*/;
             var skill = constants.skills[skillId];
             var skillStr = "";
             if (skill) {
@@ -18112,7 +18112,10 @@ function _descFunc(attribute, constants, v, descFunc, descVal, descString, desc2
         }
         case 24: {
             // Level [lvl] [skill] ([curr]/[max] charges)
-            var skillId = attribute.values[1];
+            var skillLevel = attribute.values[0] || 0;
+            var skillId = attribute.values[1] /* || -1*/;
+            var curCharges = attribute.values[2] || 0;
+            var maxCharges = attribute.values[3] || 0;
             var skill = constants.skills[skillId];
             var skillStr = "";
             if (skill) {
@@ -18123,21 +18126,12 @@ function _descFunc(attribute, constants, v, descFunc, descVal, descString, desc2
             else {
                 skillStr = "Unknown_Skill_".concat(skillId);
             }
-            if (descString.indexOf("(") == 0) {
-                var count_2 = 0;
-                descString = descString.replace(/%d/gi, function () {
-                    return attribute.values[2 + count_2++].toString();
-                });
-                attribute.description = "Level ".concat(attribute.values[0], " ").concat(skillStr, " ").concat(descString);
-            }
-            else {
-                attribute.description = _sprintf(descString, attribute.values[0], skillStr, attribute.values[2], attribute.values[3]);
-            }
+            attribute.description = _sprintf(descString, skillLevel, skillStr, curCharges, maxCharges);
             break;
         }
         case 27: {
             // +[value] to [skill] ([class] Only)
-            var skillId = attribute.values[0];
+            var skillId = attribute.values[0] /* || -1*/;
             var skill = constants.skills[skillId];
             var skillStr = "";
             var clazzStr = "";
@@ -18161,7 +18155,7 @@ function _descFunc(attribute, constants, v, descFunc, descVal, descString, desc2
         }
         case 28: {
             // +[value] to [skill]
-            var skillId = attribute.values[0];
+            var skillId = attribute.values[0] /* || -1*/;
             var skill = constants.skills[skillId];
             var skillStr = "";
             if (skill) {
@@ -18236,7 +18230,7 @@ function _socketedAttributes(item, constants) {
         for (var _i = 0, _a = item.socketed_items; _i < _a.length; _i++) {
             var i = _a[_i];
             if (i.magic_attributes) {
-                socketed_attributes = socketed_attributes.concat.apply(socketed_attributes, JSON.parse(JSON.stringify(i.magic_attributes)));
+                socketed_attributes = socketed_attributes.concat.apply(socketed_attributes, (0, lodash_1.cloneDeep)(i.magic_attributes));
             }
         }
     }
@@ -18247,7 +18241,7 @@ function _allAttributes(item, constants) {
     var magic_attributes = item.magic_attributes || [];
     //const set_attributes = item.set_attributes || [];
     var runeword_attributes = item.runeword_attributes || [];
-    return __spreadArray(__spreadArray(__spreadArray(__spreadArray([], [], false), JSON.parse(JSON.stringify(magic_attributes)), true), JSON.parse(JSON.stringify(runeword_attributes)), true), JSON.parse(JSON.stringify(socketed_attributes)), true).filter(function (attribute) { return attribute != null; });
+    return __spreadArray(__spreadArray(__spreadArray([], (0, lodash_1.cloneDeep)(magic_attributes), true), (0, lodash_1.cloneDeep)(runeword_attributes), true), (0, lodash_1.cloneDeep)(socketed_attributes), true).filter(function (attribute) { return attribute != null; });
 }
 function _groupAttributes(all_magical_attributes, constants) {
     var combined_magical_attributes = [];
@@ -20823,12 +20817,14 @@ function readHeader(char, reader, constants) {
     var _a, _b, _c, _d;
     char.header.filesize = reader.ReadUInt32(); //0x0008
     char.header.checksum = reader.ReadUInt32().toString(16).padStart(8, "0"); //0x000c
-    reader.SkipBytes(4); //0x0010
+    reader.SkipBytes(4); //0x0010 (previously active_arms ?)
     if (char.header.version > 0x61) {
+        // In version >97, char name is found at a later position
         reader.SeekByte(267);
     }
-    char.header.name = reader.ReadString(16).replace(/\0/g, ""); //0x0014
+    char.header.name = reader.ReadString(16).replace(/\0/g, ""); //0x0014 (or 0x010b if version>97)
     if (char.header.version > 0x61) {
+        // In version >97, back to the header start
         reader.SeekByte(36);
     }
     char.header.status = _readStatus(reader.ReadUInt8()); //0x0024

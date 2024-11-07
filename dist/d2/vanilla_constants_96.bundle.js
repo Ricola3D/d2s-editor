@@ -11912,8 +11912,8 @@ export let vanilla_constants_96 = {
             "sP": 16,
             "so": 1,
             "dF": 24,
-            "dP": "(%d/%d Charges)",
-            "dN": "(%d/%d Charges)"
+            "dP": "Level %d %s (%d/%d Charges)",
+            "dN": "Level %d %s (%d/%d Charges)"
         },
         {
             "id": 205,

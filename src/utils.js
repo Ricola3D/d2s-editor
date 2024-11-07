@@ -1,6 +1,12 @@
-const NodeCache = require('node-cache')
+import NodeCache from 'node-cache'
+import { Lru } from 'toad-cache'
 
-const imageCache = new NodeCache({ checkperiod: 0, useClones: false })
+const utilsCache = new NodeCache({
+  stdTTL: 3600, // 1h
+  checkperiod: 300, // 5min
+  useClones: false,
+})
+// const utilsCache2 = new Lru(500, 3600000) // max: 500 items, TTL=3600000ms=1h
 
 const colors = {
   whit: 0,
@@ -38,8 +44,8 @@ const colormaps = {
 // "r-g-b" string -> paletteIdx
 const paletteIdxToColorMap = {}
 
-function getPaletteIdxForColor(color) {
-  let lookupKey = `${color.r}-${color.g}-${color.b}`,
+function resolveColorIdx(rgbColor) {
+  let lookupKey = `${rgbColor[0]}-${rgbColor[1]}-${rgbColor[2]}`,
     bestIdx = -1,
     bestScore = -1
   // Result is saved in a map to minimize computation time
@@ -49,9 +55,9 @@ function getPaletteIdxForColor(color) {
     // New lookup
     window.palettes['ACT1'].every((paletteColor, idx) => {
       let score =
-        Math.pow(color.r - paletteColor[0], 2) +
-        Math.pow(color.g - paletteColor[1], 2) +
-        Math.pow(color.b - paletteColor[2], 2)
+        Math.pow(rgbColor[0] - paletteColor[0], 2) +
+        Math.pow(rgbColor[1] - paletteColor[1], 2) +
+        Math.pow(rgbColor[2] - paletteColor[2], 2)
       if (bestScore < 0 || score < bestScore) {
         bestIdx = idx
         bestScore = score
@@ -63,19 +69,16 @@ function getPaletteIdxForColor(color) {
   return bestIdx
 }
 
-function paletteIdxToItemColor(item, paletteIdx) {
-  if (item.transform_color && item.inv_transform) {
-    let transformIdx = colors[item.transform_color]
-    if (transformIdx >= 0 && window.palettes[item.inv_transform]) {
-      paletteIdx = window.palettes[item.inv_transform][transformIdx][paletteIdx]
+function getRgbColor(colorIdx, transformColor, inventoryTransform) {
+  let finalColorIdx = colorIdx
+  if (transformColor && inventoryTransform) {
+    let transformIdx = colors[transformColor]
+    if (transformIdx >= 0 && window.palettes[inventoryTransform]) {
+      const transform = window.palettes[inventoryTransform][transformIdx]
+      finalColorIdx = transform[colorIdx]
     }
   }
-  const rgb = window.palettes['ACT1'][paletteIdx] // Array, 0: r, 1:g, 2:b
-  return {
-    r: rgb[0],
-    g: rgb[1],
-    b: rgb[2],
-  }
+  return window.palettes['ACT1'][finalColorIdx]
 }
 
 function rgb565(c) {
@@ -85,22 +88,35 @@ function rgb565(c) {
   r |= r >> 5
   g |= g >> 6
   b |= b >> 5
-  return { r, g, b }
+  return [r, g, b]
 }
 
 async function getFileWithCache(path) {
+  const lookupKey = JSON.stringify({ path })
   let bytes = null
-  if (imageCache.has(path)) {
-    bytes = imageCache.get(path)
+  if (false) {
+  // if (utilsCache.has(lookupKey)) {
+  // if ((bytes = utilsCache2.get(lookupKey))) {
+    // bytes = utilsCache.get(lookupKey)
   } else {
     let response
     try {
-      response = await fetch(path, { signal: AbortSignal.timeout(1500) })
+      const start = Date.now()
+      // console.log(`At ${start}s, start fetching file: "${path}"`)
+      response = await fetch(path, { signal: AbortSignal.timeout(10000) })
+      const elapsed = Date.now() - start
+      // console.log(`${elapsed}ms to fetch file: "${path}"`)
     } catch (e) {
+      if (e.name === 'AbortError') {
+        console.warn(`Timeout on fetching file: "${path}"`)
+      } else {
+        console.error(`cannot get file: "${path}"`)
+      }
       return null
     }
     // Response OK or Unchanged
     if (response.status !== 200 && response.status !== 304) {
+      console.error(`HTTP Response ${response.status}: "${path}"`)
       return null
     }
 
@@ -108,6 +124,7 @@ async function getFileWithCache(path) {
     if (responseContentType) {
       const mimeType = responseContentType.split(';')[0]
       if (mimeType != '' && mimeType != 'application/octet-stream') {
+        console.error(`Response mime-type "${responseContentType}": "${path}"`)
         return null
       }
     }
@@ -121,7 +138,8 @@ async function getFileWithCache(path) {
     bytes = new Uint8Array(arrayBuffer)
 
     // Save in cache
-    imageCache.set(path, bytes, 10000)
+    // utilsCache.set(lookupKey, bytes)
+    // utilsCache2.set(lookupKey, bytes)
   }
 
   return bytes
@@ -172,22 +190,24 @@ function b64PNGFromSprite(item, sprite) {
     for (let y = 0; y < height; y++) {
       for (let x = 0; x < width; x++) {
         idx = 0x28 + y * 4 * width + x * 4
-        let color = {
-          r: sprite[idx],
-          g: sprite[idx + 1],
-          b: sprite[idx + 2],
-          a: sprite[idx + 3],
-        }
+        let rgbColor = [sprite[idx], sprite[idx + 1], sprite[idx + 2]] // rgb
+        const alpha = sprite[idx + 3]
+
+        // D2 works with a present number of colors defined in the default palette
+        const colorIdx = resolveColorIdx(rgbColor)
 
         // Apply transform color if necessary
-        let paletteIdx = getPaletteIdxForColor(color)
-        Object.assign(color, paletteIdxToItemColor(item, paletteIdx))
+        rgbColor = getRgbColor(
+          colorIdx,
+          item.transform_color,
+          item.inv_transform
+        )
 
         const offset = (y * width + x) * 4
-        imgData.data[offset] = color.r
-        imgData.data[offset + 1] = color.g
-        imgData.data[offset + 2] = color.b
-        imgData.data[offset + 3] = color.a
+        imgData.data[offset] = rgbColor[0] // r
+        imgData.data[offset + 1] = rgbColor[1] // g
+        imgData.data[offset + 2] = rgbColor[2] // b
+        imgData.data[offset + 3] = alpha // a
       }
     }
   } else if (version == 61) {
@@ -200,7 +220,7 @@ function b64PNGFromSprite(item, sprite) {
       bch = Math.ceil(height / 4)
     //let clen_last = (width + 3) % 4 + 1;
     let alphas = [],
-      colors = []
+      rgbColors = []
     for (let t = 0; t < bch; t++) {
       for (let s = 0; s < bcw; s++, idx += 16) {
         // 16 bytes per block
@@ -229,27 +249,27 @@ function b64PNGFromSprite(item, sprite) {
         {
           const q0 = sprite[idx + 2] | (sprite[idx + 3] << 8),
             q1 = sprite[idx + 4] | (sprite[idx + 5] << 8)
-          colors[0] = rgb565(q0)
-          colors[1] = rgb565(q1)
-          const { r0, g0, b0 } = colors[0]
-          const { r1, g1, b1 } = colors[1]
+          rgbColors[0] = rgb565(q0)
+          rgbColors[1] = rgb565(q1)
+          const { r0, g0, b0 } = rgbColors[0]
+          const { r1, g1, b1 } = rgbColors[1]
           if (q0 > q1) {
-            colors[2] = {
-              r: Math.trunc((r0 * 2 + r1) / 3),
-              g: Math.trunc((g0 * 2 + g1) / 3),
-              b: Math.trunc((b0 * 2 + b1) / 3),
-            }
-            colors[3] = {
-              r: Math.trunc((r0 + r1 * 2) / 3),
-              g: Math.trunc((g0 + g1 * 2) / 3),
-              b: Math.trunc((b0 + b1 * 2) / 3),
-            }
+            rgbColors[2] = [
+              Math.trunc((r0 * 2 + r1) / 3),
+              Math.trunc((g0 * 2 + g1) / 3),
+              Math.trunc((b0 * 2 + b1) / 3),
+            ]
+            rgbColors[3] = [
+              Math.trunc((r0 + r1 * 2) / 3),
+              Math.trunc((g0 + g1 * 2) / 3),
+              Math.trunc((b0 + b1 * 2) / 3),
+            ]
           } else {
-            colors[2] = {
-              r: Math.trunc((r0 + r1) / 2),
-              g: Math.trunc((g0 + g1) / 2),
-              b: Math.trunc((b0 + b1) / 2),
-            }
+            rgbColors[2] = [
+              Math.trunc((r0 + r1) / 2),
+              Math.trunc((g0 + g1) / 2),
+              Math.trunc((b0 + b1) / 2),
+            ]
           }
         }
 
@@ -269,14 +289,18 @@ function b64PNGFromSprite(item, sprite) {
           (sprite[idx + 15] << 24)
         for (let i = 0; i < 16; i++, da >>= 3, dc >>= 2) {
           // Per pixel: 3bits alpha chanel, 2bits color
-          let color = {
-            a: alphas[da & 7],
-            ...colors[dc & 3],
-          }
+          let rgbColor = rgbColors[dc & 3]
+          const alpha = alphas[da & 7]
+
+          // D2 works with a present number of colors defined in the default palette
+          const colorIdx = resolveColorIdx(rgbColor)
 
           // Apply transform color if necessary
-          const paletteIdx = getPaletteIdxForColor(color)
-          Object.assign(color, paletteIdxToItemColor(item, paletteIdx))
+          rgbColor = getRgbColor(
+            colorIdx,
+            item.transform_color,
+            item.inv_transform
+          )
 
           const x = 4 * bcw + (i % 4)
           const y = 4 * bch + Math.floor(i / 4)
@@ -284,10 +308,10 @@ function b64PNGFromSprite(item, sprite) {
           if (x < width && y < height) {
             // Beware of last column & row overflow
             const offset = (y * width + x) * 4
-            imgData.data[offset] = color.r
-            imgData.data[offset + 1] = color.g
-            imgData.data[offset + 2] = color.b
-            imgData.data[offset + 3] = a
+            imgData.data[offset] = rgbColor[0]
+            imgData.data[offset + 1] = rgbColor[1]
+            imgData.data[offset + 2] = rgbColor[2]
+            imgData.data[offset + 3] = alpha
           }
         }
       }
@@ -360,16 +384,21 @@ function b64PNGFromDC6(item, dc6) {
   canvas.width = width
   for (let y = 0; y < height; y += 1) {
     for (let x = 0; x < width; x += 1) {
-      let paletteIdx = indexed[y][x]
-      if (paletteIdx === 255) {
+      let colorIdx = indexed[y][x]
+      if (colorIdx === 255) {
         // Transparent, imgData is 0s.
         continue
       }
-      const color = paletteIdxToItemColor(item, paletteIdx)
+      const rgbColor = getRgbColor(
+        colorIdx,
+        item.transform_color,
+        item.inv_transform
+      )
+
       const offset = (y * width + x) * 4
-      imgData.data[offset] = color.r
-      imgData.data[offset + 1] = color.g
-      imgData.data[offset + 2] = color.b
+      imgData.data[offset] = rgbColor[0]
+      imgData.data[offset + 1] = rgbColor[1]
+      imgData.data[offset + 2] = rgbColor[2]
       imgData.data[offset + 3] = 255
     }
   }
@@ -438,20 +467,62 @@ export default {
       constants.other_items[item.type]
     )
   },
-  async getInventoryImageSrc(item) {
+  async getInventoryImage(item) {
     if (item.hd_inv_file) {
-      const spriteFilePath = `d2/game_data/${window.work_mod}/version_${window.work_version}/hd/global/ui/items/${item.hd_inv_file}.lowend.sprite` // lowend is enough and lighter
-      const sprite = await getFileWithCache(spriteFilePath)
-      if (sprite) {
-        return b64PNGFromSprite(item, sprite)
+      const hdImageLookupKey = JSON.stringify({
+        tc: item.transform_color || null,
+        it: item.inv_transform || null,
+        hdi: item.hd_inv_file,
+      })
+      let src = null
+      if (false) {
+      // if (utilsCache.has(hdImageLookupKey)) {
+      // if ((src = utilsCache2.get(hdImageLookupKey))) {
+        // Re-use already built HD image data URL
+        // src = utilsCache.get(hdImageLookupKey)
+        return src
+      } else {
+        // Try building the HD image dataURL
+        const spriteFilePath = `d2/game_data/${window.work_mod}/version_${window.work_version}/hd/global/ui/items/${item.hd_inv_file}.lowend.sprite` // lowend is enough and lighter
+        const sprite = await getFileWithCache(spriteFilePath)
+        if (sprite) {
+          const start = Date.now()
+          const imageDataUrl = b64PNGFromSprite(item, sprite)
+          const elapsed = Date.now() - start
+          // console.log(`Needed ${elapsed}ms to generate PNG: "${spriteFilePath}"`)
+          // utilsCache.set(hdImageLookupKey, imageDataUrl) // Save the HD image dataURL in cache
+          // utilsCache2.set(hdImageLookupKey, imageDataUrl) // Save the HD image dataURL in cache
+          return imageDataUrl
+        }
       }
     }
 
     if (item.inv_file && item.inv_file != 'D2R_Jank') {
-      const dc6FilePath = `d2/game_data/${window.work_mod}/version_${window.work_version}/global/items/${item.inv_file}.dc6`
-      const dc6 = await getFileWithCache(dc6FilePath)
-      if (dc6) {
-        return b64PNGFromDC6(item, dc6)
+      const sdImageLookupKey = JSON.stringify({
+        tc: item.transform_color || null,
+        it: item.inv_transform || null,
+        i: item.inv_file,
+      })
+      let src = null
+      if (false) {
+      // if (utilsCache.has(sdImageLookupKey)) {
+      // if ((src = utilsCache2.get(sdImageLookupKey))) {
+        // Re-use already built SD image data URL
+        // src = utilsCache.get(sdImageLookupKey)
+        return src
+      } else {
+        // Try building the SD image dataURL
+        const dc6FilePath = `d2/game_data/${window.work_mod}/version_${window.work_version}/global/items/${item.inv_file}.dc6`
+        const dc6 = await getFileWithCache(dc6FilePath)
+        if (dc6) {
+          const start = Date.now()
+          const imageDataUrl = b64PNGFromDC6(item, dc6)
+          const elapsed = Date.now() - start
+          // console.log(`Needed ${elapsed}ms to generate PNG: "${dc6FilePath}"`)
+          // utilsCache.set(sdImageLookupKey, imageDataUrl) // Save the SD image dataURL in cache
+          // utilsCache2.set(sdImageLookupKey, imageDataUrl) // Save the SD image dataURL in cache
+          return imageDataUrl
+        }
       }
     }
 

@@ -1,5 +1,7 @@
 # d2s-editor
 
+Notice: this project is fully opensource. Feel free to clone it, contribute, make your own version, suggest or submit improvements...
+
 [Example](http://d2s.dschu012.dev/)
 
 This is a basic Diablo 2 save editor for D2 and D2R. The parser uses the TXT data from the Diablo 2 MPQs so the editor could be repurposed for basic TXT mods. Some of the main features are:

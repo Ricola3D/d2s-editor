@@ -55,6 +55,8 @@
 </template>
 
 <script>
+import { cloneDeep } from 'lodash'
+
 const waypointsDefinition = [
   {
     key: 'act_i',
@@ -145,19 +147,19 @@ export default {
           key: 'normal',
           all: false,
           label: 'Normal',
-          acts: JSON.parse(JSON.stringify(waypointsDefinition)),
+          acts: cloneDeep(waypointsDefinition),
         },
         {
           key: 'nm',
           all: false,
           label: 'Nightmare',
-          acts: JSON.parse(JSON.stringify(waypointsDefinition)),
+          acts: cloneDeep(waypointsDefinition),
         },
         {
           key: 'hell',
           all: false,
           label: 'Hell',
-          acts: JSON.parse(JSON.stringify(waypointsDefinition)),
+          acts: cloneDeep(waypointsDefinition),
         },
       ],
     }
@@ -195,14 +197,14 @@ export default {
         difficulty.all = false
       }
 
-      const newWaypoints = JSON.parse(JSON.stringify(this.waypoints))
+      const newWaypoints = cloneDeep(this.waypoints)
       newWaypoints[difficulty.key][act.key][wp.key] = value
 
       // Emit the modification
       this.$emit('update:waypoints', newWaypoints)
     },
     updateAct(difficulty, act, value, emitNow = true) {
-      const newWaypoints = JSON.parse(JSON.stringify(this.waypoints))
+      const newWaypoints = cloneDeep(this.waypoints)
 
       for (const wp of act.waypoints) {
         newWaypoints[difficulty.key][act.key][wp.key] = value
@@ -212,7 +214,7 @@ export default {
       this.$emit('update:waypoints', newWaypoints)
     },
     updateDiff(difficulty, value) {
-      const newWaypoints = JSON.parse(JSON.stringify(this.waypoints))
+      const newWaypoints = cloneDeep(this.waypoints)
       for (const act of difficulty.acts) {
         // Update act checkbox
         act.all = value

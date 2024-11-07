@@ -205,6 +205,13 @@
                           </button>
                         </div>
                       </div>
+                      <button
+                        type="button"
+                        class="btn btn-danger"
+                        @click="test()"
+                      >
+                        Test
+                      </button>
                       <div class="input-group-append">
                         <span>&nbsp;</span>
                       </div>
@@ -639,9 +646,17 @@
                     id="d2r"
                     type="button"
                     class="btn btn-primary"
+                    @click="saveFile('remodded', 0x62)"
+                  >
+                    Save ReMoDDeD MP
+                  </button>
+                  <button
+                    id="d2r"
+                    type="button"
+                    class="btn btn-primary"
                     @click="saveFile('remodded', 0x63)"
                   >
-                    Save ReMoDDeD
+                    Save ReMoDDeD SP
                   </button>
                 </div>
               </form>
@@ -658,6 +673,8 @@
 </template>
 
 <script>
+import { cloneDeep } from 'lodash'
+
 import Item from './inventory/Item.vue'
 import ContextMenu from './ContextMenu.vue'
 import Stats from './Stats.vue'
@@ -737,7 +754,8 @@ export default {
     // A list of existing versions can be found here: https://github.com/WalterCouto/D2CE/blob/main/d2s_File_Format.md#versions.
     d2s.setConstantData('vanilla', 0x60, window.vanilla_constants_96) //1.10-1.14d
     d2s.setConstantData('vanilla', 0x61, window.vanilla_constants_96) //alpha? (D2R)
-    d2s.setConstantData('vanilla', 0x62, window.vanilla_constants_96) //2.4 (D2R)
+    d2s.setConstantData('vanilla', 0x62, window.vanilla_constants_98) //2.4 (D2R)
+    d2s.setConstantData('remodded', 0x62, window.remodded_constants_98) //2.4 (D2R)
     d2s.setConstantData('vanilla', 0x63, window.vanilla_constants_99) //2.5+ (D2R)
     d2s.setConstantData('remodded', 0x63, window.remodded_constants_99) //2.5+ (D2R)
 
@@ -883,10 +901,10 @@ export default {
       if (e.type == 'share') {
         this.shareItem(e.item)
       } else if (e.type == 'copy') {
-        this.clipboard = JSON.parse(JSON.stringify(e.item))
+        this.clipboard = cloneDeep(e.item)
       } else if (e.type == 'update') {
         d2s.enhanceItems([e.item], window.work_mod, window.work_version)
-        this.setPropertiesOnItem(e.item)
+        this.resolveInventoryImage(e.item)
       } else if (e.type == 'delete') {
         let idx = this.findIndex(this.save.items, e.item)
         if (idx != -1) {
@@ -990,11 +1008,11 @@ export default {
     // Method to parse an item byte array and preview it
     async readItem(bytes, mod, version) {
       this.preview = await d2s.readItem(bytes, mod, version)
-      await this.setPropertiesOnItem(this.preview)
+      await this.resolveInventoryImage(this.preview)
       utils.removeMaxDurabilityFromRunwords(this.preview)
     },
     // Callback to read the input-select value and fill the preview thumbnail
-    async previewItem(e) {
+    async previewItem(/* event */) {
       if (this.previewModel) {
         let bytes = utils.b64StringToArrayBuffer(this.previewModel.base64)
         this.readItem(bytes, this.previewModel.mod, this.previewModel.version)
@@ -1020,7 +1038,8 @@ export default {
         await this.readItem(bytes, obj.mod, obj.version)
         this.paste(this.preview)
       } catch (e) {
-        alert('Failed to load the item.')
+        alert('Failed to load the item, contact the Administrator.')
+        console.error(e)
       }
     },
     // Method to load a chosen item
@@ -1060,22 +1079,22 @@ export default {
     },
     findSafeLocation(item) {
       //inv = 1, cube = 4, stash = 5
-      for (var i = 0; i < this.grid.inv.w; i++) {
-        for (var j = 0; j < this.grid.inv.h; j++) {
+      for (let i = 0; i < this.grid.inv.w; i++) {
+        for (let j = 0; j < this.grid.inv.h; j++) {
           if (this.canPlaceItem(item, 1, i, j)) {
             return [0, 0, i, j, 1]
           }
         }
       }
-      for (var i = 0; i < this.grid.stash.w; i++) {
-        for (var j = 0; j < this.grid.stash.h; j++) {
+      for (let i = 0; i < this.grid.stash.w; i++) {
+        for (let j = 0; j < this.grid.stash.h; j++) {
           if (this.canPlaceItem(item, 5, i, j)) {
             return [0, 0, i, j, 5]
           }
         }
       }
-      for (var i = 0; i < this.grid.cube.w; i++) {
-        for (var j = 0; j < this.grid.cube.h; j++) {
+      for (let i = 0; i < this.grid.cube.w; i++) {
+        for (let j = 0; j < this.grid.cube.h; j++) {
           if (this.canPlaceItem(item, 4, i, j)) {
             return [0, 0, i, j, 4]
           }
@@ -1123,27 +1142,62 @@ export default {
       if (a[1] >= b[3] || b[1] >= a[3]) return false
       return true
     },
-    async setPropertiesOnSave() {
-      let that = this
-      for (const item of [
+    test() {
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/zod_rune.lowend.sprite"       )
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/gem/perfect_diamond2.lowend.sprite")
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/thul_rune.lowend.sprite"      )
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/hel_rune.lowend.sprite"       )
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ber_rune.lowend.sprite"       )
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ith_rune.lowend.sprite"       )
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/gem/perfect_diamond3.lowend.sprite")
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/gem/perfect_diamond5.lowend.sprite")
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/hel_rune.lowend.sprite"       )
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/lo_rune.lowend.sprite"        )
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/tir_rune.lowend.sprite"       )
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/gem/perfect_diamond6.lowend.sprite")
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/mal_rune.lowend.sprite"       )
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/gem/perfect_diamond1.lowend.sprite")
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ohm_rune.lowend.sprite"       )
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/el_rune.lowend.sprite"        )
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ort_rune.lowend.sprite"       )
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ko_rune.lowend.sprite"        )
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/gul_rune.lowend.sprite"       )
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/um_rune.lowend.sprite"        )
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ist_rune.lowend.sprite"       )
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/amn_rune.lowend.sprite"       )
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/lem_rune.lowend.sprite"       )
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/lum_rune.lowend.sprite"       )
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ral_rune.lowend.sprite"       )
+      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/cham_rune.lowend.sprite"      )
+    },
+    async resolveInventoryImages() {
+      const allItems = [
         ...this.save.items,
         ...this.save.merc_items,
         ...this.save.corpse_items,
         this.save.golem_item,
-      ]) {
-        await that.setPropertiesOnItem(item)
-      }
+      ]
+      const promises = allItems.map(async function (item) {
+        return this.resolveInventoryImage(item)
+      }, this)
+      return Promise.all(promises)
     },
-    async setPropertiesOnItem(item) {
+    async resolveInventoryImage(item) {
       if (!item) {
         return
       }
-      item.src = await utils.getInventoryImageSrc(item)
+      item.src = await utils.getInventoryImage(item)
+      if (!item.src) {
+        console.error("No src " + item.type_name + "/" + item.unique_name)
+      }
 
       for (let i = 0; i < item.socketed_items.length; i++) {
-        item.socketed_items[i].src = await utils.getInventoryImageSrc(
+        item.socketed_items[i].src = await utils.getInventoryImage(
           item.socketed_items[i]
         )
+        if (!item.socketed_items[i].src) {
+          console.error("No src " + item.type_name + "/" + item.unique_name)
+        }
       }
     },
     newChar(index) {
@@ -1157,7 +1211,8 @@ export default {
         // If failed, in a 2nd time try parsing it as a remodded 99 file
         this.readBuffer(event.target.result, mod, event.target.filename)
       } catch (e) {
-        alert('Failed to parse file.')
+        alert("Could not perform operation, check you selected the proper mod. More details in logs.")
+        console.error(e)
       }
     },
     readBuffer(bytes, mod, filename) {
@@ -1167,11 +1222,16 @@ export default {
       d2s.read(bytes, mod).then((response) => {
         console.log('Attributes: ' + JSON.stringify(response.attributes))
         that.save = response
+        window.work_version = that.save.header.version
         if (filename) {
+          // Force char name to be equal to file name
           that.save.header.name = filename.split('.')[0]
         }
-        that.setPropertiesOnSave()
-      })
+        that.resolveInventoryImages()
+      }).catch((e) => {
+        alert("Could not perform operation, check you selected the proper mod. More details in logs.")
+        console.error(e);
+      });
     },
     onFileChange(event) {
       let reader = new FileReader()
@@ -1313,7 +1373,10 @@ export default {
         link.download = that.save.header.name + '.d2s'
         link.click()
         link.remove()
-      })
+      }).catch((e) => {
+        alert("Could not perform operation, try removing items with deprecated properties. More details in logs.")
+        console.error(e);
+      });
     },
     async addItemsPackBases(categoryKey, categoryDisplayName) {
       let newItems = []
