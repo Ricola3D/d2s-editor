@@ -17515,7 +17515,7 @@ function enhancePlayerAttributes(char, mod, version, config) {
         return item.location_id === 1 && item.equipped_id !== 13 && item.equipped_id !== 14;
     });
     char.item_bonuses = [].concat
-        .apply([], items.map(function (item) { return _allAttributes(item, constants); }))
+        .apply([], items.map(function (item) { return _allAttributes(item /*, constants*/); }))
         .filter(function (attribute) { return attribute != null; });
     char.item_bonuses = _groupAttributes(char.item_bonuses, constants);
     char.displayed_item_bonuses = _enhanceAttributeDescription(char.item_bonuses, constants, char.attributes, config);
@@ -17793,10 +17793,10 @@ function enhanceItem(item, mod, version, attributes, config, parent) {
         // Just the runeword attributes
         item.displayed_runeword_attributes = _enhanceAttributeDescription(item.runeword_attributes, constants, attributes, config);
         // Just the socketed attributes
-        item.socketed_attributes = _groupAttributes(_socketedAttributes(item, constants), constants);
+        item.socketed_attributes = _groupAttributes(_socketedAttributes(item /*, constants*/), constants);
         item.displayed_socketed_attributes = _enhanceAttributeDescription(item.socketed_attributes, constants, attributes, config);
         // All attributes together
-        item.combined_magic_attributes = _groupAttributes(_allAttributes(item, constants), constants);
+        item.combined_magic_attributes = _groupAttributes(_allAttributes(item /*, constants*/), constants);
         item.displayed_combined_magic_attributes = _enhanceAttributeDescription(item.combined_magic_attributes, constants, attributes, config);
     }
 }
@@ -17977,7 +17977,7 @@ function _compactAttributes(mods, constants) {
                 }
             }
             var id = _itemStatCostFromStat(stat, constants);
-            var itemStatDef = constants.magical_properties[id];
+            // const itemStatDef = constants.magical_properties[id];
             if (propertyDef.np)
                 i += propertyDef.np;
             var v = [mod.min, mod.max];
@@ -18244,7 +18244,7 @@ function _itemStatCostFromStat(stat, constants) {
 function _classFromCode(code, constants) {
     return constants.classes.filter(function (e) { return e.c === code; })[0];
 }
-function _socketedAttributes(item, constants) {
+function _socketedAttributes(item /*, constants: types.IConstantData*/) {
     var socketed_attributes = [];
     if (item.socketed_items) {
         for (var _i = 0, _a = item.socketed_items; _i < _a.length; _i++) {
@@ -18256,8 +18256,8 @@ function _socketedAttributes(item, constants) {
     }
     return socketed_attributes;
 }
-function _allAttributes(item, constants) {
-    var socketed_attributes = _socketedAttributes(item, constants);
+function _allAttributes(item /*, constants: types.IConstantData*/) {
+    var socketed_attributes = _socketedAttributes(item /*, constants*/);
     var magic_attributes = item.magic_attributes || [];
     //const set_attributes = item.set_attributes || [];
     var runeword_attributes = item.runeword_attributes || [];
@@ -18453,11 +18453,11 @@ function readAttributes(char, reader, mod) {
         }
         throw new Error("Attribute header 'gf' not found at position ".concat(reader.offset - 2 * 8));
     }
-    var bitoffset = 0;
+    //let bitOffset = 0;
     var id = reader.ReadUInt16(9);
     //read till 0x1ff end of attributes is found
     while (id != 0x1ff) {
-        bitoffset += 9;
+        // bitOffset += 9;
         var field = constants.magical_properties[id];
         if (field === undefined) {
             throw new Error("Invalid attribute id: ".concat(id));
@@ -18472,7 +18472,7 @@ function readAttributes(char, reader, mod) {
             char.attributes[field.s] >>>= field.cVS;
         }
         // Next attribute
-        bitoffset += size;
+        // bitOffset += size;
         id = reader.ReadUInt16(9);
     }
     reader.Align();
@@ -18613,7 +18613,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.writeItem = exports.readItem = exports.write = exports.read = exports.writer = exports.reader = void 0;
+exports.writeItem = exports.readItem = exports.write = exports.read = exports.reader = void 0;
 var header_1 = __webpack_require__(/*! ./header */ "./src/d2/header.ts");
 var attributes_1 = __webpack_require__(/*! ./attributes */ "./src/d2/attributes.ts");
 var bitreader_1 = __webpack_require__(/*! ../binary/bitreader */ "./src/binary/bitreader.ts");
@@ -18696,10 +18696,6 @@ function readItem(buffer, mod, version, userConfig) {
     });
 }
 exports.readItem = readItem;
-function writer(buffer) {
-    return new bitwriter_1.BitWriter();
-}
-exports.writer = writer;
 function write(data, mod, version, userConfig) {
     return __awaiter(this, void 0, void 0, function () {
         var config, writer, _a, _b, constants, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r;
@@ -20054,7 +20050,7 @@ function readItem(reader, mod, version, config) {
                     }
                     constants = (0, constants_1.getConstantData)(mod, version);
                     item = newItem();
-                    _readSimpleBits(item, reader, version, constants, config);
+                    _readSimpleBits(item, reader, version, constants /*, config*/);
                     if (!item.simple_item) {
                         item.id = reader.ReadUInt32(32);
                         item.level = reader.ReadUInt8(7);
@@ -20363,7 +20359,7 @@ function writeItem(item, mod, version, config) {
     });
 }
 exports.writeItem = writeItem;
-function _readSimpleBits(item, reader, version, constants, config) {
+function _readSimpleBits(item, reader, version, constants /*, config: types.IConfig*/) {
     var _a;
     //init so we do not have npe's
     item._unknown_data = {};
@@ -20772,7 +20768,7 @@ var SkillOffset = {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Quality = exports.ItemType = exports.EItemQuality = exports.EStashType = void 0;
+exports.EGemPosition = exports.Quality = exports.ItemType = exports.EItemQuality = exports.EStashType = void 0;
 var EStashType;
 (function (EStashType) {
     EStashType[EStashType["shared"] = 0] = "shared";
@@ -20802,6 +20798,12 @@ var Quality;
     Quality[Quality["Unique"] = 7] = "Unique";
     Quality[Quality["Crafted"] = 8] = "Crafted";
 })(Quality || (exports.Quality = Quality = {}));
+var EGemPosition;
+(function (EGemPosition) {
+    EGemPosition["Weapon"] = "weapon";
+    EGemPosition["Helm"] = "helm";
+    EGemPosition["Shield"] = "shield";
+})(EGemPosition || (exports.EGemPosition = EGemPosition = {}));
 
 
 /***/ }),
@@ -20863,7 +20865,7 @@ function readHeader(char, reader, constants) {
     char.header.right_skill = (_b = constants.skills[reader.ReadUInt32()]) === null || _b === void 0 ? void 0 : _b.s; //0x007c
     char.header.left_swap_skill = (_c = constants.skills[reader.ReadUInt32()]) === null || _c === void 0 ? void 0 : _c.s; //0x0080
     char.header.right_swap_skill = (_d = constants.skills[reader.ReadUInt32()]) === null || _d === void 0 ? void 0 : _d.s; //0x0084
-    char.header.menu_appearance = _readCharMenuAppearance(reader.ReadArray(32), constants); //0x0088 [char menu appearance]
+    char.header.menu_appearance = _readCharMenuAppearance(reader.ReadArray(32) /*, constants*/); //0x0088 [char menu appearance]
     char.header.difficulty = _readDifficulty(reader.ReadArray(3)); //0x00a8
     char.header.map_id = reader.ReadUInt32(); //0x00ab
     reader.SkipBytes(2); //0x00af [unk = 0x0, 0x0]
@@ -20915,7 +20917,7 @@ function writeHeader(char, writer, constants) {
         .WriteUInt32(_skillId(char.header.right_skill, constants)) //0x007c
         .WriteUInt32(_skillId(char.header.left_swap_skill, constants)) //0x0080
         .WriteUInt32(_skillId(char.header.right_swap_skill, constants)) //0x0084
-        .WriteArray(_writeCharMenuAppearance(char.header.menu_appearance, constants)) //0x0088 [char menu appearance]
+        .WriteArray(_writeCharMenuAppearance(char.header.menu_appearance /*, constants*/)) //0x0088 [char menu appearance]
         .WriteArray(_writeDifficulty(char.header.difficulty)) //0x00a8
         .WriteUInt32(char.header.map_id) //0x00ab
         .WriteArray(new Uint8Array([0x00, 0x00])) //0x00af [unk = 0x0, 0x0]
@@ -20979,7 +20981,7 @@ function _writeStatus(status) {
     arr[0] |= status.ladder ? 1 << 6 : 0;
     return arr;
 }
-function _readCharMenuAppearance(bytes, constants) {
+function _readCharMenuAppearance(bytes /*, constants: types.IConstantData*/) {
     var appearance = {};
     var reader = new bitreader_1.BitReader(bytes);
     var graphics = reader.ReadArray(16);
@@ -21002,7 +21004,7 @@ function _readCharMenuAppearance(bytes, constants) {
     appearance.special8 = { graphic: graphics[15], tint: tints[15] };
     return appearance;
 }
-function _writeCharMenuAppearance(appearance, constants) {
+function _writeCharMenuAppearance(appearance /*, constants: types.IConstantData*/) {
     var writer = new bitwriter_1.BitWriter(32);
     writer.length = 32 * 8;
     var graphics = [];
