@@ -205,13 +205,13 @@
                           </button>
                         </div>
                       </div>
-                      <button
+                      <!-- <button
                         type="button"
                         class="btn btn-danger"
                         @click="test()"
                       >
                         Test
-                      </button>
+                      </button> -->
                       <div class="input-group-append">
                         <span>&nbsp;</span>
                       </div>
@@ -726,25 +726,33 @@ export default {
   },
   computed: {
     equipped() {
-      return this.save.items.filter((item) => item.location_id === 1)
+      return this.save && this.save.items
+        ? this.save.items.filter((item) => item.location_id === 1)
+        : []
     },
     inventory() {
-      return this.save.items.filter(
-        (item) => item.location_id === 0 && item.alt_position_id === 1
-      )
+      return this.save && this.save.items
+        ? this.save.items.filter(
+            (item) => item.location_id === 0 && item.alt_position_id === 1
+          )
+        : []
     },
     stash() {
-      return this.save.items.filter(
-        (item) => item.location_id === 0 && item.alt_position_id === 5
-      )
+      return this.save && this.save.items
+        ? this.save.items.filter(
+            (item) => item.location_id === 0 && item.alt_position_id === 5
+          )
+        : []
     },
     cube() {
-      return this.save.items.filter(
-        (item) => item.location_id === 0 && item.alt_position_id === 4
-      )
+      return this.save && this.save.items
+        ? this.save.items.filter(
+            (item) => item.location_id === 0 && item.alt_position_id === 4
+          )
+        : []
     },
     mercenary() {
-      return this.save.merc_items || []
+      return this.save && this.save.merc_items ? this.save.merc_items : []
     },
   },
   async mounted() {
@@ -903,7 +911,12 @@ export default {
       } else if (e.type == 'copy') {
         this.clipboard = cloneDeep(e.item)
       } else if (e.type == 'update') {
-        d2s.enhanceItems([e.item], window.work_mod, window.work_version)
+        d2s.enhanceItems(
+          [e.item],
+          window.work_mod,
+          window.work_version,
+          this.save ? this.save.attributes : null
+        )
         this.resolveInventoryImage(e.item)
       } else if (e.type == 'delete') {
         let idx = this.findIndex(this.save.items, e.item)
@@ -1142,34 +1155,34 @@ export default {
       if (a[1] >= b[3] || b[1] >= a[3]) return false
       return true
     },
-    test() {
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/zod_rune.lowend.sprite"       )
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/gem/perfect_diamond2.lowend.sprite")
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/thul_rune.lowend.sprite"      )
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/hel_rune.lowend.sprite"       )
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ber_rune.lowend.sprite"       )
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ith_rune.lowend.sprite"       )
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/gem/perfect_diamond3.lowend.sprite")
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/gem/perfect_diamond5.lowend.sprite")
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/hel_rune.lowend.sprite"       )
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/lo_rune.lowend.sprite"        )
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/tir_rune.lowend.sprite"       )
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/gem/perfect_diamond6.lowend.sprite")
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/mal_rune.lowend.sprite"       )
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/gem/perfect_diamond1.lowend.sprite")
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ohm_rune.lowend.sprite"       )
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/el_rune.lowend.sprite"        )
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ort_rune.lowend.sprite"       )
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ko_rune.lowend.sprite"        )
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/gul_rune.lowend.sprite"       )
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/um_rune.lowend.sprite"        )
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ist_rune.lowend.sprite"       )
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/amn_rune.lowend.sprite"       )
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/lem_rune.lowend.sprite"       )
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/lum_rune.lowend.sprite"       )
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ral_rune.lowend.sprite"       )
-      fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/cham_rune.lowend.sprite"      )
-    },
+    // test() {
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/zod_rune.lowend.sprite"       )
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/gem/perfect_diamond2.lowend.sprite")
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/thul_rune.lowend.sprite"      )
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/hel_rune.lowend.sprite"       )
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ber_rune.lowend.sprite"       )
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ith_rune.lowend.sprite"       )
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/gem/perfect_diamond3.lowend.sprite")
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/gem/perfect_diamond5.lowend.sprite")
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/hel_rune.lowend.sprite"       )
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/lo_rune.lowend.sprite"        )
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/tir_rune.lowend.sprite"       )
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/gem/perfect_diamond6.lowend.sprite")
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/mal_rune.lowend.sprite"       )
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/gem/perfect_diamond1.lowend.sprite")
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ohm_rune.lowend.sprite"       )
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/el_rune.lowend.sprite"        )
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ort_rune.lowend.sprite"       )
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ko_rune.lowend.sprite"        )
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/gul_rune.lowend.sprite"       )
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/um_rune.lowend.sprite"        )
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ist_rune.lowend.sprite"       )
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/amn_rune.lowend.sprite"       )
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/lem_rune.lowend.sprite"       )
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/lum_rune.lowend.sprite"       )
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ral_rune.lowend.sprite"       )
+    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/cham_rune.lowend.sprite"      )
+    // },
     async resolveInventoryImages() {
       const allItems = [
         ...this.save.items,
@@ -1222,7 +1235,12 @@ export default {
       d2s.read(bytes, mod).then((response) => {
         console.log('Attributes: ' + JSON.stringify(response.attributes))
         that.save = response
-        window.work_version = that.save.header.version
+        if (
+          `${window.work_mod}_constants_${that.save.header.version}` in window
+        ) {
+          window.work_version = that.save.header.version
+        }
+        
         if (filename) {
           // Force char name to be equal to file name
           that.save.header.name = filename.split('.')[0]
@@ -1409,7 +1427,12 @@ export default {
           newItems.push(newItem)
         }
       }
-      d2s.enhanceItems(newItems, window.work_mod, window.work_version, this.save.attributes)
+      d2s.enhanceItems(
+        newItems,
+        window.work_mod,
+        window.work_version,
+        this.save ? this.save.attributes : null
+      )
       for (const item of newItems) {
         let bytes = await d2s.writeItem(
           item,
