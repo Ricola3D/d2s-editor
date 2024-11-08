@@ -53,6 +53,18 @@
             </div>
           </template>
 
+          <template v-if="isStackable(item)">
+            <label>Quantity</label>
+            <input
+              v-model.number="item.quantity"
+              class="edit-box"
+              type="number"
+              min="1"
+              max="250"
+              @input="onEvent('update')"
+            />
+          </template>
+
           <!-- Defense -->
           <template v-if="item.defense_rating">
             <label>&#187;&#187; Defense</label>
@@ -536,6 +548,11 @@ export default {
     // onMove() {
     //   this.$emit('item-event', { item: this.item, location: this.location, type: 'move' });
     // },
+    isStackable(item) {
+      const constants =
+        window[`${window.work_mod}_constants_${window.work_version}`]
+      return constants.stackables[item.type]
+    },
     countSkinsChoices() {
       const constants =
         window[`${window.work_mod}_constants_${window.work_version}`]

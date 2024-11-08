@@ -1848,7 +1848,7 @@ export let remodded_constants_98 = {
         {
             "id": 473,
             // "s": "Bolt Nova"
-            "s": "Activate Weight System"
+            "s": "Activate Weight System 1"
         },
         null,
         {
@@ -2349,11 +2349,11 @@ export let remodded_constants_98 = {
         null,
         {
             "id": 694,
-            "s": "Unknown Weapon Skill 694"
+            "s": "Activate Weight System 2"
         },
         {
             "id": 695,
-            "s": "Unknown Weapon Skill 695"
+            "s": "Activate Weight System 3"
         }
     ],
     "rare_names": [
