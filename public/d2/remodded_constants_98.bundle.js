@@ -12969,6 +12969,7 @@ export let remodded_constants_98 = {
         {
             "id": 292,
             "s": "RB_Low",
+            // "sS": 1,
             "cVS": 1024,
             // "sB": 32,
             // "sA": 49152,
@@ -12983,6 +12984,7 @@ export let remodded_constants_98 = {
         {
             "id": 293,
             "s": "RB_Mid",
+            // "sS": 1,
             "cVS": 1024,
             // "sB": 32,
             // "sA": 49152,
@@ -12997,6 +12999,7 @@ export let remodded_constants_98 = {
         {
             "id": 294,
             "s": "RB_High",
+            // "sS": 1,
             "cVS": 1024,
             // "sB": 32,
             // "sA": 49152,
@@ -14729,6 +14732,21 @@ export let remodded_constants_98 = {
             "dV": 2,
             "dP": "Runic Forge Tier:",
             "dN": "Runic Forge Tier:"
+        },
+        {
+            "id": 476,
+            "s": "RB_Ultra",
+            "sS": 1,
+            "cVS": 1024,
+            "sB": 32,
+            "sA": 49152,
+            // "sB": 20,
+            // "sA": 48575,
+            "so": 14,
+            "dF": 3,
+            "dV": 2,
+            "dP": "Rune Points (Ultra):",
+            "dN": "Rune Points (Ultra):"
         }
     ],
     "runewords": [

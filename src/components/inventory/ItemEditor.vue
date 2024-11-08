@@ -28,6 +28,15 @@
 
       <ul className="ItemOptions">
         <div class="settings">
+          <!-- Id -->
+          <label>Id</label>
+          <input
+              v-model.number="item.id"
+              class="edit-box"
+              type="number"
+              min="0"
+              @input="onEvent('update')"
+            />
           <!-- Base -->
           <template v-if="!item.is_ear">
             <label>Base</label>
