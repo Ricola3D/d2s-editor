@@ -14709,7 +14709,12 @@ export let remodded_constants_98 = {
             "sA": 0,
             "sP": 16
         },
-        null,
+        {
+            "id": 472,
+            "s": "item_cannot_have_sockets", // Added after cubing a set item with 5 gold bars
+            "sB": 11,
+            "sA": 99,
+        },
         null,
         {
             "id": 474,
