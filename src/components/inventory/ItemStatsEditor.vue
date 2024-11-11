@@ -142,8 +142,9 @@ export default {
         window[`${window.work_mod}_constants_${window.work_version}`]
           .magical_properties[statId]
       let add = stat.sA ? stat.sA : 0
-      let maxValue = stat.sS ? utils.shift(1, stat.sB - 1) - 1 - add : utils.shift(1, stat.sB) - 1 - add;
-      return maxValue
+      return utils.shift(1, stat.sB) - 1 - add
+      // let maxValue = stat.sS ? utils.shift(1, stat.sB - 1) - 1 - add : utils.shift(1, stat.sB) - 1 - add;
+      // return maxValue
     },
     getMinValue(statId) {
       //for the stat to be present need value > 0
@@ -151,8 +152,9 @@ export default {
         window[`${window.work_mod}_constants_${window.work_version}`]
           .magical_properties[statId]
       let add = stat.sA ? stat.sA : 0
-      let minValue = stat.sS ? -1 * utils.shift(1, stat.sB - 1) - add : -add;
-      return minValue
+      return -add
+      // let minValue = stat.sS ? -1 * utils.shift(1, stat.sB - 1) - add : -add;
+      // return minValue
     },
     changeStatValue(statId, statValues, valueIdx) {
       let maxValue = this.getMaxValue(statId),
