@@ -17238,31 +17238,31 @@ export let remodded_constants_99 = {
             "id": 202,
             "index": "Bulwark of Defiance",
             "n": "Bulwark of Defiance",
-            "hdi": "armor/shield/aegis"
+            "hdi": "armor/shield/tower_shield"
         },
         {
             "id": 203,
             "index": "Marauder's Mark",
             "n": "Marauder's Mark",
-            "hdi": "weapon/axe/berserker_axe"
+            "hdi": "weapon/axe/war_axe"
         },
         {
             "id": 204,
             "index": "Girdle of Resilience",
             "n": "Girdle of Resilience",
-            "hdi": "armor/belt/colossus_girdle"
+            "hdi": "armor/belt/girdle_h"
         },
         {
             "id": 205,
             "index": "Crippling Conch",
             "n": "Crippling Conch",
-            "hdi": "armor/helmet/giant_conch"
+            "hdi": "armor/helmet/full_helm"
         },
         {
             "id": 206,
             "index": "Sub-zero Sash",
             "n": "Sub-zero Sash",
-            "hdi": "armor/belt/spiderweb_sash"
+            "hdi": "armor/belt/sash"
         },
         {
             "id": 207,
@@ -60619,6 +60619,60 @@ export let remodded_constants_99 = {
                 ]
             ],
             "hdi": "misc/rune/ab_rune"
+        },
+        "r36": {
+            "nc": "r36",
+            "exc": "r36",
+            "elc": "r36",
+            "iq": 1,
+            "n": "Er Rune",
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invrZod",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [],
+            "eq1n": "Socket Filler",
+            "eq2n": "Potion",
+            "c": [
+                "Rune",
+                "Socket Filler",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "m": [
+                [
+                    {
+                        "code": "r36",
+                        "type": "weapon",
+                        "m": "allskills",
+                        "min": 1,
+                        "max": 1
+                    }
+                ],
+                [
+                    {
+                        "code": "r36",
+                        "type": "helm",
+                        "m": "allskills",
+                        "min": 1,
+                        "max": 1
+                    }
+                ],
+                [
+                    {
+                        "code": "r36",
+                        "type": "shield",
+                        "m": "allskills",
+                        "min": 1,
+                        "max": 1
+                    }
+                ]
+            ],
+            "hdi": "misc/rune/er_rune"
         },
         "L00": {
             "nc": "L00",

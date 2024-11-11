@@ -365,7 +365,7 @@ input:invalid {
 
 div.settings {
   display: grid;
-  grid-template-columns: max-content max-content;
+  grid-template-columns: max-content minmax(200px, max-content);
   grid-gap: 5px;
 }
 
