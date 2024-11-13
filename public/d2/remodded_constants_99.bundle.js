@@ -1881,7 +1881,10 @@ export let remodded_constants_99 = {
             "s": "Shiver Armor"
         },
         null,
-        null,
+        {
+            "id": 488,
+            "s": "Fire Wall"
+        },
         {
             "id": 489,
             "s": "Cyclone Armor"
