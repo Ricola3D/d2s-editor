@@ -536,7 +536,6 @@ export default {
     },
     unsocket () {
       this.item.nr_of_items_in_sockets = 0
-      this.item.socketed_items = []
       this.$emit('item-event', { item: this.item, type: 'update' })
     },
     onUpdate(variable, value) {

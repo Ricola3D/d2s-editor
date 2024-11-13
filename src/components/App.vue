@@ -1205,12 +1205,15 @@ export default {
       }
 
       for (let i = 0; i < item.socketed_items.length; i++) {
-        item.socketed_items[i].src = await utils.getInventoryImage(
+        utils.getInventoryImage(
           item.socketed_items[i]
-        )
-        if (!item.socketed_items[i].src) {
-          console.error("No src " + item.type_name + "/" + item.unique_name)
-        }
+        ).then((img) => {
+          if (!img) {
+            console.error("No src " + item.type_name + "/" + item.unique_name)
+          } else if (item.socketed_items[i]) { // Recheck cause it's async, and user may have used unsocket all button in the meanwhile
+            item.socketed_items[i].src = img
+          }
+        })
       }
     },
     newChar(index) {

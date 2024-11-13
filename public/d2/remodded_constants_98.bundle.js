@@ -47974,8 +47974,8 @@ export let remodded_constants_98 = {
                         "code": "r30",
                         "type": "weapon",
                         "m": "crush",
-                        "min": 20,
-                        "max": 20
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [

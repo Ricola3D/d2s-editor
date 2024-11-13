@@ -17568,17 +17568,6 @@ function enhanceItem(item, mod, version, attributes, config, parent) {
     }
     // Enforce level is between 1 and 99
     item.level = boundValue(item.level, 1, 99);
-    // Ensure coherence of other attributes with quality
-    item.given_runeword = item.quality <= types_1.Quality.Superior && item.runeword_id ? 1 : 0;
-    if (item.given_runeword) {
-        item.runeword_name = constants.runewords[item.runeword_id] ? constants.runewords[item.runeword_id].n : "";
-    }
-    else {
-        item.given_runeword = 0;
-        item.runeword_id = 0;
-        item.runeword_name = "";
-        item.runeword_attributes = [];
-    }
     if (item.quality !== types_1.Quality.Magic) {
         item.magic_prefix = 0;
         item.magic_suffix = 0;
@@ -17702,6 +17691,17 @@ function enhanceItem(item, mod, version, attributes, config, parent) {
         // Enforce nr_of_items_in_sockets & socketed_items inferior or equal to total_nr_of_sockets
         item.nr_of_items_in_sockets = boundValue(item.nr_of_items_in_sockets, 0, item.total_nr_of_sockets);
         item.socketed_items = (item.socketed_items || []).slice(0, item.nr_of_items_in_sockets);
+        // Ensure coherence of other attributes with quality
+        item.given_runeword = item.quality <= types_1.Quality.Superior && item.nr_of_items_in_sockets && item.runeword_id ? 1 : 0;
+        if (item.given_runeword) {
+            item.runeword_name = constants.runewords[item.runeword_id] ? constants.runewords[item.runeword_id].n : "";
+        }
+        else {
+            item.given_runeword = 0;
+            item.runeword_id = 0;
+            item.runeword_name = "";
+            item.runeword_attributes = [];
+        }
         // Enforce personalization validity, and coherence between personalized_name & personalized
         if (item.personalized_name && item.personalized_name.length) {
             // Check it is valid
