@@ -53,7 +53,7 @@
             </div>
           </template>
 
-          <template v-if="isStackable(item)">
+          <template v-if="isStackable()">
             <label>Quantity</label>
             <input
               v-model.number="item.quantity"
@@ -378,6 +378,13 @@
         </div>
       </div>
       <div v-if="item.socketed_items" class="item-socketed-items">
+        <button
+            type="button"
+            class="btn btn-danger"
+            @click="unsocket()"
+          >
+            Unsocket All
+          </button>
         <div v-for="(socketed_item, idx) in item.socketed_items">
           <ItemEditor
             :id="id + 'Socketed' + idx"
@@ -527,6 +534,11 @@ export default {
         .reverse()
         .join('')
     },
+    unsocket () {
+      this.item.nr_of_items_in_sockets = 0
+      this.item.socketed_items = []
+      this.$emit('item-event', { item: this.item, type: 'update' })
+    },
     onUpdate(variable, value) {
       const path = variable.split('.')
       path.shift() // Should be "item"
@@ -548,10 +560,10 @@ export default {
     // onMove() {
     //   this.$emit('item-event', { item: this.item, location: this.location, type: 'move' });
     // },
-    isStackable(item) {
+    isStackable() {
       const constants =
         window[`${window.work_mod}_constants_${window.work_version}`]
-      return constants.stackables[item.type]
+      return constants.stackables[this.item.type]
     },
     countSkinsChoices() {
       const constants =
