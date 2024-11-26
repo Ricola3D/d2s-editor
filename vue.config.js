@@ -12,6 +12,9 @@ module.exports = {
     },
   },
   configureWebpack: {
+    entry: {
+      app: './src/main.mjs',
+    },
     devServer: {
       compress: true, // Enables gzip compression for everything served
       // historyApiFallback: false, // Error URL doesn't redirect to index app page, creating errors if globals from index.html are missing

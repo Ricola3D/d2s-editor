@@ -32,13 +32,37 @@ const colors = {
   bwht: 20,
 }
 
-const colormaps = {
-  1: 'd2/game_data/remodded/version_99/global/items/Palette/grey.dat',
-  2: 'd2/game_data/remodded/version_99/global/items/Palette/grey2.dat',
-  5: 'd2/game_data/remodded/version_99/global/items/Palette/greybrown.dat',
-  6: 'd2/game_data/remodded/version_99/global/items/Palette/invgrey.dat',
-  7: 'd2/game_data/remodded/version_99/global/items/Palette/invgrey2.dat',
-  8: 'd2/game_data/remodded/version_99/global/items/Palette/invgreybrown.dat',
+const a1PalettePath =
+  'd2/game_data/vanilla/version_99/global/palette/ACT1/pal.dat'
+
+const colormapPaths = {
+  1: 'd2/game_data/vanilla/version_99/global/items/Palette/grey.dat',
+  2: 'd2/game_data/vanilla/version_99/global/items/Palette/grey2.dat',
+  5: 'd2/game_data/vanilla/version_99/global/items/Palette/greybrown.dat',
+  6: 'd2/game_data/vanilla/version_99/global/items/Palette/invgrey.dat',
+  7: 'd2/game_data/vanilla/version_99/global/items/Palette/invgrey2.dat',
+  8: 'd2/game_data/vanilla/version_99/global/items/Palette/invgreybrown.dat',
+}
+
+function fillPalettes(a1PaletteBuffer, colorMapBuffers) {
+  window.palettes = {}
+  window.palettes['ACT1'] = []
+
+  for (let i = 0; i < 256; i += 1) {
+    window.palettes['ACT1'].push([
+      a1PaletteBuffer[i * 3 + 2],
+      a1PaletteBuffer[i * 3 + 1],
+      a1PaletteBuffer[i * 3],
+    ])
+  }
+  for (const [index, colorMapBuffer] of Object.entries(colorMapBuffers)) {
+    window.palettes[index] = []
+    for (let i = 0; i < Object.keys(colors).length; i += 1) {
+      window.palettes[index].push(
+        colorMapBuffer.slice(0 + i * 256, 256 + i * 256)
+      )
+    }
+  }
 }
 
 // "r-g-b" string -> paletteIdx
@@ -145,7 +169,7 @@ async function getFileWithCache(path) {
   return bytes
 }
 
-function b64PNGFromSprite(item, sprite) {
+function CanvasFromSprite(item, sprite) {
   // Sprite image size is 98x98 per inventory case, lowend is 49x49 per inventory case
 
   // DXT Header
@@ -199,8 +223,8 @@ function b64PNGFromSprite(item, sprite) {
         // Apply transform color if necessary
         rgbColor = getRgbColor(
           colorIdx,
-          item.transform_color,
-          item.inv_transform
+          item ? item.transform_color : null,
+          item ? item.inv_transform : null
         )
 
         const offset = (y * width + x) * 4
@@ -298,8 +322,8 @@ function b64PNGFromSprite(item, sprite) {
           // Apply transform color if necessary
           rgbColor = getRgbColor(
             colorIdx,
-            item.transform_color,
-            item.inv_transform
+            item ? item.transform_color : null,
+            item ? item.inv_transform : null
           )
 
           const x = 4 * bcw + (i % 4)
@@ -328,18 +352,26 @@ function b64PNGFromSprite(item, sprite) {
   finalCanvas.width = Math.floor(scaleFactor * width)
   finalContext.scale(scaleFactor, scaleFactor)
   finalContext.drawImage(context.canvas, 0, 0)
+  canvas.remove()
+
+  return finalCanvas
+}
+
+function b64PNGFromSprite(item, sprite) {
+  const finalCanvas = CanvasFromSprite(item, sprite)
+
+  if (!finalCanvas) return null
 
   // output image
   //var img = new Image();
   //let src = canvas.toDataURL('image/png');
   let src = finalCanvas.toDataURL('image/webp', 0.5)
   finalCanvas.remove()
-  canvas.remove()
 
   return src
 }
 
-function b64PNGFromDC6(item, dc6) {
+function CanvasFromDC6(item, dc6) {
   // DC6 format:
   // - https://d2mods.info/forum/viewtopic.php?t=724#p148076
   // - https://gist.github.com/MarkKoz/874052801d7eddd1bb4a9b69cd1e9ac8
@@ -391,8 +423,8 @@ function b64PNGFromDC6(item, dc6) {
       }
       const rgbColor = getRgbColor(
         colorIdx,
-        item.transform_color,
-        item.inv_transform
+        item ? item.transform_color : null,
+        item ? item.inv_transform : null
       )
 
       const offset = (y * width + x) * 4
@@ -414,19 +446,28 @@ function b64PNGFromDC6(item, dc6) {
   finalContext.scale(scaleFactor, scaleFactor)
   finalContext.drawImage(context.canvas, 0, 0)
 
+  canvas.remove()
+
+  return finalCanvas
+}
+
+function b64PNGFromDC6(item, dc6) {
+  const finalCanvas = CanvasFromDC6(item, dc6)
+
   // output image
   //var img = new Image();
   //let src = canvas.toDataURL('image/png');
   let src = finalCanvas.toDataURL('image/webp', 0.5)
   finalCanvas.remove()
-  canvas.remove()
 
   return src
 }
 
 export default {
   colors: colors,
-  colormaps: colormaps,
+  a1PalettePath,
+  colormapPaths,
+  fillPalettes,
   b64StringToArrayBuffer(base64) {
     var bin = window.atob(base64)
     var len = bin.length
@@ -467,6 +508,8 @@ export default {
       constants.other_items[item.type]
     )
   },
+  CanvasFromSprite,
+  CanvasFromDC6,
   async getInventoryImage(item) {
     if (item.hd_inv_file) {
       const hdImageLookupKey = JSON.stringify({
@@ -474,25 +517,27 @@ export default {
         it: item.inv_transform || null,
         hdi: item.hd_inv_file,
       })
-      let src = null
-      if (false) {
-      // if (utilsCache.has(hdImageLookupKey)) {
-      // if ((src = utilsCache2.get(hdImageLookupKey))) {
-        // Re-use already built HD image data URL
-        // src = utilsCache.get(hdImageLookupKey)
-        return src
+
+      if (!item.transform_color || !item.inv_color) {
+        // Just return the URL
+        return `d2/game_data/${window.work_mod}/version_${window.work_version}/hd/global/ui/items/${item.hd_inv_file}.lowend.png` // lowend is enough and lighter
       } else {
-        // Try building the HD image dataURL
-        const spriteFilePath = `d2/game_data/${window.work_mod}/version_${window.work_version}/hd/global/ui/items/${item.hd_inv_file}.lowend.sprite` // lowend is enough and lighter
-        const sprite = await getFileWithCache(spriteFilePath)
-        if (sprite) {
-          const start = Date.now()
-          const imageDataUrl = b64PNGFromSprite(item, sprite)
-          const elapsed = Date.now() - start
-          // console.log(`Needed ${elapsed}ms to generate PNG: "${spriteFilePath}"`)
-          // utilsCache.set(hdImageLookupKey, imageDataUrl) // Save the HD image dataURL in cache
-          // utilsCache2.set(hdImageLookupKey, imageDataUrl) // Save the HD image dataURL in cache
-          return imageDataUrl
+        // Color-transformation: get b64 image from cache, generate it if not found
+        if (utilsCache.has(hdImageLookupKey)) {
+          // Re-use already built HD image data URL
+          return utilsCache.get(hdImageLookupKey)
+        } else {
+          // Try building the HD image dataURL
+          const spriteFilePath = `d2/game_data/${window.work_mod}/version_${window.work_version}/hd/global/ui/items/${item.hd_inv_file}.lowend.sprite` // lowend is enough and lighter
+          const sprite = await getFileWithCache(spriteFilePath)
+          if (sprite) {
+            // const start = Date.now()
+            const imageDataUrl = b64PNGFromSprite(item, sprite)
+            // const elapsed = Date.now() - start
+            // console.log(`Needed ${elapsed}ms to generate PNG: "${spriteFilePath}"`)
+            utilsCache.set(hdImageLookupKey, imageDataUrl) // Save the HD image dataURL in cache
+            return imageDataUrl
+          }
         }
       }
     }
@@ -503,25 +548,27 @@ export default {
         it: item.inv_transform || null,
         i: item.inv_file,
       })
-      let src = null
-      if (false) {
-      // if (utilsCache.has(sdImageLookupKey)) {
-      // if ((src = utilsCache2.get(sdImageLookupKey))) {
-        // Re-use already built SD image data URL
-        // src = utilsCache.get(sdImageLookupKey)
-        return src
+
+      if (!item.transform_color || !item.inv_color) {
+        // Just return the URL
+        return `d2/game_data/${window.work_mod}/version_${window.work_version}/global/items/${item.inv_file}.png` // lowend is enough and lighter
       } else {
-        // Try building the SD image dataURL
-        const dc6FilePath = `d2/game_data/${window.work_mod}/version_${window.work_version}/global/items/${item.inv_file}.dc6`
-        const dc6 = await getFileWithCache(dc6FilePath)
-        if (dc6) {
-          const start = Date.now()
-          const imageDataUrl = b64PNGFromDC6(item, dc6)
-          const elapsed = Date.now() - start
-          // console.log(`Needed ${elapsed}ms to generate PNG: "${dc6FilePath}"`)
-          // utilsCache.set(sdImageLookupKey, imageDataUrl) // Save the SD image dataURL in cache
-          // utilsCache2.set(sdImageLookupKey, imageDataUrl) // Save the SD image dataURL in cache
-          return imageDataUrl
+        // Color-transformation: get b64 image from cache, generate it if not found
+        if (utilsCache.has(sdImageLookupKey)) {
+          // Re-use already built SD image data URL
+          return utilsCache.get(sdImageLookupKey)
+        } else {
+          // Try building the SD image dataURL
+          const dc6FilePath = `d2/game_data/${window.work_mod}/version_${window.work_version}/global/items/${item.inv_file}.dc6`
+          const dc6 = await getFileWithCache(dc6FilePath)
+          if (dc6) {
+            // const start = Date.now()
+            const imageDataUrl = b64PNGFromDC6(item, dc6)
+            // const elapsed = Date.now() - start
+            // console.log(`Needed ${elapsed}ms to generate PNG: "${dc6FilePath}"`)
+            utilsCache.set(sdImageLookupKey, imageDataUrl) // Save the SD image dataURL in cache
+            return imageDataUrl
+          }
         }
       }
     }

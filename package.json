@@ -7,7 +7,8 @@
     "build": "vue-cli-service build --skip-plugins @vue/cli-plugin-eslint",
     "build-dev": "vue-cli-service build --mode development --skip-plugins @vue/cli-plugin-eslint",
     "build-watch": "vue-cli-service build --mode development --skip-plugins @vue/cli-plugin-eslint --watch",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "generate": "node scripts/generate_web_pictures.mjs"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
@@ -29,11 +30,16 @@
     "@vue/cli-plugin-pwa": "^5.0.8",
     "@vue/cli-service": "~5.0.8",
     "@vue/compiler-sfc": "^3.4.13",
+    "canvas": "^2.11.2",
     "dotenv-webpack": "^8.0.1",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-vue": "^9.20.1",
+    "fs": "^0.0.1-security",
+    "jsdom": "^25.0.1",
+    "path": "^0.12.7",
+    "pngjs": "^7.0.0",
     "prettier": "^3.2.2"
   },
   "eslintConfig": {

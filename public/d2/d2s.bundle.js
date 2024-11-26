@@ -17669,6 +17669,8 @@ function enhanceItem(item, mod, version, attributes, config, parent) {
             item.item_quality = details.iq;
         if (details.c)
             item.categories = details.c;
+        if (details.gs)
+            item.max_sockets = details.gs;
         if (details.durability) {
             if (item.ethereal == 0) {
                 item.current_durability = details.durability;
@@ -17680,7 +17682,7 @@ function enhanceItem(item, mod, version, attributes, config, parent) {
             }
         }
         // Enforce total_nr_of_sockets between 0 and max for this item type
-        item.total_nr_of_sockets = boundValue(item.total_nr_of_sockets, 0, details.gs || item.inv_width * item.inv_height);
+        item.total_nr_of_sockets = boundValue(item.total_nr_of_sockets, 0, details.gs || 0);
         // Enforce coherence between total_nr_of_sockets & socketed
         if (item.total_nr_of_sockets > 0) {
             item.socketed = 1;
@@ -18419,7 +18421,7 @@ function readAttributes(char, reader, mod) {
     var constants = (0, constants_1.getConstantData)(mod, char.header.version);
     // Stats = magical_properties with "Saved" = 1.
     // There are report that only stat ids 0 to 255 can be saved. It doesn't work for stats 256-510.
-    var attributes = constants.magical_properties.filter(function (val, idx) { return val && val.c && idx < 256; });
+    var attributes = constants.magical_properties.filter(function (val, idx) { return val && val.c && val.cB && idx < 256; });
     // Initial values
     char.attributes = attributes.reduce(function (acc, curr) {
         acc[curr.s] = 0; // Add the attribute with value 0
@@ -18488,7 +18490,7 @@ function writeAttributes(char, constants) {
                 charStatDef = charStatDefs_1[_i];
                 value = char.attributes[charStatDef.s];
                 if (!value) {
-                    continue;
+                    continue; // 0 values are not saved to gain file size
                 }
                 size = charStatDef.cB;
                 if (size === undefined) {
@@ -19283,7 +19285,10 @@ var HUFFMAN = [
                                                         ],
                                                         /*11110 111101000*/ [
                                                             /*011110 111101000*/ [
-                                                                /*0011110 111101000*/ [],
+                                                                /*0011110 111101000*/ [
+                                                                    /*00011110 111101000*/ "E",
+                                                                    /*10011110 111101000*/ []
+                                                                ],
                                                                 /*1011110 111101000*/ []
                                                             ],
                                                             /*111110 111101000*/ [
@@ -19669,7 +19674,7 @@ var HUFFMAN_LOOKUP = {
     "B": { "v": 59368, "l": 17 }, /*01110011111101000*/
     "C": { "v": 79848, "l": 17 }, /*10011011111101000*/
     "D": { "v": 127976, "l": 17 }, /*11111001111101000*/
-    //"E": { "v": 0, "l": 0 }, /**/
+    "E": { "v": 15848, "l": 17 }, /*00011110111101000*/
     //"F": { "v": 0, "l": 0 }, /**/
     "G": { "v": 109544, "l": 17 }, /*11010101111101000*/
     "H": { "v": 80872, "l": 17 }, /**/
@@ -19697,6 +19702,7 @@ function newItem() {
         // Default values
         identified: 0,
         socketed: 0,
+        max_sockets: 0,
         new: 0,
         is_ear: 0,
         starter_item: 0,
@@ -20435,18 +20441,26 @@ function _readSimpleBits(item, reader, version, constants /*, config: types.ICon
         }
         item.type = item.type.trim().replace(/\0/g, "");
         var details = _GetItemTXT(item, constants);
-        item.categories = details === null || details === void 0 ? void 0 : details.c;
-        if (!item.categories)
-            throw new Error("Item category ".concat(details === null || details === void 0 ? void 0 : details.c, " does not exist"));
-        if (item === null || item === void 0 ? void 0 : item.categories.includes("Any Armor")) {
-            item.type_id = types_1.ItemType.Armor;
-        }
-        else if (item === null || item === void 0 ? void 0 : item.categories.includes("Weapon")) {
-            item.type_id = types_1.ItemType.Weapon;
-            details = constants.weapon_items[item.type];
+        if (details) {
+            if (details.c) {
+                item.categories = details.c;
+                if (item === null || item === void 0 ? void 0 : item.categories.includes("Any Armor")) {
+                    item.type_id = types_1.ItemType.Armor;
+                }
+                else if (item === null || item === void 0 ? void 0 : item.categories.includes("Weapon")) {
+                    item.type_id = types_1.ItemType.Weapon;
+                    details = constants.weapon_items[item.type];
+                }
+                else {
+                    item.type_id = types_1.ItemType.Other;
+                }
+            }
+            else {
+                throw new Error("Cannot find categories for type ".concat(item.type, " does not exist"));
+            }
         }
         else {
-            item.type_id = types_1.ItemType.Other;
+            throw new Error("Cannot find details for type ".concat(item.type, " does not exist"));
         }
         var bits = item.simple_item ? 1 : 3;
         if ((_a = item.categories) === null || _a === void 0 ? void 0 : _a.includes("Quest")) {

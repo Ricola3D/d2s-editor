@@ -1881,7 +1881,10 @@ export let remodded_constants_99 = {
             "s": "Shiver Armor"
         },
         null,
-        null,
+        {
+            "id": 488,
+            "s": "Fire Wall"
+        },
         {
             "id": 489,
             "s": "Cyclone Armor"
@@ -2290,7 +2293,10 @@ export let remodded_constants_99 = {
             "s": "Shield of Forsaken Light"
         },
         null, // 650
-        null,
+        {
+            "id": 651,
+            "s": "Spirit Retribution"
+        },
         null,
         {
             "id": 653,
@@ -9697,6 +9703,18 @@ export let remodded_constants_99 = {
                 "f": 1
             }
         ],
+        "item-cooldownreduction": [
+            {
+                "s": "item_cooldownreduction",
+                "f": 1
+            }
+        ],
+        "buff-length-modifier": [
+            {
+                "s": "buff_length_modifier",
+                "f": 1
+            }
+        ]
     },
     "magical_properties": [
         {
@@ -10005,7 +10023,9 @@ export let remodded_constants_99 = {
             "sB": 8,
             "sA": 0,
             "so": 129,
-            "dF": 19
+            "dF": 19,
+            "dP": "Skills Multiply Damage by %d%%",
+            "dN": "Skills Multiply Damage by %d%%"
         },
         {
             "id": 26,
@@ -10140,10 +10160,10 @@ export let remodded_constants_99 = {
             "so": 36,
             "dF": 19,
             "dP": "Fire Resist %+d%%",
-            "dN": "All Resistances %+d",
+            "dN": "All Resistances %+d%%",
             "dg": 2,
             "dgF": 19,
-            "dgP": "All Resistances %+d"
+            "dgP": "All Resistances %+d%%"
         },
         {
             "id": 40,
@@ -10165,10 +10185,10 @@ export let remodded_constants_99 = {
             "so": 38,
             "dF": 19,
             "dP": "Lightning Resist %+d%%",
-            "dN": "All Resistances %+d",
+            "dN": "All Resistances %+d%%",
             "dg": 2,
             "dgF": 19,
-            "dgP": "All Resistances %+d"
+            "dgP": "All Resistances %+d%%"
         },
         {
             "id": 42,
@@ -10190,10 +10210,10 @@ export let remodded_constants_99 = {
             "so": 40,
             "dF": 19,
             "dP": "Cold Resist %+d%%",
-            "dN": "All Resistances %+d",
+            "dN": "All Resistances %+d%%",
             "dg": 2,
             "dgF": 19,
-            "dgP": "All Resistances %+d"
+            "dgP": "All Resistances %+d%%"
         },
         {
             "id": 44,
@@ -10215,10 +10235,10 @@ export let remodded_constants_99 = {
             "so": 34,
             "dF": 19,
             "dP": "Poison Resist %+d%%",
-            "dN": "All Resistances %+d",
+            "dN": "All Resistances %+d%%",
             "dg": 2,
             "dgF": 19,
-            "dgP": "All Resistances %+d"
+            "dgP": "All Resistances %+d%%"
         },
         {
             "id": 46,
@@ -10427,7 +10447,9 @@ export let remodded_constants_99 = {
             "sS": 1,
             "sB": 8,
             "so": 148,
-            "dF": 19
+            "dF": 19,
+            "dP": "Skills Multiply Faster Run/Walk by %d%%",
+            "dN": "Skills Multiply Faster Run/Walk by %d%%"
         },
         {
             "id": 68,
@@ -10436,7 +10458,9 @@ export let remodded_constants_99 = {
             "sB": 8,
             "sA": 60,
             "so": 145,
-            "dF": 19
+            "dF": 19,
+            "dP": "Skills Multiply Attack Speed by %d%%",
+            "dN": "Skills Multiply Attack Speed by %d%%"
         },
         {
             "id": 69,
@@ -10503,8 +10527,8 @@ export let remodded_constants_99 = {
             "sA": 99,
             "so": 58,
             "dF": 29,
-            "dP": "Increase Maximum Life %d%%",
-            "dN": "Increase Maximum Life %d%%",
+            "dP": "Increase Maximum Life by %d%%",
+            "dN": "Decrease Maximum Life by %d%%",
             "o": 11,
             "os": [
                 "maxhp"
@@ -10518,8 +10542,8 @@ export let remodded_constants_99 = {
             "sA": 50,
             "so": 54,
             "dF": 29,
-            "dP": "Increase Maximum Mana %d%%",
-            "dN": "Increase Maximum Mana %d%%",
+            "dP": "Increase Maximum Mana by %d%%",
+            "dN": "Decrease Maximum Mana by %d%%",
             "o": 11,
             "os": [
                 "maxmana"
@@ -11281,8 +11305,8 @@ export let remodded_constants_99 = {
             "sP": 10,
             "so": 17,
             "dF": 23,
-            "dP": "%0%% Reanimate as: %1",
-            "dN": "%0%% Reanimate as: %1"
+            "dP": "%0%% chance to Reanimate a slain enemy as a %1",
+            "dN": "%0%% chance to Reanimate a slain enemy as a %1"
         },
         {
             "id": 156,
@@ -11292,8 +11316,8 @@ export let remodded_constants_99 = {
             "sA": 0,
             "so": 132,
             "dF": 19,
-            "dP": "Piercing Attack",
-            "dN": "Piercing Attack"
+            "dP": "+%d%% Chance of Piercing Attack",
+            "dN": "+%d%% Chance of Piercing Attack"
         },
         {
             "id": 157,
@@ -11470,14 +11494,14 @@ export let remodded_constants_99 = {
         },
         {
             "id": 183,
-            "s": "killtrack",
+            "s": "unknown_183", // killtrack ?
             "c": 1,
             "cB": 32,
             "cS": 0
         },
         {
             "id": 184,
-            "s": "deathtrack",
+            "s": "unknown_184", // deathtrack ?
             "c": 1,
             "cB": 32,
             "cS": 0
@@ -11741,20 +11765,20 @@ export let remodded_constants_99 = {
         },
         {
             "id": 209,
-            "s": "pali_killtrack",
+            "s": "unknown_209", // pali_killtrack ?
             "c": 1,
             "cS": 0
         },
         {
             "id": 210,
-            "s": "unused210",
+            "s": "killtrack", // unused210 ?
             "c": 1,
             "cB": 32,
             "cS": 0
         },
         {
             "id": 211,
-            "s": "unused211",
+            "s": "deathtrack", // unused211 ?
             "c": 1,
             "cB": 32,
             "cS": 0
@@ -12948,8 +12972,8 @@ export let remodded_constants_99 = {
             "sA": 0,
             "so": 84,
             "dF": 19,
-            "dP": "Piercing Attack",
-            "dN": "Piercing Attack",
+            "dP": "+%d%% Chance of Piercing Attack",
+            "dN": "+%d%% Chance of Piercing Attack",
             "d2": "(Dexterity)",
             "o": 2,
             "op": 5,
@@ -13898,8 +13922,8 @@ export let remodded_constants_99 = {
             "sA": 0,
             "so": 1,
             "dF": 19,
-            "dV": 0,
-            "dP": "(Portals unlocked)"
+            "dV": 3,
+            "dP": "(Cube to open a portal to Uber Tristram)"
         },
         {
             "id": 388,
@@ -14054,7 +14078,7 @@ export let remodded_constants_99 = {
             "sA": 0,
             "so": 1,
             "dF": 19,
-            "dP": "Increase Maul Max Leech by %d%%"
+            "dP": "+%d%% Life Stolen per hit while using Maul"
         },
         {
             "id": 405,
@@ -14064,7 +14088,7 @@ export let remodded_constants_99 = {
             "sA": 0,
             "so": 1,
             "dF": 19,
-            "dP": "Increase Feral Rage Max Leech by %d%%"
+            "dP": "+%d%% Life Stolen per hit while using Feral Rage"
         },
         {
             "id": 406,
@@ -14190,7 +14214,7 @@ export let remodded_constants_99 = {
             "so": 0,
             "dF": 19,
             "dV": 0,
-            "dP": "HP reduced to 1 if weight exceeds %d"
+            "dP": "Mana reduced to 0 if weight exceeds %d"
         },
         {
             "id": 417,
@@ -14267,8 +14291,8 @@ export let remodded_constants_99 = {
             "so": 0,
             "dF": 4,
             "dV": 1,
-            "dP": "+%d%% Max HP (+1%% per 10,000 kills)",
-            "dN": "+%d%% Max HP (+1%% per 10,000 kills)",
+            "dP": "+%d%% Max HP (+1% per 10,000 kills)",
+            "dN": "+%d%% Max HP (+1% per 10,000 kills)",
             "o": 2,
             "op": 0,
             "ob": "KillBonus",
@@ -14366,9 +14390,9 @@ export let remodded_constants_99 = {
             "sB": 1,
             "so": 2,
             "dF": 19,
-            "dV": 2,
-            "dP": "Weight Used:",
-            "dN": "Weight Used:",
+            "dV": 0,
+            "dP": "Weight Used: %d",
+            "dN": "Weight Used: %d",
             "o": 2,
             "op": 0,
             "ob": "Weight_Tracker",
@@ -14394,7 +14418,9 @@ export let remodded_constants_99 = {
             "sB": 9,
             "sA": 0,
             "so": 74,
-            "dF": 29
+            "dF": 29,
+            "dP": "Monsters Defense increased by %d%%",
+            "dN": "Monsters Defense reduced by %d%%"
         },
         {
             "id": 433,
@@ -14403,7 +14429,9 @@ export let remodded_constants_99 = {
             "sB": 10,
             "sA": 99,
             "so": 58,
-            "dF": 29
+            "dF": 29,
+            "dP": "Monster Life increased by %d%%",
+            "dN": "Monster Life reduced by %d%%"
         },
         {
             "id": 434,
@@ -14414,7 +14442,9 @@ export let remodded_constants_99 = {
             "sB": 5,
             "sA": 10,
             "so": 58,
-            "dF": 29
+            "dF": 29,
+            "dP": "Monster Levels increased by %d",
+            "dN": "Monster Levels reduced by %d"
         },
         {
             "id": 435,
@@ -14423,7 +14453,9 @@ export let remodded_constants_99 = {
             "sB": 9,
             "sA": 200,
             "so": 22,
-            "dF": 29
+            "dF": 29,
+            "dP": "Monster Physical Resistance increased by %d%%",
+            "dN": "Monster Physical Resistance reduced by %d%%"
         },
         {
             "id": 436,
@@ -14432,7 +14464,9 @@ export let remodded_constants_99 = {
             "sB": 9,
             "sA": 200,
             "so": 41,
-            "dF": 29
+            "dF": 29,
+            "dP": "Monster Magic Resistance increased by %d%%",
+            "dN": "Monster Magic Resistance reduced by %d%%"
         },
         {
             "id": 437,
@@ -14441,7 +14475,9 @@ export let remodded_constants_99 = {
             "sB": 9,
             "sA": 200,
             "so": 36,
-            "dF": 29
+            "dF": 29,
+            "dP": "Monster Fire Resistance increased by %d%%",
+            "dN": "Monster Fire Resistance reduced by %d%%"
         },
         {
             "id": 438,
@@ -14450,7 +14486,9 @@ export let remodded_constants_99 = {
             "sB": 9,
             "sA": 200,
             "so": 38,
-            "dF": 29
+            "dF": 29,
+            "dP": "Monster Lightning Resistance increased by %d%%",
+            "dN": "Monster Lightning Resistance reduced by %d%%"
         },
         {
             "id": 439,
@@ -14459,7 +14497,9 @@ export let remodded_constants_99 = {
             "sB": 9,
             "sA": 200,
             "so": 40,
-            "dF": 29
+            "dF": 29,
+            "dP": "Monster Cold Resistance increased by %d%%",
+            "dN": "Monster Cold Resistance reduced by %d%%"
         },
         {
             "id": 440,
@@ -14468,7 +14508,9 @@ export let remodded_constants_99 = {
             "sB": 9,
             "sA": 200,
             "so": 34,
-            "dF": 29
+            "dF": 29,
+            "dP": "Monster Poison Resistance increased by %d%%",
+            "dN": "Monster Poison Resistance reduced by %d%%"
         },
         {
             "id": 441,
@@ -14477,7 +14519,9 @@ export let remodded_constants_99 = {
             "sB": 8,
             "sA": 60,
             "so": 145,
-            "dF": 29
+            "dF": 29,
+            "dP": "Monster Attack Speed increased by %d%%",
+            "dN": "Monster Attack Speed reduced by %d%%"
         },
         {
             "id": 442,
@@ -14486,7 +14530,9 @@ export let remodded_constants_99 = {
             "sB": 8,
             "sA": 60,
             "so": 148,
-            "dF": 29
+            "dF": 29,
+            "dP": "Monster Movement Speed increased by %d%%",
+            "dN": "Monster Movement Speed reduced by %d%%"
         },
         {
             "id": 443,
@@ -14494,7 +14540,9 @@ export let remodded_constants_99 = {
             "sS": 1,
             "sB": 1,
             "so": 20,
-            "dF": 29
+            "dF": 29,
+            "dP": "Monsters Cannot Be Frozen",
+            "dN": "Monsters Cannot Be Frozen"
         },
         {
             "id": 444,
@@ -14503,7 +14551,9 @@ export let remodded_constants_99 = {
             "sB": 7,
             "sA": 5,
             "so": 158,
-            "dF": 29
+            "dF": 29,
+            "dP": "Monster Skill Levels increased by %d",
+            "dN": "Monster Skill Levels increased by %d"
         },
         {
             "id": 445,
@@ -14512,7 +14562,9 @@ export let remodded_constants_99 = {
             "sB": 7,
             "sA": 5,
             "so": 87,
-            "dF": 29
+            "dF": 29,
+            "dP": "Monsters have a %d%% Chance of Crushing Blow",
+            "dN": "Monsters have a %d%% Chance of Crushing Blow"
         },
         {
             "id": 446,
@@ -14521,7 +14573,9 @@ export let remodded_constants_99 = {
             "sB": 9,
             "sA": 0,
             "so": 997,
-            "dF": 29
+            "dF": 29,
+            "dP": "Defense: +%d%%",
+            "dN": "Defense: -%d%%"
         },
         {
             "id": 447,
@@ -14530,7 +14584,9 @@ export let remodded_constants_99 = {
             "sB": 10,
             "sA": 99,
             "so": 998,
-            "dF": 29
+            "dF": 29,
+            "dP": "Life: +%d%%",
+            "dN": "Life: -%d%%"
         },
         {
             "id": 448,
@@ -14539,7 +14595,9 @@ export let remodded_constants_99 = {
             "sB": 9,
             "sA": 200,
             "so": 985,
-            "dF": 29
+            "dF": 29,
+            "dP": "Physical Resistance: +%d%%",
+            "dN": "Physical Resistance: +%d%%"
         },
         {
             "id": 449,
@@ -14548,7 +14606,9 @@ export let remodded_constants_99 = {
             "sB": 9,
             "sA": 200,
             "so": 984,
-            "dF": 29
+            "dF": 29,
+            "dP": "Magic Resistance: +%d%%",
+            "dN": "Magic Resistance: +%d%%"
         },
         {
             "id": 450,
@@ -14557,7 +14617,9 @@ export let remodded_constants_99 = {
             "sB": 9,
             "sA": 200,
             "so": 983,
-            "dF": 29
+            "dF": 29,
+            "dP": "Fire Resistance: +%d%%",
+            "dN": "Fire Resistance: +%d%%"
         },
         {
             "id": 451,
@@ -14566,7 +14628,9 @@ export let remodded_constants_99 = {
             "sB": 9,
             "sA": 200,
             "so": 982,
-            "dF": 29
+            "dF": 29,
+            "dP": "Lightning Resistance: +%d%%",
+            "dN": "Lightning Resistance: -%d%%"
         },
         {
             "id": 452,
@@ -14575,7 +14639,9 @@ export let remodded_constants_99 = {
             "sB": 9,
             "sA": 200,
             "so": 981,
-            "dF": 29
+            "dF": 29,
+            "dP": "Cold Resistance: +%d%%",
+            "dN": "Cold Resistance: +%d%%"
         },
         {
             "id": 453,
@@ -14584,7 +14650,9 @@ export let remodded_constants_99 = {
             "sB": 9,
             "sA": 200,
             "so": 980,
-            "dF": 29
+            "dF": 29,
+            "dP": "Poison Resistance: +%d%%",
+            "dN": "Poison Resistance: +%d%%"
         },
         {
             "id": 454,
@@ -14593,7 +14661,9 @@ export let remodded_constants_99 = {
             "sB": 8,
             "sA": 60,
             "so": 986,
-            "dF": 29
+            "dF": 29,
+            "dP": "Movement Speed: +%d%%",
+            "dN": "Movement Speed: -%d%%"
         },
         {
             "id": 455,
@@ -14602,7 +14672,9 @@ export let remodded_constants_99 = {
             "sB": 8,
             "sA": 60,
             "so": 987,
-            "dF": 29
+            "dF": 29,
+            "dP": "Attack Speed: +%d%%",
+            "dN": "Attack Speed: -%d%%"
         },
         {
             "id": 456,
@@ -14611,7 +14683,9 @@ export let remodded_constants_99 = {
             "sB": 8,
             "sA": 60,
             "so": 988,
-            "dF": 29
+            "dF": 29,
+            "dP": "Cast Speed: +%d%%",
+            "dN": "Cast Speed: -%d%%"
         },
         {
             "id": 457,
@@ -14619,7 +14693,9 @@ export let remodded_constants_99 = {
             "sS": 1,
             "sB": 1,
             "so": 979,
-            "dF": 29
+            "dF": 29,
+            "dP": "Cannot Be Frozen",
+            "dN": "Cannot Be Frozen"
         },
         {
             "id": 458,
@@ -14628,7 +14704,9 @@ export let remodded_constants_99 = {
             "sB": 9,
             "sA": 20,
             "so": 989,
-            "dF": 29
+            "dF": 29,
+            "dP": "Damage to Demons: +%d%%",
+            "dN": "Damage to Demons: +%d%%"
         },
         {
             "id": 459,
@@ -14637,7 +14715,9 @@ export let remodded_constants_99 = {
             "sB": 9,
             "sA": 20,
             "so": 990,
-            "dF": 29
+            "dF": 29,
+            "dP": "Damage to Undead: +%d%%",
+            "dN": "Damage to Undead: +%d%%"
         },
         {
             "id": 460,
@@ -14646,7 +14726,9 @@ export let remodded_constants_99 = {
             "sB": 7,
             "sA": 0,
             "so": 991,
-            "dF": 29
+            "dF": 29,
+            "dP": "Mana From Kills: +%d",
+            "dN": "Mana From Kills: +%d"
         },
         {
             "id": 461,
@@ -14655,7 +14737,9 @@ export let remodded_constants_99 = {
             "sB": 7,
             "sA": 0,
             "so": 992,
-            "dF": 29
+            "dF": 29,
+            "dP": "Life From Kills: +%d",
+            "dN": "Life From Kills: +%d"
         },
         {
             "id": 462,
@@ -14664,7 +14748,9 @@ export let remodded_constants_99 = {
             "sB": 9,
             "sA": 100,
             "so": 993,
-            "dF": 29
+            "dF": 29,
+            "dP": "Gold Drops: +%d%%",
+            "dN": "Gold Drops: +%d%%"
         },
         {
             "id": 463,
@@ -14673,7 +14759,9 @@ export let remodded_constants_99 = {
             "sB": 8,
             "sA": 100,
             "so": 994,
-            "dF": 29
+            "dF": 29,
+            "dP": "Magic Find: +%d%%",
+            "dN": "Magic Find: +%d%%"
         },
         {
             "id": 464,
@@ -14682,7 +14770,9 @@ export let remodded_constants_99 = {
             "sB": 9,
             "sA": 50,
             "so": 995,
-            "dF": 29
+            "dF": 29,
+            "dP": "Experience Gain: +%d%%",
+            "dN": "Experience Gain: -%d%%"
         },
         {
             "id": 465,
@@ -14691,7 +14781,9 @@ export let remodded_constants_99 = {
             "sB": 1,
             "sA": 0,
             "so": 997,
-            "dF": 29
+            "dF": 29,
+            "dP": "Ignores Target Defense",
+            "dN": "Ignores Target Defense"
         },
         {
             "id": 466,
@@ -14703,7 +14795,9 @@ export let remodded_constants_99 = {
             "sB": 9,
             "sA": 32,
             "so": 998,
-            "dF": 19
+            "dF": 19,
+            "dP": "Cooldown Reduction: +%d%%",
+            "dN": "Cooldown Reduction: +%d%%"
         },
         {
             "id": 467,
@@ -14712,7 +14806,9 @@ export let remodded_constants_99 = {
             "sB": 7,
             "sA": 5,
             "so": 996,
-            "dF": 29
+            "dF": 29,
+            "dP": "Crushing Blow: +%d%%",
+            "dN": "Crushing Blow: +%d%%"
         },
         {
             "id": 468,
@@ -14721,7 +14817,9 @@ export let remodded_constants_99 = {
             "sA": 1,
             "sP": 10,
             "so": 999,
-            "dF": 23
+            "dF": 23,
+            "dP": "%1[Tier %0]",
+            "dN": "%1[Tier %0]"
         },
         {
             "id": 469,
@@ -15646,10 +15744,12 @@ export let remodded_constants_99 = {
         },
         {
             "index": 172,
+            "n": "Fenris Fang",
             "id": 171
         },
         {
             "index": 173,
+            "n": "Elder",
             "id": 172
         },
         {
@@ -21587,6 +21687,7 @@ export let remodded_constants_99 = {
         {
             "id": 516,
             "index": "Nature's Nurture",
+            "n": "Nature's Nurture",
             "i": "D2R_Jank",
             "c": "Oa3"
         },
@@ -21801,7 +21902,7 @@ export let remodded_constants_99 = {
             "i": "D2R_Jank",
             "c": "rin",
             "tc": "cblu",
-            "hdi": "custom/storagebag"
+            "hdi": "misc/ring/ring"
         },
         {
             "id": 542,
@@ -21838,51 +21939,61 @@ export let remodded_constants_99 = {
         {
             "id": 546,
             "index": "Rainbow Facet1",
+            "n": "Rainbow Facet",
             "c": "jew"
         },
         {
             "id": 547,
             "index": "Rainbow Facet2",
+            "n": "Rainbow Facet",
             "c": "jew"
         },
         {
             "id": 548,
             "index": "Rainbow Facet3",
+            "n": "Rainbow Facet",
             "c": "jew"
         },
         {
             "id": 549,
             "index": "Rainbow Facet4",
+            "n": "Rainbow Facet",
             "c": "jew"
         },
         {
             "id": 550,
             "index": "Rainbow Facet1",
+            "n": "Rainbow Facet",
             "c": "jew"
         },
         {
             "id": 551,
             "index": "Rainbow Facet2",
+            "n": "Rainbow Facet",
             "c": "jew"
         },
         {
             "id": 552,
             "index": "Rainbow Facet3",
+            "n": "Rainbow Facet",
             "c": "jew"
         },
         {
             "id": 553,
             "index": "Rainbow Facet4",
+            "n": "Rainbow Facet",
             "c": "jew"
         },
         {
             "id": 554,
             "index": "Rainbow Facet5",
+            "n": "Rainbow Facet",
             "c": "jew"
         },
         {
             "id": 555,
             "index": "Rainbow Facet5",
+            "n": "Rainbow Facet",
             "c": "jew"
         },
         {
@@ -22206,6 +22317,7 @@ export let remodded_constants_99 = {
         {
             "id": 601,
             "index": "Healthy Breakfast",
+            "n": "Well maybe not healthy, but it does make you glow<br>A Healthy Breakfast",
             "i": "D2R_Jank",
             "c": "m35",
             "hdi": "custom/Hbreakfast"
@@ -22213,48 +22325,56 @@ export let remodded_constants_99 = {
         {
             "id": 602,
             "index": "MythosLogAmazon",
+            "n": "The Statue of Mythos",
             "c": "y01",
             "hdi": "custom/mythos_log"
         },
         {
             "id": 603,
             "index": "MythosLogAssassin",
+            "n": "The Statue of Mythos",
             "c": "y02",
             "hdi": "custom/mythos_log"
         },
         {
             "id": 604,
             "index": "MythosLogBarbarian",
+            "n": "The Statue of Mythos",
             "c": "y03",
             "hdi": "custom/mythos_log"
         },
         {
             "id": 605,
             "index": "MythosLogDruid",
+            "n": "The Statue of Mythos",
             "c": "y04",
             "hdi": "custom/mythos_log"
         },
         {
             "id": 606,
             "index": "MythosLogNecromancer",
+            "n": "The Statue of Mythos",
             "c": "y05",
             "hdi": "custom/mythos_log"
         },
         {
             "id": 607,
             "index": "MythosLogPaladin",
+            "n": "The Statue of Mythos",
             "c": "y06",
             "hdi": "custom/mythos_log"
         },
         {
             "id": 608,
             "index": "MythosLogSorceress",
+            "n": "The Statue of Mythos",
             "c": "y07",
             "hdi": "custom/mythos_log"
         },
         {
             "id": 609,
             "index": "Cola Cube",
+            "n": "Cola Cube",
             "i": "D2R_Jank",
             "c": "m32",
             "hdi": "custom/cola_cube"
@@ -22262,6 +22382,7 @@ export let remodded_constants_99 = {
         {
             "id": 610,
             "index": "Soul Stompers",
+            "n": "Soul Stompers",
             "c": "umb",
             "tc": "blac"
         },
@@ -22274,18 +22395,21 @@ export let remodded_constants_99 = {
         {
             "id": 612,
             "index": "Kingdom's Heart",
+            "n": "Kingdom's Heart",
             "c": "uar",
             "tc": "lgld"
         },
         {
             "id": 613,
             "index": "Prismatic Facet",
+            "n": "Prismatic Facet",
             "c": "j00",
             "hdi": "custom/PrismaticFacet"
         },
         {
             "id": 614,
             "index": "Null Charm",
+            "n": "Blank Talent",
             "i": "D2R_Jank",
             "c": "m34",
             "hdi": "custom/Null_Charm"
@@ -25697,7 +25821,7 @@ export let remodded_constants_99 = {
             "exc": "dr9",
             "elc": "dre",
             "iq": 0,
-            "n": "Falcon Mask",
+            "n": "Cub Cap",
             "minac": 12,
             "maxac": 28,
             "durability": 20,
@@ -42058,7 +42182,7 @@ export let remodded_constants_99 = {
             "exc": "Bm2",
             "elc": "Bm3",
             "iq": 2,
-            "n": "Decapitating Axe",
+            "n": "Rending Axe",
             "durability": 126,
             "mind": 38,
             "maxd": 104,
@@ -42513,6 +42637,7 @@ export let remodded_constants_99 = {
             "exc": "D00",
             "elc": "D00",
             "iq": 1,
+            "n": "Forged in the Flames of Acheron<br>Demon Carver",
             "durability": 126,
             "mind": 33,
             "maxd": 88,
@@ -48009,8 +48134,8 @@ export let remodded_constants_99 = {
                         "code": "r30",
                         "type": "weapon",
                         "m": "crush",
-                        "min": 20,
-                        "max": 20
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -48682,7 +48807,7 @@ export let remodded_constants_99 = {
             "exc": "Cr1",
             "elc": "Cr1",
             "iq": 1,
-            "n": "Sparking Crystal",
+            // "n": "Sparking Crystal",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -48704,7 +48829,7 @@ export let remodded_constants_99 = {
             "exc": "Cr2",
             "elc": "Cr2",
             "iq": 1,
-            "n": "Burning Crystal",
+            // "n": "Burning Crystal",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -48726,7 +48851,7 @@ export let remodded_constants_99 = {
             "exc": "Cr3",
             "elc": "Cr3",
             "iq": 1,
-            "n": "Frigid Crystal",
+            // "n": "Frigid Crystal",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -48748,7 +48873,7 @@ export let remodded_constants_99 = {
             "exc": "Cr4",
             "elc": "Cr4",
             "iq": 1,
-            "n": "Toxic Crystal",
+            // "n": "Toxic Crystal",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -48770,7 +48895,7 @@ export let remodded_constants_99 = {
             "exc": "Cr5",
             "elc": "Cr5",
             "iq": 1,
-            "n": "Hardened Crystal",
+            // "n": "Hardened Crystal",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -48792,7 +48917,7 @@ export let remodded_constants_99 = {
             "exc": "Cr6",
             "elc": "Cr6",
             "iq": 1,
-            "n": "Shining Crystal",
+            // "n": "Shining Crystal",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -48814,7 +48939,7 @@ export let remodded_constants_99 = {
             "exc": "UCR",
             "elc": "UCR",
             "iq": 1,
-            "n": "Unique Core",
+            // "n": "Unique Core",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -48836,7 +48961,7 @@ export let remodded_constants_99 = {
             "exc": "Bbp",
             "elc": "Bbp",
             "iq": 1,
-            "n": "Basic Blueprints",
+            // "n": "Basic Blueprints",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -48858,7 +48983,7 @@ export let remodded_constants_99 = {
             "exc": "Xbp",
             "elc": "Xbp",
             "iq": 1,
-            "n": "Exceptional Blueprints",
+            // "n": "Exceptional Blueprints",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -48880,7 +49005,7 @@ export let remodded_constants_99 = {
             "exc": "Ebp",
             "elc": "Ebp",
             "iq": 1,
-            "n": "Elite Blueprints",
+            // "n": "Elite Blueprints",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -49481,7 +49606,7 @@ export let remodded_constants_99 = {
             "exc": "EcW",
             "elc": "EcW",
             "iq": 1,
-            "n": "Enchanted Wood",
+            // "n": "Enchanted Wood",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -49502,7 +49627,7 @@ export let remodded_constants_99 = {
             "exc": "IN1",
             "elc": "IN1",
             "iq": 1,
-            "n": "Ashy Bone",
+            // "n": "Ashy Bone",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -49523,7 +49648,7 @@ export let remodded_constants_99 = {
             "exc": "IN2",
             "elc": "IN2",
             "iq": 1,
-            "n": "Broken Bone",
+            // "n": "Broken Bone",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -49544,7 +49669,7 @@ export let remodded_constants_99 = {
             "exc": "IN3",
             "elc": "IN3",
             "iq": 1,
-            "n": "Soulless Skull",
+            // "n": "Soulless Skull",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -49565,7 +49690,7 @@ export let remodded_constants_99 = {
             "exc": "IN4",
             "elc": "IN4",
             "iq": 1,
-            "n": "Frail Skull",
+            // "n": "Frail Skull",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -49586,7 +49711,7 @@ export let remodded_constants_99 = {
             "exc": "IN5",
             "elc": "IN5",
             "iq": 1,
-            "n": "Nevermelt Ice",
+            // "n": "Nevermelt Ice",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -49607,7 +49732,7 @@ export let remodded_constants_99 = {
             "exc": "IN6",
             "elc": "IN6",
             "iq": 1,
-            "n": "Charge Vein",
+            // "n": "Charge Vein",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -49628,7 +49753,7 @@ export let remodded_constants_99 = {
             "exc": "IN7",
             "elc": "IN7",
             "iq": 1,
-            "n": "Life Spark",
+            // "n": "Life Spark",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -49649,7 +49774,7 @@ export let remodded_constants_99 = {
             "exc": "TK0",
             "elc": "TK0",
             "iq": 1,
-            "n": "Expansion Token",
+            "n": "Token of Evil",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -50637,7 +50762,7 @@ export let remodded_constants_99 = {
             "exc": "Z40",
             "elc": "Z40",
             "iq": 1,
-            "n": "Cube alone to change to next remover type<br><br>Shields/Jewelry: Cannot Be Frozen<br>Helms/Belts: Cannot Be Frozen<br>Armors/Boots: Cannot Be Frozen<br>Weapons/Gloves: Freezes Target +2<br>Rune Preview:<br><br>(High Points -512)<br>Cham Remover",
+            "n": "Cube alone to change to next remover type<br><br>Shields/Jewelry: Half Freeze Duration<br>Helms/Belts: Half Freeze Duration<br>Armors/Boots: Half Freeze Duration<br>Weapons/Gloves: Freezes Target +2<br>Rune Preview:<br><br>(High Points -512)<br>Cham Remover",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -50658,7 +50783,7 @@ export let remodded_constants_99 = {
             "exc": "Z41",
             "elc": "Z41",
             "iq": 1,
-            "n": "Cube alone to change to next remover type<br><br>Shields/Jewelry: Indestructible<br>Helms/Belts: Indestructible<br>Armors/Boots: Indestructible<br>Weapons/Gloves: Indestructible<br>Rune Preview:<br><br>(High Points -1024)<br>Zod Remover",
+            "n": "Cube alone to change to next remover type<br><br>Shields/Jewelry: Indestructible, +5% Cold, Lightning, Fire, Magic Absorb<br>Helms/Belts: Indestructible, +5% Cold, Lightning, Fire, Magic Absorb<br>Armors/Boots: Indestructible, +5% Cold, Lightning, Fire, Magic Absorb<br>Weapons/Gloves: Indestructible, +5% Elemental Absorb<br>Rune Preview:<br><br>(High Points -1024)<br>Zod Remover",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -50805,7 +50930,7 @@ export let remodded_constants_99 = {
             "exc": "Z48",
             "elc": "Z48",
             "iq": 1,
-            "n": "(cube to change)<br>(2048 Low -> 1 Mid)<br>Rune Points Converter",
+            "n": "Rune Points Converter",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -50826,7 +50951,7 @@ export let remodded_constants_99 = {
             "exc": "Z49",
             "elc": "Z49",
             "iq": 1,
-            "n": "(cube to change)<br>(2048 Mid -> 1 High)<br>Rune Points Converter",
+            // "n": "(cube to change)<br>(2048 Mid -> 1 High)<br>Rune Points Converter",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -50847,7 +50972,7 @@ export let remodded_constants_99 = {
             "exc": "Z50",
             "elc": "Z50",
             "iq": 1,
-            "n": "(cube to change)<br>(2048 Low <- 1 Mid)<br>Rune Points Converter",
+            // "n": "(cube to change)<br>(2048 Low <- 1 Mid)<br>Rune Points Converter",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -50868,7 +50993,7 @@ export let remodded_constants_99 = {
             "exc": "Z51",
             "elc": "Z51",
             "iq": 1,
-            "n": "(cube to change)<br>(2048 Mid <- 1 High)<br>Rune Points Converter",
+            // "n": "(cube to change)<br>(2048 Mid <- 1 High)<br>Rune Points Converter",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -50931,7 +51056,7 @@ export let remodded_constants_99 = {
             "exc": "Z52",
             "elc": "Z52",
             "iq": 1,
-            "n": "Used to Color Dye Equipment (Recipes in Cube Menu)<br>Empty Bottle",
+            "n": "Empty Bottle",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -51561,7 +51686,7 @@ export let remodded_constants_99 = {
             "exc": "Z82",
             "elc": "Z82",
             "iq": 1,
-            "n": "+2 Level Requirement<br>+1-4 Damage<br>Enhancement Crystal (Unlimited)",
+            "n": "+2 Level Requirement<br>+2 Damage<br>Enhancement Crystal (Unlimited)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -51876,7 +52001,7 @@ export let remodded_constants_99 = {
             "exc": "Z97",
             "elc": "Z97",
             "iq": 1,
-            "n": "+25 Level Requirement<br>+10% All Resist<br>Enhancement Crystal (1 Use Per Item)",
+            "n": "+25 Level Requirement<br>+10% All Resistances<br>Enhancement Crystal (1 Use Per Item)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -53537,6 +53662,7 @@ export let remodded_constants_99 = {
             "exc": "y67",
             "elc": "y67",
             "iq": 1,
+            "n": "Scroll of Belial",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -53550,7 +53676,7 @@ export let remodded_constants_99 = {
                 "Ingredient",
                 "Miscellaneous"
             ],
-            "hdi": "custom/reroller"
+            "hdi": "custom/BelialScroll"
         },
         "a00": {
             "nc": "a00",
@@ -53671,7 +53797,7 @@ export let remodded_constants_99 = {
             "exc": "a06",
             "elc": "a06",
             "iq": 1,
-            "n": "(Cube with your Soul Tracker to receive an HP buff)<br>Scroll of Triumph",
+            "n": "Cube with your Edyrem's Encyclopedia to unlock this scroll's special ability<br>Scroll of Triumph",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58696,7 +58822,7 @@ export let remodded_constants_99 = {
             "exc": "y33",
             "elc": "y33",
             "iq": 1,
-            "n": "Adds 20 gems to your storage bag<br>Gem Vein",
+            "n": "Gem Vein",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -60594,27 +60720,27 @@ export let remodded_constants_99 = {
                     {
                         "code": "r35",
                         "type": "weapon",
-                        "m": "weight-capacity",
-                        "min": 3,
-                        "max": 3
+                        "m": "item-cooldownreduction",
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
                     {
                         "code": "r35",
                         "type": "helm",
-                        "m": "weight-capacity",
-                        "min": 3,
-                        "max": 3
+                        "m": "buff-length-modifier",
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
                     {
                         "code": "r35",
                         "type": "shield",
-                        "m": "weight-capacity",
-                        "min": 3,
-                        "max": 3
+                        "m": "item-cooldownreduction",
+                        "min": 10,
+                        "max": 10
                     }
                 ]
             ],
@@ -60679,7 +60805,7 @@ export let remodded_constants_99 = {
             "exc": "L00",
             "elc": "L00",
             "iq": 1,
-            "n": "Civerb's Blood Pact",
+            "n": "Civerb's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -60698,7 +60824,7 @@ export let remodded_constants_99 = {
             "exc": "L01",
             "elc": "L01",
             "iq": 1,
-            "n": "Hsaru's Blood Pact",
+            "n": "Hsaru's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -60717,7 +60843,7 @@ export let remodded_constants_99 = {
             "exc": "L02",
             "elc": "L02",
             "iq": 1,
-            "n": "Cleglaw's Blood Pact",
+            "n": "Cleglaw's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -60736,7 +60862,7 @@ export let remodded_constants_99 = {
             "exc": "L03",
             "elc": "L03",
             "iq": 1,
-            "n": "Iratha's Blood Pact",
+            "n": "Iratha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -60755,7 +60881,7 @@ export let remodded_constants_99 = {
             "exc": "L04",
             "elc": "L04",
             "iq": 1,
-            "n": "Isenhart's Blood Pact",
+            "n": "Isenhart's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -60774,7 +60900,7 @@ export let remodded_constants_99 = {
             "exc": "L05",
             "elc": "L05",
             "iq": 1,
-            "n": "Vidala's Blood Pact",
+            "n": "Vidala's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -60793,7 +60919,7 @@ export let remodded_constants_99 = {
             "exc": "L06",
             "elc": "L06",
             "iq": 1,
-            "n": "Milabrega's Blood Pact",
+            "n": "Milabrega's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -60812,7 +60938,7 @@ export let remodded_constants_99 = {
             "exc": "L07",
             "elc": "L07",
             "iq": 1,
-            "n": "Cathan's Blood Pact",
+            "n": "Cathan's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -60831,7 +60957,7 @@ export let remodded_constants_99 = {
             "exc": "L08",
             "elc": "L08",
             "iq": 1,
-            "n": "Tancred's Blood Pact",
+            "n": "Tancred's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -60850,7 +60976,7 @@ export let remodded_constants_99 = {
             "exc": "L09",
             "elc": "L09",
             "iq": 1,
-            "n": "Sigon's Blood Pact",
+            "n": "Sigon's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -60869,7 +60995,7 @@ export let remodded_constants_99 = {
             "exc": "L10",
             "elc": "L10",
             "iq": 1,
-            "n": "Infernal Blood Pact",
+            "n": "Infernal Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -60888,7 +61014,7 @@ export let remodded_constants_99 = {
             "exc": "L11",
             "elc": "L11",
             "iq": 1,
-            "n": "Berserker's Blood Pact",
+            "n": "Berserker's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -60907,7 +61033,7 @@ export let remodded_constants_99 = {
             "exc": "L12",
             "elc": "L12",
             "iq": 1,
-            "n": "Death's Blood Pact",
+            "n": "Death's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -60926,7 +61052,7 @@ export let remodded_constants_99 = {
             "exc": "L13",
             "elc": "L13",
             "iq": 1,
-            "n": "Angelic Blood Pact",
+            "n": "Angelic Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -60945,7 +61071,7 @@ export let remodded_constants_99 = {
             "exc": "L14",
             "elc": "L14",
             "iq": 1,
-            "n": "Arctic Blood Pact",
+            "n": "Arctic Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -60964,7 +61090,7 @@ export let remodded_constants_99 = {
             "exc": "L15",
             "elc": "L15",
             "iq": 1,
-            "n": "Arcanna's Blood Pact",
+            "n": "Arcanna's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -60983,7 +61109,7 @@ export let remodded_constants_99 = {
             "exc": "L16",
             "elc": "L16",
             "iq": 1,
-            "n": "Natalya's Blood Pact",
+            "n": "Natalya's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61002,7 +61128,7 @@ export let remodded_constants_99 = {
             "exc": "L17",
             "elc": "L17",
             "iq": 1,
-            "n": "Aldur's Blood Pact",
+            "n": "Aldur's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61021,7 +61147,7 @@ export let remodded_constants_99 = {
             "exc": "L18",
             "elc": "L18",
             "iq": 1,
-            "n": "Immortal King's Blood Pact",
+            "n": "Immortal King's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61040,7 +61166,7 @@ export let remodded_constants_99 = {
             "exc": "L19",
             "elc": "L19",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61059,7 +61185,7 @@ export let remodded_constants_99 = {
             "exc": "L20",
             "elc": "L20",
             "iq": 1,
-            "n": "Griswold's Blood Pact",
+            "n": "Griswold's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61078,7 +61204,7 @@ export let remodded_constants_99 = {
             "exc": "L21",
             "elc": "L21",
             "iq": 1,
-            "n": "Trang-Oul's Blood Pact",
+            "n": "Trang-Oul's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61097,7 +61223,7 @@ export let remodded_constants_99 = {
             "exc": "L22",
             "elc": "L22",
             "iq": 1,
-            "n": "M'avina's Blood Pact",
+            "n": "M'avina's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61116,7 +61242,7 @@ export let remodded_constants_99 = {
             "exc": "L23",
             "elc": "L23",
             "iq": 1,
-            "n": "The Disciple's Blood Pact",
+            "n": "The Disciple's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61135,7 +61261,7 @@ export let remodded_constants_99 = {
             "exc": "L24",
             "elc": "L24",
             "iq": 1,
-            "n": "Heaven's Blood Pact",
+            "n": "Heaven's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61154,7 +61280,7 @@ export let remodded_constants_99 = {
             "exc": "L25",
             "elc": "L25",
             "iq": 1,
-            "n": "Orphan's Blood Pact",
+            "n": "Orphan's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61173,7 +61299,7 @@ export let remodded_constants_99 = {
             "exc": "L26",
             "elc": "L26",
             "iq": 1,
-            "n": "Hwanin's Blood Pact",
+            "n": "Hwanin's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61192,7 +61318,7 @@ export let remodded_constants_99 = {
             "exc": "L27",
             "elc": "L27",
             "iq": 1,
-            "n": "Sazabi's Blood Pact",
+            "n": "Sazabi's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61211,7 +61337,7 @@ export let remodded_constants_99 = {
             "exc": "L28",
             "elc": "L28",
             "iq": 1,
-            "n": "Bul-Katho's Blood Pact",
+            "n": "Bul-Katho's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61230,7 +61356,7 @@ export let remodded_constants_99 = {
             "exc": "L29",
             "elc": "L29",
             "iq": 1,
-            "n": "Cow King's Blood Pact",
+            "n": "Cow King's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61249,7 +61375,7 @@ export let remodded_constants_99 = {
             "exc": "L30",
             "elc": "L30",
             "iq": 1,
-            "n": "Naj's Blood Pact",
+            "n": "Naj's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61268,7 +61394,7 @@ export let remodded_constants_99 = {
             "exc": "L31",
             "elc": "L31",
             "iq": 1,
-            "n": "McAuley's Blood Pact",
+            "n": "McAuley's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61287,7 +61413,7 @@ export let remodded_constants_99 = {
             "exc": "L32",
             "elc": "L32",
             "iq": 1,
-            "n": "Vessel's Blood Pact",
+            "n": "Vessel's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61306,7 +61432,7 @@ export let remodded_constants_99 = {
             "exc": "L33",
             "elc": "L33",
             "iq": 1,
-            "n": "Majestic Blood Pact",
+            "n": "Majestic Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61325,7 +61451,7 @@ export let remodded_constants_99 = {
             "exc": "L34",
             "elc": "L34",
             "iq": 1,
-            "n": "Skovos's Blood Pact",
+            "n": "Skovos's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61344,7 +61470,7 @@ export let remodded_constants_99 = {
             "exc": "L35",
             "elc": "L35",
             "iq": 1,
-            "n": "Wonderous Blood Pact",
+            "n": "Wonderous Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61363,7 +61489,7 @@ export let remodded_constants_99 = {
             "exc": "L36",
             "elc": "L36",
             "iq": 1,
-            "n": "Vizjerei's Blood Pact",
+            "n": "Vizjerei's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61382,7 +61508,7 @@ export let remodded_constants_99 = {
             "exc": "L37",
             "elc": "L37",
             "iq": 1,
-            "n": "Battlemage's Blood Pact",
+            "n": "Battlemage's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61401,7 +61527,7 @@ export let remodded_constants_99 = {
             "exc": "L38",
             "elc": "L38",
             "iq": 1,
-            "n": "Glacial Blood Pact",
+            "n": "Glacial Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61420,7 +61546,7 @@ export let remodded_constants_99 = {
             "exc": "L39",
             "elc": "L39",
             "iq": 1,
-            "n": "Rathma's Blood Pact",
+            "n": "Rathma's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61439,7 +61565,7 @@ export let remodded_constants_99 = {
             "exc": "L40",
             "elc": "L40",
             "iq": 1,
-            "n": "Stacatomamba's Blood Pact",
+            "n": "Stacatomamba's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61458,7 +61584,7 @@ export let remodded_constants_99 = {
             "exc": "L41",
             "elc": "L41",
             "iq": 1,
-            "n": "Kreigur's Blood Pact",
+            "n": "Kreigur's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61477,7 +61603,7 @@ export let remodded_constants_99 = {
             "exc": "L42",
             "elc": "L42",
             "iq": 1,
-            "n": "Sukami's Blood Pact",
+            "n": "Sukami's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61496,7 +61622,7 @@ export let remodded_constants_99 = {
             "exc": "L43",
             "elc": "L43",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Mirrored Flames Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61515,7 +61641,7 @@ export let remodded_constants_99 = {
             "exc": "L44",
             "elc": "L44",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Unstoppable Force Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61534,7 +61660,7 @@ export let remodded_constants_99 = {
             "exc": "L45",
             "elc": "L45",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Underworld's Unrest Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61553,7 +61679,7 @@ export let remodded_constants_99 = {
             "exc": "L46",
             "elc": "L46",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Elemental Blueprints Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61572,7 +61698,7 @@ export let remodded_constants_99 = {
             "exc": "L47",
             "elc": "L47",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Raijin's Rebellion Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61591,7 +61717,7 @@ export let remodded_constants_99 = {
             "exc": "L48",
             "elc": "L48",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Mikael's Toxicity Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61610,7 +61736,7 @@ export let remodded_constants_99 = {
             "exc": "L49",
             "elc": "L49",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Warrior's Wrath Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61629,7 +61755,7 @@ export let remodded_constants_99 = {
             "exc": "L50",
             "elc": "L50",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Blessings of Artemis Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61648,7 +61774,7 @@ export let remodded_constants_99 = {
             "exc": "L51",
             "elc": "L51",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Artio's Calling Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61667,7 +61793,7 @@ export let remodded_constants_99 = {
             "exc": "L52",
             "elc": "L52",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Justitia's Divinity Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61686,7 +61812,7 @@ export let remodded_constants_99 = {
             "exc": "L53",
             "elc": "L53",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Pulsing Presence Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61705,7 +61831,7 @@ export let remodded_constants_99 = {
             "exc": "L54",
             "elc": "L54",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Celestial Caress Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61724,7 +61850,7 @@ export let remodded_constants_99 = {
             "exc": "L55",
             "elc": "L55",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Breaker of Chains Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61743,7 +61869,7 @@ export let remodded_constants_99 = {
             "exc": "L56",
             "elc": "L56",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Silhouette of Silence Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61762,7 +61888,7 @@ export let remodded_constants_99 = {
             "exc": "L57",
             "elc": "L57",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Mangala's Teachings Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61781,7 +61907,7 @@ export let remodded_constants_99 = {
             "exc": "L58",
             "elc": "L58",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Sacrificial Trinity Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61800,7 +61926,7 @@ export let remodded_constants_99 = {
             "exc": "L59",
             "elc": "L59",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Plates of Protection Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61819,7 +61945,7 @@ export let remodded_constants_99 = {
             "exc": "L60",
             "elc": "L60",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61838,7 +61964,7 @@ export let remodded_constants_99 = {
             "exc": "L61",
             "elc": "L61",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61857,7 +61983,7 @@ export let remodded_constants_99 = {
             "exc": "L62",
             "elc": "L62",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61876,7 +62002,7 @@ export let remodded_constants_99 = {
             "exc": "L63",
             "elc": "L63",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61895,7 +62021,7 @@ export let remodded_constants_99 = {
             "exc": "L64",
             "elc": "L64",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61914,7 +62040,7 @@ export let remodded_constants_99 = {
             "exc": "L65",
             "elc": "L65",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61933,7 +62059,7 @@ export let remodded_constants_99 = {
             "exc": "L66",
             "elc": "L66",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61952,7 +62078,7 @@ export let remodded_constants_99 = {
             "exc": "L67",
             "elc": "L67",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61971,7 +62097,7 @@ export let remodded_constants_99 = {
             "exc": "L68",
             "elc": "L68",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -61990,7 +62116,7 @@ export let remodded_constants_99 = {
             "exc": "L69",
             "elc": "L69",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62009,7 +62135,7 @@ export let remodded_constants_99 = {
             "exc": "L70",
             "elc": "L70",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62028,7 +62154,7 @@ export let remodded_constants_99 = {
             "exc": "L71",
             "elc": "L71",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62047,7 +62173,7 @@ export let remodded_constants_99 = {
             "exc": "L72",
             "elc": "L72",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62066,7 +62192,7 @@ export let remodded_constants_99 = {
             "exc": "L73",
             "elc": "L73",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62085,7 +62211,7 @@ export let remodded_constants_99 = {
             "exc": "L74",
             "elc": "L74",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62104,7 +62230,7 @@ export let remodded_constants_99 = {
             "exc": "L75",
             "elc": "L75",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62123,7 +62249,7 @@ export let remodded_constants_99 = {
             "exc": "L76",
             "elc": "L76",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62142,7 +62268,7 @@ export let remodded_constants_99 = {
             "exc": "L77",
             "elc": "L77",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62161,7 +62287,7 @@ export let remodded_constants_99 = {
             "exc": "L78",
             "elc": "L78",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62180,7 +62306,7 @@ export let remodded_constants_99 = {
             "exc": "L79",
             "elc": "L79",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62199,7 +62325,7 @@ export let remodded_constants_99 = {
             "exc": "L80",
             "elc": "L80",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62218,7 +62344,7 @@ export let remodded_constants_99 = {
             "exc": "L81",
             "elc": "L81",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62237,7 +62363,7 @@ export let remodded_constants_99 = {
             "exc": "L82",
             "elc": "L82",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62256,7 +62382,7 @@ export let remodded_constants_99 = {
             "exc": "L83",
             "elc": "L83",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62275,7 +62401,7 @@ export let remodded_constants_99 = {
             "exc": "L84",
             "elc": "L84",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62294,7 +62420,7 @@ export let remodded_constants_99 = {
             "exc": "L85",
             "elc": "L85",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62313,7 +62439,7 @@ export let remodded_constants_99 = {
             "exc": "L86",
             "elc": "L86",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62332,7 +62458,7 @@ export let remodded_constants_99 = {
             "exc": "L87",
             "elc": "L87",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62351,7 +62477,7 @@ export let remodded_constants_99 = {
             "exc": "L88",
             "elc": "L88",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62370,7 +62496,7 @@ export let remodded_constants_99 = {
             "exc": "L89",
             "elc": "L89",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62389,7 +62515,7 @@ export let remodded_constants_99 = {
             "exc": "L90",
             "elc": "L90",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62408,7 +62534,7 @@ export let remodded_constants_99 = {
             "exc": "L91",
             "elc": "L91",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62427,7 +62553,7 @@ export let remodded_constants_99 = {
             "exc": "L92",
             "elc": "L92",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62446,7 +62572,7 @@ export let remodded_constants_99 = {
             "exc": "L93",
             "elc": "L93",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62465,7 +62591,7 @@ export let remodded_constants_99 = {
             "exc": "L94",
             "elc": "L94",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62484,7 +62610,7 @@ export let remodded_constants_99 = {
             "exc": "L95",
             "elc": "L95",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62503,7 +62629,7 @@ export let remodded_constants_99 = {
             "exc": "L96",
             "elc": "L96",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62522,7 +62648,7 @@ export let remodded_constants_99 = {
             "exc": "L97",
             "elc": "L97",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62541,7 +62667,7 @@ export let remodded_constants_99 = {
             "exc": "L98",
             "elc": "L98",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62560,7 +62686,7 @@ export let remodded_constants_99 = {
             "exc": "L99",
             "elc": "L99",
             "iq": 1,
-            "n": "Tal Rasha's Blood Pact",
+            "n": "Tal Rasha's Forsaken Pact",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62579,6 +62705,7 @@ export let remodded_constants_99 = {
             "exc": "C00",
             "elc": "C00",
             "iq": 1,
+            "n": "Ded'domer's Jawbone",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -63922,6 +64049,7 @@ export let remodded_constants_99 = {
             "exc": "Ev1",
             "elc": "Ev1",
             "iq": 1,
+            "n": "Easter Egg",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -63934,13 +64062,15 @@ export let remodded_constants_99 = {
             "c": [
                 "Ingredient",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "custom/easteregg"
         },
         "Ev2": {
             "nc": "Ev2",
             "exc": "Ev2",
             "elc": "Ev2",
             "iq": 1,
+            "n": "Easter Egg",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -63960,6 +64090,7 @@ export let remodded_constants_99 = {
             "exc": "Ev3",
             "elc": "Ev3",
             "iq": 1,
+            "n": "Easter Egg",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -63979,6 +64110,7 @@ export let remodded_constants_99 = {
             "exc": "Ev4",
             "elc": "Ev4",
             "iq": 1,
+            "n": "Easter Egg",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -63998,6 +64130,7 @@ export let remodded_constants_99 = {
             "exc": "Ev5",
             "elc": "Ev5",
             "iq": 1,
+            "n": "Easter Egg",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64017,6 +64150,7 @@ export let remodded_constants_99 = {
             "exc": "Ev6",
             "elc": "Ev6",
             "iq": 1,
+            "n": "Easter Egg",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64036,6 +64170,7 @@ export let remodded_constants_99 = {
             "exc": "Ev7",
             "elc": "Ev7",
             "iq": 1,
+            "n": "Easter Egg",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64055,6 +64190,7 @@ export let remodded_constants_99 = {
             "exc": "Ev8",
             "elc": "Ev8",
             "iq": 1,
+            "n": "Easter Egg",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64074,6 +64210,7 @@ export let remodded_constants_99 = {
             "exc": "m00",
             "elc": "m00",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64103,6 +64240,7 @@ export let remodded_constants_99 = {
             "exc": "m01",
             "elc": "m01",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64132,6 +64270,7 @@ export let remodded_constants_99 = {
             "exc": "m02",
             "elc": "m02",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64161,6 +64300,7 @@ export let remodded_constants_99 = {
             "exc": "m03",
             "elc": "m03",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64190,6 +64330,7 @@ export let remodded_constants_99 = {
             "exc": "m04",
             "elc": "m04",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64219,6 +64360,7 @@ export let remodded_constants_99 = {
             "exc": "m05",
             "elc": "m05",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64248,6 +64390,7 @@ export let remodded_constants_99 = {
             "exc": "m06",
             "elc": "m06",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64277,6 +64420,7 @@ export let remodded_constants_99 = {
             "exc": "m07",
             "elc": "m07",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64306,6 +64450,7 @@ export let remodded_constants_99 = {
             "exc": "m08",
             "elc": "m08",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64335,6 +64480,7 @@ export let remodded_constants_99 = {
             "exc": "m09",
             "elc": "m09",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64364,6 +64510,7 @@ export let remodded_constants_99 = {
             "exc": "m10",
             "elc": "m10",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64393,6 +64540,7 @@ export let remodded_constants_99 = {
             "exc": "m11",
             "elc": "m11",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64422,6 +64570,7 @@ export let remodded_constants_99 = {
             "exc": "m12",
             "elc": "m12",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64451,6 +64600,7 @@ export let remodded_constants_99 = {
             "exc": "m13",
             "elc": "m13",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64480,6 +64630,7 @@ export let remodded_constants_99 = {
             "exc": "m14",
             "elc": "m14",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64509,6 +64660,7 @@ export let remodded_constants_99 = {
             "exc": "m15",
             "elc": "m15",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64538,6 +64690,7 @@ export let remodded_constants_99 = {
             "exc": "m16",
             "elc": "m16",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64567,6 +64720,7 @@ export let remodded_constants_99 = {
             "exc": "m17",
             "elc": "m17",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64596,6 +64750,7 @@ export let remodded_constants_99 = {
             "exc": "m18",
             "elc": "m18",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64625,6 +64780,7 @@ export let remodded_constants_99 = {
             "exc": "m19",
             "elc": "m19",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64654,6 +64810,7 @@ export let remodded_constants_99 = {
             "exc": "m20",
             "elc": "m20",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64683,6 +64840,7 @@ export let remodded_constants_99 = {
             "exc": "m21",
             "elc": "m21",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64712,6 +64870,7 @@ export let remodded_constants_99 = {
             "exc": "m22",
             "elc": "m22",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64741,6 +64900,7 @@ export let remodded_constants_99 = {
             "exc": "m23",
             "elc": "m23",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64770,6 +64930,7 @@ export let remodded_constants_99 = {
             "exc": "m24",
             "elc": "m24",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64799,6 +64960,7 @@ export let remodded_constants_99 = {
             "exc": "m25",
             "elc": "m25",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64828,6 +64990,7 @@ export let remodded_constants_99 = {
             "exc": "m26",
             "elc": "m26",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64857,6 +65020,7 @@ export let remodded_constants_99 = {
             "exc": "m27",
             "elc": "m27",
             "iq": 1,
+            "n": "(>'')> Map <(''<)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64880,6 +65044,7 @@ export let remodded_constants_99 = {
             "exc": "m28",
             "elc": "m28",
             "iq": 1,
+            "n": "Surveyor's Scribbles",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64900,6 +65065,7 @@ export let remodded_constants_99 = {
             "exc": "m29",
             "elc": "m29",
             "iq": 1,
+            "n": "Parchment of Potency",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64920,6 +65086,7 @@ export let remodded_constants_99 = {
             "exc": "m30",
             "elc": "m30",
             "iq": 1,
+            "n": "Quill of Quality",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64940,6 +65107,7 @@ export let remodded_constants_99 = {
             "exc": "m31",
             "elc": "m31",
             "iq": 1,
+            "n": "Ink of Insanity",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64960,6 +65128,7 @@ export let remodded_constants_99 = {
             "exc": "m32",
             "elc": "m32",
             "iq": 1,
+            "n": "Small Charm",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -64987,6 +65156,7 @@ export let remodded_constants_99 = {
             "exc": "m33",
             "elc": "m33",
             "iq": 1,
+            "n": "Large Charm",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -65014,6 +65184,7 @@ export let remodded_constants_99 = {
             "exc": "m34",
             "elc": "m34",
             "iq": 1,
+            "n": "Grand Charm",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -65041,6 +65212,7 @@ export let remodded_constants_99 = {
             "exc": "j00",
             "elc": "j00",
             "iq": 1,
+            "n": "Jewel",
             "hi": 0,
             "gs": 0,
             "gt": 0,

@@ -258,49 +258,65 @@
         />
       </div>
     </div>
-    <div class="form-row">
-      <div class="col-md-2">
-        <label for="unused210">Kills</label>
-        <input
-          id="unused210"
-          v-model.number="save.attributes.unused210"
-          type="number"
-          class="form-control"
-          :min="min(14)"
-          :max="max(14)"
-          @input="change(14, save.attributes, 'unused210')"
-        />
+    <template v-if="work_mod == 'remodded'">
+      <div class="form-row">
+        <div class="col-md-2">
+          <label for="killtrack">Kills</label>
+          <input
+            id="killtrack"
+            v-model.number="save.attributes.killtrack"
+            type="number"
+            class="form-control"
+            :min="min(14)"
+            :max="max(14)"
+            @input="change(14, save.attributes, 'killtrack')"
+          />
+        </div>
+        <div class="col-md-2">
+          <label for="deathtrack">Deaths</label>
+          <input
+            id="deathtrack"
+            v-model.number="save.attributes.deathtrack"
+            type="number"
+            class="form-control"
+            :min="min(15)"
+            :max="max(15)"
+            @input="change(15, save.attributes, 'deathtrack')"
+          />
+        </div>
+        <div class="col-md-2">
+          <label for="unknown_183">Unknown 183</label>
+          <input
+            id="unknown_183"
+            v-model.number="save.attributes.unknown_183"
+            type="number"
+            class="form-control"
+            title="Increases with each block ? In itemstatscost.txt named 'killtrack'"
+            :min="min(14)"
+            :max="max(14)"
+            @input="change(14, save.attributes, 'unknown_183')"
+          />
+        </div>
+        <div class="col-md-2">
+          <label for="unknown_183">Unknown 184</label>
+          <input
+            id="unknown_184"
+            v-model.number="save.attributes.unknown_184"
+            type="number"
+            class="form-control"
+            title="Always 0 ? In itemstatscost.txt named 'deathtrack'"
+            :min="min(14)"
+            :max="max(14)"
+            @input="change(14, save.attributes, 'unknown_184')"
+          />
+        </div>
       </div>
-      <!-- <div class="col-md-2">
-        <label for="pali_killtrack">Paladin Aura Kills ?</label>
-        <input
-          id="pali_killtrack"
-          v-model.number="save.attributes.pali_killtrack"
-          type="number"
-          class="form-control"
-          :min="min(14)"
-          :max="max(14)"
-          @input="change(14, save.attributes, 'unused210')"
-        />
-      </div> -->
-      <div class="col-md-2">
-        <label for="unused211">Deaths</label>
-        <input
-          id="unused211"
-          v-model.number="save.attributes.unused211"
-          type="number"
-          class="form-control"
-          :min="min(15)"
-          :max="max(15)"
-          @input="change(15, save.attributes, 'unused211')"
-        />
-      </div>
-    </div>
+    </template>
   </div>
 </template>
 
 <script>
-import utils from '../utils.js'
+import utils from '../utils.mjs'
 
 const xp = [
   0, 500, 1500, 3750, 7875, 14175, 22680, 32886, 44396, 57715, 72144, 90180,
@@ -328,6 +344,7 @@ export default {
       stats:
         window[`${window.work_mod}_constants_${window.work_version}`]
           .magical_properties,
+      work_mod: window.work_mod,
     }
   },
   watch: {

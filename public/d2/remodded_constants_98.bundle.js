@@ -1889,7 +1889,10 @@ export let remodded_constants_98 = {
         },
         null,
         null,
-        null,
+        {
+            "id": 495,
+            "s": "Poison Conviction"
+        },
         null,
         null,
         {
@@ -2285,7 +2288,10 @@ export let remodded_constants_98 = {
             "s": "Shield of Forsaken Light"
         },
         null, // 650
-        null,
+        {
+            "id": 651,
+            "s": "Spirit Retribution"
+        },
         null,
         {
             "id": 653,
@@ -9652,7 +9658,7 @@ export let remodded_constants_98 = {
         "ex-missiles": [
             {
                 "s": "ex_missiles",
-                "f": 37
+                "f": 1
             }
         ],
         "ex-attacks": [
@@ -9673,6 +9679,18 @@ export let remodded_constants_98 = {
                 "f": 1
             }
         ],
+        "item-cooldownreduction": [
+            {
+                "s": "item_cooldownreduction",
+                "f": 1
+            }
+        ],
+        "buff-length-modifier": [
+            {
+                "s": "buff_length_modifier",
+                "f": 1
+            }
+        ]
     },
     "magical_properties": [
         {
@@ -11462,14 +11480,14 @@ export let remodded_constants_98 = {
         },
         {
             "id": 183,
-            "s": "killtrack",
+            "s": "unknown_183", // killtrack ?
             "c": 1,
             "cB": 32,
             "cS": 0
         },
         {
             "id": 184,
-            "s": "deathtrack",
+            "s": "unknown_184", // deathtrack ?
             "c": 1,
             "cB": 32,
             "cS": 0
@@ -11688,20 +11706,20 @@ export let remodded_constants_98 = {
         },
         {
             "id": 209,
-            "s": "pali_killtrack",
+            "s": "unknown_209", // pali_killtrack ?
             "c": 1,
             "cS": 0
         },
         {
             "id": 210,
-            "s": "unused210",
+            "s": "killtrack", // unused210 ?
             "c": 1,
             "cB": 32,
             "cS": 0
         },
         {
             "id": 211,
-            "s": "unused211",
+            "s": "deathtrack",
             "c": 1,
             "cB": 32,
             "cS": 0
@@ -14835,7 +14853,7 @@ export let remodded_constants_98 = {
             "dV": 2,
             "dP": "Rune Points (Ultra):",
             "dN": "Rune Points (Ultra):"
-        }
+        },
     ],
     "runewords": [
         null,
@@ -21849,7 +21867,7 @@ export let remodded_constants_98 = {
             "i": "D2R_Jank",
             "c": "rin",
             "tc": "cblu",
-            "hdi": "custom/storagebag"
+            "hdi": "misc/ring/ring"
         },
         {
             "id": 542,
@@ -53623,7 +53641,7 @@ export let remodded_constants_98 = {
                 "Ingredient",
                 "Miscellaneous"
             ],
-            "hdi": "custom/reroller"
+            "hdi": "custom/BelialScroll"
         },
         "a00": {
             "nc": "a00",
@@ -64009,7 +64027,8 @@ export let remodded_constants_98 = {
             "c": [
                 "Ingredient",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "custom/easteregg"
         },
         "Ev2": {
             "nc": "Ev2",
@@ -64029,7 +64048,8 @@ export let remodded_constants_98 = {
             "c": [
                 "Ingredient",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "custom/easteregg"
         },
         "Ev3": {
             "nc": "Ev3",
@@ -64049,7 +64069,8 @@ export let remodded_constants_98 = {
             "c": [
                 "Ingredient",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "custom/easteregg"
         },
         "Ev4": {
             "nc": "Ev4",
@@ -64069,7 +64090,8 @@ export let remodded_constants_98 = {
             "c": [
                 "Ingredient",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "custom/easteregg"
         },
         "Ev5": {
             "nc": "Ev5",
@@ -64089,7 +64111,8 @@ export let remodded_constants_98 = {
             "c": [
                 "Ingredient",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "custom/easteregg"
         },
         "Ev6": {
             "nc": "Ev6",
@@ -64109,7 +64132,8 @@ export let remodded_constants_98 = {
             "c": [
                 "Ingredient",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "custom/easteregg"
         },
         "Ev7": {
             "nc": "Ev7",
@@ -64129,7 +64153,8 @@ export let remodded_constants_98 = {
             "c": [
                 "Ingredient",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "custom/easteregg"
         },
         "Ev8": {
             "nc": "Ev8",
@@ -64149,7 +64174,8 @@ export let remodded_constants_98 = {
             "c": [
                 "Ingredient",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "custom/easteregg"
         },
         "m00": {
             "nc": "m00",

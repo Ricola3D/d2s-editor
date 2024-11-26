@@ -22,6 +22,7 @@ This is a basic Diablo 2 save editor for D2 and D2R. The parser uses the TXT dat
 
 ```
 npm install --legacy-peer-deps
+npm run generate
 npm run build
 ```
 

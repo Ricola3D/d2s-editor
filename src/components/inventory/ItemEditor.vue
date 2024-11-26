@@ -300,8 +300,8 @@
               />
             </template>
 
-            <!-- Magic or unique: personalized name -->
-            <template v-if="item.quality == 4 || item.quality == 7">
+            <!-- Other than runewords: personalized name -->
+            <!-- <template v-if="!item.given_runeword"> -->
               <label>&#187;&#187; Personalized Name</label>
               <input
                 class="edit-box"
@@ -310,7 +310,7 @@
                 @change="onEvent('update')"
                 pattern="^[A-Za-z](?=.{0,14}$)[A-Za-z]*[A-Za-z\-_][A-Za-z]+$"
               />
-            </template>
+            <!-- </template> -->
 
             <!-- Ethereal -->
             <label>Ethereal</label>
@@ -324,16 +324,18 @@
                 @change="onEvent('update')"
             /></label>
 
-            <!-- Sockets -->
-            <label>Sockets</label>
-            <input
-              v-model.number="item.total_nr_of_sockets"
-              class="edit-box"
-              type="number"
-              min="0"
-              max="8"
-              @input="onEvent('update')"
-            />
+            <template v-if="item.max_sockets">
+              <!-- Sockets -->
+              <label>Sockets</label>
+              <input
+                v-model.number="item.total_nr_of_sockets"
+                class="edit-box"
+                type="number"
+                min="0"
+                max="8"
+                @input="onEvent('update')"
+              />
+            </template>
           </template>
         </div>
       </ul>
@@ -402,7 +404,7 @@
 <script>
 import Item from './Item.vue'
 import ItemStatsEditor from './ItemStatsEditor.vue'
-import utils from '../../utils.js'
+import utils from '../../utils.mjs'
 
 export default {
   name: 'ItemEditor',
@@ -591,12 +593,11 @@ export default {
       let bases = []
       const base = items[code]
       if (base) {
-        //NORMAL SET UNIQUE CRAFTED
         if (
-          this.item.quality == 5 ||
-          this.item.quality == 6 ||
-          this.item.quality == 7 ||
-          this.item.quality == 8
+          this.item.quality == 5 || // set
+          // this.item.quality == 6 || // rare
+          this.item.quality == 7 /*||*/ // unique
+          // this.item.quality == 8 // crafted
         ) {
           bases = [base.nc, base.exc, base.elc].filter((id) => items[id])
           //items.filter(e => e[1].nc == code || e[1].exc == code || e[1].elc == code)

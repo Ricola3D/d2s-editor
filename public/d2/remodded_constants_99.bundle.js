@@ -2293,7 +2293,10 @@ export let remodded_constants_99 = {
             "s": "Shield of Forsaken Light"
         },
         null, // 650
-        null,
+        {
+            "id": 651,
+            "s": "Spirit Retribution"
+        },
         null,
         {
             "id": 653,
@@ -9700,6 +9703,18 @@ export let remodded_constants_99 = {
                 "f": 1
             }
         ],
+        "item-cooldownreduction": [
+            {
+                "s": "item_cooldownreduction",
+                "f": 1
+            }
+        ],
+        "buff-length-modifier": [
+            {
+                "s": "buff_length_modifier",
+                "f": 1
+            }
+        ]
     },
     "magical_properties": [
         {
@@ -11479,14 +11494,14 @@ export let remodded_constants_99 = {
         },
         {
             "id": 183,
-            "s": "killtrack",
+            "s": "unknown_183", // killtrack ?
             "c": 1,
             "cB": 32,
             "cS": 0
         },
         {
             "id": 184,
-            "s": "deathtrack",
+            "s": "unknown_184", // deathtrack ?
             "c": 1,
             "cB": 32,
             "cS": 0
@@ -11750,20 +11765,20 @@ export let remodded_constants_99 = {
         },
         {
             "id": 209,
-            "s": "pali_killtrack",
+            "s": "unknown_209", // pali_killtrack ?
             "c": 1,
             "cS": 0
         },
         {
             "id": 210,
-            "s": "unused210",
+            "s": "killtrack", // unused210 ?
             "c": 1,
             "cB": 32,
             "cS": 0
         },
         {
             "id": 211,
-            "s": "unused211",
+            "s": "deathtrack", // unused211 ?
             "c": 1,
             "cB": 32,
             "cS": 0
@@ -21887,7 +21902,7 @@ export let remodded_constants_99 = {
             "i": "D2R_Jank",
             "c": "rin",
             "tc": "cblu",
-            "hdi": "custom/storagebag"
+            "hdi": "misc/ring/ring"
         },
         {
             "id": 542,
@@ -53661,7 +53676,7 @@ export let remodded_constants_99 = {
                 "Ingredient",
                 "Miscellaneous"
             ],
-            "hdi": "custom/reroller"
+            "hdi": "custom/BelialScroll"
         },
         "a00": {
             "nc": "a00",
@@ -60705,27 +60720,27 @@ export let remodded_constants_99 = {
                     {
                         "code": "r35",
                         "type": "weapon",
-                        "m": "weight-capacity",
-                        "min": 3,
-                        "max": 3
+                        "m": "item-cooldownreduction",
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
                     {
                         "code": "r35",
                         "type": "helm",
-                        "m": "weight-capacity",
-                        "min": 3,
-                        "max": 3
+                        "m": "buff-length-modifier",
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
                     {
                         "code": "r35",
                         "type": "shield",
-                        "m": "weight-capacity",
-                        "min": 3,
-                        "max": 3
+                        "m": "item-cooldownreduction",
+                        "min": 10,
+                        "max": 10
                     }
                 ]
             ],
@@ -64047,7 +64062,8 @@ export let remodded_constants_99 = {
             "c": [
                 "Ingredient",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "custom/easteregg"
         },
         "Ev2": {
             "nc": "Ev2",

@@ -79,8 +79,8 @@
           v-model.number="stat.values[valIdx - 1]"
           type="number"
           class="edit-box"
-          :min="getMinValue(stat.id)"
-          :max="getMaxValue(stat.id)"
+          :min="getMinValue(stat.id, valIdx - 1)"
+          :max="getMaxValue(stat.id, valIdx - 1)"
           @input="changeStatValue(stat.id, stat.values, valIdx - 1)"
         />
       </div>
@@ -95,7 +95,7 @@
 </template>
 
 <script>
-import utils from '../../utils.js'
+import utils from '../../utils.mjs'
 import tippy from 'tippy.js'
 
 export default {
@@ -137,28 +137,44 @@ export default {
       }
       this.$emit('stat-change', this.itemStats)
     },
-    getMaxValue(statId) {
+    getMaxValue(statId, valIdx) {
       let stat =
         window[`${window.work_mod}_constants_${window.work_version}`]
           .magical_properties[statId]
+      if (valIdx > 0) {
+        if (stat.np && valIdx < stat.np) {
+          // Stat is a succession of np values (ex: coldmindam > coldmaxdam > coldlength)
+          stat = window[`${window.work_mod}_constants_${window.work_version}`]
+          .magical_properties[statId + valIdx]
+        }
+        // TODO: encode
+      }
       let add = stat.sA ? stat.sA : 0
       return utils.shift(1, stat.sB) - 1 - add
       // let maxValue = stat.sS ? utils.shift(1, stat.sB - 1) - 1 - add : utils.shift(1, stat.sB) - 1 - add;
       // return maxValue
     },
-    getMinValue(statId) {
+    getMinValue(statId, valIdx) {
       //for the stat to be present need value > 0
       let stat =
         window[`${window.work_mod}_constants_${window.work_version}`]
           .magical_properties[statId]
+      if (valIdx > 0) {
+        if (stat.np && valIdx < stat.np) {
+          // Stat is a succession of np values (ex: coldmindam > coldmaxdam > coldlength)
+          stat = window[`${window.work_mod}_constants_${window.work_version}`]
+          .magical_properties[statId + valIdx]
+        }
+        // TODO: encode
+      }
       let add = stat.sA ? stat.sA : 0
       return -add
       // let minValue = stat.sS ? -1 * utils.shift(1, stat.sB - 1) - add : -add;
       // return minValue
     },
     changeStatValue(statId, statValues, valueIdx) {
-      let maxValue = this.getMaxValue(statId),
-        minValue = this.getMinValue(statId)
+      let maxValue = this.getMaxValue(statId, valueIdx),
+        minValue = this.getMinValue(statId, valueIdx)
       if (statValues[valueIdx] > maxValue) {
         statValues[valueIdx] = maxValue
       } else if (statValues[valueIdx] < minValue) {

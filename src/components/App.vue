@@ -688,7 +688,7 @@ import ItemEditor from './inventory/ItemEditor.vue'
 
 import ItemPack from '../d2/ItemPack.js'
 import CharPack from '../d2/CharPack.js'
-import utils from '../utils.js'
+import utils from '../utils.mjs'
 
 export default {
   components: {
@@ -799,31 +799,19 @@ export default {
       this.$refs.contextMenu.close()
     },
     async getPaletteData() {
-      window.palettes = {}
-      window.palettes['ACT1'] = []
-      let response = await fetch(
-        `d2/game_data/${window.work_mod}/version_${window.work_version}/global/palette/ACT1/pal.dat`
-      )
-      let buffer = new Uint8Array(await response.arrayBuffer())
-      for (let i = 0; i < 256; i += 1) {
-        window.palettes['ACT1'].push([
-          buffer[i * 3 + 2],
-          buffer[i * 3 + 1],
-          buffer[i * 3],
-        ])
+      let a1PaletteBuffer
+      const colorMapBuffers = {}
+      let response = await fetch(utils.a1PalettePath)
+      a1PaletteBuffer = new Uint8Array(await response.arrayBuffer())
+      for (const [index, colorMapPath] of Object.entries(utils.colormapPaths)) {
+        response = await fetch(colorMapPath)
+        colorMapBuffers[index] = new Uint8Array(await response.arrayBuffer())
       }
-      for (const [k, v] of Object.entries(utils.colormaps)) {
-        response = await fetch(v)
-        buffer = new Uint8Array(await response.arrayBuffer())
-        window.palettes[k] = []
-        for (let i = 0; i < Object.keys(utils.colors).length; i += 1) {
-          window.palettes[k].push(buffer.slice(0 + i * 256, 256 + i * 256))
-        }
-      }
+      utils.fillPalettes(a1PaletteBuffer, colorMapBuffers)
     },
     onModChange(event) {
       window.work_mod = event.target.value
-      this.getPaletteData()
+      // this.getPaletteData()
     },
     optionClicked(event) {
       switch (event.option.text) {
