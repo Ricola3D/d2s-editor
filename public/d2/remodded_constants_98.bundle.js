@@ -22398,6 +22398,14 @@ export let remodded_constants_98 = {
         },
         {
             "id": 625,
+            "index": "Crainte Vomir",
+            "n": "Crainte Vomir",
+            "i": "D2R_Jank",
+            "c": "Ss4",
+            "hdi": "custom/katana"
+        },
+        {
+            "id": 626,
             "index": "Spiritual Sentinel",
             "n": "Spiritual Sentinel",
             "i": "D2R_Jank",
@@ -22405,13 +22413,13 @@ export let remodded_constants_98 = {
             "hdi": "custom/spiritarmor4"
         },
         {
-            "id": 626,
+            "id": 627,
             "index": "Spiritual Warden",
             "n": "Spiritual Warden",
             "i": "D2R_Jank",
             "c": "utp",
             "hdi": "custom/spiritarmor5"
-        },
+        }
     ],
     "stackables": {
         "tkf": {
