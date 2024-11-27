@@ -19826,7 +19826,7 @@ export let remodded_constants_98 = {
             "i": "D2R_Jank",
             "c": "amb",
             "tc": "dgld",
-            "hdi": "weapon/bow/hellclap"
+            "hdi": "custom/rmd_bow1"
         },
         {
             "id": 294,
@@ -22378,7 +22378,40 @@ export let remodded_constants_98 = {
             "i": "D2R_Jank",
             "c": "m34",
             "hdi": "custom/Null_Charm"
-        }
+        },
+        null, // 615
+        null,
+        null,
+        null,
+        null,
+        null, // 620
+        null,
+        null,
+        null,
+        {
+            "id": 624,
+            "index": "Crainte Vomir",
+            "n": "Crainte Vomir",
+            "i": "D2R_Jank",
+            "c": "Ss3",
+            "hdi": "custom/katana"
+        },
+        {
+            "id": 625,
+            "index": "Spiritual Sentinel",
+            "n": "Spiritual Sentinel",
+            "i": "D2R_Jank",
+            "c": "utp",
+            "hdi": "custom/spiritarmor4"
+        },
+        {
+            "id": 626,
+            "index": "Spiritual Warden",
+            "n": "Spiritual Warden",
+            "i": "D2R_Jank",
+            "c": "utp",
+            "hdi": "custom/spiritarmor5"
+        },
     ],
     "stackables": {
         "tkf": {
@@ -39102,6 +39135,92 @@ export let remodded_constants_98 = {
             ],
             "hdi": "custom/katana"
         },
+        "Ss3": {
+            "nc": "2hs",
+            "exc": "92h",
+            "elc": "Ss3",
+            "iq": 2,
+            "n": "Shinogi",
+            "durability": 110,
+            "mind": 28,
+            "maxd": 70,
+            "min2d": 63,
+            "max2d": 118,
+            "rs": 105,
+            "rd": 125,
+            "hi": 1,
+            "gs": 4,
+            "gt": 0,
+            "i": "inv2hs",
+            "ui": "inv2hsu",
+            "si": "inv2hsu",
+            "iw": 1,
+            "ih": 4,
+            "it": 2,
+            "ig": [],
+            "eq1n": "Assassin Claws",
+            "eq2n": "Sword",
+            "c": [
+                "Assassin Katanas",
+                "Assassin Claws",
+                "Melee Weapon",
+                "Weapon",
+                "Gold",
+                "Miscellaneous",
+                "Assassin Item",
+                "Class Specific",
+                "Sword",
+                "Melee Weapon",
+                "Weapon",
+                "Gold",
+                "Miscellaneous",
+                "Merc 5 Weapon"
+            ],
+            "hdi": "custom/katana"
+        },
+        "Ss4": {
+            "nc": "2hs",
+            "exc": "92h",
+            "elc": "Ss4",
+            "iq": 2,
+            "n": "Shinogi",
+            "durability": 110,
+            "mind": 28,
+            "maxd": 70,
+            "min2d": 63,
+            "max2d": 118,
+            "rs": 105,
+            "rd": 125,
+            "hi": 1,
+            "gs": 4,
+            "gt": 0,
+            "i": "inv2hs",
+            "ui": "inv2hsu",
+            "si": "inv2hsu",
+            "iw": 1,
+            "ih": 4,
+            "it": 2,
+            "ig": [],
+            "eq1n": "Assassin Claws",
+            "eq2n": "Sword",
+            "c": [
+                "Assassin Katanas",
+                "Assassin Claws",
+                "Melee Weapon",
+                "Weapon",
+                "Gold",
+                "Miscellaneous",
+                "Assassin Item",
+                "Class Specific",
+                "Sword",
+                "Melee Weapon",
+                "Weapon",
+                "Gold",
+                "Miscellaneous",
+                "Merc 5 Weapon"
+            ],
+            "hdi": "custom/katana"
+        },
         "7cm": {
             "nc": "clm",
             "exc": "9cm",
@@ -42627,7 +42746,8 @@ export let remodded_constants_98 = {
                 "Gold",
                 "Miscellaneous",
                 "Merc 5 Weapon"
-            ]
+            ],
+            "hdi": "custom/DemonGreatSword"
         }
     },
     "other_items": {
@@ -48421,7 +48541,7 @@ export let remodded_constants_98 = {
             "c": [
                 "Quest"
             ],
-            "hdi": "misc/key/mephisto_key"
+            "hdi": "misc/key/mephisto_key2"
         },
         "pk3": {
             "nc": "pk3",
@@ -48440,7 +48560,7 @@ export let remodded_constants_98 = {
             "c": [
                 "Quest"
             ],
-            "hdi": "misc/key/mephisto_key"
+            "hdi": "misc/key/mephisto_key3"
         },
         "dhn": {
             "nc": "dhn",
@@ -49753,7 +49873,7 @@ export let remodded_constants_98 = {
                 "Token",
                 "Miscellaneous"
             ],
-            "hdi": "custom/token_global"
+            "hdi": "custom/evil_token"
         },
         "TK1": {
             "nc": "TK1",
@@ -62683,7 +62803,8 @@ export let remodded_constants_98 = {
             "c": [
                 "Ingredient",
                 "Miscellaneous"
-            ]
+            ],
+            "hdi": "misc/body_part/jawbone"
         },
         "C01": {
             "nc": "C01",
@@ -65021,7 +65142,17 @@ export let remodded_constants_98 = {
                 "Parchment",
                 "Miscellaneous"
             ],
-            "hdi": "custom/AdventureMapl"
+            "hdi": "custom/AdventureMapl",
+            "hdig": [
+                "custom/Parchment1",
+                "custom/Parchment2",
+                "custom/Parchment3",
+                "custom/Parchment4",
+                "custom/Parchment5",
+                "custom/Parchment6",
+                "custom/Parchment7",
+                "custom/Parchment8"
+            ]
         },
         "m30": {
             "nc": "m30",
@@ -65041,7 +65172,7 @@ export let remodded_constants_98 = {
                 "Ingredient",
                 "Miscellaneous"
             ],
-            "hdi": "custom/AdventureMapl"
+            "hdi": "custom/Quill"
         },
         "m31": {
             "nc": "m31",
@@ -65061,7 +65192,7 @@ export let remodded_constants_98 = {
                 "Ingredient",
                 "Miscellaneous"
             ],
-            "hdi": "custom/AdventureMapl"
+            "hdi": "custom/Ink"
         },
         "m32": {
             "nc": "m32",
@@ -65089,7 +65220,12 @@ export let remodded_constants_98 = {
                 "Potion",
                 "Miscellaneous"
             ],
-            "hdi": "custom/AdventureMapl"
+            "hdi": "misc/charm/charm_small",
+            "hdig": [
+                "misc/charm/charm_small1",
+                "misc/charm/charm_small2",
+                "misc/charm/charm_small3"
+            ]
         },
         "m33": {
             "nc": "m33",
@@ -65117,7 +65253,12 @@ export let remodded_constants_98 = {
                 "Potion",
                 "Miscellaneous"
             ],
-            "hdi": "custom/AdventureMapl"
+            "hdi": "misc/charm/charm_medium",
+            "hdig": [
+                "misc/charm/charm_medium1",
+                "misc/charm/charm_medium2",
+                "misc/charm/charm_medium3"
+            ]
         },
         "m34": {
             "nc": "m34",
@@ -65145,7 +65286,12 @@ export let remodded_constants_98 = {
                 "Potion",
                 "Miscellaneous"
             ],
-            "hdi": "custom/AdventureMapl"
+            "hdi": "misc/charm/charm_large",
+            "hdig": [
+                "misc/charm/charm_large1",
+                "misc/charm/charm_large2",
+                "misc/charm/charm_large3"
+            ]
         },
         "j00": {
             "nc": "j00",

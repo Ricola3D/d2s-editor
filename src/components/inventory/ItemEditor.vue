@@ -496,6 +496,7 @@ export default {
       unq_items_options: window[
         `${window.work_mod}_constants_${window.work_version}`
       ].unq_items
+        .filter((item) => !!item) // In case some unique ids are null "Evil Token"
         //.filter((item) => item.n) // In case some names are missing in the constants data
         .map((item) => ({
           value: item.id,

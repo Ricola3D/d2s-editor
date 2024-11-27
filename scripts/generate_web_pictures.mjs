@@ -59,9 +59,10 @@ function generateItemsWebImage(mod, version) {
                 // imgPng.pack().pipe(fs.createWriteStream(ouputPath)) // Will create an "Error: EMFILE: too many open files"
                 const buffer = PNG.sync.write(imgPng)
                 fs.writeFileSync(ouputPath, buffer)
+                console.log(`Generated file ${file}`)
               }
             } catch (err) {
-              console.log(`Failed to parse file ${file}`, err)
+              console.warn(`Skipped file ${file} which is corrupted` /*, err*/)
             }
           }
         }
@@ -101,6 +102,7 @@ function generateItemsWebImage(mod, version) {
             // imgPng.pack().pipe(fs.createWriteStream(ouputPath)) // Will create an "Error: EMFILE: too many open files"
             const buffer = PNG.sync.write(imgPng)
             fs.writeFileSync(ouputPath, buffer)
+            console.log(`Generated file ${file}`)
           }
         }
       }
