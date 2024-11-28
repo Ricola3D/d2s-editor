@@ -8,6 +8,9 @@
         <button type="button" class="btn btn-primary" @click="onEvent('copy')">
           Copy
         </button>
+        <button type="button" class="btn btn-primary" @click="onEvent('cut')">
+          Cut
+        </button>
         <span v-if="item.location_id != 6">
           <button
             type="button"
@@ -52,7 +55,23 @@
               />
             </div>
           </template>
-
+          <!-- Time & Timestamp -->
+          <!-- <label>Timestamp</label>
+          <input
+              v-model.number="item.timestamp"
+              class="edit-box"
+              type="number"
+              min="0"
+              @input="onEvent('update')"
+            />
+          <label>Time</label>
+          <input
+              v-model.number="item.time"
+              class="edit-box"
+              type="number"
+              min="0"
+              @input="onEvent('update')"
+            /> -->
           <template v-if="isStackable()">
             <label>Quantity</label>
             <input
@@ -618,7 +637,7 @@ export default {
         }
         bases = Object.entries(items)
           .filter((entry) => bases.includes(entry[0]))
-          .map((entry) => ({ value: entry[0], label: entry[1].n }))
+          .map((entry) => ({ value: entry[0], label: /*"(" + entry[0] + ") " +*/ entry[1].n }))
       }
       return bases
     },
@@ -632,7 +651,7 @@ export default {
       } else if (this.item.type_id == 4) {
         return Object.entries(constants.other_items)
           .filter((entry) => entry[1].n)
-          .map((entry) => ({ value: entry[0], label: entry[1].n }))
+          .map((entry) => ({ value: entry[0], label: /*"(" + entry[0] + ") " +*/ entry[1].n }))
       } else {
         return []
       }

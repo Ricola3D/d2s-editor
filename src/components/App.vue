@@ -827,6 +827,12 @@ export default {
             item: event.obj,
           })
           break
+          case 'Cut':
+          this.onEvent({
+            type: 'cut',
+            item: event.obj,
+          })
+          break
         case 'Share':
           this.onEvent({
             type: 'share',
@@ -898,6 +904,18 @@ export default {
         this.shareItem(e.item)
       } else if (e.type == 'copy') {
         this.clipboard = cloneDeep(e.item)
+      } else if (e.type == 'cut') {
+        this.clipboard = cloneDeep(e.item)
+        let idx = this.findIndex(this.save.items, e.item)
+        if (idx != -1) {
+          this.deleteItem(this.save.items, idx)
+          return
+        }
+        idx = this.findIndex(this.save.merc_items, e.item)
+        if (idx != -1) {
+          this.deleteItem(this.save.merc_items, idx)
+          return
+        }
       } else if (e.type == 'update') {
         d2s.enhanceItems(
           [e.item],

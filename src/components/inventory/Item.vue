@@ -113,7 +113,6 @@ export default {
     }
   },
   methods: {
-    getInventoryImage() {},
     socketStyle(idx) {
       const cellSize = 32
       const countX = Math.max(
@@ -160,7 +159,7 @@ export default {
       }
     },
     itemName(item) {
-      let name = item.type_name
+      let name = /*"(" + item.type + ") " +*/ item.type_name
       const constants =
         window[`${window.work_mod}_constants_${window.work_version}`]
       if (item.quality === d2s.types.Quality.Magic && item.magic_prefix) {

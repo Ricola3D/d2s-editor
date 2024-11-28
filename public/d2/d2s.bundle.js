@@ -19730,6 +19730,7 @@ function newItem() {
         class_specific: 0,
         low_quality_id: 0,
         timestamp: 0,
+        time: 0,
         ear_attributes: {
             class: 0,
             level: 0,
@@ -20146,6 +20147,9 @@ function readItem(reader, mod, version, config) {
                         }
                         //realm data
                         item.timestamp = reader.ReadUInt8(1);
+                        if (item.timestamp || item.categories.includes("Body Part")) {
+                            item.time = reader.ReadUInt32(30);
+                        }
                         if (item.type_id === types_1.ItemType.Armor) {
                             item.defense_rating = reader.ReadUInt16(constants.magical_properties[31].sB) - constants.magical_properties[31].sA;
                         }
@@ -20170,6 +20174,7 @@ function readItem(reader, mod, version, config) {
                             item.set_list_count = 0;
                             item._unknown_data.plist_flag = plist_flag;
                         }
+                        console.log("_unknown_data: " + JSON.stringify(item._unknown_data));
                         magic_attributes = _readMagicAttributes(reader, constants);
                         item.magic_attributes = magic_attributes;
                         while (plist_flag > 0) {
@@ -20314,6 +20319,9 @@ function writeItem(item, mod, version, config) {
                             writer.WriteUInt8(1, 5);
                         }
                         writer.WriteUInt8(item.timestamp, 1);
+                        if (item.timestamp || item.categories.includes("Body Part")) {
+                            writer.WriteUInt32(item.time, 30);
+                        }
                         if (item.type_id === types_1.ItemType.Armor || item.type_id === types_1.ItemType.Shield) {
                             writer.WriteUInt16(item.defense_rating + constants.magical_properties[31].sA, constants.magical_properties[31].sB);
                         }
@@ -20401,6 +20409,7 @@ function _readSimpleBits(item, reader, version, constants /*, config: types.ICon
     item.position_y = reader.ReadUInt8(4);
     item.alt_position_id = reader.ReadUInt8(3);
     if (item.is_ear) {
+        item.type = "ear";
         var clazz = reader.ReadUInt8(3);
         var level = reader.ReadUInt8(7);
         var arr = new Uint8Array(15);

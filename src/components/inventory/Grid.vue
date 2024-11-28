@@ -91,6 +91,7 @@ export default {
       this.contextMenu.showContextMenu($evt, item, [
         { text: 'Select' },
         { text: 'Copy' },
+        { text: 'Cut' },
         { text: 'Share' },
         { text: 'Delete' },
       ])
