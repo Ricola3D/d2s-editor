@@ -83,7 +83,7 @@
               type="button"
               class="btn btn-primary"
               data-dismiss="modal"
-              @click="loadBase64Item"
+              @click="loadFromString"
             >
               Load From String
             </button>
@@ -1039,9 +1039,37 @@ export default {
     // Callback to read the input-select value and fill the preview thumbnail
     async previewItem(/* event */) {
       if (this.previewModel) {
-        let bytes = utils.b64StringToArrayBuffer(this.previewModel.base64)
-        this.readItem(bytes, this.previewModel.mod, this.previewModel.version)
+        if (!this.previewModel.mod || !this.previewModel.version) {
+          throw new Error('No mod and version specified.')
+        }
+        if (this.previewModel.object) {
+          this.preview = cloneDeep(this.previewModel.object)
+        } else if (this.previewModel.base64) {
+          bytes = utils.b64StringToArrayBuffer(this.previewModel.base64)
+          this.preview = await d2s.readItem(bytes, this.previewModel.mod, this.previewModel.version)
+        } else if (this.previewModel.hex) {
+          bytes = utils.hexStringToArrayBuffer(this.previewModel.hex)
+          this.preview = await d2s.readItem(bytes, this.previewModel.mod, this.previewModel.version)
+        } else {
+          throw new Error('No item code in the input.')
+        }
+        await this.resolveInventoryImage(this.preview)
+        utils.removeMaxDurabilityFromRunwords(this.preview)
       }
+    },
+    async onItemFileLoad(event) {
+      this.previewModel = {
+        base64: arrayBufferToBase64String(event.target.result),
+        mod: window.work_mod,
+        version: window.work_version
+      }
+      this.previewItem()
+    },
+    onItemFileChange(event) {
+      let reader = new FileReader();
+      reader.onload = this.onItemFileLoad;
+      reader.readAsArrayBuffer(event.target.files[0]);
+      event.target.value = null;
     },
     // Method to load an item from its a JSON {mod, version, base64 or hex} or simply a base64 string (mod & version will be set to vanilla 99 by default).
     async loadFromString() {
@@ -1049,18 +1077,9 @@ export default {
         'Please enter a JSON with mod, version and base64 or hex.'
       )
       try {
-        let obj = JSON.parse(input)
-        let bytes = null
-        if (!obj.mod || !obj.version) {
-          throw new Error('No mod and version specified.')
-        }
-        if (obj.b64) bytes = utils.b64StringToArrayBuffer(obj.b64)
-        else if (obj.hex) {
-          bytes = utils.hexStringToArrayBuffer(obj.hex)
-        } else {
-          throw new Error('No item code in the input.')
-        }
-        await this.readItem(bytes, obj.mod, obj.version)
+        this.previewModel = JSON.parse(input)
+        await this.previewItem()
+        
         this.paste(this.preview)
       } catch (e) {
         alert('Failed to load the item, contact the Administrator.')
@@ -1441,7 +1460,7 @@ export default {
             newItem.max_durability = typeData.durability
           } else {
             if (typeData.s) {
-              newItem.quantity = 99
+              newItem.quantity = typeData.smax || typeData.sspawn || 1
             }
           }
 
@@ -1455,13 +1474,13 @@ export default {
         this.save ? this.save.attributes : null
       )
       for (const item of newItems) {
-        let bytes = await d2s.writeItem(
-          item,
-          window.work_mod,
-          window.work_version
-        )
-        let base64 = utils.arrayBufferToBase64String(bytes)
-        let hex = utils.arrayBufferToHexString(bytes)
+        // let bytes = await d2s.writeItem(
+        //   item,
+        //   window.work_mod,
+        //   window.work_version
+        // )
+        // let base64 = utils.arrayBufferToBase64String(bytes)
+        // let hex = utils.arrayBufferToHexString(bytes)
         let category = item.categories[0]
         this.itempack.push({
           key:
@@ -1475,8 +1494,9 @@ export default {
           value: {
             mod: window.work_mod,
             version: window.work_version,
-            base64: base64,
-            hex: hex,
+            // base64: base64,
+            // hex: hex,
+            object: item
           },
         })
       }
