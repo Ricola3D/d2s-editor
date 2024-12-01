@@ -17681,6 +17681,13 @@ function enhanceItem(item, mod, version, attributes, config, parent) {
                 item.max_durability = details.durability - Math.ceil(details.durability / 2) + 1;
             }
         }
+        // Enforce stackable consistency
+        if (details.s) {
+            item.quantity = boundValue(item.quantity, 1, details.smax || 500);
+        }
+        else {
+            item.quantity = 0;
+        }
         // Enforce total_nr_of_sockets between 0 and max for this item type
         item.total_nr_of_sockets = boundValue(item.total_nr_of_sockets, 0, details.gs || 0);
         // Enforce coherence between total_nr_of_sockets & socketed
@@ -19729,8 +19736,8 @@ function newItem() {
         picture_id: 0,
         class_specific: 0,
         low_quality_id: 0,
-        timestamp: 0,
-        time: 0,
+        timestamp: 0, // 1 for returned body piece, 0 otherwise
+        time: 0, // for body pieces
         ear_attributes: {
             class: 0,
             level: 0,
@@ -20174,7 +20181,6 @@ function readItem(reader, mod, version, config) {
                             item.set_list_count = 0;
                             item._unknown_data.plist_flag = plist_flag;
                         }
-                        console.log("_unknown_data: " + JSON.stringify(item._unknown_data));
                         magic_attributes = _readMagicAttributes(reader, constants);
                         item.magic_attributes = magic_attributes;
                         while (plist_flag > 0) {
@@ -20382,21 +20388,21 @@ function _readSimpleBits(item, reader, version, constants /*, config: types.ICon
     //[flags:32][version:3][mode:3]([invloc:4][x:4][y:4][page:3])([itemcode:variable])([sockets:3])
     item._unknown_data.b0_3 = reader.ReadBitArray(4);
     item.identified = reader.ReadBit();
-    item._unknown_data.b5_10 = reader.ReadBitArray(6);
+    item._unknown_data.b5_10 = reader.ReadBitArray(6); // 3b>unk, 1b>broken, 2b>unk
     item.socketed = reader.ReadBit();
-    item._unknown_data.b12 = reader.ReadBitArray(1);
+    item._unknown_data.b12 = reader.ReadBitArray(1); // ? 0x00
     item.new = reader.ReadBit();
-    item._unknown_data.b14_15 = reader.ReadBitArray(2);
+    item._unknown_data.b14_15 = reader.ReadBitArray(2); // ? 0x00
     item.is_ear = reader.ReadBit();
     item.starter_item = reader.ReadBit();
-    item._unknown_data.b18_20 = reader.ReadBitArray(3);
-    item.simple_item = reader.ReadBit();
+    item._unknown_data.b18_20 = reader.ReadBitArray(3); // 1b>unk, 2b>? 0x03 for version 71 with 15, 26 or 31 bytes, otherwise 0x00
+    item.simple_item = reader.ReadBit(); // compact
     item.ethereal = reader.ReadBit();
-    item._unknown_data.b23 = reader.ReadBitArray(1);
+    item._unknown_data.b23 = reader.ReadBitArray(1); // ? 0x01 for versions 87+, otherwise 0x00
     item.personalized = reader.ReadBit();
-    item._unknown_data.b25 = reader.ReadBitArray(1);
+    item._unknown_data.b25 = reader.ReadBitArray(1); // ? 0x00
     item.given_runeword = reader.ReadBit();
-    item._unknown_data.b27_31 = reader.ReadBitArray(5);
+    item._unknown_data.b27_31 = reader.ReadBitArray(5); // ? 0x00
     if (version <= 0x60) {
         item.version = reader.ReadUInt16(10).toString(10);
     }

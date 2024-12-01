@@ -40,6 +40,16 @@
               min="0"
               @input="onEvent('update')"
             />
+          <!-- iLevel -->
+          <label>Item Level</label>
+          <input
+            v-model.number="item.level"
+            class="edit-box"
+            type="number"
+            min="1"
+            max="99"
+            @input="onEvent('update')"
+          />
           <!-- Base -->
           <template v-if="!item.is_ear">
             <label>Base</label>
@@ -79,7 +89,7 @@
               class="edit-box"
               type="number"
               min="1"
-              max="250"
+              :max="getMaxQuantity()"
               @input="onEvent('update')"
             />
           </template>
@@ -97,17 +107,6 @@
               @input="onEvent('update')"
             />
           </template>
-
-          <!-- iLevel -->
-          <label>Item Level</label>
-          <input
-            v-model.number="item.level"
-            class="edit-box"
-            type="number"
-            min="1"
-            max="99"
-            @input="onEvent('update')"
-          />
 
           <!-- Skin -->
           <template v-if="countSkinsChoices()">
@@ -555,6 +554,15 @@ export default {
         })
         .reverse()
         .join('')
+    },
+    getMaxQuantity() {
+      if (this.isStackable()) {
+        const constants =
+          window[`${window.work_mod}_constants_${window.work_version}`]
+        const itemType = constants.armor_items[this.item.type] || constants.weapon_items[this.item.type] || constants.other_items[this.item.type];
+        return itemType.smax || 500
+      }
+      return 1 // Just in case
     },
     unsocket () {
       this.item.nr_of_items_in_sockets = 0

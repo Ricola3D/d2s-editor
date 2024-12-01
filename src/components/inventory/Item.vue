@@ -231,6 +231,7 @@ export default {
         }
         name = `\\gold;'${runes}'\\n${name}\\n\\gold;${personalizedName}${runeword_name}(${item.runeword_id})`
       }
+      if (item.quantity) name += ` (${item.quantity})`
       return name
         .split('\\n')
         .map((d) => {
