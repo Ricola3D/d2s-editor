@@ -2380,8 +2380,14 @@ let remodded_constants_98 = {
         null,
         null,
         null,
-        null,
-        null, // 710
+        {
+            "id": 709,
+            "s": "Spirit's Intervention"
+        },
+        {
+            "id": 710,
+            "s": "Spirit's Decay"
+        },
         {
             "id": 711,
             "s": "Cleave"

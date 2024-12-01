@@ -2385,19 +2385,25 @@ let remodded_constants_99 = {
         null,
         null,
         null,
-        null,
-        null, // 710
+        {
+            "id": 709,
+            "s": "Spirit's Intervention"
+        },
+        {
+            "id": 710,
+            "s": "Spirit's Decay"
+        },
         {
             "id": 711,
-            "s": "Cleave"
+            "s": "Cleave (Circular 25% range 3)"
         },
         {
             "id": 712,
-            "s": "Sweep"
+            "s": "Sweep (Fan 50% range 5)"
         },
         {
             "id": 713,
-            "s": "Pierce"
+            "s": "Pierce (Line 100% range 13)"
         }
     ],
     "rare_names": [

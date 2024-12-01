@@ -709,7 +709,6 @@ export default {
       save: null,
       activeTab: 1,
       itempack: ItemPack,
-      item_options: [],
       previewModel: null,
       preview: null,
       clipboard: null,
@@ -756,9 +755,6 @@ export default {
     },
   },
   async mounted() {
-    window.work_mod = 'remodded'
-    window.work_version = 99
-
     // A list of existing versions can be found here: https://github.com/WalterCouto/D2CE/blob/main/d2s_File_Format.md#versions.
     d2s.setConstantData('vanilla', 0x60, window.vanilla_constants_96) //1.10-1.14d
     d2s.setConstantData('vanilla', 0x61, window.vanilla_constants_96) //alpha? (D2R)
@@ -766,28 +762,15 @@ export default {
     d2s.setConstantData('remodded', 0x62, window.remodded_constants_98) //2.4 (D2R)
     d2s.setConstantData('vanilla', 0x63, window.vanilla_constants_99) //2.5+ (D2R)
     d2s.setConstantData('remodded', 0x63, window.remodded_constants_99) //2.5+ (D2R)
-
     await this.getPaletteData()
 
     if (localStorage.grid) {
       this.grid = JSON.parse(localStorage.getItem('grid'))
     }
 
-    // Add all the base weapons & armors to the insertable items list
-    if (sessionStorage.itempack) {
-      const json = sessionStorage.getItem('itempack')
-      this.itempack = JSON.parse(json)
-    } else {
-      await this.addItemsPackBases('weapon_items', 'Weapons')
-      await this.addItemsPackBases('armor_items', 'Armors')
-      sessionStorage.setItem('itempack', JSON.stringify(this.itempack))
-    }
-
-    this.item_options = this.itempack.map((item) => ({
-      id: item.key,
-      text: item.key,
-      value: item.value,
-    }))
+    window.work_mod = 'remodded' // Will reuse session storage/cache
+    window.work_version = 99 // Will reuse session storage/cache
+    await this.changeMod('remodded', 99)
   },
   methods: {
     setTheme(theme) {
@@ -811,7 +794,30 @@ export default {
     },
     onModChange(event) {
       window.work_mod = event.target.value
+      this.changeMod(event.target.value, 99)
+    },
+    async changeMod(mod, version) {
+      if (window.work_mod != mod && window.work_version != version) {
+        sessionStorage.removeItem('itempack')
+      } else {
+        window.work_mod = mod
+        window.work_version = version
+      }
       // this.getPaletteData()
+
+      // Add all the base weapons & armors to the insertable items list
+      if (sessionStorage.itempack) {
+        const json = sessionStorage.getItem('itempack')
+        this.itempack = JSON.parse(json)
+      } else {
+        this.itempack = this.itempack.filter(
+          (entry) => entry.value.mod == window.work_mod
+        )
+        await this.addItemsPackBases('weapon_items', 'Weapons')
+        await this.addItemsPackBases('armor_items', 'Armors')
+        await this.addItemsPackBases('other_items', 'Misc')
+        sessionStorage.setItem('itempack', JSON.stringify(this.itempack))
+      }
     },
     optionClicked(event) {
       switch (event.option.text) {
@@ -1412,27 +1418,33 @@ export default {
       for (const item of Object.entries(constants[categoryKey])) {
         if (item[1].n) {
           const newItem = d2s.newItem()
-          const value = item[1]
+          const typeData = item[1]
           newItem.type = item[0]
           newItem.quality = 2
           newItem.level = 41
-          newItem.inv_width = value.iw
-          newItem.inv_height = value.ih
-          newItem.categories = value.c
+          newItem.inv_width = typeData.iw
+          newItem.inv_height = typeData.ih
+          newItem.categories = typeData.c
           newItem.identified = 1
           if (newItem.categories.indexOf('Weapon') > -1) {
             newItem.base_damage = {
-              mindam: value.mind,
-              maxdam: value.maxd,
-              twohandmindam: value.min2d,
-              twohandmaxdam: value.max2d,
+              mindam: typeData.mind,
+              maxdam: typeData.maxd,
+              twohandmindam: typeData.min2d,
+              twohandmaxdam: typeData.max2d,
+            }
+            newItem.current_durability = typeData.durability
+            newItem.max_durability = typeData.durability
+          } else if (newItem.categories.indexOf('Any Armor') > -1) {
+            newItem.defense_rating = typeData.maxac
+            newItem.current_durability = typeData.durability
+            newItem.max_durability = typeData.durability
+          } else {
+            if (typeData.s) {
+              newItem.quantity = 99
             }
           }
-          if (newItem.categories.indexOf('Any Armor') > -1) {
-            newItem.defense_rating = value.maxac
-          }
-          newItem.current_durability = value.durability
-          newItem.max_durability = value.durability
+
           newItems.push(newItem)
         }
       }
@@ -1458,7 +1470,7 @@ export default {
             '/' +
             category +
             '/' +
-            item.type_name +
+            item.type_name.split('<br>').pop() +
             '.d2i',
           value: {
             mod: window.work_mod,
