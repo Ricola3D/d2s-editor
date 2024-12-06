@@ -34,7 +34,7 @@ export default {
     items: Array,
     width: Number,
     height: Number,
-    page: Number,
+    alt_position_id: Number,
     id: String,
     contextMenu: Object,
   },
@@ -44,9 +44,6 @@ export default {
     },
   },
   methods: {
-    test($evt) {
-      console.log($evt)
-    },
     onSelect(item) {
       this.$emit('item-selected', item)
     },
@@ -66,7 +63,7 @@ export default {
           location: 0,
           x: x - 1,
           y: y - 1,
-          storage_page: this.page,
+          alt_position_id: this.alt_position_id,
         },
         type: 'dragenter',
       })
@@ -82,7 +79,7 @@ export default {
           location: 0,
           x: x - 1,
           y: y - 1,
-          storage_page: this.page,
+          alt_position_id: this.alt_position_id,
         },
         type: 'dragleave',
       })
@@ -92,15 +89,22 @@ export default {
         { text: 'Select' },
         { text: 'Copy' },
         { text: 'Cut' },
-        { text: 'Share' },
+        { text: 'Export' },
         { text: 'Delete' },
       ])
     },
     gridRC($evt, w, h) {
       this.contextMenu.showContextMenu(
         $evt,
-        [w - 1, h - 1],
-        [{ text: 'Paste At' }]
+        {
+          owner: 'character',
+          location_id: 0, // Stored
+          equipped_id: 0, // Stored
+          position_x: w - 1,
+          position_y: h - 1,
+          alt_position_id: this.alt_position_id, // 1: inventory, 4: cube, 5: stash
+        },
+        [{ text: 'Paste At' }, { text: 'Import' }]
       )
     },
     drop(event, x, y) {
@@ -114,7 +118,7 @@ export default {
           location: 0,
           x: x - 1,
           y: y - 1,
-          storage_page: this.page,
+          alt_position_id: this.alt_position_id,
         },
         type: 'move',
       })

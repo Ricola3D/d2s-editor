@@ -71,7 +71,7 @@
         v-if="right_hand"
         v-model:item="right_hand"
         @click.native="onSelect(right_hand)"
-        @contextmenu.prevent.stop.stop="itemRC($event, right_hand)"
+        @contextmenu.prevent.stop="itemRC($event, right_hand)"
       />
     </span>
     <span
@@ -197,6 +197,7 @@
       @dragover="dragover"
       @dragenter="dragenter($event, 10)"
       @dragleave="dragleave($event, 10)"
+      @contextmenu.prevent.stop="equippedRC($event, EItemEquipPosition.Gloves)"
       ><div :id="id + '-10'" class="layer" />
       <Item
         v-if="hands"
@@ -221,6 +222,7 @@ export default {
   data() {
     return {
       alt_displayed: false,
+      EItemEquipPosition: window.d2s.types.EItemEquipPosition,
     }
   },
   computed: {
@@ -274,10 +276,24 @@ export default {
           { text: 'Select' },
           { text: 'Copy' },
           { text: 'Cut' },
-          { text: 'Share' },
+          { text: 'Export' },
           { text: 'Delete' },
         ])
       }
+    },
+    equippedRC($evt, equipped_id) {
+      // this.contextMenu.showContextMenu(
+      //   $evt,
+      //   {
+      //     owner: 'character',
+      //     location_id: 1, // Equipped
+      //     equipped_id: equipped_id, // 0: stored, 1: helm, 2: amulet, 3: armor, 4: right-hand, 5: left-hand, 6: right ring, 7: left ring, 8: belt, 9: boots, 10: gloves, 11: right-hand switch, 12: left-hand switch
+      //     position_x: 0,
+      //     position_y: 0,
+      //     alt_position_id: 0,
+      //   },
+      //   [{ text: 'Paste At' }, { text: 'Import' }]
+      // )
     },
     dragover(event) {
       event.preventDefault()

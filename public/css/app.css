@@ -373,6 +373,30 @@ div.settings .form-check-input {
   margin-left: 0;
 }
 
+.quality-select #multiselect-option-1, .quality-select #multiselect-option-3, .quality-select.quality-1, .quality-select.quality-3 {
+  color: rgb(175, 175, 175);
+}
+
+.quality-select #multiselect-option-4, .quality-select.quality-4 {
+  color: rgb(105, 105, 255);
+}
+
+.quality-select #multiselect-option-5, .quality-select.quality-5 {
+  color: rgb(0, 255, 0);
+}
+
+.quality-select #multiselect-option-6, .quality-select.quality-6 {
+  color: rgb(255, 255, 100);
+}
+
+.quality-select #multiselect-option-7, .quality-select.quality-7 {
+  color: rgb(199, 179, 119);
+}
+
+.quality-select #multiselect-option-8, .quality-select.quality-8 {
+  color: rgb(255, 168, 0);
+}
+
 .dgrey {
   color: rgb(105, 105, 105);
 }

@@ -83,9 +83,9 @@
               type="button"
               class="btn btn-primary"
               data-dismiss="modal"
-              @click="loadFromString"
+              @click="loadItemFromJson"
             >
-              Load From String
+              Load From JSON
             </button>
             <button
               type="button"
@@ -205,13 +205,6 @@
                           </button>
                         </div>
                       </div>
-                      <!-- <button
-                        type="button"
-                        class="btn btn-danger"
-                        @click="test()"
-                      >
-                        Test
-                      </button> -->
                       <div class="input-group-append">
                         <span>&nbsp;</span>
                       </div>
@@ -471,7 +464,7 @@
                                 type="button"
                                 class="btn btn-primary"
                                 :disabled="!clipboard"
-                                @click="paste()"
+                                @click="pasteItem(clipboard)"
                               >
                                 Paste
                               </button>
@@ -500,7 +493,7 @@
                           v-model:items="inventory"
                           :width="grid.inv.w"
                           :height="grid.inv.h"
-                          :page="1"
+                          :alt_position_id="1"
                           :context-menu="$refs.contextMenu"
                           @item-selected="onSelect"
                           @item-event="onEvent"
@@ -511,7 +504,7 @@
                           v-model:items="stash"
                           :width="grid.stash.w"
                           :height="grid.stash.h"
-                          :page="5"
+                          :alt_position_id="5"
                           :context-menu="$refs.contextMenu"
                           @item-selected="onSelect"
                           @item-event="onEvent"
@@ -522,7 +515,7 @@
                           v-model:items="cube"
                           :width="grid.cube.w"
                           :height="grid.cube.h"
-                          :page="4"
+                          :alt_position_id="4"
                           :context-menu="$refs.contextMenu"
                           @item-selected="onSelect"
                           @item-event="onEvent"
@@ -538,6 +531,7 @@
                           :id="'Selected'"
                           ref="editor"
                           v-model:item="selectedItem"
+                          :context-menu="$refs.contextMenu"
                           @item-event="onEvent"
                         />
                       </div>
@@ -833,26 +827,33 @@ export default {
             item: event.obj,
           })
           break
-          case 'Cut':
+        case 'Cut':
           this.onEvent({
             type: 'cut',
             item: event.obj,
           })
           break
-        case 'Share':
+        case 'Export':
           this.onEvent({
-            type: 'share',
+            type: 'export',
             item: event.obj,
           })
           break
+        case 'Import': {
+          this.onEvent({
+            type: 'import',
+            position: event.obj,
+          })
+          break
+        }
         case 'Paste At':
-          if (event.obj?.length !== 2 || this.clipboard == null) {
+          if (this.clipboard == null) {
             break
           }
           this.onEvent({
             type: 'pasteAt',
             item: this.clipboard,
-            grid: event.obj,
+            position: event.obj,
           })
           break
         case 'Select':
@@ -880,12 +881,8 @@ export default {
           item.alt_position_id == i.alt_position_id
       )
     },
-    deleteItem(list, idx) {
-      list.splice(idx, 1)
-      this.selectedItem = null
-    },
     // Method to share an item (through clipboard). By default we share as a vanilla 99 item.
-    async shareItem(item) {
+    async exportItem(item) {
       let bytes = await d2s.writeItem(
         item,
         window.work_mod,
@@ -905,23 +902,95 @@ export default {
         message: `Item data copied to clipboard. Use load from string to share it with someone.`,
       })
     },
+    async importItem(position) {
+      try {
+        const text = await navigator.clipboard.readText()
+        const json = JSON.parse(text)
+        if (json.mod && json.version && json.base64) {
+          this.previewModel = json
+          await this.previewItem()
+          this.pasteItem(this.preview, position)
+        } else {
+          alert('Empty clipboard or JSON is malformed.')
+        }
+      } catch (e) {
+        alert('Failed to load the item, contact the Administrator.')
+        console.error(e)
+      }
+    },
+    deleteItem(item) {
+      let idx = this.findIndex(this.save.items, item)
+      if (idx != -1) {
+        this.save.items.splice(idx, 1)
+        this.selectedItem = null
+        return
+      }
+      idx = this.findIndex(this.save.merc_items, item)
+      if (idx != -1) {
+        this.save.merc_items.splice(idx, 1)
+        this.selectedItem = null
+        return
+      }
+    },
+    pasteItem(item, position) {
+      let safePosition = null
+      if (position) {
+        if (position.location_id == 0) {
+          // Paste to a stored location (inventory, stash, cube)
+          if (
+            this.canPlaceItem(
+              item,
+              position.alt_position_id,
+              position.position_x,
+              position.position_y
+            )
+          ) {
+            safePosition = position
+          }
+        } else {
+          // TODO
+        }
+      }
+
+      if (!safePosition) safePosition = this.findSafePosition(item)
+
+      let itemCopy = cloneDeep(item)
+      itemCopy.location_id = safePosition.location_id
+      itemCopy.equipped_id = safePosition.equipped_id
+      itemCopy.position_x = safePosition.position_x
+      itemCopy.position_y = safePosition.position_y
+      itemCopy.alt_position_id = safePosition.alt_position_id
+      this.notifications = []
+      if (itemCopy.location_id == 4) {
+        this.notifications.push({
+          alert: 'alert alert-warning',
+          message: `Could not find safe location to place item. Placed in mouse buffer.`,
+        })
+      } else {
+        let loc =
+          itemCopy.alt_position_id == 1
+            ? 'inventory'
+            : itemCopy.alt_position_id == 5
+              ? 'stash'
+              : 'cube'
+        this.notifications.push({
+          alert: 'alert alert-info',
+          message: `Loaded item in ${loc} at ${itemCopy.position_x}, ${itemCopy.position_y}`,
+        })
+      }
+      this.save.items.push(itemCopy)
+      this.selectedItem = itemCopy
+    },
     onEvent(e) {
-      if (e.type == 'share') {
-        this.shareItem(e.item)
+      if (e.type == 'export') {
+        this.exportItem(e.item)
+      } else if (e.type == 'import') {
+        this.importItem(e.position)
       } else if (e.type == 'copy') {
         this.clipboard = cloneDeep(e.item)
       } else if (e.type == 'cut') {
         this.clipboard = cloneDeep(e.item)
-        let idx = this.findIndex(this.save.items, e.item)
-        if (idx != -1) {
-          this.deleteItem(this.save.items, idx)
-          return
-        }
-        idx = this.findIndex(this.save.merc_items, e.item)
-        if (idx != -1) {
-          this.deleteItem(this.save.merc_items, idx)
-          return
-        }
+        this.deleteItem(e.item)
       } else if (e.type == 'update') {
         d2s.enhanceItems(
           [e.item],
@@ -931,16 +1000,7 @@ export default {
         )
         this.resolveInventoryImage(e.item)
       } else if (e.type == 'delete') {
-        let idx = this.findIndex(this.save.items, e.item)
-        if (idx != -1) {
-          this.deleteItem(this.save.items, idx)
-          return
-        }
-        idx = this.findIndex(this.save.merc_items, e.item)
-        if (idx != -1) {
-          this.deleteItem(this.save.merc_items, idx)
-          return
-        }
+        this.deleteItem(e.item)
       } else if (e.type == 'move') {
         let element = document.getElementById(e.id)
         element.style.backgroundColor = ''
@@ -960,7 +1020,7 @@ export default {
         if (
           this.canPlaceItem(
             item,
-            e.location.storage_page,
+            e.location.alt_position_id,
             e.location.x,
             e.location.y
           )
@@ -976,33 +1036,14 @@ export default {
         element.style.width = ''
         element.style.height = ''
       } else if (e.type === 'pasteAt') {
-        const storage_page =
-          this.activeTab === 1
-            ? 1 // Equipped
-            : this.activeTab === 3
-              ? 5 // Stash
-              : this.activeTab === 4
-                ? 4 // Cube
-                : 1 // Inventory
-        // For now, paste can only be made in the grid
-        if (this.canPlaceItem(e.item, storage_page, e.grid[0], e.grid[1])) {
-          this.paste(e.item, [
-            0, // location_id: 0 (Stored)
-            0, // equipped_id: 0 (Stored)
-            e.grid[0],
-            e.grid[1],
-            storage_page,
-          ])
-        } else {
-          this.paste(e.item)
-        }
+        this.pasteItem(e.item, e.position)
       }
     },
     onMove(item, e) {
       if (
         !this.canPlaceItem(
           item,
-          e.location.storage_page,
+          e.location.alt_position_id,
           e.location.x,
           e.location.y
         )
@@ -1020,7 +1061,7 @@ export default {
         item.equipped_id = 0
         item.position_x = e.location.x
         item.position_y = e.location.y
-        item.alt_position_id = e.location.storage_page
+        item.alt_position_id = e.location.alt_position_id
       } else if (e.location.location == 4) {
         item.location_id = e.location.location
         item.equipped_id = 0
@@ -1045,11 +1086,19 @@ export default {
         if (this.previewModel.object) {
           this.preview = cloneDeep(this.previewModel.object)
         } else if (this.previewModel.base64) {
-          bytes = utils.b64StringToArrayBuffer(this.previewModel.base64)
-          this.preview = await d2s.readItem(bytes, this.previewModel.mod, this.previewModel.version)
+          const bytes = utils.b64StringToArrayBuffer(this.previewModel.base64)
+          this.preview = await d2s.readItem(
+            bytes,
+            this.previewModel.mod,
+            this.previewModel.version
+          )
         } else if (this.previewModel.hex) {
-          bytes = utils.hexStringToArrayBuffer(this.previewModel.hex)
-          this.preview = await d2s.readItem(bytes, this.previewModel.mod, this.previewModel.version)
+          const bytes = utils.hexStringToArrayBuffer(this.previewModel.hex)
+          this.preview = await d2s.readItem(
+            bytes,
+            this.previewModel.mod,
+            this.previewModel.version
+          )
         } else {
           throw new Error('No item code in the input.')
         }
@@ -1061,26 +1110,30 @@ export default {
       this.previewModel = {
         base64: arrayBufferToBase64String(event.target.result),
         mod: window.work_mod,
-        version: window.work_version
+        version: window.work_version,
       }
       this.previewItem()
     },
     onItemFileChange(event) {
-      let reader = new FileReader();
-      reader.onload = this.onItemFileLoad;
-      reader.readAsArrayBuffer(event.target.files[0]);
-      event.target.value = null;
+      let reader = new FileReader()
+      reader.onload = this.onItemFileLoad
+      reader.readAsArrayBuffer(event.target.files[0])
+      event.target.value = null
     },
     // Method to load an item from its a JSON {mod, version, base64 or hex} or simply a base64 string (mod & version will be set to vanilla 99 by default).
-    async loadFromString() {
+    async loadItemFromJson() {
       let input = prompt(
         'Please enter a JSON with mod, version and base64 or hex.'
       )
       try {
-        this.previewModel = JSON.parse(input)
-        await this.previewItem()
-        
-        this.paste(this.preview)
+        const json = JSON.parse(input)
+        if (json.mod && json.version && json.base64) {
+          this.previewModel = json
+          await this.previewItem()
+          this.pasteItem(this.preview)
+        } else {
+          alert('JSON is malformed.')
+        }
       } catch (e) {
         alert('Failed to load the item, contact the Administrator.')
         console.error(e)
@@ -1088,63 +1141,63 @@ export default {
     },
     // Method to load a chosen item
     loadItem() {
-      this.paste(this.preview)
+      this.pasteItem(this.preview)
     },
-    paste(item, position) {
-      let copy = JSON.parse(
-        JSON.stringify(item != null ? item : this.clipboard)
-      )
-      let pos = position ?? this.findSafeLocation(copy)
-      copy.location_id = pos[0]
-      copy.equipped_id = pos[1]
-      copy.position_x = pos[2]
-      copy.position_y = pos[3]
-      copy.alt_position_id = pos[4]
-      this.notifications = []
-      if (copy.location_id == 4) {
-        this.notifications.push({
-          alert: 'alert alert-warning',
-          message: `Could not find safe location to place item. Placed in mouse buffer.`,
-        })
-      } else {
-        let loc =
-          copy.alt_position_id == 1
-            ? 'inventory'
-            : copy.alt_position_id == 5
-              ? 'stash'
-              : 'cube'
-        this.notifications.push({
-          alert: 'alert alert-info',
-          message: `Loaded item in ${loc} at ${copy.position_x}, ${copy.position_y}`,
-        })
-      }
-      this.save.items.push(copy)
-      this.selectedItem = copy
-    },
-    findSafeLocation(item) {
-      //inv = 1, cube = 4, stash = 5
+    findSafePosition(item) {
+      // Search in inventory
       for (let i = 0; i < this.grid.inv.w; i++) {
         for (let j = 0; j < this.grid.inv.h; j++) {
           if (this.canPlaceItem(item, 1, i, j)) {
-            return [0, 0, i, j, 1]
+            // return [0, 0, i, j, 1]
+            return {
+              location_id: 0,
+              equipped_id: 0,
+              position_x: i,
+              position_y: j,
+              alt_position_id: 1,
+            }
           }
         }
       }
+      // Search in stash
       for (let i = 0; i < this.grid.stash.w; i++) {
         for (let j = 0; j < this.grid.stash.h; j++) {
           if (this.canPlaceItem(item, 5, i, j)) {
-            return [0, 0, i, j, 5]
+            // return [0, 0, i, j, 5]
+            return {
+              location_id: 0,
+              equipped_id: 0,
+              position_x: i,
+              position_y: j,
+              alt_position_id: 5,
+            }
           }
         }
       }
+      // Search in cube
       for (let i = 0; i < this.grid.cube.w; i++) {
         for (let j = 0; j < this.grid.cube.h; j++) {
           if (this.canPlaceItem(item, 4, i, j)) {
-            return [0, 0, i, j, 4]
+            // return [0, 0, i, j, 4]
+            return {
+              location_id: 0,
+              equipped_id: 0,
+              position_x: i,
+              position_y: j,
+              alt_position_id: 4,
+            }
           }
         }
       }
-      return [4, 0, 4, 0, 0]
+      // To cursor
+      // return [4, 0, 4, 0, 0]
+      return {
+        location_id: 4,
+        equipped_id: 0,
+        position_x: 0,
+        position_y: 0,
+        alt_position_id: 0,
+      }
     },
     canPlaceItem(item, loc, x, y) {
       var bounds
@@ -1186,34 +1239,6 @@ export default {
       if (a[1] >= b[3] || b[1] >= a[3]) return false
       return true
     },
-    // test() {
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/zod_rune.lowend.sprite"       )
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/gem/perfect_diamond2.lowend.sprite")
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/thul_rune.lowend.sprite"      )
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/hel_rune.lowend.sprite"       )
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ber_rune.lowend.sprite"       )
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ith_rune.lowend.sprite"       )
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/gem/perfect_diamond3.lowend.sprite")
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/gem/perfect_diamond5.lowend.sprite")
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/hel_rune.lowend.sprite"       )
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/lo_rune.lowend.sprite"        )
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/tir_rune.lowend.sprite"       )
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/gem/perfect_diamond6.lowend.sprite")
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/mal_rune.lowend.sprite"       )
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/gem/perfect_diamond1.lowend.sprite")
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ohm_rune.lowend.sprite"       )
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/el_rune.lowend.sprite"        )
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ort_rune.lowend.sprite"       )
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ko_rune.lowend.sprite"        )
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/gul_rune.lowend.sprite"       )
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/um_rune.lowend.sprite"        )
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ist_rune.lowend.sprite"       )
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/amn_rune.lowend.sprite"       )
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/lem_rune.lowend.sprite"       )
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/lum_rune.lowend.sprite"       )
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/ral_rune.lowend.sprite"       )
-    //   fetch("d2/game_data/remodded/version_99/hd/global/ui/items/misc/rune/cham_rune.lowend.sprite"      )
-    // },
     async resolveInventoryImages() {
       const allItems = [
         ...this.save.items,
@@ -1232,16 +1257,15 @@ export default {
       }
       item.src = await utils.getInventoryImage(item)
       if (!item.src) {
-        console.error("No src " + item.type_name + "/" + item.unique_name)
+        console.error('No src ' + item.type_name + '/' + item.unique_name)
       }
 
       for (let i = 0; i < item.socketed_items.length; i++) {
-        utils.getInventoryImage(
-          item.socketed_items[i]
-        ).then((img) => {
+        utils.getInventoryImage(item.socketed_items[i]).then((img) => {
           if (!img) {
-            console.error("No src " + item.type_name + "/" + item.unique_name)
-          } else if (item.socketed_items[i]) { // Recheck cause it's async, and user may have used unsocket all button in the meanwhile
+            console.error('No src ' + item.type_name + '/' + item.unique_name)
+          } else if (item.socketed_items[i]) {
+            // Recheck cause it's async, and user may have used unsocket all button in the meanwhile
             item.socketed_items[i].src = img
           }
         })
@@ -1258,7 +1282,9 @@ export default {
         // If failed, in a 2nd time try parsing it as a remodded 99 file
         this.readBuffer(event.target.result, mod, event.target.filename)
       } catch (e) {
-        alert("Could not perform operation, check you selected the proper mod. More details in logs.")
+        alert(
+          'Could not perform operation, check you selected the proper mod. More details in logs.'
+        )
         console.error(e)
       }
     },
@@ -1266,24 +1292,29 @@ export default {
       let that = this
       this.save = null
       this.selectedItem = null
-      d2s.read(bytes, mod).then((response) => {
-        console.log('Attributes: ' + JSON.stringify(response.attributes))
-        that.save = response
-        if (
-          `${window.work_mod}_constants_${that.save.header.version}` in window
-        ) {
-          window.work_version = that.save.header.version
-        }
-        
-        if (filename) {
-          // Force char name to be equal to file name
-          that.save.header.name = filename.split('.')[0]
-        }
-        that.resolveInventoryImages()
-      }).catch((e) => {
-        alert("Could not perform operation, check you selected the proper mod. More details in logs.")
-        console.error(e);
-      });
+      d2s
+        .read(bytes, mod)
+        .then((response) => {
+          console.log('Attributes: ' + JSON.stringify(response.attributes))
+          that.save = response
+          if (
+            `${window.work_mod}_constants_${that.save.header.version}` in window
+          ) {
+            window.work_version = that.save.header.version
+          }
+
+          if (filename) {
+            // Force char name to be equal to file name
+            that.save.header.name = filename.split('.')[0]
+          }
+          that.resolveInventoryImages()
+        })
+        .catch((e) => {
+          alert(
+            'Could not perform operation, check you selected the proper mod. More details in logs.'
+          )
+          console.error(e)
+        })
     },
     onFileChange(event) {
       let reader = new FileReader()
@@ -1419,16 +1450,21 @@ export default {
       let that = this
       link.style.display = 'none'
       document.body.appendChild(link)
-      d2s.write(this.save, mod, version).then(function (response) {
-        let blob = new Blob([response], { type: 'octet/stream' })
-        link.href = window.URL.createObjectURL(blob)
-        link.download = that.save.header.name + '.d2s'
-        link.click()
-        link.remove()
-      }).catch((e) => {
-        alert("Could not perform operation, try removing items with deprecated properties. More details in logs.")
-        console.error(e);
-      });
+      d2s
+        .write(this.save, mod, version)
+        .then(function (response) {
+          let blob = new Blob([response], { type: 'octet/stream' })
+          link.href = window.URL.createObjectURL(blob)
+          link.download = that.save.header.name + '.d2s'
+          link.click()
+          link.remove()
+        })
+        .catch((e) => {
+          alert(
+            'Could not perform operation, try removing items with deprecated properties. More details in logs.'
+          )
+          console.error(e)
+        })
     },
     async addItemsPackBases(categoryKey, categoryDisplayName) {
       let newItems = []
@@ -1496,7 +1532,7 @@ export default {
             version: window.work_version,
             // base64: base64,
             // hex: hex,
-            object: item
+            object: item,
           },
         })
       }

@@ -22359,7 +22359,7 @@ let remodded_constants_98 = {
             "index": "Healthy Breakfast",
             "n": "Well maybe not healthy, but it does make you glow<br>A Healthy Breakfast",
             "i": "D2R_Jank",
-            "c": "m35",
+            "c": "m36",
             "hdi": "custom/Hbreakfast"
         },
         {
@@ -53942,7 +53942,7 @@ let remodded_constants_98 = {
             "exc": "a00",
             "elc": "a00",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -53961,7 +53961,7 @@ let remodded_constants_98 = {
             "exc": "a01",
             "elc": "a01",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -53980,7 +53980,7 @@ let remodded_constants_98 = {
             "exc": "a02",
             "elc": "a02",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -53999,7 +53999,7 @@ let remodded_constants_98 = {
             "exc": "a03",
             "elc": "a03",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -54018,7 +54018,7 @@ let remodded_constants_98 = {
             "exc": "a04",
             "elc": "a04",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -54037,7 +54037,7 @@ let remodded_constants_98 = {
             "exc": "a05",
             "elc": "a05",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -54075,7 +54075,7 @@ let remodded_constants_98 = {
             "exc": "a07",
             "elc": "a07",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -54094,7 +54094,7 @@ let remodded_constants_98 = {
             "exc": "a08",
             "elc": "a08",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -54113,7 +54113,7 @@ let remodded_constants_98 = {
             "exc": "a09",
             "elc": "a09",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55344,7 +55344,7 @@ let remodded_constants_98 = {
             "exc": "a67",
             "elc": "a67",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55363,7 +55363,7 @@ let remodded_constants_98 = {
             "exc": "a68",
             "elc": "a68",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55382,7 +55382,7 @@ let remodded_constants_98 = {
             "exc": "a69",
             "elc": "a69",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55401,7 +55401,7 @@ let remodded_constants_98 = {
             "exc": "a70",
             "elc": "a70",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55420,7 +55420,7 @@ let remodded_constants_98 = {
             "exc": "a71",
             "elc": "a71",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55439,7 +55439,7 @@ let remodded_constants_98 = {
             "exc": "a72",
             "elc": "a72",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55458,7 +55458,7 @@ let remodded_constants_98 = {
             "exc": "a73",
             "elc": "a73",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55477,7 +55477,7 @@ let remodded_constants_98 = {
             "exc": "a74",
             "elc": "a74",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55496,7 +55496,7 @@ let remodded_constants_98 = {
             "exc": "a75",
             "elc": "a75",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55515,7 +55515,7 @@ let remodded_constants_98 = {
             "exc": "a76",
             "elc": "a76",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55534,7 +55534,7 @@ let remodded_constants_98 = {
             "exc": "a77",
             "elc": "a77",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55553,7 +55553,7 @@ let remodded_constants_98 = {
             "exc": "a78",
             "elc": "a78",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55572,7 +55572,7 @@ let remodded_constants_98 = {
             "exc": "a79",
             "elc": "a79",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55591,7 +55591,7 @@ let remodded_constants_98 = {
             "exc": "a80",
             "elc": "a80",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55610,7 +55610,7 @@ let remodded_constants_98 = {
             "exc": "a81",
             "elc": "a81",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55629,7 +55629,7 @@ let remodded_constants_98 = {
             "exc": "a82",
             "elc": "a82",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55648,7 +55648,7 @@ let remodded_constants_98 = {
             "exc": "a83",
             "elc": "a83",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55667,7 +55667,7 @@ let remodded_constants_98 = {
             "exc": "a84",
             "elc": "a84",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55686,7 +55686,7 @@ let remodded_constants_98 = {
             "exc": "a85",
             "elc": "a85",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55705,7 +55705,7 @@ let remodded_constants_98 = {
             "exc": "a86",
             "elc": "a86",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55724,7 +55724,7 @@ let remodded_constants_98 = {
             "exc": "a87",
             "elc": "a87",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55743,7 +55743,7 @@ let remodded_constants_98 = {
             "exc": "a88",
             "elc": "a88",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55762,7 +55762,7 @@ let remodded_constants_98 = {
             "exc": "a89",
             "elc": "a89",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55781,7 +55781,7 @@ let remodded_constants_98 = {
             "exc": "a90",
             "elc": "a90",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55800,7 +55800,7 @@ let remodded_constants_98 = {
             "exc": "a91",
             "elc": "a91",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55819,7 +55819,7 @@ let remodded_constants_98 = {
             "exc": "a92",
             "elc": "a92",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55838,7 +55838,7 @@ let remodded_constants_98 = {
             "exc": "a93",
             "elc": "a93",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55857,7 +55857,7 @@ let remodded_constants_98 = {
             "exc": "a94",
             "elc": "a94",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55876,7 +55876,7 @@ let remodded_constants_98 = {
             "exc": "a95",
             "elc": "a95",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55895,7 +55895,7 @@ let remodded_constants_98 = {
             "exc": "a96",
             "elc": "a96",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55914,7 +55914,7 @@ let remodded_constants_98 = {
             "exc": "a97",
             "elc": "a97",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55933,7 +55933,7 @@ let remodded_constants_98 = {
             "exc": "a98",
             "elc": "a98",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -55952,7 +55952,7 @@ let remodded_constants_98 = {
             "exc": "a99",
             "elc": "a99",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56085,7 +56085,7 @@ let remodded_constants_98 = {
             "exc": "A06",
             "elc": "A06",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56104,7 +56104,7 @@ let remodded_constants_98 = {
             "exc": "A07",
             "elc": "A07",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56123,7 +56123,7 @@ let remodded_constants_98 = {
             "exc": "A08",
             "elc": "A08",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56142,7 +56142,7 @@ let remodded_constants_98 = {
             "exc": "A09",
             "elc": "A09",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56161,7 +56161,7 @@ let remodded_constants_98 = {
             "exc": "A10",
             "elc": "A10",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56180,7 +56180,7 @@ let remodded_constants_98 = {
             "exc": "A11",
             "elc": "A11",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56199,7 +56199,7 @@ let remodded_constants_98 = {
             "exc": "A12",
             "elc": "A12",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56218,7 +56218,7 @@ let remodded_constants_98 = {
             "exc": "A13",
             "elc": "A13",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56237,7 +56237,7 @@ let remodded_constants_98 = {
             "exc": "A14",
             "elc": "A14",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56256,7 +56256,7 @@ let remodded_constants_98 = {
             "exc": "A15",
             "elc": "A15",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56275,7 +56275,7 @@ let remodded_constants_98 = {
             "exc": "A16",
             "elc": "A16",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56294,7 +56294,7 @@ let remodded_constants_98 = {
             "exc": "A17",
             "elc": "A17",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56313,7 +56313,7 @@ let remodded_constants_98 = {
             "exc": "A18",
             "elc": "A18",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56332,7 +56332,7 @@ let remodded_constants_98 = {
             "exc": "A19",
             "elc": "A19",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56351,7 +56351,7 @@ let remodded_constants_98 = {
             "exc": "A20",
             "elc": "A20",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56370,7 +56370,7 @@ let remodded_constants_98 = {
             "exc": "A21",
             "elc": "A21",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56389,7 +56389,7 @@ let remodded_constants_98 = {
             "exc": "A22",
             "elc": "A22",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56408,7 +56408,7 @@ let remodded_constants_98 = {
             "exc": "A23",
             "elc": "A23",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56427,7 +56427,7 @@ let remodded_constants_98 = {
             "exc": "A24",
             "elc": "A24",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56446,7 +56446,7 @@ let remodded_constants_98 = {
             "exc": "A25",
             "elc": "A25",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56465,7 +56465,7 @@ let remodded_constants_98 = {
             "exc": "A26",
             "elc": "A26",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56484,7 +56484,7 @@ let remodded_constants_98 = {
             "exc": "A27",
             "elc": "A27",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56503,7 +56503,7 @@ let remodded_constants_98 = {
             "exc": "A28",
             "elc": "A28",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56522,7 +56522,7 @@ let remodded_constants_98 = {
             "exc": "A29",
             "elc": "A29",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56541,7 +56541,7 @@ let remodded_constants_98 = {
             "exc": "A30",
             "elc": "A30",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56560,7 +56560,7 @@ let remodded_constants_98 = {
             "exc": "A31",
             "elc": "A31",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56579,7 +56579,7 @@ let remodded_constants_98 = {
             "exc": "A32",
             "elc": "A32",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56598,7 +56598,7 @@ let remodded_constants_98 = {
             "exc": "A33",
             "elc": "A33",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56617,7 +56617,7 @@ let remodded_constants_98 = {
             "exc": "A34",
             "elc": "A34",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56636,7 +56636,7 @@ let remodded_constants_98 = {
             "exc": "A35",
             "elc": "A35",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56655,7 +56655,7 @@ let remodded_constants_98 = {
             "exc": "A36",
             "elc": "A36",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56674,7 +56674,7 @@ let remodded_constants_98 = {
             "exc": "A37",
             "elc": "A37",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56693,7 +56693,7 @@ let remodded_constants_98 = {
             "exc": "A38",
             "elc": "A38",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56712,7 +56712,7 @@ let remodded_constants_98 = {
             "exc": "A39",
             "elc": "A39",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56731,7 +56731,7 @@ let remodded_constants_98 = {
             "exc": "A40",
             "elc": "A40",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56750,7 +56750,7 @@ let remodded_constants_98 = {
             "exc": "A41",
             "elc": "A41",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56769,7 +56769,7 @@ let remodded_constants_98 = {
             "exc": "A42",
             "elc": "A42",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56788,7 +56788,7 @@ let remodded_constants_98 = {
             "exc": "A43",
             "elc": "A43",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56807,7 +56807,7 @@ let remodded_constants_98 = {
             "exc": "A44",
             "elc": "A44",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56826,7 +56826,7 @@ let remodded_constants_98 = {
             "exc": "A45",
             "elc": "A45",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56845,7 +56845,7 @@ let remodded_constants_98 = {
             "exc": "A46",
             "elc": "A46",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56864,7 +56864,7 @@ let remodded_constants_98 = {
             "exc": "A47",
             "elc": "A47",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56883,7 +56883,7 @@ let remodded_constants_98 = {
             "exc": "A48",
             "elc": "A48",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56902,7 +56902,7 @@ let remodded_constants_98 = {
             "exc": "A49",
             "elc": "A49",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56921,7 +56921,7 @@ let remodded_constants_98 = {
             "exc": "A50",
             "elc": "A50",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56940,7 +56940,7 @@ let remodded_constants_98 = {
             "exc": "A51",
             "elc": "A51",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56959,7 +56959,7 @@ let remodded_constants_98 = {
             "exc": "A52",
             "elc": "A52",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56978,7 +56978,7 @@ let remodded_constants_98 = {
             "exc": "A53",
             "elc": "A53",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -56997,7 +56997,7 @@ let remodded_constants_98 = {
             "exc": "A54",
             "elc": "A54",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57016,7 +57016,7 @@ let remodded_constants_98 = {
             "exc": "A55",
             "elc": "A55",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57035,7 +57035,7 @@ let remodded_constants_98 = {
             "exc": "A56",
             "elc": "A56",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57054,7 +57054,7 @@ let remodded_constants_98 = {
             "exc": "A57",
             "elc": "A57",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57073,7 +57073,7 @@ let remodded_constants_98 = {
             "exc": "A58",
             "elc": "A58",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57092,7 +57092,7 @@ let remodded_constants_98 = {
             "exc": "A59",
             "elc": "A59",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57111,7 +57111,7 @@ let remodded_constants_98 = {
             "exc": "A60",
             "elc": "A60",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57130,7 +57130,7 @@ let remodded_constants_98 = {
             "exc": "A61",
             "elc": "A61",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57149,7 +57149,7 @@ let remodded_constants_98 = {
             "exc": "A62",
             "elc": "A62",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57168,7 +57168,7 @@ let remodded_constants_98 = {
             "exc": "A63",
             "elc": "A63",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57187,7 +57187,7 @@ let remodded_constants_98 = {
             "exc": "A64",
             "elc": "A64",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57206,7 +57206,7 @@ let remodded_constants_98 = {
             "exc": "A65",
             "elc": "A65",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57225,7 +57225,7 @@ let remodded_constants_98 = {
             "exc": "A66",
             "elc": "A66",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57244,7 +57244,7 @@ let remodded_constants_98 = {
             "exc": "A67",
             "elc": "A67",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57263,7 +57263,7 @@ let remodded_constants_98 = {
             "exc": "A68",
             "elc": "A68",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57282,7 +57282,7 @@ let remodded_constants_98 = {
             "exc": "A69",
             "elc": "A69",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57301,7 +57301,7 @@ let remodded_constants_98 = {
             "exc": "A70",
             "elc": "A70",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57320,7 +57320,7 @@ let remodded_constants_98 = {
             "exc": "A71",
             "elc": "A71",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57339,7 +57339,7 @@ let remodded_constants_98 = {
             "exc": "A72",
             "elc": "A72",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57358,7 +57358,7 @@ let remodded_constants_98 = {
             "exc": "A73",
             "elc": "A73",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57377,7 +57377,7 @@ let remodded_constants_98 = {
             "exc": "A74",
             "elc": "A74",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57396,7 +57396,7 @@ let remodded_constants_98 = {
             "exc": "A75",
             "elc": "A75",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57415,7 +57415,7 @@ let remodded_constants_98 = {
             "exc": "A76",
             "elc": "A76",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57434,7 +57434,7 @@ let remodded_constants_98 = {
             "exc": "A77",
             "elc": "A77",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57453,7 +57453,7 @@ let remodded_constants_98 = {
             "exc": "A78",
             "elc": "A78",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57472,7 +57472,7 @@ let remodded_constants_98 = {
             "exc": "A79",
             "elc": "A79",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57491,7 +57491,7 @@ let remodded_constants_98 = {
             "exc": "A80",
             "elc": "A80",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57510,7 +57510,7 @@ let remodded_constants_98 = {
             "exc": "A81",
             "elc": "A81",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57529,7 +57529,7 @@ let remodded_constants_98 = {
             "exc": "A82",
             "elc": "A82",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57548,7 +57548,7 @@ let remodded_constants_98 = {
             "exc": "A83",
             "elc": "A83",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57567,7 +57567,7 @@ let remodded_constants_98 = {
             "exc": "A84",
             "elc": "A84",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57586,7 +57586,7 @@ let remodded_constants_98 = {
             "exc": "A85",
             "elc": "A85",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57605,7 +57605,7 @@ let remodded_constants_98 = {
             "exc": "A86",
             "elc": "A86",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57624,7 +57624,7 @@ let remodded_constants_98 = {
             "exc": "A87",
             "elc": "A87",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57643,7 +57643,7 @@ let remodded_constants_98 = {
             "exc": "A88",
             "elc": "A88",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57662,7 +57662,7 @@ let remodded_constants_98 = {
             "exc": "A89",
             "elc": "A89",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57681,7 +57681,7 @@ let remodded_constants_98 = {
             "exc": "A90",
             "elc": "A90",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57700,7 +57700,7 @@ let remodded_constants_98 = {
             "exc": "A91",
             "elc": "A91",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57719,7 +57719,7 @@ let remodded_constants_98 = {
             "exc": "A92",
             "elc": "A92",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57738,7 +57738,7 @@ let remodded_constants_98 = {
             "exc": "A93",
             "elc": "A93",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57757,7 +57757,7 @@ let remodded_constants_98 = {
             "exc": "A94",
             "elc": "A94",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57776,7 +57776,7 @@ let remodded_constants_98 = {
             "exc": "A95",
             "elc": "A95",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57795,7 +57795,7 @@ let remodded_constants_98 = {
             "exc": "A96",
             "elc": "A96",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57814,7 +57814,7 @@ let remodded_constants_98 = {
             "exc": "A97",
             "elc": "A97",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57833,7 +57833,7 @@ let remodded_constants_98 = {
             "exc": "A98",
             "elc": "A98",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57852,7 +57852,7 @@ let remodded_constants_98 = {
             "exc": "A99",
             "elc": "A99",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57871,7 +57871,7 @@ let remodded_constants_98 = {
             "exc": "b00",
             "elc": "b00",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57890,7 +57890,7 @@ let remodded_constants_98 = {
             "exc": "b01",
             "elc": "b01",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57909,7 +57909,7 @@ let remodded_constants_98 = {
             "exc": "b02",
             "elc": "b02",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57928,7 +57928,7 @@ let remodded_constants_98 = {
             "exc": "b03",
             "elc": "b03",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57947,7 +57947,7 @@ let remodded_constants_98 = {
             "exc": "b04",
             "elc": "b04",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57966,7 +57966,7 @@ let remodded_constants_98 = {
             "exc": "b05",
             "elc": "b05",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -57985,7 +57985,7 @@ let remodded_constants_98 = {
             "exc": "b06",
             "elc": "b06",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58004,7 +58004,7 @@ let remodded_constants_98 = {
             "exc": "b07",
             "elc": "b07",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58023,7 +58023,7 @@ let remodded_constants_98 = {
             "exc": "b08",
             "elc": "b08",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58042,7 +58042,7 @@ let remodded_constants_98 = {
             "exc": "b09",
             "elc": "b09",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58061,7 +58061,7 @@ let remodded_constants_98 = {
             "exc": "b10",
             "elc": "b10",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58080,7 +58080,7 @@ let remodded_constants_98 = {
             "exc": "b11",
             "elc": "b11",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58099,7 +58099,7 @@ let remodded_constants_98 = {
             "exc": "b12",
             "elc": "b12",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58118,7 +58118,7 @@ let remodded_constants_98 = {
             "exc": "b13",
             "elc": "b13",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58137,7 +58137,7 @@ let remodded_constants_98 = {
             "exc": "b14",
             "elc": "b14",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58156,7 +58156,7 @@ let remodded_constants_98 = {
             "exc": "b15",
             "elc": "b15",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58175,7 +58175,7 @@ let remodded_constants_98 = {
             "exc": "b16",
             "elc": "b16",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58194,7 +58194,7 @@ let remodded_constants_98 = {
             "exc": "b17",
             "elc": "b17",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58213,7 +58213,7 @@ let remodded_constants_98 = {
             "exc": "b18",
             "elc": "b18",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58232,7 +58232,7 @@ let remodded_constants_98 = {
             "exc": "b19",
             "elc": "b19",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58251,7 +58251,7 @@ let remodded_constants_98 = {
             "exc": "b20",
             "elc": "b20",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58270,7 +58270,7 @@ let remodded_constants_98 = {
             "exc": "b21",
             "elc": "b21",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58289,7 +58289,7 @@ let remodded_constants_98 = {
             "exc": "b22",
             "elc": "b22",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58308,7 +58308,7 @@ let remodded_constants_98 = {
             "exc": "b23",
             "elc": "b23",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58327,7 +58327,7 @@ let remodded_constants_98 = {
             "exc": "b24",
             "elc": "b24",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58346,7 +58346,7 @@ let remodded_constants_98 = {
             "exc": "b25",
             "elc": "b25",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58365,7 +58365,7 @@ let remodded_constants_98 = {
             "exc": "b26",
             "elc": "b26",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58384,7 +58384,7 @@ let remodded_constants_98 = {
             "exc": "b27",
             "elc": "b27",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58403,7 +58403,7 @@ let remodded_constants_98 = {
             "exc": "b28",
             "elc": "b28",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58422,7 +58422,7 @@ let remodded_constants_98 = {
             "exc": "b29",
             "elc": "b29",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58441,7 +58441,7 @@ let remodded_constants_98 = {
             "exc": "b30",
             "elc": "b30",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58460,7 +58460,7 @@ let remodded_constants_98 = {
             "exc": "b31",
             "elc": "b31",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58479,7 +58479,7 @@ let remodded_constants_98 = {
             "exc": "b32",
             "elc": "b32",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58498,7 +58498,7 @@ let remodded_constants_98 = {
             "exc": "b33",
             "elc": "b33",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58517,7 +58517,7 @@ let remodded_constants_98 = {
             "exc": "b34",
             "elc": "b34",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58536,7 +58536,7 @@ let remodded_constants_98 = {
             "exc": "b35",
             "elc": "b35",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58555,7 +58555,7 @@ let remodded_constants_98 = {
             "exc": "b36",
             "elc": "b36",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58574,7 +58574,7 @@ let remodded_constants_98 = {
             "exc": "b37",
             "elc": "b37",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58593,7 +58593,7 @@ let remodded_constants_98 = {
             "exc": "b38",
             "elc": "b38",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58612,7 +58612,7 @@ let remodded_constants_98 = {
             "exc": "b39",
             "elc": "b39",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58631,7 +58631,7 @@ let remodded_constants_98 = {
             "exc": "b40",
             "elc": "b40",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58650,7 +58650,7 @@ let remodded_constants_98 = {
             "exc": "b41",
             "elc": "b41",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58669,7 +58669,7 @@ let remodded_constants_98 = {
             "exc": "b42",
             "elc": "b42",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58688,7 +58688,7 @@ let remodded_constants_98 = {
             "exc": "b43",
             "elc": "b43",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58707,7 +58707,7 @@ let remodded_constants_98 = {
             "exc": "b44",
             "elc": "b44",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58726,7 +58726,7 @@ let remodded_constants_98 = {
             "exc": "b45",
             "elc": "b45",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58745,7 +58745,7 @@ let remodded_constants_98 = {
             "exc": "b46",
             "elc": "b46",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58764,7 +58764,7 @@ let remodded_constants_98 = {
             "exc": "b47",
             "elc": "b47",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58783,7 +58783,7 @@ let remodded_constants_98 = {
             "exc": "b48",
             "elc": "b48",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58802,7 +58802,7 @@ let remodded_constants_98 = {
             "exc": "b49",
             "elc": "b49",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58821,7 +58821,7 @@ let remodded_constants_98 = {
             "exc": "b50",
             "elc": "b50",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58840,7 +58840,7 @@ let remodded_constants_98 = {
             "exc": "b51",
             "elc": "b51",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58859,7 +58859,7 @@ let remodded_constants_98 = {
             "exc": "b52",
             "elc": "b52",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58878,7 +58878,7 @@ let remodded_constants_98 = {
             "exc": "b53",
             "elc": "b53",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58897,7 +58897,7 @@ let remodded_constants_98 = {
             "exc": "b54",
             "elc": "b54",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58916,7 +58916,7 @@ let remodded_constants_98 = {
             "exc": "b55",
             "elc": "b55",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58935,7 +58935,7 @@ let remodded_constants_98 = {
             "exc": "b56",
             "elc": "b56",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -58954,7 +58954,7 @@ let remodded_constants_98 = {
             "exc": "b57",
             "elc": "b57",
             "iq": 1,
-            "n": "(Reserver Blood Pact Slot)",
+            "n": "(Reserved)", // Reserved Blood Pact Slot
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -59146,7 +59146,7 @@ let remodded_constants_98 = {
             "exc": "K01",
             "elc": "K01",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 11 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 6 of Torment Trial",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59170,7 +59170,7 @@ let remodded_constants_98 = {
             "exc": "K02",
             "elc": "K02",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 12 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 7 of Torment Trial",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59194,7 +59194,7 @@ let remodded_constants_98 = {
             "exc": "K03",
             "elc": "K03",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 13 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 8 of Torment Trial",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59218,7 +59218,7 @@ let remodded_constants_98 = {
             "exc": "K04",
             "elc": "K04",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 14 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 9 of Torment Trial",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59242,7 +59242,7 @@ let remodded_constants_98 = {
             "exc": "K05",
             "elc": "K05",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 15 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 10 of Torment Trial",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59266,7 +59266,7 @@ let remodded_constants_98 = {
             "exc": "K06",
             "elc": "K06",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 16 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 11 of Torment Trial",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59290,7 +59290,7 @@ let remodded_constants_98 = {
             "exc": "K07",
             "elc": "K07",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 17 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 12 of Torment Trial",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59314,7 +59314,7 @@ let remodded_constants_98 = {
             "exc": "K08",
             "elc": "K08",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 18 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 13 of Torment Trial",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59338,7 +59338,7 @@ let remodded_constants_98 = {
             "exc": "K09",
             "elc": "K09",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 19 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 14 of Torment Trial",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59362,7 +59362,7 @@ let remodded_constants_98 = {
             "exc": "K10",
             "elc": "K10",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 20 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 15 of Torment Trial",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59386,7 +59386,7 @@ let remodded_constants_98 = {
             "exc": "K11",
             "elc": "K11",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 21 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 16 of Torment Trial",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59410,7 +59410,7 @@ let remodded_constants_98 = {
             "exc": "K12",
             "elc": "K12",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 22 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 17 of Torment Trial",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59434,7 +59434,7 @@ let remodded_constants_98 = {
             "exc": "K13",
             "elc": "K13",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 23 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 18 of Torment Trial",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59458,7 +59458,7 @@ let remodded_constants_98 = {
             "exc": "K14",
             "elc": "K14",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 24 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 19 of Torment Trial",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59482,7 +59482,7 @@ let remodded_constants_98 = {
             "exc": "K15",
             "elc": "K15",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 25 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 20 of Torment Trial",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59506,7 +59506,7 @@ let remodded_constants_98 = {
             "exc": "K16",
             "elc": "K16",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 26 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 21 of Torment Trial",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59530,7 +59530,7 @@ let remodded_constants_98 = {
             "exc": "K17",
             "elc": "K17",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 27 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 22 of Torment Trial",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59554,7 +59554,7 @@ let remodded_constants_98 = {
             "exc": "K18",
             "elc": "K18",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 28 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 23 of Torment Trial",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59578,7 +59578,7 @@ let remodded_constants_98 = {
             "exc": "K19",
             "elc": "K19",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 29 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 24 of Torment Trial",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59602,7 +59602,7 @@ let remodded_constants_98 = {
             "exc": "K20",
             "elc": "K20",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 30 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 25 of Torment Trial",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59626,7 +59626,7 @@ let remodded_constants_98 = {
             "exc": "K21",
             "elc": "K21",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 31 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 6 of Icy Hell",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59650,7 +59650,7 @@ let remodded_constants_98 = {
             "exc": "K22",
             "elc": "K22",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 32 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 7 of Icy Hell",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59674,7 +59674,7 @@ let remodded_constants_98 = {
             "exc": "K23",
             "elc": "K23",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 33 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 8 of Icy Hell",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59698,7 +59698,7 @@ let remodded_constants_98 = {
             "exc": "K24",
             "elc": "K24",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 34 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 9 of Icy Hell",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59722,7 +59722,7 @@ let remodded_constants_98 = {
             "exc": "K25",
             "elc": "K25",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 35 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 10 of Icy Hell",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59746,7 +59746,7 @@ let remodded_constants_98 = {
             "exc": "K26",
             "elc": "K26",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 36 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 11 of Icy Hell",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59770,7 +59770,7 @@ let remodded_constants_98 = {
             "exc": "K27",
             "elc": "K27",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 37 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 12 of Icy Hell",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59794,7 +59794,7 @@ let remodded_constants_98 = {
             "exc": "K28",
             "elc": "K28",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 38 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 13 of Icy Hell",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59818,7 +59818,7 @@ let remodded_constants_98 = {
             "exc": "K29",
             "elc": "K29",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 39 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 14 of Icy Hell",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59842,7 +59842,7 @@ let remodded_constants_98 = {
             "exc": "K30",
             "elc": "K30",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 40 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 15 of Icy Hell",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59866,7 +59866,7 @@ let remodded_constants_98 = {
             "exc": "K31",
             "elc": "K31",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 41 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 16 of Icy Hell",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59890,7 +59890,7 @@ let remodded_constants_98 = {
             "exc": "K32",
             "elc": "K32",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 42 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 17 of Icy Hell",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59914,7 +59914,7 @@ let remodded_constants_98 = {
             "exc": "K33",
             "elc": "K33",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 43 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 18 of Icy Hell",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59938,7 +59938,7 @@ let remodded_constants_98 = {
             "exc": "K34",
             "elc": "K34",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 44 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 19 of Icy Hell",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59962,7 +59962,7 @@ let remodded_constants_98 = {
             "exc": "K35",
             "elc": "K35",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 45 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 20 of Icy Hell",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -59986,7 +59986,7 @@ let remodded_constants_98 = {
             "exc": "K36",
             "elc": "K36",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 46 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 21 of Icy Hell",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60010,7 +60010,7 @@ let remodded_constants_98 = {
             "exc": "K37",
             "elc": "K37",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 47 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 22 of Icy Hell",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60034,7 +60034,7 @@ let remodded_constants_98 = {
             "exc": "K38",
             "elc": "K38",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 48 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 23 of Icy Hell",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60058,7 +60058,7 @@ let remodded_constants_98 = {
             "exc": "K39",
             "elc": "K39",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 49 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 24 of Icy Hell",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60082,7 +60082,7 @@ let remodded_constants_98 = {
             "exc": "K40",
             "elc": "K40",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 50 of Icy Hell",
+            "n": "Scroll of Torment<br>Level 25 of Icy Hell",
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60106,7 +60106,7 @@ let remodded_constants_98 = {
             "exc": "K41",
             "elc": "K41",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 11 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60130,7 +60130,7 @@ let remodded_constants_98 = {
             "exc": "K42",
             "elc": "K42",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 12 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60154,7 +60154,7 @@ let remodded_constants_98 = {
             "exc": "K43",
             "elc": "K43",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 13 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60178,7 +60178,7 @@ let remodded_constants_98 = {
             "exc": "K44",
             "elc": "K44",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 14 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60202,7 +60202,7 @@ let remodded_constants_98 = {
             "exc": "K45",
             "elc": "K45",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 15 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60226,7 +60226,7 @@ let remodded_constants_98 = {
             "exc": "K46",
             "elc": "K46",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 16 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60250,7 +60250,7 @@ let remodded_constants_98 = {
             "exc": "K47",
             "elc": "K47",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 17 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60274,7 +60274,7 @@ let remodded_constants_98 = {
             "exc": "K48",
             "elc": "K48",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 18 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60298,7 +60298,7 @@ let remodded_constants_98 = {
             "exc": "K49",
             "elc": "K49",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 19 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60322,7 +60322,7 @@ let remodded_constants_98 = {
             "exc": "K50",
             "elc": "K50",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 20 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60346,7 +60346,7 @@ let remodded_constants_98 = {
             "exc": "K51",
             "elc": "K51",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 21 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60370,7 +60370,7 @@ let remodded_constants_98 = {
             "exc": "K52",
             "elc": "K52",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 22 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60394,7 +60394,7 @@ let remodded_constants_98 = {
             "exc": "K53",
             "elc": "K53",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 23 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60418,7 +60418,7 @@ let remodded_constants_98 = {
             "exc": "K54",
             "elc": "K54",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 24 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60442,7 +60442,7 @@ let remodded_constants_98 = {
             "exc": "K55",
             "elc": "K55",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 25 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60466,7 +60466,7 @@ let remodded_constants_98 = {
             "exc": "K56",
             "elc": "K56",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 26 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60490,7 +60490,7 @@ let remodded_constants_98 = {
             "exc": "K57",
             "elc": "K57",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 27 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60514,7 +60514,7 @@ let remodded_constants_98 = {
             "exc": "K58",
             "elc": "K58",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 28 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60538,7 +60538,7 @@ let remodded_constants_98 = {
             "exc": "K59",
             "elc": "K59",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 29 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60562,7 +60562,7 @@ let remodded_constants_98 = {
             "exc": "K60",
             "elc": "K60",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 30 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60586,7 +60586,7 @@ let remodded_constants_98 = {
             "exc": "K61",
             "elc": "K61",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 31 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60610,7 +60610,7 @@ let remodded_constants_98 = {
             "exc": "K62",
             "elc": "K62",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 32 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60634,7 +60634,7 @@ let remodded_constants_98 = {
             "exc": "K63",
             "elc": "K63",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 33 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60658,7 +60658,7 @@ let remodded_constants_98 = {
             "exc": "K64",
             "elc": "K64",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 34 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60682,7 +60682,7 @@ let remodded_constants_98 = {
             "exc": "K65",
             "elc": "K65",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 35 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60706,7 +60706,7 @@ let remodded_constants_98 = {
             "exc": "K66",
             "elc": "K66",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 36 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60730,7 +60730,7 @@ let remodded_constants_98 = {
             "exc": "K67",
             "elc": "K67",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 37 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60754,7 +60754,7 @@ let remodded_constants_98 = {
             "exc": "K68",
             "elc": "K68",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 38 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60778,7 +60778,7 @@ let remodded_constants_98 = {
             "exc": "K69",
             "elc": "K69",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 39 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60802,7 +60802,7 @@ let remodded_constants_98 = {
             "exc": "K70",
             "elc": "K70",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 40 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60826,7 +60826,7 @@ let remodded_constants_98 = {
             "exc": "K71",
             "elc": "K71",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 41 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60850,7 +60850,7 @@ let remodded_constants_98 = {
             "exc": "K72",
             "elc": "K72",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 42 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60874,7 +60874,7 @@ let remodded_constants_98 = {
             "exc": "K73",
             "elc": "K73",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 43 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60898,7 +60898,7 @@ let remodded_constants_98 = {
             "exc": "K74",
             "elc": "K74",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 44 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60922,7 +60922,7 @@ let remodded_constants_98 = {
             "exc": "K75",
             "elc": "K75",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 45 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60946,7 +60946,7 @@ let remodded_constants_98 = {
             "exc": "K76",
             "elc": "K76",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 46 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60970,7 +60970,7 @@ let remodded_constants_98 = {
             "exc": "K77",
             "elc": "K77",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 47 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -60994,7 +60994,7 @@ let remodded_constants_98 = {
             "exc": "K78",
             "elc": "K78",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 48 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -61018,7 +61018,7 @@ let remodded_constants_98 = {
             "exc": "K79",
             "elc": "K79",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 49 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -61042,7 +61042,7 @@ let remodded_constants_98 = {
             "exc": "K80",
             "elc": "K80",
             "iq": 1,
-            "n": "Scroll of Torment<br>Level 50 of Torment Trial",
+            "n": "(Reserved)", // Reserved Scroll of Torment Slot
             "s": 1,
             "smax": 10, // TODO raise to 100 again once the cubing bug is fixed
             "sspawn": 1,
@@ -62387,7 +62387,7 @@ let remodded_constants_98 = {
             "exc": "L61",
             "elc": "L61",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62406,7 +62406,7 @@ let remodded_constants_98 = {
             "exc": "L62",
             "elc": "L62",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62425,7 +62425,7 @@ let remodded_constants_98 = {
             "exc": "L63",
             "elc": "L63",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62444,7 +62444,7 @@ let remodded_constants_98 = {
             "exc": "L64",
             "elc": "L64",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62463,7 +62463,7 @@ let remodded_constants_98 = {
             "exc": "L65",
             "elc": "L65",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62482,7 +62482,7 @@ let remodded_constants_98 = {
             "exc": "L66",
             "elc": "L66",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62501,7 +62501,7 @@ let remodded_constants_98 = {
             "exc": "L67",
             "elc": "L67",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62520,7 +62520,7 @@ let remodded_constants_98 = {
             "exc": "L68",
             "elc": "L68",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62539,7 +62539,7 @@ let remodded_constants_98 = {
             "exc": "L69",
             "elc": "L69",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62558,7 +62558,7 @@ let remodded_constants_98 = {
             "exc": "L70",
             "elc": "L70",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62577,7 +62577,7 @@ let remodded_constants_98 = {
             "exc": "L71",
             "elc": "L71",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62596,7 +62596,7 @@ let remodded_constants_98 = {
             "exc": "L72",
             "elc": "L72",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62615,7 +62615,7 @@ let remodded_constants_98 = {
             "exc": "L73",
             "elc": "L73",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62634,7 +62634,7 @@ let remodded_constants_98 = {
             "exc": "L74",
             "elc": "L74",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62653,7 +62653,7 @@ let remodded_constants_98 = {
             "exc": "L75",
             "elc": "L75",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62672,7 +62672,7 @@ let remodded_constants_98 = {
             "exc": "L76",
             "elc": "L76",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62691,7 +62691,7 @@ let remodded_constants_98 = {
             "exc": "L77",
             "elc": "L77",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62710,7 +62710,7 @@ let remodded_constants_98 = {
             "exc": "L78",
             "elc": "L78",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62729,7 +62729,7 @@ let remodded_constants_98 = {
             "exc": "L79",
             "elc": "L79",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62748,7 +62748,7 @@ let remodded_constants_98 = {
             "exc": "L80",
             "elc": "L80",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62767,7 +62767,7 @@ let remodded_constants_98 = {
             "exc": "L81",
             "elc": "L81",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62786,7 +62786,7 @@ let remodded_constants_98 = {
             "exc": "L82",
             "elc": "L82",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62805,7 +62805,7 @@ let remodded_constants_98 = {
             "exc": "L83",
             "elc": "L83",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62824,7 +62824,7 @@ let remodded_constants_98 = {
             "exc": "L84",
             "elc": "L84",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62843,7 +62843,7 @@ let remodded_constants_98 = {
             "exc": "L85",
             "elc": "L85",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62862,7 +62862,7 @@ let remodded_constants_98 = {
             "exc": "L86",
             "elc": "L86",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62881,7 +62881,7 @@ let remodded_constants_98 = {
             "exc": "L87",
             "elc": "L87",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62900,7 +62900,7 @@ let remodded_constants_98 = {
             "exc": "L88",
             "elc": "L88",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62919,7 +62919,7 @@ let remodded_constants_98 = {
             "exc": "L89",
             "elc": "L89",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62938,7 +62938,7 @@ let remodded_constants_98 = {
             "exc": "L90",
             "elc": "L90",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62957,7 +62957,7 @@ let remodded_constants_98 = {
             "exc": "L91",
             "elc": "L91",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62976,7 +62976,7 @@ let remodded_constants_98 = {
             "exc": "L92",
             "elc": "L92",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -62995,7 +62995,7 @@ let remodded_constants_98 = {
             "exc": "L93",
             "elc": "L93",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -63014,7 +63014,7 @@ let remodded_constants_98 = {
             "exc": "L94",
             "elc": "L94",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -63033,7 +63033,7 @@ let remodded_constants_98 = {
             "exc": "L95",
             "elc": "L95",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -63052,7 +63052,7 @@ let remodded_constants_98 = {
             "exc": "L96",
             "elc": "L96",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -63071,7 +63071,7 @@ let remodded_constants_98 = {
             "exc": "L97",
             "elc": "L97",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -63090,7 +63090,7 @@ let remodded_constants_98 = {
             "exc": "L98",
             "elc": "L98",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -63109,7 +63109,7 @@ let remodded_constants_98 = {
             "exc": "L99",
             "elc": "L99",
             "iq": 1,
-            "n": "(Reserver Forsaken Pact Slot)",
+            "n": "(Reserved Forsaken Pact Slot)",
             "hi": 0,
             "gs": 0,
             "gt": 0,
@@ -65629,6 +65629,40 @@ let remodded_constants_98 = {
                 "misc/charm/charm_large1",
                 "misc/charm/charm_large2",
                 "misc/charm/charm_large3"
+            ]
+        },
+        // m35 is previous Healthy Breakfast (before fix so it displays in gold when looted)
+        "m36": {
+            "nc": "m36",
+            "exc": "m36",
+            "elc": "m36",
+            "iq": 1,
+            "n": "Small Charm", // Unique Small Charm
+            "hi": 0,
+            "gs": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "ig": [
+                "invch1",
+                "invch4",
+                "invch7"
+            ],
+            "eq1n": "Charm",
+            "c": [
+                "Small Charm",
+                "Charm",
+                "Miscellaneous",
+                "Potion",
+                "Miscellaneous"
+            ],
+            "hdi": "misc/charm/charm_small",
+            "hdig": [
+                "misc/charm/charm_small1",
+                "misc/charm/charm_small2",
+                "misc/charm/charm_small3"
             ]
         },
         "j00": {

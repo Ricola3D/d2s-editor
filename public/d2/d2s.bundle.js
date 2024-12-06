@@ -20796,7 +20796,7 @@ var SkillOffset = {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.EGemPosition = exports.Quality = exports.ItemType = exports.EItemQuality = exports.EStashType = void 0;
+exports.EGemPosition = exports.Quality = exports.ItemType = exports.EItemEquipPosition = exports.EItemLocation = exports.IItemAltPosition = exports.EItemQuality = exports.EStashType = void 0;
 var EStashType;
 (function (EStashType) {
     EStashType[EStashType["shared"] = 0] = "shared";
@@ -20808,6 +20808,36 @@ var EItemQuality;
     EItemQuality[EItemQuality["exceptional"] = 1] = "exceptional";
     EItemQuality[EItemQuality["elite"] = 2] = "elite";
 })(EItemQuality || (exports.EItemQuality = EItemQuality = {}));
+var IItemAltPosition;
+(function (IItemAltPosition) {
+    IItemAltPosition[IItemAltPosition["Inventory"] = 1] = "Inventory";
+    IItemAltPosition[IItemAltPosition["Cube"] = 4] = "Cube";
+    IItemAltPosition[IItemAltPosition["Stash"] = 5] = "Stash";
+})(IItemAltPosition || (exports.IItemAltPosition = IItemAltPosition = {}));
+var EItemLocation;
+(function (EItemLocation) {
+    EItemLocation[EItemLocation["Stored"] = 0] = "Stored";
+    EItemLocation[EItemLocation["Equipped"] = 1] = "Equipped";
+    EItemLocation[EItemLocation["Belt"] = 2] = "Belt";
+    EItemLocation[EItemLocation["Cursor"] = 4] = "Cursor";
+    EItemLocation[EItemLocation["Socketed"] = 6] = "Socketed";
+})(EItemLocation || (exports.EItemLocation = EItemLocation = {}));
+var EItemEquipPosition;
+(function (EItemEquipPosition) {
+    EItemEquipPosition[EItemEquipPosition["Stored"] = 0] = "Stored";
+    EItemEquipPosition[EItemEquipPosition["Helm"] = 1] = "Helm";
+    EItemEquipPosition[EItemEquipPosition["Amulet"] = 2] = "Amulet";
+    EItemEquipPosition[EItemEquipPosition["Armor"] = 3] = "Armor";
+    EItemEquipPosition[EItemEquipPosition["RightHand"] = 4] = "RightHand";
+    EItemEquipPosition[EItemEquipPosition["LeftHand"] = 5] = "LeftHand";
+    EItemEquipPosition[EItemEquipPosition["RightRing"] = 6] = "RightRing";
+    EItemEquipPosition[EItemEquipPosition["LeftRing"] = 7] = "LeftRing";
+    EItemEquipPosition[EItemEquipPosition["Belt"] = 8] = "Belt";
+    EItemEquipPosition[EItemEquipPosition["Boots"] = 9] = "Boots";
+    EItemEquipPosition[EItemEquipPosition["Gloves"] = 10] = "Gloves";
+    EItemEquipPosition[EItemEquipPosition["RightHandSwitch"] = 11] = "RightHandSwitch";
+    EItemEquipPosition[EItemEquipPosition["LeftHandSwitch"] = 12] = "LeftHandSwitch";
+})(EItemEquipPosition || (exports.EItemEquipPosition = EItemEquipPosition = {}));
 var ItemType;
 (function (ItemType) {
     ItemType[ItemType["Armor"] = 1] = "Armor";

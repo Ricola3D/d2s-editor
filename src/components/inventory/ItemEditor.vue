@@ -2,8 +2,12 @@
   <div class="item-editor">
     <div class="form-row item-action-bar">
       <div class="col-md-12">
-        <button type="button" class="btn btn-primary" @click="onEvent('share')">
-          Share
+        <button
+          type="button"
+          class="btn btn-primary"
+          @click="onEvent('export')"
+        >
+          Export
         </button>
         <button type="button" class="btn btn-primary" @click="onEvent('copy')">
           Copy
@@ -26,7 +30,12 @@
     <div class="form-row item-definition">
       <div>
         <!-- <Item v-model:item="item" clazz="item-edit" /> -->
-        <Item :item="item" clazz="item-edit" @update:item="item = $event" />
+        <Item
+          :item="item"
+          clazz="item-edit"
+          @update:item="item = $event"
+          @contextmenu.prevent.stop="itemRC($event, item)"
+        />
       </div>
 
       <ul className="ItemOptions">
@@ -56,7 +65,7 @@
             <div>
               <multiselect
                 v-model="item.type"
-                :options="getBasesOptions(item.type)"
+                :options="getBasesOptions()"
                 :searchable="true"
                 :can-deselect="false"
                 :can-clear="false"
@@ -137,6 +146,7 @@
             <div>
               <multiselect
                 v-model.number="item.quality"
+                :class="getQualitySelectClass()"
                 :options="rarities_options"
                 :searchable="true"
                 :can-deselect="false"
@@ -410,6 +420,7 @@
             :id="id + 'Socketed' + idx"
             ref="itemEditor"
             v-model:item="item.socketed_items[idx]"
+            :context-menu="contextMenu"
             :location="{ location: 6 }"
             @item-event="onChildEvent"
           />
@@ -433,6 +444,7 @@ export default {
   props: {
     id: String,
     item: Object,
+    contextMenu: Object,
     // location: Object,
   },
   data() {
@@ -539,6 +551,9 @@ export default {
     }
   },
   methods: {
+    getQualitySelectClass() {
+      return `quality-select quality-${this.item.quality}`
+    },
     statDescription(stat) {
       if (!stat.description || stat.visible === false) {
         return null
@@ -554,6 +569,12 @@ export default {
         })
         .reverse()
         .join('')
+    },
+    itemRC($evt, item) {
+      this.contextMenu.showContextMenu($evt, item, [
+        { text: 'Copy' },
+        { text: 'Export' },
+      ])
     },
     getMaxQuantity() {
       if (this.isStackable()) {
@@ -649,13 +670,44 @@ export default {
       }
       return bases
     },
-    getBasesOptions(code) {
+    getBasesOptions() {
+      // let options
       const constants =
         window[`${window.work_mod}_constants_${window.work_version}`]
+
+      // switch (this.item.type_id) {
+      //   case 0: // Unknown
+      //   default: // Out-of-bounds
+      //     options = []
+      //     break;
+      //   case 1: // Armor
+      //   case 2: // Shield
+      //     break;
+      //   case 3:
+      //     break;
+      //   case 4: // Other/misc
+      //     const type = constants.other_items[this.item.type]
+      //     options = Object.keys(constants.other_items) // Dictionary to array
+      //       .filter(function(key) {
+      //         if (!constants.other_items[key]) return false // Not null/undefined
+      //         if (!constants.other_items[key].n) return false // Not nameless
+      //         if (constants.other_items[key].n == "Reserved") return false // Not reserved
+      //         if (type.c[0] != constants.other_items[key][0]) return false // Same category exist or not
+      //         return true;
+      //       }).map(key => ({
+      //         value: key,
+      //         label: /*"(" + key + ") " +*/ constants.other_items[key].n
+      //       }))
+
+      //     break;
+      // }
+
+      // return options
+
       if (this.item.type_id == 3) {
-        return this.findBasesInConstants(code, constants.weapon_items)
+        return this.findBasesInConstants(this.item.type, constants.weapon_items)
       } else if (this.item.type_id == 1) {
-        return this.findBasesInConstants(code, constants.armor_items)
+        return this.findBasesInConstants(this.item.type, constants.armor_items)
       } else if (this.item.type_id == 4) {
         return Object.entries(constants.other_items)
           .filter((entry) => entry[1].n)
