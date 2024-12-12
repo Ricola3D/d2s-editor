@@ -119,7 +119,10 @@ export default {
         `${window.work_mod}_constants_${window.work_version}`
       ].skills
         .filter((skill) => skill && skill.s)
-        .map((skill) => ({ value: skill.id, label: `${skill.s}${skill.id > 5 && !skill.c ? " (item)" : ""}` }))
+        .map((skill) => ({
+          value: skill.id,
+          label: `${skill.s}${skill.id > 5 && !skill.c ? ' (item)' : ''}`,
+        }))
         .sort((a, b) => {
           return a.label.localeCompare(b.label)
         }),
@@ -144,8 +147,9 @@ export default {
       if (valIdx > 0) {
         if (stat.np && valIdx < stat.np) {
           // Stat is a succession of np values (ex: coldmindam > coldmaxdam > coldlength)
-          stat = window[`${window.work_mod}_constants_${window.work_version}`]
-          .magical_properties[statId + valIdx]
+          stat =
+            window[`${window.work_mod}_constants_${window.work_version}`]
+              .magical_properties[statId + valIdx]
         }
         // TODO: encode
       }
@@ -162,8 +166,9 @@ export default {
       if (valIdx > 0) {
         if (stat.np && valIdx < stat.np) {
           // Stat is a succession of np values (ex: coldmindam > coldmaxdam > coldlength)
-          stat = window[`${window.work_mod}_constants_${window.work_version}`]
-          .magical_properties[statId + valIdx]
+          stat =
+            window[`${window.work_mod}_constants_${window.work_version}`]
+              .magical_properties[statId + valIdx]
         }
         // TODO: encode
       }
@@ -220,16 +225,18 @@ export default {
       let stat =
         window[`${window.work_mod}_constants_${window.work_version}`]
           .magical_properties[statId]
-      if (stat.dF == 15 || stat.dF == 24) { // Similar to e=2 or 3
+      if (stat.dF == 15 || stat.dF == 24) {
+        // Similar to e=2 or 3
         return valueIdx == 2
       }
       if (stat.dF == 16) {
         return valueIdx == 1
       }
-      if (stat.dF == 16 || stat.dF == 27 || stat.dF == 28) { // Aura when equipped or Similar to e=1
+      if (stat.dF == 16 || stat.dF == 27 || stat.dF == 28) {
+        // Aura when equipped or Similar to e=1
         return valueIdx == 1
       }
-      
+
       return false
     },
     getStatTitle(statId, valueIdx) {
@@ -237,55 +244,95 @@ export default {
         window[`${window.work_mod}_constants_${window.work_version}`]
           .magical_properties[statId]
       if (stat.dF == 14) {
-        if (valueIdx == 1) return "Skill Tab"
-        if (valueIdx == 2) return "Class"
-        if (valueIdx == 3) return "Bonus Level"
-      }
-      else if (stat.dF == 13) {
-        if (valueIdx == 1) return "Class"
-        if (valueIdx == 2) return "Bonus Level"
-      }
-      else if (stat.sP) {
+        if (valueIdx == 1) return 'Skill Tab'
+        if (valueIdx == 2) return 'Class'
+        if (valueIdx == 3) return 'Bonus Level'
+      } else if (stat.dF == 13) {
+        if (valueIdx == 1) return 'Class'
+        if (valueIdx == 2) return 'Bonus Level'
+      } else if (stat.sP) {
         if (stat.e == 3) {
-          if (valueIdx == 1) return "Skill Level"
-          if (valueIdx == 2) return "Skill"
-          if (valueIdx == 3) return "Current charges"
-          if (valueIdx == 4) return "Max charges"
+          if (valueIdx == 1) return 'Skill Level'
+          if (valueIdx == 2) return 'Skill'
+          if (valueIdx == 3) return 'Current charges'
+          if (valueIdx == 4) return 'Max charges'
           return valueIdx == 2
-        }
-        else if (stat.e == 2) {
-          if (valueIdx == 1) return "Skill Level"
-          if (valueIdx == 2) return "Skill"
-          if (valueIdx == 3) return "Chances to Cast"
+        } else if (stat.e == 2) {
+          if (valueIdx == 1) return 'Skill Level'
+          if (valueIdx == 2) return 'Skill'
+          if (valueIdx == 3) return 'Chances to Cast'
           return valueIdx == 2
         } else {
-          if (valueIdx == 1) return "Skill"
-          if (valueIdx == 2) return "Skill Level"
+          if (valueIdx == 1) return 'Skill'
+          if (valueIdx == 2) return 'Skill Level'
         }
+      } else if (stat.np > 1) {
+        if (valueIdx == 1)
+          return stat.s === 'poisonmindam' ? 'Min (xLength/256)' : 'Min'
+        if (valueIdx == 2) return 'Max'
+        if (valueIdx == 3) return 'Length in frames (25frames = 1s)'
       }
-      else if (stat.np > 1) {
-        if (valueIdx == 1) return (stat.s === "poisonmindam") ? "Min (xLength/256)" : "Min"
-        if (valueIdx == 2) return "Max"
-        if (valueIdx == 3) return "Length in frames (25frames = 1s)"
-      }
-      return ""
+      return ''
     },
     numValues(id) {
+      // 1 - +[value] [string1]
+      // 2 - [value]% [string1]
+      // 3 - [value] [string1]
+      // 4 - +[value]% [string1]
+      // 5 - [value*100/128]% [string1]
+      // 6 - +[value] [string1] [string2]
+      // 7 - [value]% [string1] [string2]
+      // 8 - +[value]% [string1] [string2]
+      // 9 - [value] [string1] [string2]
+      // 10 - [value*100/128]% [string1] [string2]
+      // 11 - Repairs 1 Durability In [100 / value] Seconds
+      // 12 - +[value] [string1]
+      // 13 - +[value] to [class] Skill Levels
+      // 14 - +[value] to [skilltab] Skill Levels ([class] Only)
+      // 15 - [chance]% to case [slvl] [skill] on [event]
+      // 16 - Level [sLvl] [skill] Aura When Equipped
+      // 17 - [value] [string1] (Increases near [time])
+      // 18 - [value]% [string1] (Increases near [time])
+      // 19 - this is used by stats that use Blizzard's sprintf implementation (if you don't know what that is, it won't be of interest to you eitherway I guess), look at how prismatic is setup, the string is the format that gets passed to their sprintf spinoff.
+      // 20 - [value * -1]% [string1]
+      // 21 - [value * -1] [string1]
+      // 22 - [value]% [string1] [montype] (warning: this is bugged in vanilla and doesn't work properly, see CE forum)
+      // 23 - [value]% [string1] [monster]
+      // 24 - used for charges, we all know how that desc looks
+      // 25 - not used by vanilla, present in the code but I didn't test it yet
+      // 26 - not used by vanilla, present in the code but I didn't test it yet
+      // 27 - +[value] to [skill] ([class] Only)
+      // 28 - +[value] to [skill]
       let stat =
         window[`${window.work_mod}_constants_${window.work_version}`]
           .magical_properties[id]
       if (stat.np) {
         return stat.np
       }
-      if (stat.dF == 14 || stat.e == 2) {
-        return 3
-      }
-      if (stat.e == 3) {
+      if (stat.dF == 24 || stat.e == 3) {
         return 4
       }
-      if (stat.sP) {
+      if (stat.dF == 14 || stat.dF == 16 || stat.e == 2) {
+        return 3
+      }
+      if (
+        stat.dF == 13 ||
+        (stat.dF >= 22 && stat.dF <= 23) ||
+        (stat.dF >= 27 && stat.dF <= 28) ||
+        stat.sP
+      ) {
         return 2
       }
+
+      if (
+        (stat.dF >= 1 && stat.dF <= 12) ||
+        (stat.dF >= 17 && stat.dF <= 18) ||
+        (stat.dF >= 20 && stat.dF <= 21)
+      ) {
+        return 1
+      }
+
+      // Mostly dF 19 (Blizzard's sprintf implementation)
       return 1
     },
     formatStateOption(state) {

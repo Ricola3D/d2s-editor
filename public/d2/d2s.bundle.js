@@ -17928,7 +17928,7 @@ function _enhanceAttributeDescription(_magic_attributes, constants, attributes, 
                 }
             }
             descString || (descString = "Missing description"); // To avoid crashs
-            magical_attribute.description = descString.replace(/%d/gi, function () {
+            magical_attribute.description = descString.replace(/%\+?d/gi, function () {
                 var v = magical_attribute.values[count_1++];
                 return v;
             });

@@ -1,4 +1,4 @@
-export let vanilla_constants_99 = {
+let vanilla_constants_99 = {
     "classes": [
         {
             "id": 0,
@@ -39000,3 +39000,10 @@ export let vanilla_constants_99 = {
     },
     "version": "vanilla_constants_99"
 };
+
+vanilla_constants_99.gold = {
+    "perCharLevel": 10000,
+    "bank": 2500000
+};
+
+export { vanilla_constants_99 };

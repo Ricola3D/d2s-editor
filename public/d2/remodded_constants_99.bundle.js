@@ -2377,7 +2377,10 @@ let remodded_constants_99 = {
         null,
         null,
         null, // 700
-        null,
+        {
+            "id": 701,
+            "s": "Disarm"
+        },
         null,
         null,
         null,
@@ -46828,8 +46831,8 @@ let remodded_constants_99 = {
                         "code": "r01",
                         "type": "weapon",
                         "m": "att",
-                        "min": 50,
-                        "max": 50
+                        "min": 30,
+                        "max": 30
                     }
                 ],
                 [
@@ -46844,8 +46847,8 @@ let remodded_constants_99 = {
                         "code": "r01",
                         "type": "helm",
                         "m": "ac",
-                        "min": 15,
-                        "max": 15
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -46911,9 +46914,9 @@ let remodded_constants_99 = {
                     {
                         "code": "r02",
                         "type": "helm",
-                        "m": "stamdrain",
-                        "min": 15,
-                        "max": 15
+                        "m": "swing2",
+                        "min": 5,
+                        "max": 5
                     }
                 ],
                 [
@@ -47074,8 +47077,8 @@ let remodded_constants_99 = {
                         "code": "r05",
                         "type": "helm",
                         "m": "regen-mana",
-                        "min": 15,
-                        "max": 15
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -47119,8 +47122,8 @@ let remodded_constants_99 = {
                         "code": "r06",
                         "type": "weapon",
                         "m": "dmg-max",
-                        "min": 9,
-                        "max": 9
+                        "min": 6,
+                        "max": 6
                     }
                 ],
                 [
@@ -47128,8 +47131,8 @@ let remodded_constants_99 = {
                         "code": "r06",
                         "type": "helm",
                         "m": "dmg-to-mana",
-                        "min": 15,
-                        "max": 15
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -47174,8 +47177,8 @@ let remodded_constants_99 = {
                         "type": "weapon",
                         "m": "dmg-pois",
                         "p": 125,
-                        "min": 154,
-                        "max": 154
+                        "min": 77,
+                        "max": 77
                     }
                 ],
                 [
@@ -47183,8 +47186,8 @@ let remodded_constants_99 = {
                         "code": "r07",
                         "type": "helm",
                         "m": "res-pois",
-                        "min": 30,
-                        "max": 30
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -47192,8 +47195,8 @@ let remodded_constants_99 = {
                         "code": "r07",
                         "type": "shield",
                         "m": "res-pois",
-                        "min": 35,
-                        "max": 35
+                        "min": 20,
+                        "max": 20
                     }
                 ]
             ],
@@ -47228,8 +47231,8 @@ let remodded_constants_99 = {
                         "code": "r08",
                         "type": "weapon",
                         "m": "dmg-fire",
-                        "min": 5,
-                        "max": 30
+                        "min": 3,
+                        "max": 15
                     }
                 ],
                 [
@@ -47237,8 +47240,8 @@ let remodded_constants_99 = {
                         "code": "r08",
                         "type": "helm",
                         "m": "res-fire",
-                        "min": 30,
-                        "max": 30
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -47246,8 +47249,8 @@ let remodded_constants_99 = {
                         "code": "r08",
                         "type": "shield",
                         "m": "res-fire",
-                        "min": 35,
-                        "max": 35
+                        "min": 20,
+                        "max": 20
                     }
                 ]
             ],
@@ -47283,7 +47286,7 @@ let remodded_constants_99 = {
                         "type": "weapon",
                         "m": "dmg-ltng",
                         "min": 1,
-                        "max": 50
+                        "max": 25
                     }
                 ],
                 [
@@ -47291,8 +47294,8 @@ let remodded_constants_99 = {
                         "code": "r09",
                         "type": "helm",
                         "m": "res-ltng",
-                        "min": 30,
-                        "max": 30
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -47300,8 +47303,8 @@ let remodded_constants_99 = {
                         "code": "r09",
                         "type": "shield",
                         "m": "res-ltng",
-                        "min": 35,
-                        "max": 35
+                        "min": 20,
+                        "max": 20
                     }
                 ]
             ],
@@ -47337,8 +47340,8 @@ let remodded_constants_99 = {
                         "type": "weapon",
                         "m": "dmg-cold",
                         "p": 75,
-                        "min": 3,
-                        "max": 14
+                        "min": 7,
+                        "max": 2
                     }
                 ],
                 [
@@ -47346,8 +47349,8 @@ let remodded_constants_99 = {
                         "code": "r10",
                         "type": "helm",
                         "m": "res-cold",
-                        "min": 30,
-                        "max": 30
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -47355,8 +47358,8 @@ let remodded_constants_99 = {
                         "code": "r10",
                         "type": "shield",
                         "m": "res-cold",
-                        "min": 35,
-                        "max": 35
+                        "min": 20,
+                        "max": 20
                     }
                 ]
             ],
@@ -47391,8 +47394,8 @@ let remodded_constants_99 = {
                         "code": "r11",
                         "type": "weapon",
                         "m": "lifesteal",
-                        "min": 7,
-                        "max": 7
+                        "min": 5,
+                        "max": 5
                     }
                 ],
                 [
@@ -47454,8 +47457,8 @@ let remodded_constants_99 = {
                         "code": "r12",
                         "type": "helm",
                         "m": "red-dmg",
-                        "min": 7,
-                        "max": 7
+                        "min": 4,
+                        "max": 4
                     }
                 ],
                 [
@@ -47508,8 +47511,8 @@ let remodded_constants_99 = {
                         "code": "r13",
                         "type": "helm",
                         "m": "balance2",
-                        "min": 20,
-                        "max": 20
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -47553,8 +47556,8 @@ let remodded_constants_99 = {
                         "code": "r14",
                         "type": "weapon",
                         "m": "howl",
-                        "min": 32,
-                        "max": 32
+                        "min": 25,
+                        "max": 25
                     }
                 ],
                 [
@@ -47562,8 +47565,8 @@ let remodded_constants_99 = {
                         "code": "r14",
                         "type": "helm",
                         "m": "regen",
-                        "min": 7,
-                        "max": 7
+                        "min": 3,
+                        "max": 3
                     }
                 ],
                 [
@@ -47931,15 +47934,15 @@ let remodded_constants_99 = {
                         "code": "r21",
                         "type": "weapon",
                         "m": "att-demon",
-                        "min": 100,
-                        "max": 100
+                        "min": 50,
+                        "max": 50
                     },
                     {
                         "code": "r21",
                         "type": "weapon",
                         "m": "dmg-demon",
-                        "min": 75,
-                        "max": 75
+                        "min": 40,
+                        "max": 40
                     }
                 ],
                 [
@@ -47947,8 +47950,8 @@ let remodded_constants_99 = {
                         "code": "r21",
                         "type": "helm",
                         "m": "ac%",
-                        "min": 30,
-                        "max": 30
+                        "min": 20,
+                        "max": 20
                     }
                 ],
                 [
@@ -47992,8 +47995,8 @@ let remodded_constants_99 = {
                         "code": "r22",
                         "type": "weapon",
                         "m": "openwounds",
-                        "min": 25,
-                        "max": 25
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -48001,8 +48004,8 @@ let remodded_constants_99 = {
                         "code": "r22",
                         "type": "helm",
                         "m": "res-all",
-                        "min": 15,
-                        "max": 15
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -48055,8 +48058,8 @@ let remodded_constants_99 = {
                         "code": "r23",
                         "type": "helm",
                         "m": "red-mag",
-                        "min": 7,
-                        "max": 7
+                        "min": 3,
+                        "max": 3
                     }
                 ],
                 [
@@ -48100,8 +48103,8 @@ let remodded_constants_99 = {
                         "code": "r24",
                         "type": "weapon",
                         "m": "mag%",
-                        "min": 30,
-                        "max": 30
+                        "min": 15,
+                        "max": 15
                     }
                 ],
                 [
@@ -48109,8 +48112,8 @@ let remodded_constants_99 = {
                         "code": "r24",
                         "type": "helm",
                         "m": "mag%",
-                        "min": 25,
-                        "max": 25
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -48154,8 +48157,8 @@ let remodded_constants_99 = {
                         "code": "r25",
                         "type": "weapon",
                         "m": "att%",
-                        "min": 20,
-                        "max": 20
+                        "min": 15,
+                        "max": 15
                     }
                 ],
                 [
@@ -48208,8 +48211,8 @@ let remodded_constants_99 = {
                         "code": "r26",
                         "type": "weapon",
                         "m": "manasteal",
-                        "min": 7,
-                        "max": 7
+                        "min": 5,
+                        "max": 5
                     }
                 ],
                 [
@@ -48262,8 +48265,8 @@ let remodded_constants_99 = {
                         "code": "r27",
                         "type": "weapon",
                         "m": "dmg%",
-                        "min": 50,
-                        "max": 50
+                        "min": 35,
+                        "max": 35
                     }
                 ],
                 [
@@ -48316,8 +48319,8 @@ let remodded_constants_99 = {
                         "code": "r28",
                         "type": "weapon",
                         "m": "deadly",
-                        "min": 20,
-                        "max": 20
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
@@ -48487,8 +48490,8 @@ let remodded_constants_99 = {
                         "code": "r31",
                         "type": "helm",
                         "m": "hp%",
-                        "min": 5,
-                        "max": 5
+                        "min": 2,
+                        "max": 2
                     }
                 ],
                 [
@@ -48532,15 +48535,15 @@ let remodded_constants_99 = {
                         "code": "r32",
                         "type": "weapon",
                         "m": "freeze",
-                        "min": 3,
-                        "max": 3
+                        "min": 2,
+                        "max": 2
                     }
                 ],
                 [
                     {
                         "code": "r32",
                         "type": "helm",
-                        "m": "nofreeze",
+                        "m": "half-freeze",
                         "min": 1,
                         "max": 1
                     }
@@ -48549,7 +48552,7 @@ let remodded_constants_99 = {
                     {
                         "code": "r32",
                         "type": "shield",
-                        "m": "nofreeze",
+                        "m": "half-freeze",
                         "min": 1,
                         "max": 1
                     }
@@ -48588,6 +48591,27 @@ let remodded_constants_99 = {
                         "m": "indestruct",
                         "min": 1,
                         "max": 1
+                    },
+                    {
+                        "code": "r33",
+                        "type": "weapon",
+                        "m": "abs-fire%",
+                        "min": 5,
+                        "max": 5,
+                    },
+                    {
+                        "code": "r33",
+                        "type": "weapon",
+                        "m": "abs-cold%",
+                        "min": 5,
+                        "max": 5,
+                    },
+                    {
+                        "code": "r33",
+                        "type": "weapon",
+                        "m": "abs-ltng%",
+                        "min": 5,
+                        "max": 5,
                     }
                 ],
                 [
@@ -48597,6 +48621,34 @@ let remodded_constants_99 = {
                         "m": "indestruct",
                         "min": 1,
                         "max": 1
+                    },
+                    {
+                        "code": "r33",
+                        "type": "helm",
+                        "m": "abs-fire%",
+                        "min": 5,
+                        "max": 5,
+                    },
+                    {
+                        "code": "r33",
+                        "type": "helm",
+                        "m": "abs-cold%",
+                        "min": 5,
+                        "max": 5,
+                    },
+                    {
+                        "code": "r33",
+                        "type": "helm",
+                        "m": "abs-ltng%",
+                        "min": 5,
+                        "max": 5,
+                    },
+                    {
+                        "code": "r33",
+                        "type": "helm",
+                        "m": "abs-mag%",
+                        "min": 5,
+                        "max": 5,
                     }
                 ],
                 [
@@ -48606,6 +48658,34 @@ let remodded_constants_99 = {
                         "m": "indestruct",
                         "min": 1,
                         "max": 1
+                    },
+                    {
+                        "code": "r33",
+                        "type": "shield",
+                        "m": "abs-fire%",
+                        "min": 5,
+                        "max": 5,
+                    },
+                    {
+                        "code": "r33",
+                        "type": "shield",
+                        "m": "abs-cold%",
+                        "min": 5,
+                        "max": 5,
+                    },
+                    {
+                        "code": "r33",
+                        "type": "shield",
+                        "m": "abs-ltng%",
+                        "min": 5,
+                        "max": 5,
+                    },
+                    {
+                        "code": "r33",
+                        "type": "shield",
+                        "m": "abs-mag%",
+                        "min": 5,
+                        "max": 5,
                     }
                 ]
             ],
@@ -65775,6 +65855,11 @@ remodded_constants_99.unq_items[4095] = {
     "i": "D2R_Jank",
     "c": "std",
     "hdi": "misc/body_part/flag"
+};
+
+remodded_constants_99.gold = {
+    "perCharLevel": 10000,
+    "bank": 2500000
 };
 
 export { remodded_constants_99 };

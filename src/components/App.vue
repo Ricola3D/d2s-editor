@@ -1324,8 +1324,10 @@ export default {
       event.target.value = null
     },
     maxGold() {
-      this.save.attributes.gold = this.save.header.level * 10000
-      this.save.attributes.goldbank = 2500000
+      const constants =
+        window[`${window.work_mod}_constants_${window.work_version}`]
+      this.save.attributes.gold = this.save.header.level * constants.gold.perCharLevel
+      this.save.attributes.goldbank = constants.gold.bank
     },
     unlockAllQuests() {
       for (const diff of ['quests_normal', 'quests_nm', 'quests_hell']) {

@@ -159,9 +159,19 @@ export default {
       }
     },
     itemName(item) {
-      let name = /*"(" + item.type + ") " +*/ item.type_name
+      let name = "(" + item.type + ") " + item.type_name
       const constants =
         window[`${window.work_mod}_constants_${window.work_version}`]
+      /* Inferior <type_name> */
+      if (item.quality === d2s.types.Quality.Inferior) {
+        name = `Inferior ${name}`
+      }
+      /* Superior <type_name> */
+      if (item.quality === d2s.types.Quality.Superior) {
+        name = `Superior ${name}`
+      }
+      /* <Prefix>(<pId>) <type_name> <suffix>(<sId>)
+        <type_name>*/
       if (item.quality === d2s.types.Quality.Magic && item.magic_prefix) {
         let magic_prefix_name = constants.magic_prefixes[item.magic_prefix]
           ? constants.magic_prefixes[item.magic_prefix].n
@@ -180,6 +190,8 @@ export default {
         }
         name = `${name} ${magic_suffix_name}(${item.magic_suffix})`
       }
+      /* <Prefix>(<pId>) <type_name> <suffix>(<sId>)
+        <type_name>*/
       if (item.quality === d2s.types.Quality.Rare && item.rare_name_id) {
         let rare_name = constants.rare_names[item.rare_name_id]
           ? constants.rare_names[item.rare_name_id].n
@@ -250,9 +262,9 @@ export default {
       }
       switch (item.quality) {
         case 1:
+        case 3:
           return 'grey'
         case 2:
-        case 3:
           return 'white'
         case 4:
           return 'blue'
