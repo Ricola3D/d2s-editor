@@ -8,7 +8,7 @@
           :class="{ ethereal: item.ethereal }"
         />
         <img v-else src="/img/loading.gif" class="loading" />
-        <div v-if="item.total_nr_of_sockets && tooltipShown" class="sockets">
+        <div v-if="item.total_nr_of_sockets && tooltipShown" class="sockets" @dragstart="dragStart">
           <div
             v-for="idx in item.total_nr_of_sockets"
             :key="idx"
@@ -18,6 +18,7 @@
               'empty-socket':
                 !item.socketed_items || !item.socketed_items[idx - 1],
             }"
+            @dragstart="dragStart"
           >
             <template
               v-if="item.socketed_items && item.socketed_items[idx - 1]"
@@ -25,6 +26,7 @@
               <img
                 v-if="item.socketed_items[idx - 1].src"
                 :src="item.socketed_items[idx - 1].src"
+                title="To drag&drop, first click once to hide sockets and tooltip"
               />
               <img v-else src="/img/loading.gif" class="loading" />
             </template>
@@ -313,6 +315,7 @@ export default {
       })
     },
     dragStart(event) {
+      console.log("dragStart")
       localStorage.setItem(
         'dragElement',
         JSON.stringify({

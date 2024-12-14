@@ -1,6 +1,7 @@
 {
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
+  "explorer.incrementalNaming": "disabled",
   "search.exclude": {
     "**/.git": true,
     "**/node_modules": true,
@@ -10,7 +11,7 @@
     "**/*.bundle.js.map": true,
     "**/d2s.bundle.js": false
   },
-  "files.eol": "\n",
+  "files.eol": "\r\n",
   "files.exclude": {
     "**/node_modules": true
   },
@@ -34,5 +35,7 @@
     "titleBar.inactiveForeground": "#e7e7e799"
   },
   "peacock.color": "#215732",
-  "cSpell.words": ["runeword"]
+  "cSpell.words": [
+    "runeword"
+  ]
 }

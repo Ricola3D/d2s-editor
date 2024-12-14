@@ -312,11 +312,12 @@ export default {
       if (stat.dF == 24 || stat.e == 3) {
         return 4
       }
-      if (stat.dF == 14 || stat.dF == 16 || stat.e == 2) {
+      if (stat.dF == 14 || stat.e == 2) {
         return 3
       }
       if (
         stat.dF == 13 ||
+        stat.dF == 16 ||
         (stat.dF >= 22 && stat.dF <= 23) ||
         (stat.dF >= 27 && stat.dF <= 28) ||
         stat.sP

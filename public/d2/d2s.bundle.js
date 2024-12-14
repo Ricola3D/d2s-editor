@@ -17681,6 +17681,12 @@ function enhanceItem(item, mod, version, attributes, config, parent) {
                 item.max_durability = details.durability - Math.ceil(details.durability / 2) + 1;
             }
         }
+        if (details.eq2n && details.eq2n.endsWith(" Item")) {
+            item.class_specific = 1;
+        }
+        else {
+            item.class_specific = 0;
+        }
         // Enforce stackable consistency
         if (details.s) {
             item.quantity = boundValue(item.quantity, 1, details.smax || 500);
@@ -19718,7 +19724,7 @@ function newItem() {
         personalized: 0,
         personalized_name: "",
         given_runeword: 0,
-        version: "",
+        version: "101",
         location_id: 0,
         equipped_id: 0,
         position_x: 0,
@@ -20404,11 +20410,13 @@ function _readSimpleBits(item, reader, version, constants /*, config: types.ICon
     item.given_runeword = reader.ReadBit();
     item._unknown_data.b27_31 = reader.ReadBitArray(5); // ? 0x00
     if (version <= 0x60) {
-        item.version = reader.ReadUInt16(10).toString(10);
+        item.version = reader.ReadUInt16(10).toString(10); // I don't know the values
     }
     else if (version >= 0x61) {
         item.version = reader.ReadUInt16(3).toString(2);
     }
+    if (["0", "000", " ", "   ", ""].includes(item.version))
+        item.version = "101"; // Just in case
     item.location_id = reader.ReadUInt8(3);
     item.equipped_id = reader.ReadUInt8(4);
     item.position_x = reader.ReadUInt8(4);
@@ -20509,7 +20517,7 @@ function _writeSimpleBits(writer, mod, version, item) {
     writer.WriteBits(item._unknown_data.b25 || new Uint8Array(1), 1); //IFLAG_LOWQUALITY
     writer.WriteBit(item.given_runeword);
     writer.WriteBits(item._unknown_data.b27_31 || new Uint8Array(5), 5);
-    var itemVersion = item.version != null ? item.version : "101";
+    var itemVersion = !!item.version ? item.version : "101";
     if (version <= 0x60) {
         // 0 = pre-1.08; 1 = 1.08/1.09 normal; 2 = 1.10 normal; 100 = 1.08/1.09 expansion; 101 = 1.10 expansion
         writer.WriteUInt16(parseInt(itemVersion, 10), 10);

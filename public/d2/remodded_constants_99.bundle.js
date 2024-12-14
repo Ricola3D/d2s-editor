@@ -2376,7 +2376,10 @@ let remodded_constants_99 = {
         null,
         null,
         null,
-        null, // 700
+        {
+            "id": 700,
+            "s": "Heart of Wolverine"
+        },
         {
             "id": 701,
             "s": "Disarm"

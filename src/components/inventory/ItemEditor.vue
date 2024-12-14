@@ -49,6 +49,16 @@
               min="0"
               @input="onEvent('update')"
             />
+
+          <!-- Version -->
+          <label>Version</label>
+            <input
+              class="edit-box"
+              type="text"
+              v-model="item.version"
+              @change="onEvent('update')"
+              pattern="^\d{2,10}$"
+            />
           <!-- iLevel -->
           <label>Item Level</label>
           <input
@@ -65,7 +75,7 @@
             <div>
               <multiselect
                 v-model="item.type"
-                :options="getBasesOptions()"
+                :options="getBaseOptions()"
                 :searchable="true"
                 :can-deselect="false"
                 :can-clear="false"
@@ -74,6 +84,32 @@
               />
             </div>
           </template>
+
+          <!-- Class Specific -->
+          <!-- <label>&#187;&#187;Class Specific</label>
+            <label class="form-check-label"
+              ><input
+                v-model.number="item.class_specific"
+                class="form-check-input"
+                type="checkbox"
+                :true-value="1"
+                :false-value="0"
+                @change="onEvent('update')"
+            /></label> -->
+          
+          <template v-if="item.class_specific">
+            <!-- Auto Affix ID -->
+            <label>&#187;&#187;Staff Mod ID</label>
+            <input
+              v-model.number="item.auto_affix_id"
+              class="edit-box"
+              type="number"
+              min="1"
+              max="999"
+              @input="onEvent('update')"
+            />
+          </template>
+
           <!-- Time & Timestamp -->
           <!-- <label>Timestamp</label>
           <input
@@ -431,6 +467,8 @@
 </template>
 
 <script>
+import { isEqual } from 'lodash'
+
 import Item from './Item.vue'
 import ItemStatsEditor from './ItemStatsEditor.vue'
 import utils from '../../utils.mjs'
@@ -546,6 +584,9 @@ export default {
         cm1: ['Brown', 'Bear-foot', 'M-skin'],
         cm2: ['Paw', 'Horn', 'Tower'],
         cm3: ['Eye', 'Spaghetti/DNA', 'Dragon/Monster'],
+        m32: ['Brown', 'Bear-foot', 'M-skin'],
+        m34: ['Eye', 'Spaghetti/DNA', 'Dragon/Monster'],
+        m36: ['Brown', 'Bear-foot', 'M-skin'],
         jew: ['Pink', 'Blue', 'Orange', 'Green', 'Red', 'White'],
       },
     }
@@ -638,9 +679,9 @@ export default {
       const gfx_list = details.ig || details.hdig
       return gfx_list ? gfx_list.length : 0
     },
-    findBasesInConstants(code, items) {
+    findBasesInConstants(type_id, items) {
       let bases = []
-      const base = items[code]
+      const base = items[this.item.type]
       if (base) {
         if (
           this.item.quality == 5 || // set
@@ -654,23 +695,32 @@ export default {
           bases = Object.keys(items)
             .filter((id) => {
               const item = items[id]
+              if (type_id == 0 && item.n != base.n) return false // Undef
+              if ((type_id == 1 || type_id == 2) && item.eq1n != base.eq1n) return false // Armor & Shield
+              //if (type_id == 3 && false) return false // Weapon
+              if (type_id == 4 && isEqual(item.c, base.c)) return false // Misc
+
               if (
                 this.item.given_runeword == 1 &&
                 item.gemsockets < this.item.total_nr_of_sockets
-              )
+              ) {
                 return false
-              if (base.c.length > 2) return item.eq1n == base.eq1n
-              else return item.type === base.type
+              }
+
+              return true
             })
             .sort((a, b) => items[a].level < items[b].level)
         }
         bases = Object.entries(items)
           .filter((entry) => bases.includes(entry[0]))
-          .map((entry) => ({ value: entry[0], label: /*"(" + entry[0] + ") " +*/ entry[1].n }))
+          .map((entry) => ({
+            value: entry[0],
+            label: /*"(" + entry[0] + ") " +*/ entry[1].n,
+          }))
       }
       return bases
     },
-    getBasesOptions() {
+    getBaseOptions() {
       // let options
       const constants =
         window[`${window.work_mod}_constants_${window.work_version}`]
@@ -704,17 +754,67 @@ export default {
 
       // return options
 
-      if (this.item.type_id == 3) {
-        return this.findBasesInConstants(this.item.type, constants.weapon_items)
-      } else if (this.item.type_id == 1) {
-        return this.findBasesInConstants(this.item.type, constants.armor_items)
-      } else if (this.item.type_id == 4) {
-        return Object.entries(constants.other_items)
-          .filter((entry) => entry[1].n)
-          .map((entry) => ({ value: entry[0], label: /*"(" + entry[0] + ") " +*/ entry[1].n }))
-      } else {
-        return []
+      let lookupBases = []
+      if (this.item.type_id == 1 || this.item.type_id == 2)
+        lookupBases = constants.armor_items
+      else if (this.item.type_id == 3) lookupBases = constants.weapon_items
+      else if (this.item.type_id == 4) lookupBases = constants.other_items
+
+      let baseIds = [this.item.type] // Min is self
+      const currBase = lookupBases[this.item.type]
+      if (currBase) {
+        if (
+          this.item.quality == 5 || // set
+          this.item.quality == 7 /*||*/ // unique
+          // this.item.quality == 8 // crafted
+        ) {
+          baseIds = [currBase.nc, currBase.exc, currBase.elc].filter(
+            (id) => lookupBases[id]
+          )
+          //items.filter(e => e[1].nc == code || e[1].exc == code || e[1].elc == code)
+        } else {
+          baseIds = Object.keys(lookupBases).filter((id) => {
+            const testBase = lookupBases[id]
+            if (this.item.type_id == 0 && testBase.n != currBase.n) return false // Undef
+            if (
+              (this.item.type_id == 1 || this.item.type_id == 2) &&
+              testBase.eq1n != currBase.eq1n
+            )
+              return false // Armor & Shield: eq1n are equal
+            //if (type_id == 3 && false) return false // Weapon: all
+            if (this.item.type_id == 4 && !isEqual(testBase.c, currBase.c))
+              return false // Misc: categories are equal
+
+            if (
+              this.item.type_id > 0 &&
+              this.item.type_id < 4 &&
+              this.item.given_runeword == 1 &&
+              testBase.gemsockets < this.item.total_nr_of_sockets
+            ) {
+              return false // Not enough sockets for the runeword
+            }
+
+            return true
+          })
+          // .sort((a, b) => lookupBases[a].level < lookupBases[b].level)
+        }
       }
+      return baseIds.map((id) => ({
+        value: id,
+        label: /*"(" + id + ") " +*/ lookupBases[id].n,
+      }))
+
+      // if (this.item.type_id == 3) {
+      //   return this.findBasesInConstants(this.item.type_id, constants.weapon_items)
+      // } else if (this.item.type_id == 1 || this.item.type_id == 2) {
+      //   return this.findBasesInConstants(this.item.type_id, constants.armor_items)
+      // } else if (this.item.type_id == 4) {
+      //   return Object.entries(constants.other_items)
+      //     .filter((entry) => entry[1].n)
+      //     .map((entry) => ({ value: entry[0], label: /*"(" + entry[0] + ") " +*/ entry[1].n }))
+      // } else {
+      //   return []
+      // }
     },
   },
 }
