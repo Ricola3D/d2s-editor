@@ -1629,19 +1629,19 @@ let remodded_constants_98 = {
         },
         {
             "id": 387,
-            "s": "Reduce Fire Resistance"
+            "s": "Fire Conviction"
         },
         {
             "id": 388,
-            "s": "Reduce Cold Resistance"
+            "s": "Cold Conviction"
         },
         {
             "id": 389,
-            "s": "Reduce Magic Resistance"
+            "s": "Magic Conviction"
         },
         {
             "id": 390,
-            "s": "Reduce Lightning Resistance"
+            "s": "Lightning Conviction"
         },
         null,
         {
@@ -1908,7 +1908,7 @@ let remodded_constants_98 = {
         null,
         {
             "id": 503,
-            "s": "Reduce Physical Resistance"
+            "s": "Physical Conviction"
         },
         {
             "id": 504,
