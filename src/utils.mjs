@@ -119,8 +119,8 @@ async function getFileWithCache(path) {
   const lookupKey = JSON.stringify({ path })
   let bytes = null
   if (false) {
-  // if (utilsCache.has(lookupKey)) {
-  // if ((bytes = utilsCache2.get(lookupKey))) {
+    // if (utilsCache.has(lookupKey)) {
+    // if ((bytes = utilsCache2.get(lookupKey))) {
     // bytes = utilsCache.get(lookupKey)
   } else {
     let response

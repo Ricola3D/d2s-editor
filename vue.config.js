@@ -1,4 +1,5 @@
 const Dotenv = require('dotenv-webpack')
+const GracefulFsPlugin = require('./webpack-plugins/graceful-fs-webpack-plugin')
 
 module.exports = {
   pwa: {
@@ -20,6 +21,6 @@ module.exports = {
       // historyApiFallback: false, // Error URL doesn't redirect to index app page, creating errors if globals from index.html are missing
     },
     devtool: 'source-map',
-    plugins: [new Dotenv()],
+    plugins: [new Dotenv(), new GracefulFsPlugin()], // Necessary because we have a ton of images, it would pop "EMFILE: Too many open files" errors with the default memfs
   },
 }

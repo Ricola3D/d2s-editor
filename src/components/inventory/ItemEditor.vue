@@ -43,22 +43,22 @@
           <!-- Id -->
           <label>Id</label>
           <input
-              v-model.number="item.id"
-              class="edit-box"
-              type="number"
-              min="0"
-              @input="onEvent('update')"
-            />
+            v-model.number="item.id"
+            class="edit-box"
+            type="number"
+            min="0"
+            @input="onEvent('update')"
+          />
 
           <!-- Version -->
           <label>Version</label>
-            <input
-              class="edit-box"
-              type="text"
-              v-model="item.version"
-              @change="onEvent('update')"
-              pattern="^\d{2,10}$"
-            />
+          <input
+            class="edit-box"
+            type="text"
+            v-model="item.version"
+            @change="onEvent('update')"
+            pattern="^\d{2,10}$"
+          />
           <!-- iLevel -->
           <label>Item Level</label>
           <input
@@ -96,7 +96,7 @@
                 :false-value="0"
                 @change="onEvent('update')"
             /></label> -->
-          
+
           <template v-if="item.class_specific">
             <!-- Auto Affix ID -->
             <label>&#187;&#187;Staff Mod ID</label>
@@ -366,14 +366,14 @@
 
             <!-- Other than runewords: personalized name -->
             <!-- <template v-if="!item.given_runeword"> -->
-              <label>&#187;&#187; Personalized Name</label>
-              <input
-                class="edit-box"
-                type="text"
-                v-model="item.personalized_name"
-                @change="onEvent('update')"
-                pattern="^[A-Za-z](?=.{0,14}$)[A-Za-z]*[A-Za-z\-_][A-Za-z]+$"
-              />
+            <label>&#187;&#187; Personalized Name</label>
+            <input
+              class="edit-box"
+              type="text"
+              v-model="item.personalized_name"
+              @change="onEvent('update')"
+              pattern="^[A-Za-z](?=.{0,14}$)[A-Za-z]*[A-Za-z\-_][A-Za-z]+$"
+            />
             <!-- </template> -->
 
             <!-- Ethereal -->
@@ -444,13 +444,9 @@
         </div>
       </div>
       <div v-if="item.socketed_items" class="item-socketed-items">
-        <button
-            type="button"
-            class="btn btn-danger"
-            @click="unsocket()"
-          >
-            Unsocket All
-          </button>
+        <button type="button" class="btn btn-danger" @click="unsocket()">
+          Unsocket All
+        </button>
         <div v-for="(socketed_item, idx) in item.socketed_items">
           <ItemEditor
             :id="id + 'Socketed' + idx"
@@ -621,12 +617,15 @@ export default {
       if (this.isStackable()) {
         const constants =
           window[`${window.work_mod}_constants_${window.work_version}`]
-        const itemType = constants.armor_items[this.item.type] || constants.weapon_items[this.item.type] || constants.other_items[this.item.type];
+        const itemType =
+          constants.armor_items[this.item.type] ||
+          constants.weapon_items[this.item.type] ||
+          constants.other_items[this.item.type]
         return itemType.smax || 500
       }
       return 1 // Just in case
     },
-    unsocket () {
+    unsocket() {
       this.item.nr_of_items_in_sockets = 0
       this.$emit('item-event', { item: this.item, type: 'update' })
     },
@@ -696,7 +695,8 @@ export default {
             .filter((id) => {
               const item = items[id]
               if (type_id == 0 && item.n != base.n) return false // Undef
-              if ((type_id == 1 || type_id == 2) && item.eq1n != base.eq1n) return false // Armor & Shield
+              if ((type_id == 1 || type_id == 2) && item.eq1n != base.eq1n)
+                return false // Armor & Shield
               //if (type_id == 3 && false) return false // Weapon
               if (type_id == 4 && isEqual(item.c, base.c)) return false // Misc
 
@@ -763,6 +763,12 @@ export default {
       let baseIds = [this.item.type] // Min is self
       const currBase = lookupBases[this.item.type]
       if (currBase) {
+        let currType = currBase.eq1n
+        if (currType == "Any Armor" && currBase.c) {
+          // In that case eq2n value has no meaning, and type comes from categories
+          currType = currBase.c[0]
+        }
+        
         if (
           this.item.quality == 5 || // set
           this.item.quality == 7 /*||*/ // unique
@@ -776,11 +782,16 @@ export default {
           baseIds = Object.keys(lookupBases).filter((id) => {
             const testBase = lookupBases[id]
             if (this.item.type_id == 0 && testBase.n != currBase.n) return false // Undef
-            if (
-              (this.item.type_id == 1 || this.item.type_id == 2) &&
-              testBase.eq1n != currBase.eq1n
-            )
-              return false // Armor & Shield: eq1n are equal
+            if (this.item.type_id == 1 || this.item.type_id == 2) { // Armor
+              let testType = testBase.eq1n
+              if (testType == "Any Armor" && testBase.c) {
+                // For eq1n "Any Armor", eq2n is omitted
+                // Type comes from categories
+                testType = testBase.c[0]
+              }
+              if (currType != testType)
+                return false // Armor & Shield: eq1n are equal
+            }
             //if (type_id == 3 && false) return false // Weapon: all
             if (this.item.type_id == 4 && !isEqual(testBase.c, currBase.c))
               return false // Misc: categories are equal

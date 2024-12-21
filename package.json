@@ -40,7 +40,8 @@
     "jsdom": "^25.0.1",
     "path": "^0.12.7",
     "pngjs": "^7.0.0",
-    "prettier": "^3.2.2"
+    "prettier": "^3.2.2",
+    "webpack-dev-middleware": "^7.4.2"
   },
   "eslintConfig": {
     "root": true,

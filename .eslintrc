@@ -9,6 +9,20 @@
     "eslint:recommended",
     "plugin:prettier/recommended"
   ],
+  "ignores": [
+    // Ignore git hidden files:
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    // Ignore dependencies
+    "**/node_modules",
+    // Ignore build dir
+    "dist",
+    // Ignore static data
+    "public/d2"
+    // Ignore test output
+    //"coverage"
+  ],
   "rules": {
     "prettier/prettier": "error",
     "vue/component-name-in-template-casing": ["error", "PascalCase"],

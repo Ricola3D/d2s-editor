@@ -23,6 +23,9 @@ function generateItemsWebImage(mod, version) {
   const modDataDir = `./public/d2/game_data/${mod}/version_${version}`
   const sdInputDir = `${modDataDir}/global/items`
   const hdInputDir = `${modDataDir}/hd/global/ui/items`
+  let alreadyGeneratedCount = 0
+  let newGeneratedCount = 0
+  let errorCount = 0
 
   if (fs.existsSync(sdInputDir)) {
     fs.readdir(sdInputDir, { recursive: true }, function (err, files) {
@@ -32,8 +35,10 @@ function generateItemsWebImage(mod, version) {
       }
 
       files.forEach(function (file) {
-        if (file.endsWith('.dc6')) {
-          const ouputPath = path.join(sdInputDir, file.replace('.dc6', '.png'))
+        const fileName = file.split('.').slice(0, -1).join('.')
+        const extension = file.split('.').pop()
+        if (extension.toUpperCase() == 'DC6') {
+          const ouputPath = path.join(sdInputDir, `${fileName}.png`)
 
           // Do not regenerate existing png
           if (!fs.existsSync(ouputPath)) {
@@ -60,11 +65,17 @@ function generateItemsWebImage(mod, version) {
                 const buffer = PNG.sync.write(imgPng)
                 fs.writeFileSync(ouputPath, buffer)
                 console.log(`Generated file ${file}`)
+                newGeneratedCount++
               }
             } catch (err) {
               console.warn(`Skipped file ${file} which is corrupted` /*, err*/)
             }
+          } else {
+            // console.log(`File ${file} already exists`)
+            alreadyGeneratedCount++
           }
+        } else {
+          // console.log(`Extension ${extension}`)
         }
       })
     })
@@ -77,8 +88,10 @@ function generateItemsWebImage(mod, version) {
     }
 
     files.forEach(function (file) {
-      if (file.endsWith('.sprite')) {
-        const ouputPath = path.join(hdInputDir, file.replace('.sprite', '.png'))
+      const fileName = file.split('.').slice(0, -1).join('.')
+      const extension = file.split('.').pop()
+      if (extension.toUpperCase() == 'SPRITE') {
+        const ouputPath = path.join(hdInputDir, `${fileName}.png`)
 
         // Do not regenerate existing png
         if (!fs.existsSync(ouputPath)) {
@@ -104,15 +117,19 @@ function generateItemsWebImage(mod, version) {
             fs.writeFileSync(ouputPath, buffer)
             console.log(`Generated file ${file}`)
           }
+        } else {
+          // console.log(`File ${file} already exists`)
+          alreadyGeneratedCount++
         }
+      } else {
+        // console.log(`Extension ${extension}`)
       }
     })
   })
 }
 
 // eslint-disable-next-line prettier/prettier
-const minHtml = 
-  `<!doctype html>
+const minHtml = `<!doctype html>
   <html lang="fr">
   <head>
     <meta charset="utf-8">
@@ -130,6 +147,7 @@ global.document = dom.window.document
 fillPalettes()
 
 generateItemsWebImage('vanilla', 96)
+generateItemsWebImage('vanilla', 97)
 generateItemsWebImage('vanilla', 98)
 generateItemsWebImage('vanilla', 99)
 generateItemsWebImage('remodded', 98)

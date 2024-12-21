@@ -9749,7 +9749,7 @@ let remodded_constants_98 = {
             "dN": "%+d to all Attributes",
             "dg": 1,
             "dgF": 19,
-            "dgP": "%+dto all Attributes"
+            "dgP": "%+d to all Attributes"
         },
         {
             "id": 1,
@@ -9765,7 +9765,7 @@ let remodded_constants_98 = {
             "dN": "%+d to all Attributes",
             "dg": 1,
             "dgF": 19,
-            "dgP": "%+dto all Attributes",
+            "dgP": "%+d to all Attributes",
             "o": 8,
             "os": [
                 "maxmana"
@@ -9785,7 +9785,7 @@ let remodded_constants_98 = {
             "dN": "%+d to all Attributes",
             "dg": 1,
             "dgF": 19,
-            "dgP": "%+dto all Attributes"
+            "dgP": "%+d to all Attributes"
         },
         {
             "id": 3,
@@ -9801,7 +9801,7 @@ let remodded_constants_98 = {
             "dN": "%+d to all Attributes",
             "dg": 1,
             "dgF": 19,
-            "dgP": "%+dto all Attributes",
+            "dgP": "%+d to all Attributes",
             "o": 9,
             "os": [
                 "maxhp",
@@ -9841,8 +9841,8 @@ let remodded_constants_98 = {
             "sA": 32,
             "so": 59,
             "dF": 19,
-            "dP": "%+dto Life",
-            "dN": "%+dto Life"
+            "dP": "%+d to Life",
+            "dN": "%+d to Life"
         },
         {
             "id": 8,
@@ -9863,8 +9863,8 @@ let remodded_constants_98 = {
             "sA": 32,
             "so": 55,
             "dF": 19,
-            "dP": "%+dto Mana",
-            "dN": "%+dto Mana"
+            "dP": "%+d to Mana",
+            "dN": "%+d to Mana"
         },
         {
             "id": 10,
@@ -9885,8 +9885,8 @@ let remodded_constants_98 = {
             "sA": 32,
             "so": 51,
             "dF": 19,
-            "dP": "%+dMaximum Stamina",
-            "dN": "%+dMaximum Stamina"
+            "dP": "%+d Maximum Stamina",
+            "dN": "%+d Maximum Stamina"
         },
         {
             "id": 12,
@@ -9976,8 +9976,8 @@ let remodded_constants_98 = {
             "sA": 200,
             "so": 115,
             "dF": 19,
-            "dP": "%+dto Attack Rating",
-            "dN": "%+dto Attack Rating"
+            "dP": "%+d to Attack Rating",
+            "dN": "%+d to Attack Rating"
         },
         {
             "id": 20,
@@ -9998,8 +9998,8 @@ let remodded_constants_98 = {
             "sA": 1,
             "so": 127,
             "dF": 19,
-            "dP": "%+dto Minimum Damage",
-            "dN": "%+dto Minimum Damage"
+            "dP": "%+d to Minimum Damage",
+            "dN": "%+d to Minimum Damage"
         },
         {
             "id": 22,
@@ -10009,8 +10009,8 @@ let remodded_constants_98 = {
             "sA": 4,
             "so": 126,
             "dF": 19,
-            "dP": "%+dto Maximum Damage",
-            "dN": "%+dto Maximum Damage"
+            "dP": "%+d to Maximum Damage",
+            "dN": "%+d to Maximum Damage"
         },
         {
             "id": 23,
@@ -10020,8 +10020,8 @@ let remodded_constants_98 = {
             "sA": 0,
             "so": 124,
             "dF": 19,
-            "dP": "%+dto Minimum Damage",
-            "dN": "%+dto Minimum Damage"
+            "dP": "%+d to Minimum Damage",
+            "dN": "%+d to Minimum Damage"
         },
         {
             "id": 24,
@@ -10031,8 +10031,8 @@ let remodded_constants_98 = {
             "sA": 0,
             "so": 123,
             "dF": 19,
-            "dP": "%+dto Maximum Damage",
-            "dN": "%+dto Maximum Damage"
+            "dP": "%+d to Maximum Damage",
+            "dN": "%+d to Maximum Damage"
         },
         {
             "id": 25,
@@ -10089,8 +10089,8 @@ let remodded_constants_98 = {
             "sA": 10,
             "so": 71,
             "dF": 19,
-            "dP": "%+dDefense",
-            "dN": "%+dDefense"
+            "dP": "%+d Defense",
+            "dN": "%+d Defense"
         },
         {
             "id": 32,
@@ -10100,8 +10100,8 @@ let remodded_constants_98 = {
             "sA": 0,
             "so": 69,
             "dF": 19,
-            "dP": "%+dDefense vs. Missile",
-            "dN": "%+dDefense vs. Missile"
+            "dP": "%+d Defense vs. Missile",
+            "dN": "%+d Defense vs. Missile"
         },
         {
             "id": 33,
@@ -10111,8 +10111,8 @@ let remodded_constants_98 = {
             "sA": 0,
             "so": 70,
             "dF": 19,
-            "dP": "%+dDefense vs. Melee",
-            "dN": "%+dDefense vs. Melee"
+            "dP": "%+d Defense vs. Melee",
+            "dN": "%+d Defense vs. Melee"
         },
         {
             "id": 34,
@@ -10306,8 +10306,8 @@ let remodded_constants_98 = {
             "sA": 7,
             "so": 101,
             "dF": 19,
-            "dP": "%+dto Maximum Fire Damage",
-            "dN": "%+dto Maximum Fire Damage"
+            "dP": "%+d to Maximum Fire Damage",
+            "dN": "%+d to Maximum Fire Damage"
         },
         {
             "id": 50,
@@ -10331,8 +10331,8 @@ let remodded_constants_98 = {
             "sA": 14,
             "so": 98,
             "dF": 19,
-            "dP": "%+dto Maximum Lightning Damage",
-            "dN": "%+dto Maximum Lightning Damage"
+            "dP": "%+d to Maximum Lightning Damage",
+            "dN": "%+d to Maximum Lightning Damage"
         },
         {
             "id": 52,
@@ -10381,8 +10381,8 @@ let remodded_constants_98 = {
             "sA": 7,
             "so": 95,
             "dF": 19,
-            "dP": "%+dto Maximum Cold Damage",
-            "dN": "%+dto Maximum Cold Damage"
+            "dP": "%+d to Maximum Cold Damage",
+            "dN": "%+d to Maximum Cold Damage"
         },
         {
             "id": 56,
@@ -10413,8 +10413,8 @@ let remodded_constants_98 = {
             "sA": 0,
             "so": 91,
             "dF": 19,
-            "dP": "%+dto Maximum Poison Damage",
-            "dN": "%+dto Maximum Poison Damage"
+            "dP": "%+d to Maximum Poison Damage",
+            "dN": "%+d to Maximum Poison Damage"
         },
         {
             "id": 59,
@@ -23773,13 +23773,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Gloves",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -23805,13 +23803,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Gloves",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -23837,13 +23833,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Gloves",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -23869,13 +23863,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Gloves",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -23901,13 +23893,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Gloves",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -23935,13 +23925,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Boots",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -23969,13 +23957,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Boots",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -24003,13 +23989,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Boots",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -24037,13 +24021,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Boots",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -24071,13 +24053,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Boots",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -24103,13 +24083,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Belt",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -24135,13 +24113,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Belt",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -24167,13 +24143,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Belt",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -24199,13 +24173,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Belt",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -24231,13 +24203,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Belt",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -25226,13 +25196,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Gloves",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -25258,13 +25226,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Gloves",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -25290,13 +25256,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Gloves",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -25322,13 +25286,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Gloves",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -25354,13 +25316,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Gloves",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -25388,13 +25348,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Boots",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -25422,13 +25380,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Boots",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -25456,13 +25412,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Boots",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -25490,13 +25444,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Boots",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -25524,13 +25476,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Boots",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -25556,13 +25506,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Belt",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -25588,13 +25536,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Belt",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -25620,13 +25566,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Belt",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -25652,13 +25596,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Belt",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -25684,13 +25626,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Belt",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -27491,13 +27431,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Gloves",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -27523,13 +27461,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Gloves",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -27555,13 +27491,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Gloves",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -27587,13 +27521,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Gloves",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -27619,13 +27551,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Gloves",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -27653,13 +27583,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Boots",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -27687,13 +27615,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Boots",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -27721,13 +27647,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Boots",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -27755,13 +27679,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Boots",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -27789,13 +27711,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Boots",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -27821,13 +27741,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Belt",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -27853,13 +27771,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Belt",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -27885,13 +27801,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Belt",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -27917,13 +27831,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Belt",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -27949,13 +27861,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Belt",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -29858,7 +29768,6 @@ let remodded_constants_98 = {
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous",
                 "Assassin Item",
@@ -29895,7 +29804,6 @@ let remodded_constants_98 = {
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous",
                 "Assassin Item",
@@ -29932,7 +29840,6 @@ let remodded_constants_98 = {
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous",
                 "Assassin Item",
@@ -29969,7 +29876,6 @@ let remodded_constants_98 = {
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous",
                 "Assassin Item",
@@ -30006,7 +29912,6 @@ let remodded_constants_98 = {
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous",
                 "Assassin Item",
@@ -30043,7 +29948,6 @@ let remodded_constants_98 = {
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous",
                 "Assassin Item",
@@ -30370,7 +30274,6 @@ let remodded_constants_98 = {
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous",
                 "Sorceress Item",
@@ -30405,7 +30308,6 @@ let remodded_constants_98 = {
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous",
                 "Sorceress Item",
@@ -30440,7 +30342,6 @@ let remodded_constants_98 = {
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous",
                 "Sorceress Item",
@@ -30475,7 +30376,6 @@ let remodded_constants_98 = {
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous",
                 "Sorceress Item",
@@ -30510,7 +30410,6 @@ let remodded_constants_98 = {
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous",
                 "Sorceress Item",
@@ -30545,7 +30444,6 @@ let remodded_constants_98 = {
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous",
                 "Sorceress Item",
@@ -30573,13 +30471,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Belt",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -30605,13 +30501,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Belt",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -30637,13 +30531,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Belt",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -30669,13 +30561,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Belt",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -30701,13 +30591,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Belt",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -30733,13 +30621,11 @@ let remodded_constants_98 = {
             "it": 8,
             "ig": [],
             "eq1n": "Any Armor",
-            "eq2n": "Helm",
             "c": [
                 "Belt",
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -31136,7 +31022,6 @@ let remodded_constants_98 = {
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous",
                 "Amazon Item",
@@ -31171,7 +31056,6 @@ let remodded_constants_98 = {
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous",
                 "Amazon Item",
@@ -31206,7 +31090,6 @@ let remodded_constants_98 = {
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous",
                 "Amazon Item",
@@ -31241,7 +31124,6 @@ let remodded_constants_98 = {
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous",
                 "Amazon Item",
@@ -31276,7 +31158,6 @@ let remodded_constants_98 = {
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous",
                 "Amazon Item",
@@ -31311,7 +31192,6 @@ let remodded_constants_98 = {
                 "Any Armor",
                 "Gold",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous",
                 "Amazon Item",
@@ -43220,11 +43100,9 @@ let remodded_constants_98 = {
                 "invamu3"
             ],
             "eq1n": "Miscellaneous",
-            "eq2n": "Helm",
             "c": [
                 "Amulet",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -43255,11 +43133,9 @@ let remodded_constants_98 = {
                 "invamu3"
             ],
             "eq1n": "Miscellaneous",
-            "eq2n": "Helm",
             "c": [
                 "Amulet",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],
@@ -43286,11 +43162,9 @@ let remodded_constants_98 = {
                 "invrin5"
             ],
             "eq1n": "Miscellaneous",
-            "eq2n": "Helm",
             "c": [
                 "Ring",
                 "Miscellaneous",
-                "Helm",
                 "Potion",
                 "Miscellaneous"
             ],

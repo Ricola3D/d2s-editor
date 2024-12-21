@@ -111,7 +111,10 @@ const questsDefinition = [
       {
         key: 'den_of_evil',
         label: 'Den Of Evil',
-        flags: [{ key: 'b0_is_completed', label: 'Completed' }, { key: 'b13_done_recently', label: 'Done Rencently' }],
+        flags: [
+          { key: 'b0_is_completed', label: 'Completed' },
+          { key: 'b13_done_recently', label: 'Done Rencently' },
+        ],
       },
       {
         key: 'sisters_burial_grounds',

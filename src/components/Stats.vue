@@ -430,9 +430,9 @@ export default {
       }
     },
     rename() {
-      const valid = d2s.nameRegex.test(this.save.header.name);
+      const valid = d2s.nameRegex.test(this.save.header.name)
       if (!valid) {
-        this.save.header.name = "InvalidName";
+        this.save.header.name = 'InvalidName'
       }
     },
   },

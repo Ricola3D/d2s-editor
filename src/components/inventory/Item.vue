@@ -8,7 +8,11 @@
           :class="{ ethereal: item.ethereal }"
         />
         <img v-else src="/img/loading.gif" class="loading" />
-        <div v-if="item.total_nr_of_sockets && tooltipShown" class="sockets" @dragstart="dragStart">
+        <div
+          v-if="item.total_nr_of_sockets && tooltipShown"
+          class="sockets"
+          @dragstart="dragStart"
+        >
           <div
             v-for="idx in item.total_nr_of_sockets"
             :key="idx"
@@ -161,7 +165,7 @@ export default {
       }
     },
     itemName(item) {
-      let name = "(" + item.type + ") " + item.type_name
+      let name = '(' + item.type + ') ' + item.type_name
       const constants =
         window[`${window.work_mod}_constants_${window.work_version}`]
       /* Inferior <type_name> */
@@ -315,7 +319,7 @@ export default {
       })
     },
     dragStart(event) {
-      console.log("dragStart")
+      console.log('dragStart')
       localStorage.setItem(
         'dragElement',
         JSON.stringify({

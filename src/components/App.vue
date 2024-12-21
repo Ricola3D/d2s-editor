@@ -592,34 +592,6 @@
                     Set All Skills 20
                   </button>
                   <br /><br />
-                  <!-- <template v-if="work_mod === 'vanilla'">
-                    <button
-                      id="d2"
-                      type="button"
-                      class="btn btn-primary"
-                      @click="saveFile(work_mod, 0x60)"
-                    >
-                      Save D2
-                    </button>
-                    <button
-                      id="d2r"
-                      type="button"
-                      class="btn btn-primary"
-                      @click="saveFile(work_mod, 0x63)"
-                    >
-                      Save D2R
-                    </button>
-                  </template>
-                  <template v-else>
-                    <button
-                      id="d2r"
-                      type="button"
-                      class="btn btn-primary"
-                      @click="saveFile(work_mod, 0x63)"
-                    >
-                      Save
-                    </button>
-                  </template> -->
                   <button
                     id="d2"
                     type="button"
@@ -629,12 +601,20 @@
                     Save D2
                   </button>
                   <button
+                    id="d2"
+                    type="button"
+                    class="btn btn-primary"
+                    @click="saveFile('vanilla', 0x62)"
+                  >
+                    Save D2R TCP-IP
+                  </button>
+                  <button
                     id="d2r"
                     type="button"
                     class="btn btn-primary"
                     @click="saveFile('vanilla', 0x63)"
                   >
-                    Save D2R
+                    Save D2R Bnet
                   </button>
                   <button
                     id="d2r"
@@ -899,7 +879,7 @@ export default {
       navigator.clipboard.writeText(JSON.stringify(sharedContent))
       this.notifications.push({
         alert: 'alert alert-info',
-        message: `Item data copied to clipboard. Use load from string to share it with someone.`,
+        message: `Item data copied to clipboard. One may use 'import' or 'load From JSON' to get the item.`,
       })
     },
     async importItem(position) {
@@ -1282,9 +1262,7 @@ export default {
         // If failed, in a 2nd time try parsing it as a remodded 99 file
         this.readBuffer(event.target.result, mod, event.target.filename)
       } catch (e) {
-        alert(
-          'Could not perform operation, check you selected the proper mod. More details in logs.'
-        )
+        alert('Error, have you selected the right mod ? More details in logs.')
         console.error(e)
       }
     },
@@ -1311,7 +1289,7 @@ export default {
         })
         .catch((e) => {
           alert(
-            'Could not perform operation, check you selected the proper mod. More details in logs.'
+            'Error, have you selected the right mod ? More details in logs.'
           )
           console.error(e)
         })
@@ -1326,7 +1304,8 @@ export default {
     maxGold() {
       const constants =
         window[`${window.work_mod}_constants_${window.work_version}`]
-      this.save.attributes.gold = this.save.header.level * constants.gold.perCharLevel
+      this.save.attributes.gold =
+        this.save.header.level * constants.gold.perCharLevel
       this.save.attributes.goldbank = constants.gold.bank
     },
     unlockAllQuests() {

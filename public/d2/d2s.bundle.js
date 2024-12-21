@@ -17682,10 +17682,12 @@ function enhanceItem(item, mod, version, attributes, config, parent) {
             }
         }
         if (details.eq2n && details.eq2n.endsWith(" Item")) {
+            // eq2n values "<Class> Item"
             item.class_specific = 1;
         }
         else {
             item.class_specific = 0;
+            item.auto_affix_id = 0;
         }
         // Enforce stackable consistency
         if (details.s) {

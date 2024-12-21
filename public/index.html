@@ -7,37 +7,48 @@
       src="https://www.googletagmanager.com/gtag/js?id=G-Z9KBPJ8PYG"
     ></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || []
       function gtag() {
-        dataLayer.push(arguments);
+        dataLayer.push(arguments)
       }
-      gtag("js", new Date());
-      gtag("config", "G-Z9KBPJ8PYG");
+      gtag('js', new Date())
+      gtag('config', 'G-Z9KBPJ8PYG')
     </script>
     <script src="<%= process.env.VUE_APP_D2SLIB %>"></script>
     <script type="module">
-      import { vanilla_constants_96 } from "./d2/vanilla_constants_96.bundle.js";
-      import { vanilla_constants_98 } from "./d2/vanilla_constants_98.bundle.js";
-      import { vanilla_constants_99 } from "./d2/vanilla_constants_99.bundle.js";
-      import { remodded_constants_98 } from "./d2/remodded_constants_98.bundle.js";
-      import { remodded_constants_99 } from "./d2/remodded_constants_99.bundle.js";
+      import { vanilla_constants_96 } from './d2/vanilla_constants_96.bundle.js'
+      import { vanilla_constants_98 } from './d2/vanilla_constants_98.bundle.js'
+      import { vanilla_constants_99 } from './d2/vanilla_constants_99.bundle.js'
+      import { remodded_constants_98 } from './d2/remodded_constants_98.bundle.js'
+      import { remodded_constants_99 } from './d2/remodded_constants_99.bundle.js'
 
-      window.d2s = d2s;
-      window.vanilla_constants_96 = vanilla_constants_96;
-      window.vanilla_constants_98 = vanilla_constants_98;
-      window.vanilla_constants_99 = vanilla_constants_99;
-      window.remodded_constants_98 = remodded_constants_98;
-      window.remodded_constants_99 = remodded_constants_99;
+      window.d2s = d2s
+      window.vanilla_constants_96 = vanilla_constants_96
+      window.vanilla_constants_98 = vanilla_constants_98
+      window.vanilla_constants_99 = vanilla_constants_99
+      window.remodded_constants_98 = remodded_constants_98
+      window.remodded_constants_99 = remodded_constants_99
     </script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootswatch@4.3.1/dist/darkly/bootstrap.min.css"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="<%= BASE_URL %>font-awesome-4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="<%= BASE_URL %>font-awesome-4.7.0/css/font-awesome.min.css"
+    />
     <link href="css/app.css" rel="stylesheet" />
-    <link rel='icon' type="image/png" href="<%= BASE_URL %>img/icons/favicon.png" />
-    <link rel='shortcut icon' type="image/png" href="<%= BASE_URL %>img/icons/favicon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="<%= BASE_URL %>img/icons/favicon.png"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="<%= BASE_URL %>img/icons/favicon.png"
+    />
     <title>d2s-editor</title>
   </head>
 
