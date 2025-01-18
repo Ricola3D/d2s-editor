@@ -24,9 +24,10 @@
 </template>
 
 <script>
-import Item from './Item.vue'
+import Item from './Item.vue';
 
 export default {
+  name: 'GridView',
   components: {
     Item,
   },
@@ -40,21 +41,21 @@ export default {
   },
   computed: {
     gridClass() {
-      return `w-${this.width} h-${this.height}`
+      return `w-${this.width} h-${this.height}`;
     },
   },
   methods: {
     onSelect(item) {
-      this.$emit('item-selected', item)
+      this.$emit('item-selected', item);
     },
     dragover(event) {
-      event.preventDefault()
-      event.dataTransfer.dropEffect = 'move'
-      return false
+      event.preventDefault();
+      event.dataTransfer.dropEffect = 'move';
+      return false;
     },
     dragenter(event, x, y) {
-      event.preventDefault()
-      let data = JSON.parse(localStorage.getItem('dragElement'))
+      event.preventDefault();
+      let data = JSON.parse(localStorage.getItem('dragElement'));
       this.$emit('item-event', {
         uuid: data.uuid,
         item: data.item,
@@ -66,11 +67,11 @@ export default {
           alt_position_id: this.alt_position_id,
         },
         type: 'dragenter',
-      })
+      });
     },
     dragleave(event, x, y) {
-      event.preventDefault()
-      let data = JSON.parse(localStorage.getItem('dragElement'))
+      event.preventDefault();
+      let data = JSON.parse(localStorage.getItem('dragElement'));
       this.$emit('item-event', {
         uuid: data.uuid,
         item: data.item,
@@ -82,7 +83,7 @@ export default {
           alt_position_id: this.alt_position_id,
         },
         type: 'dragleave',
-      })
+      });
     },
     itemRC($evt, item) {
       this.contextMenu.showContextMenu($evt, item, [
@@ -91,7 +92,7 @@ export default {
         { text: 'Cut' },
         { text: 'Export' },
         { text: 'Delete' },
-      ])
+      ]);
     },
     gridRC($evt, w, h) {
       this.contextMenu.showContextMenu(
@@ -104,12 +105,12 @@ export default {
           position_y: h - 1,
           alt_position_id: this.alt_position_id, // 1: inventory, 4: cube, 5: stash
         },
-        [{ text: 'Paste At' }, { text: 'Import' }]
-      )
+        [{ text: 'Paste At' }, { text: 'Import At' }],
+      );
     },
     drop(event, x, y) {
-      event.preventDefault()
-      let data = JSON.parse(localStorage.getItem('dragElement'))
+      event.preventDefault();
+      let data = JSON.parse(localStorage.getItem('dragElement'));
       this.$emit('item-event', {
         uuid: data.uuid,
         item: data.item,
@@ -121,8 +122,8 @@ export default {
           alt_position_id: this.alt_position_id,
         },
         type: 'move',
-      })
+      });
     },
   },
-}
+};
 </script>

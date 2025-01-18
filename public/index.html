@@ -14,21 +14,16 @@
       gtag('js', new Date())
       gtag('config', 'G-Z9KBPJ8PYG')
     </script>
-    <script src="<%= process.env.VUE_APP_D2SLIB %>"></script>
-    <script type="module">
+    <!-- <script src="<%= process.env.VUE_APP_D2SLIB %>"></script> -->
+    <!-- <script type="module">
+      import * as d2s from '../lib/d2'
       import { vanilla_constants_96 } from './d2/vanilla_constants_96.bundle.js'
+      import { vanilla_constants_97 } from './d2/vanilla_constants_97.bundle.js'
       import { vanilla_constants_98 } from './d2/vanilla_constants_98.bundle.js'
       import { vanilla_constants_99 } from './d2/vanilla_constants_99.bundle.js'
       import { remodded_constants_98 } from './d2/remodded_constants_98.bundle.js'
       import { remodded_constants_99 } from './d2/remodded_constants_99.bundle.js'
-
-      window.d2s = d2s
-      window.vanilla_constants_96 = vanilla_constants_96
-      window.vanilla_constants_98 = vanilla_constants_98
-      window.vanilla_constants_99 = vanilla_constants_99
-      window.remodded_constants_98 = remodded_constants_98
-      window.remodded_constants_99 = remodded_constants_99
-    </script>
+    </script> -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootswatch@4.3.1/dist/darkly/bootstrap.min.css"
@@ -58,6 +53,7 @@
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
+    <!--
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -66,6 +62,13 @@
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    -->
+    <!-- bootstrap.bundle.min.js contains popper, contrary to bootstrap.min.js -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+      integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
       crossorigin="anonymous"
     ></script>
 

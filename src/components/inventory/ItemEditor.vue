@@ -2,27 +2,11 @@
   <div class="item-editor">
     <div class="form-row item-action-bar">
       <div class="col-md-12">
-        <button
-          type="button"
-          class="btn btn-primary"
-          @click="onEvent('export')"
-        >
-          Export
-        </button>
-        <button type="button" class="btn btn-primary" @click="onEvent('copy')">
-          Copy
-        </button>
-        <button type="button" class="btn btn-primary" @click="onEvent('cut')">
-          Cut
-        </button>
+        <button type="button" class="btn btn-primary" @click="onEvent('export')">Export</button>
+        <button type="button" class="btn btn-primary" @click="onEvent('copy')">Copy</button>
+        <button type="button" class="btn btn-primary" @click="onEvent('cut')">Cut</button>
         <span v-if="item.location_id != 6">
-          <button
-            type="button"
-            class="btn btn-danger"
-            @click="onEvent('delete')"
-          >
-            Delete
-          </button>
+          <button type="button" class="btn btn-danger" @click="onEvent('delete')">Delete</button>
         </span>
       </div>
     </div>
@@ -30,45 +14,21 @@
     <div class="form-row item-definition">
       <div>
         <!-- <Item v-model:item="item" clazz="item-edit" /> -->
-        <Item
-          :item="item"
-          clazz="item-edit"
-          @update:item="item = $event"
-          @contextmenu.prevent.stop="itemRC($event, item)"
-        />
+        <Item :item="item" clazz="item-edit" @update:item="item = $event" @contextmenu.prevent.stop="itemRC($event, item)" />
       </div>
 
       <ul className="ItemOptions">
         <div class="settings">
           <!-- Id -->
           <label>Id</label>
-          <input
-            v-model.number="item.id"
-            class="edit-box"
-            type="number"
-            min="0"
-            @input="onEvent('update')"
-          />
+          <input v-model.number="item.id" class="edit-box" type="number" min="0" @input="onEvent('update')" />
 
           <!-- Version -->
           <label>Version</label>
-          <input
-            class="edit-box"
-            type="text"
-            v-model="item.version"
-            @change="onEvent('update')"
-            pattern="^\d{2,10}$"
-          />
+          <input v-model="item.version" class="edit-box" type="text" pattern="^\d{2,10}$" @change="onEvent('update')" />
           <!-- iLevel -->
           <label>Item Level</label>
-          <input
-            v-model.number="item.level"
-            class="edit-box"
-            type="number"
-            min="1"
-            max="99"
-            @input="onEvent('update')"
-          />
+          <input v-model.number="item.level" class="edit-box" type="number" min="1" max="99" @input="onEvent('update')" />
           <!-- Base -->
           <template v-if="!item.is_ear">
             <label>Base</label>
@@ -100,14 +60,7 @@
           <template v-if="item.class_specific">
             <!-- Auto Affix ID -->
             <label>&#187;&#187;Staff Mod ID</label>
-            <input
-              v-model.number="item.auto_affix_id"
-              class="edit-box"
-              type="number"
-              min="1"
-              max="999"
-              @input="onEvent('update')"
-            />
+            <input v-model.number="item.auto_affix_id" class="edit-box" type="number" min="1" max="999" @input="onEvent('update')" />
           </template>
 
           <!-- Time & Timestamp -->
@@ -162,9 +115,7 @@
                 :options="
                   Array.from(Array(countSkinsChoices()).keys()).map((n) => ({
                     value: n,
-                    label: skin_names[item.type][n]
-                      ? skin_names[item.type][n]
-                      : `${n}`,
+                    label: skin_names[item.type][n] ? skin_names[item.type][n] : `${n}`,
                   }))
                 "
                 :searchable="true"
@@ -368,37 +319,33 @@
             <!-- <template v-if="!item.given_runeword"> -->
             <label>&#187;&#187; Personalized Name</label>
             <input
+              v-model="item.personalized_name"
               class="edit-box"
               type="text"
-              v-model="item.personalized_name"
-              @change="onEvent('update')"
               pattern="^[A-Za-z](?=.{0,14}$)[A-Za-z]*[A-Za-z\-_][A-Za-z]+$"
+              @change="onEvent('update')"
             />
             <!-- </template> -->
 
             <!-- Ethereal -->
-            <label>Ethereal</label>
-            <label class="form-check-label"
-              ><input
-                v-model.number="item.ethereal"
-                class="form-check-input"
-                type="checkbox"
-                :true-value="1"
-                :false-value="0"
-                @change="onEvent('update')"
-            /></label>
+            <template v-if="item.type_id != 4">
+              <!-- Misc can't be eth -->
+              <label>Ethereal</label>
+              <label class="form-check-label"
+                ><input
+                  v-model.number="item.ethereal"
+                  class="form-check-input"
+                  type="checkbox"
+                  :true-value="1"
+                  :false-value="0"
+                  @change="onEvent('update')"
+              /></label>
+            </template>
 
             <template v-if="item.max_sockets">
               <!-- Sockets -->
               <label>Sockets</label>
-              <input
-                v-model.number="item.total_nr_of_sockets"
-                class="edit-box"
-                type="number"
-                min="0"
-                max="8"
-                @input="onEvent('update')"
-              />
+              <input v-model.number="item.total_nr_of_sockets" class="edit-box" type="number" min="0" max="8" @input="onEvent('update')" />
             </template>
           </template>
         </div>
@@ -408,45 +355,26 @@
     <div v-if="!item.simple_item" class="item-stats">
       <div v-if="item.magic_attributes" class="item-magic-stats">
         <div>Item Stats</div>
-        <ItemStatsEditor
-          :id="id + 'Magic'"
-          v-model:item-stats="item.magic_attributes"
-          @stat-change="onEvent('update')"
-        />
+        <ItemStatsEditor :id="id + 'Magic'" v-model:item-stats="item.magic_attributes" @stat-change="onEvent('update')" />
       </div>
       <div v-if="item.given_runeword" class="item-runeword-stats">
         <div>Runeword Stats</div>
-        <ItemStatsEditor
-          :id="id + 'Runeword'"
-          v-model:item-stats="item.runeword_attributes"
-          @stat-change="onEvent('update')"
-        />
+        <ItemStatsEditor :id="id + 'Runeword'" v-model:item-stats="item.runeword_attributes" @stat-change="onEvent('update')" />
       </div>
-      <div v-if="item.quality == 5" class="item-set-stats">
-        <div v-for="(set_attribute, idx) in item.set_attributes">
-          <div>Set Stats {{ idx }}</div>
-          <ItemStatsEditor
-            :id="id + 'Set' + idx"
-            v-model:item-stats="item.set_attributes[idx]"
-            @stat-change="onEvent('update')"
-          />
-        </div>
+      <!-- <div v-if="item.quality == 5" class="item-set-stats"> -->
+      <div v-for="(set_attribute, idx) in item.set_attributes">
+        <div>Set Stats {{ idx }}</div>
+        <ItemStatsEditor :id="id + 'Set' + idx" v-model:item-stats="item.set_attributes[idx]" @stat-change="onEvent('update')" />
       </div>
-      <div v-if="item.socketed_items" class="item-socketed-stats">
+      <!-- </div> -->
+      <div v-if="item.socketed_items.length" class="item-socketed-stats">
         <div>Sockets Stats</div>
         <div>
-          <div
-            v-for="(stat, idx) in item.displayed_socketed_attributes"
-            :key="idx"
-            class="blue"
-            v-html="statDescription(stat)"
-          />
+          <div v-for="(stat, idx) in item.displayed_socketed_attributes" :key="idx" class="blue" v-html="statDescription(stat)" />
         </div>
       </div>
-      <div v-if="item.socketed_items" class="item-socketed-items">
-        <button type="button" class="btn btn-danger" @click="unsocket()">
-          Unsocket All
-        </button>
+      <div v-if="item.socketed_items.length" class="item-socketed-items">
+        <button type="button" class="btn btn-danger" @click="unsocket()">Unsocket All</button>
         <div v-for="(socketed_item, idx) in item.socketed_items">
           <ItemEditor
             :id="id + 'Socketed' + idx"
@@ -463,11 +391,10 @@
 </template>
 
 <script>
-import { isEqual } from 'lodash'
+import { isEqual } from 'lodash';
 
-import Item from './Item.vue'
-import ItemStatsEditor from './ItemStatsEditor.vue'
-import utils from '../../utils.mjs'
+import Item from './Item.vue';
+import ItemStatsEditor from './ItemStatsEditor.vue';
 
 export default {
   name: 'ItemEditor',
@@ -517,59 +444,44 @@ export default {
         { key: 4, value: 'Cube' },
         { key: 5, value: 'Stash' },
       ],
-      runewords_options: window[
-        `${window.work_mod}_constants_${window.work_version}`
-      ].runewords
-        .fill({ id: 0, n: 'None' }, 0, 1)
+      runewords_options: this.$getWorkConstantData()
+        .runewords.fill({ id: 0, n: 'None' }, 0, 1)
         .filter((runeword) => runeword && runeword.n)
         .map((runeword) => ({
           value: runeword.id,
           label: `${runeword.id.toString().padStart(3, '0')} - ${runeword.n}`,
         })),
-      magic_prefixes_options: window[
-        `${window.work_mod}_constants_${window.work_version}`
-      ].magic_prefixes
+      magic_prefixes_options: this.$getWorkConstantData()
+        .magic_prefixes.fill({ id: 0, n: 'None' }, 0, 1)
+        //.filter((affix) => affix && affix.n) // In case some names are missing in the constants data
+        .map((affix) => ({
+          value: affix.id,
+          label: `${affix.id.toString().padStart(3, '0')} - ${affix.n || '???'}`,
+        })),
+      magic_suffixes_options: this.$getWorkConstantData()
+        .magic_suffixes.fill({ id: 0, n: 'None' }, 0, 1)
         .fill({ id: 0, n: 'None' }, 0, 1)
         //.filter((affix) => affix && affix.n) // In case some names are missing in the constants data
         .map((affix) => ({
           value: affix.id,
-          label: `${affix.id.toString().padStart(3, '0')} - ${
-            affix.n || '???'
-          }`,
+          label: `${affix.id.toString().padStart(3, '0')} - ${affix.n || '???'}`,
         })),
-      magic_suffixes_options: window[
-        `${window.work_mod}_constants_${window.work_version}`
-      ].magic_suffixes
-        .fill({ id: 0, n: 'None' }, 0, 1)
-        //.filter((affix) => affix && affix.n) // In case some names are missing in the constants data
-        .map((affix) => ({
-          value: affix.id,
-          label: `${affix.id.toString().padStart(3, '0')} - ${
-            affix.n || '???'
-          }`,
-        })),
-      rare_names_options: window[
-        `${window.work_mod}_constants_${window.work_version}`
-      ].rare_names
-        .fill({ id: 0, n: 'None' }, 0, 1)
+      rare_names_options: this.$getWorkConstantData()
+        .rare_names.fill({ id: 0, n: 'None' }, 0, 1)
         //.filter((name) => name && name.n) // In case some names are missing in the constants data
         .map((name) => ({
           value: name.id,
           label: `${name.id.toString().padStart(3, '0')} - ${name.n || '???'}`,
         })),
-      unq_items_options: window[
-        `${window.work_mod}_constants_${window.work_version}`
-      ].unq_items
-        .filter((item) => !!item) // In case some unique ids are null "Evil Token"
+      unq_items_options: this.$getWorkConstantData()
+        .unq_items.filter((item) => !!item) // In case some unique ids are null "Evil Token"
         //.filter((item) => item.n) // In case some names are missing in the constants data
         .map((item) => ({
           value: item.id,
           label: `${item.id.toString().padStart(3, '0')} - ${item.n || '???'}`,
         })),
-      set_items_options: window[
-        `${window.work_mod}_constants_${window.work_version}`
-      ].set_items
-        //.filter((item) => item.n) // In case some names are missing in the constants data
+      set_items_options: this.$getWorkConstantData()
+        .set_items //.filter((item) => item.n) // In case some names are missing in the constants data
         .map((item) => ({
           value: item.id,
           label: `${item.id.toString().padStart(3, '0')} - ${item.n || '???'}`,
@@ -585,102 +497,91 @@ export default {
         m36: ['Brown', 'Bear-foot', 'M-skin'],
         jew: ['Pink', 'Blue', 'Orange', 'Green', 'Red', 'White'],
       },
-    }
+    };
   },
   methods: {
     getQualitySelectClass() {
-      return `quality-select quality-${this.item.quality}`
+      return `quality-select quality-${this.item.quality}`;
     },
     statDescription(stat) {
       if (!stat.description || stat.visible === false) {
-        return null
+        return null;
       }
-      const ds = stat.description.split('\\n')
+      const ds = stat.description.split('\\n');
       return ds
         .map((d) => {
-          const s = d.replace(
-            /\\(.*?);/gi,
-            (result, match) => `</div><div class="${match}">`
-          )
-          return `<div>${s}</div>`
+          const s = d.replace(/\\(.*?);/gi, (result, match) => `</div><div class="${match}">`);
+          return `<div>${s}</div>`;
         })
         .reverse()
-        .join('')
+        .join('');
     },
     itemRC($evt, item) {
-      this.contextMenu.showContextMenu($evt, item, [
-        { text: 'Copy' },
-        { text: 'Export' },
-      ])
+      this.contextMenu.showContextMenu($evt, item, [{ text: 'Copy' }, { text: 'Export' }]);
     },
     getMaxQuantity() {
       if (this.isStackable()) {
-        const constants =
-          window[`${window.work_mod}_constants_${window.work_version}`]
+        const constants = this.$getWorkConstantData();
         const itemType =
-          constants.armor_items[this.item.type] ||
-          constants.weapon_items[this.item.type] ||
-          constants.other_items[this.item.type]
-        return itemType.smax || 500
+          constants.armor_items[this.item.type] || constants.weapon_items[this.item.type] || constants.other_items[this.item.type];
+        return itemType.smax || 500;
       }
-      return 1 // Just in case
+      return 1; // Just in case
     },
     unsocket() {
-      this.item.nr_of_items_in_sockets = 0
-      this.$emit('item-event', { item: this.item, type: 'update' })
+      this.item.nr_of_items_in_sockets = 0;
+      this.$emit('item-event', { item: this.item, type: 'update' });
     },
     onUpdate(variable, value) {
-      const path = variable.split('.')
-      path.shift() // Should be "item"
+      const path = variable.split('.');
+      path.shift(); // Should be "item"
       const edited = path.reduceRight(
         (accumulator, currentValue) => ({
           [currentValue]: accumulator,
         }),
-        value
-      )
-      const newItem = Object.assign(this.item, edited)
-      this.$emit('item-event', { item: newItem, type: 'update' })
+        value,
+      );
+      const newItem = Object.assign(this.item, edited);
+      this.$emit('item-event', { item: newItem, type: 'update' });
     },
     onEvent(type, variable, value) {
-      this.$emit('item-event', { item: this.item, type: type })
+      this.$emit('item-event', { item: this.item, type: type });
     },
     onChildEvent(e) {
-      this.$emit('item-event', { item: e.item, type: e.type })
+      this.$emit('item-event', { item: e.item, type: e.type });
     },
     // onMove() {
     //   this.$emit('item-event', { item: this.item, location: this.location, type: 'move' });
     // },
     isStackable() {
-      const constants =
-        window[`${window.work_mod}_constants_${window.work_version}`]
-      return constants.stackables[this.item.type]
+      const constants = this.$getWorkConstantData();
+      return constants.stackables[this.item.type];
     },
     countSkinsChoices() {
-      const constants =
-        window[`${window.work_mod}_constants_${window.work_version}`]
-      const details = utils.getItemDetails(this.item)
+      const constants = this.$getWorkConstantData();
+      const details = this.$d2s.utils.getItemTypeDef(this.item, constants);
       if (this.item.unique_id) {
-        if (details.ui) return 0
-        const unq = constants.unq_items[this.item.unique_id]
+        if (details.ui) return 0;
+        const unq = constants.unq_items[this.item.unique_id];
         if (unq) {
-          if (unq.i) return 0
-          if (unq.hdi) return 0
+          if (unq.i) return 0;
+          if (unq.hdi) return 0;
         }
       }
       if (this.item.set_id) {
-        if (details.si) return 0
-        const set = constants.set_items[this.item.set_id]
+        if (details.si) return 0;
+        const set = constants.set_items[this.item.set_id];
         if (set) {
-          if (set.i) return 0
-          if (set.hdi) return 0
+          if (set.i) return 0;
+          if (set.hdi) return 0;
         }
       }
-      const gfx_list = details.ig || details.hdig
-      return gfx_list ? gfx_list.length : 0
+      const gfx_list = details.ig || details.hdig;
+      return gfx_list ? gfx_list.length : 0;
     },
     findBasesInConstants(type_id, items) {
-      let bases = []
-      const base = items[this.item.type]
+      let bases = [];
+      const base = items[this.item.type];
       if (base) {
         if (
           this.item.quality == 5 || // set
@@ -688,42 +589,37 @@ export default {
           this.item.quality == 7 /*||*/ // unique
           // this.item.quality == 8 // crafted
         ) {
-          bases = [base.nc, base.exc, base.elc].filter((id) => items[id])
+          bases = [base.nc, base.exc, base.elc].filter((id) => items[id]);
           //items.filter(e => e[1].nc == code || e[1].exc == code || e[1].elc == code)
         } else {
           bases = Object.keys(items)
             .filter((id) => {
-              const item = items[id]
-              if (type_id == 0 && item.n != base.n) return false // Undef
-              if ((type_id == 1 || type_id == 2) && item.eq1n != base.eq1n)
-                return false // Armor & Shield
+              const item = items[id];
+              if (type_id == 0 && item.n != base.n) return false; // Undef
+              if ((type_id == 1 || type_id == 2) && item.eq1n != base.eq1n) return false; // Armor & Shield
               //if (type_id == 3 && false) return false // Weapon
-              if (type_id == 4 && isEqual(item.c, base.c)) return false // Misc
+              if (type_id == 4 && isEqual(item.c, base.c)) return false; // Misc
 
-              if (
-                this.item.given_runeword == 1 &&
-                item.gemsockets < this.item.total_nr_of_sockets
-              ) {
-                return false
+              if (this.item.given_runeword == 1 && item.gemsockets < this.item.total_nr_of_sockets) {
+                return false;
               }
 
-              return true
+              return true;
             })
-            .sort((a, b) => items[a].level < items[b].level)
+            .sort((a, b) => items[a].level < items[b].level);
         }
         bases = Object.entries(items)
           .filter((entry) => bases.includes(entry[0]))
           .map((entry) => ({
             value: entry[0],
             label: /*"(" + entry[0] + ") " +*/ entry[1].n,
-          }))
+          }));
       }
-      return bases
+      return bases;
     },
     getBaseOptions() {
       // let options
-      const constants =
-        window[`${window.work_mod}_constants_${window.work_version}`]
+      const constants = this.$getWorkConstantData();
 
       // switch (this.item.type_id) {
       //   case 0: // Unknown
@@ -754,47 +650,47 @@ export default {
 
       // return options
 
-      let lookupBases = []
-      if (this.item.type_id == 1 || this.item.type_id == 2)
-        lookupBases = constants.armor_items
-      else if (this.item.type_id == 3) lookupBases = constants.weapon_items
-      else if (this.item.type_id == 4) lookupBases = constants.other_items
+      let lookupBases = [];
+      if (this.item.type_id == 1 || this.item.type_id == 2) lookupBases = constants.armor_items;
+      else if (this.item.type_id == 3) lookupBases = constants.weapon_items;
+      else if (this.item.type_id == 4) lookupBases = constants.other_items;
 
-      let baseIds = [this.item.type] // Min is self
-      const currBase = lookupBases[this.item.type]
+      let baseIds = [this.item.type]; // Min is self
+      const currBase = lookupBases[this.item.type];
       if (currBase) {
-        let currType = currBase.eq1n
-        if (currType == "Any Armor" && currBase.c) {
+        let currType = currBase.eq1n;
+        if (currType == 'Any Armor' && currBase.c) {
           // In that case eq2n value has no meaning, and type comes from categories
-          currType = currBase.c[0]
+          currType = currBase.c[0];
         }
-        
+
         if (
           this.item.quality == 5 || // set
           this.item.quality == 7 /*||*/ // unique
           // this.item.quality == 8 // crafted
         ) {
-          baseIds = [currBase.nc, currBase.exc, currBase.elc].filter(
-            (id) => lookupBases[id]
-          )
+          baseIds = [currBase.nc, currBase.exc, currBase.elc].filter((id) => lookupBases[id]);
           //items.filter(e => e[1].nc == code || e[1].exc == code || e[1].elc == code)
         } else {
           baseIds = Object.keys(lookupBases).filter((id) => {
-            const testBase = lookupBases[id]
-            if (this.item.type_id == 0 && testBase.n != currBase.n) return false // Undef
-            if (this.item.type_id == 1 || this.item.type_id == 2) { // Armor
-              let testType = testBase.eq1n
-              if (testType == "Any Armor" && testBase.c) {
+            const testBase = lookupBases[id];
+
+            if (this.item.type_id == 0 && testBase.n != currBase.n) return false; // Undef
+
+            if (this.item.type_id == 1 || this.item.type_id == 2) {
+              // Armor
+              let testType = testBase.eq1n;
+              if (testType == 'Any Armor' && testBase.c) {
                 // For eq1n "Any Armor", eq2n is omitted
                 // Type comes from categories
-                testType = testBase.c[0]
+                testType = testBase.c[0];
               }
-              if (currType != testType)
-                return false // Armor & Shield: eq1n are equal
+              if (currType != testType) return false; // Armor & Shield: eq1n are equal
             }
+
             //if (type_id == 3 && false) return false // Weapon: all
-            if (this.item.type_id == 4 && !isEqual(testBase.c, currBase.c))
-              return false // Misc: categories are equal
+
+            if (this.item.type_id == 4 && !isEqual(testBase.c, currBase.c)) return false; // Misc: categories are equal
 
             if (
               this.item.type_id > 0 &&
@@ -802,18 +698,18 @@ export default {
               this.item.given_runeword == 1 &&
               testBase.gemsockets < this.item.total_nr_of_sockets
             ) {
-              return false // Not enough sockets for the runeword
+              return false; // Not enough sockets for the runeword
             }
 
-            return true
-          })
+            return true;
+          });
           // .sort((a, b) => lookupBases[a].level < lookupBases[b].level)
         }
       }
       return baseIds.map((id) => ({
         value: id,
         label: /*"(" + id + ") " +*/ lookupBases[id].n,
-      }))
+      }));
 
       // if (this.item.type_id == 3) {
       //   return this.findBasesInConstants(this.item.type_id, constants.weapon_items)
@@ -828,5 +724,5 @@ export default {
       // }
     },
   },
-}
+};
 </script>

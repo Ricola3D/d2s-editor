@@ -1,0 +1,18 @@
+import * as types from './types';
+import { BitReader } from '../binary/bitreader';
+import { BitWriter } from '../binary/bitwriter';
+export declare function newItem(): types.IItem;
+export declare function readCharItems(char: types.ID2S, reader: BitReader, mod: string, config: types.IConfig): Promise<void>;
+export declare function writeCharItems(char: types.ID2S, mod: string, version: number, config: types.IConfig): Promise<Uint8Array>;
+export declare function readMercItems(char: types.ID2S, reader: BitReader, mod: string, config: types.IConfig): Promise<void>;
+export declare function writeMercItems(char: types.ID2S, mod: string, version: number, config: types.IConfig): Promise<Uint8Array>;
+export declare function readGolemItems(char: types.ID2S, reader: BitReader, mod: string, config: types.IConfig): Promise<void>;
+export declare function writeGolemItems(char: types.ID2S, mod: string, version: number, config: types.IConfig): Promise<Uint8Array>;
+export declare function readCorpseItems(char: types.ID2S, reader: BitReader, mod: string, config: types.IConfig): Promise<void>;
+export declare function writeCorpseItem(char: types.ID2S, mod: string, version: number, config: types.IConfig): Promise<Uint8Array>;
+export declare function readItems(reader: BitReader, mod: string, version: number, config: types.IConfig, char?: types.ID2S): Promise<types.IItem[]>;
+export declare function writeItems(items: types.IItem[], mod: string, version: number, config: types.IConfig): Promise<Uint8Array>;
+export declare function readItem(reader: BitReader, mod: string, version: number, config: types.IConfig): Promise<types.IItem>;
+export declare function writeItem(item: types.IItem, mod: string, version: number, config: types.IConfig): Promise<Uint8Array>;
+export declare function _readMagicAttributes(reader: BitReader, constants: types.IConstantData): types.IMagicProperty[];
+export declare function _writeMagicAttributes(writer: BitWriter, magic_attributes: types.IMagicProperty[], constants: types.IConstantData): void;

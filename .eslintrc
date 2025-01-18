@@ -9,25 +9,21 @@
     "eslint:recommended",
     "plugin:prettier/recommended"
   ],
-  "ignores": [
-    // Ignore git hidden files:
-    "**/.git",
-    "**/.svn",
-    "**/.hg",
-    // Ignore dependencies
-    "**/node_modules",
-    // Ignore build dir
-    "dist",
-    // Ignore static data
-    "public/d2"
-    // Ignore test output
-    //"coverage"
-  ],
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "tabWidth": 2,
+        "useTabs": false,
+        "printWidth": 140,
+        "singleQuote": true,
+        "endOfLine": "lf"
+      }
+    ],
+    // "vue/no-deprecated-v-on-native-modifier": "warn",
     "vue/component-name-in-template-casing": ["error", "PascalCase"],
-    "no-console": "error",
-    "no-debugger": "error"
+    "no-console": "warn",
+    "no-debugger": "warn"
   },
   "parserOptions": {
     "ecmaVersion": "latest",

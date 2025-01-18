@@ -363,6 +363,10 @@ input:invalid {
   border: 1px solid red;
 }
 
+input.warn, input.warn:focus {
+  background-color: rgb(241, 139, 139);
+}
+
 div.settings {
   display: grid;
   grid-template-columns: max-content minmax(200px, max-content);

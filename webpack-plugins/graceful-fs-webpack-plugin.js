@@ -1,5 +1,9 @@
 const fs = require('graceful-fs')
 
+/*
+If we have a ton of static files, it may pop "EMFILE: Too many open files" errors with the default memfs.
+This plugin changes the default inputFileSystem from memfs to graceful-fs
+*/
 class GracefulFsPlugin {
   constructor(/*options*/) {}
 
@@ -7,7 +11,8 @@ class GracefulFsPlugin {
   apply(compiler) {
     // Specify the event hook to attach to
     compiler.hooks.afterEnvironment.tap('GracefulFsPlugin', () => {
-      compiler.outputFileSystem = fs
+      compiler.inputFileSystem = fs
+      // compiler.outputFileSystem = fs
     })
   }
 }

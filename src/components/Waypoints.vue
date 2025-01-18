@@ -13,11 +13,7 @@
             />{{ difficulty.label }}</label
           >
         </li>
-        <ul
-          v-for="(act, j) in difficulty.acts"
-          :key="j"
-          class="col-md-offset-1"
-        >
+        <ul v-for="(act, j) in difficulty.acts" :key="j" class="col-md-offset-1">
           <li>
             <label
               ><input
@@ -29,11 +25,7 @@
               />{{ act.label }}</label
             >
           </li>
-          <ul
-            v-for="(waypoint, k) in act.waypoints"
-            :key="k"
-            class="col-md-offset-2"
-          >
+          <ul v-for="(waypoint, k) in act.waypoints" :key="k" class="col-md-offset-2">
             <li>
               <label
                 ><input
@@ -41,9 +33,7 @@
                   class="form-check-input"
                   type="checkbox"
                   :checked="waypoints[difficulty.key][act.key][waypoint.key]"
-                  @input="
-                    updateWP(difficulty, act, waypoint, $event.target.checked)
-                  "
+                  @input="updateWP(difficulty, act, waypoint, $event.target.checked)"
                 />{{ waypoint.label }}</label
               >
             </li>
@@ -55,7 +45,7 @@
 </template>
 
 <script>
-import { cloneDeep } from 'lodash'
+import { cloneDeep } from 'lodash';
 
 const waypointsDefinition = [
   {
@@ -135,8 +125,9 @@ const waypointsDefinition = [
       { key: 'worldstone_keep_lvl_2', label: 'Worldstone Keep Lvl 2' },
     ],
   },
-]
+];
 export default {
+  name: 'WaypointsTab',
   props: {
     waypoints: Object,
   },
@@ -162,25 +153,25 @@ export default {
           acts: cloneDeep(waypointsDefinition),
         },
       ],
-    }
+    };
   },
   watch: {
     waypoints: {
       handler: function (newWp, oldWp) {
         // Update difficulty all & act all checkboxes
         for (const [i, difficulty] of this.difficulties.entries()) {
-          let isDifficultyAll = true
+          let isDifficultyAll = true;
           for (const [j, act] of difficulty.acts.entries()) {
-            let isActAll = true
+            let isActAll = true;
             for (const wp of act.waypoints) {
               if (!newWp[difficulty.key][act.key][wp.key]) {
-                isActAll = false
-                isDifficultyAll = false
+                isActAll = false;
+                isDifficultyAll = false;
               }
             }
-            this.difficulties[i].acts[j].all = isActAll
+            this.difficulties[i].acts[j].all = isActAll;
           }
-          this.difficulties[i].all = isDifficultyAll
+          this.difficulties[i].all = isDifficultyAll;
         }
       },
       deep: true,
@@ -190,43 +181,43 @@ export default {
     updateWP(difficulty, act, wp, value) {
       // Uncheck act checkbock if necessary
       if (value !== act.all && act.all) {
-        act.all = false
+        act.all = false;
       }
       // Uncheck difficulty checkbock if necessary
       if (value !== difficulty.all && difficulty.all) {
-        difficulty.all = false
+        difficulty.all = false;
       }
 
-      const newWaypoints = cloneDeep(this.waypoints)
-      newWaypoints[difficulty.key][act.key][wp.key] = value
+      const newWaypoints = cloneDeep(this.waypoints);
+      newWaypoints[difficulty.key][act.key][wp.key] = value;
 
       // Emit the modification
-      this.$emit('update:waypoints', newWaypoints)
+      this.$emit('update:waypoints', newWaypoints);
     },
     updateAct(difficulty, act, value, emitNow = true) {
-      const newWaypoints = cloneDeep(this.waypoints)
+      const newWaypoints = cloneDeep(this.waypoints);
 
       for (const wp of act.waypoints) {
-        newWaypoints[difficulty.key][act.key][wp.key] = value
+        newWaypoints[difficulty.key][act.key][wp.key] = value;
       }
 
       // Emit the modification
-      this.$emit('update:waypoints', newWaypoints)
+      this.$emit('update:waypoints', newWaypoints);
     },
     updateDiff(difficulty, value) {
-      const newWaypoints = cloneDeep(this.waypoints)
+      const newWaypoints = cloneDeep(this.waypoints);
       for (const act of difficulty.acts) {
         // Update act checkbox
-        act.all = value
+        act.all = value;
 
         for (const wp of act.waypoints) {
-          newWaypoints[difficulty.key][act.key][wp.key] = value
+          newWaypoints[difficulty.key][act.key][wp.key] = value;
         }
       }
 
       // Emit the modification
-      this.$emit('update:waypoints', newWaypoints)
+      this.$emit('update:waypoints', newWaypoints);
     },
   },
-}
+};
 </script>

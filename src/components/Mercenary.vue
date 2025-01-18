@@ -1,25 +1,13 @@
 <template>
   <div class="inventory">
     <span class="head">
-      <Item
-        v-if="head"
-        v-model:item="head"
-        @click.native="onSelect(head)"
-        @contextmenu.prevent.stop="itemRC($event, head)"
+      <Item v-if="head" v-model:item="head" @click.native="onSelect(head)" @contextmenu.prevent.stop="itemRC($event, head)"
     /></span>
     <span class="neck">
-      <Item
-        v-if="neck"
-        v-model:item="neck"
-        @click.native="onSelect(neck)"
-        @contextmenu.prevent.stop="itemRC($event, neck)"
+      <Item v-if="neck" v-model:item="neck" @click.native="onSelect(neck)" @contextmenu.prevent.stop="itemRC($event, neck)"
     /></span>
     <span class="torso">
-      <Item
-        v-if="torso"
-        v-model:item="torso"
-        @click.native="onSelect(torso)"
-        @contextmenu.prevent.stop="itemRC($event, torso)"
+      <Item v-if="torso" v-model:item="torso" @click.native="onSelect(torso)" @contextmenu.prevent.stop="itemRC($event, torso)"
     /></span>
     <span class="right-hand weapon">
       <Item
@@ -50,33 +38,22 @@
         @contextmenu.prevent.stop="itemRC($event, left_finger)"
     /></span>
     <span class="waist">
-      <Item
-        v-if="waist"
-        v-model:item="waist"
-        @click.native="onSelect(waist)"
-        @contextmenu.prevent.stop="itemRC($event, waist)"
+      <Item v-if="waist" v-model:item="waist" @click.native="onSelect(waist)" @contextmenu.prevent.stop="itemRC($event, waist)"
     /></span>
     <span class="feet">
-      <Item
-        v-if="feet"
-        v-model:item="feet"
-        @click.native="onSelect(feet)"
-        @contextmenu.prevent.stop="itemRC($event, feet)"
+      <Item v-if="feet" v-model:item="feet" @click.native="onSelect(feet)" @contextmenu.prevent.stop="itemRC($event, feet)"
     /></span>
     <span class="hands">
-      <Item
-        v-if="hands"
-        v-model:item="hands"
-        @click.native="onSelect(hands)"
-        @contextmenu.prevent.stop="itemRC($event, hands)"
+      <Item v-if="hands" v-model:item="hands" @click.native="onSelect(hands)" @contextmenu.prevent.stop="itemRC($event, hands)"
     /></span>
   </div>
 </template>
 
 <script>
-import Item from './inventory/Item.vue'
+import Item from './inventory/Item.vue';
 
 export default {
+  name: 'MercenaryEquipement',
   components: {
     Item,
   },
@@ -86,45 +63,45 @@ export default {
   },
   computed: {
     head() {
-      return this.items.find((e) => e.equipped_id === 1)
+      return this.items.find((e) => e.equipped_id === 1);
     },
     neck() {
-      return this.items.find((e) => e.equipped_id === 2)
+      return this.items.find((e) => e.equipped_id === 2);
     },
     torso() {
-      return this.items.find((e) => e.equipped_id === 3)
+      return this.items.find((e) => e.equipped_id === 3);
     },
     right_hand() {
-      return this.items.find((e) => e.equipped_id === 4)
+      return this.items.find((e) => e.equipped_id === 4);
     },
     left_hand() {
-      return this.items.find((e) => e.equipped_id === 5)
+      return this.items.find((e) => e.equipped_id === 5);
     },
     right_finger() {
-      return this.items.find((e) => e.equipped_id === 6)
+      return this.items.find((e) => e.equipped_id === 6);
     },
     left_finger() {
-      return this.items.find((e) => e.equipped_id === 7)
+      return this.items.find((e) => e.equipped_id === 7);
     },
     waist() {
-      return this.items.find((e) => e.equipped_id === 8)
+      return this.items.find((e) => e.equipped_id === 8);
     },
     feet() {
-      return this.items.find((e) => e.equipped_id === 9)
+      return this.items.find((e) => e.equipped_id === 9);
     },
     hands() {
-      return this.items.find((e) => e.equipped_id === 10)
+      return this.items.find((e) => e.equipped_id === 10);
     },
     alt_right_hand() {
-      return this.items.find((e) => e.equipped_id === 11)
+      return this.items.find((e) => e.equipped_id === 11);
     },
     alt_left_hand() {
-      return this.items.find((e) => e.equipped_id === 12)
+      return this.items.find((e) => e.equipped_id === 12);
     },
   },
   methods: {
     onSelect(item) {
-      this.$emit('item-selected', item)
+      this.$emit('item-selected', item);
     },
     itemRC($evt, item) {
       if (item != null) {
@@ -134,7 +111,7 @@ export default {
           { text: 'Cut' },
           { text: 'Export' },
           { text: 'Delete' },
-        ])
+        ]);
       }
     },
     equippedRC($evt, equipped_id) {
@@ -148,9 +125,9 @@ export default {
           position_y: 0,
           alt_position_id: 0,
         },
-        [{ text: 'Paste At' }, { text: 'Import' }]
-      )
+        [{ text: 'Paste At' }, { text: 'Import At' }],
+      );
     },
   },
-}
+};
 </script>

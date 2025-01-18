@@ -5,13 +5,14 @@
   "search.exclude": {
     "**/.git": true,
     "**/node_modules": true,
+    "**/lib": true,
     "**/dist": true,
     "package-lock.json": true,
     "**/*.bundle.min.js": true,
     "**/*.bundle.js.map": true,
-    "**/d2s.bundle.js": false
+    "**/d2s.bundle.js": true
   },
-  "files.eol": "\r\n",
+  "files.eol": "\n",
   "files.exclude": {
     "**/node_modules": true
   },

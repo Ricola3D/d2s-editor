@@ -18,7 +18,6 @@
     "node-cache": "^5.1.2",
     "select2": "^4.1.0-rc.0",
     "tippy.js": "^6.3.7",
-    "toad-cache": "^3.7.0",
     "vue": "^3.4.13",
     "vue-tippy": "^6.4.1",
     "vuex": "^4.1.0"

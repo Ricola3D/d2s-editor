@@ -34679,6 +34679,10 @@ let vanilla_constants_97 = {
     "version": "vanilla_constants_97"
 };
 
+vanilla_constants_97.runeword_fixes = {
+    22: 2692,
+};
+
 vanilla_constants_97.gold = {
     "perCharLevel": 10000,
     "bank": 2500000

@@ -17224,38 +17224,38 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BitReader = void 0;
-var BitReader = /** @class */ (function () {
-    function BitReader(arrBuffer) {
-        var _this = this;
-        this.littleEndian = true;
-        this.offset = 0;
-        var typedArray = new Uint8Array(arrBuffer);
+class BitReader {
+    littleEndian = true;
+    bits;
+    offset = 0;
+    constructor(arrBuffer) {
+        const typedArray = new Uint8Array(arrBuffer);
         this.bits = new Uint8Array(typedArray.length * 8);
-        typedArray.reduce(function (acc, c) {
-            var b = c
+        typedArray.reduce((acc, c) => {
+            const b = c
                 .toString(2)
-                .padStart(8, "0")
-                .split("")
+                .padStart(8, '0')
+                .split('')
                 .reverse()
-                .map(function (e) { return parseInt(e, 2); });
-            b.forEach(function (bit) { return (_this.bits[acc++] = bit); });
+                .map((e) => parseInt(e, 2));
+            b.forEach((bit) => (this.bits[acc++] = bit));
             return acc;
         }, 0);
     }
-    BitReader.prototype.ReadBit = function () {
+    ReadBit() {
         return this.bits[this.offset++];
-    };
-    BitReader.prototype.ReadBitArray = function (count) {
-        var bits = new Uint8Array(count);
-        for (var i = 0; i < count; i++) {
+    }
+    ReadBitArray(count) {
+        const bits = new Uint8Array(count);
+        for (let i = 0; i < count; i++) {
             bits[i] = this.bits[this.offset++];
         }
         return bits;
-    };
-    BitReader.prototype.ReadBits = function (bytes, count) {
-        var byteIndex = 0;
-        var bitIndex = 0;
-        for (var i = 0; i < count; i++) {
+    }
+    ReadBits(bytes, count) {
+        let byteIndex = 0;
+        let bitIndex = 0;
+        for (let i = 0; i < count; i++) {
             if (this.bits[this.offset + i]) {
                 bytes[byteIndex] |= (1 << bitIndex) & 0xff;
             }
@@ -17267,64 +17267,59 @@ var BitReader = /** @class */ (function () {
         }
         this.offset += count;
         return bytes;
-    };
-    BitReader.prototype.ReadBytes = function (bytes) {
+    }
+    ReadBytes(bytes) {
         return this.ReadBits(new Uint8Array(bytes), bytes * 8);
-    };
-    BitReader.prototype.ReadArray = function (bytes) {
+    }
+    ReadArray(bytes) {
         return this.ReadBytes(bytes);
-    };
-    BitReader.prototype.ReadByte = function (bits) {
-        if (bits === void 0) { bits = 8; }
-        var dataview = new DataView(this.ReadBits(new Uint8Array(1), bits).buffer);
+    }
+    ReadByte(bits = 8) {
+        const dataview = new DataView(this.ReadBits(new Uint8Array(1), bits).buffer);
         return dataview.getUint8(0);
-    };
-    BitReader.prototype.ReadUInt8 = function (bits) {
-        if (bits === void 0) { bits = 8; }
+    }
+    ReadUInt8(bits = 8) {
         return this.ReadByte(bits);
-    };
-    BitReader.prototype.ReadUInt16 = function (bits) {
-        if (bits === void 0) { bits = 8 * 2; }
-        var dataview = new DataView(this.ReadBits(new Uint8Array(2), bits).buffer);
+    }
+    ReadUInt16(bits = 8 * 2) {
+        const dataview = new DataView(this.ReadBits(new Uint8Array(2), bits).buffer);
         return dataview.getUint16(0, this.littleEndian);
-    };
-    BitReader.prototype.ReadUInt32 = function (bits) {
-        if (bits === void 0) { bits = 8 * 4; }
-        var dataview = new DataView(this.ReadBits(new Uint8Array(4), bits).buffer);
+    }
+    ReadUInt32(bits = 8 * 4) {
+        const dataview = new DataView(this.ReadBits(new Uint8Array(4), bits).buffer);
         return dataview.getUint32(0, this.littleEndian);
-    };
-    BitReader.prototype.ReadString = function (bytes) {
-        var buffer = this.ReadBytes(bytes).buffer;
+    }
+    ReadString(bytes) {
+        const buffer = this.ReadBytes(bytes).buffer;
         return new TextDecoder().decode(buffer);
-    };
-    BitReader.prototype.ReadNullTerminatedString = function () {
-        var start = this.offset;
+    }
+    ReadNullTerminatedString() {
+        const start = this.offset;
         while (this.ReadByte()) { }
-        var end = this.offset - 8;
-        var buffer = this.SeekBit(start).ReadBytes((end - start) / 8);
+        const end = this.offset - 8;
+        const buffer = this.SeekBit(start).ReadBytes((end - start) / 8);
         this.SeekBit(end + 8);
         return new TextDecoder().decode(buffer);
-    };
-    BitReader.prototype.SkipBits = function (number) {
+    }
+    SkipBits(number) {
         this.offset += number;
         return this;
-    };
-    BitReader.prototype.SkipBytes = function (number) {
+    }
+    SkipBytes(number) {
         return this.SkipBits(number * 8);
-    };
-    BitReader.prototype.SeekBit = function (offset) {
+    }
+    SeekBit(offset) {
         this.offset = offset;
         return this;
-    };
-    BitReader.prototype.SeekByte = function (offset) {
+    }
+    SeekByte(offset) {
         return this.SeekBit(offset * 8);
-    };
-    BitReader.prototype.Align = function () {
+    }
+    Align() {
         this.offset = (this.offset + 7) & ~7;
         return this;
-    };
-    return BitReader;
-}());
+    }
+}
 exports.BitReader = BitReader;
 
 
@@ -17340,17 +17335,17 @@ exports.BitReader = BitReader;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BitWriter = void 0;
-var BitWriter = /** @class */ (function () {
-    function BitWriter(capacity) {
-        if (capacity === void 0) { capacity = 8192; }
-        this.littleEndian = true;
-        this.offset = 0;
-        this.length = 0;
+class BitWriter {
+    littleEndian = true;
+    bits;
+    offset = 0;
+    length = 0;
+    constructor(capacity = 8192) {
         this.bits = new Uint8Array(capacity);
     }
-    BitWriter.prototype.WriteBit = function (value) {
+    WriteBit(value) {
         if (this.offset >= this.bits.length) {
-            var resized = new Uint8Array(this.bits.length + 8192);
+            const resized = new Uint8Array(this.bits.length + 8192);
             resized.set(this.bits, 0);
             this.bits = resized;
         }
@@ -17358,73 +17353,67 @@ var BitWriter = /** @class */ (function () {
         if (this.offset > this.length)
             this.length++;
         return this;
-    };
-    BitWriter.prototype.WriteBits = function (bits, numberOfBits) {
-        for (var i = 0; i < numberOfBits; i++) {
+    }
+    WriteBits(bits, numberOfBits) {
+        for (let i = 0; i < numberOfBits; i++) {
             this.WriteBit(bits[i]);
         }
         return this;
-    };
-    BitWriter.prototype.WriteBytes = function (bytes, numberOfBits) {
-        if (numberOfBits === void 0) { numberOfBits = bytes.length * 8; }
-        var toWrite = new Uint8Array(numberOfBits);
-        bytes.reduce(function (acc, c) {
-            var b = c
+    }
+    WriteBytes(bytes, numberOfBits = bytes.length * 8) {
+        const toWrite = new Uint8Array(numberOfBits);
+        bytes.reduce((acc, c) => {
+            const b = c
                 .toString(2)
-                .padStart(8, "0")
-                .split("")
+                .padStart(8, '0')
+                .split('')
                 .reverse()
-                .map(function (e) { return parseInt(e, 2); });
-            b.forEach(function (bit) { return (toWrite[acc++] = bit); });
+                .map((e) => parseInt(e, 2));
+            b.forEach((bit) => (toWrite[acc++] = bit));
             return acc;
         }, 0);
         return this.WriteBits(toWrite, numberOfBits);
-    };
-    BitWriter.prototype.WriteArray = function (bytes, numberOfBits) {
-        if (numberOfBits === void 0) { numberOfBits = bytes.length * 8; }
+    }
+    WriteArray(bytes, numberOfBits = bytes.length * 8) {
         return this.WriteBytes(bytes, numberOfBits);
-    };
-    BitWriter.prototype.WriteByte = function (value, numberOfBits) {
-        if (numberOfBits === void 0) { numberOfBits = 8; }
-        var buffer = new Uint8Array(1);
+    }
+    WriteByte(value, numberOfBits = 8) {
+        const buffer = new Uint8Array(1);
         new DataView(buffer.buffer).setUint8(0, value);
         return this.WriteBytes(buffer, numberOfBits);
-    };
-    BitWriter.prototype.WriteUInt8 = function (value, numberOfBits) {
-        if (numberOfBits === void 0) { numberOfBits = 8; }
+    }
+    WriteUInt8(value, numberOfBits = 8) {
         return this.WriteByte(value, numberOfBits);
-    };
-    BitWriter.prototype.WriteUInt16 = function (value, numberOfBits) {
-        if (numberOfBits === void 0) { numberOfBits = 8 * 2; }
-        var buffer = new Uint8Array(2);
+    }
+    WriteUInt16(value, numberOfBits = 8 * 2) {
+        const buffer = new Uint8Array(2);
         new DataView(buffer.buffer).setUint16(0, value, this.littleEndian);
         return this.WriteBytes(buffer, numberOfBits);
-    };
-    BitWriter.prototype.WriteUInt32 = function (value, numberOfBits) {
-        if (numberOfBits === void 0) { numberOfBits = 8 * 4; }
-        var buffer = new Uint8Array(4);
+    }
+    WriteUInt32(value, numberOfBits = 8 * 4) {
+        const buffer = new Uint8Array(4);
         new DataView(buffer.buffer).setUint32(0, value, this.littleEndian);
         return this.WriteBytes(buffer, numberOfBits);
-    };
-    BitWriter.prototype.WriteString = function (value, numberOfBytes) {
-        var buffer = new TextEncoder().encode(value);
+    }
+    WriteString(value, numberOfBytes) {
+        const buffer = new TextEncoder().encode(value);
         return this.WriteBytes(buffer, numberOfBytes * 8);
-    };
-    BitWriter.prototype.SeekBit = function (offset) {
+    }
+    SeekBit(offset) {
         this.offset = offset;
         if (this.offset > this.length) {
             this.length = this.offset;
         }
         return this;
-    };
-    BitWriter.prototype.SeekByte = function (offset) {
+    }
+    SeekByte(offset) {
         return this.SeekBit(offset * 8);
-    };
-    BitWriter.prototype.PeekBytes = function (count) {
-        var buffer = new Uint8Array(count);
-        var byteIndex = 0;
-        var bitIndex = 0;
-        for (var i = 0; i < count * 8; ++i) {
+    }
+    PeekBytes(count) {
+        const buffer = new Uint8Array(count);
+        let byteIndex = 0;
+        let bitIndex = 0;
+        for (let i = 0; i < count * 8; ++i) {
             if (this.bits[this.offset + i]) {
                 buffer[byteIndex] |= (1 << bitIndex) & 0xff;
             }
@@ -17435,19 +17424,19 @@ var BitWriter = /** @class */ (function () {
             }
         }
         return buffer;
-    };
-    BitWriter.prototype.Align = function () {
+    }
+    Align() {
         this.offset = (this.offset + 7) & ~7;
         if (this.offset > this.length) {
             this.length = this.offset;
         }
         return this;
-    };
-    BitWriter.prototype.ToArray = function () {
-        var buffer = new Uint8Array((this.length - 1) / 8 + 1);
-        var byteIndex = 0;
-        var bitIndex = 0;
-        for (var i = 0; i < this.length; ++i) {
+    }
+    ToArray() {
+        const buffer = new Uint8Array((this.length - 1) / 8 + 1);
+        let byteIndex = 0;
+        let bitIndex = 0;
+        for (let i = 0; i < this.length; ++i) {
             if (this.bits[i]) {
                 buffer[byteIndex] |= (1 << bitIndex) & 0xff;
             }
@@ -17458,9 +17447,8 @@ var BitWriter = /** @class */ (function () {
             }
         }
         return buffer;
-    };
-    return BitWriter;
-}());
+    }
+}
 exports.BitWriter = BitWriter;
 
 
@@ -17470,32 +17458,16 @@ exports.BitWriter = BitWriter;
 /*!**************************************!*\
   !*** ./src/d2/attribute_enhancer.ts ***!
   \**************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.enhanceItem = exports.enhanceItems = exports.enhancePlayerAttributes = exports.enhanceAttributes = void 0;
-var lodash_1 = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-var constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
-var utils_1 = __webpack_require__(/*! ./utils */ "./src/d2/utils.ts");
-var types_1 = __webpack_require__(/*! ./types */ "./src/d2/types.ts");
-var ItemType;
-(function (ItemType) {
-    ItemType[ItemType["Armor"] = 1] = "Armor";
-    ItemType[ItemType["Shield"] = 2] = "Shield";
-    ItemType[ItemType["Weapon"] = 3] = "Weapon";
-    ItemType[ItemType["Other"] = 4] = "Other";
-})(ItemType || (ItemType = {}));
+const lodash_1 = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+const constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
+const utils_1 = __webpack_require__(/*! ./utils */ "./src/d2/utils.ts");
+const types_1 = __webpack_require__(/*! ./types */ "./src/d2/types.ts");
 //do nice stuff
 //combine group properties (all resists/all stats) and build friendly strings for a ui
 //enhanced def/durability/weapon damage.
@@ -17510,30 +17482,28 @@ function enhanceAttributes(char, mod, version, config) {
 }
 exports.enhanceAttributes = enhanceAttributes;
 function enhancePlayerAttributes(char, mod, version, config) {
-    var constants = (0, constants_1.getConstantData)(mod, version);
-    var items = char.items.filter(function (item) {
+    const constants = (0, constants_1.getConstantData)(mod, version);
+    const items = char.items.filter((item) => {
         return item.location_id === 1 && item.equipped_id !== 13 && item.equipped_id !== 14;
     });
     char.item_bonuses = [].concat
-        .apply([], items.map(function (item) { return _allAttributes(item /*, constants*/); }))
-        .filter(function (attribute) { return attribute != null; });
+        .apply([], items.map((item) => _allAttributes(item /*, constants*/)))
+        .filter((attribute) => attribute != null);
     char.item_bonuses = _groupAttributes(char.item_bonuses, constants);
     char.displayed_item_bonuses = _enhanceAttributeDescription(char.item_bonuses, constants, char.attributes, config);
 }
 exports.enhancePlayerAttributes = enhancePlayerAttributes;
-function enhanceItems(items, mod, version, attributes, config, parent) {
-    if (attributes === void 0) { attributes = {
-        level: 1,
-        strength: 0,
-        dexterity: 0,
-        vitality: 0,
-        energy: 0,
-    }; }
+function enhanceItems(items, mod, version, attributes = {
+    level: 1,
+    strength: 0,
+    dexterity: 0,
+    vitality: 0,
+    energy: 0,
+}, config, parent) {
     if (!items) {
         return;
     }
-    for (var _i = 0, items_1 = items; _i < items_1.length; _i++) {
-        var item = items_1[_i];
+    for (const item of items) {
         if (!item) {
             continue;
         }
@@ -17548,226 +17518,238 @@ exports.enhanceItems = enhanceItems;
 function boundValue(v, min, max) {
     return Math.min(max, Math.max(min, v));
 }
-function enhanceItem(item, mod, version, attributes, config, parent) {
-    var _a, _b, _c, _d;
-    if (attributes === void 0) { attributes = {
-        level: 1,
-        strength: 0,
-        dexterity: 0,
-        vitality: 0,
-        energy: 0,
-    }; }
-    var constants = (0, constants_1.getConstantData)(mod, version);
-    if (parent) {
-        //socket item.
-        var pt = constants.armor_items[parent.type] || constants.weapon_items[parent.type] || constants.other_items[parent.type];
-        var t = constants.other_items[item.type];
-        if (t.m) {
-            item.magic_attributes = _compactAttributes(t.m[pt.gt], constants);
+function enhanceItem(item, mod, version, attributes = {
+    level: 1,
+    strength: 0,
+    dexterity: 0,
+    vitality: 0,
+    energy: 0,
+}, config, parent) {
+    const constants = (0, constants_1.getConstantData)(mod, version);
+    const itemTypeDef = (0, utils_1.getItemTypeDef)(item, constants);
+    if (itemTypeDef.m) {
+        // Socketable gem/rune. Magical Attributes are computed dynamically
+        if (parent) {
+            // Socketed: re-compute magic_attributes
+            const parentTypeDef = constants.armor_items[parent.type] || constants.weapon_items[parent.type] || constants.other_items[parent.type];
+            const gemMods = itemTypeDef.m[parentTypeDef.gt];
+            item.magic_attributes = _gemModsToAttributes(gemMods, constants);
+        }
+        else {
+            // In inventory/stash/cube
+            item.magic_attributes = [
+                ..._gemModsToAttributes(itemTypeDef.m[0], constants).map((magicalProp) => Object.assign(magicalProp, { condition: 'Weapon/Gloves' })),
+                ..._gemModsToAttributes(itemTypeDef.m[1], constants).map((magicalProp) => Object.assign(magicalProp, { condition: 'Armor/Boots/Helm/Belt' })),
+                ..._gemModsToAttributes(itemTypeDef.m[2], constants).map((magicalProp) => Object.assign(magicalProp, { condition: 'Shield/Jewelry' })),
+            ];
         }
     }
     // Enforce level is between 1 and 99
     item.level = boundValue(item.level, 1, 99);
-    if (item.quality !== types_1.Quality.Magic) {
+    if (item.quality !== types_1.EQuality.Magic) {
         item.magic_prefix = 0;
         item.magic_suffix = 0;
     }
-    if (item.quality === types_1.Quality.Rare || item.quality === types_1.Quality.Crafted) {
-        item.rare_name = constants.rare_names[item.rare_name_id] ? constants.rare_names[item.rare_name_id].n : "";
-        item.rare_name2 = constants.rare_names[item.rare_name_id2] ? constants.rare_names[item.rare_name_id2].n : "";
+    if (item.quality === types_1.EQuality.Rare || item.quality === types_1.EQuality.Crafted) {
+        item.rare_name = constants.rare_names[item.rare_name_id] ? constants.rare_names[item.rare_name_id].n : '';
+        item.rare_name2 = constants.rare_names[item.rare_name_id2] ? constants.rare_names[item.rare_name_id2].n : '';
     }
     else {
         item.rare_name_id = 0;
-        item.rare_name = "";
+        item.rare_name = '';
         item.rare_name_id2 = 0;
-        item.rare_name2 = "";
+        item.rare_name2 = '';
         item.magical_name_ids = [0, 0, 0, 0, 0, 0];
     }
-    if (item.quality === types_1.Quality.Set) {
-        item.set_name = constants.set_items[item.set_id] ? constants.set_items[item.set_id].n : "";
+    if (item.quality === types_1.EQuality.Set) {
+        item.set_name = constants.set_items[item.set_id] ? constants.set_items[item.set_id].n : '';
     }
     else {
         item.set_id = 0;
-        item.set_name = "";
+        item.set_name = '';
         item.set_attributes = [];
     }
-    if (item.quality === types_1.Quality.Unique) {
-        item.unique_name = constants.unq_items[item.unique_id] ? constants.unq_items[item.unique_id].n : "";
+    if (item.quality === types_1.EQuality.Unique) {
+        item.unique_name = constants.unq_items[item.unique_id] ? constants.unq_items[item.unique_id].n : '';
     }
     else {
         item.unique_id = 0;
-        item.unique_name = "";
+        item.unique_name = '';
     }
-    if (item.quality !== types_1.Quality.Magic && item.quality !== types_1.Quality.Unique) {
-        item.personalized = 0;
-        item.personalized_name = "";
+    if (item.quality !== types_1.EQuality.Magic && item.quality !== types_1.EQuality.Unique) {
+        item.personalized = false;
+        item.personalized_name = '';
     }
-    var details = null;
     // Set type_id
     // Also for armors: set defense_rating to the max
     // Also for weapons: set base_damage
     if (constants.armor_items[item.type]) {
-        details = constants.armor_items[item.type];
-        item.type_id = ItemType.Armor;
-        if (details.maxac) {
-            if (item.ethereal == 0) {
-                item.defense_rating = details.maxac;
+        item.type_id = types_1.ETypeId.Armor;
+        if (itemTypeDef.maxac) {
+            if (!item.ethereal) {
+                item.defense_rating = itemTypeDef.maxac;
             }
-            else if (item.ethereal == 1) {
-                item.defense_rating = Math.floor(details.maxac * 1.5);
+            else if (item.ethereal) {
+                item.defense_rating = Math.floor(itemTypeDef.maxac * 1.5);
             }
         }
     }
     else if (constants.weapon_items[item.type]) {
-        details = constants.weapon_items[item.type];
-        item.type_id = ItemType.Weapon;
-        var base_damage = {};
-        if (item.ethereal == 0) {
-            if (details.mind)
-                base_damage.mindam = details.mind;
-            if (details.maxd)
-                base_damage.maxdam = details.maxd;
-            if (details.min2d)
-                base_damage.twohandmindam = details.min2d;
-            if (details.max2d)
-                base_damage.twohandmaxdam = details.max2d;
+        item.type_id = types_1.ETypeId.Weapon;
+        const base_damage = {};
+        if (!item.ethereal) {
+            if (itemTypeDef.mind)
+                base_damage.mindam = itemTypeDef.mind;
+            if (itemTypeDef.maxd)
+                base_damage.maxdam = itemTypeDef.maxd;
+            if (itemTypeDef.min2d)
+                base_damage.twohandmindam = itemTypeDef.min2d;
+            if (itemTypeDef.max2d)
+                base_damage.twohandmaxdam = itemTypeDef.max2d;
         }
-        else if (item.ethereal == 1) {
-            if (details.mind)
-                base_damage.mindam = Math.floor(details.mind * 1.5);
-            if (details.maxd)
-                base_damage.maxdam = Math.floor(details.maxd * 1.5);
-            if (details.min2d)
-                base_damage.twohandmindam = Math.floor(details.min2d * 1.5);
-            if (details.max2d)
-                base_damage.twohandmaxdam = Math.floor(details.max2d * 1.5);
+        else if (item.ethereal) {
+            if (itemTypeDef.mind)
+                base_damage.mindam = Math.floor(itemTypeDef.mind * 1.5);
+            if (itemTypeDef.maxd)
+                base_damage.maxdam = Math.floor(itemTypeDef.maxd * 1.5);
+            if (itemTypeDef.min2d)
+                base_damage.twohandmindam = Math.floor(itemTypeDef.min2d * 1.5);
+            if (itemTypeDef.max2d)
+                base_damage.twohandmaxdam = Math.floor(itemTypeDef.max2d * 1.5);
         }
         item.base_damage = base_damage;
     }
     else if (constants.other_items[item.type]) {
-        item.type_id = ItemType.Other;
-        details = constants.other_items[item.type];
+        item.type_id = types_1.ETypeId.Other;
+        item.ethereal = false;
     }
-    if (details) {
-        if (details.n)
-            item.type_name = details.n;
-        if (details.rs)
-            item.reqstr = details.rs;
-        if (details.rd)
-            item.reqdex = details.rd;
-        if (details.i)
-            item.inv_file = details.i;
-        if (details.hdi)
-            item.hd_inv_file = details.hdi;
-        if (details.ih)
-            item.inv_height = details.ih;
-        if (details.iw)
-            item.inv_width = details.iw;
-        if (details.it)
-            item.inv_transform = details.it;
-        if (details.iq)
-            item.item_quality = details.iq;
-        if (details.c)
-            item.categories = details.c;
-        if (details.gs)
-            item.max_sockets = details.gs;
-        if (details.durability) {
-            if (item.ethereal == 0) {
-                item.current_durability = details.durability;
-                item.max_durability = details.durability;
+    if (itemTypeDef) {
+        if (itemTypeDef.n)
+            item.type_name = itemTypeDef.n;
+        if (itemTypeDef.rs)
+            item.reqstr = itemTypeDef.rs;
+        if (itemTypeDef.rd)
+            item.reqdex = itemTypeDef.rd;
+        if (itemTypeDef.i)
+            item.inv_file = itemTypeDef.i;
+        if (itemTypeDef.hdi)
+            item.hd_inv_file = itemTypeDef.hdi;
+        if (itemTypeDef.ih)
+            item.inv_height = itemTypeDef.ih;
+        if (itemTypeDef.iw)
+            item.inv_width = itemTypeDef.iw;
+        if (itemTypeDef.it)
+            item.inv_transform = itemTypeDef.it;
+        if (itemTypeDef.iq)
+            item.item_quality = itemTypeDef.iq;
+        if (itemTypeDef.c)
+            item.categories = itemTypeDef.c;
+        if (itemTypeDef.gs)
+            item.max_sockets = itemTypeDef.gs;
+        if (itemTypeDef.durability) {
+            if (!item.ethereal) {
+                item.current_durability = itemTypeDef.durability;
+                item.max_durability = itemTypeDef.durability;
             }
-            else if (item.ethereal == 1) {
-                item.current_durability = details.durability - Math.ceil(details.durability / 2) + 1;
-                item.max_durability = details.durability - Math.ceil(details.durability / 2) + 1;
+            else if (item.ethereal) {
+                item.current_durability = itemTypeDef.durability - Math.ceil(itemTypeDef.durability / 2) + 1;
+                item.max_durability = itemTypeDef.durability - Math.ceil(itemTypeDef.durability / 2) + 1;
             }
         }
-        if (details.eq2n && details.eq2n.endsWith(" Item")) {
-            // eq2n values "<Class> Item"
-            item.class_specific = 1;
-        }
-        else {
-            item.class_specific = 0;
-            item.auto_affix_id = 0;
+        if (itemTypeDef.c) {
+            let classSpecific = false;
+            if (item.quality <= types_1.EQuality.Superior) {
+                // Does any of the category is "<class> Item" ?
+                for (const cat of itemTypeDef.c) {
+                    if (cat.endsWith(' Item')) {
+                        classSpecific = true;
+                        break;
+                    }
+                }
+            }
+            // Other qualities have the bit class_specific set to false, and no auto_affix_id
+            if (classSpecific) {
+                item.class_specific = true;
+            }
+            else {
+                item.class_specific = false;
+                item.auto_affix_id = 0;
+            }
         }
         // Enforce stackable consistency
-        if (details.s) {
-            item.quantity = boundValue(item.quantity, 1, details.smax || 500);
+        if (itemTypeDef.s) {
+            item.quantity = boundValue(item.quantity, 1, itemTypeDef.smax || 500);
         }
         else {
             item.quantity = 0;
         }
         // Enforce total_nr_of_sockets between 0 and max for this item type
-        item.total_nr_of_sockets = boundValue(item.total_nr_of_sockets, 0, details.gs || 0);
+        item.total_nr_of_sockets = boundValue(item.total_nr_of_sockets, 0, itemTypeDef.gs || 0);
         // Enforce coherence between total_nr_of_sockets & socketed
-        if (item.total_nr_of_sockets > 0) {
-            item.socketed = 1;
-        }
-        else {
-            item.socketed = 0;
-        }
+        item.socketed = item.total_nr_of_sockets > 0;
         // Enforce nr_of_items_in_sockets & socketed_items inferior or equal to total_nr_of_sockets
         item.nr_of_items_in_sockets = boundValue(item.nr_of_items_in_sockets, 0, item.total_nr_of_sockets);
         item.socketed_items = (item.socketed_items || []).slice(0, item.nr_of_items_in_sockets);
         // Ensure coherence of other attributes with quality
-        item.given_runeword = item.quality <= types_1.Quality.Superior && item.nr_of_items_in_sockets && item.runeword_id ? 1 : 0;
+        item.given_runeword = item.quality <= types_1.EQuality.Superior && item.nr_of_items_in_sockets > 0 && item.runeword_id > 0;
         if (item.given_runeword) {
-            item.runeword_name = constants.runewords[item.runeword_id] ? constants.runewords[item.runeword_id].n : "";
+            item.runeword_name = constants.runewords[item.runeword_id] ? constants.runewords[item.runeword_id].n : '';
         }
         else {
-            item.given_runeword = 0;
+            item.given_runeword = false;
             item.runeword_id = 0;
-            item.runeword_name = "";
+            item.runeword_name = '';
             item.runeword_attributes = [];
         }
         // Enforce personalization validity, and coherence between personalized_name & personalized
         if (item.personalized_name && item.personalized_name.length) {
             // Check it is valid
-            var valid = utils_1.nameRegex.test(item.personalized_name);
+            const valid = utils_1.nameRegex.test(item.personalized_name);
             if (!valid) {
-                item.personalized_name = "";
-                item.personalized = 0;
+                item.personalized_name = '';
+                item.personalized = false;
             }
             else {
-                item.personalized = 1;
+                item.personalized = true;
             }
         }
         else {
-            item.personalized = 0;
+            item.personalized = false;
         }
         // Multiple_pictures: ensure coherence with base item type
-        if (details.ig && details.ig.length && !item.multiple_pictures) {
+        if (itemTypeDef.ig && itemTypeDef.ig.length && !item.multiple_pictures) {
             // Activate multiple pictures
-            item.multiple_pictures = 1;
+            item.multiple_pictures = true;
             item.picture_id = 0;
         }
-        else if (!details.ig && item.multiple_pictures) {
-            item.multiple_pictures = 0; // Type changed to a not-multiple pictures one
+        else if (!itemTypeDef.ig && item.multiple_pictures) {
+            item.multiple_pictures = false; // Type changed to a not-multiple pictures one
             item.picture_id = 0;
         }
         // Set inv_file, hd_inv_file & transform_color
-        if (item.multiple_pictures && details.ig && details.ig.length && details.ig[item.picture_id]) {
-            item.inv_file = details.ig[item.picture_id];
+        if (item.multiple_pictures && itemTypeDef.ig && itemTypeDef.ig.length && itemTypeDef.ig[item.picture_id]) {
+            item.inv_file = itemTypeDef.ig[item.picture_id];
         }
-        if (item.multiple_pictures && details.hdig && details.hdig.length && details.hdig[item.picture_id]) {
-            item.hd_inv_file = details.hdig[item.picture_id];
+        if (item.multiple_pictures && itemTypeDef.hdig && itemTypeDef.hdig.length && itemTypeDef.hdig[item.picture_id]) {
+            item.hd_inv_file = itemTypeDef.hdig[item.picture_id];
         }
         if (item.magic_prefix || item.magic_suffix) {
-            if (item.magic_prefix && ((_a = constants.magic_prefixes[item.magic_prefix]) === null || _a === void 0 ? void 0 : _a.tc)) {
+            if (item.magic_prefix && constants.magic_prefixes[item.magic_prefix]?.tc) {
                 item.transform_color = constants.magic_prefixes[item.magic_prefix].tc;
             }
-            if (item.magic_suffix && ((_b = constants.magic_suffixes[item.magic_suffix]) === null || _b === void 0 ? void 0 : _b.tc)) {
+            if (item.magic_suffix && constants.magic_suffixes[item.magic_suffix]?.tc) {
                 item.transform_color = constants.magic_suffixes[item.magic_suffix].tc;
             }
         }
-        else if (item.quality == types_1.Quality.Rare && item.magical_name_ids) {
-            for (var i = 0; i < 6; i++) {
-                var id = item.magical_name_ids[i];
+        else if (item.quality == types_1.EQuality.Rare && item.magical_name_ids) {
+            for (let i = 0; i < 6; i++) {
+                const id = item.magical_name_ids[i];
                 if (id) {
-                    if (i % 2 == 0 && constants.magic_prefixes[id] && ((_c = constants.magic_prefixes[id]) === null || _c === void 0 ? void 0 : _c.tc)) {
+                    if (i % 2 == 0 && constants.magic_prefixes[id] && constants.magic_prefixes[id]?.tc) {
                         // even is prefixes
                         item.transform_color = constants.magic_prefixes[id].tc;
                     }
-                    else if (constants.magic_suffixes[id] && ((_d = constants.magic_suffixes[id]) === null || _d === void 0 ? void 0 : _d.tc)) {
+                    else if (constants.magic_suffixes[id] && constants.magic_suffixes[id]?.tc) {
                         // odd is suffixes
                         item.transform_color = constants.magic_suffixes[id].tc;
                     }
@@ -17775,9 +17757,9 @@ function enhanceItem(item, mod, version, attributes, config, parent) {
             }
         }
         else if (item.unique_id) {
-            var unq = constants.unq_items[item.unique_id];
-            if (details.ui) {
-                item.inv_file = details.ui;
+            const unq = constants.unq_items[item.unique_id];
+            if (itemTypeDef.ui) {
+                item.inv_file = itemTypeDef.ui;
             }
             if (unq && unq.i) {
                 item.inv_file = unq.i;
@@ -17789,9 +17771,9 @@ function enhanceItem(item, mod, version, attributes, config, parent) {
                 item.transform_color = unq.tc;
         }
         else if (item.set_id) {
-            var set = constants.set_items[item.set_id];
-            if (details.ui) {
-                item.inv_file = details.ui;
+            const set = constants.set_items[item.set_id];
+            if (itemTypeDef.ui) {
+                item.inv_file = itemTypeDef.ui;
             }
             if (set && set.i) {
                 item.inv_file = set.i;
@@ -17818,47 +17800,42 @@ function enhanceItem(item, mod, version, attributes, config, parent) {
     }
 }
 exports.enhanceItem = enhanceItem;
-function _enhanceAttributeDescription(_magic_attributes, constants, attributes, config) {
-    if (attributes === void 0) { attributes = {
-        level: 1,
-        strength: 0,
-        dexterity: 0,
-        vitality: 0,
-        energy: 0,
-    }; }
+function _enhanceAttributeDescription(_magic_attributes, constants, attributes = {
+    level: 1,
+    strength: 0,
+    dexterity: 0,
+    vitality: 0,
+    energy: 0,
+}, config) {
     if (!_magic_attributes)
         return [];
     // const magic_attributes: types.IMagicProperty[] = [..._magic_attributes.map((attr) => ({ ...attr }))];
-    var magic_attributes = (0, lodash_1.cloneDeep)(_magic_attributes);
-    var groupsCount = [];
-    var groupsSize = [];
-    var groupsVal = [];
-    var _loop_1 = function (magical_attribute) {
-        var itemStatDef = constants.magical_properties[magical_attribute.id];
-        var v = magical_attribute.values[magical_attribute.values.length - 1];
+    const magic_attributes = (0, lodash_1.cloneDeep)(_magic_attributes);
+    const groupsCount = [];
+    const groupsSize = [];
+    const groupsVal = [];
+    for (const magical_attribute of magic_attributes) {
+        const itemStatDef = constants.magical_properties[magical_attribute.id];
+        const v = magical_attribute.values[magical_attribute.values.length - 1];
         if (itemStatDef.dg) {
             // Save the value of the 1st occurence (to compare with others)
             if (!groupsVal[itemStatDef.dg]) {
                 groupsVal[itemStatDef.dg] = v;
                 groupsCount[itemStatDef.dg] = 1;
-                groupsSize[itemStatDef.dg] = constants.magical_properties.filter(function (prop) { return prop && prop.dg && prop.dg == itemStatDef.dg; }).length; // Compute group size
+                groupsSize[itemStatDef.dg] = constants.magical_properties.filter((prop) => prop && prop.dg && prop.dg == itemStatDef.dg).length; // Compute group size
             }
             else if (groupsVal[itemStatDef.dg] === v) {
                 // Increment count only if values are identical
                 groupsCount[itemStatDef.dg]++;
             }
         }
-    };
-    for (var _i = 0, magic_attributes_1 = magic_attributes; _i < magic_attributes_1.length; _i++) {
-        var magical_attribute = magic_attributes_1[_i];
-        _loop_1(magical_attribute);
     }
-    var _loop_2 = function (magical_attribute) {
-        var itemStatDef = constants.magical_properties[magical_attribute.id];
+    for (const magical_attribute of magic_attributes) {
+        const itemStatDef = constants.magical_properties[magical_attribute.id];
         if (itemStatDef == null) {
-            throw new Error("Cannot find Magical Property for id: ".concat(magical_attribute.id));
+            throw new Error(`Cannot find Magical Property for id: ${magical_attribute.id}`);
         }
-        var v = magical_attribute.values[magical_attribute.values.length - 1];
+        let v = magical_attribute.values[magical_attribute.values.length - 1];
         if (itemStatDef.ob && itemStatDef.ob in attributes) {
             switch (itemStatDef.o) {
                 case 1: {
@@ -17869,7 +17846,7 @@ function _enhanceAttributeDescription(_magic_attributes, constants, attributes, 
                 case 3:
                 case 4:
                 case 5: {
-                    v = Math.floor((attributes[itemStatDef.ob] * v) / Math.pow(2, itemStatDef.op));
+                    v = Math.floor((attributes[itemStatDef.ob] * v) / 2 ** (itemStatDef.op || 0));
                     break;
                 }
                 default: {
@@ -17879,8 +17856,8 @@ function _enhanceAttributeDescription(_magic_attributes, constants, attributes, 
             magical_attribute.op_stats = itemStatDef.os;
             magical_attribute.op_value = v;
         }
-        var descFunc = itemStatDef.dF;
-        var descString = void 0;
+        let descFunc = itemStatDef.dF;
+        let descString;
         if (v >= 0) {
             if (itemStatDef.dP) {
                 descString = itemStatDef.dP;
@@ -17903,59 +17880,59 @@ function _enhanceAttributeDescription(_magic_attributes, constants, attributes, 
         if (magical_attribute.id == 39 || magical_attribute.id == 41 || magical_attribute.id == 43 || magical_attribute.id == 45) {
             descString = itemStatDef.dP;
         }
-        var descVal = itemStatDef.dV;
-        var desc2 = itemStatDef.d2;
+        let descVal = itemStatDef.dV || 0;
+        let desc2 = itemStatDef.d2 || '';
         if (itemStatDef.dg && groupsCount[itemStatDef.dg] == groupsSize[itemStatDef.dg]) {
             v = groupsVal[itemStatDef.dg];
             descString = v >= 0 ? itemStatDef.dgP : itemStatDef.dgN ? itemStatDef.dgN : itemStatDef.dgP;
-            descVal = itemStatDef.dgV;
-            descFunc = itemStatDef.dgF;
-            desc2 = itemStatDef.dg2;
+            descVal = itemStatDef.dgV || descVal;
+            descFunc = itemStatDef.dgF || descFunc;
+            desc2 = itemStatDef.dg2 || desc2;
         }
         if (itemStatDef.np) {
             //damage range or enhanced damage.
-            var count_1 = 0;
+            let count = 0;
             descString = itemStatDef.dR;
-            if (itemStatDef.s === "coldmindam") {
-                var seconds = Math.round(magical_attribute.values[2] / 25);
+            if (itemStatDef.s === 'coldmindam') {
+                const seconds = Math.round(magical_attribute.values[2] / 25);
                 magical_attribute.values[2] = seconds;
             }
-            if (itemStatDef.s === "poisonmindam") {
+            if (itemStatDef.s === 'poisonmindam') {
                 //poisonmindam see https://user.xmission.com/~trevin/DiabloIIv1.09_Magic_Properties.shtml for reference
-                var min = Math.round((magical_attribute.values[0] * magical_attribute.values[2]) / 256);
-                var max = Math.round((magical_attribute.values[1] * magical_attribute.values[2]) / 256);
-                var seconds = Math.round(magical_attribute.values[2] / 25);
+                const min = Math.round((magical_attribute.values[0] * magical_attribute.values[2]) / 256);
+                const max = Math.round((magical_attribute.values[1] * magical_attribute.values[2]) / 256);
+                const seconds = Math.round(magical_attribute.values[2] / 25);
                 magical_attribute.values = [min, max, seconds];
             }
             if (magical_attribute.values[0] === magical_attribute.values[1]) {
-                count_1++;
-                descString = itemStatDef.dE;
+                count++;
+                descString = itemStatDef.dE || 'Missing description';
                 //TODO. why???
-                if (itemStatDef.s === "item_maxdamage_percent") {
-                    descString = "+%d% ".concat(descString.replace(/}/gi, "").replace(/%\+?d%%/gi, ""));
+                if (itemStatDef.s === 'item_maxdamage_percent') {
+                    descString = `+%d% ${descString.replace(/}/gi, '').replace(/%\+?d%%/gi, '')}`;
                 }
             }
-            descString || (descString = "Missing description"); // To avoid crashs
-            magical_attribute.description = descString.replace(/%\+?d/gi, function () {
-                var v = magical_attribute.values[count_1++];
-                return v;
+            descString ||= 'Missing description'; // To avoid crashs
+            if (magical_attribute.condition)
+                descString = `[${magical_attribute.condition}] ${descString}`;
+            magical_attribute.description = descString.replace(/%\+?d/gi, () => {
+                const v = magical_attribute.values[count++];
+                return v.toString();
             });
         }
         else {
-            descString || (descString = "Missing description"); // To avoid crashs
+            descString ||= 'Missing description'; // To avoid crashs
+            if (magical_attribute.condition)
+                descString = `[${magical_attribute.condition}] ${descString}`;
             _descFunc(magical_attribute, constants, v, descFunc, descVal, descString, desc2);
         }
-    };
-    for (var _a = 0, magic_attributes_2 = magic_attributes; _a < magic_attributes_2.length; _a++) {
-        var magical_attribute = magic_attributes_2[_a];
-        _loop_2(magical_attribute);
     }
-    if (config === null || config === void 0 ? void 0 : config.sortProperties) {
+    if (config?.sortProperties) {
         //sort using sort order from game.
-        magic_attributes.sort(function (a, b) { return constants.magical_properties[b.id].so - constants.magical_properties[a.id].so; });
+        magic_attributes.sort((a, b) => constants.magical_properties[b.id].so - constants.magical_properties[a.id].so);
     }
-    for (var i = magic_attributes.length - 1; i >= 1; i--) {
-        for (var j = i - 1; j >= 0; j--) {
+    for (let i = magic_attributes.length - 1; i >= 1; i--) {
+        for (let j = i - 1; j >= 0; j--) {
             if (magic_attributes[i].description === magic_attributes[j].description) {
                 magic_attributes[j].visible = false;
             }
@@ -17963,40 +17940,47 @@ function _enhanceAttributeDescription(_magic_attributes, constants, attributes, 
     }
     return magic_attributes;
 }
-function _compactAttributes(mods, constants) {
-    var magic_attributes = [];
-    for (var _i = 0, mods_1 = mods; _i < mods_1.length; _i++) {
-        var mod = mods_1[_i];
-        var properties = constants.properties[mod.m] || [];
-        for (var i = 0; i < properties.length; i++) {
-            var propertyDef = properties[i];
-            var stat = propertyDef.s;
+function _gemModsToAttributes(mods, constants) {
+    const magic_attributes = [];
+    for (const mod of mods) {
+        const properties = constants.properties[mod.m] || [];
+        // Some properties are made of a few consecutive properties (ex min/max ED%, coldmin/max/length)
+        for (let propertyCount = 0; propertyCount < properties.length; propertyCount++) {
+            const propertyDef = properties[propertyCount];
+            let stat = propertyDef.s;
             switch (propertyDef.f) {
                 case 5: {
-                    stat = "mindamage";
+                    stat = 'mindamage';
                     break;
                 }
                 case 6: {
-                    stat = "maxdamage";
+                    stat = 'maxdamage';
                     break;
                 }
                 case 7: {
-                    stat = "item_maxdamage_percent";
+                    stat = 'item_maxdamage_percent';
                     break;
                 }
                 case 20: {
-                    stat = "item_indesctructible";
+                    stat = 'item_indesctructible';
                     break;
                 }
                 default: {
                     break;
                 }
             }
-            var id = _itemStatCostFromStat(stat, constants);
+            const id = _itemStatFromName(stat, constants);
             // const itemStatDef = constants.magical_properties[id];
             if (propertyDef.np)
-                i += propertyDef.np;
-            var v = [mod.min, mod.max];
+                propertyCount += propertyDef.np;
+            const numVal = (0, utils_1.numValues)(id, constants.magical_properties) - (mod.p ? 1 : 0);
+            let v;
+            if (mod.min == mod.max && numVal == 1) {
+                v = [mod.min]; // Ex: +1 allsk
+            }
+            else {
+                v = [mod.min, mod.max];
+            }
             if (mod.p) {
                 v.push(mod.p);
             }
@@ -18013,8 +17997,8 @@ function _descFunc(attribute, constants, v, descFunc, descVal, descString, desc2
     if (!descFunc) {
         return;
     }
-    var sign = v >= 0 ? "+" : "";
-    var value = null;
+    const sign = v >= 0 ? '+' : '';
+    let value = null;
     switch (descFunc) {
         case 1:
         // +[value] [string1]
@@ -18022,36 +18006,36 @@ function _descFunc(attribute, constants, v, descFunc, descVal, descString, desc2
         // +[value] [string1] [string2]
         case 12: {
             // +[value] [string1]
-            value = "".concat(sign).concat(v);
+            value = `${sign}${v}`;
             break;
         }
         case 2:
         // [value]% [string1]
         case 7: {
             // [value]% [string1] [string2]
-            value = "".concat(v, "%");
+            value = `${v}%`;
             break;
         }
         case 3:
         // [value] [string1]
         case 9: {
             // [value] [string1] [string2]
-            value = "".concat(v);
+            value = `${v}`;
             break;
         }
         case 4:
         // +[value]% [string1]
         case 8: {
             // +[value]% [string1] [string2]
-            value = "".concat(sign).concat(v, "%");
+            value = `${sign}${v}%`;
             break;
         }
         case 5:
         // [value*100/128]% [string1]
         case 10: {
             // [value*100/128]% [string1] [string2]
-            if (descString.indexOf("%%") < 0) {
-                value = "".concat((v * 100) / 128, "%");
+            if (descString.indexOf('%%') < 0) {
+                value = `${(v * 100) / 128}%`;
             }
             else {
                 value = (v * 100) / 128;
@@ -18065,47 +18049,47 @@ function _descFunc(attribute, constants, v, descFunc, descVal, descString, desc2
         }
         case 13: {
             // +[value] to [class] Skill Levels
-            var clazz = constants.classes[attribute.values[0]];
-            attribute.description = "".concat(sign).concat(v, " ").concat(clazz.as);
+            const clazz = constants.classes[attribute.values[0]];
+            attribute.description = `${sign}${v} ${clazz.as}`;
             break;
         }
         case 14: {
             // +[value] to [skilltab] Skill Levels ([class] Only)
-            var clazz = constants.classes[attribute.values[1]];
-            var skillTabStr = clazz.ts[attribute.values[0]];
+            const clazz = constants.classes[attribute.values[1]];
+            const skillTabStr = clazz.ts[attribute.values[0]];
             descString = _sprintf(skillTabStr, v);
-            attribute.description = "".concat(descString, " ").concat(clazz.co);
+            attribute.description = `${descString} ${clazz.co}`;
             break;
         }
         case 15: {
             // [chance]% to cast [slvl] [skill] on [event]
-            var skillId = attribute.values[1] || -1;
-            var skill = constants.skills[skillId];
-            var skillStr = "";
+            const skillId = attribute.values[1] || -1;
+            const skill = constants.skills[skillId];
+            let skillStr = '';
             if (skill) {
                 skillStr = skill.s;
                 if (skillId > 5 && !skill.c)
-                    skillStr += " (item)";
+                    skillStr += ' (item)';
             }
             else {
-                skillStr = "Unknown_Skill_".concat(skillId);
+                skillStr = `Unknown_Skill_${skillId}`;
             }
             descString = _sprintf(descString, attribute.values[2], attribute.values[0], skillStr);
-            attribute.description = "".concat(descString);
+            attribute.description = `${descString}`;
             break;
         }
         case 16: {
             // Level [sLvl] [skill] Aura When Equipped
-            var skillId = attribute.values[0] || -1;
-            var skill = constants.skills[skillId];
-            var skillStr = "";
+            const skillId = attribute.values[0] || -1;
+            const skill = constants.skills[skillId];
+            let skillStr = '';
             if (skill) {
                 skillStr = skill.s;
                 if (skillId > 5 && !skill.c)
-                    skillStr += " (item)";
+                    skillStr += ' (item)';
             }
             else {
-                skillStr = "Unknown_Skill_".concat(skillId);
+                skillStr = `Unknown_Skill_${skillId}`;
             }
             attribute.description = descString.replace(/%d/, v.toString());
             attribute.description = attribute.description.replace(/%s/, skillStr);
@@ -18113,12 +18097,12 @@ function _descFunc(attribute, constants, v, descFunc, descVal, descString, desc2
         }
         case 17: {
             // [value] [string1] (Increases near [time])
-            attribute.description = "".concat(v, " ").concat(descString, " (Increases near [time])");
+            attribute.description = `${v} ${descString} (Increases near [time])`;
             break;
         }
         case 18: {
             // [value]% [string1] (Increases near [time])
-            attribute.description = "".concat(v, "% ").concat(descString, " (Increases near [time])");
+            attribute.description = `${v}% ${descString} (Increases near [time])`;
             break;
         }
         case 19: {
@@ -18128,81 +18112,81 @@ function _descFunc(attribute, constants, v, descFunc, descVal, descString, desc2
         }
         case 20: {
             // [value * -1]% [string1]
-            value = "".concat(v * -1, "%");
+            value = `${v * -1}%`;
             break;
         }
         case 21: {
             // [value * -1] [string1]
-            value = "".concat(v * -1);
+            value = `${v * -1}`;
             break;
         }
         case 22: {
             // [value]% [string1] [montype] (warning: this is bugged in vanilla and doesn't work properly, see CE forum)
-            attribute.description = "".concat(v, "% ").concat(descString, " [montype]");
+            attribute.description = `${v}% ${descString} [montype]`;
             break;
         }
         case 23: {
             // [value]% [string1] [monster]
-            attribute.description = "".concat(v, "% ").concat(descString, " [monster]]");
+            attribute.description = `${v}% ${descString} [monster]]`;
             break;
         }
         case 24: {
             // Level [lvl] [skill] ([curr]/[max] charges)
-            var skillLevel = attribute.values[0] || 0;
-            var skillId = attribute.values[1] || -1;
-            var curCharges = attribute.values[2] || 0;
-            var maxCharges = attribute.values[3] || 0;
-            var skill = constants.skills[skillId];
-            var skillStr = "";
+            const skillLevel = attribute.values[0] || 0;
+            const skillId = attribute.values[1] || -1;
+            const curCharges = attribute.values[2] || 0;
+            const maxCharges = attribute.values[3] || 0;
+            const skill = constants.skills[skillId];
+            let skillStr = '';
             if (skill) {
                 skillStr = skill.s;
                 if (skillId > 5 && !skill.c)
-                    skillStr += " (item)";
+                    skillStr += ' (item)';
             }
             else {
-                skillStr = "Unknown_Skill_".concat(skillId);
+                skillStr = `Unknown_Skill_${skillId}`;
             }
             attribute.description = _sprintf(descString, skillLevel, skillStr, curCharges, maxCharges);
             break;
         }
         case 27: {
             // +[value] to [skill] ([class] Only)
-            var skillId = attribute.values[0] || -1;
-            var skill = constants.skills[skillId];
-            var skillStr = "";
-            var clazzStr = "";
+            const skillId = attribute.values[0] || -1;
+            const skill = constants.skills[skillId];
+            let skillStr = '';
+            let clazzStr = '';
             if (skill) {
                 skillStr = skill.s;
                 if (skillId > 5 && !skill.c)
-                    skillStr += " (item)";
-                var clazz = _classFromCode(skill.c, constants);
-                clazzStr = clazz ? clazz.co : "(Unknown_Class)";
+                    skillStr += ' (item)';
+                const clazz = _classFromCode(skill.c, constants);
+                clazzStr = clazz ? clazz.co : '(Unknown_Class)';
             }
             else {
-                skillStr = "Unknown_Skill_".concat(skillId);
+                skillStr = `Unknown_Skill_${skillId}`;
             }
             if (descString) {
                 attribute.description = _sprintf(descString, v, skillStr, clazzStr);
             }
             else {
-                attribute.description = "".concat(sign).concat(v, " to ").concat(skillStr, " ").concat(clazzStr);
+                attribute.description = `${sign}${v} to ${skillStr} ${clazzStr}`;
             }
             break;
         }
         case 28: {
             // +[value] to [skill]
-            var skillId = attribute.values[0] || -1;
-            var skill = constants.skills[skillId];
-            var skillStr = "";
+            const skillId = attribute.values[0] || -1;
+            const skill = constants.skills[skillId];
+            let skillStr = '';
             if (skill) {
                 skillStr = skill.s;
                 if (skillId > 5 && !skill.c)
-                    skillStr += " (item)";
+                    skillStr += ' (item)';
             }
             else {
-                skillStr = "Unknown_Skill_".concat(skillId);
+                skillStr = `Unknown_Skill_${skillId}`;
             }
-            attribute.description = "".concat(sign).concat(v, " to ").concat(skillStr);
+            attribute.description = `${sign}${v} to ${skillStr}`;
             break;
         }
         case 29: {
@@ -18211,7 +18195,7 @@ function _descFunc(attribute, constants, v, descFunc, descVal, descString, desc2
             break;
         }
         default: {
-            throw new Error("No handler for descFunc: ".concat(descFunc));
+            throw new Error(`No handler for descFunc: ${descFunc}`);
         }
     }
     if (value) {
@@ -18222,49 +18206,44 @@ function _descFunc(attribute, constants, v, descFunc, descVal, descString, desc2
                 break;
             }
             case 1: {
-                attribute.description = "".concat(value, " ").concat(descString);
+                attribute.description = `${value} ${descString}`;
                 break;
             }
             case 2: {
-                attribute.description = "".concat(descString, " ").concat(value);
+                attribute.description = `${descString} ${value}`;
                 break;
             }
             default: {
-                throw new Error("No handler for descVal: ".concat(descVal));
+                throw new Error(`No handler for descVal: ${descVal}`);
             }
         }
     }
     if (desc2) {
-        attribute.description += " ".concat(desc2);
+        attribute.description += ` ${desc2}`;
     }
 }
-function _sprintf(str) {
-    var args = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        args[_i - 1] = arguments[_i];
-    }
-    var i = 0;
+function _sprintf(str, ...args) {
+    let i = 0;
     return str
-        .replace(/%\+?d|%\+?s/gi, function (m) {
-        var v = args[i++].toString();
-        if (m.indexOf("+") >= 0) {
-            v = "+" + v;
+        .replace(/%\+?d|%\+?s/gi, (m) => {
+        let v = args[i++].toString();
+        if (m.indexOf('+') >= 0) {
+            v = '+' + v;
         }
         return v;
     })
-        .replace("%%", "%");
+        .replace('%%', '%');
 }
-function _itemStatCostFromStat(stat, constants) {
-    return constants.magical_properties.findIndex(function (e) { return e && e.s === stat; });
+function _itemStatFromName(stat, constants) {
+    return constants.magical_properties.findIndex((e) => e && e.s === stat);
 }
 function _classFromCode(code, constants) {
-    return constants.classes.filter(function (e) { return e.c === code; })[0];
+    return constants.classes.filter((e) => e.c === code)[0];
 }
 function _socketedAttributes(item /*, constants: types.IConstantData*/) {
-    var socketed_attributes = [];
+    let socketed_attributes = [];
     if (item.socketed_items) {
-        for (var _i = 0, _a = item.socketed_items; _i < _a.length; _i++) {
-            var i = _a[_i];
+        for (const i of item.socketed_items) {
             if (i.magic_attributes) {
                 socketed_attributes = socketed_attributes.concat((0, lodash_1.cloneDeep)(i.magic_attributes));
             }
@@ -18273,23 +18252,31 @@ function _socketedAttributes(item /*, constants: types.IConstantData*/) {
     return socketed_attributes;
 }
 function _allAttributes(item /*, constants: types.IConstantData*/) {
-    var socketed_attributes = _socketedAttributes(item /*, constants*/);
-    var magic_attributes = item.magic_attributes || [];
+    const socketed_attributes = _socketedAttributes(item /*, constants*/);
+    const magic_attributes = item.magic_attributes || [];
     //const set_attributes = item.set_attributes || [];
-    var runeword_attributes = item.runeword_attributes || [];
-    return __spreadArray(__spreadArray(__spreadArray([], (0, lodash_1.cloneDeep)(magic_attributes), true), (0, lodash_1.cloneDeep)(runeword_attributes), true), (0, lodash_1.cloneDeep)(socketed_attributes), true).filter(function (attribute) { return attribute != null; });
+    const runeword_attributes = item.runeword_attributes || [];
+    return [
+        ...(0, lodash_1.cloneDeep)(magic_attributes),
+        //...cloneDeep(JSON.stringify(set_attributes),
+        ...(0, lodash_1.cloneDeep)(runeword_attributes),
+        ...(0, lodash_1.cloneDeep)(socketed_attributes),
+    ].filter((attribute) => attribute != null);
 }
 function _groupAttributes(all_magical_attributes, constants) {
-    var combined_magical_attributes = [];
-    var _loop_3 = function (magical_attribute) {
-        var itemStatDef = constants.magical_properties[magical_attribute.id];
-        var combined_magical_attribute = combined_magical_attributes.find(function (attr) {
+    const combined_magical_attributes = [];
+    for (const magical_attribute of all_magical_attributes) {
+        const itemStatDef = constants.magical_properties[magical_attribute.id];
+        // Check in already treated attributes if there is one we can combine with
+        const combined_magical_attribute = combined_magical_attributes.find((attr) => {
             // Id must be the same
             if (attr.id !== magical_attribute.id)
                 return false;
+            if (attr.condition != magical_attribute.condition)
+                return false;
             if (itemStatDef.sP) {
                 // Param(s) & Value(s)
-                if (itemStatDef.e === 2 || itemStatDef.e === 2 || itemStatDef.dF === 14) {
+                if (itemStatDef.e === 2 || itemStatDef.e === 3 || itemStatDef.dF === 14) {
                     // e2 - "%d%% Chance to cast level %d [Skill] on [...]": to combine, skill id and level must be the same. Values = [level, skillId, chances%]
                     // e3 - "Level %d [Skill] (%d/%d Charges)": to combine, skill id and level must be the same. Values = [level, skillId, currentCharges, maxCharges]
                     // dF14 - "%+d to [Tab] Skill Levels ([Class] only)": to combine, tab & class must be the same. Values = [tabId, classId, bonusPts]
@@ -18298,7 +18285,7 @@ function _groupAttributes(all_magical_attributes, constants) {
                     if (attr.values[1] !== magical_attribute.values[1])
                         return false;
                 }
-                else if (itemStatDef.s === "state") {
+                else if (itemStatDef.s === 'state') {
                     // Identical states are merged, different ones are not combined
                     if (!(0, lodash_1.isEqual)(attr.values, magical_attribute.values))
                         return false;
@@ -18322,6 +18309,7 @@ function _groupAttributes(all_magical_attributes, constants) {
             return true;
         });
         if (combined_magical_attribute) {
+            // Let's merge into the already treated attribute
             if (itemStatDef.np) {
                 //+ Damage props. Values = [Min, Max, (Length)]
                 // Sum for Min & Max, Max for Length
@@ -18343,7 +18331,7 @@ function _groupAttributes(all_magical_attributes, constants) {
                     combined_magical_attribute.values[2] += magical_attribute.values[2];
                     combined_magical_attribute.values[3] += magical_attribute.values[3];
                 }
-                else if (itemStatDef.s === "state") {
+                else if (itemStatDef.s === 'state') {
                     // Identical states are combined with no change
                 }
                 else {
@@ -18370,12 +18358,9 @@ function _groupAttributes(all_magical_attributes, constants) {
                 id: magical_attribute.id,
                 values: magical_attribute.values,
                 name: magical_attribute.name,
+                condition: magical_attribute.condition,
             });
         }
-    };
-    for (var _i = 0, all_magical_attributes_1 = all_magical_attributes; _i < all_magical_attributes_1.length; _i++) {
-        var magical_attribute = all_magical_attributes_1[_i];
-        _loop_3(magical_attribute);
     }
     return combined_magical_attributes;
 }
@@ -18387,66 +18372,30 @@ function _groupAttributes(all_magical_attributes, constants) {
 /*!******************************!*\
   !*** ./src/d2/attributes.ts ***!
   \******************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (g && (g = 0, op[0] && (_ = 0)), _) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.writeAttributes = exports.readAttributes = void 0;
-var bitwriter_1 = __webpack_require__(/*! ../binary/bitwriter */ "./src/binary/bitwriter.ts");
-var constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
+const bitwriter_1 = __webpack_require__(/*! ../binary/bitwriter */ "./src/binary/bitwriter.ts");
+const constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
 //todo use constants.magical_properties and csvBits
 function readAttributes(char, reader, mod) {
-    var constants = (0, constants_1.getConstantData)(mod, char.header.version);
+    const constants = (0, constants_1.getConstantData)(mod, char.header.version);
     // Stats = magical_properties with "Saved" = 1.
     // There are report that only stat ids 0 to 255 can be saved. It doesn't work for stats 256-510.
-    var attributes = constants.magical_properties.filter(function (val, idx) { return val && val.c && val.cB && idx < 256; });
+    const attributes = constants.magical_properties.filter((val, idx) => val && val.c && val.cB && idx < 256);
     // Initial values
-    char.attributes = attributes.reduce(function (acc, curr) {
-        acc[curr.s] = 0; // Add the attribute with value 0
+    char.attributes = attributes.reduce((acc, curr) => {
+        acc[curr.s || `attribute_${curr.id}`] = 0; // Add the attribute with value 0
         return acc;
     }, {});
-    var header = reader.ReadString(2); //0x0000 [attributes header = 0x67, 0x66 "gf"]
-    if (header != "gf") {
+    const header = reader.ReadString(2); //0x0000 [attributes header = 0x67, 0x66 "gf"]
+    if (header != 'gf') {
         // header is not present in first save after char is created
         if (char.header.level === 1) {
-            var classData = constants.classes.find(function (c) { return c.n === char.header.class; }).a;
+            const classData = constants.classes.find((c) => c.n === char.header.class).a;
             char.attributes = {
                 strength: +classData.str,
                 energy: +classData.int,
@@ -18467,61 +18416,60 @@ function readAttributes(char, reader, mod) {
             };
             return;
         }
-        throw new Error("Attribute header 'gf' not found at position ".concat(reader.offset - 2 * 8));
+        throw new Error(`Attribute header 'gf' not found at position ${reader.offset - 2 * 8}`);
     }
     //let bitOffset = 0;
-    var id = reader.ReadUInt16(9);
+    let id = reader.ReadUInt16(9);
     //read till 0x1ff end of attributes is found
     while (id != 0x1ff) {
         // bitOffset += 9;
-        var field = constants.magical_properties[id];
-        if (field === undefined) {
-            throw new Error("Invalid attribute id: ".concat(id));
+        const charStatDef = constants.magical_properties[id];
+        if (charStatDef === undefined) {
+            throw new Error(`Invalid attribute id: ${id}`);
         }
-        var size = field.cB;
+        const size = charStatDef.cB;
         if (size === undefined) {
-            throw new Error("Missing CSV save bits for id: ".concat(id));
+            throw new Error(`Missing CSV save bits for id: ${id}`);
         }
-        char.attributes[field.s] = reader.ReadUInt32(size);
-        if (field.cVS) {
+        char.attributes[charStatDef.s || `attribute_${charStatDef.id}`] = reader.ReadUInt32(size);
+        if (charStatDef.cVS) {
             //hitpoints - maxstamina need to be bit shifted
-            char.attributes[field.s] >>>= field.cVS;
+            char.attributes[charStatDef.s || `attribute_${charStatDef.id}`] >>>= charStatDef.cVS;
         }
         // Next attribute
         // bitOffset += size;
         id = reader.ReadUInt16(9);
     }
+    const prevOffset = reader.offset;
     reader.Align();
+    const newOffset = reader.offset;
+    char.unk_after_attr = reader.bits.subarray(prevOffset, newOffset);
 }
 exports.readAttributes = readAttributes;
-function writeAttributes(char, constants) {
-    return __awaiter(this, void 0, void 0, function () {
-        var writer, charStatDefs, _i, charStatDefs_1, charStatDef, value, size;
-        return __generator(this, function (_a) {
-            writer = new bitwriter_1.BitWriter();
-            writer.WriteString("gf", 2); //0x0000 [attributes header = 0x67, 0x66 "gf"]
-            charStatDefs = constants.magical_properties.filter(function (val, idx) { return val && val.c && idx < 256; });
-            for (_i = 0, charStatDefs_1 = charStatDefs; _i < charStatDefs_1.length; _i++) {
-                charStatDef = charStatDefs_1[_i];
-                value = char.attributes[charStatDef.s];
-                if (!value) {
-                    continue; // 0 values are not saved to gain file size
-                }
-                size = charStatDef.cB;
-                if (size === undefined) {
-                    throw new Error("Missing CSV save bits for attribute: ".concat(charStatDef));
-                }
-                if (charStatDef.cVS) {
-                    value <<= charStatDef.cVS;
-                }
-                writer.WriteUInt16(charStatDef.id, 9);
-                writer.WriteUInt32(value, size);
-            }
-            writer.WriteUInt16(0x1ff, 9); // Attribute 511 is reserved for end tag
-            writer.Align();
-            return [2 /*return*/, writer.ToArray()];
-        });
-    });
+async function writeAttributes(char, constants) {
+    const writer = new bitwriter_1.BitWriter();
+    writer.WriteString('gf', 2); //0x0000 [attributes header = 0x67, 0x66 "gf"]
+    // Stats = magical_properties with "Saved" = 1.
+    // There are report that only stat ids 0 to 255 can be saved. It doesn't work for stats 256-510.
+    const charStatDefs = constants.magical_properties.filter((val, idx) => val && val.c && idx < 256);
+    for (const charStatDef of charStatDefs) {
+        let value = char.attributes[charStatDef.s || `attribute_${charStatDef.id}`];
+        if (!value) {
+            continue; // 0 values are not saved to gain file size
+        }
+        const size = charStatDef.cB;
+        if (size === undefined) {
+            throw new Error(`Missing CSV save bits for attribute: ${charStatDef}`);
+        }
+        if (charStatDef.cVS) {
+            value <<= charStatDef.cVS;
+        }
+        writer.WriteUInt16(charStatDef.id, 9);
+        writer.WriteUInt32(value, size);
+    }
+    writer.WriteUInt16(0x1ff, 9); // Attribute 511 is reserved for end tag
+    writer.Align();
+    return writer.ToArray();
 }
 exports.writeAttributes = writeAttributes;
 
@@ -18538,18 +18486,18 @@ exports.writeAttributes = writeAttributes;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.setConstantData = exports.getConstantData = void 0;
-var versionedConstants = {
+const versionedConstants = {
     vanilla: {},
     remodded: {},
 };
 function getConstantData(mod, version) {
     if (!(mod in versionedConstants)) {
-        throw new Error("No constant data found for this mod ".concat(mod, ". Supported mods are: ").concat(Object.keys(versionedConstants).join(", ")));
+        throw new Error(`No constant data found for this mod ${mod}. Supported mods are: ${Object.keys(versionedConstants).join(', ')}`);
     }
     if (!(version.toString() in versionedConstants[mod])) {
-        throw new Error("No constant data found for version ".concat(version, " of mod ").concat(mod, ". Supported versions are: ").concat(Object.keys(versionedConstants[mod]).join(", ")));
+        throw new Error(`No constant data found for version ${version} of mod ${mod}. Supported versions are: ${Object.keys(versionedConstants[mod]).join(', ')}`);
     }
-    var constants = versionedConstants[mod][version.toString()];
+    const constants = versionedConstants[mod][version.toString()];
     return constants;
 }
 exports.getConstantData = getConstantData;
@@ -18592,53 +18540,17 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (g && (g = 0, op[0] && (_ = 0)), _) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.writeItem = exports.readItem = exports.write = exports.read = exports.reader = void 0;
-var header_1 = __webpack_require__(/*! ./header */ "./src/d2/header.ts");
-var attributes_1 = __webpack_require__(/*! ./attributes */ "./src/d2/attributes.ts");
-var bitreader_1 = __webpack_require__(/*! ../binary/bitreader */ "./src/binary/bitreader.ts");
-var bitwriter_1 = __webpack_require__(/*! ../binary/bitwriter */ "./src/binary/bitwriter.ts");
-var skills_1 = __webpack_require__(/*! ./skills */ "./src/d2/skills.ts");
-var items = __importStar(__webpack_require__(/*! ./items */ "./src/d2/items.ts"));
-var constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
-var attribute_enhancer_1 = __webpack_require__(/*! ./attribute_enhancer */ "./src/d2/attribute_enhancer.ts");
-var defaultConfig = {
+const header_1 = __webpack_require__(/*! ./header */ "./src/d2/header.ts");
+const attributes_1 = __webpack_require__(/*! ./attributes */ "./src/d2/attributes.ts");
+const bitreader_1 = __webpack_require__(/*! ../binary/bitreader */ "./src/binary/bitreader.ts");
+const bitwriter_1 = __webpack_require__(/*! ../binary/bitwriter */ "./src/binary/bitwriter.ts");
+const skills_1 = __webpack_require__(/*! ./skills */ "./src/d2/skills.ts");
+const items = __importStar(__webpack_require__(/*! ./items */ "./src/d2/items.ts"));
+const constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
+const attribute_enhancer_1 = __webpack_require__(/*! ./attribute_enhancer */ "./src/d2/attribute_enhancer.ts");
+const defaultConfig = {
     extendedStash: false,
     sortProperties: true,
 };
@@ -18646,141 +18558,57 @@ function reader(buffer) {
     return new bitreader_1.BitReader(buffer);
 }
 exports.reader = reader;
-function read(buffer, mod, userConfig) {
-    return __awaiter(this, void 0, void 0, function () {
-        var char, reader, config;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    char = {};
-                    reader = new bitreader_1.BitReader(buffer);
-                    config = Object.assign(defaultConfig, userConfig);
-                    return [4 /*yield*/, (0, header_1.readHeader)(char, reader)];
-                case 1:
-                    _a.sent();
-                    //could load constants based on version here
-                    return [4 /*yield*/, (0, header_1.readHeaderData)(char, reader, mod)];
-                case 2:
-                    //could load constants based on version here
-                    _a.sent();
-                    return [4 /*yield*/, (0, attributes_1.readAttributes)(char, reader, mod)];
-                case 3:
-                    _a.sent();
-                    return [4 /*yield*/, (0, skills_1.readSkills)(char, reader, mod)];
-                case 4:
-                    _a.sent();
-                    return [4 /*yield*/, items.readCharItems(char, reader, mod, config)];
-                case 5:
-                    _a.sent();
-                    return [4 /*yield*/, items.readCorpseItems(char, reader, mod, config)];
-                case 6:
-                    _a.sent();
-                    if (!char.header.status.expansion) return [3 /*break*/, 9];
-                    return [4 /*yield*/, items.readMercItems(char, reader, mod, config)];
-                case 7:
-                    _a.sent();
-                    return [4 /*yield*/, items.readGolemItems(char, reader, mod, config)];
-                case 8:
-                    _a.sent();
-                    _a.label = 9;
-                case 9: return [4 /*yield*/, (0, attribute_enhancer_1.enhanceAttributes)(char, mod, char.header.version, config)];
-                case 10:
-                    _a.sent();
-                    return [2 /*return*/, char];
-            }
-        });
-    });
+async function read(buffer, mod, userConfig) {
+    const char = {};
+    const reader = new bitreader_1.BitReader(buffer);
+    const config = Object.assign(defaultConfig, userConfig);
+    await (0, header_1.readHeader)(char, reader);
+    //could load constants based on version here
+    await (0, header_1.readHeaderData)(char, reader, mod);
+    await (0, attributes_1.readAttributes)(char, reader, mod);
+    await (0, skills_1.readSkills)(char, reader, mod);
+    await items.readCharItems(char, reader, mod, config);
+    await items.readCorpseItems(char, reader, mod, config);
+    if (char.header.status.expansion) {
+        await items.readMercItems(char, reader, mod, config);
+        await items.readGolemItems(char, reader, mod, config);
+    }
+    await (0, attribute_enhancer_1.enhanceAttributes)(char, mod, char.header.version, config);
+    return char;
 }
 exports.read = read;
-function readItem(buffer, mod, version, userConfig) {
-    return __awaiter(this, void 0, void 0, function () {
-        var reader, config, item;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    reader = new bitreader_1.BitReader(buffer);
-                    config = Object.assign(defaultConfig, userConfig);
-                    return [4 /*yield*/, items.readItem(reader, mod, version, config)];
-                case 1:
-                    item = _a.sent();
-                    return [4 /*yield*/, (0, attribute_enhancer_1.enhanceItems)([item], mod, version)];
-                case 2:
-                    _a.sent();
-                    return [2 /*return*/, item];
-            }
-        });
-    });
+async function readItem(buffer, mod, version, userConfig) {
+    const reader = new bitreader_1.BitReader(buffer);
+    const config = Object.assign(defaultConfig, userConfig);
+    const item = await items.readItem(reader, mod, version, config);
+    await (0, attribute_enhancer_1.enhanceItems)([item], mod, version);
+    return item;
 }
 exports.readItem = readItem;
-function write(data, mod, version, userConfig) {
-    return __awaiter(this, void 0, void 0, function () {
-        var config, writer, _a, _b, constants, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r;
-        return __generator(this, function (_s) {
-            switch (_s.label) {
-                case 0:
-                    config = Object.assign(defaultConfig, userConfig);
-                    writer = new bitwriter_1.BitWriter();
-                    data.header.version = version;
-                    _b = (_a = writer).WriteArray;
-                    return [4 /*yield*/, (0, header_1.writeHeader)(data)];
-                case 1:
-                    _b.apply(_a, [_s.sent()]);
-                    constants = (0, constants_1.getConstantData)(mod, data.header.version);
-                    _d = (_c = writer).WriteArray;
-                    return [4 /*yield*/, (0, header_1.writeHeaderData)(data, constants)];
-                case 2:
-                    _d.apply(_c, [_s.sent()]);
-                    _f = (_e = writer).WriteArray;
-                    return [4 /*yield*/, (0, attributes_1.writeAttributes)(data, constants)];
-                case 3:
-                    _f.apply(_e, [_s.sent()]);
-                    _h = (_g = writer).WriteArray;
-                    return [4 /*yield*/, (0, skills_1.writeSkills)(data)];
-                case 4:
-                    _h.apply(_g, [_s.sent()]);
-                    _k = (_j = writer).WriteArray;
-                    return [4 /*yield*/, items.writeCharItems(data, mod, version, config)];
-                case 5:
-                    _k.apply(_j, [_s.sent()]);
-                    _m = (_l = writer).WriteArray;
-                    return [4 /*yield*/, items.writeCorpseItem(data, mod, version, config)];
-                case 6:
-                    _m.apply(_l, [_s.sent()]);
-                    if (!data.header.status.expansion) return [3 /*break*/, 9];
-                    _p = (_o = writer).WriteArray;
-                    return [4 /*yield*/, items.writeMercItems(data, mod, version, config)];
-                case 7:
-                    _p.apply(_o, [_s.sent()]);
-                    _r = (_q = writer).WriteArray;
-                    return [4 /*yield*/, items.writeGolemItems(data, mod, version, config)];
-                case 8:
-                    _r.apply(_q, [_s.sent()]);
-                    _s.label = 9;
-                case 9: return [4 /*yield*/, (0, header_1.fixHeader)(writer)];
-                case 10:
-                    _s.sent();
-                    return [2 /*return*/, writer.ToArray()];
-            }
-        });
-    });
+async function write(data, mod, version, userConfig) {
+    const config = Object.assign(defaultConfig, userConfig);
+    const writer = new bitwriter_1.BitWriter();
+    data.header.version = version;
+    writer.WriteArray(await (0, header_1.writeHeader)(data));
+    const constants = (0, constants_1.getConstantData)(mod, data.header.version);
+    writer.WriteArray(await (0, header_1.writeHeaderData)(data, constants));
+    writer.WriteArray(await (0, attributes_1.writeAttributes)(data, constants));
+    writer.WriteArray(await (0, skills_1.writeSkills)(data));
+    writer.WriteArray(await items.writeCharItems(data, mod, version, config));
+    writer.WriteArray(await items.writeCorpseItem(data, mod, version, config));
+    if (data.header.status.expansion) {
+        writer.WriteArray(await items.writeMercItems(data, mod, version, config));
+        writer.WriteArray(await items.writeGolemItems(data, mod, version, config));
+    }
+    await (0, header_1.fixHeader)(writer);
+    return writer.ToArray();
 }
 exports.write = write;
-function writeItem(item, mod, version, userConfig) {
-    return __awaiter(this, void 0, void 0, function () {
-        var config, writer, _a, _b;
-        return __generator(this, function (_c) {
-            switch (_c.label) {
-                case 0:
-                    config = Object.assign(defaultConfig, userConfig);
-                    writer = new bitwriter_1.BitWriter();
-                    _b = (_a = writer).WriteArray;
-                    return [4 /*yield*/, items.writeItem(item, mod, version, config)];
-                case 1:
-                    _b.apply(_a, [_c.sent()]);
-                    return [2 /*return*/, writer.ToArray()];
-            }
-        });
-    });
+async function writeItem(item, mod, version, userConfig) {
+    const config = Object.assign(defaultConfig, userConfig);
+    const writer = new bitwriter_1.BitWriter();
+    writer.WriteArray(await items.writeItem(item, mod, version, config));
+    return writer.ToArray();
 }
 exports.writeItem = writeItem;
 
@@ -18818,135 +18646,63 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (g && (g = 0, op[0] && (_ = 0)), _) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.fixHeader = exports.writeHeaderData = exports.writeHeader = exports.readHeaderData = exports.readHeader = void 0;
-var bitwriter_1 = __webpack_require__(/*! ../binary/bitwriter */ "./src/binary/bitwriter.ts");
-var constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
-function readHeader(char, reader) {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            char.header = {};
-            //0x0000
-            char.header.identifier = reader.ReadUInt32().toString(16).padStart(8, "0");
-            if (char.header.identifier != "aa55aa55") {
-                throw new Error("D2S identifier 'aa55aa55' not found at position ".concat(reader.offset - 4 * 8));
-            }
-            //0x0004
-            char.header.version = reader.ReadUInt32();
-            return [2 /*return*/];
-        });
-    });
+const bitwriter_1 = __webpack_require__(/*! ../binary/bitwriter */ "./src/binary/bitwriter.ts");
+const constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
+const default_header = __importStar(__webpack_require__(/*! ./versions/default_header */ "./src/d2/versions/default_header.ts"));
+async function readHeader(char, reader) {
+    char.header = {};
+    //0x0000
+    char.header.identifier = reader.ReadUInt32().toString(16).padStart(8, '0');
+    if (char.header.identifier != 'aa55aa55') {
+        throw new Error(`D2S identifier 'aa55aa55' not found at position ${reader.offset - 4 * 8}`);
+    }
+    //0x0004
+    char.header.version = reader.ReadUInt32();
 }
 exports.readHeader = readHeader;
-function readHeaderData(char, reader, mod) {
-    return __awaiter(this, void 0, void 0, function () {
-        var constants, v;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    constants = (0, constants_1.getConstantData)(mod, char.header.version);
-                    return [4 /*yield*/, _versionSpecificHeader(char.header.version)];
-                case 1:
-                    v = _a.sent();
-                    if (v == null) {
-                        throw new Error("Cannot parse version: ".concat(char.header.version));
-                    }
-                    v.readHeader(char, reader, constants);
-                    return [2 /*return*/];
-            }
-        });
-    });
+async function readHeaderData(char, reader, mod) {
+    const constants = (0, constants_1.getConstantData)(mod, char.header.version);
+    const v = _versionSpecificHeader(char.header.version);
+    if (v == null) {
+        throw new Error(`Cannot parse version: ${char.header.version}`);
+    }
+    v.readHeader(char, reader, constants);
 }
 exports.readHeaderData = readHeaderData;
-function writeHeader(char) {
-    return __awaiter(this, void 0, void 0, function () {
-        var writer;
-        return __generator(this, function (_a) {
-            writer = new bitwriter_1.BitWriter();
-            writer.WriteUInt32(parseInt(char.header.identifier, 16)).WriteUInt32(char.header.version);
-            return [2 /*return*/, writer.ToArray()];
-        });
-    });
+async function writeHeader(char) {
+    const writer = new bitwriter_1.BitWriter();
+    writer.WriteUInt32(parseInt(char.header.identifier, 16)).WriteUInt32(char.header.version);
+    return writer.ToArray();
 }
 exports.writeHeader = writeHeader;
-function writeHeaderData(char, constants) {
-    return __awaiter(this, void 0, void 0, function () {
-        var writer, v;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    writer = new bitwriter_1.BitWriter();
-                    return [4 /*yield*/, _versionSpecificHeader(char.header.version)];
-                case 1:
-                    v = _a.sent();
-                    if (v == null) {
-                        throw new Error("Cannot parse version: ".concat(char.header.version));
-                    }
-                    v.writeHeader(char, writer, constants);
-                    return [2 /*return*/, writer.ToArray()];
-            }
-        });
-    });
+async function writeHeaderData(char, constants) {
+    const writer = new bitwriter_1.BitWriter();
+    const v = _versionSpecificHeader(char.header.version);
+    if (v == null) {
+        throw new Error(`Cannot parse version: ${char.header.version}`);
+    }
+    v.writeHeader(char, writer, constants);
+    return writer.ToArray();
 }
 exports.writeHeaderData = writeHeaderData;
-function fixHeader(writer) {
-    return __awaiter(this, void 0, void 0, function () {
-        var checksum, eof, i, byte;
-        return __generator(this, function (_a) {
-            checksum = 0;
-            eof = writer.length / 8;
-            writer.SeekByte(0x0008).WriteUInt32(eof);
-            writer.SeekByte(0x000c).WriteUInt32(0);
-            for (i = 0; i < eof; i++) {
-                byte = writer.SeekByte(i).PeekBytes(1)[0];
-                if (checksum & 0x80000000) {
-                    byte += 1;
-                }
-                checksum = byte + checksum * 2;
-                //hack make it a uint32
-                checksum >>>= 0;
-            }
-            //checksum pos
-            writer.SeekByte(0x000c).WriteUInt32(checksum);
-            return [2 /*return*/];
-        });
-    });
+async function fixHeader(writer) {
+    let checksum = 0;
+    const eof = writer.length / 8;
+    writer.SeekByte(0x0008).WriteUInt32(eof);
+    writer.SeekByte(0x000c).WriteUInt32(0);
+    for (let i = 0; i < eof; i++) {
+        let byte = writer.SeekByte(i).PeekBytes(1)[0];
+        if (checksum & 0x80000000) {
+            byte += 1;
+        }
+        checksum = byte + checksum * 2;
+        //hack make it a uint32
+        checksum >>>= 0;
+    }
+    //checksum pos
+    writer.SeekByte(0x000c).WriteUInt32(checksum);
 }
 exports.fixHeader = fixHeader;
 /**
@@ -18958,23 +18714,14 @@ exports.fixHeader = fixHeader;
  * 0x62, 0x0, 0x0, 0x0 = 1.2 = version
  * */
 function _versionSpecificHeader(version) {
-    return __awaiter(this, void 0, void 0, function () {
-        var _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
-                    _a = version;
-                    switch (_a) {
-                        case 0x60: return [3 /*break*/, 1];
-                    }
-                    return [3 /*break*/, 3];
-                case 1: return [4 /*yield*/, Promise.resolve().then(function () { return __importStar(__webpack_require__(/*! ./versions/default_header */ "./src/d2/versions/default_header.ts")); })];
-                case 2: return [2 /*return*/, _b.sent()];
-                case 3: return [4 /*yield*/, Promise.resolve().then(function () { return __importStar(__webpack_require__(/*! ./versions/default_header */ "./src/d2/versions/default_header.ts")); })];
-                case 4: return [2 /*return*/, _b.sent()];
-            }
-        });
-    });
+    switch (version) {
+        case 0x60: {
+            return default_header;
+        }
+        default: {
+            return default_header;
+        }
+    }
 }
 
 
@@ -19015,7 +18762,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.types = exports.setConstantData = exports.getConstantData = exports.enhancePlayerAttributes = exports.enhanceItems = exports.enhanceAttributes = exports.writeSkills = exports.readSkills = exports.writeAttributes = exports.readAttributes = exports.newItem = exports.fixHeader = exports.writeHeaderData = exports.writeHeader = exports.readHeaderData = exports.readHeader = void 0;
+exports.utils = exports.types = exports.setConstantData = exports.getConstantData = exports.enhancePlayerAttributes = exports.enhanceItems = exports.enhanceItem = exports.enhanceAttributes = exports.writeSkills = exports.readSkills = exports.writeAttributes = exports.readAttributes = exports.newItem = exports.fixHeader = exports.writeHeaderData = exports.writeHeader = exports.readHeaderData = exports.readHeader = void 0;
 __exportStar(__webpack_require__(/*! ./d2s */ "./src/d2/d2s.ts"), exports);
 var header_1 = __webpack_require__(/*! ./header */ "./src/d2/header.ts");
 Object.defineProperty(exports, "readHeader", ({ enumerable: true, get: function () { return header_1.readHeader; } }));
@@ -19033,13 +18780,14 @@ Object.defineProperty(exports, "readSkills", ({ enumerable: true, get: function 
 Object.defineProperty(exports, "writeSkills", ({ enumerable: true, get: function () { return skills_1.writeSkills; } }));
 var attribute_enhancer_1 = __webpack_require__(/*! ./attribute_enhancer */ "./src/d2/attribute_enhancer.ts");
 Object.defineProperty(exports, "enhanceAttributes", ({ enumerable: true, get: function () { return attribute_enhancer_1.enhanceAttributes; } }));
+Object.defineProperty(exports, "enhanceItem", ({ enumerable: true, get: function () { return attribute_enhancer_1.enhanceItem; } }));
 Object.defineProperty(exports, "enhanceItems", ({ enumerable: true, get: function () { return attribute_enhancer_1.enhanceItems; } }));
 Object.defineProperty(exports, "enhancePlayerAttributes", ({ enumerable: true, get: function () { return attribute_enhancer_1.enhancePlayerAttributes; } }));
 var constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
 Object.defineProperty(exports, "getConstantData", ({ enumerable: true, get: function () { return constants_1.getConstantData; } }));
 Object.defineProperty(exports, "setConstantData", ({ enumerable: true, get: function () { return constants_1.setConstantData; } }));
 exports.types = __importStar(__webpack_require__(/*! ./types */ "./src/d2/types.ts"));
-__exportStar(__webpack_require__(/*! ./utils */ "./src/d2/utils.ts"), exports);
+exports.utils = __importStar(__webpack_require__(/*! ./utils */ "./src/d2/utils.ts"));
 
 
 /***/ }),
@@ -19052,52 +18800,41 @@ __exportStar(__webpack_require__(/*! ./utils */ "./src/d2/utils.ts"), exports);
 
 "use strict";
 
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (g && (g = 0, op[0] && (_ = 0)), _) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
     }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports._writeMagicAttributes = exports._readMagicAttributes = exports.writeItem = exports.readItem = exports.writeItems = exports.readItems = exports.writeCorpseItem = exports.readCorpseItems = exports.writeGolemItems = exports.readGolemItems = exports.writeMercItems = exports.readMercItems = exports.writeCharItems = exports.readCharItems = exports.newItem = void 0;
-var bitreader_1 = __webpack_require__(/*! ../binary/bitreader */ "./src/binary/bitreader.ts");
-var bitwriter_1 = __webpack_require__(/*! ../binary/bitwriter */ "./src/binary/bitwriter.ts");
-var constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
-var types_1 = __webpack_require__(/*! ./types */ "./src/d2/types.ts");
+const types = __importStar(__webpack_require__(/*! ./types */ "./src/d2/types.ts"));
+const bitreader_1 = __webpack_require__(/*! ../binary/bitreader */ "./src/binary/bitreader.ts");
+const bitwriter_1 = __webpack_require__(/*! ../binary/bitwriter */ "./src/binary/bitwriter.ts");
+const constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
+const types_1 = __webpack_require__(/*! ./types */ "./src/d2/types.ts");
+const utils_1 = __webpack_require__(/*! ./utils */ "./src/d2/utils.ts");
 // Right now I'm missing characters (case sensitive) E, F, I, J, L, M, Q, U, X.
 // prettier-ignore
 //huffman tree
-var HUFFMAN = [
+const HUFFMAN = [
     /*0*/ [
         /*00*/ [
             /*000*/ [
@@ -19647,7 +19384,7 @@ var HUFFMAN = [
     ]
 ];
 // prettier-ignore
-var HUFFMAN_LOOKUP = {
+const HUFFMAN_LOOKUP = {
     "0": { "v": 223, "l": 8 }, /*11011111*/
     "1": { "v": 31, "l": 7 }, /*0011111*/
     "2": { "v": 12, "l": 6 }, /*001100*/
@@ -19715,41 +19452,41 @@ var HUFFMAN_LOOKUP = {
 function newItem() {
     return {
         // Default values
-        identified: 0,
-        socketed: 0,
+        identified: false,
+        socketed: false,
         max_sockets: 0,
-        new: 0,
-        is_ear: 0,
-        starter_item: 0,
-        simple_item: 0,
-        ethereal: 0,
-        personalized: 0,
-        personalized_name: "",
-        given_runeword: 0,
-        version: "101",
+        new: false,
+        is_ear: false,
+        starter_item: false,
+        simple_item: false,
+        ethereal: false,
+        personalized: false,
+        personalized_name: '',
+        given_runeword: false,
+        version: '101',
         location_id: 0,
         equipped_id: 0,
         position_x: 0,
         position_y: 0,
-        alt_position_id: 0,
-        type: "",
-        type_id: 0,
-        type_name: "",
+        alt_position_id: types.EAltPositionId.Inventory,
+        type: '',
+        type_id: types.ETypeId.Other,
+        type_name: '',
         quest_difficulty: 0,
         nr_of_items_in_sockets: 0,
         id: 0,
         level: 0,
-        quality: 0,
-        multiple_pictures: 0,
+        quality: types.EQuality.Normal,
+        multiple_pictures: false,
         picture_id: 0,
-        class_specific: 0,
+        class_specific: false,
         low_quality_id: 0,
         timestamp: 0, // 1 for returned body piece, 0 otherwise
         time: 0, // for body pieces
         ear_attributes: {
             class: 0,
             level: 0,
-            name: "",
+            name: '',
         },
         defense_rating: 0,
         max_durability: 0,
@@ -19759,19 +19496,19 @@ function newItem() {
         magic_prefix: 0,
         magic_suffix: 0,
         runeword_id: 0,
-        runeword_name: "",
+        runeword_name: '',
         runeword_attributes: [],
         set_id: 0,
-        set_name: "",
+        set_name: '',
         set_list_count: 0,
         set_attributes: [],
         set_attributes_num_req: 0,
         set_attributes_ids_req: 0,
-        rare_name: "",
-        rare_name2: "",
+        rare_name: '',
+        rare_name2: '',
         magical_name_ids: [0, 0, 0, 0, 0, 0],
         unique_id: 0,
-        unique_name: "",
+        unique_name: '',
         magic_attributes: [],
         combined_magic_attributes: [],
         socketed_items: [],
@@ -19786,10 +19523,10 @@ function newItem() {
         reqdex: 0,
         inv_width: 0,
         inv_height: 0,
-        inv_file: "",
-        hd_inv_file: "",
+        inv_file: '',
+        hd_inv_file: '',
         inv_transform: 0,
-        transform_color: "",
+        transform_color: '',
         item_quality: 0,
         categories: [],
         file_index: 0,
@@ -19804,590 +19541,430 @@ function newItem() {
     };
 }
 exports.newItem = newItem;
-function readCharItems(char, reader, mod, config) {
-    return __awaiter(this, void 0, void 0, function () {
-        var _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
-                    _a = char;
-                    return [4 /*yield*/, readItems(reader, mod, char.header.version, config, char)];
-                case 1:
-                    _a.items = _b.sent();
-                    return [2 /*return*/];
-            }
-        });
-    });
+async function readCharItems(char, reader, mod, config) {
+    char.items = await readItems(reader, mod, char.header.version, config, char);
 }
 exports.readCharItems = readCharItems;
-function writeCharItems(char, mod, version, config) {
-    return __awaiter(this, void 0, void 0, function () {
-        var writer, _a, _b;
-        return __generator(this, function (_c) {
-            switch (_c.label) {
-                case 0:
-                    writer = new bitwriter_1.BitWriter();
-                    _b = (_a = writer).WriteArray;
-                    return [4 /*yield*/, writeItems(char.items, mod, version, config)];
-                case 1:
-                    _b.apply(_a, [_c.sent()]);
-                    return [2 /*return*/, writer.ToArray()];
-            }
-        });
-    });
+async function writeCharItems(char, mod, version, config) {
+    const writer = new bitwriter_1.BitWriter();
+    writer.WriteArray(await writeItems(char.items, mod, version, config));
+    return writer.ToArray();
 }
 exports.writeCharItems = writeCharItems;
-function readMercItems(char, reader, mod, config) {
-    return __awaiter(this, void 0, void 0, function () {
-        var header, _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
-                    char.merc_items = [];
-                    header = reader.ReadString(2);
-                    if (header !== "jf") {
-                        // header is not present in first save after char is created
-                        if ((char === null || char === void 0 ? void 0 : char.header.level) === 1) {
-                            return [2 /*return*/];
-                        }
-                        throw new Error("Mercenary header 'jf' not found at position ".concat(reader.offset - 2 * 8));
-                    }
-                    if (!(char.header.merc_id && parseInt(char.header.merc_id, 16) !== 0)) return [3 /*break*/, 2];
-                    _a = char;
-                    return [4 /*yield*/, readItems(reader, mod, char.header.version, config, char)];
-                case 1:
-                    _a.merc_items = _b.sent();
-                    _b.label = 2;
-                case 2: return [2 /*return*/];
-            }
-        });
-    });
+async function readMercItems(char, reader, mod, config) {
+    char.merc_items = [];
+    const header = reader.ReadString(2); //0x0000 [merc item list header = "jf"]
+    if (header !== 'jf') {
+        // header is not present in first save after char is created
+        if (char?.header.level === 1) {
+            return;
+        }
+        throw new Error(`Mercenary header 'jf' not found at position ${reader.offset - 2 * 8}`);
+    }
+    if (char.header.merc_id && parseInt(char.header.merc_id, 16) !== 0) {
+        char.merc_items = await readItems(reader, mod, char.header.version, config, char);
+    }
 }
 exports.readMercItems = readMercItems;
-function writeMercItems(char, mod, version, config) {
-    return __awaiter(this, void 0, void 0, function () {
-        var writer, _a, _b;
-        return __generator(this, function (_c) {
-            switch (_c.label) {
-                case 0:
-                    writer = new bitwriter_1.BitWriter();
-                    writer.WriteString("jf", 2);
-                    if (!(char.header.merc_id && parseInt(char.header.merc_id, 16) !== 0)) return [3 /*break*/, 2];
-                    char.merc_items = char.merc_items || [];
-                    _b = (_a = writer).WriteArray;
-                    return [4 /*yield*/, writeItems(char.merc_items, mod, version, config)];
-                case 1:
-                    _b.apply(_a, [_c.sent()]);
-                    _c.label = 2;
-                case 2: return [2 /*return*/, writer.ToArray()];
-            }
-        });
-    });
+async function writeMercItems(char, mod, version, config) {
+    const writer = new bitwriter_1.BitWriter();
+    writer.WriteString('jf', 2);
+    if (char.header.merc_id && parseInt(char.header.merc_id, 16) !== 0) {
+        char.merc_items = char.merc_items || [];
+        writer.WriteArray(await writeItems(char.merc_items, mod, version, config));
+    }
+    return writer.ToArray();
 }
 exports.writeMercItems = writeMercItems;
-function readGolemItems(char, reader, mod, config) {
-    return __awaiter(this, void 0, void 0, function () {
-        var header, has_golem, _a;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
-                    header = reader.ReadString(2);
-                    if (header !== "kf") {
-                        // header is not present in first save after char is created
-                        if ((char === null || char === void 0 ? void 0 : char.header.level) === 1) {
-                            return [2 /*return*/];
-                        }
-                        throw new Error("Golem header 'kf' not found at position ".concat(reader.offset - 2 * 8));
-                    }
-                    has_golem = reader.ReadUInt8();
-                    if (!(has_golem === 1)) return [3 /*break*/, 2];
-                    _a = char;
-                    return [4 /*yield*/, readItem(reader, mod, char.header.version, config)];
-                case 1:
-                    _a.golem_item = _b.sent();
-                    _b.label = 2;
-                case 2: return [2 /*return*/];
-            }
-        });
-    });
+async function readGolemItems(char, reader, mod, config) {
+    const header = reader.ReadString(2); //0x0000 [golem item list header = "kf"]
+    if (header !== 'kf') {
+        // header is not present in first save after char is created
+        if (char?.header.level === 1) {
+            return;
+        }
+        throw new Error(`Golem header 'kf' not found at position ${reader.offset - 2 * 8}`);
+    }
+    const has_golem = reader.ReadUInt8();
+    if (has_golem === 1) {
+        char.golem_item = await readItem(reader, mod, char.header.version, config);
+    }
 }
 exports.readGolemItems = readGolemItems;
-function writeGolemItems(char, mod, version, config) {
-    return __awaiter(this, void 0, void 0, function () {
-        var writer, _a, _b;
-        return __generator(this, function (_c) {
-            switch (_c.label) {
-                case 0:
-                    writer = new bitwriter_1.BitWriter();
-                    writer.WriteString("kf", 2);
-                    if (!char.golem_item) return [3 /*break*/, 2];
-                    writer.WriteUInt8(1);
-                    _b = (_a = writer).WriteArray;
-                    return [4 /*yield*/, writeItem(char.golem_item, mod, version, config)];
-                case 1:
-                    _b.apply(_a, [_c.sent()]);
-                    return [3 /*break*/, 3];
-                case 2:
-                    writer.WriteUInt8(0);
-                    _c.label = 3;
-                case 3: return [2 /*return*/, writer.ToArray()];
-            }
-        });
-    });
+async function writeGolemItems(char, mod, version, config) {
+    const writer = new bitwriter_1.BitWriter();
+    writer.WriteString('kf', 2);
+    if (char.golem_item) {
+        writer.WriteUInt8(1);
+        writer.WriteArray(await writeItem(char.golem_item, mod, version, config));
+    }
+    else {
+        writer.WriteUInt8(0);
+    }
+    return writer.ToArray();
 }
 exports.writeGolemItems = writeGolemItems;
-function readCorpseItems(char, reader, mod, config) {
-    return __awaiter(this, void 0, void 0, function () {
-        var header, i, _a, _b, _c;
-        return __generator(this, function (_d) {
-            switch (_d.label) {
-                case 0:
-                    char.corpse_items = [];
-                    header = reader.ReadString(2);
-                    if (header !== "JM") {
-                        // header is not present in first save after char is created
-                        if (char.header.level === 1) {
-                            char.is_dead = 0;
-                            return [2 /*return*/];
-                        }
-                        throw new Error("Corpse header 'JM' not found at position ".concat(reader.offset - 2 * 8));
-                    }
-                    char.is_dead = reader.ReadUInt16(); //0x0002 [corpse count]
-                    i = 0;
-                    _d.label = 1;
-                case 1:
-                    if (!(i < char.is_dead)) return [3 /*break*/, 4];
-                    reader.SkipBytes(12); //0x0004 [b4_entered_area, x_pos, y_pos]
-                    _a = char;
-                    _c = (_b = char.corpse_items).concat;
-                    return [4 /*yield*/, readItems(reader, mod, char.header.version, config, char)];
-                case 2:
-                    _a.corpse_items = _c.apply(_b, [_d.sent()]);
-                    _d.label = 3;
-                case 3:
-                    i++;
-                    return [3 /*break*/, 1];
-                case 4: return [2 /*return*/];
-            }
-        });
-    });
+async function readCorpseItems(char, reader, mod, config) {
+    char.corpse_items = [];
+    const header = reader.ReadString(2); //0x0000 [item list header = 0x4a, 0x4d "JM"]
+    if (header !== 'JM') {
+        // header is not present in first save after char is created
+        if (char.header.level === 1) {
+            char.is_dead = 0;
+            return;
+        }
+        throw new Error(`Corpse header 'JM' not found at position ${reader.offset - 2 * 8}`);
+    }
+    char.is_dead = reader.ReadUInt16(); //0x0002 [corpse count]
+    for (let i = 0; i < char.is_dead; i++) {
+        char.corpse_unk004 = reader.ReadArray(12);
+        // reader.SkipBytes(12); //0x0004 [b4_entered_area, x_pos, y_pos]
+        char.corpse_items = char.corpse_items.concat(await readItems(reader, mod, char.header.version, config, char));
+    }
 }
 exports.readCorpseItems = readCorpseItems;
-function writeCorpseItem(char, mod, version, config) {
-    return __awaiter(this, void 0, void 0, function () {
-        var writer, _a, _b;
-        return __generator(this, function (_c) {
-            switch (_c.label) {
-                case 0:
-                    writer = new bitwriter_1.BitWriter();
-                    writer.WriteString("JM", 2);
-                    writer.WriteUInt16(char.is_dead);
-                    if (!char.is_dead) return [3 /*break*/, 2];
-                    writer.WriteArray(new Uint8Array(12));
-                    char.corpse_items = char.corpse_items || [];
-                    _b = (_a = writer).WriteArray;
-                    return [4 /*yield*/, writeItems(char.corpse_items, mod, version, config)];
-                case 1:
-                    _b.apply(_a, [_c.sent()]);
-                    _c.label = 2;
-                case 2: return [2 /*return*/, writer.ToArray()];
-            }
-        });
-    });
+async function writeCorpseItem(char, mod, version, config) {
+    const writer = new bitwriter_1.BitWriter();
+    writer.WriteString('JM', 2);
+    writer.WriteUInt16(char.is_dead);
+    //json struct doesnt support multiple corpses without modifying it
+    if (char.is_dead) {
+        writer.WriteArray(new Uint8Array(12));
+        char.corpse_items = char.corpse_items || [];
+        writer.WriteArray(await writeItems(char.corpse_items, mod, version, config));
+    }
+    return writer.ToArray();
 }
 exports.writeCorpseItem = writeCorpseItem;
-function readItems(reader, mod, version, config, char) {
-    return __awaiter(this, void 0, void 0, function () {
-        var items, header, count, i, _a, _b;
-        return __generator(this, function (_c) {
-            switch (_c.label) {
-                case 0:
-                    items = [];
-                    header = reader.ReadString(2);
-                    if (header !== "JM") {
-                        // header is not present in first save after char is created
-                        if ((char === null || char === void 0 ? void 0 : char.header.level) === 1) {
-                            return [2 /*return*/, []]; // TODO: return starter items based on class
-                        }
-                        throw new Error("Item list header 'JM' not found at position ".concat(reader.offset - 2 * 8));
-                    }
-                    count = reader.ReadUInt16();
-                    i = 0;
-                    _c.label = 1;
-                case 1:
-                    if (!(i < count)) return [3 /*break*/, 4];
-                    _b = (_a = items).push;
-                    return [4 /*yield*/, readItem(reader, mod, version, config)];
-                case 2:
-                    _b.apply(_a, [_c.sent()]);
-                    _c.label = 3;
-                case 3:
-                    i++;
-                    return [3 /*break*/, 1];
-                case 4: return [2 /*return*/, items];
-            }
-        });
-    });
+async function readItems(reader, mod, version, config, char) {
+    const items = [];
+    const header = reader.ReadString(2); //0x0000 [item list header = 0x4a, 0x4d "JM"]
+    if (header !== 'JM') {
+        // header is not present in first save after char is created
+        if (char?.header.level === 1) {
+            return []; // TODO: return starter items based on class
+        }
+        throw new Error(`Item list header 'JM' not found at position ${reader.offset - 2 * 8}`);
+    }
+    const count = reader.ReadUInt16(); //0x0002
+    for (let i = 0; i < count; i++) {
+        items.push(await readItem(reader, mod, version, config));
+    }
+    return items;
 }
 exports.readItems = readItems;
-function writeItems(items, mod, version, config) {
-    return __awaiter(this, void 0, void 0, function () {
-        var writer, i, _a, _b;
-        return __generator(this, function (_c) {
-            switch (_c.label) {
-                case 0:
-                    writer = new bitwriter_1.BitWriter();
-                    writer.WriteString("JM", 2);
-                    writer.WriteUInt16(items.length);
-                    i = 0;
-                    _c.label = 1;
-                case 1:
-                    if (!(i < items.length)) return [3 /*break*/, 4];
-                    _b = (_a = writer).WriteArray;
-                    return [4 /*yield*/, writeItem(items[i], mod, version, config)];
-                case 2:
-                    _b.apply(_a, [_c.sent()]);
-                    _c.label = 3;
-                case 3:
-                    i++;
-                    return [3 /*break*/, 1];
-                case 4: return [2 /*return*/, writer.ToArray()];
-            }
-        });
-    });
+async function writeItems(items, mod, version, config) {
+    const writer = new bitwriter_1.BitWriter();
+    writer.WriteString('JM', 2);
+    writer.WriteUInt16(items.length);
+    for (let i = 0; i < items.length; i++) {
+        writer.WriteArray(await writeItem(items[i], mod, version, config));
+    }
+    return writer.ToArray();
 }
 exports.writeItems = writeItems;
-function readItem(reader, mod, version, config) {
-    return __awaiter(this, void 0, void 0, function () {
-        var header, constants, item, i, prefix, arr, i, plist_flag, magic_attributes, i, _a, _b;
-        return __generator(this, function (_c) {
-            switch (_c.label) {
-                case 0:
-                    if (version <= 0x60) {
-                        header = reader.ReadString(2);
-                        if (header !== "JM") {
-                            throw new Error("Item header 'JM' not found at position ".concat(reader.offset - 2 * 8));
-                        }
+async function readItem(reader, mod, version, config) {
+    if (version <= 0x60) {
+        const header = reader.ReadString(2); //0x0000 [item header = 0x4a, 0x4d "JM"]
+        if (header !== 'JM') {
+            throw new Error(`Item header 'JM' not found at position ${reader.offset - 2 * 8}`);
+        }
+    }
+    const constants = (0, constants_1.getConstantData)(mod, version);
+    const item = newItem();
+    _readSimpleBits(item, reader, version, constants /*, config*/);
+    if (!item.simple_item) {
+        item.id = reader.ReadUInt32(32);
+        item.level = reader.ReadUInt8(7);
+        item.quality = reader.ReadUInt8(4);
+        item.multiple_pictures = reader.ReadBit() == 1;
+        if (item.multiple_pictures) {
+            item.picture_id = reader.ReadUInt8(3);
+        }
+        item.class_specific = reader.ReadBit() == 1;
+        if (item.class_specific) {
+            item.auto_affix_id = reader.ReadUInt16(11);
+        }
+        switch (item.quality) {
+            case types_1.EQuality.Low:
+                item.low_quality_id = reader.ReadUInt8(3);
+                break;
+            case types_1.EQuality.Normal:
+                break;
+            case types_1.EQuality.Superior:
+                item.file_index = reader.ReadUInt8(3);
+                break;
+            case types_1.EQuality.Magic:
+                item.magic_prefix = reader.ReadUInt16(11);
+                item.magic_suffix = reader.ReadUInt16(11);
+                break;
+            case types_1.EQuality.Set:
+                item.set_id = reader.ReadUInt16(12);
+                item.set_name = constants.set_items[item.set_id] ? constants.set_items[item.set_id].n : '';
+                break;
+            case types_1.EQuality.Unique:
+                item.unique_id = reader.ReadUInt16(12);
+                item.unique_name = constants.unq_items[item.unique_id] ? constants.unq_items[item.unique_id].n : '';
+                break;
+            case types_1.EQuality.Rare:
+            case types_1.EQuality.Crafted:
+                item.rare_name_id = reader.ReadUInt8(8);
+                if (item.rare_name_id)
+                    item.rare_name = constants.rare_names[item.rare_name_id] ? constants.rare_names[item.rare_name_id].n : '';
+                item.rare_name_id2 = reader.ReadUInt8(8);
+                if (item.rare_name_id2)
+                    item.rare_name2 = constants.rare_names[item.rare_name_id2] ? constants.rare_names[item.rare_name_id2].n : '';
+                for (let i = 0; i < 6; i++) {
+                    const prefix = reader.ReadBit();
+                    if (prefix === 1) {
+                        item.magical_name_ids[i] = reader.ReadUInt16(11);
                     }
-                    constants = (0, constants_1.getConstantData)(mod, version);
-                    item = newItem();
-                    _readSimpleBits(item, reader, version, constants /*, config*/);
-                    if (!item.simple_item) {
-                        item.id = reader.ReadUInt32(32);
-                        item.level = reader.ReadUInt8(7);
-                        item.quality = reader.ReadUInt8(4);
-                        item.multiple_pictures = reader.ReadBit();
-                        if (item.multiple_pictures) {
-                            item.picture_id = reader.ReadUInt8(3);
-                        }
-                        item.class_specific = reader.ReadBit();
-                        if (item.class_specific) {
-                            item.auto_affix_id = reader.ReadUInt16(11);
-                        }
-                        switch (item.quality) {
-                            case types_1.Quality.Low:
-                                item.low_quality_id = reader.ReadUInt8(3);
-                                break;
-                            case types_1.Quality.Normal:
-                                break;
-                            case types_1.Quality.Superior:
-                                item.file_index = reader.ReadUInt8(3);
-                                break;
-                            case types_1.Quality.Magic:
-                                item.magic_prefix = reader.ReadUInt16(11);
-                                item.magic_suffix = reader.ReadUInt16(11);
-                                break;
-                            case types_1.Quality.Set:
-                                item.set_id = reader.ReadUInt16(12);
-                                item.set_name = constants.set_items[item.set_id] ? constants.set_items[item.set_id].n : "";
-                                break;
-                            case types_1.Quality.Unique:
-                                item.unique_id = reader.ReadUInt16(12);
-                                item.unique_name = constants.unq_items[item.unique_id] ? constants.unq_items[item.unique_id].n : "";
-                                break;
-                            case types_1.Quality.Rare:
-                            case types_1.Quality.Crafted:
-                                item.rare_name_id = reader.ReadUInt8(8);
-                                if (item.rare_name_id)
-                                    item.rare_name = constants.rare_names[item.rare_name_id] ? constants.rare_names[item.rare_name_id].n : "";
-                                item.rare_name_id2 = reader.ReadUInt8(8);
-                                if (item.rare_name_id2)
-                                    item.rare_name2 = constants.rare_names[item.rare_name_id2] ? constants.rare_names[item.rare_name_id2].n : "";
-                                for (i = 0; i < 6; i++) {
-                                    prefix = reader.ReadBit();
-                                    if (prefix === 1) {
-                                        item.magical_name_ids[i] = reader.ReadUInt16(11);
-                                    }
-                                    else {
-                                        item.magical_name_ids[i] = 0;
-                                    }
-                                }
-                                break;
-                            default:
-                                break;
-                        }
-                        if (item.given_runeword) {
-                            item.runeword_id = reader.ReadUInt16(12) - 26;
-                            // Delirium - temp fix
-                            if (item.runeword_id == 2692) {
-                                item.runeword_id = 22;
-                            }
-                            // Lord of Terror - temp fix
-                            if (item.runeword_id == 2626) {
-                                item.runeword_id = 170;
-                            }
-                            if (constants.runewords[item.runeword_id]) {
-                                item.runeword_name = constants.runewords[item.runeword_id].n;
-                            }
-                            reader.ReadUInt8(4);
-                        }
-                        if (item.personalized) {
-                            arr = new Uint8Array(16);
-                            for (i = 0; i < arr.length; i++) {
-                                if (version > 0x61) {
-                                    arr[i] = reader.ReadUInt8(8);
-                                }
-                                else {
-                                    arr[i] = reader.ReadUInt8(7);
-                                }
-                                if (arr[i] === 0x00) {
-                                    break;
-                                }
-                            }
-                            item.personalized_name = new bitreader_1.BitReader(arr).ReadString(16).trim().replace(/\0/g, "");
-                        }
-                        //tomes
-                        if (item.type === "tbk" || item.type == "ibk") {
-                            reader.ReadUInt8(5);
-                        }
-                        //realm data
-                        item.timestamp = reader.ReadUInt8(1);
-                        if (item.timestamp || item.categories.includes("Body Part")) {
-                            item.time = reader.ReadUInt32(30);
-                        }
-                        if (item.type_id === types_1.ItemType.Armor) {
-                            item.defense_rating = reader.ReadUInt16(constants.magical_properties[31].sB) - constants.magical_properties[31].sA;
-                        }
-                        if (item.type_id === types_1.ItemType.Armor || item.type_id === types_1.ItemType.Weapon) {
-                            item.max_durability = reader.ReadUInt16(constants.magical_properties[73].sB) - constants.magical_properties[73].sA;
-                            if (item.max_durability > 0) {
-                                item.current_durability = reader.ReadUInt16(constants.magical_properties[72].sB) - constants.magical_properties[72].sA;
-                            }
-                        }
-                        if (constants.stackables[item.type]) {
-                            item.quantity = reader.ReadUInt16(9);
-                        }
-                        if (item.socketed === 1) {
-                            item.total_nr_of_sockets = reader.ReadUInt8(4);
-                        }
-                        else {
-                            item.total_nr_of_sockets = 0;
-                        }
-                        plist_flag = 0;
-                        if (item.quality === types_1.Quality.Set) {
-                            plist_flag = reader.ReadUInt8(5);
-                            item.set_list_count = 0;
-                            item._unknown_data.plist_flag = plist_flag;
-                        }
-                        magic_attributes = _readMagicAttributes(reader, constants);
-                        item.magic_attributes = magic_attributes;
-                        while (plist_flag > 0) {
-                            if (plist_flag & 1) {
-                                item.set_list_count += 1;
-                                magic_attributes = _readMagicAttributes(reader, constants);
-                                if (item.set_attributes) {
-                                    item.set_attributes.push(magic_attributes);
-                                }
-                                else {
-                                    item.set_attributes = [magic_attributes];
-                                }
-                            }
-                            plist_flag >>>= 1;
-                        }
-                        if (item.given_runeword === 1) {
-                            magic_attributes = _readMagicAttributes(reader, constants);
-                            if (magic_attributes && magic_attributes.length > 0) {
-                                item.runeword_attributes = magic_attributes;
-                            }
-                        }
+                    else {
+                        item.magical_name_ids[i] = 0;
                     }
-                    reader.Align();
-                    if (!(item.nr_of_items_in_sockets > 0 && item.simple_item === 0)) return [3 /*break*/, 4];
-                    i = 0;
-                    _c.label = 1;
-                case 1:
-                    if (!(i < item.nr_of_items_in_sockets)) return [3 /*break*/, 4];
-                    _b = (_a = item.socketed_items).push;
-                    return [4 /*yield*/, readItem(reader, mod, version, config)];
-                case 2:
-                    _b.apply(_a, [_c.sent()]);
-                    _c.label = 3;
-                case 3:
-                    i++;
-                    return [3 /*break*/, 1];
-                case 4: 
-                //console.log(JSON.stringify(item));
-                return [2 /*return*/, item];
+                }
+                break;
+            default:
+                break;
+        }
+        if (item.given_runeword) {
+            item.runeword_id = reader.ReadUInt16(12) - 26;
+            if (constants.runeword_fixes) {
+                const reverse_runeword_fixes = (0, utils_1.swapObjectKeyValue)(constants.runeword_fixes);
+                if (reverse_runeword_fixes[item.runeword_id]) {
+                    item.runeword_id = reverse_runeword_fixes[item.runeword_id];
+                }
             }
-        });
-    });
+            if (constants.runewords[item.runeword_id]) {
+                item.runeword_name = constants.runewords[item.runeword_id].n;
+            }
+            reader.ReadUInt8(4);
+        }
+        if (item.personalized) {
+            const arr = new Uint8Array(16);
+            for (let i = 0; i < arr.length; i++) {
+                if (version > 0x61) {
+                    arr[i] = reader.ReadUInt8(8);
+                }
+                else {
+                    arr[i] = reader.ReadUInt8(7);
+                }
+                if (arr[i] === 0x00) {
+                    break;
+                }
+            }
+            item.personalized_name = new bitreader_1.BitReader(arr).ReadString(16).trim().replace(/\0/g, '');
+        }
+        //tomes
+        if (item.type === 'tbk' || item.type == 'ibk') {
+            reader.ReadUInt8(5);
+        }
+        //realm data
+        item.timestamp = reader.ReadUInt8(1);
+        if (item.timestamp || item.categories.includes('Body Part')) {
+            item.time = reader.ReadUInt32(30);
+        }
+        if (item.type_id === types_1.ETypeId.Armor) {
+            item.defense_rating = reader.ReadUInt16(constants.magical_properties[31].sB) - (constants.magical_properties[31].sA || 0);
+        }
+        if (item.type_id === types_1.ETypeId.Armor || item.type_id === types_1.ETypeId.Weapon) {
+            item.max_durability = reader.ReadUInt16(constants.magical_properties[73].sB) - (constants.magical_properties[73].sA || 0);
+            if (item.max_durability > 0) {
+                item.current_durability = reader.ReadUInt16(constants.magical_properties[72].sB) - (constants.magical_properties[72].sA || 0);
+            }
+        }
+        if (constants.stackables[item.type]) {
+            item.quantity = reader.ReadUInt16(9);
+        }
+        if (item.socketed) {
+            item.total_nr_of_sockets = reader.ReadUInt8(4);
+        }
+        else {
+            item.total_nr_of_sockets = 0;
+        }
+        /**
+         * 5 bits. any of the 5 bits can be set. if a bit is set that means
+         * means +1 to the set_list_count
+         */
+        let plist_flag = 0;
+        if (item.quality === types_1.EQuality.Set) {
+            plist_flag = reader.ReadUInt8(5);
+            item.set_list_count = 0;
+            item._unknown_data.plist_flag = plist_flag;
+        }
+        //magical properties
+        let magic_attributes = _readMagicAttributes(reader, constants);
+        item.magic_attributes = magic_attributes;
+        while (plist_flag > 0) {
+            if (plist_flag & 1) {
+                item.set_list_count += 1;
+                magic_attributes = _readMagicAttributes(reader, constants);
+                if (item.set_attributes) {
+                    item.set_attributes.push(magic_attributes);
+                }
+                else {
+                    item.set_attributes = [magic_attributes];
+                }
+            }
+            plist_flag >>>= 1;
+        }
+        if (item.given_runeword) {
+            magic_attributes = _readMagicAttributes(reader, constants);
+            if (magic_attributes && magic_attributes.length > 0) {
+                item.runeword_attributes = magic_attributes;
+            }
+        }
+    }
+    reader.Align();
+    if (item.nr_of_items_in_sockets > 0 && !item.simple_item) {
+        for (let i = 0; i < item.nr_of_items_in_sockets; i++) {
+            item.socketed_items.push(await readItem(reader, mod, version, config));
+        }
+    }
+    //console.log(JSON.stringify(item));
+    return item;
 }
 exports.readItem = readItem;
-function writeItem(item, mod, version, config) {
-    var _a;
-    return __awaiter(this, void 0, void 0, function () {
-        var constants, writer, i, magical_name_id, runeword_id, name_1, i, set_attribute_count, plist_flag, i, i, _b, _c;
-        return __generator(this, function (_d) {
-            switch (_d.label) {
-                case 0:
-                    constants = (0, constants_1.getConstantData)(mod, version);
-                    if (item._unknown_data === undefined) {
-                        item._unknown_data = {};
+async function writeItem(item, mod, version, config) {
+    const constants = (0, constants_1.getConstantData)(mod, version);
+    const itemTypeDef = (0, utils_1.getItemTypeDef)(item, constants);
+    if (item._unknown_data === undefined) {
+        item._unknown_data = {};
+    }
+    if (item.categories === undefined) {
+        item.categories = itemTypeDef.c;
+    }
+    const writer = new bitwriter_1.BitWriter();
+    if (version <= 0x60) {
+        writer.WriteString('JM', 2);
+    }
+    _writeSimpleBits(writer, mod, version, item);
+    if (!item.simple_item) {
+        writer.WriteUInt32(item.id, 32);
+        writer.WriteUInt8(item.level, 7);
+        writer.WriteUInt8(item.quality, 4);
+        writer.WriteBit(item.multiple_pictures ? 1 : 0);
+        if (item.multiple_pictures) {
+            writer.WriteUInt8(item.picture_id, 3);
+        }
+        writer.WriteUInt8(item.class_specific ? 1 : 0, 1);
+        if (item.class_specific) {
+            writer.WriteUInt16(item.auto_affix_id || 0, 11);
+        }
+        switch (item.quality) {
+            case types_1.EQuality.Low:
+                writer.WriteUInt8(item.low_quality_id, 3);
+                break;
+            case types_1.EQuality.Normal:
+                break;
+            case types_1.EQuality.Superior:
+                writer.WriteUInt8(item.file_index || 0, 3);
+                break;
+            case types_1.EQuality.Magic:
+                writer.WriteUInt16(item.magic_prefix, 11);
+                writer.WriteUInt16(item.magic_suffix, 11);
+                break;
+            case types_1.EQuality.Set:
+                writer.WriteUInt16(item.set_id, 12);
+                break;
+            case types_1.EQuality.Unique:
+                writer.WriteUInt16(item.unique_id, 12);
+                break;
+            case types_1.EQuality.Rare:
+            case types_1.EQuality.Crafted:
+                writer.WriteUInt8(item.rare_name_id !== undefined ? item.rare_name_id : _lookupRareId(item.rare_name, constants), 8);
+                writer.WriteUInt8(item.rare_name_id2 !== undefined ? item.rare_name_id2 : _lookupRareId(item.rare_name2, constants), 8);
+                for (let i = 0; i < 6; i++) {
+                    const magical_name_id = item.magical_name_ids !== undefined ? item.magical_name_ids[i] : 0;
+                    if (magical_name_id) {
+                        writer.WriteBit(1);
+                        writer.WriteUInt16(magical_name_id, 11);
                     }
-                    if (item.categories === undefined) {
-                        item.categories = (_a = _GetItemTXT(item, constants)) === null || _a === void 0 ? void 0 : _a.c;
+                    else {
+                        writer.WriteBit(0);
                     }
-                    writer = new bitwriter_1.BitWriter();
-                    if (version <= 0x60) {
-                        writer.WriteString("JM", 2);
-                    }
-                    _writeSimpleBits(writer, mod, version, item);
-                    if (!item.simple_item) {
-                        writer.WriteUInt32(item.id, 32);
-                        writer.WriteUInt8(item.level, 7);
-                        writer.WriteUInt8(item.quality, 4);
-                        writer.WriteUInt8(item.multiple_pictures, 1);
-                        if (item.multiple_pictures) {
-                            writer.WriteUInt8(item.picture_id, 3);
-                        }
-                        writer.WriteUInt8(item.class_specific, 1);
-                        if (item.class_specific === 1) {
-                            writer.WriteUInt16(item.auto_affix_id || 0, 11);
-                        }
-                        switch (item.quality) {
-                            case types_1.Quality.Low:
-                                writer.WriteUInt8(item.low_quality_id, 3);
-                                break;
-                            case types_1.Quality.Normal:
-                                break;
-                            case types_1.Quality.Superior:
-                                writer.WriteUInt8(item.file_index || 0, 3);
-                                break;
-                            case types_1.Quality.Magic:
-                                writer.WriteUInt16(item.magic_prefix, 11);
-                                writer.WriteUInt16(item.magic_suffix, 11);
-                                break;
-                            case types_1.Quality.Set:
-                                writer.WriteUInt16(item.set_id, 12);
-                                break;
-                            case types_1.Quality.Unique:
-                                writer.WriteUInt16(item.unique_id, 12);
-                                break;
-                            case types_1.Quality.Rare:
-                            case types_1.Quality.Crafted:
-                                writer.WriteUInt8(item.rare_name_id !== undefined ? item.rare_name_id : _lookupRareId(item.rare_name, constants), 8);
-                                writer.WriteUInt8(item.rare_name_id2 !== undefined ? item.rare_name_id2 : _lookupRareId(item.rare_name2, constants), 8);
-                                for (i = 0; i < 6; i++) {
-                                    magical_name_id = item.magical_name_ids !== undefined ? item.magical_name_ids[i] : 0;
-                                    if (magical_name_id) {
-                                        writer.WriteBit(1);
-                                        writer.WriteUInt16(magical_name_id, 11);
-                                    }
-                                    else {
-                                        writer.WriteBit(0);
-                                    }
-                                }
-                                break;
-                            default:
-                                break;
-                        }
-                        if (item.given_runeword) {
-                            runeword_id = item.runeword_id;
-                            // Delirium - temp fix
-                            if (runeword_id == 22) {
-                                runeword_id = 2692;
-                            }
-                            // Lord of Terror - temp fix
-                            if (runeword_id == 170) {
-                                runeword_id = 2626;
-                            }
-                            writer.WriteUInt16(runeword_id + 26, 12);
-                            writer.WriteUInt8(5, 4); //always 5?
-                        }
-                        if (item.personalized) {
-                            name_1 = item.personalized_name.substring(0, 16);
-                            for (i = 0; i < name_1.length; i++) {
-                                if (version > 0x61) {
-                                    writer.WriteUInt8(name_1.charCodeAt(i), 8);
-                                }
-                                else {
-                                    writer.WriteUInt8(name_1.charCodeAt(i) & 0x7f, 7);
-                                }
-                            }
-                            writer.WriteUInt8(0x00, version > 0x61 ? 8 : 7);
-                        }
-                        if (item.type === "tbk") {
-                            writer.WriteUInt8(0, 5);
-                        }
-                        else if (item.type === "ibk") {
-                            writer.WriteUInt8(1, 5);
-                        }
-                        writer.WriteUInt8(item.timestamp, 1);
-                        if (item.timestamp || item.categories.includes("Body Part")) {
-                            writer.WriteUInt32(item.time, 30);
-                        }
-                        if (item.type_id === types_1.ItemType.Armor || item.type_id === types_1.ItemType.Shield) {
-                            writer.WriteUInt16(item.defense_rating + constants.magical_properties[31].sA, constants.magical_properties[31].sB);
-                        }
-                        if (item.type_id === types_1.ItemType.Armor || item.type_id === types_1.ItemType.Shield || item.type_id === types_1.ItemType.Weapon) {
-                            writer.WriteUInt16(item.max_durability || 0, constants.magical_properties[73].sB);
-                            if (item.max_durability > 0) {
-                                writer.WriteUInt16(item.current_durability, constants.magical_properties[72].sB);
-                            }
-                        }
-                        if (constants.stackables[item.type]) {
-                            writer.WriteUInt16(item.quantity, 9);
-                        }
-                        if (item.socketed === 1) {
-                            writer.WriteUInt8(item.total_nr_of_sockets, 4);
-                        }
-                        if (item.quality === types_1.Quality.Set) {
-                            set_attribute_count = item.set_attributes != null ? item.set_attributes.length : 0;
-                            plist_flag = (1 << set_attribute_count) - 1;
-                            writer.WriteUInt8(item._unknown_data.plist_flag || plist_flag, 5);
-                        }
-                        _writeMagicAttributes(writer, item.magic_attributes, constants);
-                        if (item.set_attributes && item.set_attributes.length > 0) {
-                            for (i = 0; i < item.set_attributes.length; i++) {
-                                _writeMagicAttributes(writer, item.set_attributes[i], constants);
-                            }
-                        }
-                        if (item.given_runeword === 1) {
-                            _writeMagicAttributes(writer, item.runeword_attributes, constants);
-                        }
-                    }
-                    writer.Align();
-                    if (!(item.nr_of_items_in_sockets > 0 && item.simple_item === 0)) return [3 /*break*/, 4];
-                    i = 0;
-                    _d.label = 1;
-                case 1:
-                    if (!(i < item.nr_of_items_in_sockets)) return [3 /*break*/, 4];
-                    _c = (_b = writer).WriteArray;
-                    return [4 /*yield*/, writeItem(item.socketed_items[i], mod, version, config)];
-                case 2:
-                    _c.apply(_b, [_d.sent()]);
-                    _d.label = 3;
-                case 3:
-                    i++;
-                    return [3 /*break*/, 1];
-                case 4: return [2 /*return*/, writer.ToArray()];
+                }
+                break;
+            default:
+                break;
+        }
+        if (item.given_runeword) {
+            let runeword_id = item.runeword_id; // It's important to modify a copy, not the actual attribute
+            if (constants.runeword_fixes && constants.runeword_fixes[runeword_id]) {
+                runeword_id = constants.runeword_fixes[runeword_id];
             }
-        });
-    });
+            writer.WriteUInt16(runeword_id + 26, 12);
+            writer.WriteUInt8(5, 4); //always 5?
+        }
+        if (item.personalized) {
+            const name = item.personalized_name.substring(0, 16);
+            for (let i = 0; i < name.length; i++) {
+                if (version > 0x61) {
+                    writer.WriteUInt8(name.charCodeAt(i), 8);
+                }
+                else {
+                    writer.WriteUInt8(name.charCodeAt(i) & 0x7f, 7);
+                }
+            }
+            writer.WriteUInt8(0x00, version > 0x61 ? 8 : 7);
+        }
+        if (item.type === 'tbk') {
+            writer.WriteUInt8(0, 5);
+        }
+        else if (item.type === 'ibk') {
+            writer.WriteUInt8(1, 5);
+        }
+        writer.WriteUInt8(item.timestamp, 1);
+        if (item.timestamp || item.categories.includes('Body Part')) {
+            writer.WriteUInt32(item.time, 30);
+        }
+        if (item.type_id === types_1.ETypeId.Armor || item.type_id === types_1.ETypeId.Shield) {
+            writer.WriteUInt16(item.defense_rating + (constants.magical_properties[31].sA || 0), constants.magical_properties[31].sB);
+        }
+        if (item.type_id === types_1.ETypeId.Armor || item.type_id === types_1.ETypeId.Shield || item.type_id === types_1.ETypeId.Weapon) {
+            writer.WriteUInt16(item.max_durability || 0, constants.magical_properties[73].sB);
+            if (item.max_durability > 0) {
+                writer.WriteUInt16(item.current_durability, constants.magical_properties[72].sB);
+            }
+        }
+        if (constants.stackables[item.type]) {
+            writer.WriteUInt16(item.quantity, 9);
+        }
+        if (item.socketed) {
+            writer.WriteUInt8(item.total_nr_of_sockets, 4);
+        }
+        if (item.quality === types_1.EQuality.Set) {
+            const set_attribute_count = item.set_attributes != null ? item.set_attributes.length : 0;
+            //reduced by -1 removed as this seems to be wrong
+            const plist_flag = (1 << set_attribute_count) - 1;
+            writer.WriteUInt8(item._unknown_data.plist_flag || plist_flag, 5);
+        }
+        if (itemTypeDef.m) {
+            // Dynamic attributes are not written (anyway D2 will erase them)
+            _writeMagicAttributes(writer, [], constants);
+        }
+        else {
+            _writeMagicAttributes(writer, item.magic_attributes, constants);
+        }
+        if (item.set_attributes && item.set_attributes.length > 0) {
+            for (let i = 0; i < item.set_attributes.length; i++) {
+                _writeMagicAttributes(writer, item.set_attributes[i], constants);
+            }
+        }
+        if (item.given_runeword) {
+            _writeMagicAttributes(writer, item.runeword_attributes, constants);
+        }
+    }
+    writer.Align();
+    if (item.nr_of_items_in_sockets > 0 && !item.simple_item) {
+        for (let i = 0; i < item.nr_of_items_in_sockets; i++) {
+            writer.WriteArray(await writeItem(item.socketed_items[i], mod, version, config));
+        }
+    }
+    return writer.ToArray();
 }
 exports.writeItem = writeItem;
 function _readSimpleBits(item, reader, version, constants /*, config: types.IConfig*/) {
-    var _a;
     //init so we do not have npe's
     item._unknown_data = {};
     //1.10-1.14d
@@ -20395,21 +19972,21 @@ function _readSimpleBits(item, reader, version, constants /*, config: types.ICon
     //1.15
     //[flags:32][version:3][mode:3]([invloc:4][x:4][y:4][page:3])([itemcode:variable])([sockets:3])
     item._unknown_data.b0_3 = reader.ReadBitArray(4);
-    item.identified = reader.ReadBit();
+    item.identified = reader.ReadBit() == 1;
     item._unknown_data.b5_10 = reader.ReadBitArray(6); // 3b>unk, 1b>broken, 2b>unk
-    item.socketed = reader.ReadBit();
+    item.socketed = reader.ReadBit() == 1;
     item._unknown_data.b12 = reader.ReadBitArray(1); // ? 0x00
-    item.new = reader.ReadBit();
+    item.new = reader.ReadBit() == 1;
     item._unknown_data.b14_15 = reader.ReadBitArray(2); // ? 0x00
-    item.is_ear = reader.ReadBit();
-    item.starter_item = reader.ReadBit();
+    item.is_ear = reader.ReadBit() == 1;
+    item.starter_item = reader.ReadBit() == 1;
     item._unknown_data.b18_20 = reader.ReadBitArray(3); // 1b>unk, 2b>? 0x03 for version 71 with 15, 26 or 31 bytes, otherwise 0x00
-    item.simple_item = reader.ReadBit(); // compact
-    item.ethereal = reader.ReadBit();
+    item.simple_item = reader.ReadBit() == 1; // compact
+    item.ethereal = reader.ReadBit() == 1;
     item._unknown_data.b23 = reader.ReadBitArray(1); // ? 0x01 for versions 87+, otherwise 0x00
-    item.personalized = reader.ReadBit();
+    item.personalized = reader.ReadBit() == 1;
     item._unknown_data.b25 = reader.ReadBitArray(1); // ? 0x00
-    item.given_runeword = reader.ReadBit();
+    item.given_runeword = reader.ReadBit() == 1;
     item._unknown_data.b27_31 = reader.ReadBitArray(5); // ? 0x00
     if (version <= 0x60) {
         item.version = reader.ReadUInt16(10).toString(10); // I don't know the values
@@ -20417,29 +19994,29 @@ function _readSimpleBits(item, reader, version, constants /*, config: types.ICon
     else if (version >= 0x61) {
         item.version = reader.ReadUInt16(3).toString(2);
     }
-    if (["0", "000", " ", "   ", ""].includes(item.version))
-        item.version = "101"; // Just in case
+    if (['0', '000', ' ', '   ', ''].includes(item.version))
+        item.version = '101'; // Just in case
     item.location_id = reader.ReadUInt8(3);
     item.equipped_id = reader.ReadUInt8(4);
     item.position_x = reader.ReadUInt8(4);
     item.position_y = reader.ReadUInt8(4);
     item.alt_position_id = reader.ReadUInt8(3);
     if (item.is_ear) {
-        item.type = "ear";
-        var clazz = reader.ReadUInt8(3);
-        var level = reader.ReadUInt8(7);
-        var arr = new Uint8Array(15);
-        for (var i = 0; i < arr.length; i++) {
+        item.type = 'ear';
+        const clazz = reader.ReadUInt8(3);
+        const level = reader.ReadUInt8(7);
+        const arr = new Uint8Array(15);
+        for (let i = 0; i < arr.length; i++) {
             arr[i] = reader.ReadUInt8(7);
             if (arr[i] === 0x00) {
                 break;
             }
         }
-        var name_2 = new bitreader_1.BitReader(arr).ReadString(15).trim().replace(/\0/g, "");
+        const name = new bitreader_1.BitReader(arr).ReadString(15).trim().replace(/\0/g, '');
         item.ear_attributes = {
             class: clazz,
             level: level,
-            name: name_2,
+            name: name,
         };
     }
     else {
@@ -20447,49 +20024,49 @@ function _readSimpleBits(item, reader, version, constants /*, config: types.ICon
             item.type = reader.ReadString(4);
         }
         else if (version >= 0x61) {
-            item.type = "";
+            item.type = '';
             //props to d07riv
             //https://github.com/d07RiV/d07riv.github.io/blob/master/d2r.html#L11-L20
-            for (var i = 0; i < 4; i++) {
-                var node = HUFFMAN;
-                var bits_1 = "";
+            for (let i = 0; i < 4; i++) {
+                let node = HUFFMAN;
+                let bits = '';
                 do {
-                    var bit = reader.ReadBit();
-                    bits_1 += bit;
+                    const bit = reader.ReadBit();
+                    bits += bit;
                     node = node[bit];
                     if (node === undefined) {
-                        console.log("Huffman value starting by " + bits_1.split("").reverse().join("") + "... is undefined.");
+                        console.log('Huffman value starting by ' + bits.split('').reverse().join('') + '... is undefined.');
                     }
                 } while (Array.isArray(node));
                 item.type += node;
             }
         }
-        item.type = item.type.trim().replace(/\0/g, "");
-        var details = _GetItemTXT(item, constants);
+        item.type = item.type.trim().replace(/\0/g, '');
+        let details = (0, utils_1.getItemTypeDef)(item, constants);
         if (details) {
             if (details.c) {
                 item.categories = details.c;
-                if (item === null || item === void 0 ? void 0 : item.categories.includes("Any Armor")) {
-                    item.type_id = types_1.ItemType.Armor;
+                if (item?.categories.includes('Any Armor')) {
+                    item.type_id = types_1.ETypeId.Armor;
                 }
-                else if (item === null || item === void 0 ? void 0 : item.categories.includes("Weapon")) {
-                    item.type_id = types_1.ItemType.Weapon;
+                else if (item?.categories.includes('Weapon')) {
+                    item.type_id = types_1.ETypeId.Weapon;
                     details = constants.weapon_items[item.type];
                 }
                 else {
-                    item.type_id = types_1.ItemType.Other;
+                    item.type_id = types_1.ETypeId.Other;
                 }
             }
             else {
-                throw new Error("Cannot find categories for type ".concat(item.type, " does not exist"));
+                throw new Error(`Cannot find categories for type ${item.type} does not exist`);
             }
         }
         else {
-            throw new Error("Cannot find details for type ".concat(item.type, " does not exist"));
+            throw new Error(`Cannot find details for type ${item.type} does not exist`);
         }
-        var bits = item.simple_item ? 1 : 3;
-        if ((_a = item.categories) === null || _a === void 0 ? void 0 : _a.includes("Quest")) {
-            item.quest_difficulty = reader.ReadUInt16(constants.magical_properties[356].sB) - constants.magical_properties[356].sA;
+        let bits = item.simple_item ? 1 : 3;
+        if (item.categories?.includes('Quest')) {
+            item.quest_difficulty = reader.ReadUInt16(constants.magical_properties[356].sB) - (constants.magical_properties[356].sA || 0);
             bits = 1;
         }
         item.nr_of_items_in_sockets = reader.ReadUInt8(bits);
@@ -20497,29 +20074,28 @@ function _readSimpleBits(item, reader, version, constants /*, config: types.ICon
 }
 function _lookupRareId(name, constants) {
     //some inconsistencies with txt data and nokka. so have to hack it with startsWith
-    return constants.rare_names.findIndex(function (k) { return k && k.n && (k.n.toLowerCase().startsWith(name.toLowerCase()) || name.toLowerCase().startsWith(k.n.toLowerCase())); });
+    return constants.rare_names.findIndex((k) => k && k.n && (k.n.toLowerCase().startsWith(name.toLowerCase()) || name.toLowerCase().startsWith(k.n.toLowerCase())));
 }
 function _writeSimpleBits(writer, mod, version, item) {
-    var _a;
-    var constants = (0, constants_1.getConstantData)(mod, version);
+    const constants = (0, constants_1.getConstantData)(mod, version);
     writer.WriteBits(item._unknown_data.b0_3 || new Uint8Array(4), 4);
-    writer.WriteBit(item.identified);
+    writer.WriteBit(item.identified ? 1 : 0);
     writer.WriteBits(item._unknown_data.b5_10 || new Uint8Array(6), 6);
-    writer.WriteBit(item.socketed);
+    writer.WriteBit(item.socketed ? 1 : 0);
     writer.WriteBits(item._unknown_data.b12 || new Uint8Array(1), 1);
-    writer.WriteBit(item.new);
+    writer.WriteBit(item.new ? 1 : 0);
     writer.WriteBits(item._unknown_data.b14_15 || new Uint8Array(2), 2);
-    writer.WriteBit(item.is_ear);
-    writer.WriteBit(item.starter_item);
+    writer.WriteBit(item.is_ear ? 1 : 0);
+    writer.WriteBit(item.starter_item ? 1 : 0);
     writer.WriteBits(item._unknown_data.b18_20 || new Uint8Array(3), 3);
-    writer.WriteBit(item.simple_item);
-    writer.WriteBit(item.ethereal);
+    writer.WriteBit(item.simple_item ? 1 : 0);
+    writer.WriteBit(item.ethereal ? 1 : 0);
     writer.WriteBits(item._unknown_data.b23 || new Uint8Array([1]), 1); //always 1? IFLAG_JUSTSAVED
-    writer.WriteBit(item.personalized);
+    writer.WriteBit(item.personalized ? 1 : 0);
     writer.WriteBits(item._unknown_data.b25 || new Uint8Array(1), 1); //IFLAG_LOWQUALITY
-    writer.WriteBit(item.given_runeword);
+    writer.WriteBit(item.given_runeword ? 1 : 0);
     writer.WriteBits(item._unknown_data.b27_31 || new Uint8Array(5), 5);
-    var itemVersion = !!item.version ? item.version : "101";
+    const itemVersion = !!item.version ? item.version : '101';
     if (version <= 0x60) {
         // 0 = pre-1.08; 1 = 1.08/1.09 normal; 2 = 1.10 normal; 100 = 1.08/1.09 expansion; 101 = 1.10 expansion
         writer.WriteUInt16(parseInt(itemVersion, 10), 10);
@@ -20535,49 +20111,48 @@ function _writeSimpleBits(writer, mod, version, item) {
     if (item.is_ear) {
         writer.WriteUInt8(item.ear_attributes.class, 3);
         writer.WriteUInt8(item.ear_attributes.level, 7);
-        var name_3 = item.ear_attributes.name.substring(0, 15);
-        for (var i = 0; i < name_3.length; i++) {
-            writer.WriteUInt8(name_3.charCodeAt(i) & 0x7f, 7);
+        const name = item.ear_attributes.name.substring(0, 15);
+        for (let i = 0; i < name.length; i++) {
+            writer.WriteUInt8(name.charCodeAt(i) & 0x7f, 7);
         }
         writer.WriteUInt8(0x00, 7);
     }
     else {
-        var t = item.type.padEnd(4, " ");
+        const t = item.type.padEnd(4, ' ');
         if (version <= 0x60) {
             writer.WriteString(t, 4);
         }
         else {
-            for (var _i = 0, t_1 = t; _i < t_1.length; _i++) {
-                var c = t_1[_i];
-                var n = HUFFMAN_LOOKUP[c];
+            for (const c of t) {
+                const n = HUFFMAN_LOOKUP[c];
                 writer.WriteUInt32(n.v, n.l); // Change from Uint16 to Uint32 because in ReMoDDeD caps letters are on 17bits.
             }
         }
-        var bits = item.simple_item ? 1 : 3;
-        if ((_a = item.categories) === null || _a === void 0 ? void 0 : _a.includes("Quest")) {
-            var difficulty = item.quest_difficulty || 0;
-            writer.WriteUInt16(difficulty + constants.magical_properties[356].sA, constants.magical_properties[356].sB);
+        let bits = item.simple_item ? 1 : 3;
+        if (item.categories?.includes('Quest')) {
+            const difficulty = item.quest_difficulty || 0;
+            writer.WriteUInt16(difficulty + (constants.magical_properties[356].sA || 0), constants.magical_properties[356].sB);
             bits = 1;
         }
         writer.WriteUInt8(item.nr_of_items_in_sockets, bits);
     }
 }
 function _readMagicAttributes(reader, constants) {
-    var id = reader.ReadUInt16(9);
-    var magic_attributes = [];
+    let id = reader.ReadUInt16(9);
+    const magic_attributes = [];
     while (id != 0x1ff) {
-        var values = [];
+        const values = [];
         if (!constants.magical_properties[id]) {
-            throw new Error("Invalid magic attribute Id: ".concat(id, " at position ").concat(reader.offset - 9));
+            throw new Error(`Invalid magic attribute Id: ${id} at position ${reader.offset - 9}`);
         }
-        var num_of_properties = constants.magical_properties[id].np || 1;
-        for (var i = 0; i < num_of_properties; i++) {
-            var itemStatDef = constants.magical_properties[id + i];
+        const num_of_properties = constants.magical_properties[id].np || 1;
+        for (let i = 0; i < num_of_properties; i++) {
+            const itemStatDef = constants.magical_properties[id + i];
             if (itemStatDef == null) {
-                throw new Error("Cannot find Magical Property for id: ".concat(id, " at position ").concat(reader.offset));
+                throw new Error(`Cannot find Magical Property for id: ${id} at position ${reader.offset}`);
             }
             if (itemStatDef.sP) {
-                var param = reader.ReadUInt32(itemStatDef.sP);
+                let param = reader.ReadUInt32(itemStatDef.sP);
                 switch (itemStatDef.dF) {
                     case 14: //+skill to skilltab
                         values.push(param & 0x7);
@@ -20602,9 +20177,9 @@ function _readMagicAttributes(reader, constants) {
                 values.push(param);
             }
             if (!itemStatDef.sB) {
-                throw new Error("Save Bits is undefined for stat: ".concat(id, ":").concat(itemStatDef.s, " at position ").concat(reader.offset));
+                throw new Error(`Save Bits is undefined for stat: ${id}:${itemStatDef.s} at position ${reader.offset}`);
             }
-            var v = reader.ReadUInt32(itemStatDef.sB);
+            let v = reader.ReadUInt32(itemStatDef.sB);
             if (itemStatDef.sA) {
                 v -= itemStatDef.sA;
             }
@@ -20630,18 +20205,18 @@ function _readMagicAttributes(reader, constants) {
 exports._readMagicAttributes = _readMagicAttributes;
 function _writeMagicAttributes(writer, magic_attributes, constants) {
     if (magic_attributes) {
-        for (var i = 0; i < magic_attributes.length; i++) {
-            var magical_attribute = magic_attributes[i];
-            var valueIdx = 0;
+        for (let i = 0; i < magic_attributes.length; i++) {
+            const magical_attribute = magic_attributes[i];
+            let valueIdx = 0;
             writer.WriteUInt16(magical_attribute.id, 9);
-            var num_of_properties = constants.magical_properties[magical_attribute.id].np || 1;
-            for (var j = 0; j < num_of_properties; j++) {
-                var itemStatDef = constants.magical_properties[magical_attribute.id + j];
+            const num_of_properties = constants.magical_properties[magical_attribute.id].np || 1;
+            for (let j = 0; j < num_of_properties; j++) {
+                const itemStatDef = constants.magical_properties[magical_attribute.id + j];
                 if (itemStatDef == null) {
-                    throw new Error("Cannot find Magical Property for id: ".concat(magical_attribute.id));
+                    throw new Error(`Cannot find Magical Property for id: ${magical_attribute.id}`);
                 }
                 if (itemStatDef.sP) {
-                    var param = magical_attribute.values[valueIdx++];
+                    let param = magical_attribute.values[valueIdx++];
                     switch (itemStatDef.dF) {
                         case 14: //+skill to skilltab
                             param |= (magical_attribute.values[valueIdx++] & 0x1fff) << 3;
@@ -20663,7 +20238,7 @@ function _writeMagicAttributes(writer, magic_attributes, constants) {
                     }
                     writer.WriteUInt32(param, itemStatDef.sP);
                 }
-                var v = magical_attribute.values[valueIdx++];
+                let v = magical_attribute.values[valueIdx++];
                 if (itemStatDef.sA) {
                     v += itemStatDef.sA;
                 }
@@ -20675,7 +20250,7 @@ function _writeMagicAttributes(writer, magic_attributes, constants) {
                         break;
                 }
                 if (!itemStatDef.sB) {
-                    throw new Error("Save Bits is undefined for stat: ".concat(magical_attribute.id, ":").concat(itemStatDef.s));
+                    throw new Error(`Save Bits is undefined for stat: ${magical_attribute.id}:${itemStatDef.s}`);
                 }
                 writer.WriteUInt32(v, itemStatDef.sB);
             }
@@ -20684,17 +20259,6 @@ function _writeMagicAttributes(writer, magic_attributes, constants) {
     writer.WriteUInt16(0x1ff, 9);
 }
 exports._writeMagicAttributes = _writeMagicAttributes;
-function _GetItemTXT(item, constants) {
-    if (constants.armor_items[item.type]) {
-        return constants.armor_items[item.type];
-    }
-    else if (constants.weapon_items[item.type]) {
-        return constants.weapon_items[item.type];
-    }
-    else if (constants.other_items[item.type]) {
-        return constants.other_items[item.type];
-    }
-}
 
 
 /***/ }),
@@ -20703,64 +20267,28 @@ function _GetItemTXT(item, constants) {
 /*!**************************!*\
   !*** ./src/d2/skills.ts ***!
   \**************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (g && (g = 0, op[0] && (_ = 0)), _) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.writeSkills = exports.readSkills = void 0;
-var bitwriter_1 = __webpack_require__(/*! ../binary/bitwriter */ "./src/binary/bitwriter.ts");
-var constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
+const bitwriter_1 = __webpack_require__(/*! ../binary/bitwriter */ "./src/binary/bitwriter.ts");
+const constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
 function readSkills(char, reader, mod) {
-    var constants = (0, constants_1.getConstantData)(mod, char.header.version);
+    const constants = (0, constants_1.getConstantData)(mod, char.header.version);
     char.skills = [];
-    var offset = SkillOffset[char.header.class];
-    var header = reader.ReadString(2); //0x0000 [skills header = 0x69, 0x66 "if"]
-    if (header !== "if") {
+    const offset = SkillOffset[char.header.class];
+    const header = reader.ReadString(2); //0x0000 [skills header = 0x69, 0x66 "if"]
+    if (header !== 'if') {
         // header is not present in first save after char is created
         if (char.header.level === 1) {
             return; // TODO: return starter skills based on class
         }
-        throw new Error("Skills header 'if' not found at position ".concat(reader.offset - 2 * 8));
+        throw new Error(`Skills header 'if' not found at position ${reader.offset - 2 * 8}`);
     }
-    for (var i = 0; i < 30; i++) {
-        var id = offset + i;
+    for (let i = 0; i < 30; i++) {
+        const id = offset + i;
         char.skills.push({
             id: id,
             points: reader.ReadUInt8(),
@@ -20769,22 +20297,17 @@ function readSkills(char, reader, mod) {
     }
 }
 exports.readSkills = readSkills;
-function writeSkills(char) {
-    return __awaiter(this, void 0, void 0, function () {
-        var writer, i;
-        return __generator(this, function (_a) {
-            writer = new bitwriter_1.BitWriter();
-            writer.WriteString("if", 2); //0x0000 [skills header = 0x69, 0x66 "if"]
-            //probably array length checking/sorting of skills by id...
-            for (i = 0; i < 30; i++) {
-                writer.WriteUInt8(char.skills[i].points);
-            }
-            return [2 /*return*/, writer.ToArray()];
-        });
-    });
+async function writeSkills(char) {
+    const writer = new bitwriter_1.BitWriter();
+    writer.WriteString('if', 2); //0x0000 [skills header = 0x69, 0x66 "if"]
+    //probably array length checking/sorting of skills by id...
+    for (let i = 0; i < 30; i++) {
+        writer.WriteUInt8(char.skills[i].points);
+    }
+    return writer.ToArray();
 }
 exports.writeSkills = writeSkills;
-var SkillOffset = {
+const SkillOffset = {
     Amazon: 6,
     Sorceress: 36,
     Necromancer: 66,
@@ -20805,8 +20328,15 @@ var SkillOffset = {
 
 "use strict";
 
+//todo define types for these
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.EGemPosition = exports.Quality = exports.ItemType = exports.EItemEquipPosition = exports.EItemLocation = exports.IItemAltPosition = exports.EItemQuality = exports.EStashType = void 0;
+exports.EGemPosition = exports.EQuality = exports.ETypeId = exports.EEquippedId = exports.ELocationId = exports.EAltPositionId = exports.EItemQuality = exports.EStashType = exports.EGemSocketType = void 0;
+var EGemSocketType;
+(function (EGemSocketType) {
+    EGemSocketType[EGemSocketType["WeaponGloves"] = 0] = "WeaponGloves";
+    EGemSocketType[EGemSocketType["ArmorBootsHelmBelt"] = 1] = "ArmorBootsHelmBelt";
+    EGemSocketType[EGemSocketType["ShieldJewelry"] = 2] = "ShieldJewelry";
+})(EGemSocketType || (exports.EGemSocketType = EGemSocketType = {}));
 var EStashType;
 (function (EStashType) {
     EStashType[EStashType["shared"] = 0] = "shared";
@@ -20818,54 +20348,56 @@ var EItemQuality;
     EItemQuality[EItemQuality["exceptional"] = 1] = "exceptional";
     EItemQuality[EItemQuality["elite"] = 2] = "elite";
 })(EItemQuality || (exports.EItemQuality = EItemQuality = {}));
-var IItemAltPosition;
-(function (IItemAltPosition) {
-    IItemAltPosition[IItemAltPosition["Inventory"] = 1] = "Inventory";
-    IItemAltPosition[IItemAltPosition["Cube"] = 4] = "Cube";
-    IItemAltPosition[IItemAltPosition["Stash"] = 5] = "Stash";
-})(IItemAltPosition || (exports.IItemAltPosition = IItemAltPosition = {}));
-var EItemLocation;
-(function (EItemLocation) {
-    EItemLocation[EItemLocation["Stored"] = 0] = "Stored";
-    EItemLocation[EItemLocation["Equipped"] = 1] = "Equipped";
-    EItemLocation[EItemLocation["Belt"] = 2] = "Belt";
-    EItemLocation[EItemLocation["Cursor"] = 4] = "Cursor";
-    EItemLocation[EItemLocation["Socketed"] = 6] = "Socketed";
-})(EItemLocation || (exports.EItemLocation = EItemLocation = {}));
-var EItemEquipPosition;
-(function (EItemEquipPosition) {
-    EItemEquipPosition[EItemEquipPosition["Stored"] = 0] = "Stored";
-    EItemEquipPosition[EItemEquipPosition["Helm"] = 1] = "Helm";
-    EItemEquipPosition[EItemEquipPosition["Amulet"] = 2] = "Amulet";
-    EItemEquipPosition[EItemEquipPosition["Armor"] = 3] = "Armor";
-    EItemEquipPosition[EItemEquipPosition["RightHand"] = 4] = "RightHand";
-    EItemEquipPosition[EItemEquipPosition["LeftHand"] = 5] = "LeftHand";
-    EItemEquipPosition[EItemEquipPosition["RightRing"] = 6] = "RightRing";
-    EItemEquipPosition[EItemEquipPosition["LeftRing"] = 7] = "LeftRing";
-    EItemEquipPosition[EItemEquipPosition["Belt"] = 8] = "Belt";
-    EItemEquipPosition[EItemEquipPosition["Boots"] = 9] = "Boots";
-    EItemEquipPosition[EItemEquipPosition["Gloves"] = 10] = "Gloves";
-    EItemEquipPosition[EItemEquipPosition["RightHandSwitch"] = 11] = "RightHandSwitch";
-    EItemEquipPosition[EItemEquipPosition["LeftHandSwitch"] = 12] = "LeftHandSwitch";
-})(EItemEquipPosition || (exports.EItemEquipPosition = EItemEquipPosition = {}));
-var ItemType;
-(function (ItemType) {
-    ItemType[ItemType["Armor"] = 1] = "Armor";
-    ItemType[ItemType["Shield"] = 2] = "Shield";
-    ItemType[ItemType["Weapon"] = 3] = "Weapon";
-    ItemType[ItemType["Other"] = 4] = "Other";
-})(ItemType || (exports.ItemType = ItemType = {}));
-var Quality;
-(function (Quality) {
-    Quality[Quality["Low"] = 1] = "Low";
-    Quality[Quality["Normal"] = 2] = "Normal";
-    Quality[Quality["Superior"] = 3] = "Superior";
-    Quality[Quality["Magic"] = 4] = "Magic";
-    Quality[Quality["Set"] = 5] = "Set";
-    Quality[Quality["Rare"] = 6] = "Rare";
-    Quality[Quality["Unique"] = 7] = "Unique";
-    Quality[Quality["Crafted"] = 8] = "Crafted";
-})(Quality || (exports.Quality = Quality = {}));
+var EAltPositionId;
+(function (EAltPositionId) {
+    EAltPositionId[EAltPositionId["Inventory"] = 1] = "Inventory";
+    EAltPositionId[EAltPositionId["Cube"] = 4] = "Cube";
+    EAltPositionId[EAltPositionId["Stash"] = 5] = "Stash";
+})(EAltPositionId || (exports.EAltPositionId = EAltPositionId = {}));
+var ELocationId;
+(function (ELocationId) {
+    ELocationId[ELocationId["Stored"] = 0] = "Stored";
+    ELocationId[ELocationId["Equipped"] = 1] = "Equipped";
+    ELocationId[ELocationId["Belt"] = 2] = "Belt";
+    ELocationId[ELocationId["Cursor"] = 4] = "Cursor";
+    ELocationId[ELocationId["Socketed"] = 6] = "Socketed";
+})(ELocationId || (exports.ELocationId = ELocationId = {}));
+var EEquippedId;
+(function (EEquippedId) {
+    EEquippedId[EEquippedId["Stored"] = 0] = "Stored";
+    EEquippedId[EEquippedId["Helm"] = 1] = "Helm";
+    EEquippedId[EEquippedId["Amulet"] = 2] = "Amulet";
+    EEquippedId[EEquippedId["Armor"] = 3] = "Armor";
+    EEquippedId[EEquippedId["RightHand"] = 4] = "RightHand";
+    EEquippedId[EEquippedId["LeftHand"] = 5] = "LeftHand";
+    EEquippedId[EEquippedId["RightRing"] = 6] = "RightRing";
+    EEquippedId[EEquippedId["LeftRing"] = 7] = "LeftRing";
+    EEquippedId[EEquippedId["Belt"] = 8] = "Belt";
+    EEquippedId[EEquippedId["Boots"] = 9] = "Boots";
+    EEquippedId[EEquippedId["Gloves"] = 10] = "Gloves";
+    EEquippedId[EEquippedId["RightHandSwitch"] = 11] = "RightHandSwitch";
+    EEquippedId[EEquippedId["LeftHandSwitch"] = 12] = "LeftHandSwitch";
+    EEquippedId[EEquippedId["Unknown1"] = 13] = "Unknown1";
+    EEquippedId[EEquippedId["Unknown2"] = 14] = "Unknown2";
+})(EEquippedId || (exports.EEquippedId = EEquippedId = {}));
+var ETypeId;
+(function (ETypeId) {
+    ETypeId[ETypeId["Armor"] = 1] = "Armor";
+    ETypeId[ETypeId["Shield"] = 2] = "Shield";
+    ETypeId[ETypeId["Weapon"] = 3] = "Weapon";
+    ETypeId[ETypeId["Other"] = 4] = "Other";
+})(ETypeId || (exports.ETypeId = ETypeId = {}));
+var EQuality;
+(function (EQuality) {
+    EQuality[EQuality["Low"] = 1] = "Low";
+    EQuality[EQuality["Normal"] = 2] = "Normal";
+    EQuality[EQuality["Superior"] = 3] = "Superior";
+    EQuality[EQuality["Magic"] = 4] = "Magic";
+    EQuality[EQuality["Set"] = 5] = "Set";
+    EQuality[EQuality["Rare"] = 6] = "Rare";
+    EQuality[EQuality["Unique"] = 7] = "Unique";
+    EQuality[EQuality["Crafted"] = 8] = "Crafted";
+})(EQuality || (exports.EQuality = EQuality = {}));
 var EGemPosition;
 (function (EGemPosition) {
     EGemPosition["Weapon"] = "weapon";
@@ -20885,9 +20417,295 @@ var EGemPosition;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.nameRegex = void 0;
+exports.shift = exports.numValues = exports.getValueTooltip = exports.isSkill = exports.isClassSkillTab = exports.isClass = exports.getMinValue = exports.getMaxValue = exports.getValueBitSize = exports.getItemTypeDef = exports.hexStringToArrayBuffer = exports.arrayBufferToHexString = exports.arrayBufferToBase64String = exports.b64StringToArrayBuffer = exports.swapObjectKeyValue = exports.nameRegex = void 0;
 // Character name must be 2-15 characters, with at most once "-" or "_" character not placed at first or last.
 exports.nameRegex = /^[A-Za-z](?=.{0,14}$)[A-Za-z]*[A-Za-z\-_][A-Za-z]+$/;
+function swapObjectKeyValue(obj) {
+    const swappedObj = {};
+    for (const key in obj) {
+        swappedObj[obj[key]] = key;
+    }
+    return swappedObj;
+}
+exports.swapObjectKeyValue = swapObjectKeyValue;
+// Convert a base-64 encoded string to an ArrayBuffer of char codes
+function b64StringToArrayBuffer(base64string) {
+    if (typeof window !== 'undefined') {
+        // Browser version
+        const string = window.atob(base64string);
+        const bytes = new Uint8Array(string.length);
+        for (let i = 0; i < string.length; i++) {
+            bytes[i] = string.charCodeAt(i);
+        }
+        return bytes.buffer;
+    }
+    else {
+        // NodeJS version
+        return Buffer.from(base64string, 'base64').buffer;
+    }
+}
+exports.b64StringToArrayBuffer = b64StringToArrayBuffer;
+// Convert an ArrayBuffer of char codes to a base-64 encoded string
+function arrayBufferToBase64String(arrayBuffer) {
+    if (typeof window !== 'undefined') {
+        // Browser version
+        let str = '';
+        const bytes = new Uint8Array(arrayBuffer);
+        for (let i = 0; i < bytes.byteLength; i++) {
+            str += String.fromCharCode(bytes[i]);
+        }
+        return window.btoa(str);
+    }
+    else {
+        // NodeJS version
+        return Buffer.from(arrayBuffer).toString('base64');
+    }
+}
+exports.arrayBufferToBase64String = arrayBufferToBase64String;
+// Convert an ArrayBuffer to an hex string (each 2char is the hexa representation a byte)
+function arrayBufferToHexString(arrayBuffer) {
+    return [...new Uint8Array(arrayBuffer)] // To normal array
+        .map((byte) => byte.toString(16).padStart(2, '0'))
+        .join('');
+    // return Buffer.from(arrayBuffer).toString("hex"); // Only for NodeJS
+}
+exports.arrayBufferToHexString = arrayBufferToHexString;
+// Convert an hex string (each 2char is the hexa representation a byte) to an ArrayBuffer
+function hexStringToArrayBuffer(hexStr) {
+    const bytesHexValues = hexStr.match(/[\da-f]{2}/gi);
+    let bytes = [];
+    if (bytesHexValues) {
+        bytes = bytesHexValues.map((hex) => parseInt(hex, 16));
+    }
+    const typedArray = new Uint8Array(bytes);
+    return typedArray.buffer;
+    // return Buffer.from(hexStr, "hex").buffer; // Only for NodeJS
+}
+exports.hexStringToArrayBuffer = hexStringToArrayBuffer;
+function getItemTypeDef(item, constants) {
+    if (constants.armor_items && constants.armor_items[item.type]) {
+        return constants.armor_items[item.type];
+    }
+    else if (constants.weapon_items && constants.weapon_items[item.type]) {
+        return constants.weapon_items[item.type];
+    }
+    else if (constants.other_items && constants.other_items[item.type]) {
+        return constants.other_items[item.type];
+    }
+    return null;
+}
+exports.getItemTypeDef = getItemTypeDef;
+function getValueBitSize(itemStatDef, valIdx) {
+    // 0-indexed
+    let bitSize = itemStatDef.sB;
+    switch (itemStatDef.e) {
+        case 1: // Logic is reversed: Param is the value, and values are the Params
+            if (valIdx == 1 && itemStatDef.sP)
+                bitSize = itemStatDef.sP;
+            break;
+        case 2: // 2 Params (6bits skill level + 10bits skill ID) + 1 Value (7bits chance)
+            if (valIdx == 0)
+                bitSize = 6;
+            if (valIdx == 1)
+                bitSize = 10;
+            break;
+        case 3: // 2 Params (6bits skill level + 10bits skill ID) + 2 Values (8bits current charges, 8bits max charges)
+            if (valIdx == 0)
+                bitSize = 6;
+            if (valIdx == 1)
+                bitSize = 10;
+            if (valIdx == 2)
+                bitSize = 8;
+            if (valIdx == 3)
+                bitSize = 8;
+            break;
+        default: // Undefined: optional (sP bits param) + sB bits value
+            if (valIdx == 0 && itemStatDef.sP)
+                bitSize = itemStatDef.sP;
+            break;
+    }
+    return bitSize;
+}
+exports.getValueBitSize = getValueBitSize;
+function getMaxValue(statId, valIdx, magical_properties) {
+    // 0-indexed
+    let stat = magical_properties[statId];
+    if (stat.np && valIdx < stat.np) {
+        // Stat is a succession of np values (ex: coldmindam > coldmaxdam > coldlength)
+        stat = magical_properties[statId + valIdx];
+    }
+    const bitSize = getValueBitSize(stat, valIdx);
+    const add = stat.sA ? stat.sA : 0;
+    return shift(1, bitSize) - 1 - add;
+    // let maxValue = stat.sS ? shift(1, stat.sB - 1) - 1 - add : shift(1, stat.sB) - 1 - add;
+    // return maxValue
+}
+exports.getMaxValue = getMaxValue;
+function getMinValue(statId, valIdx, magical_properties) {
+    //for the stat to be present need value > 0
+    let stat = magical_properties[statId];
+    if (valIdx > 0) {
+        if (stat.np && valIdx < stat.np) {
+            // Stat is a succession of np values (ex: coldmindam > coldmaxdam > coldlength)
+            stat = magical_properties[statId + valIdx];
+        }
+        // TODO: encode
+    }
+    const add = stat.sA ? stat.sA : 0;
+    return -add;
+    // let minValue = stat.sS ? -1 * shift(1, stat.sB - 1) - add : -add;
+    // return minValue
+}
+exports.getMinValue = getMinValue;
+function isClass(statId, valueIdx, magical_properties) {
+    // Is it a combobox with choice among 7 classes ?
+    const stat = magical_properties[statId];
+    if (stat.dF == 14 && valueIdx == 2) {
+        return true;
+    }
+    if (stat.dF == 13 && valueIdx == 1) {
+        return true;
+    }
+    return false;
+}
+exports.isClass = isClass;
+function isClassSkillTab(statId, valueIdx, magical_properties) {
+    // Is it a combobox with choice among 3 tabs ?
+    const stat = magical_properties[statId];
+    if (stat.dF == 14 && valueIdx == 1) {
+        return true;
+    }
+    return false;
+}
+exports.isClassSkillTab = isClassSkillTab;
+function isSkill(statId, valueIdx, magical_properties) {
+    const stat = magical_properties[statId];
+    if (stat.dF == 15 || stat.dF == 24) {
+        // Similar to e=2 or 3
+        return valueIdx == 2;
+    }
+    if (stat.dF == 16) {
+        return valueIdx == 1;
+    }
+    if (stat.dF == 16 || stat.dF == 27 || stat.dF == 28) {
+        // Aura when equipped or Similar to e=1
+        return valueIdx == 1;
+    }
+    return false;
+}
+exports.isSkill = isSkill;
+function getValueTooltip(statId, valueIdx, magical_properties) {
+    const stat = magical_properties[statId];
+    if (stat.dF == 14) {
+        if (valueIdx == 1)
+            return 'Skill Tab';
+        if (valueIdx == 2)
+            return 'Class';
+        if (valueIdx == 3)
+            return 'Bonus Level';
+    }
+    else if (stat.dF == 13) {
+        if (valueIdx == 1)
+            return 'Class';
+        if (valueIdx == 2)
+            return 'Bonus Level';
+    }
+    else if (stat.sP) {
+        if (stat.e == 3) {
+            if (valueIdx == 1)
+                return 'Skill Level';
+            if (valueIdx == 2)
+                return 'Skill';
+            if (valueIdx == 3)
+                return 'Current charges';
+            if (valueIdx == 4)
+                return 'Max charges';
+            return valueIdx == 2;
+        }
+        else if (stat.e == 2) {
+            if (valueIdx == 1)
+                return 'Skill Level';
+            if (valueIdx == 2)
+                return 'Skill';
+            if (valueIdx == 3)
+                return 'Chances to Cast';
+            return valueIdx == 2;
+        }
+        else {
+            if (valueIdx == 1)
+                return 'Skill';
+            if (valueIdx == 2)
+                return 'Skill Level';
+        }
+    }
+    else if (stat.np && stat.np > 1) {
+        if (valueIdx == 1)
+            return stat.s === 'poisonmindam' ? 'Min (xLength/256)' : 'Min';
+        if (valueIdx == 2)
+            return 'Max';
+        if (valueIdx == 3)
+            return 'Length in frames (25frames = 1s)';
+    }
+    return '';
+}
+exports.getValueTooltip = getValueTooltip;
+function numValues(statId, magical_properties) {
+    // 1 - +[value] [string1]
+    // 2 - [value]% [string1]
+    // 3 - [value] [string1]
+    // 4 - +[value]% [string1]
+    // 5 - [value*100/128]% [string1]
+    // 6 - +[value] [string1] [string2]
+    // 7 - [value]% [string1] [string2]
+    // 8 - +[value]% [string1] [string2]
+    // 9 - [value] [string1] [string2]
+    // 10 - [value*100/128]% [string1] [string2]
+    // 11 - Repairs 1 Durability In [100 / value] Seconds
+    // 12 - +[value] [string1]
+    // 13 - +[value] to [class] Skill Levels
+    // 14 - +[value] to [skilltab] Skill Levels ([class] Only)
+    // 15 - [chance]% to case [slvl] [skill] on [event]
+    // 16 - Level [sLvl] [skill] Aura When Equipped
+    // 17 - [value] [string1] (Increases near [time])
+    // 18 - [value]% [string1] (Increases near [time])
+    // 19 - this is used by stats that use Blizzard's sprintf implementation (if you don't know what that is, it won't be of interest to you eitherway I guess), look at how prismatic is setup, the string is the format that gets passed to their sprintf spinoff.
+    // 20 - [value * -1]% [string1]
+    // 21 - [value * -1] [string1]
+    // 22 - [value]% [string1] [montype] (warning: this is bugged in vanilla and doesn't work properly, see CE forum)
+    // 23 - [value]% [string1] [monster]
+    // 24 - used for charges, we all know how that desc looks
+    // 25 - not used by vanilla, present in the code but I didn't test it yet
+    // 26 - not used by vanilla, present in the code but I didn't test it yet
+    // 27 - +[value] to [skill] ([class] Only)
+    // 28 - +[value] to [skill]
+    const statDef = magical_properties[statId];
+    if (statDef.np) {
+        return statDef.np;
+    }
+    if (statDef.dF == 24 || statDef.e == 3) {
+        return 4;
+    }
+    if (statDef.dF == 14 || statDef.e == 2) {
+        return 3;
+    }
+    if (statDef.dF == 13 ||
+        statDef.dF == 16 ||
+        (statDef.dF >= 22 && statDef.dF <= 23) ||
+        (statDef.dF >= 27 && statDef.dF <= 28) ||
+        statDef.sP) {
+        return 2;
+    }
+    if ((statDef.dF >= 1 && statDef.dF <= 12) || (statDef.dF >= 17 && statDef.dF <= 18) || (statDef.dF >= 20 && statDef.dF <= 21)) {
+        return 1;
+    }
+    // Mostly dF 19 (Blizzard's sprintf implementation)
+    return 1;
+}
+exports.numValues = numValues;
+function shift(number, shift) {
+    return number * Math.pow(2, shift);
+}
+exports.shift = shift;
 
 
 /***/ }),
@@ -20902,60 +20720,75 @@ exports.nameRegex = /^[A-Za-z](?=.{0,14}$)[A-Za-z]*[A-Za-z\-_][A-Za-z]+$/;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.writeHeader = exports.readHeader = void 0;
-var bitreader_1 = __webpack_require__(/*! ../../binary/bitreader */ "./src/binary/bitreader.ts");
-var bitwriter_1 = __webpack_require__(/*! ../../binary/bitwriter */ "./src/binary/bitwriter.ts");
-var difficulties = ["normal", "nm", "hell"];
+const bitreader_1 = __webpack_require__(/*! ../../binary/bitreader */ "./src/binary/bitreader.ts");
+const bitwriter_1 = __webpack_require__(/*! ../../binary/bitwriter */ "./src/binary/bitwriter.ts");
+const difficulties = ['normal', 'nm', 'hell'];
 function readHeader(char, reader, constants) {
-    var _a, _b, _c, _d;
     char.header.filesize = reader.ReadUInt32(); //0x0008
-    char.header.checksum = reader.ReadUInt32().toString(16).padStart(8, "0"); //0x000c
-    reader.SkipBytes(4); //0x0010 (previously active_arms ?)
+    char.header.checksum = reader.ReadUInt32().toString(16).padStart(8, '0'); //0x000c
+    char.header.unk0016 = reader.ReadArray(4);
+    // reader.SkipBytes(4); //0x0010 (previously active_arms ?)
     if (char.header.version > 0x61) {
         // In version >97, char name is found at a later position
+        char.header.unk0020 = reader.ReadArray(16);
         reader.SeekByte(267);
     }
-    char.header.name = reader.ReadString(16).replace(/\0/g, ""); //0x0014 (or 0x010b if version>97)
+    char.header.name = reader.ReadString(16).replace(/\0/g, ''); //0x0014 (or 0x010b if version>97)
     if (char.header.version > 0x61) {
-        // In version >97, back to the header start
+        // In version >97, after reading the char name at a later position, return to byte 36
         reader.SeekByte(36);
     }
     char.header.status = _readStatus(reader.ReadUInt8()); //0x0024
     char.header.progression = reader.ReadUInt8(); //0x0025
     char.header.active_arms = reader.ReadUInt16(); //0x0026 [unk = 0x0, 0x0]
     char.header.class = constants.classes[reader.ReadUInt8()].n; //0x0028
-    reader.SkipBytes(2); //0x0029 [unk = 0x10, 0x1E]
+    char.header.unk0041 = reader.ReadArray(2);
+    // reader.SkipBytes(2); //0x0029 [unk = 0x10, 0x1E]
     char.header.level = reader.ReadUInt8(); //0x002b
     char.header.created = reader.ReadUInt32(); //0x002c
     char.header.last_played = reader.ReadUInt32(); //0x0030
-    reader.SkipBytes(4); //0x0034 [unk = 0xff, 0xff, 0xff, 0xff]
+    char.header.unk0052 = reader.ReadArray(4);
+    // reader.SkipBytes(4); //0x0034 [unk = 0xff, 0xff, 0xff, 0xff]
     char.header.assigned_skills = _readAssignedSkills(reader.ReadArray(64), constants); //0x0038
-    char.header.left_skill = (_a = constants.skills[reader.ReadUInt32()]) === null || _a === void 0 ? void 0 : _a.s; //0x0078
-    char.header.right_skill = (_b = constants.skills[reader.ReadUInt32()]) === null || _b === void 0 ? void 0 : _b.s; //0x007c
-    char.header.left_swap_skill = (_c = constants.skills[reader.ReadUInt32()]) === null || _c === void 0 ? void 0 : _c.s; //0x0080
-    char.header.right_swap_skill = (_d = constants.skills[reader.ReadUInt32()]) === null || _d === void 0 ? void 0 : _d.s; //0x0084
+    char.header.left_skill = constants.skills[reader.ReadUInt32()]?.s; //0x0078
+    char.header.right_skill = constants.skills[reader.ReadUInt32()]?.s; //0x007c
+    char.header.left_swap_skill = constants.skills[reader.ReadUInt32()]?.s; //0x0080
+    char.header.right_swap_skill = constants.skills[reader.ReadUInt32()]?.s; //0x0084
     char.header.menu_appearance = _readCharMenuAppearance(reader.ReadArray(32) /*, constants*/); //0x0088 [char menu appearance]
     char.header.difficulty = _readDifficulty(reader.ReadArray(3)); //0x00a8
     char.header.map_id = reader.ReadUInt32(); //0x00ab
-    reader.SkipBytes(2); //0x00af [unk = 0x0, 0x0]
+    char.header.unk0175 = reader.ReadArray(2);
+    // reader.SkipBytes(2); //0x00af [unk = 0x0, 0x0]
     char.header.dead_merc = reader.ReadUInt16(); //0x00b1
     char.header.merc_id = reader.ReadUInt32().toString(16); //0x00b3
     char.header.merc_name_id = reader.ReadUInt16(); //0x00b7
     char.header.merc_type = reader.ReadUInt16(); //0x00b9
     char.header.merc_experience = reader.ReadUInt32(); //0x00bb
-    reader.SkipBytes(144); //0x00bf [unk]
-    reader.SkipBytes(4); //0x014f [quests header identifier = 0x57, 0x6f, 0x6f, 0x21 "Woo!"]
-    reader.SkipBytes(4); //0x0153 [version = 0x6, 0x0, 0x0, 0x0]
-    reader.SkipBytes(2); //0x0153 [quests header length = 0x2a, 0x1]
+    char.header.unk0191 = reader.ReadArray(144);
+    // reader.SkipBytes(144); //0x00bf [unk]
+    char.header.unk0335 = reader.ReadArray(4);
+    // reader.SkipBytes(4); //0x014f [quests header identifier = 0x57, 0x6f, 0x6f, 0x21 "Woo!"]
+    char.header.unk0339 = reader.ReadArray(4);
+    // reader.SkipBytes(4); //0x0153 [version = 0x6, 0x0, 0x0, 0x0]
+    char.header.unk0343 = reader.ReadArray(2);
+    // reader.SkipBytes(2); //0x0157 [quests header length = 0x2a, 0x1]
     char.header.quests_normal = _readQuests(reader.ReadArray(96)); //0x0159
     char.header.quests_nm = _readQuests(reader.ReadArray(96)); //0x01b9
     char.header.quests_hell = _readQuests(reader.ReadArray(96)); //0x0219
-    reader.SkipBytes(2); //0x0279 [waypoint header identifier = 0x57, 0x53 "WS"]
-    reader.SkipBytes(4); //0x027b [waypoint header version = 0x1, 0x0, 0x0, 0x0]
-    reader.SkipBytes(2); //0x027f [waypoint header length = 0x50, 0x0]
+    char.header.unk0633 = reader.ReadArray(2);
+    // reader.SkipBytes(2); //0x0279 [waypoint header identifier = 0x57, 0x53 "WS"]
+    char.header.unk0635 = reader.ReadArray(4);
+    // reader.SkipBytes(4); //0x027b [waypoint header version = 0x1, 0x0, 0x0, 0x0]
+    char.header.unk0639 = reader.ReadArray(2);
+    // reader.SkipBytes(2); //0x027f [waypoint header length = 0x50, 0x0]
     char.header.waypoints = _readWaypointData(reader.ReadArray(0x48)); //0x0281
-    reader.SkipBytes(2); //0x02c9 [npc header identifier  = 0x01, 0x77 ".w"]
-    reader.SkipBytes(2); //0x02ca [npc header length = 0x34]
-    char.header.npcs = _readNPCData(reader.ReadArray(0x30)); //0x02cc
+    char.header.unk0713 = reader.ReadArray(2);
+    // reader.SkipBytes(2); //0x02c9 [npc header identifier  = 0x01, 0x77 ".w"]
+    char.header.unk0715 = reader.ReadArray(2);
+    // reader.SkipBytes(2); //0x02ca [npc header length = 0x34]
+    const npcBytes = reader.ReadArray(0x30);
+    char.header.raw_npcs = npcBytes;
+    char.header.npcs = _readNPCData(npcBytes); //0x02cc
 }
 exports.readHeader = readHeader;
 function writeHeader(char, writer, constants) {
@@ -21006,12 +20839,12 @@ function writeHeader(char, writer, constants) {
             .WriteUInt32(0x1); //0x014b [unk = 0x1, 0x0, 0x0, 0x0]
     }
     writer
-        .WriteString("Woo!", 4) //0x014f [quests = 0x57, 0x6f, 0x6f, 0x21 "Woo!"]
+        .WriteString('Woo!', 4) //0x014f [quests = 0x57, 0x6f, 0x6f, 0x21 "Woo!"]
         .WriteArray(new Uint8Array([0x06, 0x00, 0x00, 0x00, 0x2a, 0x01])) //0x0153 [unk = 0x6, 0x0, 0x0, 0x0, 0x2a, 0x1]
         .WriteArray(_writeQuests(char.header.quests_normal)) //0x0159
         .WriteArray(_writeQuests(char.header.quests_nm)) //0x01b9
         .WriteArray(_writeQuests(char.header.quests_hell)) //0x0219
-        .WriteString("WS", 2) //0x0279 [waypoint data = 0x57, 0x53 "WS"]
+        .WriteString('WS', 2) //0x0279 [waypoint data = 0x57, 0x53 "WS"]
         .WriteArray(new Uint8Array([0x01, 0x00, 0x00, 0x00, 0x50, 0x00])) //0x027b [unk = 0x1, 0x0, 0x0, 0x0, 0x50, 0x0]
         .WriteArray(_writeWaypointData(char.header.waypoints)) //0x0281
         .WriteArray(new Uint8Array([0x01, 0x77])) //0x02c9 [npc header = 0x01, 0x77 ".w"]
@@ -21022,27 +20855,30 @@ exports.writeHeader = writeHeader;
 function _classId(name, constants) {
     if (!name)
         return -1;
-    return constants.classes.findIndex(function (c) { return c && c.n == name; });
+    return constants.classes.findIndex((c) => c && c.n == name);
 }
 function _skillId(name, constants) {
     //default to "attack" if empty string or can't find spellname.
-    if (name === "")
+    if (name === '')
         return 0;
     if (!name)
         return -1;
-    var idx = constants.skills.findIndex(function (s) { return s && s.s == name; });
+    const idx = constants.skills.findIndex((s) => s && s.s == name);
     return idx >= 0 ? idx : 0;
 }
 function _readStatus(byte) {
-    var status = {};
+    const status = {};
+    status.unk0 = (byte & 1) === 1;
+    status.unk1 = ((byte >>> 1) & 1) === 1;
     status.hardcore = ((byte >>> 2) & 1) === 1;
     status.died = ((byte >>> 3) & 1) === 1;
     status.expansion = ((byte >>> 5) & 1) === 1;
     status.ladder = ((byte >>> 6) & 1) === 1;
+    status.unk7 = ((byte >>> 7) & 1) === 1;
     return status;
 }
 function _writeStatus(status) {
-    var arr = new Uint8Array(1);
+    const arr = new Uint8Array(1);
     arr[0] |= status.hardcore ? 1 << 2 : 0;
     arr[0] |= status.died ? 1 << 3 : 0;
     arr[0] |= status.expansion ? 1 << 5 : 0;
@@ -21050,10 +20886,10 @@ function _writeStatus(status) {
     return arr;
 }
 function _readCharMenuAppearance(bytes /*, constants: types.IConstantData*/) {
-    var appearance = {};
-    var reader = new bitreader_1.BitReader(bytes);
-    var graphics = reader.ReadArray(16);
-    var tints = reader.ReadArray(16);
+    const appearance = {};
+    const reader = new bitreader_1.BitReader(bytes);
+    const graphics = reader.ReadArray(16);
+    const tints = reader.ReadArray(16);
     appearance.head = { graphic: graphics[0], tint: tints[0] };
     appearance.torso = { graphic: graphics[1], tint: tints[1] };
     appearance.legs = { graphic: graphics[2], tint: tints[2] };
@@ -21073,9 +20909,9 @@ function _readCharMenuAppearance(bytes /*, constants: types.IConstantData*/) {
     return appearance;
 }
 function _writeCharMenuAppearance(appearance /*, constants: types.IConstantData*/) {
-    var writer = new bitwriter_1.BitWriter(32);
+    const writer = new bitwriter_1.BitWriter(32);
     writer.length = 32 * 8;
-    var graphics = [];
+    const graphics = [];
     graphics.push(appearance && appearance.head ? appearance.head.graphic : 0);
     graphics.push(appearance && appearance.torso ? appearance.torso.graphic : 0);
     graphics.push(appearance && appearance.legs ? appearance.legs.graphic : 0);
@@ -21092,11 +20928,10 @@ function _writeCharMenuAppearance(appearance /*, constants: types.IConstantData*
     graphics.push(appearance && appearance.special6 ? appearance.special6.graphic : 0);
     graphics.push(appearance && appearance.special7 ? appearance.special7.graphic : 0);
     graphics.push(appearance && appearance.special8 ? appearance.special8.graphic : 0);
-    for (var _i = 0, graphics_1 = graphics; _i < graphics_1.length; _i++) {
-        var g = graphics_1[_i];
+    for (const g of graphics) {
         writer.WriteUInt8(g);
     }
-    var tints = [];
+    const tints = [];
     tints.push(appearance && appearance.head ? appearance.head.tint : 0);
     tints.push(appearance && appearance.torso ? appearance.torso.tint : 0);
     tints.push(appearance && appearance.legs ? appearance.legs.tint : 0);
@@ -21113,18 +20948,17 @@ function _writeCharMenuAppearance(appearance /*, constants: types.IConstantData*
     tints.push(appearance && appearance.special6 ? appearance.special6.tint : 0);
     tints.push(appearance && appearance.special7 ? appearance.special7.tint : 0);
     tints.push(appearance && appearance.special8 ? appearance.special8.tint : 0);
-    for (var _a = 0, tints_1 = tints; _a < tints_1.length; _a++) {
-        var t = tints_1[_a];
+    for (const t of tints) {
         writer.WriteUInt8(t);
     }
     return writer.ToArray();
 }
 function _readAssignedSkills(bytes, constants) {
-    var skills = [];
-    var reader = new bitreader_1.BitReader(bytes);
-    for (var i = 0; i < 16; i++) {
-        var skillId = reader.ReadUInt32();
-        var skill = constants.skills[skillId];
+    const skills = [];
+    const reader = new bitreader_1.BitReader(bytes);
+    for (let i = 0; i < 16; i++) {
+        const skillId = reader.ReadUInt32();
+        const skill = constants.skills[skillId];
         if (skill) {
             skills.push(skill.s);
         }
@@ -21132,11 +20966,11 @@ function _readAssignedSkills(bytes, constants) {
     return skills;
 }
 function _writeAssignedSkills(skills, constants) {
-    var writer = new bitwriter_1.BitWriter(64);
+    const writer = new bitwriter_1.BitWriter(64);
     writer.length = 64 * 8;
     skills = skills || [];
-    for (var i = 0; i < 16; i++) {
-        var skillId = _skillId(skills[i], constants);
+    for (let i = 0; i < 16; i++) {
+        const skillId = _skillId(skills[i], constants);
         if (skillId > 0) {
             writer.WriteUInt32(skillId);
         }
@@ -21147,14 +20981,14 @@ function _writeAssignedSkills(skills, constants) {
     return writer.ToArray();
 }
 function _readDifficulty(bytes) {
-    var difficulty = {};
+    const difficulty = {};
     difficulty.Normal = bytes[0];
     difficulty.Nightmare = bytes[1];
     difficulty.Hell = bytes[2];
     return difficulty;
 }
 function _writeDifficulty(difficulty) {
-    var writer = new bitwriter_1.BitWriter(3);
+    const writer = new bitwriter_1.BitWriter(3);
     writer.length = 3 * 8;
     writer.WriteUInt8(difficulty.Normal);
     writer.WriteUInt8(difficulty.Nightmare);
@@ -21162,8 +20996,8 @@ function _writeDifficulty(difficulty) {
     return writer.ToArray();
 }
 function _readQuests(bytes) {
-    var quests = {};
-    var reader = new bitreader_1.BitReader(bytes);
+    const quests = {};
+    const reader = new bitreader_1.BitReader(bytes);
     quests.act_i = {};
     quests.act_i.introduced = reader.ReadUInt16() === 0x1; //0x0000
     quests.act_i.den_of_evil = _readQuest(reader.ReadArray(2)); //0x0002
@@ -21197,23 +21031,28 @@ function _readQuests(bytes) {
     quests.act_iv.terrors_end = _readQuest(reader.ReadArray(2));
     quests.act_iv.hellforge = _readQuest(reader.ReadArray(2));
     quests.act_iv.completed = reader.ReadUInt16() === 0x1; //0x0038
-    reader.SkipBytes(10); //0x003a
+    quests.unk058 = reader.ReadArray(10);
+    // reader.SkipBytes(10); //0x003a
     quests.act_v = {};
-    quests.act_v.introduced = reader.ReadUInt16() === 0x1;
+    quests.act_v.introduced = reader.ReadUInt16() === 0x1; // 0x0044
     quests.act_v.siege_on_harrogath = _readQuest(reader.ReadArray(2)); //0x0046
-    quests.act_v.rescue_on_mount_arreat = _readQuest(reader.ReadArray(2));
-    quests.act_v.prison_of_ice = _readQuest(reader.ReadArray(2));
-    quests.act_v.betrayal_of_harrogath = _readQuest(reader.ReadArray(2));
-    quests.act_v.rite_of_passage = _readQuest(reader.ReadArray(2));
-    quests.act_v.eve_of_destruction = _readQuest(reader.ReadArray(2));
-    quests.act_v.completed = reader.ReadUInt16() === 0x1;
-    reader.SkipBytes(12);
+    quests.act_v.rescue_on_mount_arreat = _readQuest(reader.ReadArray(2)); //0x0048
+    quests.act_v.prison_of_ice = _readQuest(reader.ReadArray(2)); //0x004a
+    quests.act_v.betrayal_of_harrogath = _readQuest(reader.ReadArray(2)); //0x004c
+    quests.act_v.rite_of_passage = _readQuest(reader.ReadArray(2)); //0x004e
+    quests.act_v.eve_of_destruction = _readQuest(reader.ReadArray(2)); //0x0050
+    const act_5_completion_flag = reader.ReadUInt16(); //0x0052
+    quests.act_v.completed = (act_5_completion_flag & 1) === 1;
+    quests.act_v.reset_consumed = ((act_5_completion_flag >> 1) & 1) !== 1;
+    quests.unk084 = reader.ReadArray(12); //0x0054
+    // reader.SkipBytes(12); // 0x0054
     return quests; //sizeof [0x0060]
 }
 function _writeQuests(quests) {
-    var writer = new bitwriter_1.BitWriter(96);
+    const writer = new bitwriter_1.BitWriter(96);
     writer.length = 96 * 8;
-    var difficultyCompleted = +quests.act_v.completed || +quests.act_v.eve_of_destruction.b0_is_completed;
+    const act_5_completion_flag = (quests.act_v.completed ? 1 : 0) | (quests.act_v.reset_consumed ? 0 : 2);
+    const difficultyCompleted = +quests.act_v.completed || +quests.act_v.eve_of_destruction.b0_is_completed;
     return writer
         .WriteUInt16(+quests.act_i.introduced)
         .WriteArray(_writeQuest(quests.act_i.den_of_evil))
@@ -21253,14 +21092,14 @@ function _writeQuests(quests) {
         .WriteArray(_writeQuest(quests.act_v.betrayal_of_harrogath))
         .WriteArray(_writeQuest(quests.act_v.rite_of_passage))
         .WriteArray(_writeQuest(quests.act_v.eve_of_destruction))
-        .WriteUInt8(difficultyCompleted)
+        .WriteUInt8(act_5_completion_flag)
         .WriteUInt8(difficultyCompleted ? 0x80 : 0x0) //is this right?
         .WriteArray(new Uint8Array(12))
         .ToArray();
 }
 function _readQuest(bytes) {
-    var quest = {};
-    var reader = new bitreader_1.BitReader(bytes);
+    const quest = {};
+    const reader = new bitreader_1.BitReader(bytes);
     quest.b0_is_completed = reader.ReadBit() === 1;
     quest.b1_is_requirement_completed = reader.ReadBit() === 1;
     quest.b2_is_received = reader.ReadBit() === 1;
@@ -21291,7 +21130,7 @@ function _readQuest(bytes) {
     return quest;
 }
 function _writeQuest(quest) {
-    var writer = new bitwriter_1.BitWriter(2);
+    const writer = new bitwriter_1.BitWriter(2);
     writer.length = 2 * 8;
     writer.WriteBit(+quest.b0_is_completed);
     writer.WriteBit(+quest.b1_is_requirement_completed);
@@ -21312,16 +21151,16 @@ function _writeQuest(quest) {
     return writer.ToArray();
 }
 function _readWaypointData(bytes) {
-    var waypoints = {};
-    var reader = new bitreader_1.BitReader(bytes);
-    for (var i = 0; i < difficulties.length; i++) {
-        waypoints[difficulties[i]] = _readWaypoints(reader.ReadArray(24));
-    }
+    const waypoints = {};
+    const reader = new bitreader_1.BitReader(bytes);
+    waypoints.normal = _readWaypoints(reader.ReadArray(24));
+    waypoints.nm = _readWaypoints(reader.ReadArray(24));
+    waypoints.hell = _readWaypoints(reader.ReadArray(24));
     return waypoints;
 }
 function _readWaypoints(bytes) {
-    var waypoints = {};
-    var reader = new bitreader_1.BitReader(bytes);
+    const waypoints = {};
+    const reader = new bitreader_1.BitReader(bytes);
     reader.SkipBytes(2); //unk = 0x2, 0x
     waypoints.act_i = {};
     waypoints.act_i.rogue_encampement = reader.ReadBit() === 1;
@@ -21367,20 +21206,28 @@ function _readWaypoints(bytes) {
     waypoints.act_v.frozen_tundra = reader.ReadBit() === 1;
     waypoints.act_v.the_ancients_way = reader.ReadBit() === 1;
     waypoints.act_v.worldstone_keep_lvl_2 = reader.ReadBit() === 1;
-    reader.Align().SkipBytes(17);
+    const prevOffset = reader.offset;
+    reader.Align();
+    const newOffset = reader.offset;
+    waypoints.unk_align = reader.bits.subarray(prevOffset, newOffset);
+    waypoints.unk_last = reader.ReadArray(17);
+    // reader.SkipBytes(17);
     return waypoints;
 }
 function _writeWaypointData(waypoints) {
-    var writer = new bitwriter_1.BitWriter(72);
+    const writer = new bitwriter_1.BitWriter(72);
     writer.length = 72 * 8;
-    for (var i = 0; i < difficulties.length; i++) {
-        var w = waypoints != null ? waypoints[difficulties[i]] : null;
-        writer.WriteArray(_writeWaypoints(w));
-    }
+    // Somehow a test with simple.json doesn't have waypoint data, so check for null
+    if (waypoints && waypoints.normal)
+        writer.WriteArray(_writeWaypoints(waypoints.normal));
+    if (waypoints && waypoints.nm)
+        writer.WriteArray(_writeWaypoints(waypoints.nm));
+    if (waypoints && waypoints.hell)
+        writer.WriteArray(_writeWaypoints(waypoints.hell));
     return writer.ToArray();
 }
 function _writeWaypoints(waypoints) {
-    var writer = new bitwriter_1.BitWriter(24);
+    const writer = new bitwriter_1.BitWriter(24);
     writer.length = 24 * 8;
     writer.WriteArray(new Uint8Array([0x02, 0x01]));
     if (waypoints) {
@@ -21440,14 +21287,15 @@ function _writeWaypoints(waypoints) {
         writer.WriteArray(new Uint8Array([0xff, 0xff, 0xff, 0xff, 0x7f]));
         //_writeBits(writer, 0x3fffffffff, start, 0, 38);
     }
-    writer.Align().WriteArray(new Uint8Array(17));
+    writer.Align();
+    writer.WriteArray(new Uint8Array(17));
     return writer.ToArray();
 }
 function _readNPCData(bytes) {
-    var npcs = { normal: {}, nm: {}, hell: {} };
-    var reader = new bitreader_1.BitReader(bytes);
-    for (var j = 0; j < 3; j++) {
-        npcs[difficulties[j]] = {
+    const npcs = { normal: {}, nm: {}, hell: {} };
+    const reader = new bitreader_1.BitReader(bytes);
+    for (const difficulty of difficulties) {
+        npcs[difficulty] = {
             warriv_act_ii: { intro: false, congrats: false },
             charsi: { intro: false, congrats: false },
             warriv_act_i: { intro: false, congrats: false },
@@ -21477,9 +21325,9 @@ function _readNPCData(bytes) {
         };
     }
     //introductions
-    for (var i = 0; i < 3; i++) {
-        var j = i * 5;
-        var npc = npcs[difficulties[i]];
+    for (let i = 0; i < difficulties.length; i++) {
+        const j = i * 5;
+        const npc = npcs[difficulties[i]];
         npc.warriv_act_ii.intro = reader.bits[0 + j * 8] === 1;
         npc.charsi.intro = reader.bits[2 + j * 8] === 1;
         npc.warriv_act_i.intro = reader.bits[3 + j * 8] === 1;
@@ -21507,10 +21355,11 @@ function _readNPCData(bytes) {
         npc.qualkehk.intro = reader.bits[38 + j * 8] === 1;
         npc.nihlathak.intro = reader.bits[39 + j * 8] === 1;
     }
+    // 120-191 ?
     //congrats
-    for (var i = 0; i < 3; i++) {
-        var j = i * 5;
-        var npc = npcs[difficulties[i]];
+    for (let i = 0; i < difficulties.length; i++) {
+        const j = i * 5;
+        const npc = npcs[difficulties[i]];
         npc.warriv_act_ii.congrats = reader.bits[192 + (0 + j * 8)] === 1;
         npc.charsi.congrats = reader.bits[192 + (2 + j * 8)] === 1;
         npc.warriv_act_i.congrats = reader.bits[192 + (3 + j * 8)] === 1;
@@ -21541,11 +21390,11 @@ function _readNPCData(bytes) {
     return npcs;
 }
 function _writeNPCData(npcs) {
-    var writer = new bitwriter_1.BitWriter(0x30);
+    const writer = new bitwriter_1.BitWriter(0x30);
     writer.length = 0x30 * 8;
     if (npcs) {
-        for (var j = 0; j < 3; j++) {
-            var npc = npcs[difficulties[j]];
+        for (let j = 0; j < difficulties.length; j++) {
+            const npc = npcs[difficulties[j]];
             writer.SeekByte(j * 5);
             writer.WriteBit(+npc.warriv_act_ii.intro);
             writer.WriteBit(0);
@@ -21582,9 +21431,9 @@ function _writeNPCData(npcs) {
             writer.WriteBit(+npc.qualkehk.intro);
             writer.WriteBit(+npc.nihlathak.intro);
         }
-        for (var j = 0; j < 3; j++) {
+        for (let j = 0; j < difficulties.length; j++) {
             writer.SeekByte(24 + j * 5);
-            var npc = npcs[difficulties[j]];
+            const npc = npcs[difficulties[j]];
             writer.WriteBit(+npc.warriv_act_ii.congrats);
             writer.WriteBit(0);
             writer.WriteBit(+npc.charsi.congrats);

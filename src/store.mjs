@@ -1,17 +1,17 @@
-import { createStore } from 'vuex'
+import { createStore } from 'vuex';
 
 // Create a new store instance.
 const store = createStore({
   state() {
     return {
       selectedItem: null,
-    }
+    };
   },
   mutations: {
     selectItem(state, item) {
-      state.selectedItem = item
+      state.selectedItem = item;
     },
   },
-})
+});
 
-export default store
+export default store;

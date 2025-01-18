@@ -372,8 +372,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EACAAAUA9PzYgLbFqyXGxCnZHU+zKcoEACMHXiSgmUDBCWYpmK1g1oIZj0GywgTHfw==',
+      base64: 'EACAAAUA9PzYgLbFqyXGxCnZHU+zKcoEACMHXiSgmUDBCWYpmK1g1oIZj0GywgTHfw==',
     },
   },
   {
@@ -389,8 +388,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EACAAAWM9PzYUPtSySfGcJpXLsnhaVwJACIBQgdmVBAuCCe48RB8EpIVJjj+Aw==',
+      base64: 'EACAAAWM9PzYUPtSySfGcJpXLsnhaVwJACIBQgdmVBAuCCe48RB8EpIVJjj+Aw==',
     },
   },
   {
@@ -438,8 +436,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EACAAAUM9PzY8Lm9viXGkCr5HYchOfQLADMHVEzAoMJgIXBhwBDgEfg0gAr8Bw==',
+      base64: 'EACAAAUM9PzY8Lm9viXGkCr5HYchOfQLADMHVEzAoMJgIXBhwBDgEfg0gAr8Bw==',
     },
   },
   {
@@ -783,8 +780,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAXAFBocJAM5c8fFEzjRzY0IHzRDItwJeCngrYDXAh6Y1ohnC8of/U/j+Q8=',
+      base64: 'EAiAAAXAFBocJAM5c8fFEzjRzY0IHzRDItwJeCngrYDXAh6Y1ohnC8of/U/j+Q8=',
     },
   },
   {
@@ -1104,8 +1100,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABARQFZrZGkfF+7VDRKBYiIfHQHiwZPQ/ge0UyZhCxSOZQsTjPxAAoAA0AOB8mAAQAKAANATgMEwAEACgADQI4DBMAA==',
+      base64: 'EAiABARQFZrZGkfF+7VDRKBYiIfHQHiwZPQ/ge0UyZhCxSOZQsTjPxAAoAA0AOB8mAAQAKAANATgMEwAEACgADQI4DBMAA==',
     },
   },
   {
@@ -1113,8 +1108,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABARAFZrZyDSv5LRDeKBYiIfHQHiwZPR/ShSmRGDseaGQ7HGh8B8QAKAANADgMJ8AEACgADQE4HwjARAAoAA0COB8mAA=',
+      base64: 'EAiABARAFZrZyDSv5LRDeKBYiIfHQHiwZPR/ShSmRGDseaGQ7HGh8B8QAKAANADgMJ8AEACgADQE4HwjARAAoAA0COB8mAA=',
     },
   },
   {
@@ -1122,8 +1116,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQQFJrZ9ht+U7RD4KBYiIfHQHiwZPRfCTqFMhYkokgWCDL4DxAAoAA0AOB80AIQAKAANATgfD4BEACgADQI4Hx/BQ==',
+      base64: 'EAiABAQQFJrZ9ht+U7RD4KBYiIfHQHiwZPRfCTqFMhYkokgWCDL4DxAAoAA0AOB80AIQAKAANATgfD4BEACgADQI4Hx/BQ==',
     },
   },
   {
@@ -1131,8 +1124,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABARIFZrZiB4DF7RD9qBYiIfHQHiwZPR/ChQmgWDsAUGQrIiA8B8QAKAANADgfLYBEACgADQE4Hy+AxAAoAA0COB8PgE=',
+      base64: 'EAiABARIFZrZiB4DF7RD9qBYiIfHQHiwZPR/ChQmgWDsAUGQrIiA8B8QAKAANADgfLYBEACgADQE4Hy+AxAAoAA0COB8PgE=',
     },
   },
   {
@@ -1140,8 +1132,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQIFJrZXlcmLrVDDqFYiIfHQHiwZPR/ymSsKIOsx8gBW/8BEACgADQA4HwjARAAoAA0BOAwaAEQAKAANAjgfDMB',
+      base64: 'EAiABAQIFJrZXlcmLrVDDqFYiIfHQHiwZPR/ymSsKIOsx8gBW/8BEACgADQA4HwjARAAoAA0BOAwaAEQAKAANAjgfDMB',
     },
   },
   {
@@ -1149,8 +1140,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQIBJrZPCse67RDHKFYiIfHQHiwZPQ/ge2UytgDTyHZs07hPxAAoAA0AOB8uwAQAKAANATgMNsAEACgADQI4HzvAw==',
+      base64: 'EAiABAQIBJrZPCse67RDHKFYiIfHQHiwZPQ/ge2UytgDTyHZs07hPxAAoAA0AOB8uwAQAKAANATgMNsAEACgADQI4HzvAw==',
     },
   },
   {
@@ -1158,8 +1148,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQAFJrZfvp8abRDWqFYiIfHQHiwZPR/itUlaOyxKJPsWajwHxAAoAA0AOB8tgEQAKAANATgfL4DEACgADQI4DDfAQ==',
+      base64: 'EAiABAQAFJrZfvp8abRDWqFYiIfHQHiwZPR/itUlaOyxKJPsWajwHxAAoAA0AOB8tgEQAKAANATgfL4DEACgADQI4DDfAQ==',
     },
   },
   {
@@ -1167,8 +1156,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABATMFJoZKfXB07RDUKBYiIcHQXiwZPQfAA0EIyf0pdC3Ql8LfTwQebjpwfNH/wEQAKAANADgfL4CEACgADQE4DBMABAAoAA0COBsvwMQAKAANAzgMF8B',
+      base64: 'EAiABATMFJoZKfXB07RDUKBYiIcHQXiwZPQfAA0EIyf0pdC3Ql8LfTwQebjpwfNH/wEQAKAANADgfL4CEACgADQE4DBMABAAoAA0COBsvwMQAKAANAzgMF8B',
     },
   },
   {
@@ -1176,8 +1164,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQABJrZsJmv67VDcKBYiIfHQHiwZPQfArIIFCjYKCkkMwZ1KITooQnwHxAAoAA0AOB8tgEQAKAANATgMEwAEACgADQI4Hy+Aw==',
+      base64: 'EAiABAQABJrZsJmv67VDcKBYiIfHQHiwZPQfArIIFCjYKCkkMwZ1KITooQnwHxAAoAA0AOB8tgEQAKAANATgMEwAEACgADQI4Hy+Aw==',
     },
   },
   {
@@ -1185,8 +1172,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABMwMAJrZ6G9zurVDdqBYiGfHQHjw4QL/PxDMigNMMIyN4I+4GfCQ/xAAoAA0AOBsPwEQAKAANATgfO8DEACgADQI4Gy/Aw==',
+      base64: 'EAiABMwMAJrZ6G9zurVDdqBYiGfHQHjw4QL/PxDMigNMMIyN4I+4GfCQ/xAAoAA0AOBsPwEQAKAANATgfO8DEACgADQI4Gy/Aw==',
     },
   },
   {
@@ -1203,8 +1189,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQABMJfs8HHMdcOyYVCAQoK8/+JVyjI/wEQAKAANADgMN8BEACgADQE4HyQABAAoAA0COB8bwM=',
+      base64: 'EAiABAQABMJfs8HHMdcOyYVCAQoK8/+JVyjI/wEQAKAANADgMN8BEACgADQE4HyQABAAoAA0COB8bwM=',
     },
   },
   {
@@ -1212,8 +1197,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQABB62pa4pwGqHwEChgAyA+f/hIX9kTIpikaxpwpHMiciQTPYqwCyygofnPxAAoAA0AOAw3wEQAKAANATgMF8BEACgADQI4Hz2AQ==',
+      base64: 'EAiABAQABB62pa4pwGqHwEChgAyA+f/hIX9kTIpikaxpwpHMiciQTPYqwCyygofnPxAAoAA0AOAw3wEQAKAANATgMF8BEACgADQI4Hz2AQ==',
     },
   },
   {
@@ -1221,8 +1205,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQABB62LdMv0GqHFEB5hYyMWTKC8OD/JTtvjOyDObIVJ7il4LaCWwtuUPqSPVEo/gMQAKAANADgfPYBEACgADQE4Gw/ARAAoAA0COAwnwA=',
+      base64: 'EAiABAQABB62LdMv0GqHFEB5hYyMWTKC8OD/JTtvjOyDObIVJ7il4LaCWwtuUPqSPVEo/gMQAKAANADgfPYBEACgADQE4Gw/ARAAoAA0COAwnwA=',
     },
   },
   {
@@ -1230,8 +1213,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABASQBB427XeTMWuHlEGhgIwM+R9AlcX+RJHgPxAAoAA0AOB8uwAQAKAANATgfJgA',
+      base64: 'EAiABASQBB427XeTMWuHlEGhgIwM+R9AlcX+RJHgPxAAoAA0AOB8uwAQAKAANATgfJgA',
     },
   },
   {
@@ -1239,8 +1221,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABASIBB42uT8NF2mHxEGhgIwM+Q+gBIKMDxR4MiRLMGsQSkj4DxAAoAA0AOB8fwUQAKAANATgfG8D',
+      base64: 'EAiABASIBB42uT8NF2mHxEGhgIwM+Q+gBIKMDxR4MiRLMGsQSkj4DxAAoAA0AOB8fwUQAKAANATgfG8D',
     },
   },
   {
@@ -1248,8 +1229,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABASABB62nSbQJGuHNEKhgIyM+R9ANUCVIAjCkhFDlvwPEACgADQA4Hx/BRAAoAA0BOB8mAAQAKAANAjgfO8D',
+      base64: 'EAiABASABB62nSbQJGuHNEKhgIyM+R9ANUCVIAjCkhFDlvwPEACgADQA4Hx/BRAAoAA0BOB8mAAQAKAANAjgfO8D',
     },
   },
   {
@@ -1257,8 +1237,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABEwEQPy27SPyQU87XAiKESgoDIQHS0b/E6y5MbLTT3aJDGr68B8QAKAANADgfH8FEACgADQE4DCfABAAoAA0COAw+wA=',
+      base64: 'EAiABEwEQPy27SPyQU87XAiKESgoDIQHS0b/E6y5MbLTT3aJDGr68B8QAKAANADgfH8FEACgADQE4DCfABAAoAA0COAw+wA=',
     },
   },
   {
@@ -1266,8 +1245,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABE0EYDxjAwAAABgPF4IiCgoKA+HBktEaeluTb/8TrLkxstNPdokMavrwHxAAoAA1AOB8fwUQAKAANQTgMJ8AEACgADQI4DD7AA==',
+      base64: 'EAiABE0EYDxjAwAAABgPF4IiCgoKA+HBktEaeluTb/8TrLkxstNPdokMavrwHxAAoAA1AOB8fwUQAKAANQTgMJ8AEACgADQI4DD7AA==',
     },
   },
   {
@@ -1293,8 +1271,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAjABAQAxAMR9/nGS7RDrKBwcKAIDx78j1C0KJjbpT2MGFWDjFm1jofHN8LpzX8QAKAANADgbL8DEACgADQE4DDbABAAoAA0COBsvwMQAKAANAzgMF8B',
+      base64: 'EAjABAQAxAMR9/nGS7RDrKBwcKAIDx78j1C0KJjbpT2MGFWDjFm1jofHN8LpzX8QAKAANADgbL8DEACgADQE4DDbABAAoAA0COBsvwMQAKAANAzgMF8B',
     },
   },
   {
@@ -1302,8 +1279,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAjABAQA1M8XTR8U2bRDsKAEBaH/AEoClASUBpQiECQIZS9MAiPN7Y7DS3jifxAAoAA0AOB8IwEQAKAANATgfG8DEACgADQI4Hz7ABAAoAA0DOB8mAA=',
+      base64: 'EAjABAQA1M8XTR8U2bRDsKAEBaH/AEoClASUBpQiECQIZS9MAiPN7Y7DS3jifxAAoAA0AOB8IwEQAKAANATgfG8DEACgADQI4Hz7ABAAoAA0DOB8mAA=',
     },
   },
   {
@@ -1320,8 +1296,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAjABAwRwM8X8R3M+7RDAKEEBaEIDx4sGf2PABkyCMiPKpf4NGNWOKhjqAvkphz/ARAAoAA0AOAw+wAQAKAANATgMPsAEACgADQI4DBIABAAoAA0DOBsPwE=',
+      base64: 'EAjABAwRwM8X8R3M+7RDAKEEBaEIDx4sGf2PABkyCMiPKpf4NGNWOKhjqAvkphz/ARAAoAA0AOAw+wAQAKAANATgMPsAEACgADQI4DBIABAAoAA0DOBsPwE=',
     },
   },
   {
@@ -1329,8 +1304,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAjABAQIxM8XvQDXH7RDDKEEBaEIDx4sGf2XIWOkxLwD9FIcmiyaIfPumYf8BxAAoAA0AOBsmQAQAKAANATgMC4QAKAANAjgfPYBEACgADQM4DBIAA==',
+      base64: 'EAjABAQIxM8XvQDXH7RDDKEEBaEIDx4sGf2XIWOkxLwD9FIcmiyaIfPumYf8BxAAoAA0AOBsmQAQAKAANATgMC4QAKAANAjgfPYBEACgADQM4DBIAA==',
     },
   },
   {
@@ -1347,8 +1321,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQIFP5MS50HwtQOqYHiCSsrA+EBhWfJyMzoP4CSACUBpQGlD3IBYe6SGWfs8YGRTLKIwm34DxAAoAA0AOAwLhAAoAA0BOAwSAAQAKAANAjgfJgA',
+      base64: 'EAiABAQIFP5MS50HwtQOqYHiCSsrA+EBhWfJyMzoP4CSACUBpQGlD3IBYe6SGWfs8YGRTLKIwm34DxAAoAA0AOAwLhAAoAA0BOAwSAAQAKAANAjgfJgA',
     },
   },
   {
@@ -1365,8 +1338,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQQFf5MY47+OtcOuYHiCSsrA+EBhWfJyMzo/wdznOCWgtsKbi24QekbI7tk5yV7olBkK/4DEACgADQA4Hz2ARAAoAA0BOBsPwEQAKAANAjgMJ8A',
+      base64: 'EAiABAQQFf5MY47+OtcOuYHiCSsrA+EBhWfJyMzo/wdznOCWgtsKbi24QekbI7tk5yV7olBkK/4DEACgADQA4Hz2ARAAoAA0BOBsPwEQAKAANAjgMJ8A',
     },
   },
   {
@@ -1401,8 +1373,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQAFf5MDCe4FNUO2YTiCSsrBOEBhWfJyMzo/wBbAkgQ+sYs09z+aBLiPxAAoAA0AOB8+wAQAKAANATgfL4DEACgADQI4Hy7ABAAoAA0DOB8PgE=',
+      base64: 'EAiABAQAFf5MDCe4FNUO2YTiCSsrBOEBhWfJyMzo/wBbAkgQ+sYs09z+aBLiPxAAoAA0AOB8+wAQAKAANATgfL4DEACgADQI4Hy7ABAAoAA0DOB8PgE=',
     },
   },
   {
@@ -1419,8 +1390,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQghB3klPuzDa8dwgnFExQUBMKDJaM1XbSGiv5DIPPEEhS8LGcGlcbzJ/8BEACgADQA4HyjBRAAoAA0BOB8fAA=',
+      base64: 'EAiABAQghB3klPuzDa8dwgnFExQUBMKDJaM1XbSGiv5DIPPEEhS8LGcGlcbzJ/8BEACgADQA4HyjBRAAoAA0BOB8fAA=',
     },
   },
   {
@@ -1428,8 +1398,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQAFP5MGnYiZ9MO4YTiCSsrAuHBktF/CGSeWIKCl+XMoNJ4/uQ/EACgADQA4HyjBRAAoAA0BOB8fAA=',
+      base64: 'EAiABAQAFP5MGnYiZ9MO4YTiCSsrAuHBktF/CGSeWIKCl+XMoNJ4/uQ/EACgADQA4HyjBRAAoAA0BOB8fAA=',
     },
   },
   {
@@ -1437,8 +1406,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQYZL4hgQT8E2uHcEJZRlAQgfBgyehEvRT1VtRrUe8/BDJPLEHBy3JmUGk8f/IfEACgADQA4HyjBRAAoAA0BOB8fAA=',
+      base64: 'EAiABAQYZL4hgQT8E2uHcEJZRlAQgfBgyehEvRT1VtRrUe8/BDJPLEHBy3JmUGk8f/IfEACgADQA4HyjBRAAoAA0BOB8fAA=',
     },
   },
   {
@@ -1473,8 +1441,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQA5FkR+WI3o7VDSKAAUIQHD5aMeAEA6H8EqlSjBOoE8nj1FDAmUUFO5ggx+g8QAKAANADgbD8BEACgADQE4DBIABAAoAA0COAw2wAQAKAANAzgMGgB',
+      base64: 'EAiABAQA5FkR+WI3o7VDSKAAUIQHD5aMeAEA6H8EqlSjBOoE8nj1FDAmUUFO5ggx+g8QAKAANADgbD8BEACgADQE4DBIABAAoAA0COAw2wAQAKAANAzgMGgB',
     },
   },
   {
@@ -1482,8 +1449,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABARQdH9BTCkyltAOIYECQBEePFgy+h+BKtUogTqBPF49BYxJVJCTOUKM/gMQAKAANADgbD8BEACgADQE4DBIABAAoAA0COAw2wAQAKAANAzgMGgB',
+      base64: 'EAiABARQdH9BTCkyltAOIYECQBEePFgy+h+BKtUogTqBPF49BYxJVJCTOUKM/gMQAKAANADgbD8BEACgADQE4DBIABAAoAA0COAw2wAQAKAANAzgMGgB',
     },
   },
   {
@@ -1491,8 +1457,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQY5FnRZCdDTrVDcqAATIQHD5aMeAEA6D8AlQAqAaoBqiuPLrc6gTyQ9bC8dOb9BxAAoAA0AOB8bwMQAKAANATgfPsAEACgADQI4Hw+AQ==',
+      base64: 'EAiABAQY5FnRZCdDTrVDcqAATIQHD5aMeAEA6D8AlQAqAaoBqiuPLrc6gTyQ9bC8dOb9BxAAoAA0AOB8bwMQAKAANATgfPsAEACgADQI4Hw+AQ==',
     },
   },
   {
@@ -1500,8 +1465,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQgZH9BK2EIFNQOyYECMBEePFgy+g9AJYBKgGqA6sqjy61OIA9kPSwvnXn/ARAAoAA0AOB8bwMQAKAANATgfPsAEACgADQI4Hw+AQ==',
+      base64: 'EAiABAQgZH9BK2EIFNQOyYECMBEePFgy+g9AJYBKgGqA6sqjy61OIA9kPSwvnXn/ARAAoAA0AOB8bwMQAKAANATgfPsAEACgADQI4Hw+AQ==',
     },
   },
   {
@@ -1518,8 +1482,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQAdH9BdBUyQtcOAYICQBEePFgy+h8BI8YT11JcW3GtxbU7QP/okp63KQDFfxAAoAA0AOAwPhAAoAA0BOBsPwEQAKAANAjgMN8BEACgADQM4HwzAQ==',
+      base64: 'EAiABAQAdH9BdBUyQtcOAYICQBEePFgy+h8BI8YT11JcW3GtxbU7QP/okp63KQDFfxAAoAA0AOAwPhAAoAA0BOBsPwEQAKAANAjgMN8BEACgADQM4HwzAQ==',
     },
   },
   {
@@ -1554,8 +1517,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQAdX9BNEusT9QOqYICQBEePFgy+h9BmrRLcqQxi4XMMXQH8rtsKZSnFP8BEACgADQA4Hw+ARAAoAA0BOB8tgEQAKAANAjgbD8BEACgADQM4DBIAA==',
+      base64: 'EAiABAQAdX9BNEusT9QOqYICQBEePFgy+h9BmrRLcqQxi4XMMXQH8rtsKZSnFP8BEACgADQA4Hw+ARAAoAA0BOB8tgEQAKAANAjgbD8BEACgADQM4DBIAA==',
     },
   },
   {
@@ -1563,8 +1525,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQA9FkRB+ECq7VDgqEAUIQHD5aMeAEA6L+MFB4aVXjyANVjMlNjihQFY8EVnv8QAKAANADgMJ8AEACgADQE4Hx8ABAAoAA0COBsvwMQAKAANAzgMNsA',
+      base64: 'EAiABAQA9FkRB+ECq7VDgqEAUIQHD5aMeAEA6L+MFB4aVXjyANVjMlNjihQFY8EVnv8QAKAANADgMJ8AEACgADQE4Hx8ABAAoAA0COBsvwMQAKAANAzgMNsA',
     },
   },
   {
@@ -1572,8 +1533,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQQdH9BvO5p0NEOCYYCQBEePFgy+i8jhYdGFZ48QPW0zNSYIkXBWHCF5z8QAKAANADgMJ8AEACgADQE4Hx8ABAAoAA0COBsvwMQAKAANAzgMNsA',
+      base64: 'EAiABAQQdH9BvO5p0NEOCYYCQBEePFgy+i8jhYdGFZ48QPW0zNSYIkXBWHCF5z8QAKAANADgMJ8AEACgADQE4Hx8ABAAoAA0COBsvwMQAKAANAzgMNsA',
     },
   },
   {
@@ -1590,8 +1550,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABARAVb4v6kA27GuHNEHx8ED/T8BLAW8FvBbwlMhNsjS8P2PmdMPDw4wQJyPjPxAAoAA0AOB8kAAQAKAANATgMPsAEACgADQI4DCfABAAoAA0DOB8vgM=',
+      base64: 'EAiABARAVb4v6kA27GuHNEHx8ED/T8BLAW8FvBbwlMhNsjS8P2PmdMPDw4wQJyPjPxAAoAA0AOB8kAAQAKAANATgMPsAEACgADQI4DCfABAAoAA0DOB8vgM=',
     },
   },
   {
@@ -1644,8 +1603,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQAxIvTSpKxG7VDwqAATIQHD5aM/oPQB8NSmg1BWrRs0pFduiONPVdQ/gMQAKAANADgfD4BEACgADQE4DDfARAAoAA0COB8kAA=',
+      base64: 'EAiABAQAxIvTSpKxG7VDwqAATIQHD5aM/oPQB8NSmg1BWrRs0pFduiONPVdQ/gMQAKAANADgfD4BEACgADQE4DDfARAAoAA0COB8kAA=',
     },
   },
   {
@@ -1653,8 +1611,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQQxIsTl0M5B7RD6KAAUIQHD5aM/kegSrWLbNIDU2NUFx5mkRYODswgdigo/gMQAKAANADgfLYBEACgADQE4DCfABAAoAA0COAw2wAQAKAANAzgfHwA',
+      base64: 'EAiABAQQxIsTl0M5B7RD6KAAUIQHD5aM/kegSrWLbNIDU2NUFx5mkRYODswgdigo/gMQAKAANADgfLYBEACgADQE4DCfABAAoAA0COAw2wAQAKAANAzgfHwA',
     },
   },
   {
@@ -1662,8 +1619,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQQxIsTPWgdDrRDAKEAUIQHD5aM/keADBkE5EeVS3yaMSsc1DHUBXJTjv8QAKAANADgMPsAEACgADQE4DD7ABAAoAA0COAwSAAQAKAANAzgbD8B',
+      base64: 'EAiABAQQxIsTPWgdDrRDAKEAUIQHD5aM/keADBkE5EeVS3yaMSsc1DHUBXJTjv8QAKAANADgMPsAEACgADQE4DD7ABAAoAA0COAwSAAQAKAANAzgbD8B',
     },
   },
   {
@@ -1671,8 +1627,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABARI1YsT5bI/0LVDNqEAUIQHD5aM/g+wJYAEoW/MMs3tjyYh/gMQAKAANADgfPsAEACgADQE4Hy+AxAAoAA0COB8uwAQAKAANAzgfD4B',
+      base64: 'EAiABARI1YsT5bI/0LVDNqEAUIQHD5aM/g+wJYAEoW/MMs3tjyYh/gMQAKAANADgfPsAEACgADQE4Hy+AxAAoAA0COB8uwAQAKAANAzgfD4B',
     },
   },
   {
@@ -1680,8 +1635,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAQQxIsTra0+1rRD+KAAUIQHD5aM/tsg47abR66eepkao1qQGGuAeDzF+A8QAKAANADgMN8BEACgADQE4HyQABAAoAA0COB8fwIQAKAANAzgfDMB',
+      base64: 'EAiABAQQxIsTra0+1rRD+KAAUIQHD5aM/tsg47abR66eepkao1qQGGuAeDzF+A8QAKAANADgMN8BEACgADQE4HyQABAAoAA0COB8fwIQAKAANAzgfDMB',
     },
   },
   {
@@ -1698,8 +1652,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiABAUgVBxqAAAAAClhBQoFhfkfgRu3OSctjDUqHIxFNSiYSeN4eDgd+Q8QAKAANADgfLYBEACgADQE4DBMABAAoAA0COB8bwM=',
+      base64: 'EAiABAUgVBxqAAAAAClhBQoFhfkfgRu3OSctjDUqHIxFNSiYSeN4eDgd+Q8QAKAANADgfLYBEACgADQE4DBMABAAoAA0COB8bwM=',
     },
   },
   {
@@ -1707,8 +1660,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAUABMIb5G1RsMbFELiRkZE4AGgEvD7YJIW+LTK8UgDCSwUg/we8/g94/R/w+g8=',
+      base64: 'EAiAAAUABMIb5G1RsMbFELiRkZE4AGgEvD7YJIW+LTK8UgDCSwUg/we8/g94/R/w+g8=',
     },
   },
   {
@@ -1732,8 +1684,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAUQxFkTbueBvMYFEUBCMqcCasEnQ16Ch8JHoYssD7f/AF7+A3j5D+DlPw==',
+      base64: 'EAiAAAUQxFkTbueBvMYFEUBCMqcCasEnQ16Ch8JHoYssD7f/AF7+A3j5D+DlPw==',
     },
   },
   {
@@ -1869,8 +1820,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAQIxIOxiB+pjWgLOsDCIgAAmgjIkJ3Ql+Off2R0Qf0HEACgADAA4Gw/AQ==',
+      base64: 'EAiAAAQIxIOxiB+pjWgLOsDCIgAAmgjIkJ3Ql+Off2R0Qf0HEACgADAA4Gw/AQ==',
     },
   },
   {
@@ -1966,8 +1916,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'AAiAAAQAhAwMziE8f4HCDrQABEQMCDxOaEuhbYW2FtqMFTVI/h/w8T9ZIUHtPw==',
+      base64: 'AAiAAAQAhAwMziE8f4HCDrQABEQMCDxOaEuhbYW2FtqMFTVI/h/w8T9ZIUHtPw==',
     },
   },
   {
@@ -2135,8 +2084,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAVQBL4TnAgbYIzFERATD4/4HzTTQh8vEAAlK2go/B/T+r8C3v8T8P6ngPcfgoz/',
+      base64: 'EAiAAAVQBL4TnAgbYIzFERATD4/4HzTTQh8vEAAlK2go/B/T+r8C3v8T8P6ngPcfgoz/',
     },
   },
   {
@@ -2144,8 +2092,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EACAAAUIZANrkK2u0jYWSMAHGBg+gJwPLjhBLsW5/x/m8H9M6z8EMv9JcPvPKwRA/wE=',
+      base64: 'EACAAAUIZANrkK2u0jYWSMAHGBg+gJwPLjhBLsW5/x/m8H9M6z8EMv9JcPvPKwRA/wE=',
     },
   },
   {
@@ -2161,8 +2108,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EACAAAUQhOMVQmFG5odFEvgBBoYPgEYA7cMSkhEmMP53af3/IIj/PBT/fSj+GxL/AQ==',
+      base64: 'EACAAAUQhOMVQmFG5odFEvgBBoYPgEYA7cMSkhEmMP53af3/IIj/PBT/fSj+GxL/AQ==',
     },
   },
   {
@@ -2178,8 +2124,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAUYxFsfkiGy14fFEuDhIT8CMmRdeHm46eGGCIXpfxjTjf/LOLr7b+OPreX/HF11Zek/Df20/wE=',
+      base64: 'EAiAAAUYxFsfkiGy14fFEuDhIT8CMmRdeHm46eGGCIXpfxjTjf/LOLr7b+OPreX/HF11Zek/Df20/wE=',
     },
   },
   {
@@ -2299,8 +2244,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAUgRPy2IfpO83tcaAEjUFCIkyDnAyiUoF1k///k/x0j/0+ESxFuRbgW4f4D',
+      base64: 'EAiAAAUgRPy2IfpO83tcaAEjUFCIkyDnAyiUoF1k///k/x0j/0+ESxFuRbgW4f4D',
     },
   },
   {
@@ -2572,8 +2516,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAWI9K8v8AHjuI8LJyAjI14A1YEsCdrSoNb00JofWhNE/6ck/5s+/Hf68H9pkP8=',
+      base64: 'EAiAAAWI9K8v8AHjuI8LJyAjI14A1YEsCdrSoNb00JofWhNE/6ck/5s+/Hf68H9pkP8=',
     },
   },
   {
@@ -2693,8 +2636,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAWIlR1cUEZhqRgXV0AJFBTCAMgR8KLgfTjEiXot4PGKANB/qBn/lbT/AQ==',
+      base64: 'EAiAAAWIlR1cUEZhqRgXV0AJFBTCAMgR8KLgfTjEiXot4PGKANB/qBn/lbT/AQ==',
     },
   },
   {
@@ -2886,8 +2828,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAUQ9LArpCJUnY2PKbADDQkBgcwECkLInJCGoqSQpqKskMaitJDmomS5/w==',
+      base64: 'EAiAAAUQ9LArpCJUnY2PKbADDQkBgcwECkLInJCGoqSQpqKskMaitJDmomS5/w==',
     },
   },
   {
@@ -3263,8 +3204,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EACAAAVQFVoNTZZh2uNDLjgBAgIAGgExCMg2KHBQAINaU0R2MmOkUFBgFmLR0PAf',
+      base64: 'EACAAAVQFVoNTZZh2uNDLjgBAgIAGgExCMg2KHBQAINaU0R2MmOkUFBgFmLR0PAf',
     },
   },
   {
@@ -3312,8 +3252,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EACAAAWIhBsNpizGb+IDHuhAQgIAlQEqCL4qPBYyFx4MmSQeThRQLMG0NPE+PaAy/wE=',
+      base64: 'EACAAAWIhBsNpizGb+IDHuhAQgIAlQEqCL4qPBYyFx4MmSQeThRQLMG0NPE+PaAy/wE=',
     },
   },
   {
@@ -3393,8 +3332,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EACAAAQARFgmBAw+JHEvQAYANAFoAmgDaCe4peC2glsLblOwLGxMKSbDzPNBQeE/',
+      base64: 'EACAAAQARFgmBAw+JHEvQAYANAFoAmgDaCe4peC2glsLblOwLGxMKSbDzPNBQeE/',
     },
   },
   {
@@ -3434,8 +3372,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EACAAAUE5NkXAAAAAMZHRjAwwAgAjQBaBGTIKmQWZDwSUyAwsk8ZKBkvAQD18/zx/Ac=',
+      base64: 'EACAAAUE5NkXAAAAAMZHRjAwwAgAjQBaBGTIKmQWZDwSUyAwsk8ZKBkvAQD18/zx/Ac=',
     },
   },
   {
@@ -3443,8 +3380,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EACAAASIRFgmcPW8hXEvQAYANAFoAmgDaCe4peC2glsLblO8LGxMKSbDzPNBQeE/',
+      base64: 'EACAAASIRFgmcPW8hXEvQAYANAFoAmgDaCe4peC2glsLblO8LGxMKSbDzPNBQeE/',
     },
   },
   {
@@ -3452,8 +3388,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAQIxBkQMLeRxbSHRygqEgBoBNAiIENWIbMg45GYYnE5jJHdQcFLBiD/AQ==',
+      base64: 'EAiAAAQIxBkQMLeRxbSHRygqEgBoBNAiIENWIbMg45GYYnE5jJHdQcFLBiD/AQ==',
     },
   },
   {
@@ -3469,8 +3404,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAUARN8Lh4Sa7ODjIgzi5kYAoBFAg4DshLkU5laYa2GOh2EKNUZ2BwUvEAD9Bw==',
+      base64: 'EAiAAAUARN8Lh4Sa7ODjIgzi5kYAoBFAg4DshLkU5laYa2GOh2EKNUZ2BwUvEAD9Bw==',
     },
   },
   {
@@ -3478,8 +3412,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EACAAAQIVFgmrOwNuHAvQAYANAFoAmgDaCe4peC2glsLblO4LGxMKSbDzPNBQeE/',
+      base64: 'EACAAAQIVFgmrOwNuHAvQAYANAFoAmgDaCe4peC2glsLblO4LGxMKSbDzPNBQeE/',
     },
   },
   {
@@ -3503,8 +3436,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAUQRJ8IZN90EoJjLIRiZEQAeBHwGvCCYCnMNyMMOCMMOoOXCMCYPe1ISPwH',
+      base64: 'EAiAAAUQRJ8IZN90EoJjLIRiZEQAeBHwGvCCYCnMNyMMOCMMOoOXCMCYPe1ISPwH',
     },
   },
   {
@@ -3520,8 +3452,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EACAAARkRFgmrOwNuHAvQAYANAFoAmgDaCe4peC2glsLblO6LGxMKSbDzPNBQeE/',
+      base64: 'EACAAARkRFgmrOwNuHAvQAYANAFoAmgDaCe4peC2glsLblO6LGxMKSbDzPNBQeE/',
     },
   },
   {
@@ -3529,8 +3460,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAUMZDwvfK3EMnuPj8AGCgoBgCYADQKyE+ZSmFthroW5KRWXwxjZHRSKCrxSAPQf',
+      base64: 'EAiAAAUMZDwvfK3EMnuPj8AGCgoBgCYADQKyE+ZSmFthroW5KRWXwxjZHRSKCrxSAPQf',
     },
   },
   {
@@ -3554,8 +3484,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAWExCkIx7l/yOCjETw8iDSeNUW2xsjWNNEaKOIVASBeEgBKJmChSKZ0Ucim/Ac=',
+      base64: 'EAiAAAWExCkIx7l/yOCjETw8iDSeNUW2xsjWNNEaKOIVASBeEgBKJmChSKZ0Ucim/Ac=',
     },
   },
   {
@@ -3595,8 +3524,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAWMhB1e+BIwMBccGAEKFBQiAA0CMgrohpAT8FLAWwGvBbwpEpeDGZmiAi8IAP0H',
+      base64: 'EAiAAAWMhB1e+BIwMBccGAEKFBQiAA0CMgrohpAT8FLAWwGvBbwpEpeDGZmiAi8IAP0H',
     },
   },
   {
@@ -3604,8 +3532,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EACAAAQQVFgmrOwNuHAvQAYANAFoAmgDaCe4peC2glsLblO0LGxMKSbDzPNBQeE/',
+      base64: 'EACAAAQQVFgmrOwNuHAvQAYANAFoAmgDaCe4peC2glsLblO0LGxMKSbDzPNBQeE/',
     },
   },
   {
@@ -3637,8 +3564,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAQQZD4XJt/KwLRHR5iFjIwAQDOABgEZBe+EvhT6VuhroW/KZEZ2BwUvDAD9Bw==',
+      base64: 'EAiAAAQQZD4XJt/KwLRHR5iFjIwAQDOABgEZBe+EvhT6VuhroW/KZEZ2BwUvDAD9Bw==',
     },
   },
   {
@@ -3646,8 +3572,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EACAAATAVFgmrOwNuHAvQAYANAFoAmgDaCe4peC2glsLblO2LGxMKSbDzPNBQeE/',
+      base64: 'EACAAATAVFgmrOwNuHAvQAYANAFoAmgDaCe4peC2glsLblO2LGxMKSbDzPNBQeE/',
     },
   },
   {
@@ -3727,8 +3652,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EACAAATEVFgmrOwNuHAvQAYANAFoAmgDaCe4peC2glsLblOyLGxMKSbDzPNBQeE/',
+      base64: 'EACAAATEVFgmrOwNuHAvQAYANAFoAmgDaCe4peC2glsLblOyLGxMKSbDzPNBQeE/',
     },
   },
   {
@@ -3736,8 +3660,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAVk5K8vVP5tno4PjiCjIgLQBtAgUDjBLQW3FdxacINiOSVLI1NUSBbYkPkP',
+      base64: 'EAiAAAVk5K8vVP5tno4PjiCjIgLQBtAgUDjBLQW3FdxacINiOSVLI1NUSBbYkPkP',
     },
   },
   {
@@ -3849,8 +3772,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAUIBJIUQkQR6MdHVigFBYUA4APB0glVLRy6UDwUXVB/lOzh4sFssIiC4j8=',
+      base64: 'EAiAAAUIBJIUQkQR6MdHVigFBYUA4APB0glVLRy6UDwUXVB/lOzh4sFssIiC4j8=',
     },
   },
   {
@@ -4258,8 +4180,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAUghBsKaiQ7DOGjHKABikxAQEaBajExBzPMkElCYQaVrOCiwMyYAgXlPw==',
+      base64: 'EAiAAAUghBsKaiQ7DOGjHKABikxAQEaBajExBzPMkElCYQaVrOCiwMyYAgXlPw==',
     },
   },
   {
@@ -4283,8 +4204,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAUMRPqZoPc8COc9xkAHPDwEBDIUsg8eEDGcuJbi2oprLa4loZiyZDkzqP8=',
+      base64: 'EAiAAAUMRPqZoPc8COc9xkAHPDwEBDIUsg8eEDGcuJbi2oprLa4loZiyZDkzqP8=',
     },
   },
   {
@@ -4332,8 +4252,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAUIlP9MGPvN+Pwe48AJTEwCArIT6VKkW5GuRToYI19kBHjY2KhhmQQlWcJCIdkBQyGZ4cPgPw==',
+      base64: 'EAiAAAUIlP9MGPvN+Pwe48AJTEwCArIT6VKkW5GuRToYI19kBHjY2KhhmQQlWcJCIdkBQyGZ4cPgPw==',
     },
   },
   {
@@ -4477,8 +4396,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAUI1OkLzF2QdOPjEIyMiASEEUqV2pAx4tmCksbDLLCBgoLZcIWHBzOlDDIyZkw4PDz/AQ==',
+      base64: 'EAiAAAUI1OkLzF2QdOPjEIyMiASEEUqV2pAx4tmCksbDLLCBgoLZcIWHBzOlDDIyZkw4PDz/AQ==',
     },
   },
   {
@@ -4486,8 +4404,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAUQ1KkJkprhieIDEaCgiAhkyFwYMSxlBMgkkQH0jFEmKIwpNRSSFSY8/gM=',
+      base64: 'EAiAAAUQ1KkJkprhieIDEaCgiAhkyFwYMSxlBMgkkQH0jFEmKIwpNRSSFSY8/gM=',
     },
   },
   {
@@ -4959,8 +4876,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAXA1C8bDIOV+MaHQODhEQByIsCDd4HCQDkRLkW4FeFahOuCQrTE1FggBOE/',
+      base64: 'EAiAAAXA1C8bDIOV+MaHQODhEQByIsCDd4HCQDkRLkW4FeFahOuCQrTE1FggBOE/',
     },
   },
   {
@@ -5128,8 +5044,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'ECiAAAQAxM8XgAyw07WHSggKMl2gWTACRox69EGhPaEvhb4V+lro4+PdJgAUVhz/AQ==',
+      base64: 'ECiAAAQAxM8XgAyw07WHSggKMl2gWTACRox69EGhPaEvhb4V+lro4+PdJgAUVhz/AQ==',
     },
   },
   {
@@ -5257,8 +5172,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAQAxAEKZ6EAv8RDEhgZiQigQFWgLLQ2PHzgwZQpC64pwzV5dAePMSKPwn8=',
+      base64: 'EAiAAAQAxAEKZ6EAv8RDEhgZiQigQFWgLLQ2PHzgwZQpC64pwzV5dAePMSKPwn8=',
     },
   },
   {
@@ -5506,8 +5420,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAATQ1IsTml0xCrRHBwAIACoBVAJUA1QRHDqkoU/fhj79vizXRfYnl+60/w==',
+      base64: 'EAiAAATQ1IsTml0xCrRHBwAIACoBVAJUA1QRHDqkoU/fhj79vizXRfYnl+60/w==',
     },
   },
   {
@@ -5555,8 +5468,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAXA1IsTwK5isMfHQACICMiQVVAseGQEyNDgwePjkGW7oOaElBlG1VD4Dw==',
+      base64: 'EAiAAAXA1IsTwK5isMfHQACICMiQVVAseGQEyNDgwePjkGW7oOaElBlG1VD4Dw==',
     },
   },
   {
@@ -5596,8 +5508,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAUUxKkLo2ByUOOjFKCgiAjIkH1AgQolI4AniwF6vDIAxEsDQMaOPAz/AQ==',
+      base64: 'EAiAAAUUxKkLo2ByUOOjFKCgiAjIkH1AgQolI4AniwF6vDIAxEsDQMaOPAz/AQ==',
     },
   },
   {
@@ -5653,8 +5564,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EEiAAAXA1K0xhM38tIyPUyAjIyLQokWBAkEmBPIJbim4reDWgtsWmTEoOZ419D8=',
+      base64: 'EEiAAAXA1K0xhM38tIyPUyAjIyLQokWBAkEmBPIJbim4reDWgtsWmTEoOZ419D8=',
     },
   },
   {
@@ -5678,8 +5588,7 @@ export default [
     value: {
       mod: 'vanilla',
       version: 99,
-      base64:
-        'EAiAAAXQ1MkakLc048OHKZCRERFAgToBD4YMskeKYcYLCmbKDBQUzBQaWlr+Aw==',
+      base64: 'EAiAAAXQ1MkakLc048OHKZCRERFAgToBD4YMskeKYcYLCmbKDBQUzBQaWlr+Aw==',
     },
   },
   {
@@ -5866,4 +5775,4 @@ export default [
       base64: 'EAiAAAUABP5MSBdZqIUSpmkFT1ghIQqUGdl/',
     },
   },
-]
+];

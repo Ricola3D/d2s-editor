@@ -1,62 +1,21 @@
 <template>
   <div class="inventory">
-    <span
-      class="head"
-      @drop="drop($event, 1)"
-      @dragover="dragover"
-      @dragenter="dragenter($event, 1)"
-      @dragleave="dragleave($event, 1)"
+    <span class="head" @drop="drop($event, 1)" @dragover="dragover" @dragenter="dragenter($event, 1)" @dragleave="dragleave($event, 1)"
       ><div :id="id + '-1'" class="layer" />
-      <Item
-        v-if="head"
-        v-model:item="head"
-        @click.native="onSelect(head)"
-        @contextmenu.prevent.stop="itemRC($event, head)"
+      <Item v-if="head" v-model:item="head" @click.native="onSelect(head)" @contextmenu.prevent.stop="itemRC($event, head)"
     /></span>
-    <span
-      class="neck"
-      @drop="drop($event, 2)"
-      @dragover="dragover"
-      @dragenter="dragenter($event, 2)"
-      @dragleave="dragleave($event, 2)"
+    <span class="neck" @drop="drop($event, 2)" @dragover="dragover" @dragenter="dragenter($event, 2)" @dragleave="dragleave($event, 2)"
       ><div :id="id + '-2'" class="layer" />
-      <Item
-        v-if="neck"
-        v-model:item="neck"
-        @click.native="onSelect(neck)"
-        @contextmenu.prevent.stop="itemRC($event, neck)"
+      <Item v-if="neck" v-model:item="neck" @click.native="onSelect(neck)" @contextmenu.prevent.stop="itemRC($event, neck)"
     /></span>
-    <span
-      class="torso"
-      @drop="drop($event, 3)"
-      @dragover="dragover"
-      @dragenter="dragenter($event, 3)"
-      @dragleave="dragleave($event, 3)"
+    <span class="torso" @drop="drop($event, 3)" @dragover="dragover" @dragenter="dragenter($event, 3)" @dragleave="dragleave($event, 3)"
       ><div :id="id + '-3'" class="layer" />
-      <Item
-        v-if="torso"
-        v-model:item="torso"
-        @click.native="onSelect(torso)"
-        @contextmenu.prevent.stop="itemRC($event, torso)"
+      <Item v-if="torso" v-model:item="torso" @click.native="onSelect(torso)" @contextmenu.prevent.stop="itemRC($event, torso)"
     /></span>
     <span class="right-tab tabs">
       <div class="btn-group" role="group">
-        <button
-          type="button"
-          class="tab btn btn-secondary"
-          :class="{ active: !alt_displayed }"
-          @click="setAltDisplayed(false)"
-        >
-          I
-        </button>
-        <button
-          type="button"
-          class="tab btn btn-secondary"
-          :class="{ active: alt_displayed }"
-          @click="setAltDisplayed(true)"
-        >
-          II
-        </button>
+        <button type="button" class="tab btn btn-secondary" :class="{ active: !alt_displayed }" @click="setAltDisplayed(false)">I</button>
+        <button type="button" class="tab btn btn-secondary" :class="{ active: alt_displayed }" @click="setAltDisplayed(true)">II</button>
       </div>
     </span>
     <span
@@ -91,22 +50,8 @@
     </span>
     <span class="left-tab tabs">
       <div class="btn-group" role="group">
-        <button
-          type="button"
-          class="tab btn btn-secondary"
-          :class="{ active: !alt_displayed }"
-          @click="setAltDisplayed(false)"
-        >
-          I
-        </button>
-        <button
-          type="button"
-          class="tab btn btn-secondary"
-          :class="{ active: alt_displayed }"
-          @click="setAltDisplayed(true)"
-        >
-          II
-        </button>
+        <button type="button" class="tab btn btn-secondary" :class="{ active: !alt_displayed }" @click="setAltDisplayed(false)">I</button>
+        <button type="button" class="tab btn btn-secondary" :class="{ active: alt_displayed }" @click="setAltDisplayed(true)">II</button>
       </div>
     </span>
     <span
@@ -165,31 +110,13 @@
         @click.native="onSelect(left_finger)"
         @contextmenu.prevent.stop="itemRC($event, left_finger)"
     /></span>
-    <span
-      class="waist"
-      @drop="drop($event, 8)"
-      @dragover="dragover"
-      @dragenter="dragenter($event, 8)"
-      @dragleave="dragleave($event, 8)"
+    <span class="waist" @drop="drop($event, 8)" @dragover="dragover" @dragenter="dragenter($event, 8)" @dragleave="dragleave($event, 8)"
       ><div :id="id + '-8'" class="layer" />
-      <Item
-        v-if="waist"
-        v-model:item="waist"
-        @click.native="onSelect(waist)"
-        @contextmenu.prevent.stop="itemRC($event, waist)"
+      <Item v-if="waist" v-model:item="waist" @click.native="onSelect(waist)" @contextmenu.prevent.stop="itemRC($event, waist)"
     /></span>
-    <span
-      class="feet"
-      @drop="drop($event, 9)"
-      @dragover="dragover"
-      @dragenter="dragenter($event, 9)"
-      @dragleave="dragleave($event, 9)"
+    <span class="feet" @drop="drop($event, 9)" @dragover="dragover" @dragenter="dragenter($event, 9)" @dragleave="dragleave($event, 9)"
       ><div :id="id + '-9'" class="layer" />
-      <Item
-        v-if="feet"
-        v-model:item="feet"
-        @click.native="onSelect(feet)"
-        @contextmenu.prevent.stop="itemRC($event, feet)"
+      <Item v-if="feet" v-model:item="feet" @click.native="onSelect(feet)" @contextmenu.prevent.stop="itemRC($event, feet)"
     /></span>
     <span
       class="hands"
@@ -197,20 +124,17 @@
       @dragover="dragover"
       @dragenter="dragenter($event, 10)"
       @dragleave="dragleave($event, 10)"
-      @contextmenu.prevent.stop="equippedRC($event, EItemEquipPosition.Gloves)"
+      @contextmenu.prevent.stop="equippedRC($event, EEquippedId.Gloves)"
       ><div :id="id + '-10'" class="layer" />
-      <Item
-        v-if="hands"
-        v-model:item="hands"
-        @click.native="onSelect(hands)"
-        @contextmenu.prevent.stop="itemRC($event, hands)"
+      <Item v-if="hands" v-model:item="hands" @click.native="onSelect(hands)" @contextmenu.prevent.stop="itemRC($event, hands)"
     /></span>
   </div>
 </template>
 
 <script>
-import Item from './Item.vue'
+import Item from './Item.vue';
 export default {
+  name: 'CharEquipement',
   components: {
     Item,
   },
@@ -222,53 +146,53 @@ export default {
   data() {
     return {
       alt_displayed: false,
-      EItemEquipPosition: window.d2s.types.EItemEquipPosition,
-    }
+      EEquippedId: this.$d2s.types.EEquippedId,
+    };
   },
   computed: {
     head() {
-      return this.items.find((e) => e.equipped_id === 1)
+      return this.items.find((e) => e.equipped_id === 1);
     },
     neck() {
-      return this.items.find((e) => e.equipped_id === 2)
+      return this.items.find((e) => e.equipped_id === 2);
     },
     torso() {
-      return this.items.find((e) => e.equipped_id === 3)
+      return this.items.find((e) => e.equipped_id === 3);
     },
     right_hand() {
-      return this.items.find((e) => e.equipped_id === 4)
+      return this.items.find((e) => e.equipped_id === 4);
     },
     left_hand() {
-      return this.items.find((e) => e.equipped_id === 5)
+      return this.items.find((e) => e.equipped_id === 5);
     },
     right_finger() {
-      return this.items.find((e) => e.equipped_id === 6)
+      return this.items.find((e) => e.equipped_id === 6);
     },
     left_finger() {
-      return this.items.find((e) => e.equipped_id === 7)
+      return this.items.find((e) => e.equipped_id === 7);
     },
     waist() {
-      return this.items.find((e) => e.equipped_id === 8)
+      return this.items.find((e) => e.equipped_id === 8);
     },
     feet() {
-      return this.items.find((e) => e.equipped_id === 9)
+      return this.items.find((e) => e.equipped_id === 9);
     },
     hands() {
-      return this.items.find((e) => e.equipped_id === 10)
+      return this.items.find((e) => e.equipped_id === 10);
     },
     alt_right_hand() {
-      return this.items.find((e) => e.equipped_id === 11)
+      return this.items.find((e) => e.equipped_id === 11);
     },
     alt_left_hand() {
-      return this.items.find((e) => e.equipped_id === 12)
+      return this.items.find((e) => e.equipped_id === 12);
     },
   },
   methods: {
     setAltDisplayed(value) {
-      this.alt_displayed = value
+      this.alt_displayed = value;
     },
     onSelect(item) {
-      this.$emit('item-selected', item)
+      this.$emit('item-selected', item);
     },
     itemRC($evt, item) {
       if (item != null) {
@@ -278,7 +202,7 @@ export default {
           { text: 'Cut' },
           { text: 'Export' },
           { text: 'Delete' },
-        ])
+        ]);
       }
     },
     equippedRC($evt, equipped_id) {
@@ -292,17 +216,17 @@ export default {
       //     position_y: 0,
       //     alt_position_id: 0,
       //   },
-      //   [{ text: 'Paste At' }, { text: 'Import' }]
+      //   [{ text: 'Paste At' }, { text: 'Import At' }]
       // )
     },
     dragover(event) {
-      event.preventDefault()
-      event.dataTransfer.dropEffect = 'move'
-      return false
+      event.preventDefault();
+      event.dataTransfer.dropEffect = 'move';
+      return false;
     },
     dragenter(event, equipped_location) {
-      event.preventDefault()
-      let data = JSON.parse(localStorage.getItem('dragElement'))
+      event.preventDefault();
+      let data = JSON.parse(localStorage.getItem('dragElement'));
       this.$emit('item-event', {
         uuid: data.uuid,
         item: data.item,
@@ -312,11 +236,11 @@ export default {
           equipped_location: equipped_location,
         },
         type: 'dragenter',
-      })
+      });
     },
     dragleave(event, equipped_location) {
-      event.preventDefault()
-      let data = JSON.parse(localStorage.getItem('dragElement'))
+      event.preventDefault();
+      let data = JSON.parse(localStorage.getItem('dragElement'));
       this.$emit('item-event', {
         uuid: data.uuid,
         item: data.item,
@@ -326,11 +250,11 @@ export default {
           equipped_location: equipped_location,
         },
         type: 'dragleave',
-      })
+      });
     },
     drop(event, equipped_location) {
-      event.preventDefault()
-      let data = JSON.parse(localStorage.getItem('dragElement'))
+      event.preventDefault();
+      let data = JSON.parse(localStorage.getItem('dragElement'));
       this.$emit('item-event', {
         uuid: data.uuid,
         item: data.item,
@@ -340,8 +264,8 @@ export default {
           equipped_location: equipped_location,
         },
         type: 'move',
-      })
+      });
     },
   },
-}
+};
 </script>
