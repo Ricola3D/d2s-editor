@@ -1,0 +1,23 @@
+{
+  "recommendations": [
+		"dzhavat.bracket-pair-toggler", // Bracket Pair Colorization Toggler
+    "aaravb.chrome-extension-developer-tools", // Chrome Extension Developer Tools
+    "firefox-devtools.vscode-firefox-debug", // Debugger for Firefox
+    "codemooseus.vscode-devtools-for-chrome", // DevTools for Chrome
+    "streetsidesoftware.code-spell-checker", // Code Spell Checker
+    "pranaygp.vscode-css-peek", // CSS Peak
+    "dbaeumer.vscode-eslint", // ESLint
+    "mhutchie.git-graph", // Git Graph
+    "donjayamanne.githistory", // Git History"
+    "eamodio.gitlens", // GitLens - Git Supercharged
+    "davidfreer.go-to-character-position", // Go to Character Position
+    "xabikos.JavaScriptSnippets", // JavaScript (ES6) code snippets
+    "ritwickdey.LiveServer", // Live Server
+    // "maty.vscode-mocha-sidebar", // Mocha sidebar
+    "johnpapa.vscode-peacock", // Peacock
+    "esbenp.prettier-vscode", // Prettier - Code formatter
+    "chrmarti.regex", // Regex Previewer
+    "vscode-icons-team.vscode-icons", // vscode-icons
+    "Vue.volar" // Vue - Official
+	]
+}
