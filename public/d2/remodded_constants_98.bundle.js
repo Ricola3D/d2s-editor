@@ -22563,6 +22563,50 @@ let remodded_constants_98 = {
             "i": "D2R_Jank",
             "c": "Ev9",
             "hdi": "custom/snowball"
+        },
+        {
+            "id": 629,
+            "index": "Harlequin Crest (1.08)",
+            "n": "Harlequin Crest (1.08)",
+            "i": "D2R_Jank",
+            "c": "uap",
+            "tc": "cgrn",
+            "hdi": "armor/helmet/cap_hat"
+        },
+        {
+            "id": 630,
+            "index": "The Cat's Eye (1.08)",
+            "n": "The Cat's Eye (1.08)",
+            "i": "D2R_Jank",
+            "c": "amu",
+            "tc": "oran",
+            "hdi": "misc/amulet/amulet"
+        },
+        {
+            "id": 631,
+            "index": "Arkaine's Valor (Bugged)",
+            "n": "Arkaine's Valor (Bugged)",
+            "i": "D2R_Jank",
+            "c": "upl",
+            "tc": "lred",
+            "hdi": "armor/armor/splint_mail"
+        },
+        {
+            "id": 632,
+            "index": "String of Ears (Bugged)",
+            "n": "String of Ears (Bugged)",
+            "i": "D2R_Jank",
+            "c": "zlb",
+            "hdi": "armor/belt/sash_l"
+        },
+        {
+            "id": 633,
+            "index": "Wizardspike (Fused)",
+            "n": "Wizardspike (Fused)",
+            "i": "D2R_Jank",
+            "c": "tgl",
+            "tc": "lgry",
+            "hdi": "armor/glove/light_gauntlets"
         }
     ],
     "stackables": {
