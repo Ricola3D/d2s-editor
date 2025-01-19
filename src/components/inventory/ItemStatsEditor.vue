@@ -139,7 +139,7 @@ export default {
       return this.$d2s.utils.isClass(statId, valueIdx, this.$getWorkConstantData().magical_properties);
     },
     isClassSkillTab(statId, valueIdx) {
-      this.$d2s.utils.isClassSkillTab(statId, valueIdx, this.$getWorkConstantData().magical_properties);
+      return this.$d2s.utils.isClassSkillTab(statId, valueIdx, this.$getWorkConstantData().magical_properties);
     },
     isSkill(statId, valueIdx) {
       return this.$d2s.utils.isSkill(statId, valueIdx, this.$getWorkConstantData().magical_properties);

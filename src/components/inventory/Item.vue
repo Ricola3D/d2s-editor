@@ -181,16 +181,16 @@ export default {
       if (item.quality === this.$d2s.types.EQuality.Set && item.set_id) {
         let set_name = constants.set_items[item.set_id] ? constants.set_items[item.set_id].n : null;
         if (!set_name) {
-          set_name = 'unknown';
+          set_name = `??? (${item.set_id})`; // Help when new set items are released
         }
-        name = `${name}\\n${personalizedName}${set_name}(${item.set_id})`;
+        name = `${name}\\n${personalizedName}${set_name}`;
       }
       if (item.quality === this.$d2s.types.EQuality.Unique && item.unique_id) {
         let unique_name = constants.unq_items[item.unique_id] ? constants.unq_items[item.unique_id].n : null;
         if (!unique_name) {
-          unique_name = 'unknown';
+          unique_name = `??? (${item.set_id})`;
         }
-        name = `${name}\\n${personalizedName}${unique_name}(${item.unique_id})`;
+        name = `${name}\\n${personalizedName}${unique_name}`; // Help when new uniques are released
       }
       if (item.quality <= 3 && item.given_runeword && item.runeword_id) {
         const runes = item.socketed_items.map((e) => e.type_name.split(' ')[0]).join('');
