@@ -47,26 +47,20 @@
 
           <!-- Class Specific -->
           <!-- <label>&#187;&#187;Class Specific</label>
-            <label class="form-check-label"
-              ><input
-                v-model.number="item.class_specific"
-                class="form-check-input"
-                type="checkbox"
-                :true-value="1"
-                :false-value="0"
-                @change="onEvent('update')"
-            /></label> -->
+          <label class="form-check-label"
+            ><input v-model="item.class_specific" class="form-check-input" type="checkbox" @change="onEvent('update')"
+          /></label> -->
 
           <template v-if="item.class_specific">
             <!-- Auto Affix ID -->
-            <label>&#187;&#187;Staff Mod ID</label>
+            <label>&#187;&#187; Staff Mod ID</label>
             <input v-model.number="item.auto_affix_id" class="edit-box" type="number" min="1" max="999" @input="onEvent('update')" />
           </template>
 
           <!-- Time & Timestamp -->
           <!-- <label>Timestamp</label>
           <input
-              v-model.number="item.timestamp"
+              v-model="item.timestamp"
               class="edit-box"
               type="number"
               min="0"
@@ -333,11 +327,9 @@
               <label>Ethereal</label>
               <label class="form-check-label"
                 ><input
-                  v-model.number="item.ethereal"
+                  v-model="item.ethereal"
                   class="form-check-input"
                   type="checkbox"
-                  :true-value="1"
-                  :false-value="0"
                   @change="onEvent('update')"
               /></label>
             </template>
@@ -708,7 +700,7 @@ export default {
       }
       return baseIds.map((id) => ({
         value: id,
-        label: /*"(" + id + ") " +*/ lookupBases[id].n,
+        label: `${lookupBases[id].n} (${id})`,
       }));
 
       // if (this.item.type_id == 3) {

@@ -135,7 +135,8 @@ export default {
       };
     },
     itemName(item) {
-      let name = '(' + item.type + ') ' + item.type_name;
+      // let name = `${item.type_name} (${item.type})`;
+      let name = item.type_name;
       const constants = this.$getWorkConstantData();
       /* Inferior <type_name> */
       if (item.quality === this.$d2s.types.EQuality.Inferior) {
