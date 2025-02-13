@@ -32,9 +32,11 @@ app.config.globalProperties.$uuid = utils.uuidv4();
 const work_mod = ref('remodded');
 const work_version = ref(99);
 const palettes = ref({});
+const clipboard = ref(null);
 app.config.globalProperties.$work_mod = work_mod;
 app.config.globalProperties.$work_version = work_version;
 app.config.globalProperties.$palettes = palettes;
+app.config.globalProperties.$clipboard = clipboard;
 app.config.globalProperties.$getWorkConstantData = () => d2s.getConstantData(work_mod.value, work_version.value);
 
 app

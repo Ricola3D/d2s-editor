@@ -302,7 +302,12 @@
                                   </div>
                                 </div>
                               </div>
-                              <button type="button" class="btn btn-primary" :disabled="!clipboard" @click="pasteItem(clipboard)">
+                              <button
+                                type="button"
+                                class="btn btn-primary"
+                                :disabled="!$clipboard.value"
+                                @click="pasteItem($clipboard.value)"
+                              >
                                 Paste
                               </button>
                               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#LoadItem">Load Item</button>
@@ -438,7 +443,6 @@ export default {
       itempack: [],
       previewModel: null,
       preview: null,
-      clipboard: null,
       load: null,
       notifications: [],
       grid: {
@@ -584,12 +588,12 @@ export default {
           break;
         }
         case 'Paste At':
-          if (this.clipboard == null) {
+          if (this.$clipboard.value == null) {
             break;
           }
           this.onEvent({
             type: 'pasteAt',
-            item: this.clipboard,
+            item: this.$clipboard.value,
             position: event.obj,
           });
           break;
@@ -708,9 +712,9 @@ export default {
       } else if (e.type == 'import') {
         this.importItem(e.position);
       } else if (e.type == 'copy') {
-        this.clipboard = cloneDeep(e.item);
+        this.$clipboard.value = cloneDeep(e.item);
       } else if (e.type == 'cut') {
-        this.clipboard = cloneDeep(e.item);
+        this.$clipboard.value = cloneDeep(e.item);
         this.deleteItem(e.item);
       } else if (e.type == 'update') {
         this.$d2s.enhanceItems([e.item], this.$work_mod.value, this.$work_version.value, this.save ? this.save.attributes : null);

@@ -368,6 +368,7 @@
       <div v-if="item.socketed_items.length" class="item-socketed-items">
         <button type="button" class="btn btn-danger" @click="unsocket()">Unsocket All</button>
         <div v-for="(socketed_item, idx) in item.socketed_items">
+          <button type="button" class="btn btn-danger" @click="unsocket(idx)">Unsocket</button>
           <ItemEditor
             :id="id + 'Socketed' + idx"
             ref="itemEditor"
@@ -520,9 +521,23 @@ export default {
       }
       return 1; // Just in case
     },
-    unsocket() {
-      this.item.nr_of_items_in_sockets = 0;
-      this.$emit('item-event', { item: this.item, type: 'update' });
+    unsocket(idx = -1) {
+      if (idx < 0) {
+        // Unsocket all
+        this.item.nr_of_items_in_sockets = 0;
+        this.$emit('item-event', { item: this.item, type: 'update' });
+      } else {
+        // Unsocket one
+        this.item.nr_of_items_in_sockets--;
+        this.item.socketed_items.splice(idx, 1);
+        if (this.item.given_runeword) {
+          this.item.given_runeword = false;
+          this.item.runeword_id = 0;
+          this.item.runeword_name = '';
+          this.item.runeword_attributes = [];
+        }
+        this.$emit('item-event', { item: this.item, type: 'update' });
+      }
     },
     onUpdate(variable, value) {
       const path = variable.split('.');

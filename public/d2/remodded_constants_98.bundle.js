@@ -2292,7 +2292,10 @@ let remodded_constants_98 = {
             "id": 649,
             "s": "Shield of Forsaken Light"
         },
-        null, // 650
+        {
+            "id": 650,
+            "s": "Spirit's Embrace"
+        },
         {
             "id": 651,
             "s": "Spirit Retribution"
@@ -2348,7 +2351,10 @@ let remodded_constants_98 = {
             "id": 683,
             "s": "Raise Leoric's Chosen"
         },
-        null,
+        {
+            "id": 684,
+            "s": "Spirit's Charge"
+        },
         {
             "id": 685,
             "s": "Anthrax Armor"
@@ -12899,6 +12905,18 @@ let remodded_constants_98 = {
         {
             "id": 279,
             "s": "map_quality",
+            // 3-y Old gift box: 190=jav sk 45life
+            // 3-y Old gift box: 191=p&m sk 45life
+            // 3-y Old gift box: 192=bow sk 45life
+            // 3-y Old gift box: 193=fine small charm of vita
+            // 3-y Old gift box: 194=pestilent small charm of anthrax
+            // 3-y Old gift box: 195=shimmering small charm of balance
+            // 3-y Old gift box: 196=Wizardspike (Fused) gloves
+            // 3-y Old gift box: 197=String of Ears (Bugged)
+            // 3-y Old gift box: 198=Arkain's Valor (Bugged)
+            // 3-y Old gift box: 199=The Cat's Eye (1.08)
+            // 3-y Old gift box: 200=Harlequin Crest (1.08)
+            // 3-y Old gift box: 201>=The Cat's Eye (1.08)
             "c": 1,
             "cB": 7,
             "cS": 0,
@@ -17470,6 +17488,24 @@ let remodded_constants_98 = {
             "index": "Band of Permafrost",
             "n": "Band of Permafrost",
             "hdi": "misc/ring/ring"
+        },
+        {
+            "id": 208,
+            "index": "Morality",
+            "n": "Morality",
+            "hdi": "weapon/polearm/poleaxe"
+        },
+        {
+            "id": 209,
+            "index": "Remembrance",
+            "n": "Remembrance",
+            "hdi": "armor/helmet/bone_helm"
+        },
+        {
+            "id": 210,
+            "index": "Harbinger",
+            "n": "Harbinger",
+            "hdi": "armor/armor/chain_mail"
         }
     ],
     "unq_items": [
@@ -64024,10 +64060,12 @@ remodded_constants_98.unq_items[4095] = {
 
 // runeword_id - read/write value
 remodded_constants_98.runeword_fixes = {
-    22: 2692,
-    170: 2626,
-    171: 2627,
-    172: 2006
+    // id (not index !) - saved value in d2s
+    22: 2692, // Delirium
+    170: 2626, // Lord of Terror
+    171: 2627, // Fenris Fang
+    172: 2006, // Elder
+    173: 2065 // Alacrity
 };
 
 remodded_constants_98.gold = {

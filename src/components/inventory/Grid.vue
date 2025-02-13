@@ -94,7 +94,7 @@ export default {
         { text: 'Delete' },
       ]);
     },
-    gridRC($evt, w, h) {
+    async gridRC($evt, w, h) {
       this.contextMenu.showContextMenu(
         $evt,
         {
@@ -105,7 +105,7 @@ export default {
           position_y: h - 1,
           alt_position_id: this.alt_position_id, // 1: inventory, 4: cube, 5: stash
         },
-        [{ text: 'Paste At' }, { text: 'Import At' }],
+        [{ text: 'Paste At', disabled: !this.$clipboard.value }, { text: 'Import At' }],
       );
     },
     drop(event, x, y) {

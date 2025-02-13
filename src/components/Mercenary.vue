@@ -114,20 +114,20 @@ export default {
         ]);
       }
     },
-    equippedRC($evt, equipped_id) {
-      this.contextMenu.showContextMenu(
-        $evt,
-        {
-          owner: 'mercenary',
-          location_id: 1, // Equipped
-          equipped_id: equipped_id, // 0: stored, 1: helm, 2: amulet, 3: armor, 4: right-hand, 5: left-hand, 6: right ring, 7: left ring, 8: belt, 9: boots, 10: gloves, 11: right-hand switch, 12: left-hand switch
-          position_x: 0,
-          position_y: 0,
-          alt_position_id: 0,
-        },
-        [{ text: 'Paste At' }, { text: 'Import At' }],
-      );
-    },
+    // equippedRC($evt, equipped_id) {
+    //   this.contextMenu.showContextMenu(
+    //     $evt,
+    //     {
+    //       owner: 'mercenary',
+    //       location_id: 1, // Equipped
+    //       equipped_id: equipped_id, // 0: stored, 1: helm, 2: amulet, 3: armor, 4: right-hand, 5: left-hand, 6: right ring, 7: left ring, 8: belt, 9: boots, 10: gloves, 11: right-hand switch, 12: left-hand switch
+    //       position_x: 0,
+    //       position_y: 0,
+    //       alt_position_id: 0,
+    //     },
+    //     [{ text: 'Paste At' }, { text: 'Import At' }],
+    //   );
+    // },
   },
 };
 </script>

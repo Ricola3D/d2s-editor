@@ -10,6 +10,7 @@
       :key="i"
       class="dropdown-item"
       :class="[option.type === 'divider' ? 'dropdown-divider' : '']"
+      :disabled="!!option.disabled"
       @click.stop="onClick($event, option)"
       v-html="option.text"
     />
