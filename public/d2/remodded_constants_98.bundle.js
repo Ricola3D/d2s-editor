@@ -14128,9 +14128,12 @@ let remodded_constants_98 = {
         },
         {
             "id": 402,
-            "s": "salvationcheck",
+            "s": "tempering_quality", // salvationcheck
             "sB": 2,
-            "sA": 0
+            "sA": 0,
+            "so": 1,
+            "dF": 19,
+            "dP": "Tempering quality %d"
         },
         {
             "id": 403,
