@@ -17458,14 +17458,38 @@ exports.BitWriter = BitWriter;
 /*!**************************************!*\
   !*** ./src/d2/attribute_enhancer.ts ***!
   \**************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.enhanceItem = exports.enhanceItems = exports.enhancePlayerAttributes = exports.enhanceAttributes = void 0;
 const lodash_1 = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 const constants_1 = __webpack_require__(/*! ./constants */ "./src/d2/constants.ts");
+const types = __importStar(__webpack_require__(/*! ./types */ "./src/d2/types.ts"));
 const utils_1 = __webpack_require__(/*! ./utils */ "./src/d2/utils.ts");
 const types_1 = __webpack_require__(/*! ./types */ "./src/d2/types.ts");
 //do nice stuff
@@ -17658,7 +17682,8 @@ function enhanceItem(item, mod, version, attributes = {
         }
         if (itemTypeDef.c) {
             let classSpecific = false;
-            if (item.quality <= types_1.EQuality.Superior) {
+            if (![types.EQuality.Unique, types.EQuality.Set].includes(item.quality)) {
+                // Unique/set don't have the staff mods
                 // Does any of the category is "<class> Item" ?
                 for (const cat of itemTypeDef.c) {
                     if (cat.endsWith(' Item')) {
@@ -17667,7 +17692,6 @@ function enhanceItem(item, mod, version, attributes = {
                     }
                 }
             }
-            // Other qualities have the bit class_specific set to false, and no auto_affix_id
             if (classSpecific) {
                 item.class_specific = true;
             }
@@ -17761,28 +17785,32 @@ function enhanceItem(item, mod, version, attributes = {
             if (itemTypeDef.ui) {
                 item.inv_file = itemTypeDef.ui;
             }
-            if (unq && unq.i) {
-                item.inv_file = unq.i;
+            if (unq && unq.c == item.type) {
+                if (unq.i) {
+                    item.inv_file = unq.i;
+                }
+                if (unq.hdi) {
+                    item.hd_inv_file = unq.hdi;
+                }
+                if (unq.tc)
+                    item.transform_color = unq.tc;
             }
-            if (unq && unq.hdi) {
-                item.hd_inv_file = unq.hdi;
-            }
-            if (unq && unq.tc)
-                item.transform_color = unq.tc;
         }
         else if (item.set_id) {
             const set = constants.set_items[item.set_id];
             if (itemTypeDef.ui) {
                 item.inv_file = itemTypeDef.ui;
             }
-            if (set && set.i) {
-                item.inv_file = set.i;
+            if (set && set.c == item.type) {
+                if (set.i) {
+                    item.inv_file = set.i;
+                }
+                if (set.hdi) {
+                    item.hd_inv_file = set.hdi;
+                }
+                if (set.tc)
+                    item.transform_color = set.tc;
             }
-            if (set && set.hdi) {
-                item.hd_inv_file = set.hdi;
-            }
-            if (set && set.tc)
-                item.transform_color = set.tc;
         }
     }
     // Set read-only attributes useful for display in hero editors
@@ -19481,7 +19509,7 @@ function newItem() {
         picture_id: 0,
         class_specific: false,
         low_quality_id: 0,
-        timestamp: 0, // 1 for returned body piece, 0 otherwise
+        timestamp: false, // true for returned body piece, false otherwise
         time: 0, // for body pieces
         ear_attributes: {
             class: 0,
@@ -19760,7 +19788,7 @@ async function readItem(reader, mod, version, config) {
             reader.ReadUInt8(5);
         }
         //realm data
-        item.timestamp = reader.ReadUInt8(1);
+        item.timestamp = reader.ReadUInt8(1) == 1;
         if (item.timestamp || item.categories.includes('Body Part')) {
             item.time = reader.ReadUInt32(30);
         }
@@ -19914,7 +19942,7 @@ async function writeItem(item, mod, version, config) {
         else if (item.type === 'ibk') {
             writer.WriteUInt8(1, 5);
         }
-        writer.WriteUInt8(item.timestamp, 1);
+        writer.WriteUInt8(item.timestamp ? 1 : 0, 1);
         if (item.timestamp || item.categories.includes('Body Part')) {
             writer.WriteUInt32(item.time, 30);
         }
@@ -20440,7 +20468,7 @@ function b64StringToArrayBuffer(base64string) {
         return bytes.buffer;
     }
     else {
-        // NodeJS version
+        // NodeJS version (or could use JSDOM in our scripts)
         return Buffer.from(base64string, 'base64').buffer;
     }
 }
@@ -20457,7 +20485,7 @@ function arrayBufferToBase64String(arrayBuffer) {
         return window.btoa(str);
     }
     else {
-        // NodeJS version
+        // NodeJS version (or could use JSDOM in our scripts)
         return Buffer.from(arrayBuffer).toString('base64');
     }
 }
