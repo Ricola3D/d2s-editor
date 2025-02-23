@@ -421,6 +421,10 @@ div.settings .form-check-input {
   color: rgb(0, 255, 0);
 }
 
+.darkgreen {
+  color: rgb(0, 128, 0);
+}
+
 .blue {
   color: rgb(105, 105, 255);
 }

@@ -164,14 +164,14 @@ export default {
       }
       /* <Prefix>(<pId>) <type_name> <suffix>(<sId>)
         <type_name>*/
-      if (item.quality === this.$d2s.types.EQuality.Rare && item.rare_name_id) {
+      if ([this.$d2s.types.EQuality.Rare, this.$d2s.types.EQuality.DemonTempered].includes(item.quality) && item.rare_name_id) {
         let rare_name = constants.rare_names[item.rare_name_id] ? constants.rare_names[item.rare_name_id].n : null;
         if (!rare_name) {
           rare_name = 'unknown';
         }
         name = `${name}\\n${rare_name}(${item.rare_name_id})`;
       }
-      if (item.quality === this.$d2s.types.EQuality.Rare && item.rare_name_id2) {
+      if ([this.$d2s.types.EQuality.Rare, this.$d2s.types.EQuality.DemonTempered].includes(item.quality) && item.rare_name_id2) {
         let rare_name2 = constants.rare_names[item.rare_name_id2] ? constants.rare_names[item.rare_name_id2].n : null;
         if (!rare_name2) {
           rare_name2 = 'of unknown';
@@ -216,21 +216,23 @@ export default {
         return 'white';
       }
       switch (item.quality) {
-        case 1:
-        case 3:
+        case this.$d2s.types.EQuality.Inferior:
+        case this.$d2s.types.EQuality.Superior:
           return 'grey';
-        case 2:
+        case this.$d2s.types.EQuality.Normal:
           return 'white';
-        case 4:
+        case this.$d2s.types.EQuality.Magic:
           return 'blue';
-        case 5:
+        case this.$d2s.types.EQuality.Set:
           return 'green';
-        case 6:
+        case this.$d2s.types.EQuality.Rare:
           return 'yellow';
-        case 7:
+        case this.$d2s.types.EQuality.Unique:
           return 'gold';
-        case 8:
+        case this.$d2s.types.EQuality.Crafted:
           return 'orange';
+        case this.$d2s.types.EQuality.DemonTempered:
+          return 'darkgreen';
         default:
           return 'white';
       }

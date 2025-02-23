@@ -13248,7 +13248,7 @@ let remodded_constants_98 = {
             "s": "relic_tracker",
             "cVS": 1024,
             "sB": 11,
-            "sA": 30
+            "sA": 0 // 30
         },
         {
             "id": 303,
