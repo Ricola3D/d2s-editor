@@ -434,7 +434,7 @@ export default {
         hdi: item.hd_inv_file,
       });
 
-      if (!item.transform_color || !item.inv_color) {
+      if (!item.transform_color || !item.inv_transform) {
         // Just return the URL
         return `d2/game_data/${mod}/version_${version}/hd/global/ui/items/${item.hd_inv_file}.lowend.png`; // lowend is enough and lighter
       } else {
