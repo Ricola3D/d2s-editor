@@ -31241,7 +31241,8 @@ let remodded_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor",
-                "Merc Equip"
+                "Merc Equip",
+                "Relic"
             ],
             "hdi": "custom/DemonArmor"
         },
@@ -31268,7 +31269,8 @@ let remodded_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor",
-                "Merc Equip"
+                "Merc Equip",
+                "Relic"
             ],
             "hdi": "custom/DemonCap"
         },
@@ -31301,7 +31303,8 @@ let remodded_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Merc Equip",
-                "Second Hand"
+                "Second Hand",
+                "Relic"
             ],
             "hdi": "custom/DemonMonarch"
         },
@@ -31328,7 +31331,8 @@ let remodded_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor",
-                "Merc Equip"
+                "Merc Equip",
+                "Relic"
             ],
             "hdi": "custom/DemonFleece"
         },
@@ -31356,7 +31360,8 @@ let remodded_constants_99 = {
                 "Circlet",
                 "Helm",
                 "Any Armor",
-                "Merc Equip"
+                "Merc Equip",
+                "Relic"
             ],
             "hdi": "custom/DemonCirclet"
         },
@@ -31385,7 +31390,8 @@ let remodded_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor",
-                "Merc Equip"
+                "Merc Equip",
+                "Relic"
             ],
             "hdi": "custom/DemonCoif"
         },
@@ -31416,7 +31422,8 @@ let remodded_constants_99 = {
                 "Any Armor",
                 "Merc Equip",
                 "Druid Item",
-                "Class Specific"
+                "Class Specific",
+                "Relic"
             ],
             "hdi": "custom/DemonMask"
         },
@@ -31446,7 +31453,8 @@ let remodded_constants_99 = {
             "c": [
                 "Boots",
                 "Any Armor",
-                "Merc Equip"
+                "Merc Equip",
+                "Relic"
             ],
             "hdi": "custom/DemonWarTravs"
         },
@@ -31473,7 +31481,8 @@ let remodded_constants_99 = {
             "c": [
                 "Armor",
                 "Any Armor",
-                "Merc Equip"
+                "Merc Equip",
+                "Relic"
             ],
             "hdi": "custom/DemonSkin"
         },
@@ -31502,7 +31511,8 @@ let remodded_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor",
-                "Merc Equip"
+                "Merc Equip",
+                "Relic"
             ],
             "hdi": "custom/DemonVisage"
         },
@@ -31530,7 +31540,8 @@ let remodded_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor",
-                "Merc Equip"
+                "Merc Equip",
+                "Relic"
             ],
             "hdi": "custom/DemonValkWing"
         },
@@ -31557,7 +31568,8 @@ let remodded_constants_99 = {
             "c": [
                 "Helm",
                 "Any Armor",
-                "Merc Equip"
+                "Merc Equip",
+                "Relic"
             ],
             "hdi": "custom/DemonCrownAges"
         },
@@ -31585,7 +31597,8 @@ let remodded_constants_99 = {
             "c": [
                 "Belt",
                 "Any Armor",
-                "Merc Equip"
+                "Merc Equip",
+                "Relic"
             ],
             "hdi": "custom/DemonLenym"
         },
@@ -31613,7 +31626,8 @@ let remodded_constants_99 = {
             "c": [
                 "Gloves",
                 "Any Armor",
-                "Merc Equip"
+                "Merc Equip",
+                "Relic"
             ],
             "hdi": "custom/DemonGauntlets"
         },
@@ -31643,7 +31657,8 @@ let remodded_constants_99 = {
             "c": [
                 "Boots",
                 "Any Armor",
-                "Merc Equip"
+                "Merc Equip",
+                "Relic"
             ],
             "hdi": "custom/DemonBoots"
         },
@@ -31671,7 +31686,8 @@ let remodded_constants_99 = {
             "c": [
                 "Belt",
                 "Any Armor",
-                "Merc Equip"
+                "Merc Equip",
+                "Relic"
             ],
             "hdi": "custom/DemonBelt"
         },
@@ -31703,7 +31719,8 @@ let remodded_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Merc Equip",
-                "Second Hand"
+                "Second Hand",
+                "Relic"
             ],
             "hdi": "custom/DemonRoundShield"
         },
@@ -31736,7 +31753,8 @@ let remodded_constants_99 = {
                 "Any Shield",
                 "Any Armor",
                 "Merc Equip",
-                "Second Hand"
+                "Second Hand",
+                "Relic"
             ],
             "hdi": "custom/DemonAegis"
         },
@@ -31766,7 +31784,8 @@ let remodded_constants_99 = {
             "c": [
                 "Boots",
                 "Any Armor",
-                "Merc Equip"
+                "Merc Equip",
+                "Relic"
             ],
             "hdi": "custom/DemonSandBoots"
         }
@@ -42130,7 +42149,8 @@ let remodded_constants_99 = {
             "c": [
                 "Bow and Crossbow",
                 "Missile Weapon",
-                "Weapon"
+                "Weapon",
+                "Relic"
             ],
             "hdi": "custom/DemonBow"
         },
@@ -42164,7 +42184,8 @@ let remodded_constants_99 = {
                 "Melee Weapon",
                 "Weapon",
                 "Sorceress Item",
-                "Class Specific"
+                "Class Specific",
+                "Relic"
             ],
             "hdi": "custom/DemonStaff"
         },
@@ -42195,7 +42216,8 @@ let remodded_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon",
-                "Merc 5 Weapon"
+                "Merc 5 Weapon",
+                "Relic"
             ],
             "hdi": "custom/DemonGnasher"
         },
@@ -42222,7 +42244,8 @@ let remodded_constants_99 = {
             "c": [
                 "Knife",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Relic"
             ],
             "hdi": "custom/DemonGull"
         },
@@ -42249,7 +42272,8 @@ let remodded_constants_99 = {
             "c": [
                 "Knife",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Relic"
             ],
             "hdi": "custom/DemonWizardSpike"
         },
@@ -42278,7 +42302,8 @@ let remodded_constants_99 = {
                 "Axe",
                 "Melee Weapon",
                 "Weapon",
-                "Merc 5 Weapon"
+                "Merc 5 Weapon",
+                "Relic"
             ],
             "hdi": "custom/DemonRuneAxe"
         },
@@ -42305,7 +42330,8 @@ let remodded_constants_99 = {
             "c": [
                 "Polearm",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Relic"
             ],
             "hdi": "custom/DemonTombReaver"
         },
@@ -42340,7 +42366,8 @@ let remodded_constants_99 = {
                 "Melee Weapon",
                 "Weapon",
                 "Thrown Weapon",
-                "Polearm"
+                "Polearm",
+                "Relic"
             ],
             "hdi": "custom/DemonNotSoShort"
         },
@@ -42379,7 +42406,8 @@ let remodded_constants_99 = {
                 "Thrown Weapon",
                 "Polearm",
                 "Amazon Item",
-                "Class Specific"
+                "Class Specific",
+                "Relic"
             ],
             "hdi": "custom/DemonTStroke"
         },
@@ -42418,7 +42446,8 @@ let remodded_constants_99 = {
                 "Thrown Weapon",
                 "Polearm",
                 "Amazon Item",
-                "Class Specific"
+                "Class Specific",
+                "Relic"
             ],
             "hdi": "custom/DemonTitans"
         },
@@ -42445,7 +42474,8 @@ let remodded_constants_99 = {
                 "Hammer",
                 "Blunt",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Relic"
             ],
             "hdi": "custom/DemonCraniumMaul"
         },
@@ -42475,7 +42505,8 @@ let remodded_constants_99 = {
                 "Melee Weapon",
                 "Weapon",
                 "Sorceress Item",
-                "Class Specific"
+                "Class Specific",
+                "Relic"
             ],
             "hdi": "custom/DemonShard"
         },
@@ -42512,7 +42543,8 @@ let remodded_constants_99 = {
                 "Weapon",
                 "Thrown Weapon",
                 "Barbarian Item",
-                "Class Specific"
+                "Class Specific",
+                "Relic"
             ],
             "hdi": "custom/DemonGimmershred"
         },
@@ -42542,7 +42574,8 @@ let remodded_constants_99 = {
                 "Melee Weapon",
                 "Weapon",
                 "Sorceress Item",
-                "Class Specific"
+                "Class Specific",
+                "Relic"
             ],
             "hdi": "custom/DemonOculus"
         },
@@ -42573,7 +42606,8 @@ let remodded_constants_99 = {
                 "Sword",
                 "Melee Weapon",
                 "Weapon",
-                "Merc 5 Weapon"
+                "Merc 5 Weapon",
+                "Relic"
             ],
             "hdi": "custom/DemonDjinnSword"
         },
@@ -42602,7 +42636,8 @@ let remodded_constants_99 = {
                 "Sword",
                 "Melee Weapon",
                 "Weapon",
-                "Merc 5 Weapon"
+                "Merc 5 Weapon",
+                "Relic"
             ],
             "hdi": "custom/DemonSword"
         },
@@ -42632,7 +42667,8 @@ let remodded_constants_99 = {
                 "Melee Weapon",
                 "Weapon",
                 "Necromancer Item",
-                "Class Specific"
+                "Class Specific",
+                "Relic"
             ],
             "hdi": "custom/DemonThresher"
         },
@@ -42659,7 +42695,8 @@ let remodded_constants_99 = {
             "c": [
                 "Polearm",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Relic"
             ],
             "hdi": "custom/DemonOgreAxe"
         },
@@ -42687,7 +42724,8 @@ let remodded_constants_99 = {
             "c": [
                 "Polearm",
                 "Melee Weapon",
-                "Weapon"
+                "Weapon",
+                "Relic"
             ],
             "hdi": "custom/DemonScythe"
         },
@@ -42719,7 +42757,8 @@ let remodded_constants_99 = {
                 "Melee Weapon",
                 "Weapon",
                 "Sorceress Item",
-                "Class Specific"
+                "Class Specific",
+                "Relic"
             ],
             "hdi": "custom/DemonArchonStaff"
         }
@@ -62872,7 +62911,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/flag"
         },
@@ -62893,7 +62933,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/flag"
         },
@@ -62914,7 +62955,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/flag"
         },
@@ -62935,7 +62977,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/flag"
         },
@@ -62956,7 +62999,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/flag"
         },
@@ -62977,7 +63021,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/flag"
         },
@@ -62998,7 +63043,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/flag"
         },
@@ -63019,7 +63065,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/flag"
         },
@@ -63040,7 +63087,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/flag"
         },
@@ -63061,7 +63109,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/flag"
         },
@@ -63082,7 +63131,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/soul"
         },
@@ -63103,7 +63153,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/soul"
         },
@@ -63124,7 +63175,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/soul"
         },
@@ -63145,7 +63197,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/soul"
         },
@@ -63166,7 +63219,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/soul"
         },
@@ -63187,7 +63241,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/soul"
         },
@@ -63208,7 +63263,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/soul"
         },
@@ -63229,7 +63285,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/soul"
         },
@@ -63250,7 +63307,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/soul"
         },
@@ -63271,7 +63329,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/jawbone"
         },
@@ -63292,7 +63351,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/jawbone"
         },
@@ -63313,7 +63373,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/jawbone"
         },
@@ -63334,7 +63395,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/jawbone"
         },
@@ -63355,7 +63417,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/jawbone"
         },
@@ -63376,7 +63439,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/jawbone"
         },
@@ -63397,7 +63461,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/horn"
         },
@@ -63418,7 +63483,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/horn"
         },
@@ -63439,7 +63505,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/horn"
         },
@@ -63460,7 +63527,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/horn"
         },
@@ -63481,7 +63549,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/horn"
         },
@@ -63502,7 +63571,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/tail"
         },
@@ -63523,7 +63593,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/tail"
         },
@@ -63544,7 +63615,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/tail"
         },
@@ -63565,7 +63637,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/tail"
         },
@@ -63586,7 +63659,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/tail"
         },
@@ -63607,7 +63681,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/fang"
         },
@@ -63628,7 +63703,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/fang"
         },
@@ -63649,7 +63725,8 @@ let remodded_constants_99 = {
             "eq1n": "Miscellaneous",
             "c": [
                 "Ingredient",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Tempering Organ"
             ],
             "hdi": "misc/body_part/fang"
         },
@@ -65359,7 +65436,8 @@ let remodded_constants_99 = {
             "c": [
                 "Ring",
                 "Miscellaneous",
-                "Merc Equip"
+                "Merc Equip",
+                "Relic"
             ],
             "hdi": "custom/DemonRing"
         },
@@ -65381,9 +65459,10 @@ let remodded_constants_99 = {
             "c": [
                 "Ring",
                 "Miscellaneous",
-                "Merc Equip"
+                "Merc Equip",
+                "Relic"
             ],
-            "hdi": "custom//DemonRingB"
+            "hdi": "custom/DemonRingB"
         },
         "D10": {
             "nc": "D10",
@@ -65402,7 +65481,8 @@ let remodded_constants_99 = {
             "c": [
                 "Medium Charm",
                 "Charm",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Relic"
             ],
             "hdi": "custom/DemonTorch"
         },
@@ -65424,7 +65504,8 @@ let remodded_constants_99 = {
             "c": [
                 "Amulet",
                 "Miscellaneous",
-                "Merc Equip"
+                "Merc Equip",
+                "Relic"
             ],
             "hdi": "custom/DemonMaras"
         },
@@ -65446,7 +65527,8 @@ let remodded_constants_99 = {
             "c": [
                 "Amulet",
                 "Miscellaneous",
-                "Merc Equip"
+                "Merc Equip",
+                "Relic"
             ],
             "hdi": "custom/DemonCatsEye"
         },
@@ -65472,7 +65554,8 @@ let remodded_constants_99 = {
             "c": [
                 "Small Charm",
                 "Charm",
-                "Miscellaneous"
+                "Miscellaneous",
+                "Relic"
             ],
             "hdi": "custom//DemonAnni"
         }

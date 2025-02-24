@@ -8,8 +8,8 @@ export interface IConfig {
     sortProperties?: boolean;
 }
 export declare enum EGemSocketType {
-    WeaponGloves = 0,
-    ArmorBootsHelmBelt = 1,
+    WeaponGloves = 0,// 0
+    ArmorBootsHelmBelt = 1,// 1
     ShieldJewelry = 2
 }
 export interface IMagicPropertyDef {
@@ -549,7 +549,7 @@ export declare enum EEquippedId {
 }
 export declare enum ETypeId {
     Armor = 1,
-    Shield = 2,
+    Shield = 2,//treated the same as armor... only here to be able to parse nokkas jsons
     Weapon = 3,
     Other = 4
 }

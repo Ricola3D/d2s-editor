@@ -138,6 +138,7 @@ export default {
       // let name = `${item.type_name} (${item.type})`;
       let name = item.type_name;
       const constants = this.$getWorkConstantData();
+      const details = this.$d2s.utils.getItemTypeDef(this.item, constants);
       /* Inferior <type_name> */
       if (item.quality === this.$d2s.types.EQuality.Inferior) {
         name = `Inferior ${name}`;
@@ -201,6 +202,11 @@ export default {
         }
         name = `\\gold;'${runes}'\\n${name}\\n\\gold;${personalizedName}${runeword_name}(${item.runeword_id})`;
       }
+      if (item.quality == this.$d2s.types.EQuality.DemonTempered) {
+        name = `\\orange;Demon Tempered\\n${name}\\n`;
+      } else if (details.c.includes('Relic')) {
+        name = `\\orange;Ready for Tempering\\n${name}\\n`;
+      }
       if (item.quantity) name += ` (${item.quantity})`;
       return name
         .split('\\n')
@@ -212,6 +218,8 @@ export default {
         .join('');
     },
     itemNameClass(item) {
+      const constants = this.$getWorkConstantData();
+      const details = this.$d2s.utils.getItemTypeDef(this.item, constants);
       if (item.given_runeword) {
         return 'white';
       }
@@ -228,7 +236,8 @@ export default {
         case this.$d2s.types.EQuality.Rare:
           return 'yellow';
         case this.$d2s.types.EQuality.Unique:
-          return 'gold';
+          if (details.c.includes('Relic')) return 'darkgreen';
+          else return 'gold';
         case this.$d2s.types.EQuality.Crafted:
           return 'orange';
         case this.$d2s.types.EQuality.DemonTempered:
