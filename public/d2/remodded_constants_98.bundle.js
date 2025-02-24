@@ -13245,7 +13245,7 @@ let remodded_constants_98 = {
         },
         {
             "id": 302,
-            "s": "relic_tracker",
+            "s": "relic_tracker", // Always 1048 for "ready for tempering", and "1046" for tempered ?
             "cVS": 1024,
             "sB": 11,
             "sA": 0 // 30

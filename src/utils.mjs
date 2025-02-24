@@ -510,4 +510,5 @@ export default {
       if (array[i].id == attribute) array.splice(i, 1);
     }
   },
+  utilsCache,
 };

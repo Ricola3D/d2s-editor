@@ -17574,9 +17574,12 @@ function enhanceItem(item, mod, version, attributes = {
         item.magic_prefix = 0;
         item.magic_suffix = 0;
     }
-    if (item.quality === types_1.EQuality.Rare || item.quality === types_1.EQuality.Crafted) {
+    if (item.quality === types_1.EQuality.Rare || item.quality === types_1.EQuality.Crafted || item.quality === types_1.EQuality.DemonTempered) {
         item.rare_name = constants.rare_names[item.rare_name_id] ? constants.rare_names[item.rare_name_id].n : '';
         item.rare_name2 = constants.rare_names[item.rare_name_id2] ? constants.rare_names[item.rare_name_id2].n : '';
+        // Demon tempered doesn't have magical_name_ids since it's made from a unique
+        if (item.quality === types_1.EQuality.DemonTempered)
+            item.magical_name_ids = [0, 0, 0, 0, 0, 0];
     }
     else {
         item.rare_name_id = 0;
@@ -17680,10 +17683,11 @@ function enhanceItem(item, mod, version, attributes = {
                 item.max_durability = itemTypeDef.durability - Math.ceil(itemTypeDef.durability / 2) + 1;
             }
         }
+        // If the item has been edited, we must update class_specific
         if (itemTypeDef.c) {
             let classSpecific = false;
-            if (![types.EQuality.Unique, types.EQuality.Set].includes(item.quality)) {
-                // Unique/set don't have the staff mods
+            if (![types.EQuality.Unique, types.EQuality.Set, types.EQuality.DemonTempered].includes(item.quality)) {
+                // Unique/set/Ready-for-tempering don't have the staff mods
                 // Does any of the category is "<class> Item" ?
                 for (const cat of itemTypeDef.c) {
                     if (cat.endsWith(' Item')) {
@@ -17785,7 +17789,8 @@ function enhanceItem(item, mod, version, attributes = {
             if (itemTypeDef.ui) {
                 item.inv_file = itemTypeDef.ui;
             }
-            if (unq && unq.c == item.type) {
+            if (unq && [itemTypeDef.nc, itemTypeDef.exc, itemTypeDef.elc].includes(unq.c)) {
+                // We exclude cases where base have been completely changed (ex: Tempering in ReMoDDeD)
                 if (unq.i) {
                     item.inv_file = unq.i;
                 }
@@ -17801,7 +17806,8 @@ function enhanceItem(item, mod, version, attributes = {
             if (itemTypeDef.ui) {
                 item.inv_file = itemTypeDef.ui;
             }
-            if (set && set.c == item.type) {
+            if (set && [itemTypeDef.nc, itemTypeDef.exc, itemTypeDef.elc].includes(set.c)) {
+                // We exclude cases where base have been completely changed (ex: Tempering in ReMoDDeD)
                 if (set.i) {
                     item.inv_file = set.i;
                 }
@@ -19752,6 +19758,14 @@ async function readItem(reader, mod, version, config) {
                     }
                 }
                 break;
+            case types_1.EQuality.DemonTempered:
+                item.rare_name_id = reader.ReadUInt8(8);
+                if (item.rare_name_id)
+                    item.rare_name = constants.rare_names[item.rare_name_id] ? constants.rare_names[item.rare_name_id].n : '';
+                item.rare_name_id2 = reader.ReadUInt8(8);
+                if (item.rare_name_id2)
+                    item.rare_name2 = constants.rare_names[item.rare_name_id2] ? constants.rare_names[item.rare_name_id2].n : '';
+                break;
             default:
                 break;
         }
@@ -19912,6 +19926,10 @@ async function writeItem(item, mod, version, config) {
                         writer.WriteBit(0);
                     }
                 }
+                break;
+            case types_1.EQuality.DemonTempered:
+                writer.WriteUInt8(item.rare_name_id !== undefined ? item.rare_name_id : _lookupRareId(item.rare_name, constants), 8);
+                writer.WriteUInt8(item.rare_name_id2 !== undefined ? item.rare_name_id2 : _lookupRareId(item.rare_name2, constants), 8);
                 break;
             default:
                 break;
@@ -20425,6 +20443,7 @@ var EQuality;
     EQuality[EQuality["Rare"] = 6] = "Rare";
     EQuality[EQuality["Unique"] = 7] = "Unique";
     EQuality[EQuality["Crafted"] = 8] = "Crafted";
+    EQuality[EQuality["DemonTempered"] = 9] = "DemonTempered";
 })(EQuality || (exports.EQuality = EQuality = {}));
 var EGemPosition;
 (function (EGemPosition) {

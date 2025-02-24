@@ -418,9 +418,22 @@ import Grid from './inventory/Grid.vue';
 import Mercenary from './Mercenary.vue';
 import ItemEditor from './inventory/ItemEditor.vue';
 
-import ItemPack from '../d2/ItemPack.js';
-import CharPack from '../d2/CharPack.js';
+import charpack_vanilla_97 from '../d2/charpack_vanilla_97.js';
+import charpack_remodded_98 from '../d2/charpack_remodded_98.js';
+import charpack_remodded_99 from '../d2/charpack_remodded_99.js';
+import itempack_vanilla_99 from '../d2/itempack_vanilla_99.js';
 import utils from '../utils.mjs';
+
+const charPacks = {
+  charpack_default: charpack_vanilla_97,
+  charpack_vanilla_97,
+  charpack_remodded_98,
+  charpack_remodded_99,
+};
+
+const savedItemPacks = {
+  itempack_vanilla_99,
+};
 
 export default {
   components: {
@@ -963,14 +976,27 @@ export default {
           });
       }
     },
+    getNewCharFile(classIdx) {
+      let charPack;
+      let charFile;
+      const lookUpKey = `charpack_${this.$work_mod.value}_${this.$work_version.value}`;
+      const fallbackKey = 'charpack_default';
+      if (lookUpKey in charPacks) {
+        charPack = charPacks[lookUpKey];
+      } else {
+        charPack = charPacks[fallbackKey];
+      }
+      if (charPack) {
+        charFile = charPack.find((char) => char.class == classIdx);
+      }
+      return charFile;
+    },
     newChar(classIdx) {
-      const candidates = CharPack.filter((char) => char.class == classIdx && char.mod == this.$work_mod.value);
-      let candidate = candidates.find((char) => char.version == this.$work_version.value);
-      if (!candidate) candidate = candidates.find((char) => char.version == 99); // Fallback
-      if (candidate) {
-        let bytes = this.$d2s.utils.b64StringToArrayBuffer(candidate.base64);
+      const newCharFile = this.getNewCharFile(classIdx);
+      if (newCharFile) {
+        let bytes = this.$d2s.utils.b64StringToArrayBuffer(newCharFile.base64);
         try {
-          this.readBuffer(bytes, this.$work_mod.value);
+          this.readBuffer(bytes, null, false); // Do not update version in case we use a fallback file
         } catch (e) {
           alert('Failed to create a character for this mod and version.');
           console.log(e);
@@ -978,46 +1004,52 @@ export default {
       }
     },
     onFileLoad(event) {
-      let mod = document.getElementById('open-mod').value;
       try {
         // If failed, in a 2nd time try parsing it as a remodded 99 file
-        this.readBuffer(event.target.result, mod, event.target.filename);
+        this.readBuffer(event.target.result, event.target.filename);
       } catch (e) {
         alert('Error, have you selected the right mod ? More details in logs.');
         console.error(e);
       }
     },
-    readBuffer(bytes, mod, filename) {
+    readBuffer(bytes, filename, updateVersion = true) {
       let that = this;
       this.save = null;
       this.selectedItem = null;
       this.$d2s
-        .read(bytes, mod)
+        .read(bytes, this.$work_mod.value)
         .then(async (response) => {
           // Change work version to match the file version
-          if (this.$work_version.value != response.header.version) {
+          if (updateVersion && this.$work_version.value != response.header.version) {
             this.$work_version.value = response.header.version;
             this.changeMod(false);
           }
 
           // Items pack
-          const sessionStorageKey = `itempack_${this.$work_mod.value}_${this.$work_version.value}`;
-          if (sessionStorage[sessionStorageKey]) {
+          const lookupKey = `itempack_${this.$work_mod.value}_${this.$work_version.value}`; // Unfortunately we would exceed localstorage quota if we saved each version item pack
+          // if (sessionStorage[lookupKey]) {
+          if (utils.utilsCache.has(lookupKey)) {
             // Reuse stored item pack
-            const json = sessionStorage.getItem('itempack');
-            this.itempack = JSON.parse(json);
+            // const json = sessionStorage.getItem(lookupKey);
+            // this.itempack = JSON.parse(json);
+            this.itempack = utils.utilsCache.get(lookupKey);
           } else {
-            // Retrieve items from static pack
-            const that = this;
-            this.itempack = ItemPack.filter((entry) => entry.value.mod == that.$work_mod);
+            // Regenerate item pack
+            this.itempack = [];
 
             // Add all bases
             await this.addItemsPackBases('weapon_items', 'Weapons');
             await this.addItemsPackBases('armor_items', 'Armors');
             await this.addItemsPackBases('other_items', 'Misc');
 
+            // Retrieve items from static pack
+            if (lookupKey in savedItemPacks) {
+              this.itempack.push(...savedItemPacks[lookupKey]);
+            }
+
             // Put in session storage
-            sessionStorage.setItem('itempack', JSON.stringify(this.itempack));
+            // sessionStorage.setItem(lookupKey, JSON.stringify(this.itempack));
+            utils.utilsCache.set(lookupKey, this.itempack);
           }
 
           console.log('Attributes: ' + JSON.stringify(response.attributes));
