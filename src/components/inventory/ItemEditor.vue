@@ -109,7 +109,7 @@
                 :options="
                   Array.from(Array(countSkinsChoices()).keys()).map((n) => ({
                     value: n,
-                    label: skin_names[item.type][n] ? skin_names[item.type][n] : `${n}`,
+                    label: skin_names[item.type] && skin_names[item.type][n] ? skin_names[item.type][n] : `${n}`,
                   }))
                 "
                 :searchable="true"
@@ -412,6 +412,7 @@ export default {
         { value: 6, label: 'Rare' },
         { value: 7, label: 'Unique' },
         { value: 8, label: 'Crafted' },
+        { value: 9, label: 'Demon Tempered' },
       ],
       locations: [
         { key: 0, value: 'Stored' },
@@ -489,6 +490,8 @@ export default {
         m34: ['Eye', 'Spaghetti/DNA', 'Dragon/Monster'],
         m36: ['Brown', 'Bear-foot', 'M-skin'],
         jew: ['Pink', 'Blue', 'Orange', 'Green', 'Red', 'White'],
+        D10: ['Paw', 'Horn', 'Tower'],
+        D32: ['Brown', 'Bear-foot', 'M-skin'],
       },
     };
   },
