@@ -1939,7 +1939,7 @@ let remodded_constants_98 = {
         {
             "id": 510,
             "s": "Soul of Assassin [Tier 1/10]"
-        }, // 510
+        },
         null,
         null,
         null,
@@ -2365,7 +2365,10 @@ let remodded_constants_98 = {
         null,
         null, // 690
         null,
-        null,
+        {
+            "id": 692,
+            "s": "Chain Lightning"
+        },
         {
             "id": 693,
             "s": "Summon Dire Wolf"
@@ -2416,6 +2419,12 @@ let remodded_constants_98 = {
         {
             "id": 713,
             "s": "Pierce (Line 100% range 13)"
+        },
+        null,
+        null,
+        {
+            "id": 716,
+            "s": "Find Item"
         }
     ],
     "rare_names": [
@@ -48509,7 +48518,7 @@ let remodded_constants_98 = {
             "c": [
                 "Quest"
             ],
-            "hdi": "misc/body_part/fang"
+            "hdi": "misc/body_part/horn"
         },
         "bey": {
             "nc": "bey",

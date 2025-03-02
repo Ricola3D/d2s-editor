@@ -647,6 +647,7 @@ export default {
         hex: hex,
       };
       navigator.clipboard.writeText(JSON.stringify(sharedContent));
+      this.notifications = [];
       this.notifications.push({
         alert: 'alert alert-info',
         message: `Item data copied to clipboard. One may use 'import' or 'load From JSON' to get the item.`,
@@ -711,6 +712,7 @@ export default {
         });
       } else {
         let loc = itemCopy.alt_position_id == 1 ? 'inventory' : itemCopy.alt_position_id == 5 ? 'stash' : 'cube';
+        this.notifications = [];
         this.notifications.push({
           alert: 'alert alert-info',
           message: `Loaded item in ${loc} at ${itemCopy.position_x}, ${itemCopy.position_y}`,
@@ -1007,6 +1009,7 @@ export default {
       try {
         // If failed, in a 2nd time try parsing it as a remodded 99 file
         this.readBuffer(event.target.result, event.target.filename);
+        this.notifications = [];
       } catch (e) {
         alert('Error, have you selected the right mod ? More details in logs.');
         console.error(e);
