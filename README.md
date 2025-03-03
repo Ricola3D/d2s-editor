@@ -15,10 +15,10 @@ This is a basic Diablo 2 save editor for D2 and D2R. The parser uses the TXT dat
 
 ### How to use on your own mod
 
-1. Install Node (I tested it successfully v20.10.0, and previously v16.20.0).
-2. Clone this repository or download a zip.
-3. Open **Node.js Command Prompt**.
-4. On first install **or version updates**, in the command prompt, run the following commands to install the editor:
+1. Install Node (I only tested v20.10.0 and v16.20.0, so maybe installing one of those would be safer).
+2. Clone this repository or download a zip. Unzip it somewhere on your disc.
+3. Open the unzipped folder, SHIFT + right-click in an empty space and choose "Open in Terminal".
+4. __On first install **or version updates**__, in the command prompt, run the following commands to install the editor:
 
 ```
 npm install --legacy-peer-deps
