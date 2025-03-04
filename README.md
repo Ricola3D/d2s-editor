@@ -15,7 +15,7 @@ This is a basic Diablo 2 save editor for D2 and D2R. The parser uses the TXT dat
 
 ### How to use on your own mod
 
-1. Install Node (I only tested v20.10.0 and v16.20.0, so maybe installing one of those would be safer).
+1. Install Node (I only tested v20.10.0 and v16.20.0, so maybe installing one of those would be safer). Make sure to check the box "Add node to path".
 2. Clone this repository or download a zip. Unzip it somewhere on your disc.
 3. Open the unzipped folder, SHIFT + right-click in an empty space and choose "Open in Terminal".
 4. __On first install **or version updates**__, in the command prompt, run the following commands to install the editor:
