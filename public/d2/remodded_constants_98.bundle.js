@@ -42555,9 +42555,9 @@ let remodded_constants_98 = {
             "hdi": "custom/DemonOculus"
         },
         "D39": {
-            "nc": "scm",
-            "exc": "9sm",
-            "elc": "7sm",
+            "nc": "D39",
+            "exc": "D39",
+            "elc": "D39",
             "iq": 2,
             "n": "Treehead's Sharp Stick",
             "durability": 56,
