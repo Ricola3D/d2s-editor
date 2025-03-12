@@ -1,0 +1,58 @@
+# MagicRare/Crafted affixes
+
+- Spell blades:
+  - Prefixes: 2+ sorc, 3+ offensive tab, 1+ pala
+  - Suffixes: 60charges lv8 lower res, 10% ctc lv5 static field on attack, 10+ fcr
+- Circlets:
+  - Prefixes: +2class sks, +3tab skills, 30+allres, 37+single res, 5maek, %ar, 97+mana, 118+ar, 38+mf, 0.75mana/level
+  - Suffixes: 20fcr, 30frw, 30str, 30dext, 93+life, 10+min, 12+max, 20+cdr, 16+pdr, 9+mdr, 8+ll, 8+ml, 16+energy, 10fhr, 13+replife, 0.5life/level, 75plr, hfd
+- Gloves (triple possible):
+  - Prefixes: 27+ singleres (dual only?), +3bow/p&m/martial, 21+mf, 38+ mana
+  - Suffixes: 3ll, 3ml, 15+str, 19+dext, 20ias, hfd, 25plr, 5+replife
+- Necro heads can have +2necro AND +3tab AND +3 single skills
+- Rings:
+  - Prefixes: 120ar, 15allres, 3maek, 120mana, 30+singleres (triple possible), 33+mf
+  - Suffixes: 10fcr, 10+cdr, 8ll, 6+ml, 20str, 20dext, 13+min, 12+max, 9+replife, 25plr, hfd, 40+life, 20cdr, 18+energy, 2+pdr, 2+mdr, 15+eg
+- Amulets
+  - Prefixes: +2class or +3tabsk, 38+single res, 36+mf, 5+light, 5%ar, 109+mana, +0.75mana/clvl, 27+allres, 9%dmgtomana
+  - Suffixes: 10fcr, 20+cdr, 15+replife, 28+energy, 13+min, 1+max, 9ml, 9ml, +0.75life/clvl, 87+life, 75+plr, hfd, 20+str, 30+dext, 24+pdr, 3+mdr, lv3 lower resist (60 charges), 
+- Bows/xbows:
+  - Prefixes: 300ed, 250ar150ed, 1%ar, 3+maek, +2amazon skills,
+  - Suffixes: 20ias, 5+ml, 5+ll, 8+min (15+ for bow), 56+max (with prefix?), 30+dext, 5+replife, 60 charges lv3 lower resist, 5% ctc amp lv3
+- Amazon Bows:
+  - Prefix: +2amazon or +3bow, 3 single passive or bow sk
+- Quivers:
+  - Prefixes: 5+maek, 85+ar, 100ed or 0.375max/level or 1,5%ed/level (dmg group), 120ar or 1%ar/level (ar group), 60ar40ed or 0.375max+11ar/level
+  - Suffixes: 30ias, 4+ll, 23+dext, 
+- Jewels:
+  - Prefixes: 30single res, 40ed, 100ar, 15allres, 50ar40ed vs demons/undead, 3maek, ...
+  - Suffixes: 15ias, 7fhr, 9+max, 10+min, 9str, 9dext, 9energy, 5+cdr, 4+replife, ...
+  - ???: 9+magicdmg%
+- Belts
+  - Prefixes: 30+single res (triple possible), 10+allres
+  - Suffixes: 94+life, 24+fhr, 30+str, 25plr, 9+replife, 
+- Sorceress staves
+  - Prefix: can't have ED/max, only vs undeads/demons. +2sorc or +3tab, 40singleres, elementaldmg, 120mana, 4+maek, 100flee
+  - Suffix: 20fcr, 20ias, charges (lv8 lower res x60, ...), indestructible or repair, 30energy, 9+ll, 9+ml, 17+cdr, 5+replife, itd
+- Sorceress gloves:
+  - Prefixes: 5+ elementalskdmg%
+  - Suffixes: 60charges lv3 lower res, fcr
+- Shields
+  - 2allsk, 30allres, 0.5def/clvl
+  - Suffixes: 20block/30fbr, 17fhr, 15pdr, 6mdr, 5replife, -30req, hfd, 75plr, 60life, 9str
+- Druid clubs
+  - Suffixes: 20fcr, 15+cdr, 5ctc lv15 enchant on struck, 
+- Assassin claws/claws:
+  - Prefixes: +2assassin or +3shadow or martial,
+- Barb helm: 3 single skill mods
+  - Prefixes: +2 barb or +3barb tab
+- Boots/class boots:
+- Torso/class torso:
+- Melee weapons
+  - Suffix: autorepair, indestructible
+- Necro trophies
+  - Prefix: +3summon from base +3 from magic/rare
+- Sorc Orbs
+  - Suffixes: 20+ cdr
+- Barb throw weapon: 3 single skill mods
+  - Prefixes: +2 barb or +3barb tab

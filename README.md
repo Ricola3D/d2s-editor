@@ -33,3 +33,11 @@ npm run serve
 ```
 
 6. Go to http://localhost:8080/ with your web browser to access the editor. If item pictures are slow to load, it's probably you forgot to run command "npm run generate" to create static images.
+
+### Documentation on ReMoDDeD mod
+
+- [Open Skills](pages/oskills.md)
+- [Aura When Equipped](pages/aura_when_equipped.md)
+
+- [Useful Links](pages/useful_links.md)
+- [Superior affixes](pages/superiors.md)
