@@ -2,15 +2,15 @@
 
 (Under construction: missing tempered)
 
-- Blessed Aim
+- **Blessed Aim**
   - Set [Plates of Protection] Marauder's Mark (lv 15)
   - Unique Hunter's Mark ring (lv10)
-- Cleansing
+- **Cleansing**
   - Runeword Plague weapons (lv17)
-- Clear Ailment
+- **Clear Ailment**
   - Unique Cleansing Ward shield (lv3)
   - Unique Hygieia's Purity helm (lv5)
-- Cold Conviction
+- **Cold Conviction**
   - Enhancement (lv5)
   - Runeword Rift t5 swords/scepters/polearms (lv20)
   - Set Crippling Conch helm (lv20)
@@ -18,70 +18,70 @@
   - Unique Tundra Tamer merc polearm (lv20)
   - Unique Rainbow Facet (lv1)
   - Unique Wizendraw bow (lv10)
-- Concentration
+- **Concentration**
   - Runeword Pride polearms (lv20)
-- Conviction
+- **Conviction**
   - Enhancement (lv5)
   - Runeword Infinity (lv9)
   - Runeword Oblivion Spellblades/bows t5 (lv20)
   - Unique Prismatic Facet jewel (lv1)
   - Unique Spiritual Protector torso (lv20)
-- Defiance
+- **Defiance**
   - Runeword Exile pala shields (lv16)
   - Set [Plates of Protection] Bulwark of Defiance (lv15)
-- Famine
+- **Famine**
   - Runeword Famine t5 axes/hammers (lv20)
-- Fanaticism
+- **Fanaticism**
   - Runeword Faith bows (lv15)
   - Runeword Beast axes/hammers/scepters (lv9)
-- Fire Conviction
+- **Fire Conviction**
   - Enhancement (lv5)
   - Runeword Destruction t5 swords/polearms (lv20)
   - Unique Burning Bane merc 2h-sword (lv20)
   - Unique Rainbow Facet (lv1)
   - Unique Spiritual Savior torso (lv20)
-- Holy Fire
+- **Holy Fire**
   - Runeword Dragon torsos/shields (lv14)
   - Runeword Hands of Justice weapons (lv16)
   - Set [Pulsing Presence] Hands of Efreeti gloves (lv10)
-- Holy Freeze
+- **Holy Freeze**
   - Runeword Doom axes/hammers/polearms (lv12)
   - Runeword Ice bows (lv18)
   - Set [Pulsing Presence] Morning Frost boots (lv10)
   - Unique Wind Shatterer polearm (lv7)
-- Holy Shock
+- **Holy Shock**
   - Runeword Dream helms/shields (lv15)
   - Set [Pulsing Presence] Thunderlord's Vision helm (lv10)
-- Lightning Conviction
+- **Lightning Conviction**
   - Enhancement (lv5)
   - Runeword Alacrity t5 spellblades/staves (lv20)
   - Unique Flash Forward merc spear (lv20)
   - Unique Rainbow Facet (lv1)
   - Unique Spiritual Guardian torso (lv20)
   - Unique The Griffon's Eye helm (lv20)
-- Magic Conviction
+- **Magic Conviction**
   - Enhancement (lv5)
   - Runeword Oath t5 swords/axes/maces (lv20)
   - Unique Gleam Rod merc 2h-sword (lv20)
   - Unique Rainbow Facet (lv1)
   - Unique Spiritual Sentinel torso (lv20)
-- Meditation
+- **Meditation**
   - Runeword Insight polearms/staves (lv12)
   - Runeword Nature's Kingdom gloves/boots (lv7)
-- Might
+- **Might**
   - Runeword Last Wish swords/axes/hammers (lv17)
   - Unique Reckless Fury barb helm (lv2)
   - Unique Steelrend gloves (lv6)
-- Patient Zero
+- **Patient Zero**
   - Unique Contagion necro shield (lv6)
-- Physical Conviction
+- **Physical Conviction**
   - Enhancement (lv5)
   - Runeword King's Grace t5 swords/scepters (lv20)
   - Set [Breaker of Chains] Chains of Force torso.
   - Unique Blackmaw's Brutality torso (lv15)
   - Unique Rainbow Facet (lv1)
   - Unique The Grand Father 2h-sword (lv20)
-- Poison Conviction
+- **Poison Conviction**
   - Enhancement (lv5)
   - Runeword Fenris Fang druid clubs (lv20)
   - Runeword Pestilence t5 bows (lv20)
@@ -89,28 +89,28 @@
   - Unique Death's Web wand (lv20)
   - Unique Rainbow Facet (lv1)
   - Unique Spiritual Warden torso (lv20)
-- Prayer
+- **Prayer**
   - Unique Life Everlasting ring (lv15)
-- Redemption
+- **Redemption**
   - Runeword Knight' Vigil scepters/swords (lv15)
   - Runeword Lust t5 belts (lv5)
   - Runeword Phoenix weapons/shields (lv15)
   - Unique Redemption katar (lv2)
   - Unique Soul-Forged Grip (lv10)
-- Salvation
+- **Salvation**
   - Runeword Elder orbs/staves/wands (lv10)
-- Sanctuary
+- **Sanctuary**
   - Runeword Beauty belts (lv12)
   - Runeword Lawbringer swords/scepters/hammers (lv18)
   - Runeword Sanctuary circlets (lv12)
   - Unique Azurewrath (lv13)
-- Thorns
+- **Thorns**
   - Runeword Bramble torsos (lv21)
   - Runeword Edge bows (lv15)
   - Runeword Steel t5 axes/maces/swords (lv20)
   - Unique North's Tenderizer druid club (lv20)
   - Unique Spike Thorn shield (lv20)
-- Vigor
+- **Vigor**
   - Runeword Harmony bows (lv10)
   - Unique Seven Deadly Sins charm (lv6)
   - Unique Tearhaunch boots (lv1)
