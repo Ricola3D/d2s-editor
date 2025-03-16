@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div ref="itemRef" tabindex="0" :class="itemClass" @dragstart="dragStart">
+    <div ref="itemRef" tabindex="0" :class="itemClass" @dragstart="dragStart" @mouseover="mouseOver" @mouseleave="mouseLeave">
       <div :class="innerClass">
         <img v-if="item.src" :src="item.src" :class="{ ethereal: item.ethereal }" />
         <img v-else src="/img/loading.gif" class="loading" />
-        <div v-if="item.total_nr_of_sockets && tooltipShown" class="sockets" @dragstart="dragStart">
+        <div v-if="item.total_nr_of_sockets && over" class="sockets">
           <div
             v-for="idx in item.total_nr_of_sockets"
             :key="idx"
@@ -13,15 +13,22 @@
             :class="{
               'empty-socket': !item.socketed_items || !item.socketed_items[idx - 1],
             }"
-            @dragstart="dragStart"
+            inert="true"
           >
             <template v-if="item.socketed_items && item.socketed_items[idx - 1]">
               <img
                 v-if="item.socketed_items[idx - 1].src"
                 :src="item.socketed_items[idx - 1].src"
                 title="To drag&drop, first click once to hide sockets and tooltip"
+                inert="true"
               />
-              <img v-else src="/img/loading.gif" class="loading" />
+              <!-- <img
+                v-if="item.socketed_items[idx - 1].src"
+                :src="item.socketed_items[idx - 1].src"
+                title="To drag&drop, first click once to hide sockets and tooltip"
+                draggable="true" @dragstart="socketDragStart(idx)"
+              /> -->
+              <img v-else src="/img/loading.gif" class="loading" inert="true" />
             </template>
           </div>
         </div>
@@ -52,7 +59,7 @@
 </template>
 
 <script>
-import { createPopper } from '@popperjs/core';
+// import { createPopper } from '@popperjs/core';
 import tippy from 'tippy.js';
 
 export default {
@@ -65,6 +72,7 @@ export default {
     return {
       tooltipShown: false,
       tooltip: null,
+      over: false,
     };
   },
   computed: {
@@ -263,7 +271,7 @@ export default {
       const vm = this;
       this.tooltip = tippy(this.$refs.itemRef, {
         content: this.$refs.tooltipRef,
-        hideOnClick: true,
+        hideOnClick: false,
         duration: [0, 0],
         distance: 0,
         arrow: false,
@@ -293,8 +301,8 @@ export default {
         },
       });
     },
-    dragStart(event) {
-      console.log('dragStart');
+    dragStart(/*event*/) {
+      this.tooltip.hide();
       localStorage.setItem(
         'dragElement',
         JSON.stringify({
@@ -303,6 +311,23 @@ export default {
         }),
       );
     },
+    mouseOver() {
+      this.over = true;
+    },
+    mouseLeave() {
+      this.over = false;
+    },
+    // socketDragStart(idx) {
+    //   console.log("Socket drag start");
+    //   this.tooltip.hide();
+    //   localStorage.setItem(
+    //     'dragElement',
+    //     JSON.stringify({
+    //       uuid: this.$uuid,
+    //       item: this.item.socketed_items[idx - 1],
+    //     }),
+    //   );
+    // },
   },
 };
 </script>
